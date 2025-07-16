@@ -1,0 +1,23 @@
+Ditch the Manual Work & Embrace Automation
+Say goodbye to tedious data uploads and hello to seamless flow with Netmera's FTP Push feature. This powerful tool leverages the File Transfer Protocol (FTP) to whisk your logged data files away to a designated server – automatically, the moment they close. No more manual work, just real-time updates, and streamlined data management.
+Real-time Data Updates: Organizations that require up-to-the-minute data updates, such as e-commerce businesses tracking sales, benefit from FTP Push. This ensures that sales and inventory data are consistently updated on the server.
+Marketing Campaigns: Marketing teams can utilize FTP Push to transfer customer engagement and response data to a centralized location for analysis. This enables more informed decision-making for future campaigns.
+Application Performance Monitoring: Apps can use FTP Push to regularly transfer performance logs and metrics to servers. This aids in identifying and addressing issues promptly to ensure a smooth user experience.
+Data Warehousing: For businesses that maintain data warehouses, FTP Push assists in automatically transferring data from various sources to the warehouse, promoting data centralization.
+Enhanced Efficiency and Automation: FTP Push eliminates the time-consuming burden of manual data transfers. The system seamlessly initiates the transfer as soon as a data file is closed, ensuring real-time updates without the need for human intervention. This automation not only frees up valuable time and resources but also reduces the risk of errors associated with manual processes.
+Timely Insights for Strategic Decisions: Organizations that rely on up-to-date data to make informed decisions can reap significant benefits from FTP Push. Automating transfers provides timely access to the most current information, enabling better strategic planning, proactive problem-solving, and a more agile response to evolving market conditions.
+Impeccable Data Integrity: Manual data transfers inherently carry the risk of human errors, which can compromise the accuracy and reliability of information. FTP Push effectively addresses this concern by automating the transfer process, ensuring data integrity and accuracy throughout the entire journey. This, in turn, enhances the trustworthiness of data for analysis and decision-making, leading to more confident and well-informed strategies.
+Harnessing the benefits of FTP Push is a seamless process that involves a few key steps:
+Initiate your journey by contacting your designated Customer Success Manager (CSM). They'll act as your guide, assisting you in enabling the FTP Push Offer on Netmera for your application.
+Your CSM will navigate you through the necessary configurations and ensure the feature is activated within your Netmera account, paving the way for automated data transfers.
+To establish a secure connection between Netmera and your chosen server, your DevOps team will create a dedicated FTP user specifically for your application.
+Once the user is set up, you'll receive secure login credentials, acting as keys to initiate smooth and secure data transfers.
+Before the transfer process begins, organize your data into a Comma-Separated Values (CSV) file format.
+Ensure that the CSV file contains the necessary fields such as external id, push text, deep link, etc. These details are crucial for creating customized push notifications that will be sent to your intended recipients.
+With your CSV file in hand, it's time to upload it to the designated FTP server.
+Utilize the FTP credentials provided by your DevOps team to establish a secure connection to the server and initiate the file transfer.
+Upon completion of the upload, Netmera will automatically step in, processing the data and triggering the delivery of push notifications based on the instructions embedded within the CSV file.
+In essence, FTP Push in Netmera simplifies the process of transferring logged data files to a server, bringing benefits of efficiency, real-time updates, and enhanced data security. 
+By following these straightforward steps, you'll empower FTP Push to streamline your data management and ensure timely, accurate information flow, enhancing your operations and decision-making capabilities.
+Last updated 2 months ago
+Was this helpful?

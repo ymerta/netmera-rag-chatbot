@@ -1,0 +1,15 @@
+In this step we're going to decide on campaign schedule, packaged delivery and expire time.
+On Step 4: When, we are going to decide on "Start Sending Messages", "Delivery Speed", and "Message Expire Time" options.
+In order to schedule a campaign for a specific time in When step, select On a specific time option on Start Sending Messages tab and select your notification’s delivery time. The notification message can be sent to all users at the same time or according to their time zone.
+Example:
+If you want to send a daily reminder to your users to complete their to-do list for the day, you can use the specific time option to schedule your notification to be sent every morning at a specific time, such as 9:00 AM. 
+Additionally, you can use the delivery time option to send the notification at 9:00 AM according to each user's time zone. This ensures that all users receive the notification at their own local times, which can help increase user engagement and productivity.
+You can send your push notification to the entire target audience at the same time or in packages which allow you to prevent a very large target audience from opening your app at the same time. Package size and time interval for your sendings can be defined on Delivery Speed tab.
+Example:
+You want to send a notification to all users to announce a new game update that includes a major new feature. However, you're concerned that sending the notification to your entire user base at once might cause server overload or crashes. To prevent this, you can use the Delivery Speed tab to define package size and time interval for your sendings. For example, you can choose to send the notification in packages of 10,000 users every 10 minutes. This way, you can avoid overwhelming your server and ensure a smooth user experience for all users. 
+For every push notification, an expire time can be determined in When step. The push notification will disappear from notification center on users’ device when the expiration time arrives.
+Example:
+You want to send your users a push notification with a limited-time offer for a discount on their next order. You can use the expiration time feature to ensure that the offer is only available for a specific period of time, such as 24 hours after the notification is sent. This creates a sense of urgency and encourages users to take advantage of the offer before it expires. Additionally, by setting an expiration time, you can prevent users from trying to use the discount after it has expired, which can help prevent user frustration and support a positive user experience. 
+
+Last updated 5 months ago
+Was this helpful?

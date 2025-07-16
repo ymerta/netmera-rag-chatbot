@@ -1,0 +1,32 @@
+Frequently Asked Questions
+Welcome to our FAQ page. Here, you'll find answers to common questions and helpful information about Netmera. Explore the topics below to get the most out of your experience with Netmera and discover the full potential of our powerful engagement platform. If you have any further inquiries, feel free to reach out to our support team for prompt assistance.
+This cannot be done. Instead, you can provide daily exports via FTP to the customer. Alternatively, our panel supports a "fallback" mechanism for SMS sending to users who did not receive the push. While you're creating your notification on step "What" you may set up fallback mechanism.
+No, the user limit cannot be set via the REST API. 
+No, adding the "Add Buttons" (interactive) feature cannot be done via the API. However, it is possible to add the interactive feature for push notifications created within the Netmera Panel. Please refer to Button Sets.
+Yes, we have a system in place. In case of rare issues with push notifications, our operations team receives alerts and communicates with the customers to provide relevant information.
+No, "Send All" does not reach users who were not integrated with Netmera before. Segments should be used to target those users. Please refer to Define Segment
+Yes, bulk messages can be stopped midway. This is done by our operations team. Additionally, it is possible to recall a push notification from the panel.
+No, our web push notifications are sent through Google CDN, so recalling them is not possible.
+Amazon SES is the platform where you manage your sending quotas. There are two main quotas are set by Amazon SES and the exact number of email quotas change for each account.
+Total number of emails that can be sent within 24 hours: This is the overall limit for the number of emails that can be sent in a 24-hour period. 
+
+Number of emails that can be sent per second: This represents the maximum rate at which emails can be sent in one second. 
+Above you may see a sample sending limits image on Amazon SES Account dashboard. In order to monitor your own sending quotas using the Amazon SES console please see the following document. 
+Monitoring your Amazon SES sending quotas
+The panel provides device-based data in funnels. If you export the data using tagging, it provides user-based data.
+Yes, there is a limit for event attributes. The maximum number of attributes is 25, with varying limits for different data types.
+Netmera's cookies start with "n". Additionally, Netmera now uses local storage instead of cookies. All the cookies used by Netmera are shared on the relevant page.
+Under the Settings -> General section, set the "Category" to "E-commerce" or "Media" to enable the catalog scenarios.
+Our SDK retrieves the timezone information from the user's device and performs the necessary actions based on that information. Whether or not the user provides location information does not affect the process.
+We have two methods to collect uninstall data:
+Google and Apple services share uninstall data with Netmera, allowing us to obtain the information.
+We can also determine the uninstall status of users through silent pushes. If the silent pushes do not reach the user (e.g., due to the device being in airplane mode or having no internet connection), the user is not marked as uninstalled. You may refer toGeneral Settings#uninstall-tracking for settings.
+No, such a feature is not currently available in Netmera. 
+No, it is not possible to send push notifications to a geofence via the REST API. However, you can create a geofence using the REST API.
+Segments become inactive if no triggers occur for a segment within 90 days.
+Yes, if a segment does not trigger a send via a push notification, even if the push notification is active, the segment becomes inactive.
+The video size should not exceed 12 MB.
+Generally, the information of targeted users can be obtained by exporting them from the Targeting > Segment section. By creating a segment and exporting the data, you can access the information.
+The Netmera SDK tracks and reports various behaviors, including app installations, app openings, time spent in the app, push receipts, push opens, push dismisses, geofence enter/exit actions, location updates, actions taken inside web views presented by Netmera, log events (for errors), and more. You may visit Netmera Events for more information.
+Last updated 19 days ago
+Was this helpful?

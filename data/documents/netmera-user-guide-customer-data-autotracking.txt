@@ -1,0 +1,75 @@
+Gain Valuable Insights with Automated Events Data
+Autotracking is a tool designed to simplify the tracking of page transitions and collection of event data in your mobile application. This feature offers valuable insights into user behavior, contributing to the enhancement of your application's performance. Instead of creating extensive event integrations, Autotracking streamlines the process, making it more accessible and efficient.
+SDK Integration
+If you haven't integrated Netmera SDK into your application yet, begin the integration process by incorporating the Netmera SDK into your application. Please see our Developer Guide here. After you've integrated Netmera SDK, you won't need to integrate separate Events to track your users by using Netmera Autotracking.
+Settings > Screen Tracking > Views / Actions
+To initiate the creation of a new mapping, start by navigating to Settings > Screen Tracking > Views / Actions within the Netmera Panel. 
+Track Views / Track Actions
+In this section, you find your published mappings that are actively tracked. These represent the structured paths and actions within your application that are currently under observation. Whether it's the navigation through specific views or the interaction with particular actions, the data tracked here provides valuable insights into user behavior and usage patterns within your app.
+Unmapped Views / Unmapped Actions
+After completing mapping with your test device on your application, the mapping path will be visible in Unmapped Views. This section serves as a collection of paths that haven't been fully defined in the tracking system. Review and match these unmapped paths to ensure comprehensive tracking of user interactions within your app.
+Settings > Screen Tracking > Track Views / Track Actions
+Navigate to the Screen Tracking section in the Netmera Panel's left menu by selecting Settings > Screen Tracking. Within the Screen Tracking Menu, you'll find two essential pages: Views and Actions. To effectively track screens and actions, update the settings by enabling "Track Views" on the Views page and "Track Actions" on the Actions page.
+Screen Tracking / Views: This page allows you to perform common mapping for iOS and Android, enabling you to name and identify screens according to your preferences.
+Screen Tracking / Actions: Similarly, on this page, you can perform common mapping for iOS and Android, assigning names to actions for better identification and tracking.
+If you don't see these pages on your Netmera Panel:
+In case you encounter difficulties accessing this page, it might be due to an authorization issue. Please reach out to your Success Managers for assistance.
+Settings > Test Devices > Invite Tester / Add Tester
+This step is pivotal for constructing mappings within Netmera using registered (test) devices. It is not intended for functional testing but rather to facilitate the creation of samples of events to track on Autotracking.
+By interacting with the application and following specific paths, you can generate valuable event mappings. These mappings serve as templates or samples. When real users navigate the same paths, you can track and analyze the patterns of these interactions. The focus is on understanding how many users follow these predefined paths, providing valuable insights into user behavior for optimization purposes.
+Before Adding a New Test Device: 
+To complete this process, you need to correctly set your iOS URL Schema and Android Package Name values in the Developers > App Info page.
+Navigate to the left menu of the panel and select "Settings."
+Click on "Test Devices" to access the test device management screen.
+Locate the "Invite Tester" button and click on it.
+Enter your email address in the provided field to receive the invitation link.
+Check your email for the received invitation link.
+On the device you want to add as a test device, click on the invitation link from the email.
+The link will redirect you to the mobile application and automatically add the device as a test device.
+In the "Settings -> Test Devices" screen, find and click on the "Add Tester" button.
+Enter your external ID in the provided field.
+The system will list available devices for you to add as test devices.
+Click on the desired device from the list to add it as a test device with a single click.
+Navigate to the left menu of the panel and select "Targeting."
+Click on "People" to access the people search screen. Then, click on "Find Person".
+Write their External ID or email and click "Find".
+When you see your user's results, click on "User ID" which is shown in color green.
+You will see a warning about action loggings saying "You are accessing user private data, your action will be logged." click Yes.
+On top of the page, you will see three options. Click on "Assign as a Tester" > "Get Devices."
+You are going to see a list of all the platforms you may use this user as a tester. Select your Platform (sms, email, etc.) and choose "Add Tester."
+updateUser() methods to set xid:
+To set xid, you can use the updateUser() method with the userId. For detailed information, refer to our developer documentation with the following links.
+iOS User Documentation
+Android User Documentation
+Once your Test Device is registered, use it to interact with different screens and perform actions like clicking buttons to create View and Action Maps. Netmera automatically generates View Maps to capture screen views and Action Maps to document user interactions. Repeating these steps with different scenarios helps build comprehensive maps, reflecting genuine user behavior within your application.
+Views: These maps specifically illustrate the sequence of screen views users navigate within your application. For instance, a View Mapping might represent a user journey like "Home Screen > Product Details > Checkout."
+Actions: Action Maps focus on capturing button clicks made within your application. This could include interactions like "Search for Shoes > View Product Details > Add to Cart."
+Mapping Examples:
+To provide a clearer understanding, let's delve into example scenarios:
+Example View Mapping: Imagine a user, Sarah, begins her journey by logging in through the "Login Screen." She then navigates to the "Product Catalog," exploring various items. After finding the perfect selection, she seamlessly proceeds to the "Checkout" for a hassle-free shopping experience.
+Example Action Mapping: Now, let's observe Jack's actions during this journey. He initiates his search by clicking on the "Search Icon," indicating his specific preferences. Jack then selects a particular "Product Model" that caught his interest. The decisive action unfolds as he confidently adds the chosen item to her cart for purchase.
+Creating mappings is crucial for optimizing your application's user experience. By understanding how users navigate through your app, you can identify common pathways, popular features, and potential areas for improvement. These insights empower you to enhance usability, streamline interactions, and ultimately deliver a more user-friendly and effective application.
+To save a new mapping to track follow these steps:
+Navigate to Unmapped Views / Actions.
+Click on Create New.
+Give your mapping a Screen Name.
+Choose whether to track it with the Track button.
+The Add button in the Mappings table allows you to match Android and iOS paths in one mapping. To do that, find the corresponding path in the other platform and click Add.
+When finished, click Add (shown in green).
+Upon returning to the Views/Actions dashboard, click "Publish" to ensure your changes are visible on your mappings.
+How to match corresponding mappings in Android and iOS?
+The Add button in the Mappings table allows you to match Android and iOS paths in one mapping. To do that, find the corresponding path in the other platform and click Add.
+At this stage, while you can currently only view data from test devices, mapping a screen enables you to explore user flows in the Analytics > User Path page, organized under the name you assigned for all users.
+Explore User Paths with Customization:
+Segment: Tailor your view by segmenting and observing the flow exclusively for a specific user group.
+Device: Filter data based on platform and version, gaining insights into user flows across different devices.
+Filter: Streamline your analysis by applying filters to actions, views, and events, focusing on specific interactions.
+Direction: Fine-tune your observations by filtering for flows that either start or end with a selected action or screen.
+Date: The data is presented daily. Choose a specific date to examine user flows for that particular day.
+This comprehensive set of tools allows you to dissect and understand user paths in a nuanced manner, providing valuable insights into how different user segments engage with your application.
+If you don't see Screen Tracking or User Path pages on your Netmera Panel:
+In case you encounter difficulties accessing these pages, it might be due to an authorization issue. Please reach out to your Success Managers for assistance.
+If you cannot see any data on your saved mappings:
+After adding the test device, in the Developers > App Info page, the session expiration interval value can be increased. 
+Last updated 4 days ago
+Was this helpful?

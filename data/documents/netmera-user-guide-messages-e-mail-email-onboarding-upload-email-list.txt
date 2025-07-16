@@ -1,0 +1,51 @@
+Streamlining Email Marketing: Uploading Lists and Tailoring Attributes in Netmera
+Quick Steps Guidelines
+Go to your Netmera Panel and click,
+Email Targeting > Email Contact Upload > Upload Email List
+Upload Your Email List: 
+Head to Upload Email List and start the process. Fill in details like list name, file name, and tags for organization and choose your file to upload.
+Organize Profile Attributes:
+Match your CSV file columns with profile attributes. Fix any red-flagged mismatches by clicking "Edit" and selecting or creating the right attribute. This ensures a smooth association.
+Send Your Emails:
+With your list and attributes set, you're ready to send targeted emails. Navigate to Create New Campaign > Email and on Step 2: What, you'll see your new profile attributes for your email campaigns.
+It's a simple process from list upload to delivering campaigns. Happy emailing!
+The Upload Email List feature is a comprehensive tool for streamlined email campaign management in Netmera. In addition to naming and organizing lists, assigning file names, and tagging contacts, this feature incorporates Profile Attributes for enhanced customization.
+You can effortlessly match CSV file columns with corresponding attributes, ensuring precise data association. Addressing any mismatches allows for a seamless integration of profile attributes. This holistic approach, encompassing both list management and attribute alignment, sets the stage for targeted and efficient Email Marketing campaigns within the Netmera platform.
+The Email File Upload Dashboard provides a overview of your email file uploads, enabling efficient management and tracking. The dashboard includes key information such as the date range, upload date, list name, the number of rows in the upload, status, and source. Here's a breakdown of the dashboard components:
+Date Range: Select a specific date range to filter and view email file uploads within that timeframe.
+Upload Date: This column displays the date when the email file was uploaded.
+List Name: Identify the email list associated with each upload.
+Rows: View the number of rows or entries within each email file, providing insights into the scale of your uploads.
+Status: Check the status of each upload, whether it's a draft or ready to use.
+Source: Identify the source of the email file upload, providing clarity on the origin of your data.
+Actions: This section provides the action to edit each upload or review it.
+Email Targeting > Email Contact Upload > Upload Email List
+Embarking on the core of your email campaign management process, the journey begins with the essential step of uploading your email list. In Netmera Panel, under Email Targeting > Email Contact Upload, you'll discover a user-friendly interface dedicated to enhancing your email campaign experience.
+Here, you initiate the process of bringing your email lists into the system. Key details include naming your list, assigning a file name for reference, optional tagging for organization, and choosing the file (csv or txt). Set the status for each email (subscribed or unsubscribed) and decide whether to update existing contacts. This step lays the foundation for effective email campaign management, ensuring that your lists are organized and ready for targeted communication.
+List Name: Craft a descriptive name for your email list. This helps in easy identification and categorization, making your campaign management more efficient.
+File Name: Assign a file name for reference in the File Transfers screen. This is your key to swift tracking and retrieval of pertinent data.
+Tag Name: Optionally, tag uploaded users for streamlined organization. Tags provide a flexible way to categorize and group contacts based on specific criteria.
+File: Utilize the user-friendly drag-and-drop feature or click to upload a .csv or .txt file. Ensure that each line contains a single email entry, maintaining data integrity and accuracy.
+Upload Email Data File Format:
+File format for upload should be either .csv or .txt. Ensure that each line contains a single email entry.
+Below is a sample data file that can be used for email uploads.
+Status: 
+Subscribed: Use this status to identify users who have given permission to receive your marketing emails. It's a crucial distinction for targeted and compliant communication.
+Unsubscribed: Clearly identify users who have opted out. This distinction helps in respecting user preferences and maintaining a clean and compliant contact list.
+Update Contacts: This toggle provides the option to update contact information for your existing email addresses. When activated, if an email address from the uploaded list matches an existing one, the associated information is seamlessly updated. 
+"Update Contacts" Only Updates Attributes regarding Email Lists:
+It's important to note that update contacts option specifically pertains to email marketing attributes and doesn't affect the general profile attributes of users in Netmera. For instance, activating this option will automatically update attributes only relevant to email marketing, ensuring the latest information is incorporated into your campaigns.
+Now, let's walk through the process of assigning profile attributes when uploading your CSV file. When you upload your CSV file, the attributes will be displayed on the screen under "Profile Attributes". For each column in your file, align it with the corresponding profile attribute. This step is crucial for maintaining accurate organization and association of your data.
+Match column to create profile attributes for your contact:
+When a profile attribute matches with the system it will be shown in white with a green ✅ on it.
+If a profile attribute doesn't match with the system, it will be shown in red:
+The system will highlight in red any profile attribute without a matching counterpart. This signals that the system couldn't find a profile attribute with the specified header in the CSV file. To match the profile attribute correctly, click the "Edit" button.
+Edit Profile Attribute:
+By clicking "Edit," you can select the appropriate profile attribute from the existing ones. In cases where your desired attribute isn't visible, you have the option to create a new one, guided by our documentation Creating Custom Profile Attributes.
+Click Save:
+After aligning or creating the correct profile attribute, click "Save" to confirm and ensure the successful association of attributes.
+Once your new email lists are in place, take advantage of Profile Attributes when creating a new email campaign. In the second step of the campaign creation process, titled "What," you'll find the option to select specific Profile Attributes. This allows you to refine your campaign based on the attributes associated with your contacts. Choose the relevant Profile Attributes from the list, ensuring that your campaign is precisely tailored to your audience's characteristics. 
+After making your selections, save and proceed with the campaign creation process. This integration of Profile Attributes adds a layer of customization to your email campaigns, ensuring that your messages are targeted and relevant. 
+You may read about Step 2: What for your Email Campaigns on Sending a Mail Campaign. For more guidance or assistance, refer to our documentation or reach out for support. Happy campaigning! 🎉
+Last updated 1 month ago
+Was this helpful?

@@ -1,0 +1,72 @@
+Quick Steps Guideline
+Go to your Netmera Panel and click:
+Messages -> Campaigns page -> Create New Campaign
+Add Campaign Name and select Notification Type (SMS->Text) on Setup.
+Choose your category, header and add notification message on What page.
+Select your target group on Who page.
+Decide on your notification time and speed on When page.
+On the last page GO!, check the information about your notification and test message on your device if you need to, then click SEND to publish your notification.
+Setup section is the first step in the Create New Campaign process, where you can set a name for your campaign in the "Campaign Name" section. For SMS message, on this step you are going to choose SMS type to continue editing your message.
+Warning:
+Campaign Name does not override, nor replace a SMS header, but instead allows a name that can be internally facing. This is particularly important when a user has multiple campaigns with the same title and so needs a name that is more distinct and internally facing for reporting.
+On the left side you have "Text" as the SMS format only supports text content.
+On the right side of the Campaign Type section, you can see the estimated number of users that the message can reach. This information provides you with valuable insights into the reach of your campaign to your target group.
+The second step in launching your notification is What section. In the What step, the content of the push notification is created. Fields such as notification text or SMS header that will appear on target devices are defined in this step. 
+This allows you to categorize your messages based on your own predefined criteria or use case. For example, you might have categories such as "Promotions," "News Updates," "Account Notifications," or any other relevant labels that align with your messaging strategy. By assigning each notification to a specific category, you can quickly access and manage related messages at a glance. Whether you're sending promotional offers, important announcements, or transactional updates, Message Categories streamline your workflow and enhance your notification management. (Message Categories)
+It is determined by which name the SMS will be sent to be viewed by the users. It is created from the Connectors -> Installed tab and the created header is selected in this section. 
+The notification message is the main body of your notification and it's important to make it informative and engaging. This can include text and emojis to convey your message effectively. For instance, you could send a notification message to alert users of a low balance or unusual activity or use emojis to make a notification message more exciting and encourage users to take action for your notification.
+You can include URLs in your notification messages wherever you'd like. When crafting your messages, simply type the URL you want to include in the message area, and it will be displayed as a clickable link in the message. This way, users receiving the notification can click on the link to access the provided URL.
+When including a URL in your SMS message content, you have the option to utilize the "Shorten URLs" feature. With this feature enabled, lengthy URLs can be condensed into shorter versions, reducing the character count and maximizing the message space available for your content. This is particularly useful in SMS messages, where character limitations apply.
+Shorten URL Details
+Shorten URLs option on Netmera Panel allows you to shorten your URLs, reducing them to as short as 11 characters. So, by using just 11 characters for your URLs, you can convey your message effectively while still providing recipients with the essential links they need.
+You can use personalized messages to greet your users by their first name, or send them notifications about products or services that are specifically relevant to their interests or past behavior on your app. 
+By doing so, you can create a more personal connection with your users and make them feel valued, which can increase their loyalty to your brand. Additionally, you can use personalized messages to provide timely and relevant information to your users, such as weather updates, local news, or personalized reminders. This can help to increase the overall usefulness of your notifications, and make them more likely to be acted upon.
+Personalized message can be sent if you have profile attributes for users. You may do this by transferring user informations such as name, surname, age to Netmera. For instance,
+Default message: “Happy birthday!”
+Personalized message: “Wishing you a sweet {@age}th birthday {@name}!” becomes “Wishing you a sweet 26th birthday Simon!”
+Labels are an optional feature that allows panel users to tag their campaigns with specific labels for organizational purposes. Labels can be used to categorize campaigns and make it easier to search for and analyze campaign performance in reporting pages. For example, if you have multiple campaigns targeting different user segments, you can label each campaign accordingly (e.g. "New Users", "Retargeting", "Holiday Sale") to quickly filter and compare results. Labels are not required but can be a helpful tool for managing and optimizing your campaigns.
+In the Who step, the target audience for your SMS notification is determined. The SMS notification can be sent to all users (send all) or your target audience can be narrowed by selecting the users by "Select Users" or "Advanced" which are explained below.
+This option allows you to send your SMS to all of your subscribers who have opted in to receive SMS notifications.
+This option enables you to target specific users based on different criteria, such as location, language, and more.
+Tag 
+You can segment your users based on tags that you have created in the 'Targeting->Tags' section. Once you have added at least two tags, you can modify your tag preference using 'And/Or' logical operators. This allows you to refine your targeting and reach specific groups of users who share certain characteristics or behaviors.
+Segment
+Segments are groups of users that are dynamically structured. Based on the actions they take on the app, users can either enter or exit these segments. In this section you can seperate your users by their segment. After adding at least 2 parameters, you can modify your segment preference with "And/Or" logical operators. Also you can add new segments from "Targeting->Segments". To learn more, please refer to the Define Segment section.
+Device Type
+You can separate your users by their device type, such as Desktop, Mobile, Tablet. Additionally, you can modify your device type preference using logical operators "And/Or" after adding at least 2 parameters. This allows for greater flexibility in targeting specific groups of users based on their device type.
+Profile
+The users who’s specified profile attribute is equal to specified value. This refers to a targeting option where you can select users whose specific profile attribute matches a particular value. For example, you can select users whose "gender" attribute is equal to "female" or users whose "age" attribute is equal to "25". After adding at least 2 parameters, you can modify your profile attribute preference with "And/Or" logical operators.
+Response
+The targeting for the push notification will be based on users who either did or did not interact with a specific previous push notification. For example, if you select a previous push notification that advertised a sale and then choose to target users who did not interact with it, your new push notification might offer a different promotion to try to entice those users who didn't take advantage of the previous sale. 
+Location
+This targeting option allows you to select users based on their geographic location. You can specify a region, such as a city, state, or country, and target users who are located within that area. You can search location by its latitude and longitude. Or you can just simply serch by the location name. Also from distance part you can select the radius value and type for your location then by clicking on map you can select your location by determined radius.
+
+This option provides more advanced settings for targeting specific users based on specific actions or behaviors they have taken on your website or app. This feature allows you to create highly personalized and targeted SMS notifications to drive engagement and conversions.
+New filters can be defined using conditions and groups by selecting Advanced option.
+The advanced filter options allow you to create specific target audiences for your SMS campaigns. By adding conditions and groups, you can tailor your SMS promotions to customers who have shown an interest in your brand by either purchasing a specific product, subscribing to your newsletter, or browsing your website. Using the "AND" option ensures that only users who meet all the conditions are included in your target audience, while the "OR" option includes a broader audience of users who meet any of the conditions. This makes your SMS notifications more relevant and effective in driving sales for your business.
+By clicking "Add Condition" or "Add Group" you may choose the criteria which suits your notification the best. 
+More than one Condition or Group can be added to serve best according to your needs. 
+When "AND" is chosen, if all criteria is met by the conditions/groups they will be listed as your target audience and they will be shown on the right section of the page.
+When "OR" is chosen, if any criteria is met by the conditions/groups, they will be listed as your target audience and they will be shown on the right section of the page.
+After you have chosen your target audience, Selection Criteria will show you who you are broadcasting to, number of users and number of devices the notification will be delivered.
+It is an option that allows sending push notifications to users who have exceeded their message limits. Normally, push notification providers set limits on the number of push notifications that can be sent to a user within a certain period of time to prevent spamming or overwhelming the user.
+However, in some cases, it may be necessary to send a message to a user even if they have exceeded their limit, such as for urgent notifications or time-sensitive information. In these cases, the "Ignore User Message Limits" option can be used to bypass the limit and ensure that the message is delivered.
+It's important to use this option judiciously, as sending too many notifications to a user can lead to annoyance and increased opt-out rates.
+Example:
+If there is a severe weather condition that could potentially put users in danger, it may be necessary to send a notification to all users, regardless of their message limit preferences. In this case, ignoring user message limits would ensure that the notification reaches all users in a timely manner. 
+When you select "Limit Target Users" option in a campaign, you can specify the maximum number of users who will receive that campaign. This is useful when you want to control the campaign reach and ensure that it doesn't go beyond a certain limit. Once the maximum number of users is reached, the campaign will stop being sent to any additional users, even if they meet the campaign's targeting criteria.
+For example, if you are sending a promotional message about a limited-time offer, you may want to limit the number of users who receive the message to ensure that you do not exceed your inventory or capacity. Similarly, if you are testing a new messaging strategy or campaign, you may want to limit the number of users who receive the message to a small sample size before rolling it out to your entire audience.
+On "Start sending messages" section you have two options you can send your messages instantly with selecting "Now" or you can set them for further date with selecting "On specific time".
+Example:
+If you want to send a daily reminder to your users to complete their to-do list for the day, you can use the specific time option to schedule your notification to be sent every morning at a specific time, such as 9:00 AM. By using this feature, you can create a consistent and personalized user experience for your user base.
+From the "Delivery speed" option, you can choose how you want to send your SMS message. If you select "Send Fast," the notification will be sent to all users at once. However, if you have a large number of users, it may be more efficient to send the notifications in packages. In this case, you can select "Send In Packages" and choose the size of each package. The system will then send the push notifications to users in each package before moving on to the next one until all users have received the notification.
+Once you have completed all four steps, you can access all the information related to the SMS created in the GO stage.
+After checking the details and testing on your device, it's finally time to send your notification to your audience. Just click on "Send" and wait for your Reports!
+Last updated 5 months ago
+Was this helpful?
+
+
+
+
+
+

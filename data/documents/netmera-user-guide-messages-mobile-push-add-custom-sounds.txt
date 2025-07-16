@@ -1,0 +1,7 @@
+Developers -> Sounds -> Create New Sound.
+To upload a sound for your campaign, go to the Developers tab and select Sounds. Click on Create New Sound and provide a name for the sound.
+Select the platform and enter the name of the sound file that is located in the application bundle (it should also be included in the mobile app to upload it to Netmera panel). 
+Enable the sound to ensure it does not disable when the sound file is removed from the app.
+After saving the sound, it will be defined in Netmera and ready for use in your campaigns.
+Last updated 5 months ago
+Was this helpful?

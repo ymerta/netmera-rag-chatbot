@@ -1,0 +1,52 @@
+Netmera provides a comprehensive event tracking system that allows you to understand user behavior, analyze app usage, and engage with your users effectively. By tracking and analyzing events, you can personalize your communication, deliver targeted messages, and enhance the overall user experience.
+Standard Events in Netmera are pre-defined events that are readily available for tracking once you integrate the Netmera SDK into your app. They can be further divided into two subcategories: Automated Events and Pre-defined Events.
+Netmera's Automated Events are predefined events that are automatically triggered just after you have completed Netmera SDK integration. They are automatically triggered when specific user interactions or system actions occur within your mobile application. These events are essential for gaining insights into user behavior and app performance. Let's explore each Automated Event in detail:
+Install (First Open) App:
+The Install App event is automatically generated when a user opens your app for the first time after installing it. It marks the beginning of a user's journey with your application.
+App Opens:
+This event records each instance when a user opens your application. It provides a count of how frequently users access your app.
+Time Passed Inside the Application for Each Foreground Usage:
+Tracking the time users spend actively using your app is crucial. This event helps you monitor user engagement by measuring the duration of app usage during each session.
+Push Receipts (If Configured from Dashboard):
+If push notification receipts are configured from the Netmera Dashboard, this event logs when users receive these notifications. It allows you to assess the impact of your push notifications.
+Push Opens:
+The Push Opens event records when users interact with push notifications by opening them. It helps gauge the effectiveness of your notification campaigns.
+Enter/Exit Actions for Geofence Regions (If Set Up):
+If you've established geofence regions, this event captures when users enter or exit these predefined geographic areas. It's valuable for location-based engagement strategies.
+Actions Taken Inside Web Views Presented by Netmera:
+When users interact with web views that are part of your app, this event records their actions within those web views. It aids in tracking user engagement with web content.
+Log Event (Triggered When an Error Occurs):
+The Log Event is automatically triggered when an error occurs in your application. It helps identify and address issues promptly, ensuring a smoother user experience.
+These Automated Events offer real-time insights into how users engage with your app, from their initial installation to their ongoing interactions. By analyzing these events, you can make data-driven decisions to enhance user satisfaction and app performance.
+In addition to the default event tracking, Netmera SDK provides a set of pre-defined events designed to help you track and analyze specific user actions and behaviors within your mobile application. These events require integration and provide a structured way to capture specific user actions. These events cover a wide range of common interactions. Some of the pre-defined events include,
+Screen View Event:
+This event tracks when a user views a specific screen or page within your app. It helps you understand which parts of your app are most frequently visited.
+Login Event:
+The Login Event is triggered when a user logs into your application. It's useful for monitoring user engagement and authentication patterns.
+Register Event:
+When a user completes the registration process in your app, the Register Event is recorded. This event is crucial for tracking user onboarding.
+Search Event:
+The Search Event allows you to capture user-initiated searches within your app, helping you analyze what users are looking for.
+Share Event:
+When a user shares content or data from your app, the Share Event is logged. It's beneficial for measuring the social engagement of your users.
+In-App Purchase Event:
+In-App Purchase Events are recorded when users make purchases within your app. These events are vital for tracking revenue and conversion rates.
+Banner Click Event:
+This event is triggered when a user interacts with banner advertisements within your app, providing insights into the effectiveness of your ad placements.
+Category View Event:
+If your app has categorized content, the Category View Event tracks when users access specific categories or sections.
+Battery Level Event:
+The Battery Level Event helps monitor the battery status of users' devices while they use your app. This information can be useful for optimizing power consumption.
+Commerce Events (e.g., Product View, Product Rate, Product Comment, Order Cancel, Purchase, Cart View, Add To Cart, Remove From Cart, Add To Wishlist):
+These events are related to e-commerce activities within your app, such as product interactions, orders, and cart management. They're vital for analyzing user purchasing behavior.
+Media Events (e.g., Content Comment, Content Rate, Content View):
+If your app features media content like articles, videos, or images, these events track user interactions with such content, including comments, ratings, and views.
+These pre-defined events provide valuable insights into user engagement and behavior within your app. By utilizing them effectively, you can make data-driven decisions to improve user experience and app performance.
+In cases where the predefined events don't fully meet your tracking requirements, Netmera offers the flexibility to create Custom Events through the Netmera Dashboard. Custom events allow you to capture unique user interactions and actions specific to your application. To create a custom event, follow these steps:
+Navigate to the Developers -> Events section in the Netmera Dashboard.
+Click the "Create New Event" button.
+Define the event attributes, data types, and specify mandatory parameters as needed. 
+After creating a custom event, Netmera Dashboard will automatically generate the necessary code and source files for your event, allowing you to seamlessly integrate it into your project.
+Please read Creating Custom Events for detailed information.
+Last updated 5 months ago
+Was this helpful?

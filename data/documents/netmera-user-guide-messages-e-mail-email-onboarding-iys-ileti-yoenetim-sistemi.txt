@@ -1,0 +1,11 @@
+IYS is a platform that plays a transformative role in digital communication in Turkey. IYS integrates consumer empowerment, legal compliance, and streamlined messaging practices to create a digital environment where businesses and consumers can engage with respect and efficiency. Netmera, as a trusted partner, provides expertise in the integration and management of IYS, making it a seamless process for businesses navigating the complexities of modern communication.
+Integrating IYS with your Netmera Panel is a straightforward process, consisting of three simple steps to seamlessly enhance your data security and message management system.
+Access the Connectors Section: Access the Connectors section within your Netmera panel. Locate the list of "Available" connectors.
+Choose Data Security / İleti Yönetim Sistemi: From the available connectors,  choose "Data Security" > "İleti Yönetim Sistemi" and click the "Install" button to initiate the integration process.
+Configure IYS: In the provided spaces, input your "Brand Code" and "IYS Code" This crucial step activates the IYS connector within your Netmera account. Once the installation is complete, proceed to configure IYS to tailor it to your campaign requirements.
+Important Reminder: 
+Ensure you have your Brand and IYS codes accessible from your IYS account, as these details are necessary for a seamless integration process. By following these steps, you'll be well-equipped to leverage the full potential of IYS within your Netmera environment.
+By diligently following these outlined steps, the synchronization of all your users with IYS becomes a systematic and efficient process. The synchronization commences on the night of installation and progresses in batches until all users are seamlessly integrated.
+If you're seeking additional information, please feel free to visit our IYS Integrationpage. There, you can explore more details about İleti Yönetim Sistemi (IYS) and its integration with Netmera.
+Last updated 1 month ago
+Was this helpful?

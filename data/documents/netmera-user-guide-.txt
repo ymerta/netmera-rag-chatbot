@@ -1,0 +1,23 @@
+Welcome to Netmera User Guide: Your Complete Guide to Netmera!
+Feel free to explore our latest titles and enhancements. Following titles are as fresh as a batch of cookies just out of the bakery, enjoy!
+Spin to Win: We believe that dedicating an entire page to Spin to Win was essential! With these guides, engage your audience with an interactive spin-to-win experience, making promotions more fun and engaging.
+Guided Videos: Learn and explore Netmera with our guided videos, providing step-by-step instructions and insights to enhance your experience.
+Autotracking: With our new Autotracking feature, simplify the tracking of page transitions and collection of event data in your mobile application. To gain a comprehensive understanding of its capabilities, we invite you to watch our informative video below. Remember to subscribe to stay updated with our latest innovations and tutorials. ☺️
+Sending Coupon Code Information through SMS and Push Messages 🎟️
+With this enhancement, you can now efficiently distribute coupon codes to your audience via SMS or push notifications, ensuring timely communication of expiring offers and maximizing engagement across channels. Seamlessly integrate this feature into your marketing strategies to drive conversions and enhance customer satisfaction. Please see the following title for further information!Spin to Win#sending-coupon-codes-with-sms-and-push-messages
+Improvements of Funnel Analysis 📊
+Dive deeper into your data to track user interactions and optimize strategies with advanced analytics capabilities. These updates make analyzing your data simpler and more efficient, empowering you to stay ahead of the curve and maximize impact. Stay tuned for these exciting updates on Netmera's platform. You might see the updates on Create New Funnel.
+Different Custom Sounds for Message Variants 🔊
+This new feature allows you to personalize your messaging experience by adding custom sounds to your campaigns. After selecting "Add" to your push campaign variants, you now have the option to choose custom sounds for iOS and Android for each notification variant. This update provides you with greater flexibility in tailoring your messaging experience, ensuring that notifications resonate with your audience on all languages and platforms. 
+We are delighted to introduce you to the Netmera User Guide, your comprehensive resource for harnessing the power of our omnichannel customer engagement platform. With Netmera, you have access to a wide range of features and functionalities that will enable you to engage your audience effectively through various channels.
+As you dive into the Netmera User Guide, you'll discover step-by-step instructions, best practices, and tips for utilizing the platform's capabilities to their fullest extent. We've designed this guide to empower you in creating meaningful connections with your audience and achieving your communication goals.
+In this user guide, you can expect to find:
+Introduction to Netmera: Familiarize yourself with the platform's core concepts, architecture, and terminology. Gain a clear understanding of how each channel operates and fits into your overall communication strategy.
+Channel-specific Guides: Delve into the specific features and functionalities of each communication channel available in Netmera. Explore in-depth tutorials and use cases for mobile push notifications, web push notifications, emails, SMS messages, feedback buttons, web pop-ups, and mobile widgets.
+Automation: Maximize your efficiency by automating your communication workflows. Learn how to set up triggered messages based on user actions or predefined criteria, allowing you to engage your audience in a timely and relevant manner (automated campaigns, transactional messages, geofence notifications).
+We are committed to providing you with all the support and resources you need to succeed with Netmera. Whether you are a new user or an experienced communicator, this user guide will serve as your go-to reference, equipping you with the knowledge and skills to effectively engage your audience through various channels.
+Thank you for choosing Netmera as your communication solution. Let's embark on this journey together and unlock the full potential of your communication efforts. 
+Welcome to the Netmera User Guide!⚡
+Last updated 5 days ago
+Was this helpful?
+ 

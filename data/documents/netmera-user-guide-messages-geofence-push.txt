@@ -1,0 +1,39 @@
+Geofencing allows you to define virtual boundaries, such as specific areas or points of interest, and send targeted push notifications to users who enter or exit these geographically defined zones.
+Geofence Push is a powerful tool that enables you to deliver relevant and timely messages to your users when they are in proximity to a specific location. Whether you want to promote a nearby store, offer personalized discounts based on their current location, or provide location-specific information, Geofence Push allows you to precisely target your audience and enhance their app experience.
+Quick Steps Guidelines
+Messages -> Geofence -> Create New Geofence Message
+Go to Messages -> Geofence -> Create New Geofence Message.
+Choose between the single location or group location options in the Location section and select your specific location.
+Choose whether the message should be sent upon entering or exiting the location and if it should be sent every time or only once per entry or exit.
+Set the campaign period, including the start and end time, and the frequency of sending. Restrict notifications to specific days or times, if desired.
+Continue with the following steps Setup, What, Who and Go and launch your notification.
+The only difference when creating a Geofence Message is the Location step. All the other steps are the same with creating a push message, which will change according to your push notification type. 
+After finalizing your Location step, you may follow the others steps (Setup, What, Who, Go) on pages Mobile Push, Web Push, SMS and e-mail.
+In order for your users to receive your geofence notifications:
+1) The user needs to enter or exit the relevant location. 
+2) The user's notification permissions must be enabled. 
+3) The application should be up-to-date. 
+4) The device should have an active internet connection. 
+5) Location permissions must be granted, and the device's location setting should not be turned off at that moment.
+The Location section in the geofence notification feature allows you to select either a single location or a group of locations.
+The single location option sends notifications to users who enter or exit a specific point.
+The group option enables you to create a cluster of interconnected locations and trigger actions based on users' entry or exit from these locations. This option is particularly useful for businesses with multiple branches located in different areas.
+After selecting the location, you can choose whether the message will be sent when the user enters or exits it. You can also choose between sending the message every time the user enters or exits, or only once per entry or exit.
+Additionally, you can limit the geofence to a specific device by selecting the "Send message to only the device" option. This will ensure that the message is only sent to the device that entered or exited the location, rather than all devices associated with the user.
+Example:
+Your business has several stores located in different parts of the city. With the geofence notification feature, you can create a group of interconnected locations (all your branches) and set up actions to trigger notifications (such as campaigns or discounts) based on customers' entry or exit from these locations. This enables you to send personalized messages to customers and increase foot traffic to their stores.
+The Campaign Period allows you to specify the start and end time for the geofence. This is particularly important for businesses that have specific hours of operation or offer time-sensitive promotions.
+You can also set the frequency of sending for your geofence notifications. You can choose to send notifications daily, weekly, or monthly based on your specific requirements. This flexibility allows you to tailor your geofencing campaigns to the needs of your business, whether you're looking to drive more foot traffic to your store or promote a time-limited offer.
+The Campaign Period section offers the option to restrict notifications to certain time periods or days of the week. For instance, if you're running a promotion that's only available during the weekends, you can set your geofence to send notifications only on Saturdays and Sundays. This ensures that you're reaching your target audience when it matters most, and can help to maximize the effectiveness of your geofencing campaign.
+With these various options for Geofence Push, you can create a highly tailored geofence notification strategy that meets your unique needs and provides users with highly relevant and timely messaging.
+After finalizing your Location step, you may follow the others steps (Setup, What, Who, Go) on pages Mobile Push, Web Push, SMS and e-mail.
+You may also refer to the following Netmera Blog Post about Geofence Push for more useful tips. These blog posts delve into different scenarios and demonstrate how Netmera features can be utilized effectively to enhance various aspects of your goals. 
+Why aren't my users receiving geofence notifications?
+For the users to receive geofence notifications,
+1) The user needs to enter or exit the relevant location. 
+2) The user's notification permissions must be enabled. 
+3) The application should be up-to-date. 
+4) The device should have an active internet connection. 
+5) Location permissions must be granted, and the device's location setting should not be turned off at that moment.
+Last updated 3 months ago
+Was this helpful?

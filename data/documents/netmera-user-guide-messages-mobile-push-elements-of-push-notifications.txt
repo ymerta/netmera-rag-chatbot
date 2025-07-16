@@ -1,0 +1,18 @@
+a. Small Icon 
+24×24 - 96×96 to fit all device sizes. Must be white with a transparent background. PNG.
+b. Title (Title)
+Restricted to 50 characters.
+c. Body (Notification Message)
+Restricted to 150 characters.
+d. Large Picture (Android/iOS Media URL)
+1440×720 or 2:1 aspect ratio. PNG, JPG, GIF (not animated).
+e. App Name
+Can't be changed.
+f. Time Stamp
+Time message received.
+g. Icon (Android/iOS Thumbnail)
+192×192 or larger. PNG, JPG, GIF (not animated).
+h. Action Buttons  (Settings->Button Sets)
+Supports up to 3 buttons can be edited in Settings -> Button Sets
+Last updated 5 months ago
+Was this helpful?

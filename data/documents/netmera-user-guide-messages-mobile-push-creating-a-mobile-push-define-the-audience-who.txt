@@ -1,0 +1,56 @@
+Now it's time to define your target audience!
+In the Who step, the target audience for your push notification is determined. The push notification can be sent to all users or your target audience can be narrowed by selecting the users by "Select Users", "Advanced", and "Distribution List" which are explained in Defining Target Audience.
+After you have chosen your target audience, Selection Criteria will show you who you are broadcasting to, number of users, number of devices, and number of Android/iOS the notification will be delivered.
+It is an option that allows sending push notifications to users who have exceeded their message limits. Normally, push notification providers set limits on the number of push notifications that can be sent to a user within a certain period of time to prevent spamming or overwhelming the user.
+However, in some cases, it may be necessary to send a message to a user even if they have exceeded their limit, such as for urgent notifications or time-sensitive information. In these cases, the "Ignore User Message Limits" option can be used to bypass the limit and ensure that the message is delivered.
+It's important to use this option judiciously, as sending too many notifications to a user can lead to annoyance and increased opt-out rates.
+Example:
+If there is a severe weather condition that could potentially put users in danger, it may be necessary to send a notification to all users, regardless of their message limit preferences. In this case, ignoring user message limits would ensure that the notification reaches all users in a timely manner. 
+When you select "Limit Target Users" option in a campaign, you can specify the maximum number of users who will receive that campaign. This is useful when you want to control the campaign reach and ensure that it doesn't go beyond a certain limit. Once the maximum number of users is reached, the campaign will stop being sent to any additional users, even if they meet the campaign's targeting criteria.
+For example, if you are sending a promotional message about a limited-time offer, you may want to limit the number of users who receive the message to ensure that you do not exceed your inventory or capacity. Similarly, if you are testing a new messaging strategy or campaign, you may want to limit the number of users who receive the message to a small sample size before rolling it out to your entire audience.
+Example:
+If you want to send a personalized email campaign to your customers who have abandoned their carts without making a purchase, you can use the filter options to create a target audience by selecting users who have added items to their cart but have not completed the checkout process. 
+By filtering your users with criteria, you can send a personalized push that includes a reminder of the items in their cart, along with related product recommendations and special discounts to encourage them to complete their purchase. This can help reduce cart abandonment rates and drive sales for your business.
+You may select your target users by filtering them with criteria of tags, segments, profiles you have created before or according to their responses to your previous notifications, locations, devices and more.
+Criteria mentioned below can be created or edited in "Targeting".
+Tag 
+You can segment your users based on tags that you have created in the 'Targeting > Tags' section. Once you have added at least two tags, you can modify your tag preference using 'And/Or' logical operators. This allows you to refine your targeting and reach specific groups of users who share certain characteristics or behaviors.
+Segment
+Segments are groups of users that are dynamically structured. Based on the actions they take on the app, users can either enter or exit these segments. To learn more, please refer to the Define Segment section.
+Profile
+The users who’s specified profile attribute is equal to specified value. This refers to a targeting option where you can select users whose specific profile attribute matches a particular value. For example, you can select users whose "gender" attribute is equal to "female" or users whose "age" attribute is equal to "25".
+Response
+With this targeting option, you can refine your push notification targeting by selecting users who have or have not interacted with a previously sent push notification. This allows you to tailor your messaging and improve engagement rates by sending notifications to users who are more likely to respond.
+Location
+This targeting option allows you to target users based on their location. You can specify a geographical region, such as a city, state, or country, and send push notifications to users who are located in that area. This is especially useful for businesses that want to promote events or offers in specific locations.
+Last Used Device
+This targeting option allows you to target users based on their last used device or other than their last used device. You can choose to send push notifications to users who have recently used a specific device or exclude users who have used a particular device.
+Location Preferences
+This targeting option allows you to target users based on their location permissions. You can send push notifications to users who have granted location access to your app or exclude users who have denied location access.
+Device
+This targeting option allows you to target users based on their device type. You can send push notifications to users who are using a specific device, such as an iPhone or an Android phone.
+Operator
+This targeting option allows you to target users based on their telecom operator. You can send push notifications to users who are using a specific telecom operator.
+App Version
+This targeting option allows you to target users based on the version of your app that they have installed. You can send push notifications to users who are using a specific version of your app or exclude users who have an outdated version.
+Operating System
+This targeting option allows you to target users based on the operating system of their device. You can send push notifications to users who are using a specific operating system, such as iOS or Android.
+Installation Source
+This targeting option is available thanks to Netmera integration with Adjust. It allows you to track users who have installed your app from advertising campaigns and send push notifications to them based on the campaign that brought them to your app.
+By App Tracking (Android Only)
+This allows you to track and target users based on their in-app behaviors, such as their usage frequency or the actions they take within the app. This can help you to refine your targeting and send push notifications to users who are more likely to engage with your app. Note that this feature is only available on Android devices.
+By App Installation
+It enables you to target users based on their app installation status. This feature allows you to create personalized communication strategies for different user groups. You can engage new users with onboarding messages and welcome offers, target active users with relevant content and updates, re-engage inactive users with reminders and incentives, and encourage non-users to download the app with promotional campaigns.
+Android Provider
+This targeting option allows you to target users based on their Android provider. You can send push notifications to users who are using a specific Android provider, such as Google or Huawei.
+Promotion
+This targeting option allows you to target users based on whether they have a promotion code or not. You can send push notifications to users who have a promotion code to encourage them to use it and drive more sales.
+New filters can be defined using conditions and groups by selecting Advanced option.
+The advanced filter options allow you to create specific target audiences for your promotional email campaigns. By adding conditions and groups, you can tailor your email promotions to customers who have shown an interest in your brand by either purchasing a specific product, subscribing to your newsletter, or browsing your website. Using the "AND" option ensures that only customers who meet all the conditions are included in your target audience, while the "OR" option includes a broader audience of customers who meet any of the conditions. This makes your email promotions more relevant and effective in driving sales for your business.
+By clicking "Add Condition" or "Add Group" you may choose the criteria which suits your notification the best. 
+More than one Condition or Group can be added to serve best according to your needs. 
+When "AND" is chosen, if all criteria is met by the conditions/groups they will be listed as your target audience and they will be shown on the right section of the page.
+When "OR" is chosen, if any criteria is met by the conditions/groups, they will be listed as your target audience and they will be shown on the right section of the page.
+Last updated 5 months ago
+Was this helpful?
+ 

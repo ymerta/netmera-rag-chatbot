@@ -1,0 +1,9 @@
+The onboarding process for email sending is designed to ensure a smooth transition and maximize the effectiveness of your email campaigns. While the specifics may vary depending on your specific requirements, the primary goal is to enable you to send bulk emails to large datasets without jeopardizing the reputation of your sending IP addresses.
+The concept of warming up comes into play during this onboarding process. It involves gradually increasing your email sending volume and targeting smaller audience segments initially, then progressively scaling up to larger audiences over time. This approach helps to build a positive sender reputation and establish trust with internet service providers (ISPs) and email recipients.
+Here's an overview of some of the email sending onboarding process:
+Our team will work closely with you to develop a customized IP warming strategy tailored to your specific needs. This strategy outlines the gradual increase in email volume and recipient engagement to ensure optimal deliverability and inbox placement.
+We will guide you in segmenting your audience and creating targeted email campaigns. By starting with smaller, highly engaged segments, you can establish a positive sending reputation before expanding to larger audiences.
+Throughout the onboarding process, we closely monitor your email performance and provide actionable insights to optimize your campaigns further. This may involve adjusting sending volumes, refining audience targeting, or making content improvements based on analytics and recipient feedback.
+As your email program matures and your sender reputation strengthens, we will work with you to gradually increase your email volume and expand your audience reach. This step-by-step approach ensures a smooth transition to high-volume email sending without compromising deliverability.
+Last updated 8 months ago
+Was this helpful?

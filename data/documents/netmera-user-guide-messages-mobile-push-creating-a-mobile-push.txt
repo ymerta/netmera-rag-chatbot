@@ -1,0 +1,43 @@
+Quick Steps Guideline
+Go to your Netmera Panel and click:
+Messages -> Campaigns page -> Create New Campaign
+Add Campaign Name and select Notification Type (Push Notification) on Setup.
+Add information about your Notification Message, Title and more on What page.
+Select your target group on Who page.
+Decide on your notification time, expiry date and speed on When page.
+On the last page GO!, check the information about your notification and test message on your device if you need to, then click SEND to publish your notification.
+
+Define Message Type: Setup
+
+
+Define Message Content: What
+
+
+Define the Audience: Who
+
+
+Define Campaign Schedule: When
+
+
+Test and Send: GO!
+
+
+Elements of Push Notifications
+
+
+Button Sets
+
+
+Define Segment
+
+
+Add Custom Sounds
+
+
+Add Image or Video to Push Notifications
+
+
+Banner, Carousel, Slider and Product Discovery Additional Notes
+
+Last updated 5 months ago
+Was this helpful?

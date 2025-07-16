@@ -1,0 +1,21 @@
+Send the Same Message in Multiple Languages
+When it comes to engaging with your diverse audience across the globe, Netmera's Multi-Language Push feature is your go-to solution. With this powerful feature, you can send notifications in multiple languages, breaking down language barriers and ensuring your messages resonate with your users, no matter where they are.
+With Multi-Language Push, you have the power to send the same message in multiple languages in only one campaign, ensuring that every customer, regardless of their native tongue, receives your message loud and clear. In this guide, we'll walk you through the ins and outs of using the Multi-Language Push feature, empowering you to connect with your global audience easily.
+In your Netmera dashboard, navigate to Settings > General to configure the language settings for your message. Navigate to Language tab, and you'll find the Multi Language option. Toggle it to "On" This action activates the Multi-Language Push feature for your campaigns.
+Here we have two options to choose for our language settings,
+Device Language
+This choice is particularly handy when you want your messages to align with the language settings on user devices. It can automatically detect the operating system language of the devices equipped with Netmera. For example, if a user's smartphone is set to Spanish, the message will be delivered in Spanish.
+Custom Profile Attribute
+For a higher level of personalization, you can make use of custom profile attributes. These attributes are created by following the steps outlined in our Profile Attributes guide. You can assign a specific language attribute to each user, allowing you to send messages in the language associated with their individual profiles. This is perfect for tailored communication and catering to the diverse language preferences of your users.
+After you've configured your language settings in General Settings it's crucial to apply these settings. Clicking "Apply" confirms that the multi-language feature is active for your upcoming campaign.
+To get started with your new language settings and send your first multi-language campaign, access the campaign creation section in your Netmera dashboard in Messages > Campaigns > Create New Campaign. This is where you'll set up your multi-language message. 
+In Step 2: What, you'll come across the Default Language option. This plays a pivotal role in your campaign as it serves as the main language for your message. 
+What happens if a language is not available in the campaign? 
+The default language is the fallback language to which your message reverts if a user's preferred language isn't available in your campaign. It's essential to choose a default language that's widely understood and can effectively convey your message to users who haven't specified their language preferences.
+Next to the Default Language option, you'll notice an "Add" button. Clicking this button allows you to incorporate additional languages into your campaign.
+For each added language, you can now personalize the message content. This is where you can input the message text, images, or any other content relevant to each language. For example, if your default language is English, you can create message parts for Spanish, French, German, and more. Customize each message part accordingly.
+Language Selection Process:
+Netmera will take care of the language selection process automatically. When you send the push notification, it will be delivered to your audience based on their language preferences. This preference can be determined by either their device language or the custom profile attributes.
+Once you've configured your campaign to include multiple languages in "Step 2," the remaining steps are as straightforward as completing a regular campaign process!✨ Follow these simple steps to send your push notifications in different languages! If you'd like to read more on how to continue sending your campaigns please visit the relevant titles on About Push Notifications.
+Last updated 4 months ago
+Was this helpful?

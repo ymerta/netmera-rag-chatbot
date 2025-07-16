@@ -1,0 +1,66 @@
+Quick Steps Guideline
+Go to your Netmera Panel and click:
+Messages -> Campaigns page -> Create New Campaign
+Add Campaign Name and select Notification Type (E-Mail) on Setup.
+Choose your Template and add information about your Mail Address and Title and more on What page.
+Select your target group on Who page.
+Decide on your notification time and speed on When page.
+On the last page GO!, check the information about your notification and test message on your device if you need to, then click SEND to publish your notification.
+For your e-mail campaign the only option you may choose is Text option. However, when you move on to page "What" you will see all the designed mail templates you've created before. So for this step just enter your "Campaign Name" and continue by clicking "Save & Continue" for the next step.
+This does not override, nor replace a Mail Subject, but instead, Campaign Name is an internal label that helps you identify and distinguish between different email campaigns, especially when you have multiple campaigns with the same subject line or content. It does not appear in the email itself, but it's useful for organizing and tracking your campaigns in your email marketing platform.
+This setting allows you to select from the email templates you have created on the Settings -> Mail Templates screen. If you haven't created any templates yet, you can learn how to create an email template on the How to Create an Email Template page. Once you have selected a template, you can also edit it on this screen to customize it for your campaign.
+There are two types of emails you can send: notification or campaign/advertisement. The email type should be selected based on the purpose of your campaign. For example, a notification email may be used to inform subscribers of an upcoming event, while a campaign/advertisement email may be used to promote a new product or service.
+This setting allows you to specify the email address that will appear as the sender of your email. The email address you use must be transmitted to Netmera by panel users, and it must be defined by Netmera.
+This setting allows you to specify the name of the person or company that sent the email. It's important to use something that subscribers will instantly recognize, like your company name, so they know the email is from a trusted source.
+This setting allows you to specify the subject line of your email. Your subject line should be short and to the point, giving subscribers a clear idea of what your email is about. It's also a good idea to use language that is attention-grabbing and compelling to encourage subscribers to open the email.
+This setting allows you to specify the pre-header text that appears in the inbox after the subject line. The pre-header is not mandatory, but it can be a useful tool to give subscribers a little more information about the email and encourage them to open it. Your pre-header should be a minimum of forty characters.
+This setting allows you to specify the email address that subscribers should use if they want to reply to your email. If you specify a reply email, any replies from subscribers will be sent to that email address. If you leave this setting blank, subscribers will not be able to reply to your email and  no reply mail will be set.
+Before sending an email campaign to your subscribers, it's important to test it to make sure it looks and functions correctly. The test mail feature allows you to send a test email to a selected number of users to check the formatting, layout, and content of your email.
+To use the test mail feature, you need to specify the number of users you want to send the test email to. Then, you can add email addresses as testers by making them panel users first. You can add or remove email addresses from the test list on the send test mail screen on the sidebar. To clear the list, click the "Clear List" button.
+Once you have added the email addresses to the test list, you can send a test email to them by clicking the "Send a Test" button. It's important to note that the test email will only be sent to the email addresses on the test list, and not to your entire subscriber list.
+Using the test mail feature can help you catch any errors or issues with your email campaign before sending it to your entire subscriber list, ensuring a smooth and successful campaign.
+Once your new email lists are in place, you may take advantage of Profile Attributes when creating a new email campaign. This allows you to refine your campaign based on the attributes associated with your contacts. Choose the relevant Profile Attributes from the list, ensuring that your campaign is precisely tailored to your audience's characteristics. 
+Please see Upload Email List to discover how you might transfer your email lists with profile attributes to your Netmera Panel.
+Promotion codes are special offers or discounts that you can send to your target audience. You can choose from the promotion value lists that you have defined in Netmera and include them in your email. To use a promotion code, click on the copy button next to the code and paste it where you want it to appear in the email. This can help to encourage your target audience to take a specific action, such as making a purchase, by offering them an incentive.
+It is a feature that allows you to tag your messages with labels for easier organization and reporting. This feature can be especially helpful if you are sending multiple campaigns or notifications and need a way to differentiate and track their performance. By assigning specific labels to your messages, you can quickly filter and search for them in your reporting dashboard, and get a better understanding of how different campaigns are performing. For example, you could use message labels to track campaigns related to a specific product, promotion, or target audience.
+In the Who step, the target audience for your mail is determined. The mail can be sent to all users or your target audience can be narrowed by selecting the users by "Select Users", "Advanced", and "Distribution List" which are explained below.
+This option allows you to send your mail push to all of your subscribers who have opted in to receive web push notifications.
+This option enables you to target specific users based on different criteria, such as location, language, and more.
+Tag 
+You can segment your users based on tags that you have created in the 'Targeting->Tags' section. Once you have added at least two tags, you can modify your tag preference using 'And/Or' logical operators. This allows you to refine your targeting and reach specific groups of users who share certain characteristics or behaviors.
+Segment
+Segments are groups of users that are dynamically structured. Based on the actions they take on the app, users can either enter or exit these segments. In this section you can seperate your users by their segment. After adding at least 2 parameters, you can modify your segment preference with "And/Or" logical operators. Also you can add new segments from "Targeting->Segments". To learn more, please refer to the Define Segment section.
+Device Type
+You can separate your users by their device type, such as Desktop, Mobile, Tablet. Additionally, you can modify your device type preference using logical operators "And/Or" after adding at least 2 parameters. This allows for greater flexibility in targeting specific groups of users based on their device type.
+Profile
+The users who’s specified profile attribute is equal to specified value. This refers to a targeting option where you can select users whose specific profile attribute matches a particular value. For example, you can select users whose "gender" attribute is equal to "female" or users whose "age" attribute is equal to "25". After adding at least 2 parameters, you can modify your profile attribute preference with "And/Or" logical operators.
+Response
+The targeting for the push notification will be based on users who either did or did not interact with a specific previous push notification. For example, if you select a previous push notification that advertised a sale and then choose to target users who did not interact with it, your new push notification might offer a different promotion to try to entice those users who didn't take advantage of the previous sale. 
+Location
+This targeting option allows you to select users based on their geographic location. You can specify a region, such as a city, state, or country, and target users who are located within that area. You can search location by its latitude and longitude. Or you can just simply serch by the location name. Also from distance part you can select the radius value and type for your location then by clicking on map you can select your location by determined radius.
+
+This option provides more advanced settings for targeting specific users based on specific actions or behaviors they have taken on your website or app. This feature allows you to create highly personalized and targeted mails to drive engagement and conversions.
+New filters can be defined using conditions and groups by selecting Advanced option.
+The advanced filter options allow you to create specific target audiences for your promotional email campaigns. By adding conditions and groups, you can tailor your email promotions to customers who have shown an interest in your brand by either purchasing a specific product, subscribing to your newsletter, or browsing your website. Using the "AND" option ensures that only customers who meet all the conditions are included in your target audience, while the "OR" option includes a broader audience of customers who meet any of the conditions. This makes your email promotions more relevant and effective in driving sales for your business.
+By clicking "Add Condition" or "Add Group" you may choose the criteria which suits your notification the best. 
+More than one Condition or Group can be added to serve best according to your needs. 
+When "AND" is chosen, if all criteria is met by the conditions/groups they will be listed as your target audience and they will be shown on the right section of the page.
+When "OR" is chosen, if any criteria is met by the conditions/groups, they will be listed as your target audience and they will be shown on the right section of the page.
+After you have chosen your target audience, Selection Criteria will show you who you are broadcasting to, which means number of users the notification will be delivered.
+It is an option that allows sending push notifications to users who have exceeded their message limits. Normally, providers set limits on the number of mails that can be sent to a user within a certain period of time to prevent spamming or overwhelming the user.
+However, in some cases, it may be necessary to send a mail to a user even if they have exceeded their limit, such as for urgent mails or time-sensitive information. In these cases, the "Ignore User Message Limits" option can be used to bypass the limit and ensure that the message is delivered.
+It's important to use this option judiciously, as sending too many mails to a user can lead to annoyance and increased opt-out rates.
+When you select "Limit Target Users" option in a campaign, you can specify the maximum number of users who will receive that campaign. This is useful when you want to control the campaign reach and ensure that it doesn't go beyond a certain limit. Once the maximum number of users is reached, the campaign will stop being sent to any additional users, even if they meet the campaign's targeting criteria.
+For example, if you are sending a promotional message about a limited-time offer, you may want to limit the number of users who receive the message to ensure that you do not exceed your inventory or capacity. Similarly, if you are testing a new messaging strategy or campaign, you may want to limit the number of users who receive the message to a small sample size before rolling it out to your entire audience.
+On "Start sending messages" section you can send your mails instantly by selecting "Now".
+From the "Delivery speed" option, you can choose how you want to send your web push notifications. If you select "Send Fast," the notification will be sent to all users at once. However, if you have a large number of users, it may be more efficient to send the push notifications in packages. In this case, you can select "Send In Packages" and choose the size of each package. The system will then send the push notifications to users in each package before moving on to the next one until all users have received the notification.
+Once you have completed all four steps, you can access all the information related to the mail created in the GO stage.
+After checking the details and testing on your device, it's finally time to send your notification to your audience. Just click on "Send" and wait for your Reports!
+Last updated 3 months ago
+Was this helpful?
+
+
+
+
+
+
