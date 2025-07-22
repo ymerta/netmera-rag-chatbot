@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 🔐 API anahtarı doğrudan girildi
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets("OPENAI_API_KEY"))
 
 # 📦 FAISS index ve metinler
 index = faiss.read_index("data/embeddings/index.faiss")
