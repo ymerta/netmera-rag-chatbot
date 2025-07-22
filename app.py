@@ -5,9 +5,11 @@ import pickle
 import numpy as np
 from openai import OpenAI
 from langdetect import detect
+from dotenv import load_dotenv
+load_dotenv()
 
 # 🔐 API anahtarı doğrudan girildi
-client = OpenAI(api_key="")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # 📦 FAISS index ve metinler
 index = faiss.read_index("data/embeddings/index.faiss")
@@ -115,9 +117,8 @@ else:
 cols = st.columns(2)
 selected_question = None
 for i, q in enumerate(faq_questions):
-    if cols[i % 2].button(q):
+    if cols[i % 2].button(q, key=f"faq_{i}"):
         selected_question = q
-        break
 
 # 👤 Manuel yazım
 user_input = st.chat_input(input_placeholder)
@@ -139,13 +140,16 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
     embedding = embed_question(user_input)
     distances, indices = index.search(embedding, k=1)
     score = distances[0][0]
-    paragraph = texts[indices[0][0]]
+    selected_doc = texts[indices[0][0]]
+    paragraph = selected_doc["text"]
+    source_file = selected_doc["source"]
 
     if score > 0.6:
         answer = no_info_message
     else:
-        answer = ask_openai(user_input, paragraph, lang)
-
+        answer_text = ask_openai(user_input, paragraph, lang)
+        answer = f"{answer_text}\n\n📄 **Kaynak belge**: `{source_file}`"
+        
     st.session_state.chat_history.append(("assistant", answer))
 
     

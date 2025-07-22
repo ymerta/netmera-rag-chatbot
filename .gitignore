@@ -1,0 +1,17 @@
+# Python cache ve bytecode dosyaları
+__pycache__/
+*.py[cod]
+*.pyo
+
+# MacOS gizli dosyaları
+.DS_Store
+
+# Sanal ortam (virtualenv)
+venv/
+env/
+
+# OpenAI key gibi hassas bilgiler
+.env
+
+# FAISS index dosyaları (istersen sadece lokalde saklarsın)
+data/embeddings/

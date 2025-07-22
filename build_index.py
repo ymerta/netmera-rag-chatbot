@@ -3,10 +3,12 @@ import pickle
 import numpy as np
 import faiss
 from openai import OpenAI
-from utils.loader import load_txt_documents
+from utils.loader import load_txt_documents  # Bu fonksiyon dosya adı + içerik döndürmeli
 
-# 🔐 OpenAI API key doğrudan burada
-client = OpenAI(api_key="")
+load_dotenv()
+
+# 🔐 API anahtarı doğrudan girildi
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # 🧹 Temizlenecek ifadeler
 CLEANUP_PHRASES = [
@@ -20,17 +22,20 @@ CLEANUP_PHRASES = [
     "K"
 ]
 
-# 📄 Belgeleri yükle
+# 📄 Belgeleri yükle (her belge: (dosya_adı, içerik))
 documents = load_txt_documents("data/documents")
 print(f"✅ {len(documents)} dosya bulundu.")
 
-# 🧼 Temizle (30 karakter sınırı yok!)
+# 🧼 Temizle ve kaynakla birlikte sakla
 cleaned_docs = []
-for doc in documents:
+for filename, doc in documents:
     for phrase in CLEANUP_PHRASES:
         doc = doc.replace(phrase, "")
     doc = doc.strip()
-    cleaned_docs.append(doc)
+    cleaned_docs.append({
+        "text": doc,
+        "source": filename  # 🔑 kaynak dosya adını sakla
+    })
 
 # 💾 Temizlenmiş metinleri kaydet
 os.makedirs("data/embeddings", exist_ok=True)
@@ -45,11 +50,11 @@ def get_embeddings(texts):
         vectors.append(response.data[0].embedding)
     return np.array(vectors, dtype=np.float32)
 
-vectors = get_embeddings(cleaned_docs)
+vectors = get_embeddings([d["text"] for d in cleaned_docs])
 
 # 🧠 FAISS index oluştur ve kaydet
 index = faiss.IndexFlatL2(vectors.shape[1])
 index.add(vectors)
 faiss.write_index(index, "data/embeddings/index.faiss")
 
-print("✅ FAISS index ve temizlenmiş tüm metinler kaydedildi.")
+print("✅ FAISS index ve kaynaklı metinler başarıyla kaydedildi.")
