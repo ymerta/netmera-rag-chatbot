@@ -1,5 +1,5 @@
 openai
-faiss
+faiss-cpu
 streamlit
 python-dotenv
 numpy
