@@ -38,8 +38,8 @@ def detect_language(text):
 def ask_openai(question, context, lang="English"):
     if lang == "Türkçe":
         prompt = f"""
-Sen Netmera platformunda çalışan kıdemli bir destek mühendisisin.
-Aşağıdaki bilgileri kullanarak kullanıcının sorusunu yanıtla.
+Sen Netmera platformunda çalışan bir destek uzmanısın. Aşağıda Netmera'nın resmi dökümantasyonundan bir kesit verilmiştir. Sadece bu bilgilere dayanarak kullanıcı sorusunu yanıtla.
+Eğer dokümanda cevap yoksa, "Bu konuda Netmera dokümantasyonunda bilgi bulunmamaktadır." diye belirt.
 
 DOKÜMAN:
 {context}
@@ -50,8 +50,10 @@ SORU:
 YANIT:"""
     else:
         prompt = f"""
-You are a senior support engineer for the Netmera platform.
-Use the information below to answer the user's question.
+You are a Netmera support expert. Below is an excerpt from the official Netmera documentation. Answer the user's question **only using this content**.
+If the answer is not included, reply: "This topic is not covered in the Netmera documentation."
+
+DOCUMENT:
 
 DOCUMENT:
 {context}
@@ -61,7 +63,7 @@ QUESTION:
 
 ANSWER:"""
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}]
     )
     return response.choices[0].message.content.strip()
