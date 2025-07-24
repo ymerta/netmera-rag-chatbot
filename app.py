@@ -8,6 +8,8 @@ from langdetect import detect
 from dotenv import load_dotenv
 import csv
 from datetime import datetime
+import pandas as pd
+
 
 load_dotenv()
 
@@ -341,3 +343,20 @@ Bu belge soruyu ne kadar iyi yanıtlıyor? 0 (hiç) - 100 (mükemmel) arası pua
 for role, msg in st.session_state.chat_history:
     st.chat_message(role).markdown(msg)
 
+st.markdown("---")
+st.markdown("### 📊 Konuşma Kayıtları")
+
+# Eğer log dosyası varsa indirilebilir olarak sun
+if os.path.exists("logs/conversation_log.csv"):
+    try:
+        df_logs = pd.read_csv("logs/conversation_log.csv")
+        st.download_button(
+            label="📥 Logları CSV olarak indir",
+            data=df_logs.to_csv(index=False).encode("utf-8"),
+            file_name="conversation_log.csv",
+            mime="text/csv"
+        )
+    except Exception as e:
+        st.warning(f"Log dosyası okunurken hata oluştu: {e}")
+else:
+    st.info("Henüz herhangi bir log dosyası bulunmuyor.")
