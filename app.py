@@ -307,7 +307,7 @@ Belge:
 Soru:
 {translated_input}
 
-Bu belge soruyu ne kadar iyi yanıtlıyor? 0 (hiç) - 10 (mükemmel) arası puan ver. Sadece sayı yaz:
+Bu belge soruyu ne kadar iyi yanıtlıyor? 0 (hiç) - 100 (mükemmel) arası puan ver. Sadece sayı yaz:
 """
         score_response = client.chat.completions.create(
             model="gpt-4o", messages=[{"role": "user", "content": prompt}]
