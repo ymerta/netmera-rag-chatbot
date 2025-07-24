@@ -4,6 +4,7 @@ import numpy as np
 import faiss
 from openai import OpenAI
 from utils.loader import load_txt_documents  # Bu fonksiyon dosya adı + içerik döndürmeli
+from dotenv import load_dotenv
 
 load_dotenv()
 
