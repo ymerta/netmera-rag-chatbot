@@ -358,10 +358,6 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
             doc["hybrid_score"] = hybrid
             candidate_docs.append(doc)
         
-        # 🪵 Logla: FAISS ve Fuzzy skorları
-        st.markdown("#### 🔍 Karşılaştırılan Belgeler (Debug)")
-        for doc in candidate_docs:
-            st.code(f"📄 {doc['source']} — FAISS: {doc['faiss_score']:.2f}, BM25: {doc['bm25_score']:.2f}, Fuzzy: {doc['fuzzy_score']} → Hybrid: {doc['hybrid_score']:.2f}")
 
         best_doc = max(candidate_docs, key=lambda d: d["hybrid_score"])
 
