@@ -19,7 +19,6 @@ import os
 
 nltk.download('all')
 
-
 load_dotenv()
 
 # 🔐 API anahtarı doğrudan girildi
@@ -46,13 +45,29 @@ def compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score):
 
 # ✅ Kullanıcının sorusu sık sorulardan biriyle eşleşiyor mu?
 def check_faq_match(user_input, threshold=80):
-    lowered = user_input.lower()
+    # 🔄 Türkçeyi İngilizceye çevir
+    try:
+        translation = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "Translate the question to English. If it's already in English, return it as-is. Only return the sentence.",
+                },
+                {"role": "user", "content": user_input},
+            ],
+        )
+        translated_input = translation.choices[0].message.content.strip()
+    except Exception:
+        translated_input = user_input
+
+    # 🔍 FAQ eşleşmesi (fuzzy)
     best_score = 0
     best_answer = None
     best_source = None
 
     for key, entry in faq_qa_map.items():
-        score = fuzz.partial_ratio(lowered, key.replace("_", " ").lower())
+        score = fuzz.partial_ratio(translated_input.lower(), key.replace("_", " ").lower())
         if score > best_score:
             best_score = score
             best_answer = entry["answer"]
@@ -178,20 +193,28 @@ def filename_to_url(filename: str) -> str:
 
 # 🔎 Embed
 def embed_question(question):
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {"role": "system", "content": "Translate the question to English, only return the translation."},
-            {"role": "user", "content": question},
-        ],
-    )
-    translated = response.choices[0].message.content.strip()
+    try:
+        # Soru İngilizce değilse çevir
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "Translate the question to English. If it's already in English, return it as-is. Only return the sentence.",
+                },
+                {"role": "user", "content": question},
+            ],
+        )
+        translated = response.choices[0].message.content.strip()
+    except Exception as e:
+        # Çeviri başarısız olursa orijinali kullan
+        translated = question
 
+    # Embedding işlemi
     response_embed = client.embeddings.create(
         input=[translated], model="text-embedding-ada-002"
     )
     return np.array(response_embed.data[0].embedding, dtype=np.float32).reshape(1, -1), translated
-
 
 
 # 📋 Log fonksiyonu
@@ -213,49 +236,58 @@ def log_interaction(question, answer, source_file, faiss_score):
 
 # 🤖 Yanıt üret
 def ask_openai(question, context, lang="English"):
-    prompt = f"""
+    # 🎯 Sistem rolü: NetmerianBot'un görevini açıkla
+    system_prompt = """
 You are NetmerianBot, a knowledgeable assistant specialized in Netmera's features and documentation.
 
-You are given a document excerpt below. Your task is to answer the user's question using only the information in the document.
+Your job is to answer the user's question using only the provided content. If the content contains relevant information, provide a clear, concise answer. 
 
-If the document provides relevant information:
-- Give a clear, concise, assistant-style answer.
-- Summarize key points naturally, as a helpful expert would.
-- Do **not** copy the document verbatim — rephrase it.
+Guidelines:
+- Use only the content below.
+- Do not mention training data or your knowledge cut-off.
+- Rephrase and summarize naturally.
+- If the content does not answer the question, respond with: "There is no relevant information available."
+"""
 
-If the answer is not covered in the content, simply say it's not available in the provided content. Do not mention "document" , not speculate or make assumptions.
-
-DOCUMENT:
+    # 👤 Kullanıcı mesajı: Belge içeriği + soru
+    user_prompt = f"""
+CONTENT:
 {context}
 
 QUESTION:
 {question}
+"""
 
-ANSWER:"""
-
+    # 🤖 Model çağrısı
     response = client.chat.completions.create(
         model="gpt-4o",
-        messages=[{"role": "user", "content": prompt}]
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ]
     )
 
     english_answer = response.choices[0].message.content.strip()
 
+    # 🌐 Türkçe'ye çevir gerekiyorsa
     if lang == "Türkçe":
         translation = client.chat.completions.create(
             model="gpt-4o",
             messages=[
-                {"role": "system", "content": "Translate the following answer to Turkish:"},
+                {"role": "system", "content": ("You are a professional translator. Translate the following response to Turkish accurately and naturally."
+                                               "⚠️ However, do NOT translate technical terms like 'Send All', 'Push Notification', 'Segment', 'SDK', etc. "
+                                               "Keep them exactly as they are. Do not add anything."),},
                 {"role": "user", "content": english_answer},
             ],
         )
         turkish_answer = translation.choices[0].message.content.strip()
+        if len(turkish_answer) < 5:
+            return english_answer
         return turkish_answer
     else:
         return english_answer
 
-
 # 🎨 Arayüz
-
 # 🌐 Dil seçimi
 lang_manual = st.toggle("🌐 Dili manuel seç", value=False)
 if lang_manual:
@@ -322,6 +354,7 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
     # ✅ Önce FAQ kontrolü
     faq_response = check_faq_match(user_input)
     
+   
     if faq_response:
         answer = faq_response
         st.session_state.chat_history.append(("user", user_input))
@@ -371,10 +404,10 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
         source_file = best_doc["source"]
         source_url = filename_to_url(source_file)
 
-        if "Ekim 2023'e kadar olan veriler" in answer_text:
-            answer = no_info_message
-        else:
-            answer = f"{answer_text}\n\n📄 **Kaynak belge**: [{source_file}]({source_url})"
+        #if "Ekim 2023'e kadar olan veriler" in answer_text:
+        #    answer = no_info_message
+        #else:
+        answer = f"{answer_text}\n\n📄 **Kaynak belge**: [{source_file}]({source_url})"
 
         st.session_state.chat_history.append(("assistant", answer))
         log_interaction(user_input, answer, source_file, best_doc["faiss_score"])
