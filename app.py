@@ -17,7 +17,7 @@ from nltk.tokenize import word_tokenize
 import nltk
 import os
 
-nltk.download('punkt')
+nltk.download('all')
 
 
 load_dotenv()
