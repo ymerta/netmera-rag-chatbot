@@ -1,243 +1,187 @@
-Settings -> Mail Templates -> Create E-Mail Template
-To create an e-mail template, follow these steps:
+
+Netmera User Guide
+
+Netmera Docs
+Copy
+
+MESSAGES
+EMAIL
+How to Create a Mail Template
 Quick Steps Guideline
-Go to your Netmera Panel and click:
-Go to the Mail Templates page in the Settings section.
-Click on the "Create Email Template" button.
-Give your email template a label for internal reference and complete the information in Template Attributes section.
-Choose a template layout that matches the style and structure of your email on and customize the template by adding your own text, images, and branding elements on Structures, Blocks, Modules (Content) and Appearance.
-Preview your email template to make sure it looks the way you want it to.
-Save your email template.
-After you have created an email template, it will be available in the "Your Email Templates" section of the Mail Templates page. From there, you can edit, duplicate, or delete the template as needed. Note that you can also use Netmera's pre-designed templates as a starting point for your own custom templates.
+Settings > Mail Templates > Create Email Template
+Access Mail Templates
+Log into your Netmera Panel, navigate to Settings, then select Mail Templates.
+Create New Template
+Click the Create Email Template button to start a new template.
+Configure Template Attributes
+Provide a unique internal name (Template Label), select the appropriate Email Type, and fill out other required fields such as sender details and subject.
+Design Your Template
+Choose a layout in the Structures section, then customize content using Blocks and Modules. Adjust appearance settings such as colors, fonts, and borders.
+Preview and Save
+Use the preview function to verify the email’s appearance, then save your template.
+Use Your Template
+After creation, the template appears in Your Email Templates section, ready to be used in campaigns or notifications.
+Unsubscribe URL for Mail Templates
+You can track unsubscribed users per campaign. To enable this:
+Update your mail templates' Unsubscribe URL with:
+https://cdn.netmera-web.com/unsubscribe/?appkey=@{appkey}&userid=@{email}&campaignId=@{campaignId}
+View unsubscribed users via:
+Panel → Campaigns → Select a completed mail campaign → Reports
+Export unsubscribe data for further analysis.
 
 Template Attributes
 
+Template Label:Internal name visible only to you. Choose descriptive names to quickly identify templates.
+Email Type:Select one,
+	•Notification: For transactional emails (password resets, confirmations). Sent to all users regardless of opt-in.
+	•Campaign/Advertisement: Marketing emails sent only to opt-in users.
+From Address:Pre-registered sender email address visible to recipients.
+Sender Name:Display name your recipients will recognize (e.g., company name).
+Mail Subject:Clear, concise email subject reflecting email content.
+Mail Pre-header:Optional preview text shown after the subject line (min 40 characters recommended).
+Reply Email:Optional reply-to address if you want recipients to reply directly. Leave blank to disable.
+
+Important Notes on Email Type and Opt-Outs
+Notification emails bypass opt-in preferences and send to all users; intended for essential info.
+Campaign emails respect opt-in status, sending only to users who have not unsubscribed.
 
 Content
-
-
-Appearance
-
-When the creation screen is reached, you should fill in the template attributes part.
-The name you give to the template in the Template Label section will only be visible to you, so choose something that will help you easily identify the template. You can edit this name at any time.
-There are two types of emails, notification or campaign/advertisement. Choosing the right type of email is important, so make sure to select the email type that suits your needs.
-A notification email is typically a one-time email triggered by a specific action or event, such as a password reset or order confirmation.
-A campaign or advertisement email, on the other hand, is a marketing email that is sent to a group of subscribers as part of a larger campaign or promotion.
-Your email address needs to be added to Netmera by panel users, and it must be defined by Netmera. This is the address that your recipients will see in the "From" field, so make sure to use an email address that they will recognize.
-In the sender name section, you should enter the name of the person or company that the email is being sent from. Use something that your subscribers will instantly recognize, like your company name.
-The Mail Subject section is where you can enter the subject of your email. Make sure that the subject is clear and concise, and that it accurately reflects the content of the email.
-The Mail Pre-header section is not mandatory, but it can be helpful in providing a little more information about the content of your email. This section will appear in the inbox after the subject line, and it must be a minimum of forty characters.
-The Reply Email section is also optional, but it can be useful if you want to allow your subscribers to reply to your email. If you want to use this feature, simply enter the email address that you want replies to be sent to. If you don't want to use this feature, just leave this section blank.
-
 Structures
-
+Predefined layouts organizing content (e.g., one-column, two-column). Easily dragged into the template workspace. You can customize borders (size, color, rounded edges) individually or collectively.
 
 Blocks
+Basic content elements that fit inside structures. Customizable properties include font, alignment, colors, padding, and size.
 
+Banner
+Used to display promotional visuals prominently in your email layout.
+Image Format: PNG, JPG, or GIF (max size: 1MB)
+Placement: Drag-and-drop or upload
+Features:
+Add titles and captions
+Customize background, spacing, and alignment
+Set links to redirect users on click
+Responsive resizing for different devices
+
+Displays a countdown clock to create urgency (commonly used in limited-time offers or event reminders).
+Functionality:
+Countdown to a specific date and time
+Automatically hide or replace after time expires
+Customization Options:
+Font type, size, and color
+Background and border color
+Time unit display (days, hours, minutes, seconds)
+Align timer within email structure
+Responsive Behavior: Adapts size based on screen; readable on mobile
+Usage Tip: Ideal for flash sales, webinars, or product launches
+Create navigational menus similar to website headers within the email layout.
+Add Items:
+Multiple links (e.g., Home, Products, Blog, Contact)
+Customization:
+Text font, size, style, and color
+Hover colors
+Horizontal or vertical layout
+Padding and spacing between items
+Advanced Settings:
+Add separators (like pipes or slashes)
+Include icons beside text
+Use Case: Mimics a mini-site experience inside the email
+HTML Block
+Insert raw HTML to add custom code, widgets, or third-party scripts.
+Capabilities:
+Embed complex elements or components not available in the visual editor
+Add inline styles, responsive layouts, or hidden elements
+Use Case: Advanced styling, custom tables and designs
+Carousel
+A rotating image/content block for showcasing multiple items in a limited space.
+Image Settings:
+Supported formats: PNG, JPG, GIF (max 1MB each)
+Add captions and clickable links per image
+Controls:
+Left/right arrows or swipe gestures (mobile)
+Auto-play and manual navigation options
+Customization:
+Transition duration and animation style
+Indicators (dots or numbers)
+Background and border styling
+Responsive Design: Each slide scales to screen width
+Use Case: Product galleries, testimonials, or portfolio features
+Accordion
+Expandable/collapsible sections for displaying structured, long-form content.
+Structure:
+Each section has a header (clickable) and body (content shown when expanded)
+Add multiple accordions per email
+Customization:
+Header and content background color
+Font size, weight, and color
+Border thickness and color
+Padding and spacing
+Expand/collapse animation style
+Use Case: FAQs, multi-step instructions, feature breakdowns
+Form
+Embed interactive forms directly within the email (with external handling for data collection).
+Input Types:
+Text field, Email field, Dropdown menu, Checkbox, Radio button, Textarea
+Customization:
+Placeholder text, input validation, required fields
+Font, color, and spacing for labels and fields
+Buttons:
+Custom text, color, and style for submit button
+Redirection URL or confirmation message after submission
+Limitations:
+Due to email client restrictions, form functionality may be limited
+Best practice is to link to a landing page form instead
+Use Case: Quick surveys, RSVPs, simple contact collection
 
 Modules
+Save reusable content blocks or full templates for future use
+Search and filter modules by name or tags
+Edit or delete modules as needed
 
-Structures and blocks are powerful tools that help you design your email template in a more organized and visually appealing way. Using structures, you can quickly create different layouts for your content, such as one-column or two-column designs, and adjust the border settings to create a custom look for your template.
-Structures are predefined layouts that can be added to an email template to organize the content.
-To add a structure, simply drag it from the "Blocks" area into the template part of one of the various fields for the content.
-You can edit a structure by clicking on it, which will open a screen where you can adjust the degree of rounding for the structure's edges and also adjust the border size, lines, and color.
-The border settings can be adjusted separately for the left, right, top, and bottom borders, or you can adjust the common border for all borders.
-When using blocks, you can choose from a variety of content options, including text, images, buttons, and more. Each block has its own set of customization options, allowing you to adjust the font size, color, and alignment to match your style.
-The Blocks section includes a series of titles that represent the different kinds of content the user can use in the message.
-To use a block, simply drag it inside a structure and it will automatically adjust to the structure's width.
-Each content block has its own settings, which can be accessed by selecting the content block and opening the left-side panel. The panel will switch to a property panel for the selected content element, where you can adjust settings such as font size, color, and alignment.
- 
-Adding images to your email template is an important way to make your message visually engaging and attractive. With Netmera's drag and drop feature, it's easy to add images to your template by simply dragging and dropping them into the side screen or by using an external link.
-You can easily add images by dragging and dropping them into the side screen or by using an external link. 
-Make sure that your images are in PNG, JPG, or GIF format and that they don't exceed 1MB in size.
-Tip:
-If your image is too large, it could affect the loading time of your email and potentially deter your recipients from engaging with your message.
-When writing your email, it's important to consider the readability and visual appeal of your content. Using a variety of text sizes, colors, and fonts can make your email more interesting and engaging to your readers. However, it's also important to keep in mind that too many different elements can make your email look cluttered and overwhelming.
-The settings panel on the right-hand side of the screen allows you to adjust the colors of your text and background using a color scale. 
-You can also align your text to the left, right, or middle of the block, but keep in mind that this will apply to the entire block. 
-If you need to align text in separate sections or paragraphs, you can use the alignment control in the text settings panel.
-You can adjust the fixed height of your text block and its alignment as top, middle, or bottom. 
-You can also adjust the line spacing and the distance of any text to a field inside the structure using the padding section. This is a great way to ensure that your email looks polished and professional.
-You can use anchor hyperlinks in your emails to take your readers to specific paragraphs within the email. This can be a useful tool for organizing your content and making it easy for your readers to navigate through your message. Just make sure that your hyperlinks are clearly labeled and easy to find.
-The button block is a great way to make your email more interactive and engaging. When you add a button block to your email, there are several adjustments you can make on the settings panel on the right-hand side of the screen. Here are some of the things you can do,
-Add a link
-In the "Link" section, you can add the URL of the page you want the button to redirect to. This is where users will be taken when they click on the button.
-Label the button
-You can add the text you want to appear on the button. This is the text that users will read on the button.
-Edit the text style
-You can adjust the font, size, and whether the text is bold or italic from the "Text style" section.
-Choose colors
-You can select the colors of the button, text, and background using the color scale. This is where you can make the button match your brand or design.
-Adjust the border-radius
-You can define the radius of the button's corners from the "Border-radius" section. you can adjust the roundness of the button to fit your design.
-Enable border-radius in Outlook
-To activate the border-radius property in Outlook, please enable the "Support of Outlook" option in the "Appearance" tab / "Button" section.
-Align the button
-You can position the button to the left, right, or middle from the "Alignment" section.
-Adjust the height
-You can adjust the height of the button and its alignment at the top, middle, or bottom from the "Fixed height" section.
-Add an icon
-You can add an icon to the button and align it to the left or right of the button label from the "Button with icon" section. You can add an icon to the button to make it more visually appealing. This is optional, but can be a nice touch. The icon can be added as a PNG, JPG, or GIF by dragging it to the side screen or via an external link, and it should not exceed 1MB in size.
-Adjust the width
-You can adjust the width of the button from the "Adjust to width" section.
-Customize borders
-You can adjust the size and color of the button's borders separately for the left, right, top, and bottom or for all borders from the "Border" section. This can help the button stand out or blend in, depending on your design.
-Adjust padding
-You can adjust the internal padding from the top or bottom and the external padding from the left, right, top, and bottom. In the external padding section, you can adjust the positioning of all edges. You can adjust the spacing around the button to make it look more visually appealing and balanced. 
-Add an anchor link
-You can use anchor hyperlinks in your emails to take your readers to specific paragraphs within the email. This can be a useful tool for organizing your content and making it easy for your readers to navigate through your message.
-The spacer block is a tool that allows you to add empty space between elements in your email design. Here are some adjustments you can make to the spacer block,
-Enable dynamic spacer
-This feature enables the spacer to adjust its size based on the amount of content around it. You can also select a background color for the spacer from the color scale. This can be useful when you want to create a design that is flexible and can adapt to different amounts of content. 
-Line spacer
-If the dynamic spacer is not activated, the spacer is in line, and you can adjust the size, shape, and color of the line from the line section.
-Width and alignment
-You can adjust the width and alignment of the spacer to fit your email design.
-Responsive design
-Responsive design refers to the ability of a website or email to adjust its layout and content based on the size and orientation of the user's device. In the context of the spacer block, enabling the responsive design feature allows the spacer to adjust its width to fit the screen of the user's mobile device. This can help ensure that the email looks good and is easy to read on a variety of devices.
-Padding
-You can adjust the distance of the spacer from a field inside the structure using the padding section. You can adjust the padding for the whole spacer or for each edge separately.
-Anchor hyperlinks
-Anchor hyperlinks in emails allow readers to jump to specific sections of your email by clicking on a link. You can use anchor hyperlinks to create a table of contents for your email or to allow readers to easily navigate to the content they are interested in.
-Important:
-Adaptivity/Responsive design is a feature that allows email designs to adjust and optimize based on the screen size of the device it's being viewed on. However, not all email clients or devices support this feature. Therefore, it's important to design your email with adaptivity in mind, but also provide fallbacks for devices that don't support it. 
-Imagine you are trying to sell a product that requires some explanation or demonstration to really showcase its features and benefits. A video can be the perfect solution to show your potential customers exactly what your product can do and how it can benefit them. By adding a video block to your email, you can make sure that your customers have all the information they need in an engaging and interactive way. They can see the product in action, hear about its features, and even get a sense of how it feels to use it. This can be a powerful tool in persuading your customers to make a purchase.
-When you add a video block, you can customize it to your liking by adjusting the settings on the editing panel. Here are some of the adjustments you can make:
-Link to the video
-To add a video to your email, you need to paste the link to the video in the "Link to video" section.
-Alternate text
-The name of the video appears in the "Alternate text" section. You can change it to a more descriptive name if you like.
-Custom thumbnail
-If you want to use a specific image as the preview thumbnail of your video, you can enable the "Custom thumbnail" feature and upload an image.
-Play button
-You can choose the play button from the "Play button" section.
-Alignment
-You can align the video block to the left, right, or center.
-Size
-You can adjust the size of the video by changing its width and height.
-Adjust to width
-You can enable the "Adjust to width" option to make the video block adjust to the width of the screen on the device being used to view the email.
-Responsive design
-This feature ensures that the video block looks good and is easy to view on different devices with varying screen sizes.
-Padding
-You can adjust the distance between the video block and the other elements in your email by changing the padding settings. You can adjust the padding for all edges at once or for each edge separately.
-Anchor hyperlinks
-You can use anchor hyperlinks in your email to take your readers to specific sections of the email. This can be helpful if you have a long email with multiple sections and you want your readers to be able to navigate easily.
-Important:
-Adaptivity/Responsive design is a feature that allows email designs to adjust and optimize based on the screen size of the device it's being viewed on. However, not all email clients or devices support this feature. Therefore, it's important to design your email with adaptivity in mind, but also provide fallbacks for devices that don't support it.
-The social block is a useful tool for promoting your social media pages, sharing content, and building your following. 
-Imagine you have just published a blog post or article that you are really proud of. You have put in a lot of time and effort to create it, and now you want to share it with the world. But how do you get the word out?
-With this powerful "Social" tool, you can easily share your content on all your social media pages with just a few clicks. Simply select the logos of the platforms where you want to share the content, add the link to your post or article, and you have just shared your masterpiece with all your followers.
-Maybe you want to attract even more followers and build your social media presence. Well, the social block can help with that too. By selecting the logos of the platforms where you want to grow your following and adding a compelling call-to-action text like "Follow us on social media for more updates," you can encourage your subscribers to join you on your social media journey. And with the ability to adjust the alignment and spacing between the logos, you can make it look even more appealing to the eye.
-Steps
-Customizing the appearance of the logos
-You can either customize the appearance of the logos by selecting from ready-made templates or by manually changing the colors and size. You can also add new social media platforms by clicking on the plus sign.
-Adding links to social media pages
-You can add links to your social media pages in the "Link" section of each logo. You can also add a title and alt text for each link when the "More" option is enabled.
-Alignment
-You can adjust the alignment of the social block to ensure it is properly positioned on the email. You can align it to the left, right, or middle.
-Indent between icons
-You can increase or decrease the spacing between the icons by adjusting the "Indent between icons" section.
-Padding
-The padding section allows you to adjust the distance of the logos to the field inside the structure. You can adjust it for the whole section or for each edge separately.
-Anchor hyperlinks
-Anchor hyperlinks are used to take readers to specific paragraphs within the email. To create an anchor hyperlink, you need to first add an anchor tag to the paragraph you want to link to. You can then add a hyperlink to that anchor tag from another part of the email. When the reader clicks on the hyperlink, they will be taken directly to the paragraph with the anchor tag.
-Imagine you're running an online store and you have an upcoming sale you want your customers to know about. You could send out an e-mail to your subscribers, but you want to make sure the announcement catches their eye. That's where a banner comes in.
-Adding a banner is a simple process that can make a big impact. With just a few clicks, you can create an eye-catching image that highlights your special offer or announcement. Once you have your banner image ready, you can easily add it to your e-mail.
-Steps
-First, create your banner image as a PNG, JPG, or GIF file. Make sure the file size is less than 1MB, as larger files can slow down your website's loading time. You can use image editing software to create your banner image.
-You can add your banner by dragging and dropping your banner file onto the designated area, or by providing the external link where it is hosted.
-The Timer block is a versatile tool that can help you create a sense of urgency and encourage your subscribers to take action. There are many ways to use the Timer block, including promoting limited-time offers and counting down to an event.
-If you want to create a sense of urgency and get your subscribers to act quickly, you can use the Timer block to promote a limited-time offer. For example, you can set a timer for a sale, discount, or free shipping offer. This will create a sense of urgency and encourage your subscribers to take advantage of the offer before it expires.
-On the other hand, if you're planning an exciting event such as a product launch, webinar, or conference, you can use the Timer block to build anticipation and excitement by counting down to the date and time of the event. This will help your subscribers to remember the date and time of the event, and create a sense of excitement leading up to it.
-Steps
-Adding a Timer block to your email template is easy! Just follow these steps,
-Drag and drop the timer block into the email template you are editing.
-Set the end date and time by selecting the date and time from the "End Date & Time" section. You can also select the time zone from the dropdown menu.
-Adjust the font, font size, and font color of the timer numbers from the "Number Font" section to match your branding.
-Determine the separator between hours, minutes, and seconds from the "Separator" section. Choose the one that best fits your design.
-Enable the number label if you want to display a label next to the timer. If enabled, select the language of the label, font, font size, and font color from the "Number Label" section.
-Add an expired timer image by uploading a PNG, JPG, or GIF file. You can also add a timer link and alternate text from the "Expired Timer Image" section, so that your subscribers know the offer has expired.
-Adjust the alignment of the timer block by selecting "Left," "Right," or "Middle" from the "Alignment" section. Make sure it fits your email's overall design.
-Adjust the width and height of the timer block from the "Size" section to fit your email template.
-Enable the responsive image feature if you want the timer block to adjust to the width of the screen on mobile devices. Note that this feature only works on devices that support it.
-Adjust the padding of the timer block from the "Padding" section to change the distance between the timer block and other elements in the email template.
-Enable the "Hide Element" option if you want to hide the timer block on desktop or mobile devices, depending on your needs.
-A menu block can be a useful addition to your e-mail campaign, allowing you to organize content and make it easier for your audience to navigate. With the ability to customize the appearance and function of the menu, it's a versatile tool that can be used for a variety of purposes.
-With the menu block, you can create a navigation menu for your email, providing links to various pages or sections of your content. By customizing the appearance of the menu, you can make it stand out and enhance the user experience.
-Steps
-To add a menu block to your project, simply click on the "Menu" option in the block library and drag it to the desired location.
-Once you've added the menu block, you can select the menu type you want to use. You may select either "Links", "Icons", or "Icons and Links".
-With the menu type selected, you can then customize the appearance of the menu. This includes adjusting the size, shape, and color of the separators between items, selecting the font and size of the text, and adjusting the padding to control the spacing between items.
-With the appearance of the menu set, you can add links and items to the menu. This includes naming and linking each item, changing the color of the link and background color of the item, and deleting any unwanted items.
-Finally, you can enable the "Hide element" option for desktop or mobile, which allows you to control when the menu is visible or hidden based on the device being used.
-HTML
-By adding HTML code, you can create your own custom designs, layout, and functionality.
-To add a HTML block to your project, simply click on the "HTML" option in the block library and drag it to the desired location.
-When the HTML block is added, some adjustments can be made on the screen on the right.
-From the padding part, the distance of the timer to a field inside the structure can be adjusted. It can be adjusted for the whole from all section or for all the edges separately.
-Anchor hyperlinks in emails are meant to take readers to specific paragraphs within the email.
-Carousel
-Carousels are a popular way to showcase multiple images or products on a website or in an email. They allow users to easily scroll through different items without taking up too much space on the page. With a few simple steps, you can add a carousel to your project and customize it to your liking.
-Let's say you're running an e-commerce website and you want to showcase multiple products in a visually appealing way. A carousel would be a great solution, allowing you to display several items in a single space and giving users the ability to easily navigate through them.
-Click on the "Add block" button and search for the "Carousel" block.
-Drag and drop the block to your desired location on the page.
-You can add images to your carousel by dragging them from your computer onto the side screen, or by pasting an external link.
-When you add your image click on add slide.
-The maximum file size for the carousel is 1MB and the images can be in PNG, JPG, or GIF format.
-Accordion
-The Accordion block is a tool that can help you to organize your content and make it more accessible to your readers. You can use it to create a list of sections that can be expanded and collapsed with a click, allowing your readers to navigate through your content more easily. Here are some of the adjustments you can make when using the Accordion block:
-You can enable "Animated Expansion" to add a visual effect that will make the accordion sections expand smoothly.
-You can select a color for the background of the accordion sections on "Section Background Color" from a color scale to make it more visually appealing.
-You have the option to adjust the size, shape, and color of the lines surrounding the accordion sections in "Outline Section". This can be done for the common outline or for the left, right, top, and bottom separately.
-You can adjust the text color and font size of the accordion sections to make them more readable and aesthetically pleasing from "Section text color and font size".
-On "Padding", you can adjust the distance of the accordion from other fields within the structure. This can be done for the whole accordion or for individual edges separately.
-You can name your sections and add or delete them as needed. The trash icon can be used to delete sections, and the add section option can be used to add new sections.
-The form block is an essential tool that allows you to collect data from your subscribers or customers. By adding a form block, you can create customized forms that suit your specific needs. Here are some of the adjustments that can be made when using the form block.
-The URL of the service for which data collection will be made must be entered. Then, different types of form elements can be added from the "Add form element" section.
-You can also choose to enable the "hide form after submission" option, which hides the form after successful data submission and displays a notification area instead. 
-The background color can be selected from the color scale, and the size and color of borders can be adjusted from the "Border" section.
-From the padding part, the distance of the form to a field inside the structure can be adjusted, and it can be adjusted for the whole form or for each edge separately. By making these adjustments, you can customize your form to fit your brand and collect data efficiently.
-Modules are an important feature in creating content, especially if you plan to reuse certain designs or layouts across multiple templates. When you add a module, you can save it as a reusable element that you can easily add to other templates in the future.
-One of the key benefits of using modules is that it can save you a lot of time and effort when creating new templates. Instead of designing everything from scratch each time, you can simply add the module you need and make any necessary tweaks or changes.
-Tip:
-Let's say you have created a template that includes a header, footer, and several content blocks that you use frequently for your email campaigns. Rather than recreating the same template every time you need it, you can save it as a module and use it as a starting point for your future campaigns.
-To make it easier to manage your modules, the system allows you to search for them based on their name and tags. You can view your modules as tiles or in list form, and you can even group and filter your searches to quickly find what you need.
-When you need to make changes to a module, simply click on the three dots in the lower right corner of the module and select "Edit." If you no longer need a module, you can also delete it from the same menu. With these tools, you can easily manage your modules and create content more efficiently.
-The appearance settings of a template are crucial in determining the overall look and feel of the design. Here are some of the features available:
+Appearance
+The appearance settings help define the overall look and feel of your template. They let you adjust visual elements such as fonts, spacing, colors, and backgrounds to create a polished and brand-consistent design.
 Example:
-You are creating a newsletter template for your company. You want to make sure that the template is visually appealing and easy to read. To achieve this, you can use the appearance settings to adjust the font, spacing, and colors of the template. You can also add a background image that fits the theme of your newsletter.
-The General Settings section of a template allows you to customize the basic features of your template, including the message width, default padding, background color, font and line spacing, paragraph spacing, link underlining, and responsiveness to mobile devices. You can also enable RTL text direction and add a background image to your template.
-These features provide you with the flexibility to tailor your template to your needs and create a unique and visually appealing design. Whether you want to adjust the distance between fields, choose a specific font or color, or make your template mobile-friendly, the General Settings section has you covered. By taking advantage of these features, you can create a professional and customized template that reflects your brand's identity and engages your audience.
-This feature allows you to adjust the width of the message box in your template. You can increase or decrease the width based on your preferences.
-This feature lets you adjust the distance between your template's fields and its borders. You can adjust the padding for the entire template or for individual sections.
-This feature lets you choose the color of the background of your template. You can choose any color that matches your branding.
-This feature lets you choose the font and line spacing for your email template's text. You can choose any font that suits your brand and adjust the line spacing as per your preference.
-This feature allows you to add space between paragraphs in your template. This can help improve the readability of your content.
-This feature allows you to underline the links in your template. Underlining links can make them more noticeable and encourage recipients to click on them.
-This feature allows the template's elements to adjust to the width of the screen of the mobile device. This ensures that your email looks good on all devices.
-This feature allows the text to automatically go from right to left, which is useful for languages that are written from right to left.
-You can add a background image to your email template as a PNG, JPG, or GIF by dragging it to the side screen or via an external link. The file size should not be more than 1MB. A background image can enhance the look of your email template and make it more visually appealing.
-Stripes are horizontal sections of a template that separate the content and give it structure.  
-Tip:
-If you want to make sure that the template has a clear structure and easy to navigate, you can use stripes to separate the content into different sections. You can also adjust the size, color, and style of the headings to make them stand out.
-The header section allows you to customize the top of your website. You can adjust the text size, font color, background color, and link color. Additionally, you can add a background image by uploading a PNG, JPG, or GIF file or using an external link.
-The content section allows you to customize the main body of your website. You can adjust the text size, font color, and link color, as well as the content background color.
-Tip:
-While you're creating your e-mail, you could use the content section to adjust the font and text size to make it easier to read. You could also adjust the content background color to create a distinctive look for your design.
-The footer section allows you to customize the bottom of your e-mail. You can adjust the background color, content background color, font color, and link color. Additionally, you can add a background image by uploading a PNG, JPG, or GIF file or using an external link.
-Tip:
-While you're creating your e-mail template, you could use the footer section to add contact information, such as an address and phone number, and links to social media profiles.
-The info area section allows you to customize a section of your e-mail separate from the main content. You can adjust the text size, font color, and link color.
-Tip:
-You may use the info area section to provide details such as date, time, and location. You may also add links to purchase tickets or register for the event.
-The headings section allows you to customize the font and font size for different types of headings on your e-mail. You can also adjust the spaces between the lines, the colors for the headings, and whether they are italic or bold.
-The button section allows you to customize the appearance of buttons on your website. You can adjust the button color, font color, font size, and whether it is italic or bold. Additionally, you can adjust the radius of the button's corners and the size and color of borders.
-Tip:
-You could use the button section to create eye-catching buttons for "Subscribe Now" or "See our Event" that stand out on your e-mail.
-The mobile formatting section allows you to customize how your e-mail appears on mobile devices. You can adjust the size of different parts of your e-mail, the alignment of text, and whether buttons should be full-width. Additionally, you can adjust the space between the border and other elements.
-Tip:
-With more people accessing e-mails on mobile devices, it's essential to ensure that your e-mail is mobile-friendly. You can use the mobile formatting section to ensure that your e-mail looks good on any device.
-Last updated 5 months ago
+When designing a newsletter, you can use appearance settings to choose a readable font, set appropriate spacing, and apply a background image to match your theme.
+General Settings
+General Settings let you configure the foundational design of your template. You can adjust:
+Message Width – Set how wide the content area is.
+Default Padding – Control spacing between content and template edges, either globally or per section.
+Background Color – Select a base color for the entire template.
+Font and Line Spacing – Choose font styles and adjust line spacing for better readability.
+Paragraph Bottom Space – Set space between paragraphs.
+Underline Links – Toggle underlining to make links stand out.
+Responsive Design – Ensure layout adjusts well on mobile devices.
+RTL Text Direction – Enable right-to-left text flow for applicable languages.
+Background Image – Upload a PNG, JPG, or GIF (max 1MB), or use a URL to add a visual background.
+Stripes
+Stripes are horizontal sections used to structure the template. They help separate content clearly and improve readability.
+Stripe Sections
+Header:
+Customize the top of your template with options for text size, font color, background color, link color, and background image.
+Content:
+Adjust the main body settings like text size, font color, link color, and content background.
+Tip: Use this area to enhance readability with clear fonts and contrasting background colors.
+Footer:
+Design the bottom section with options for background colors, font and link colors, and an optional background image.
+Tip: Add contact details and social media links here.
+Info Area:
+A separate section for details like dates, times, or links to external actions (e.g., registration or ticket purchase).
+Tip: Ideal for highlighting event-related information.
+Headings
+Customize the appearance of headings across your template:
+Set font type and size
+Adjust line spacing and color
+Apply italic or bold styling
+Button
+Control how buttons look in your template:
+Set button and font colors
+Choose font size and style (italic/bold)
+Adjust border size, color, and corner radius
+Mobile Formatting
+Optimize your template for mobile devices:
+Adjust text sizes, alignments, and spacing
+Set buttons to full-width for better tap targets
+
+Previous
+Next
+Last updated 2 months ago
 Was this helpful?
- 

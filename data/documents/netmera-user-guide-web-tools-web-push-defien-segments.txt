@@ -1,0 +1,26 @@
+Targeting -> Segments -> Create New Segment
+To create a custom segment for your target audience, you can access the Segments tab and select the option to create a new segment. Once you've chosen a name for your segment, you can use various criteria to narrow down your target audience, including targeting users based on their push permission, tag, profile attributes, previous response, or behavior within a specific time interval or location.
+
+Segment: By Push Permission
+Description: Users that opt-in or opt-out of push notifications.
+UseCase: Target opted-out users with new content or incentives to re-engage.
+
+Segment: By Tag
+Description: Users included in or excluded from a specific tag.
+UseCase: Send exclusive discounts or early access to tagged users.
+
+Segment: By Profile
+Description: Users with profile attributes matching specific values (e.g., equals, greater than).
+UseCase: Send personalized messages based on user attributes like location, age, or interest.
+
+Segment: By Response
+Description: Users based on their response to a previous notification.
+UseCase: Follow up with users who clicked or purchased after a push to increase conversions.
+
+Segment: By Behaviour
+Description: Users who performed specific actions within a time frame or location.
+UseCase: Target users who performed key in-app actions with relevant offers to guide further engagement.
+
+Example:
+You want to send a promotional push notification to your users who have recently shown interest in men's shoes. You name the segment "Interested in Men's Shoes" and select the "By Tag" criteria to include users who have viewed or added men's shoes to their cart in the last 7 days. 
+Additionally, you select "By Profile" and choose the attribute "Gender" with a value of "Male" to further narrow down your audience. Once the segment is created, you draft a promotional push notification for a discount on men's shoes and schedule it to be sent out to this specific segment during peak shopping hours. This targeted approach helps to increase engagement and conversion rates for your promotional campaigns.

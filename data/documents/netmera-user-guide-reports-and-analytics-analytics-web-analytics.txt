@@ -1,0 +1,153 @@
+
+Web Analytics in Netmera is a powerful feature designed to help you track, analyze, and understand user interactions on your websites. By providing comprehensive insights into user behavior, engagement metrics, and key performance indicators, Web Analytics empowers you to optimize your digital strategies and improve your online presence.
+Why Use Web Analytics?
+In the current digital landscape, many platforms restrict data access unless users consent to cookies, which limits the amount of available data. Netmera's Web Analytics circumvents this issue by providing businesses with access to complete web metrics without relying on third-party platforms. This unrestricted data access is crucial for gaining a full understanding of website performance and user behavior.
+Key Features of Netmera Web Analytics
+1.User & Device Tracking
+Identify unique and returning visitors to measure user retention and customer loyalty.
+Understand device usage (mobile, tablet, desktop) to tailor experiences and optimize performance across platforms.
+Leverage insights to refine marketing strategies for different user segments.
+2.Pageviews
+Track which pages attract the most traffic and analyze user interaction patterns.
+Identify high-performing and underperforming pages to optimize content and CTAs.
+Use referrer links to understand traffic sources and enhance acquisition strategies.
+3.Sessions
+Monitor session durations to gauge user engagement and identify friction points.
+Analyze bounce sessions and bounce rate to improve conversion funnels.
+Segment user behavior to develop targeted retention strategies and optimize key customer journeys.
+Event Definitions
+First Visit
+This event is triggered when a user visits your website for the first time using a specific browser by assigning a unique ID. 
+Visit Web
+This event tracks repeat visits by users to your website.
+It helps in understanding the frequency of user visits and returning visitors.
+Pageview
+This event tracks each page visit within a user session.
+It provides insights into which pages are being viewed and how users navigate through your site.
+Time Spent in Web
+This event measures the duration of user engagement on your website.
+Allows you to assess how long users are staying on your site.
+Event Types
+These are all standard events offered by the Netmera SDK. By default, the First Visit and Visit Web events are automatically collected. If you wish to have the Pageview and Time Spent in Web events collected as well, please reach out to your Customer Success Managers for assistance.
+User & Device
+Optimize Engagement & Targeting
+Netmera Web Analytics provides detailed insights into user behavior by tracking unique and returning visitors while also identifying device preferences such as desktop, mobile, and tablet usage. These insights enable you to refine your digital experiences, ensuring powerful performance across all platforms. 
+
+All Users
+Represents the total number of users that visited the site within the selected date range.
+This number can be found by selecting the Visit Web event on the Event Insight page and applying the Unique User Count breakdown.
+New Users
+Represents users that accessed the site for the first time.
+This metric can be calculated on the Event Insight page by selecting the First Visit event and computing the Unique User Count breakdown.
+Returning Users
+Represents users that have visited the site previously and are returning.
+There is no direct counterpart for this metric in Event Insight.
+Device Breakdown
+Displays the devices (desktop, mobile, tablet) users used to access the site.
+If a user accessed the site from both desktop and mobile, they will be counted in both categories, but total users will remain unique.
+Graph Data Visualization
+If the selected date range includes today, the cards will display today's data. However, the graph will not include today’s data, as it only visualizes data up to the previous day.
+For example, if the date filter is February 21 - February 24:
+The cards will display data for February 21 - February 24.
+The graph will display data only up to February 23.
+User Daily Trends
+Shows the daily variation of All Users, New Users, and Returning Users.
+
+Device Share
+Displays the distribution of browsers that completed a visit based on their device type.
+
+Pageviews
+Maximize Content Performance & Conversions
+Analyzing pageviews helps you measure content effectiveness and identify areas for improvement. Netmera Web Analytics provides insights into both total and unique page visits, allowing you to determine which pages attract the most traffic and which may require optimization. 
+By understanding user pageviews, you can refine your content strategy, enhance key landing pages, and optimize call-to-action placements. 
+Additionally, Referrer URL Tracking enables you to pinpoint the sources driving the most valuable traffic, making it easier to allocate resources toward high-performing acquisition channels.
+
+Pageviews
+Represents the total number of page visits within the chosen date range.
+This corresponds to the Pageview Event on the Event Insight page.
+Includes every instance a page is loaded or reloaded by users.
+Unique Pageviews
+Represents the number of distinct pages visited by users.
+To calculate this metric, use the Page View > By Session breakdown on the Event Insight page and segment by the Page URL dimension. Summing these values provides the unique pageview count.
+Example: If a user visits the homepage 3 times and a product page 4 times,
+Total Pageviews = 7
+Unique Pageviews = 2
+Pageview Daily Trends
+Displays daily fluctuations in Pageview and Unique Pageview values, helping you track engagement trends over time.
+Sessions
+Enhance Retention & Reduce Churn
+Session tracking provides a comprehensive view of user engagement, helping you improve retention strategies and minimize churn. By analyzing metrics such as session duration, bounce rates, and total sessions, you can identify friction points that may hinder user engagement. 
+Understanding how long users stay on the site and where they drop off allows teams to make data-driven optimizations to the user journey. With these insights, you can continuously refine your digital strategies to increase user loyalty and maximize lifetime value.
+
+Session
+Represents the total number of visits within the selected date range.
+Sessions are often determined by time-spent events, which are triggered every 10 seconds during an active session.
+This can be calculated on the Event Insight page by selecting the Visit Event and using the By Session breakdown.
+
+Bounce Session
+A session is considered a bounce if it lasts less than 10 seconds and includes only one page view before the user exits.
+This specific metric cannot be directly calculated in Event Insight.
+Bounce Rate
+The percentage of sessions that end in a bounce.
+Formula: Bounce Sessions ÷ All Sessions
+Helps assess how frequently users leave after viewing just one page.
+
+Average Session Time
+The average time users spend per session.
+Formula: Total visit duration ÷ Number of sessions
+
+Graph Settings
+The Graph Settings on the Users Daily Trends page allow you to customize how data is visualized. Here's how you can use these settings:
+Graph Type: You can switch between different types of graphs to represent your data. The image shows two types:
+Line Graph: This type of graph connects data points with lines, making it easy to visualize trends over time. It is useful for observing the flow and changes in user metrics like All Users, New Users, and Returning Users on a daily basis.
+
+Bar Graph: This type of graph uses bars to represent data, providing a clear comparison of user metrics for each day. It is beneficial for quickly comparing the values of All Users, New Users, and Returning Users across different dates.
+
+Data Points: Hovering over data points in either graph type will provide detailed information about the specific values on a given day. This detail helps in analyzing specific trends or anomalies in user behavior.
+Download Option: The option to download the graph allows you to save the visual representation for reports or presentations. This feature is useful for sharing insights with your team or stakeholders.
+Referrer URL Tracking
+The Referrer URL records the last website a user visited before landing on your platform. The Referrer URL attribute is available for Visit, First Visit, and Pageview events. This data allows you to analyze how users reach your site and optimize marketing and partnership strategies accordingly. 
+Scenario: Increasing Sign-Ups Through Referral Partnerships
+Imagine you work for a digital banking fintech that offers high-yield savings accounts and zero-fee transfers. To grow your user base, your marketing team partners with a popular personal finance blog that writes about smart ways to save money.
+How Referrer URL Works in This Case
+A visitor reads an article on the finance blog titled “Best Online Banks for Savings Accounts”.
+The blog includes a link to your fintech’s sign-up page, recommending your service.
+The user clicks the link and lands on your website.
+Netmera Web Analytics captures the Referrer URL as the blog’s website.
+In the Event Insight section, you notice a spike in traffic from this blog and track how many visitors complete the account sign-up process.
+Data shows that 15% of visitors from this blog successfully open an account, making it a high-performing referral source.
+Based on this insight, your team decides to:
+Invest more in partnerships with similar personal finance blogs.
+Offer an exclusive sign-up bonus for users coming from these referral sources.
+Key Takeaway
+With Referrer URL Tracking, your fintech can identify which external sources drive the most high-value users, optimize marketing efforts, and increase customer acquisition efficiently. 🚀
+Accessing Referrer URL Data
+To view Referrer URL information:
+Navigate to the Event Insight section.
+Select one of the following events:
+Visit Web Event
+First Visit Event
+Pageview Event
+Apply the Referrer URL breakdown to analyze referral data.
+By utilizing Referrer URL Tracking, you can gain actionable insights into user acquisition and refine your engagement strategies.
+
+Event Insight Analysis
+User & Device
+
+All Users
+This number can be found by selecting the Visit Web event on the Event Insight page and applying the Unique User Count breakdown.
+
+New Users
+This metric can be calculated on the Event Insight page by selecting the First Visit event and computing the Unique User Count breakdown.
+
+Pageviews
+This corresponds to the Pageview Event on the Event Insight page.
+
+Unique Pageviews
+To calculate this metric, use the Page View > By Session breakdown on the Event Insight page and segment by the Page URL dimension. Summing these values provides the unique pageview count.
+
+Session
+This can be calculated on the Event Insight page by selecting the Visit Event and using the By Session breakdown.
+Summary
+Netmera Web Analytics provides businesses with a privacy-friendly and comprehensive way to track website performance, bypassing the limitations of traditional analytics tools. With detailed event tracking, device insights, and referrer analysis, you can make data-driven decisions to improve user experience and optimize digital strategies.
+Start leveraging Netmera Web Analytics today to unlock powerful insights into your website’s performance! 🚀

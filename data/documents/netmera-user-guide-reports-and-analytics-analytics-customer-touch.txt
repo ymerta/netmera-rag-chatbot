@@ -1,0 +1,40 @@
+Quick Steps Guideline
+Navigate to Customer Touch Analytics:
+Access your Netmera Panel and click on Analytics > Customer Touch.
+Define Analysis Parameters:
+Decide on your Time Period and Message Type to focus your analysis.
+View Customer Engagement Charts:
+Charts displaying customer engagement metrics will be available for review.
+Export Data for Further Analysis:
+Click "Export" to download your data for detailed examination.
+Understanding Customer Touch Based on Notifications
+The Customer Touch screen categorizes customers according to the number of notifications they receive. This segmentation is visualized through a table where each column represents the count of users who received a specific number of notifications. Here's how to interpret the table:
+'Did not receive any' column: This column indicates the number of users who did not receive any notifications during the specified period. It identifies a segment of customers who may not have engaged with the notification system.
+Columns labeled 1, 2, 3, etc.: These columns display the exact number of users who received that respective number of notifications. For example, the column labeled '1' shows how many users received exactly 1 notification, '2' shows how many received exactly 2 notifications, and so forth.
+10+ column: This column aggregates the total number of users who received more than 10 notifications. It provides a summary of users who are highly engaged and receive a significant number of notifications.
+Customer Touch Dashboard
+Time Period: Before analyzing data, specify the time interval of interest. , you may create custom ranges, facilitating in-depth analysis based on recent activities.
+Message Type: Once the time period is set, select the message types relevant to your analysis (e.g., Push, Interactive). This selection helps refine insights by focusing on specific communication channels.
+Initiate Analysis: Click the "Find" button after selecting your parameters to generate insights promptly. The dashboard will display relevant metrics and charts based on your selections.
+Customers by Notification Count Chart
+The Customers by Notification Count Chart offers a detailed view of customer interaction based on the number of notifications received. This breakdown is categorized into:
+Total: Represents all users across platforms (iOS, Android, etc.) who have received notifications during the specified period.
+iOS: Displays specific data for users using iOS devices.
+Android: Provides insights tailored to users on Android devices.
+Each category within the chart provides a segmented view of how customers engage with notifications, from those who did not receive any to those who received multiple notifications. This breakdown helps in understanding user behavior patterns and can guide targeted engagement strategies.
+Received Push Count
+Did not receive any notifications: Customers falling into this category have not received any notifications during the specified time period and for the selected message type.
+Counts for 1 notification: This category encapsulates customers who received precisely one notification within the specified timeframe and message type.
+Counts for 2 notifications and beyond: Who received precisely two notification within the specified timeframe and message type. This pattern extends to the "10+" category, signifying customers who received 10 or more notifications within the specified timeframe and message type.
+Export to Excel
+The Export to Excel feature enhances operational efficiency by enabling users to export detailed analytics data directly to Excel format. This capability supports:
+Detailed Examination: Exported data includes comprehensive details such as notification counts, user demographics, and engagement metrics. This depth of information allows for thorough analysis and identification of trends.
+Reporting: Excel exports facilitate the creation of detailed reports and presentations. Users can utilize this data to communicate insights effectively to stakeholders or for internal documentation purposes.
+Informed Decision-Making: Access to raw data in Excel empowers informed decision-making processes. By analyzing exported data, organizations can refine their strategies, optimize customer engagement efforts, and improve overall performance metrics.
+This functionality within Customer Touch Analytics streamlines workflow processes, providing actionable insights that drive business growth and enhance customer satisfaction.
+Tag Upload for Retargeting:
+You can upload exported data as tags within the Netmera Panel for retargeting purposes. By leveraging this feature, organizations can:
+Targeted Campaigns: Use exported data to create targeted marketing campaigns based on user behavior and preferences.
+Personalization: Deliver personalized messages and offers to segments identified through detailed analytics.
+Optimization: Continuously optimize engagement strategies by analyzing exported data and refining targeting criteria.
+This integration of export functionality with retargeting capabilities enhances operational efficiency and effectiveness in customer engagement efforts.

@@ -1,0 +1,236 @@
+
+Netmera User Guide
+
+Netmera Docs
+Copy
+
+MOBILE IN-APP
+MOBILE IN-APP / WIDGET
+START CREATING
+Assign Click Actions
+When designing widgets in Netmera, you have several behavioral concepts and click action options that determine the action to be taken when a user interacts with the widget. Each action provides a unique functionality and can be tailored to meet specific requirements.
+Adding Click Actions
+Click actions can be assigned to Buttons and Images in your widget. To set a click action:
+Select the desired Button or Image.
+Navigate to the ⚡ (lightning) icon in the toolbar.
+Assign the appropriate click action to define the behavior triggered by the user’s interaction.
+
+User Update
+The User Update click action allows you to modify user attributes or properties when a widget is clicked. This includes updating user preferences, logging interactions, or adjusting user-specific data. For example, you can use this action to track a user’s engagement with a widget and update their profile accordingly.
+
+Matching Components with Attributes:
+To align the custom components in your widget with profile attributes using the User Update method, follow these steps to access the subcategories of your desired profile attribute:
+For Windows devices: Press CTRL + ALT + 7
+For Mac devices: Press FN + Option + 7
+
+Example Scenario
+Suppose you want to update a user’s email information using a button. Here’s how you can set it up:
+Assign an identifier to the button.
+Select User Update as the click action.
+Enable the subcategory and choose the specific update method.
+To update information using a widget component, select Content.
+Match the content with the desired component in the menu, such as emailattributebutton.
+
+Once the component is matched with the desired action, your configuration will resemble the following:
+
+Redirect to URL
+The Redirect to URL click action allows you to direct users to a specific URL when they interact with a widget. This functionality is ideal for guiding users to:
+External websites
+Landing pages
+Product pages
+Other web resources related to the widget's content
+By offering relevant links, you can drive traffic to key destinations and enhance the user experience.
+How to Set Up
+Provide the URL where users should be redirected.
+Define the condition for the redirection. This ensures that the action triggers based on specific criteria, tailoring the user’s journey to their interactions.
+
+Go to View
+The Go to View click action enables navigation within your widget by directing users to a specific view or screen. This is especially useful for widgets with multiple sections, allowing users to seamlessly transition to a desired area.
+Direct users to a Feedback screen after completing an action.
+Navigate users to a Thank You screen following a form submission.
+Guide users to a specific section for additional information or actions.
+
+How to Set Up
+Assign the "Go to View" action to a button or image.
+Specify the target view (View 1, View 2, etc.) within the widget.
+Choose the condition to go to views with Action Conditions variables.
+
+Send Data
+The Send Data click action enables you to transmit custom data or parameters to a specified endpoint or server when users interact with a widget. This action is particularly useful for:
+Capturing user interactions.
+Submitting form data.
+Triggering server-side processes.
+How to Set Up
+Specify the custom data or parameters you wish to send, such as user inputs or interaction details.
+Provide the endpoint or server URL where the data should be sent.
+Configure any necessary conditions or triggers to ensure the data is sent at the right moment.
+
+Close Widget
+The Close Widget click action allows users to close or dismiss the widget with a simple click. This functionality is particularly useful for enhancing user experience by providing control over the widget’s visibility.
+Enables users to easily remove the widget from their screen.
+Requires no additional actions or navigation.
+Suitable for scenarios where unobtrusive user control is essential.
+
+Open Widget
+The Open Widget click action enables you to display another widget when the current widget is clicked. This functionality helps you create interactive experiences by allowing users to transition between related widget views or screens.
+Display a detailed widget when a summary widget is clicked.
+Navigate users to a related widget for additional actions or information.
+Create step-by-step flows within your app by linking widgets together.
+How to Set Up
+Assign the "Open Widget" action to a button or image.
+Specify the target widget you want to display.
+Please note that the widget you choose must already be created.
+
+Fire Event
+The Fire Event click action allows you to trigger specific events within your application when a widget is clicked. These events can be utilized by other components or systems in your app, enabling synchronization and enhanced interactivity. For instance, you can create a flow of a user clicks on a widget button to trigger an event that updates their activity log or adjusts their preferences in real-time.
+Notify other modules or systems about a user’s interaction.
+Trigger actions or updates across different parts of the application.
+Enable dynamic workflows and event-driven operations.
+
+How to Set Up
+Create Custom Events:
+Before using the Fire Event action, you must define custom events specific to your widget's purpose.
+Follow the relevant guide to create these events > Creating Custom Events.
+Assign the Event:
+In the Design Widget screen, select the component and assign the Fire Event action.
+Choose the custom widget event from the list.
+Matching Widget Components with Events:
+To align the custom components in your widget with events using the Fire Event method, follow these steps to access the subcategories of your desired profile attribute:
+For Windows devices: Press CTRL + ALT + 7
+For Mac devices: Press FN + Option + 7
+
+Example Scenario
+Suppose you want to Fire an Event with an Image Click. Here’s how you can set it up:
+Assign an identifier to the image.
+Select Fire Event as the click action.
+Enable the subcategory and choose the specific update method.
+To update information using a widget component (image), select Content.
+Match the content with the desired component in the menu, such as matching LikeEvent with content id of the image identifer you choose.
+
+Once the component is matched with the desired action, your configuration will look like the following:
+
+Android Background Location Permission
+
+Please choose the "Mobile Blank Widget" option in the Widget Gallery to start using your Mobile Widgets. This Click Action option is only visible on Mobile Widgets.
+Design Your Widget: Customize it with the elements you want, like text and buttons.
+Add Buttons: Insert buttons into your widget that will prompt the user to allow or deny location access.
+Set Click Actions:
+For the Allow Permission button, choose "Background Location Permission" > "Allow Permission".
+For the Deny Permission button, choose "Background Location Permission" > "Deny Permission".
+After clicking the button, the app user will be automatically directed to the Settings screen on their Android phones to set up their location preferences.
+
+Deep Link
+The "Deep Link" click action utilizes deep linking functionality, enabling users to navigate to a specific section or content within your app when they interact with the widget. Deep linking enhances user engagement by providing direct access to relevant information, such as opening a specific product page, displaying a particular article, or accessing a specific feature within your app.
+
+By utilizing these click action options effectively, you can create highly interactive and personalized widget experiences for your users. Each option offers unique capabilities that allow you to track user interactions, update user attributes, trigger events, navigate users within your app, or connect with external resources. These features empower you to deliver engaging and tailored experiences to your app users.
+Validations
+Validations are rules applied to components in your customized widgets to ensure input accuracy and compliance before proceeding with actions. These checks help improve user experience by preventing errors and maintaining data integrity.
+
+Example Scenario
+If your widget includes an input field, you can set a validation rule to check whether the field is filled. For instance:
+Rule: Not Empty
+Error Message: "Please fill in."
+If the user leaves the field blank, they will see this error message, prompting them to complete the field before proceeding.
+
+Types of Validation Rules
+Not Empty: Ensures the field is not left blank.
+String Length: Validates the length of text input (e.g., between 5 and 50 characters).
+Number: Ensures the input is a valid number within a defined range.
+Percentage: Checks if the input is a valid percentage value (e.g., 0–100).
+Regex: Validates input based on a custom regular expression pattern, such as an email or phone number format.
+
+Check Form Validations Before Performing This Action
+This option, available in the Click Actions sidebar, ensures that all form validations are completed before executing the designated click action in the widget. It adds an extra layer of control by verifying that user input meets the specified validation rules before any action is triggered.
+How It Works
+When this option is enabled, the widget will first check if the necessary validations (such as required fields or correct input formats) are met before proceeding with the click action. For example:
+Text Area Validation: If the widget includes a text area with a validation rule (e.g., "Not Empty"), it will check if the user has filled the area correctly before the action is executed.
+Action Execution: If the validation is successful, the click action proceeds as intended. If the validation fails, an error message is displayed, and the action is prevented.
+
+Manage App
+The Manage App allows users to manage the application directly through the widget. For example, if you are managing deep linking within the app, you will need to select this option for it to function correctly. 
+
+Action Conditions
+Action Conditions provide a way to filter and control when a click action should be executed within your widget. These conditions ensure that the action is only triggered if specific criteria are met, giving you greater flexibility and control over user interactions.
+How It Works
+Choose an Identifier: Select an identifier from your custom widget that you want to base the condition on. This could be a specific user action, input, or state within the widget.
+Set the Condition: Define the condition that must be fulfilled for the action to occur. This could include checking if a field is filled, if a value is within a certain range, or other custom logic.
+Enter the Condition Value: Provide the specific value or parameter that the condition must match (e.g., a certain number, text value, or selection).
+Action Triggered: The click action will only be performed if the user’s input or behavior satisfies the condition.
+
+By using Action Conditions, you can ensure that the correct actions are performed only when specific requirements are met, enhancing user experience and streamlining interactions.
+
+Example Click Action Scenario
+In this example, we will create a pop-up with buttons, ratings, and images, and assign click actions to encourage users to engage with your content. You can use click actions to direct users to different sections within the widget, gather feedback, and enhance their overall experience.
+Case Scenario:
+Goal: Create a pop-up that tests user satisfaction with a 5-star rating. Users who rate 4-5 stars will be shown a "Thank You" page, while users who rate 1-3 stars will be directed to a "Feedback" page.
+Step 1: Design Your Widget and Add Identifiers
+Design Your Widget:
+Start by designing or editing your widget. Add elements such as images, text, and the rating score element. You can only assign click actions to images and buttons. So, ensure that you are using these elements to encourage user interaction.
+Assign Identifiers:
+Click on your rating element and navigate to Settings.
+Assign an identifier to the rating element (e.g., "rating") so that it can be referenced later in the click action setup. This identifier will be crucial for tracking user interactions with the widget. To do this, click on the identifier code and customize it with a unique name (e.g., "rating").
+
+Identifiers
+Where are my identifiers! 🤯
+The identifier part is usually on the right top corner of your screen, they usually come with a random code with it. You can use that identifier code while creating your widget as well, However assigning an easier code to it will make data analysis and tracking easier for you.
+So, be sure to assign distinguishable identifiers to your elements (e.g., buttons, images) to make it easier to manage and analyze the data later. You can customize the identifier by clicking on the code and rewriting it.
+Default Location (Top Right Corner):
+The identifier is typically located in the top right corner of your screen when you're working on your widget. It will usually come with a random name by default.
+
+Settings Section:
+In some cases, identifiers may also be within the Settings section of your components. You can find this option when editing individual elements, like buttons, images, or rating components.
+
+Identifiers
+Step 2: Create your Widget Flow
+Add Views:
+Use the + Add View button to add as many pages as needed to your widget. For this scenario, you will need at least two pages:
+View 2 (Feedback): For users who rate 1-3 stars.
+View 3 (Thank You): For users who rate 4-5 stars.
+Customize Views:
+After adding the views, customize them according to your needs. You may want to include relevant text, images, or other components to engage users.
+
+Step 3: Add Click Actions
+Now, we will assign the appropriate click actions to the buttons in order to navigate users to the correct views based on their ratings.
+Assign Click Action for Feedback (1-3 Stars):
+Click on the button in your widget (e.g., the Submit button).
+In the Click Actions panel on the right, choose "Go to View" and select View 3 (Feedback).
+
+Action 1
+Assign Click Action for Thank You (4-5 Stars):
+Next, click + Add Action to add the second click action.
+Choose "Go to View" and select View 2 (Thank You).
+Add a condition to the action: Condition: rating > greater than or equal to > 4
+Click Add and then Save.
+Users who rate 4 or more stars will be directed to the Thank You page when they click the button.
+
+Action 2
+Finalize Click Actions:
+Repeat the process for any additional actions you need. For example, if you want to collect data from users, you can choose the "Send Data" action. If you want to redirect users to a URL, you can choose "Redirect to URL" and specify the link.
+
+Select Action
+After you have finalized all the elements and  click actions, you may simply click Save Widget and Return. Your widget will be saved on "Your Widgets". 
+How to Create Click Action Scenarios
+You may create a pop-up which consists of buttons, ratings, images and assign click actions to them to encourage your audience to read your articles, subscribe to your newsletters, rate your service and more.  When you add click actions to your widget, you create an interactive experience for your users. By adding click actions, you may direct your users to take actions in your widget and further integrate them in your pop-up. 
+Important Note:
+Your "Identifier" code is crucial when you are analyzing your data or assigning click actions to your buttons. Therefore, while you are creating a new widget, pay attention to attributing distinguishable "Identifier" codes to your elements and buttons. You may just simple click on the code and rewrite your own code on it.
+In this page, we are going to provide a scenario and illustrate how to complete the steps to create this scenario by adding click actions.
+Case Scenario:
+"I want to create a pop-up which aims to test user's satisfaction on a 5 star rating score, and show a 'Thank you.' page to people who have given 4-5 stars; while directing other users who have given 1-3 stars to a feedback page."
+Step 1: Design your Widget and Add Identifiers
+First, design or edit your own desired widget and add your image, text, rating score element and buttons. Click actions can only be added to IMAGES and BUTTONS. Therefore, if you want to encourage your audience to take actions in your pop-up, use these two elements.
+Click on your Rating element and navigate to "Settings". 
+
+Identifiers
+Your "Identifier" code is crucial when you are analyzing your data or assigning click actions to your buttons. Therefore, while you are creating a new widget, pay attention to attributing distinguishable "Identifier" codes to your elements when needed. You may just simple click on the code and rewrite your own name on it. Here, as our element is Rating, enter identifier as "rating".
+Identifiers
+Step 2: Create your Widget Flow
+By clicking on +Add View, add as many pages as you need to your widget. After customizing the other pages of your pop-up, we can move on to adding click actions to our buttons to navigate our audience to see the other pages and take actions in them.
+Step 3: Add Click Actions
+On Step 3, we are going to assign click actions to our buttons in order to navigate users to the correct pages. As we have decided that users who have given 4-5 will be taken to "Thank you" page (View 3), and the other users will be first directed to the "Feedback" page (View 2) and then View 3, we are going to use the identifier of our rating element and assign click actions accordingly.
+First, click on the button on our widget and then choose "Click Actions". Then a window will pop up on the right side of the page.
+For Action 1, choose "Go to view" and select View 2 (Feedback) and add a condition as "rating -> less than or equal to -> 3" and click add and Save. Now your audience who have rated less than or equal to 3 will be directed to Feedback page when they click "Submit" button.
+Action 1
+Next, click +ADD ACTION and add your second action for the button. Again, choose your action as "Go to view" and choose View 3 (Thank You) and add condition as "rating -> greater than or equal to -> 4". 
+Action 2
+Continue with View 2 and View 3 to finalize all click actions as we have mentioned here. "Go to View" is only one of the options that you might choose as an action, if you aim to collect data you may add action "Send Data" and or if you aim to redirect your users to a URL, you may choose the relevant action and complete the steps.
+After you have finalized all the elements and  click actions, you may simply click Save Widget and Return. Your widget will be saved on "Your Widgets". 

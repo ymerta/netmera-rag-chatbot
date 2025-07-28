@@ -1,0 +1,4 @@
+Targeting -> Tags -> Upload & Tag Users
+To upload your user list, go to the Targeting tab and select Tags. From there, click on Upload & Tag Users and provide a name for the tag that will be assigned to your list. Choose the .csv or .txt file you wish to upload from your device, ensuring that each line contains a single user identifier.
+Example:
+For example, you want to target a specific group of customers who have made a purchase in the past six months. For this, you navigate to the targeting tab and choose Tags. Then, you select Upload & Tag Users and upload a list of customer IDs in a .csv file. Later, you can assign a name to the tag, such as "Recent Purchasers" and apply it to a marketing campaign targeted to that specific audience.

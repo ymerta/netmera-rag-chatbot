@@ -1,0 +1,175 @@
+Your Key to Understanding, Optimizing, and Elevating your Messaging Strategy
+The Campaigns Dashboard is a centralized hub designed to evaluate the effectiveness of communication strategies. It offers a comprehensive view of campaign performance, aggregating critical data such as audience targeting criteria, delivery rates, user engagement metrics, and conversion results.
+With its detailed analytics, the Campaigns Dashboard enables you to:
+Assess the impact of your communication efforts.
+Identify trends and patterns in your audience behavior.
+Optimize future campaigns through data-driven decisions.
+
+This dashboard serves as an indispensable tool for you to understand how your messages resonate with your audience and achieve desired outcomes. By leveraging its insights, you can refine your strategies, enhance audience engagement, and drive measurable success.
+Analytics Options in the Campaigns Dashboard
+Netmera Panel > Reports > Campaigns 
+The Campaigns Dashboard offers a range of metrics to help you measure, understand, and optimize your marketing campaign performance. Each metric is designed to provide a specific insight into user behavior, campaign success, and revenue impact. Below is a detailed breakdown of each metric with their explanations:
+
+Analytics types
+Today Number of Campaigns:
+This metric shows the total number of campaigns that were executed today. It provides a quick snapshot of your campaign activity for the current day, helping you track your daily marketing efforts.
+
+Number Of Campaigns:
+Displays the total count of all campaigns executed during a specified time frame. This metric helps you analyze your campaign volume over a chosen period to identify activity trends.
+
+Best Open Rate:
+Represents the campaign with the highest percentage of recipients who opened a push notification. This highlights which campaign captured the most attention and engagement from users.
+
+Average Open Rate:
+Calculates the overall average percentage of recipients who opened push notifications across all campaigns. It helps you understand the general engagement level of your audience.
+
+Best Conversion:
+Highlights the campaign with the highest conversion rate, meaning it had the most success in prompting users to complete a specific desired action, such as a purchase or sign-up.
+
+Average Conversion:
+Shows the average conversion rate across all campaigns. This provides an overview of how effective your campaigns are, on average, at driving user actions.
+
+Success:
+Represents the number of notifications successfully delivered during a campaign. This metric helps you track the effectiveness of reaching your target audience.
+
+Open Rate:
+Measures the percentage of recipients who opened the push notification for a specific campaign. A higher open rate suggests strong initial interest and message relevance.
+
+Avg. Time In App:
+Tracks the average amount of time users spend in your app after engaging with a campaign in seconds. This metric helps you understand how campaigns influence user behavior and app engagement.
+
+Conversion:
+Counts the total number of users who completed a specific action (e.g., purchasing, signing up) directly linked to a campaign. It measures the direct impact of your campaigns.
+
+Revenue:
+Reflects the total revenue generated directly from a campaign. This helps you assess the financial return on investment (ROI) of your marketing efforts.
+
+Average Revenue:
+Calculates the average revenue earned per user who completed a conversion as a result of a campaign. This metric provides insight into the value each converted user contributes to your business.
+
+Search Campaigns
+Locate specific campaign reports easily by applying filters. This tool ensures that you can efficiently narrow down your data to focus on the most relevant campaigns for analysis. Below are the available filters and how to use them:
+
+Dates
+Focus on campaigns within a specific time frame by setting a date range. This filter is ideal for analyzing performance over a particular period, such as a promotional event or seasonal campaign.
+Click within the "Dates" section to open the calendar, then select your desired start and end dates.
+Message Label
+Organize and categorize your campaign data by applying message labels. This filter helps you focus on campaigns that share a specific purpose, audience, or theme.
+Click on "Choose Labels" to view the labels you’ve previously assigned to your campaigns, and select the ones you want to filter.
+Message Content Search
+Quickly find campaigns by searching for specific keywords in campaign names or message content. This is particularly useful for retrieving campaigns related to a specific product, service, or topic.
+Type your search query into the provided text box, and the system will display campaigns containing the entered keywords.
+Campaign Highlights
+The Campaign Highlights section provides a comprehensive overview of key metrics related to your marketing campaigns. These metrics offer valuable insights into your campaign performance, engagement levels, and overall effectiveness. Below is a detailed explanation of each metric, along with practical examples to enhance understanding.
+1.Today Number of Campaigns
+This metric shows the total number of marketing campaigns executed on the current day. It provides a real-time view of your campaign activity, helping you track how many campaigns have been launched or sent out today. 
+Monitoring daily campaign activity keeps you updated on your team's workload and helps you maintain a consistent marketing rhythm.
+Example: If the "Today Number of Campaigns" is 10, this indicates that your team has launched ten campaigns today. Comparing this number to your daily goals or typical activity can help you assess productivity and pacing.
+2.Number of Campaigns
+This metric reflects the total count of campaigns executed during a specified date range. It aggregates all campaigns sent within the selected period, offering a holistic view of your campaign volume.
+This metric is essential for understanding the scale of your marketing efforts over time and identifying trends in campaign activity.
+Example: If you set the date range to the last 30 days and see 50 campaigns, it shows that your team has been averaging nearly two campaigns per day. This information can help you evaluate campaign frequency and adjust your strategy if needed.
+3.Best Open Rate (%)
+The "Best Open Rate" identifies the campaign with the highest percentage of recipients who received and opened its push notification. It highlights your most engaging campaign based on user response.
+Understanding which campaign achieved the best open rate allows you to learn from its success. This insight can inform strategies for future campaigns.
+Example: If the "Best Open Rate" is 45%, and it corresponds to a promotional campaign titled "Weekend Flash Sale," you might analyze its content, timing, or targeting to replicate similar engagement in future campaigns.
+4.Average Open Rate (%)
+The "Average Open Rate" calculates the mean percentage of recipients who opened your campaigns across all campaigns. It provides a general benchmark of engagement levels.
+This metric offers a high-level view of how well your campaigns are performing in capturing your audience’s attention. Consistently low open rates may signal the need to revise your messaging, timing, or targeting.
+Example: If the "Average Open Rate" is 20%, and your goal is 25%, you can use this insight to test new approaches, such as more personalized content or optimized send times.
+5.Best Conversion
+"Best Conversion" identifies the campaign with the highest conversion rate, which measures the percentage of users who completed a desired action after interacting with a campaign.
+This metric highlights your most successful campaign in driving user actions, such as purchases, sign-ups, or downloads.
+Example: If a campaign titled "Exclusive Member Discount" achieved a 15% conversion rate, this indicates that 15% of recipients completed the targeted action, such as redeeming the offer. Analyzing the campaign’s content, timing, or incentives can help refine future strategies.
+6.Average Conversion
+The "Average Conversion" metric calculates the mean conversion rate across all your campaigns. It provides an overall assessment of how effectively your campaigns drive user actions.
+This metric gives you a baseline for evaluating the impact of your marketing efforts on user behavior. Consistently monitoring this value can help you track improvements or identify areas that need optimization.
+Example: If the "Average Conversion" is 8%, and your target is 10%, you might experiment with different call-to-action (CTA) strategies or campaign incentives to boost conversions across all campaigns.
+Campaign Analytics: Key Metrics Explained
+The Campaign Analytics section provides a detailed breakdown of the metrics used to evaluate the performance and impact of your marketing campaigns. Each metric is designed to help you analyze various aspects of your campaigns, from their execution to the revenue they generate. Below is a comprehensive explanation of each metric, complete with examples and practical insights.
+
+Start Date
+The Start Date marks the beginning of a marketing campaign’s execution.
+Example: If a campaign started on December 1st, 2024, this information helps track its timeline and assess results over its duration.
+Campaign ID
+The Campaign ID is a unique identifier for each campaign, used for internal tracking.
+Example: A Campaign ID like CMP-20241201 might refer to a holiday sale campaign launched in December 2024.
+Campaign Name
+The Campaign Name is a descriptive title that reflects the campaign’s purpose or content.
+Example: A campaign named "Winter Clearance Sale" clearly communicates its focus on seasonal discounts.
+Campaign Title
+The Campaign Title is a concise and engaging version of the campaign name, often used in external communication.
+Example: For the campaign name "Winter Clearance Sale", the title might be "Up to 50% Off – Shop Now!", designed to grab attention quickly.
+Message Text
+The Message Text contains the main content or body of the campaign’s marketing message.
+Example: A message text like "Don’t miss out on our biggest sale of the season. Click here to shop now!" aims to drive user engagement.
+Message Type
+The Message Type categorizes the purpose of the message, such as promotional, transactional, or informational.
+Example: A promotional message might advertise a special offer, while a transactional message could confirm a purchase.
+Message Style
+The Message Style defines the visual and formatting approach of the campaign, such as iOS Rich Push or Text Push.
+Example: An iOS Rich Push with an engaging image and CTA button can result in higher engagement compared to a simple text push.
+Message Label
+The Message Label is a tag assigned to campaigns to group and organize them.
+Example: Labels like "Holiday Campaigns" or "User Retention" allow easy filtering for performance analysis.
+Target Audience
+The Target Audience specifies the intended recipients or segment for the campaign.
+Example: A campaign targeted at "Loyal Customers" may focus on users with frequent purchases or high app usage.
+Success
+The Success metric reflects whether the campaign’s notifications were successfully delivered.
+Example:
+Notifications delivered and acknowledged by devices are logged as "Success".
+Notifications that fail to deliver are logged as "Fail".
+Success Logs Details:
+In the context of notifications sent through Netmera, the outcome is determined by the message log data returned from Apple (APNS) and Google (FCM).
+
+Direct App Opens
+This metric tracks how many users open your app directly by interacting with the campaign message. Systems tracks OpenApp event and attribute app opens to the campaign that triggered them.
+Example: A notification promoting a flash sale might result in 500 direct app opens, indicating user interest.
+Open Rate
+Open Rate is the percentage of recipients who opened the campaign’s message. Systems divide the number of opened messages by the total delivered messages and multiply by 100.
+Example: If 1,000 messages are delivered and 300 are opened, the open rate is 30%.
+Conv. (Conversion)
+Conversion measures how many recipients completed a desired action, such as a purchase or sign-up, after interacting with the campaign. Conversion tracking uses unique campaign links or user behavior data to match interactions with outcomes. These conversion events are set while creating a push notification on Step: What. 
+Example: A campaign offering a discount might yield 50 purchases, representing 50 conversions.
+Rev. (Revenue)
+Revenue quantifies the total income generated directly from the campaign. Revenue is calculated by attributing purchases or subscriptions to the campaign using tracking links or codes.
+Example: A campaign promoting premium subscriptions might generate $5,000 in revenue.
+Avg. Rev. (Average Revenue)
+This metric calculates the average revenue per conversion achieved through the campaign. It is derived by dividing total revenue by the number of conversions.
+Example: If a campaign generates $5,000 from 50 conversions, the average revenue per conversion is $100.
+Campaigns Summary
+The following is a structured explanation of the key metrics used to measure and analyze the performance of marketing campaigns. These metrics help in evaluating different aspects of campaign success, user engagement, and financial outcomes.
+
+Target Audience
+This column represents the initial number of intended recipients for your marketing campaigns. It refers to the total audience that the campaign is meant to reach, providing a baseline for analyzing the reach and engagement of the campaign.
+Success
+This column measures the success of notification delivery to your audience, indicating whether the campaign successfully reached its target recipients. A successful delivery means that the campaign notifications were sent out correctly and received by the intended recipients.
+Direct App Opens
+This column counts the number of times recipients opened your app directly as a result of interacting with your campaigns. It tracks how effective your campaign's call-to-action (CTA) is at driving users to engage with the app.
+Open Rate
+This column calculates the percentage of recipients who opened your campaigns. It reflects the engagement level of the audience with the campaign messaging and is an important metric to assess how well the content resonates with the target audience.
+Conversion
+This column represents the number of users who completed a desired action as a result of your campaigns. Conversions can include actions such as making a purchase, signing up for a newsletter, or completing a form. Conversion tracking is essential for understanding the effectiveness of your campaigns in prompting users to take the intended action.
+Rev. (Revenue)
+This column quantifies the total financial income generated from your campaigns. Revenue tracks the monetary success of your marketing efforts and helps assess the return on investment (ROI) of the campaign.
+Avg. Rev. (Average Revenue)
+This column calculates the average revenue generated per user who converted as a result of your campaigns. It provides insight into the per-user financial value of conversions, helping assess the profitability of each campaign.
+Data Presentation with an Example
+The campaign data for a specific date range (e.g., 11-08-2023 to 21-08-2023) is organized by different reporting frequencies (Daily, Weekly, Monthly). The data is typically presented in a table format, where each metric is recorded and tracked for various target audiences over time. The table can be customized to show:
+Daily performance: Insights on a day-by-day basis
+Weekly performance: Trends and insights accumulated over a week
+Monthly performance: Overall insights across an entire month
+Summation (Σ)
+For each metric, a summation (Σ) is provided to give the cumulative total of the data for the chosen time period. This helps in understanding the overall performance of a campaign across different segments.
+Example:
+If the daily data shows 100 direct app opens for the first day and 150 for the second day, the summation for the two days would be 250 direct app opens.
+Summary Table Interpretation
+This table allows you to track and analyze campaign performance, engagement, and financial outcomes across different time periods and target audiences. By reviewing this table, marketers can optimize strategies, adjust targeting, and improve overall campaign effectiveness.
+Key Benefits of the Summary Table:
+Target Audience helps you refine who receives the message, optimizing for relevancy.
+Success Rate allows you to assess whether your campaign is reaching the audience effectively.
+Direct App Opens and Open Rate measure user engagement and interest.
+Conversion and Revenue help determine the financial success of the campaign.
+Average Revenue offers insights into the per-user profitability, helping to refine targeting and messaging for maximum ROI.
+This comprehensive summary helps in making data-driven decisions and ensures that marketing efforts align with business goals.

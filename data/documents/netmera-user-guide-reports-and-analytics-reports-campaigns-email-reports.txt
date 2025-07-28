@@ -1,0 +1,134 @@
+Track and Optimize Your Email Campaign Performance with Ease
+The Email Reports page offers a comprehensive analysis of your email campaign performance. It provides detailed insights into essential metrics such as open rates, click rates, bounces, unsubscribes, and non-openers. With features like total and unique tracking for opens and clicks, URL-level performance breakdowns, and exportable datasets, the Email Reports page enables you to refine your strategy and maximize campaign impact.
+Email Summary
+The Message Report Dashboard presents a detailed overview of your email campaigns, enabling you to monitor performance, track engagement, and assess campaign success.
+
+1. Campaign Name & Message ID
+Name: Title of your email campaign, used for identification and filtering within the system.
+Message ID: A unique system-generated identifier assigned to each email message.
+2. Message Type
+Specifies the category or nature of the message (e.g., campaign, notification). This affects how the message is processed and delivered.
+3. Mail Subject
+The subject line that appears in recipients' inboxes, containing the primary message or call-to-action (e.g., “Your latest invoice is ready for download.”).
+4. Method
+Creator: The user who created and initiated the campaign.
+Broadcasting: Indicates the message was sent to the full user base without segmentation.
+Segments & Tags: Indicates the message was sent to a targeted audience using predefined user segments or tags.
+5. Campaign Status
+Finished: All messages in the campaign have been sent.
+Sending: The campaign is still actively sending messages.
+6. Timing
+Create: Timestamp of when the message was created.
+Start: When the message was sent to recipients.
+End: When the campaign finished or expired.
+Overview
+The Overview section provides performance metrics that reflect how recipients engaged with the email. These indicators help assess strategy effectiveness, content resonance, and list health.
+
+Key Metrics in Amazon AWS Email Report
+The following overview outlines the key email metrics tracked in Amazon AWS campaigns. These metrics provide valuable insights into the performance of email campaigns, from initial delivery to recipient actions such as opening and clicking links. You can use this data to assess audience engagement and optimize future campaigns.
+
+Opened
+Indicates the number of recipients who opened the email. An “open” is typically triggered by the loading of an invisible tracking pixel embedded in the email content. This metric provides insight into how effectively the subject line and sender information encouraged recipients to view the email.
+Clicked
+The "Clicked" metric measures the total number of times recipients have clicked on any link or clickable element within the email. Like the "Total Opened" metric, this includes all clicks, whether a single recipient clicked multiple times or a recipient clicked on multiple links. This metric helps assess the effectiveness of the email’s calls to action (CTAs), design, and content. High click rates indicate that the email's content and offers were compelling enough to prompt recipients to engage further by visiting a website, downloading content, or taking other actions.
+Unsubscribed
+This metric tracks the number of recipients who chose to unsubscribe from the email list after receiving the email. An unsubscribe action typically reflects dissatisfaction with the content, frequency, or relevance of the emails. A high unsubscribe rate can be a sign that the campaign is not resonating with the audience or that recipients feel overwhelmed by the frequency of communications. Marketers can use this information to assess list quality and refine targeting or content strategies to reduce unsubscribes in future campaigns.
+Bounced
+The "Bounced" metric represents the number of emails that were not successfully delivered to recipients' inboxes. Bounces are classified into two types:
+1.Hard Bounces: These occur when an email cannot be delivered due to permanent issues, such as an invalid or non-existent email address.
+2.Soft Bounces: These occur when an email cannot be delivered temporarily, usually due to issues like a full inbox or a server error.
+Tracking bounces helps marketers maintain a clean email list by identifying invalid email addresses. High bounce rates can indicate issues with data quality, list hygiene, or email deliverability.
+Key Metrics in Uzman Posta Email Report
+The following overview outlines the key email metrics tracked in Uzman Posta campaigns. These metrics provide valuable insights into the performance of email campaigns, from initial delivery to recipient actions such as opening and clicking links. You can use this data to assess audience engagement and optimize future campaigns.
+
+Total Opened
+This metric reflects the total number of times the email was opened by recipients. It includes all instances of the email being opened, even if the same recipient opens the email multiple times. A high "Total Opened" count suggests that the email content or subject line resonated with the audience, prompting them to revisit the message. However, this metric alone doesn't account for engagement depth, as it doesn't differentiate between multiple opens by the same recipient.
+Unique Opened
+The "Unique Opened" metric tracks the number of individual recipients who have opened the email at least once. Unlike the "Total Opened" metric, which counts every instance of the email being opened, the "Unique Opened" metric ensures that each recipient is counted only once, even if they opened the email multiple times. This provides a clearer view of how many distinct users are engaging with the email content. It's a key metric for understanding reach and initial audience engagement.
+Clicked
+The "Clicked" metric measures the total number of times recipients have clicked on any link or clickable element within the email. Like the "Total Opened" metric, this includes all clicks, whether a single recipient clicked multiple times or a recipient clicked on multiple links. This metric helps assess the effectiveness of the email’s calls to action (CTAs), design, and content. High click rates indicate that the email's content and offers were compelling enough to prompt recipients to engage further by visiting a website, downloading content, or taking other actions.
+Unsubscribed
+This metric tracks the number of recipients who chose to unsubscribe from the email list after receiving the email. An unsubscribe action typically reflects dissatisfaction with the content, frequency, or relevance of the emails. A high unsubscribe rate can be a sign that the campaign is not resonating with the audience or that recipients feel overwhelmed by the frequency of communications. Marketers can use this information to assess list quality and refine targeting or content strategies to reduce unsubscribes in future campaigns.
+Bounced
+The "Bounced" metric represents the number of emails that were not successfully delivered to recipients' inboxes. Bounces are classified into two types:
+Hard Bounces: These occur when an email cannot be delivered due to permanent issues, such as an invalid or non-existent email address.
+Soft Bounces: These occur when an email cannot be delivered temporarily, usually due to issues like a full inbox or a server error.
+Tracking bounces helps marketers maintain a clean email list by identifying invalid email addresses. High bounce rates can indicate issues with data quality, list hygiene, or email deliverability.
+Conversion and Revenue Metrics
+Conversion: The total number of times the specified conversion event is triggered.
+Revenue: The cumulative value of the revenue parameter associated with the conversion event, aggregated across all users (only applicable if revenue events are integrated).
+Prerequisites for Conversion and Revenue Tracking
+To display conversion and revenue metrics in your campaign reports (such as email performance reports), you must define a Conversion Event in Step 2: What while creating your email campaign. Additionally, to enable revenue tracking, ensure that your application sends revenue data within the relevant conversion events to Netmera. Refer to the Developer Guide for detailed integration instructions.
+
+Detailed Campaign Metrics
+
+Target Audience
+The target audience represents the total number of recipients intended to receive the email campaign. This figure includes all users in the selected audience segment or mailing list. It serves as the starting point for understanding the reach of the campaign and calculating further performance metrics. The size of the target audience reflects the overall scope of the campaign and is crucial for determining engagement rates. This metric does not account for factors like delivery success or bounces.
+Successful Deliveries
+The successful deliveries metric refers to the number of emails that were sent and successfully reached the recipients' inboxes. This is a critical performance indicator that shows the effectiveness of the email-sending infrastructure, such as server health and recipient address validity. Emails that bounce due to invalid or non-existent addresses are excluded from this count. A high delivery rate suggests that the target audience data is clean and up-to-date, ensuring that the campaign reaches its intended recipients. This figure is used as the denominator in calculating metrics such as open rate and click-through rate.
+Total Opens
+Total opens indicate the number of times recipients have opened the email, including multiple opens by the same recipient. This metric provides a cumulative count, reflecting instances where recipients may revisit the email to re-engage with its content. Total opens are important for gauging how appealing the subject line, sender name, or email preview were, as these factors often influence whether a recipient decides to open the email. This metric helps marketers understand the overall interest level in the campaign's content and design.
+Open Rate
+The open rate is a key metric used to measure the percentage of successfully delivered emails that were opened by recipients. It highlights the effectiveness of the subject line, timing, and sender recognition in capturing the audience's attention. The formula to calculate the open rate is:
+(Total Opens / Successful Deliveries) * 100
+A higher open rate indicates that the campaign successfully encouraged recipients to engage with the email. However, it does not account for subsequent actions like clicks or conversions.
+Total Clicks
+Total clicks represent the total number of times recipients clicked on any link or clickable element within the email. This metric includes multiple clicks from the same recipient, reflecting the overall interactivity and engagement level of the email's content. It provides insight into how compelling the email's design and calls-to-action (CTAs) are, as well as how well the content aligns with the audience's interests. Total clicks measure the effectiveness of the email in encouraging users to take action, such as visiting a website or completing a purchase.
+Click-through Rate (CTR)
+The click-through rate (CTR) measures the percentage of successfully delivered emails that resulted in at least one click on a link or CTA. This metric evaluates the ability of the email content to drive recipient action and is a key performance indicator for assessing the effectiveness of the campaign. The formula for calculating CTR is:
+(Total Clicks / Successful Deliveries) * 100
+CTR provides a direct measure of the email's ability to convert its reach into meaningful engagement. A higher CTR often indicates strong alignment between the email content and the recipients' interests.
+Click-to-open Rate (CTOR)
+The click-to-open rate (CTOR) measures the percentage of opened emails that resulted in a click. Unlike CTR, CTOR focuses solely on the recipients who engaged with the email by opening it, providing a deeper insight into the quality and relevance of the content. The formula for calculating CTOR is:
+(Total Clicks / Total Opens) * 100
+A high CTOR suggests that the email's design, content, and CTAs resonated strongly with recipients who were already engaged enough to open the email. This metric helps marketers refine their content strategies to maximize impact.
+Last Opened
+The last opened metric provides the timestamp of the most recent instance when the email was opened. This metric is useful for understanding the timing and recency of audience engagement. It can reveal patterns in user behavior, such as whether recipients engage immediately after receiving the email or revisit it later. This information is valuable for optimizing send times and developing strategies for follow-up campaigns.
+Click Performance
+The Click Performance section provides a detailed breakdown of how recipients engage with the individual URLs included in your email campaign. It tracks both Total Clicks and Unique Clicks for each URL, giving you a comprehensive view of the performance of specific links.
+Total Clicks:
+This metric represents the total number of clicks on a particular URL, including multiple clicks by the same recipient. For example, if one recipient clicks a link three times, all three interactions are counted in the total clicks for that URL. This metric provides insight into the overall interest and engagement with specific content.
+Unique Clicks:
+This metric counts the number of distinct recipients who clicked on a specific URL. Each recipient is counted only once for the URL, regardless of how many times they clicked on it. Unique clicks offer a clearer picture of how many individuals engaged with each URL.
+
+By clicking on the green metrics in the table, you can view a detailed list of email addresses of users who clicked on a specific URL. This allows for more targeted follow-up actions or analysis.
+Email: The recipient's email address.
+Total Clicks: The number of times this recipient clicked on any link in the email.
+
+Accessing Full User Activity:
+While the Click Performance table provides a summary of URL performance, including the total and unique clicks for each link, it is important to note the following:
+Preview Limitation:
+The table in this section serves as a preview, displaying only a subset of the data. It shows the most relevant URLs and their engagement metrics.
+Exporting the Full Data:
+To access a complete list of all URLs and their corresponding click performance metrics, you can export the data. The export will include all data, enabling you to conduct a more in-depth analysis of recipient behavior.
+
+User Activity
+The User Activity section allows you to review how recipients interacted with your email campaign at an individual level. By selecting the metric from the dropdown menu, you can see detailed data regarding the metrics you choose made by individual recipients.
+1.Email:
+Displays the email addresses of recipients who interacted with the campaign by clicking links.
+2.Total Count:
+Shows the total number of times each recipient clicked on any link in the email. If a user clicked multiple times, each action is reflected in this count.
+
+User Activity Filters
+The dropdown menu provides different filters to segment and analyze user interactions with your email campaign. Each option focuses on a specific type of user engagement or activity:
+1.Opened:
+Displays the list of recipients who opened your email. This filter helps identify the audience that showed initial interest by viewing the content of the email.
+2.Clicked:
+Displays recipients who clicked on one or more links within your email. This is a key metric for understanding how effectively your email drove engagement. The table shows:
+Email addresses of recipients
+Total Count: Number of times each recipient clicked any links in the email.
+3.Unsubscribed:
+Shows recipients who chose to unsubscribe from your mailing list after receiving the email. Monitoring this metric helps track churn and identify areas where your email strategy may need adjustment.
+4.Bounced:
+Displays the list of email addresses that failed to receive the email due to delivery issues. Reasons for bounces can include:
+Invalid email addresses
+Full inboxes
+Server issues Understanding bounce rates helps maintain the quality of your mailing list.
+5.Did Not Open:
+Lists recipients who did not open the email. This information is useful for re-engagement campaigns, as you can target this group with alternative content or strategies to catch their attention.
+Accessing Full User Activity
+While the Click Performance table provides a summary of URL performance, including the total and unique clicks for each link, it is important to note the following:
+Preview Limitation:
+The table in this section serves as a preview, displaying only a subset of the data. It shows the most relevant URLs and their engagement metrics.
+Exporting the Full Data:
+To access a complete list of all URLs and their corresponding click performance metrics, you can export the data. The export will include all data, enabling you to conduct a more in-depth analysis of recipient behavior.

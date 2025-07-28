@@ -1,0 +1,53 @@
+In this section, we'll guide you through the process of tracking widget interactions through standard widget events, Spin to Win events, and custom events. This information is useful for understanding how your users interact with your widgets and analyzing their behavior.
+Standard Mobile Widget Events
+Prerequisites for Event Tracking
+To see these events in the panel, you must first create a widget that triggers the event. Additionally, an actual user event must occur for the event to be recorded and reflected in the panel.
+Follow these steps to track the basic events related to your mobile widgets:
+Navigate to Event Insight
+Go to Analysis > Event Insight.
+Choose Your Event Type
+Select either Widget Action or Shown Mobile Events based on what you want to track.
+Select the Dimensions
+Choose the dimensions that best fit your analysis needs (e.g., time, user type, device).
+Requirements:
+One image or one button: Ensure that your widget includes only one image or button.
+One link or deeplink: The image or button should contain only one link or deeplink to track interactions properly.
+
+Widget Shown Mobile
+This event occurs when a user sees the widget but does not interact with it (no clicks or navigations).
+How is this event triggered?
+The user may have closed the widget by clicking the (x) button.
+The widget might have been dismissed by the user using a dismiss button that does not contain a link.
+
+Widget Action Mobile
+This event is triggered when a user sees the widget and interacts with it by clicking on an image or button containing a link or deeplink.
+How is this event triggered?
+Interacting with the widget by clicking on an image or button that contains a link or deeplink. This could include various types of actions, such as:
+Clicking on a image that redirects to the product page.
+Clicking a button that opens a specific section within the app or website.
+Tapping a promotional button that takes the user to a special offer or coupon code.
+
+Standard Spin to Win Events
+Prerequisites for Event Tracking
+To see these events in the panel, you must first create a widget that triggers the event. Additionally, an actual user event must occur for the event to be recorded and reflected in the panel.
+To track interactions with the Spin to Win widget, follow these steps:
+Go to Analytics > Event Insight
+Within the Event Insight dashboard, you'll find a list of events tracked by your system.
+Spin To Win Shown: This event tracks when the Spin to Win widget is displayed to the user.
+Spin Button Clicked: Triggered when the user clicks the Spin button to start the spin action.
+Coupon Code Assigned: Occurs when the user successfully receives a coupon code after spinning the wheel.
+Coupon Code Assigned Failed: Triggered if the coupon code assignment fails after the spin.
+Coupon Code Copied: Tracks when the user copies the coupon code after receiving it from the Spin to Win interaction.
+
+Custom Events
+For more advanced widgets, you might want to create custom events to track specific interactions. Here’s how to set it up:
+Step 1: Create a New Custom Event
+Go to Developers > Events.
+Click Create New Event and customize it according to your needs.
+Step 2: Match Events with Widget Components
+Once the custom event is created, you need to link it with specific components within your widget (e.g., buttons, images).
+For more detailed instructions, you can refer to related documentation Creating Custom Events and Assign Click Actions or video tutorial below.
+
+Step 3: Analyze Custom Events
+After setting up your custom events, go to Analysis > Event Insight to view the results.
+Select the custom event and choose the dimensions that are relevant to your analysis.

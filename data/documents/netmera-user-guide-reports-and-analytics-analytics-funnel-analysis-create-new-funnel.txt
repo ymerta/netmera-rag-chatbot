@@ -1,0 +1,86 @@
+The Funnel feature in Netmera Analytics allows you to track and analyze user interactions across a sequence of defined steps within your application. Funnels are particularly useful for understanding user progression, identifying drop-off points, and optimizing key user journeys.
+To create a new funnel:
+1.Navigate to Analytics > Funnel.
+2.Click on New Funnel.
+Step 1: Configure Funnel
+Funnel Name
+Provide a descriptive and purposeful name for your funnel to clearly indicate its focus and objective. This helps in quickly identifying its purpose in future analyses.
+Who: Define the Audience
+Select the target audience for the funnel:
+All Users: Includes every user who has interacted with your application within the selected time frame. This is useful for a holistic view of overall user behavior.
+Push Receivers: Limits the analysis to users who have received specific push notifications.
+You can select individual push messages or campaigns from the list to refine your audience.
+This option is ideal for measuring the impact of specific messaging campaigns on user behavior.
+Segment: Allows you to target users based on predefined segments in your account.
+Segments can be based on demographic data (e.g., location, age) or behavioral patterns (e.g., frequent buyers, app abandoners).
+Selecting a segment filters the funnel to include only users who match the defined criteria.
+Hint: Use segments to focus on specific user groups for more targeted insights. For example, applying a segment for "Users from Europe" or "Users who opened the app in the last 7 days" helps tailor the funnel to meaningful cohorts.
+Events: Select Key Events
+Define the core events that constitute the user journey within your funnel. These events represent significant interactions or milestones users complete while using your application. Select the events that will form each step of your funnel. Each event should correspond to a meaningful action that aligns with the objectives of your analysis. Common examples include:
+Product Viewed
+Added to Cart
+Purchase Completed
+Only relevant events should be added to ensure the funnel reflects the intended user journey and yields actionable insights.
+Did Not (Exlude) Events
+Use this setting to exclude users who perform specific events at any step of the funnel. If a user triggers any of the excluded events during the funnel journey, they will be automatically excluded from the analysis, regardless of other events they completed.
+Example:
+For a funnel tracking onboarding steps such as Open App > Get Started > Register, you may choose to exclude the Sign Out event.
+If a user triggers Sign Out at any point during these steps, that user will not be counted in the funnel report.
+This functionality helps refine your analysis by filtering out users whose actions contradict the intended funnel path, ensuring cleaner and more meaningful results.
+Time Period
+Set the timeframe for the analysis. You can choose from:
+Predefined options: Last Week, Last Month, Last Year
+Custom date ranges
+This parameter helps you focus on specific time intervals for performance comparison and seasonal behavior analysis.
+Within the period: Tracks events across the selected date range.
+In a session: Tracks events that occur within a single user session.
+This setting determines the behavioral scope of the funnel and is crucial for understanding real-time versus long-term engagement patterns.
+Track Anomalies (Optional)
+Enable Anomaly Tracking to monitor irregularities in event trends. This feature allows the detection of unexpected changes in user behavior, such as a sudden drop in a key conversion step.
+Alert Type: Define which anomalies to monitor (e.g., drop, spike).
+Threshold: Set sensitivity levels for anomaly detection. This controls how significant a deviation must be before an alert is triggered.
+Note: Anomalies are detected based on historical averages and can help flag issues early.
+
+Once configuration is complete, click Save Funnel to proceed to analysis.
+Step 2: Analyze The Funnel Report
+The Funnel Report provides detailed insights into how users progress through the defined steps.
+Date Range and Funnel Statistics
+Displays the selected timeframe for the report and summarizes:
+Total number of users who entered the funnel
+Conversion metrics
+Drop-off rates at each step
+Users
+Shows the total count of users who began the funnel journey. This includes:
+Users who completed all steps
+Users who dropped off at various stages
+Platforms
+Breaks down user participation across platforms:
+Mobile App Total
+iOS
+Android
+Web Total
+This segmentation helps identify platform-specific engagement trends.
+Event Stages
+Each column in the report corresponds to a step in the funnel:
+Displays the number of users who completed that specific step
+Useful for identifying high drop-off points or successful conversion stages
+Data Insights and Discrepancies
+Netmera utilizes an efficient data processing module to maintain performance. As a result, minor data variations may occur based on the number of events and users in a funnel.
+Possible Discrepancies
+User Count Variance: Adding or removing steps may slightly increase or decrease user counts.
+Low-Level Discrepancy:
+Funnels with over 1,000,000 users: Discrepancy typically ranges from 0.08% to 0.4%
+Funnels with ~500,000 users: Discrepancy typically ranges from 0.006% to 0.05%
+These variations are minimal and do not significantly affect overall analysis reliability.
+Tip: For precise data, use the Export option. Exported data reflects actual user counts and is not subject to display optimization discrepancies.
+Export Considerations
+When exporting funnel data, you might notice differences compared to on-screen figures. Possible reasons include:
+Standard Discrepancy: The export may display slightly lower values due to how variations are processed in the UI.
+Excluded Users: If users who previously triggered events have been deleted from the system, they will not appear in exports. This affects exports using tags or external IDs.
+Tagging in Funnel Reports
+Tagging allows you to categorize and highlight specific data points for deeper analysis.
+How to Tag Data Points
+In the Funnel Report graph, click the tag icon next to a number.
+Enter a tag name or select an existing one.
+Save the tag to organize and filter the data based on relevant themes or criteria.
+By leveraging Netmera's Funnel feature, you can gain valuable insights into user behavior, optimize conversion flows, and make data-driven decisions to improve user engagement.

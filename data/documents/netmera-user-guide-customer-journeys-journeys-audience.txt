@@ -1,0 +1,18 @@
+Know Your Customers, Elevate Your Strategy
+Step 3: Audience
+Quick Steps Guideline
+Journey Step 3: Audience
+Add Segments to Define Your Audience for the Journey:
+Select specific segments that represent the target group for your journey.
+Add Multiple Segments if Necessary:
+You can include more than one segment to refine your audience further.
+Note: If no specific segments are selected, the journey will automatically apply to all users. To proceed with targeting all users, simply click Next.
+In this step, after defining the journey's functionality and eligibility rules, you will determine which users will be included in this journey. You can choose to run this journey for specific segment(s) or all users.
+If you don't choose an audience:
+If no specific segment is selected, the journey will be applicable to all users. This allows for flexibility in targeting and ensures that the journey can be tailored to meet the specific needs of different user groups.
+
+To create logical segmentation:
+Click on Add More Segments: Locate and click the Add More Segments option in the segmentation section.
+Add Multiple Segments: Use the + button to add multiple segments as needed. This allows you to define complex segment criteria for more precise targeting.
+Creating Segments:
+To view your segments within this step, you first need to create them in the Targeting section under Segments. Follow the steps to ensure your segments are properly set up Segments.

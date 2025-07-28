@@ -1,12 +1,34 @@
-At Netmera, we understand the importance of a seamless onboarding process when integrating with external platforms like Amazon and Setrow for your email campaigns. We aim to provide you with a smooth experience and expert guidance throughout the integration journey. Here's how we ensure a successful integration:
-Once you share the necessary account information with us, we take the initiative to establish contact with the respective Amazon or Setrow team on your behalf.
-Gathering Account Information: Once we receive the necessary account information from you, including your company details and specific requirements, our dedicated team begins the account setup journey.
-Establishing Contact: We take the initiative to reach out to the respective Amazon or Setrow team on your behalf. This direct communication helps expedite the account opening process, ensuring a swift and efficient setup.
-Collaboration with Amazon or Setrow: Our team works closely with the Amazon or Setrow team throughout the account setup phase. They will handle the necessary procedures and collaborate with you to address any specific requirements or configurations.
-Account Activation: Once the verification process is complete, the Amazon or Setrow team will proceed with the account activation. They will create your account based on the provided details, ensuring a smooth transition from the setup phase to active usage.
-To ensure optimal email deliverability, we help you retrieve the relevant DNS settings from Amazon or Setrow. These settings play a crucial role in the successful delivery of your email campaigns. Our team will guide you in implementing these DNS configurations correctly. 
-For Setrow, they conduct their own checks and finalize the process by whitelisting. With Amazon integration, Netmera takes control of the configuration process to guarantee a seamless integration experience.
-As part of the seamless account setup process, our dedicated Customer Success Manager (CSM) will guide you through the integration setup within the Netmera panel. This step ensures that all the necessary configurations are in place to establish a smooth connection between Netmera and your chosen email platform, be it Amazon or Setrow.
-Depending on your preference and decision regarding the ownership of the IYS (Permission Management System), our CSM will assist in configuring the IYS settings accordingly. If you choose to manage the IYS within Netmera, our team will guide you through the process of defining the IYS code and brand code within the Integration section. We ensure that your IYS management aligns seamlessly with your email campaigns.
-Last updated 5 months ago
-Was this helpful?
+At Netmera, we prioritize a seamless integration experience when connecting with third-party email platforms like Amazon SES, Setrow, or Uzman Posta. Our goal is to guide you through each step of the process to ensure successful setup and optimal campaign performance.
+1. Account Activation & Setup
+Provide Information: Share your company details and specific email requirements.
+Contact Establishment: Netmera will initiate communication with your selected email platform.
+Provider Collaboration: We coordinate with Amazon, Setrow, or Uzman Posta to ensure your account is configured correctly.
+Account Activation: Once verified, your account will be activated for use.
+2. DNS Configuration
+Proper DNS setup is essential for successful email delivery.
+Amazon SES: Netmera handles DNS configuration to ensure a streamlined setup.
+Setrow: The provider performs its own DNS checks and completes the process by whitelisting your domain.
+Uzman Posta: DNS settings must be obtained from the provider and added as instructed.
+Ensure all DNS records are correctly configured to maintain high deliverability and proper sender authentication (e.g., SPF, DKIM, and DMARC).
+3. Integration with Netmera
+Navigation:
+Netmera Panel > Connectors > Email > Install
+Configuration:
+After clicking Install, you'll be redirected to the integration setup page. Enter the details provided by your email platform.
+API Key Requirement:
+Your Netmera API Key is required to complete the integration. You can find it under:
+Netmera Panel > Developers > API
+
+4. Platform-Specific Guidance
+Each platform may require unique settings or credentials. Ensure you collect and enter the following where applicable:
+Amazon SES: Access key, secret key, region, verified domain, etc.
+
+Setrow: API credentials and domain verification details.
+
+Uzman Posta: SMTP settings or API key, based on integration type.
+
+5. IYS (Permission Management System) Management
+Netmera supports flexible IYS management options:
+Internal Management: If you prefer to manage IYS within Netmera, you can configure your IYS Code and Brand Code under the Integration section.
+External Management: Alternatively, if IYS is managed externally, we’ll coordinate accordingly.
+Proper IYS integration ensures compliance with Turkish email marketing regulations and improves message deliverability.

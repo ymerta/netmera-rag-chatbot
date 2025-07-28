@@ -5,8 +5,11 @@ import faiss
 from openai import OpenAI
 from utils.loader import load_txt_documents  # Bu fonksiyon dosya adı + içerik döndürmeli
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
+with open("data/faq_answers.json", "r", encoding="utf-8") as f:
+    faq_qa_map = json.load(f)
 
 # 🔐 API anahtarı doğrudan girildi
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -37,7 +40,17 @@ for filename, doc in documents:
         "text": doc,
         "source": filename  # 🔑 kaynak dosya adını sakla
     })
+# ✨ FAQ verilerini de ekle
+for key, value in faq_qa_map.items():
+    question = value["question"]
+    answer = value["answer"]
 
+    faq_entry = {
+        "text": f"Q: {question}\nA: {answer}",
+        "source": f"faq-{key}",  # ✅ Burayı düzelttik
+    }
+    cleaned_docs.append(faq_entry)
+    
 # 💾 Temizlenmiş metinleri kaydet
 os.makedirs("data/embeddings", exist_ok=True)
 with open("data/embeddings/texts.pkl", "wb") as f:

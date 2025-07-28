@@ -1,0 +1,30 @@
+Application Version
+Understanding the versions of your mobile application that users have installed and how they engage with these versions is paramount in the ever-evolving landscape of mobile app development. 
+This comprehensive analysis of 'Application Version' delves into the insights provided by tracking application versions and their distribution among users. We explore the significance of this data in ensuring optimal user experiences, prioritizing updates, and addressing compatibility concerns.
+Application Version Reports
+Application Version
+This metric refers to the different versions of your mobile application that users have installed on their devices. Each time you release an update or a new version of your app, it receives a distinct version number. Tracking application versions is vital for understanding which version(s) of your app users are using, which can help with support, bug fixes, and feature improvements.
+Top iOS Version
+This indicates the most frequently used version of your app on iOS devices. In the following example case, version 1.0 is the version that the majority of iOS users have installed. This information is valuable for prioritizing support and updates for the most widely adopted version.
+Top Android Version
+Similar to the iOS version, this is the most commonly used version of your app on Android devices. Version 3.9.19.2 is the version that the majority of Android users have installed in the example below. Understanding the top Android version helps you focus your development efforts and ensures that users with this version have the best experience.
+App Version Distribution
+This section provides a breakdown of the various versions of your app installed on devices. It includes:
+App Version: The specific version number of your app.
+Percentage (%): The percentage of users who have a particular app version installed.
+Count: The number of users with that app version.
+Daily Active Users: The number of users who actively use your app on a daily basis with that specific version.
+This data allows you to see how app versions are distributed among your users, which is essential for targeting updates, bug fixes, and ensuring compatibility with different versions.
+In summary, tracking application versions and their distribution helps you tailor your support and development efforts to provide the best experience to your users across different versions of your app on all platforms.
+Making the Best of Application Version:
+Below you may find some of our suggestions on how to make the most of your Application Version data you collected through Netmera.
+Version Adoption Analysis
+Dive into the data regarding the adoption rate of different application versions among your user base. Identify which versions are most widely used and which might need attention.
+Support and Bug Fixes
+Prioritize support and bug fixes based on version usage. If a significant number of users are on a specific version, ensure it is stable and bug-free to maintain user satisfaction.
+Feature Development
+Tailor your feature development roadmap to align with version adoption. Consider introducing new features or improvements in line with the versions that the majority of users are on.
+ User Experience Optimization
+Continuously improve the user experience by addressing issues and optimizing performance for the most commonly used versions.
+Compatibility Checks
+Regularly assess compatibility with older versions. Ensure that new updates remain compatible with versions that still have a substantial user base. 

@@ -1,23 +1,107 @@
+FTP Push & Data Transfer
 Ditch the Manual Work & Embrace Automation
-Say goodbye to tedious data uploads and hello to seamless flow with Netmera's FTP Push feature. This powerful tool leverages the File Transfer Protocol (FTP) to whisk your logged data files away to a designated server – automatically, the moment they close. No more manual work, just real-time updates, and streamlined data management.
-Real-time Data Updates: Organizations that require up-to-the-minute data updates, such as e-commerce businesses tracking sales, benefit from FTP Push. This ensures that sales and inventory data are consistently updated on the server.
-Marketing Campaigns: Marketing teams can utilize FTP Push to transfer customer engagement and response data to a centralized location for analysis. This enables more informed decision-making for future campaigns.
-Application Performance Monitoring: Apps can use FTP Push to regularly transfer performance logs and metrics to servers. This aids in identifying and addressing issues promptly to ensure a smooth user experience.
-Data Warehousing: For businesses that maintain data warehouses, FTP Push assists in automatically transferring data from various sources to the warehouse, promoting data centralization.
-Enhanced Efficiency and Automation: FTP Push eliminates the time-consuming burden of manual data transfers. The system seamlessly initiates the transfer as soon as a data file is closed, ensuring real-time updates without the need for human intervention. This automation not only frees up valuable time and resources but also reduces the risk of errors associated with manual processes.
-Timely Insights for Strategic Decisions: Organizations that rely on up-to-date data to make informed decisions can reap significant benefits from FTP Push. Automating transfers provides timely access to the most current information, enabling better strategic planning, proactive problem-solving, and a more agile response to evolving market conditions.
-Impeccable Data Integrity: Manual data transfers inherently carry the risk of human errors, which can compromise the accuracy and reliability of information. FTP Push effectively addresses this concern by automating the transfer process, ensuring data integrity and accuracy throughout the entire journey. This, in turn, enhances the trustworthiness of data for analysis and decision-making, leading to more confident and well-informed strategies.
-Harnessing the benefits of FTP Push is a seamless process that involves a few key steps:
-Initiate your journey by contacting your designated Customer Success Manager (CSM). They'll act as your guide, assisting you in enabling the FTP Push Offer on Netmera for your application.
-Your CSM will navigate you through the necessary configurations and ensure the feature is activated within your Netmera account, paving the way for automated data transfers.
-To establish a secure connection between Netmera and your chosen server, your DevOps team will create a dedicated FTP user specifically for your application.
-Once the user is set up, you'll receive secure login credentials, acting as keys to initiate smooth and secure data transfers.
-Before the transfer process begins, organize your data into a Comma-Separated Values (CSV) file format.
-Ensure that the CSV file contains the necessary fields such as external id, push text, deep link, etc. These details are crucial for creating customized push notifications that will be sent to your intended recipients.
-With your CSV file in hand, it's time to upload it to the designated FTP server.
-Utilize the FTP credentials provided by your DevOps team to establish a secure connection to the server and initiate the file transfer.
-Upon completion of the upload, Netmera will automatically step in, processing the data and triggering the delivery of push notifications based on the instructions embedded within the CSV file.
-In essence, FTP Push in Netmera simplifies the process of transferring logged data files to a server, bringing benefits of efficiency, real-time updates, and enhanced data security. 
-By following these straightforward steps, you'll empower FTP Push to streamline your data management and ensure timely, accurate information flow, enhancing your operations and decision-making capabilities.
-Last updated 2 months ago
-Was this helpful?
+Netmera FTP integration is a secure and automated solution for managing data transfers between your systems and the Netmera platform. Designed to simplify data import and export processes, this feature enables tasks such as sending personalized push notifications, updating user profile attributes, and exporting campaign or transactional reports with ease.
+By leveraging FTP, you can connect your data workflows to Netmera, ensuring timely, accurate, and reliable operations. Whether importing customer data for targeted engagement or exporting detailed insights for analysis, Netmera FTP provides the tools to enhance your application’s performance and customer engagement strategy.
+
+Netmera FTP integration provides a flexible and efficient way to manage data, offering two key functionalities:
+Importing Data: Upload data to the Netmera platform for tasks such as sending push notifications or updating user profiles.
+Exporting Data: Automatically transfer reports, including campaign and transactional data, from Netmera to your FTP server for analysis and record-keeping.
+This guide is designed to help you with both use cases. You can follow the relevant sections depending on whether you want to set up FTP for importing or exporting data. Each section provides detailed, step-by-step instructions to ensure a smooth and secure setup process tailored to your needs.
+
+Setting Up FTP for Importing Data
+Step 1. Enabling the FTP Offer
+To begin, contact your assigned Customer Success Manager (CSM). They will assist in enabling the FTP offer on your Netmera account, specifically for your application. The CSM will help with the necessary configurations and ensure that FTP functionality is activated, setting up automated data imports.
+Step 2. Creating an FTP User
+There are two methods for creating an FTP user:
+Option 1: Customer-Created FTP User
+If you choose to create the FTP user on your own server, please provide Netmera with the necessary server information so we can connect and upload files. Ensure your server configuration aligns with this setup.
+Option 2: Netmera-Created FTP User
+If you prefer, Netmera can create the FTP user for you. In this case, you will connect to Netmera’s server using the provided details. For secure access, please provide the IP address you will use to connect, as Netmera restricts connections to pre-approved IPs.
+Step 3. Preparing the CSV File
+Your DevOps team will handle creating the FTP user account specifically for your application. Once set up, they will receive secure login credentials, facilitating encrypted, reliable data transfers between Netmera and your server.
+Step 4. Uploading the CSV File
+Once your CSV file is prepared, follow these steps to upload it to the designated FTP server:
+Establish a Secure FTP Connection:
+Use the FTP credentials provided by your DevOps team to connect securely to the designated server.
+Initiate File Transfer:
+Upload the CSV file to the specified FTP directory. Ensure it follows the required format for seamless processing.
+Automatic Data Processing:
+After the file is successfully uploaded, Netmera will automatically process the data and send push notifications based on the instructions within the CSV file.
+This streamlined process enables the automated delivery of notifications, ensuring timely engagement based on the uploaded data.
+
+mporting FTP Push
+In the application panel, the FTP Push offer is provided by the Customer Success Manager (CSM).
+An FTP user is created specifically for the application and shared with the customer by the DevOps team.
+Prepare a CSV file with the following fields: External ID, Push Text, and Deeplink.
+Upload the CSV file to the designated FTP using the provided FTP credentials. Once uploaded, the push notifications will be sent out accordingly.
+Warning: FTP Push Notifications with Inbox Inclusion
+All push notifications sent via FTP includes the Inbox option by default. If your application does not have an Inbox feature, this will not affect you. However, if your application does have the Inbox feature, notifications sent via FTP will also appear in the Inbox.
+CSV File Format: Ensure the CSV file follows this format:
+Each entry must include a unique External ID, a personalized Text message, and an appropriate Deeplink as ExternalID;Text;Deeplink
+Example Push Entries:
+12345;Welcome to our platform! Enjoy exploring our latest features.;https://example.com/welcome
+67890;Check out exclusive offers available just for you!;https://example.com/offers
+54321;Get started by updating your profile to enhance your experience.;https://example.com/update-profile
+98765;New articles are available in your feed. Click to read more.;https://example.com/articles
+13579;Your account setup is complete! Discover what's next.;https://example.com/next-steps
+Using Line Breaks in Push Notifications:
+To include line breaks within a push notification, you can use \n, which creates a new line in the text. For instance:
+
+Welcome to our platform!\nEnjoy exploring our latest features.
+When displayed, it will appear as:
+Welcome to our platform!  
+Enjoy exploring our latest features.
+This formatting makes your notifications more readable and visually appealing for users.
+
+Importing Profile Attributes with FTP
+
+Create a 'Profile' Folder in FTP (with DevOps Assistance):
+Work with DevOps to set up a dedicated “Profile” folder in the FTP directory.
+Prepare a .txt File with Required Format:
+Use a text (.txt) file formatted as shown below, where the first line defines the pattern:
+Pattern Line: Begin with three ~ symbols, followed by the profile attributes to be updated. Each profile attribute should be separated by a single ~.
+Order: The first three fields must always be in this order:
+extID (required)
+email (optional)
+device token (optional)
+Subsequent lines should include the values for these attributes, formatted according to the data type of each attribute (e.g., wrap strings in " " if necessary).
+Example:
+extID~email~device token~attribute1~attribute2
+12345~~token123~"example data"~25
+67890~user@example.com~~"more data"~30
+Upload the .txt File to the 'Profile' Folder in FTP:
+Place the file in the "Profile" folder. Ensure that each file has a unique filename by adding the current date and time to avoid errors. Verify that all attribute values adhere to the required data types to avoid processing issues.
+To confirm that the file has been processed successfully:
+When the file is processed successfully, it will disappear from the folder, indicating completion.
+Additional Recommendations:
+For large data uploads (e.g., updating attributes for over 300,000 profiles), split the data into smaller files and upload them individually.
+Ensure unique filenames for each file.
+We recommend uploading files during business hours as nighttime processing jobs may interfere.
+
+Setting Up FTP for Exporting Data
+Step 1. Creating an FTP User
+When setting up an FTP connection for data export, you have two options for creating an FTP user:
+Option 1: Customer-Created FTP User
+If you prefer to create the FTP user on your own server, Netmera will need the provided connection information to upload files. Please ensure your server’s configuration supports the connection.
+Option 2: Netmera-Created FTP User
+If you request Netmera to create the FTP user, you will connect to Netmera’s server using the details provided. Ensure you supply the IP address from which you will connect to Netmera's server, as connections are restricted to predefined IPs for security.
+Once the FTP user is created, either by you or by Netmera, your DevOps team will receive secure login credentials, enabling encrypted data transfers between Netmera and the server of choice.
+Step 2. Panel Setup
+The Customer Success Manager (CSM) will assign specific offers to your account on the Netmera Panel. To configure FTP export settings:
+Go to the Reports > Export page on the Netmera Panel.
+Set up the export settings for FTP, ensuring all required paths and server credentials are accurately entered. Please visit our page Export for further information.
+After setup, Netmera will automatically transfer your reports to the configured FTP server.
+FTP Report Sending Schedule
+Reports are sent nightly between 3:00 AM and 6:00 AM to ensure timely data availability.
+In Case of FTP Transfer Failures
+If the report fails to reach your FTP server, please contact Netmera at support@netmera.com for manual assistance and troubleshooting.
+Sample Export Files
+To export files via FTP from the Netmera Panel, follow these steps:
+Navigate to the Export screen on the Netmera Panel. You may visit Export for further information on the report options.
+Select the desired report or data set to export.
+Trigger the FTP transfer by clicking the 'Send' button.
+Once initiated, the report will be automatically transferred to your designated server.
+Upon completion, the files will be named as follows:
+appkey_PUSH_REPORTS_date
+appkey_msgID_PUSH_REPORTS_date (with external ID)
+These files will be automatically transferred to your designated server.

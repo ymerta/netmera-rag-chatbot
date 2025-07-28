@@ -1,0 +1,60 @@
+Step 2: What
+Configure the content and settings of your email campaign on this page.
+
+Mail Template
+Select from the email templates you’ve created under Settings > Mail Templates. If you haven’t created any yet, refer to the How to Create a Mail Template guide. After selecting a template, you can edit it here to customize it for your campaign.
+Email Type
+Choose between two email types:
+Notification: Used to inform subscribers about events, updates, or important information.
+Campaign/Advertisement: Used to promote products, services, or special offers.
+Select the type that matches the purpose of your campaign.
+Important Opt-in Policy Notice
+If you select Notification, the email will be sent to all users regardless of their email opt-in status. This option should only be used for mandatory regulatory notifications that users are required to receive. For promotional content such as product announcements or special offers, always choose Campaign/Advertisement to ensure the opt-in check mechanism is enforced.
+From Address
+Specify the sender email address that will appear to recipients. This address must be registered and transmitted to Netmera by authorized panel users.
+Sender Name
+Enter the name that appears as the sender. Use a recognizable name (like your company or brand) so subscribers can easily identify you as a trusted source.
+Mail Subject
+Write a concise, clear, and attention-grabbing subject line that accurately reflects your email content to encourage recipients to open it.
+Mail Pre-header
+This optional text appears next to the subject line in the inbox preview. It helps give subscribers more context and entice them to open your email. Your pre-header should be at least 40 characters.
+Reply Email
+Specify the email address where replies should be sent. If left blank, subscribers will not be able to reply, and no reply email will be set.
+Test Mail
+Before sending to your full list, test your email to check formatting, layout, and content:
+Specify how many users you want to send the test to.
+Add testers by making them panel users first.
+Manage the test list on the Send Test Mail sidebar screen; you can add or remove testers, or clear the entire list with the Clear List button.
+Send the test email by clicking Send a Test.
+Test emails are sent only to these testers, ensuring the rest of your subscribers do not receive it.
+
+Profile Attributes
+Use Profile Attributes to target your campaign based on your contacts’ specific characteristics or data stored in their profiles. Selecting relevant attributes lets you tailor your message precisely to your audience. Please refer to the guide Upload Email List on transferring email lists with profile attributes to your Netmera Panel for detailed instructions.
+
+Promotion Code
+Include promotion codes or discounts to encourage desired actions from your audience, such as purchases. Choose codes from your predefined promotion value lists in Netmera. Click the copy button next to the code and paste it where you want it to appear in your email.
+
+Message Label
+Assign labels to your messages for better organization and reporting. This is especially useful when sending multiple campaigns or notifications. Labels allow you to filter and analyze campaign performance by categories such as product type, promotion, or target group.
+
+Conversion Analytics
+Use the Conversion Analytics settings to define and measure the effectiveness of your campaign by tracking user actions and conversions.
+Conversion Event
+Select the specific event that represents a successful conversion for your campaign (e.g., purchase completed, app install, form submission).
+Event Attribute
+Optionally, specify one or more event attributes to filter or segment your conversion data, allowing for more detailed analysis based on event properties.
+Control Group
+Enable the control group feature to create a subset of users who do not receive the campaign. This allows you to compare conversion rates between exposed and unexposed users and accurately calculate the campaign’s impact.
+Conversion Deadline
+Set a conversion deadline to define the time frame within which conversions will be counted after the campaign is sent. You can specify this deadline in:
+Hours
+Days
+A custom time period
+
+Conversion and Revenue Metrics
+Conversion: The total number of times the specified conversion event is triggered.
+Revenue: The cumulative value of the revenue parameter associated with the conversion event, aggregated across all users (only applicable if revenue events are integrated).
+Prerequisites for Conversion and Revenue Tracking
+To display conversion and revenue metrics in your campaign reports (such as email performance reports), you must define a Conversion Event in this step. 
+Additionally, to enable revenue tracking, ensure that your application sends revenue data within the relevant conversion events to Netmera. Refer to the Developer Guide for detailed integration instructions.
+

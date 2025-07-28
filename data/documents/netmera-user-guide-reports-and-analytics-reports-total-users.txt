@@ -1,0 +1,11 @@
+This dashboard offers a snapshot of key metrics related to "Total Users" during the specified date range. It provides insights into device usage, user engagement, revenue generation, and overall platform activity. 
+The page provides a centralized view of important metrics, making it easier for teams to understand their impact and hold themselves accountable for achieving key performance indicators. These metrics are valuable for assessing the health and performance of your platform, allowing you to make data-driven decisions and optimize user experiences.
+Dates: Here decide on your Start Date / End Date.
+Total Devices: This column represents the cumulative count of devices used to access your platform or application during the specified date range. It provides an overview of device usage.
+Opt-in: The "Opt-in" column indicates the total number of users who have opted in for specific features, services, or notifications within your platform. It reflects user preferences and engagement with opt-in functionalities.
+Monitoring Opt-in Advantages:
+Monitoring "Opt-in" numbers helps you understand how many users are actively participating in specific features, services, or notifications. This can inform decisions about feature development and user engagement strategies.
+Daily Active: This metric, found in the "Daily Active" column, signifies the total count of users who actively engage with your platform on a daily basis. It measures user activity and engagement levels.
+Revenue: The "Revenue" column quantifies the total financial income generated during the specified date range. It encompasses revenue from various sources, including transactions, subscriptions, or purchases made on your platform.
+Sessions Here, you'll find the sum of user sessions conducted on your platform. A session represents a user's continuous interaction with your application or website within a specific timeframe.
+In summary, the "Total Users" page is a powerful tool for monitoring and optimizing your platform's performance, user engagement, and revenue generation. It facilitates data-driven decision-making, helps you track progress toward goals, and provides insights that can lead to improvements in user experiences and overall platform success.

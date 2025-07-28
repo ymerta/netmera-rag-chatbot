@@ -1,0 +1,82 @@
+This report provides a comprehensive overview of your automated, transactional and geofence campaigns, including their performance metrics and key details, allowing you to evaluate their effectiveness and impact on user behavior and revenue generation.
+Search for your Campaigns
+By using the filters below, you might find your desired reports. This section is the same for Automated / Transactional and Geofence Campaign Reports.
+Dates: Specify a date range to focus on a particular time frame for your campaign analysis. Click within the "Dates" section to set your preferred start and end dates.
+Message Label: Filter your campaign data by applying labels to categorize and organize your campaigns. Click on "Choose labels" to select labels you've previously assigned to your messages.
+Message Content Search: Quickly locate campaigns by searching for specific keywords in campaign names or message content. Simply type your search query in the provided text box to find campaigns related to specific themes or content.
+Review of the Campaign Highlights
+Today Number of Campaigns
+This metric represents the total number of marketing campaigns that have been executed on the current day. It provides a real-time snapshot of how many campaigns have been launched or sent out today. Monitoring the "Today Number of Campaigns" helps you stay updated on your daily campaign activity. It can be particularly useful for assessing your team's daily workload or understanding your marketing cadence.
+Number of Campaigns
+This metric indicates the overall count of marketing campaigns that have been conducted within a specified period. It includes all campaigns, regardless of when they were launched. "Number Of Campaigns" provides an overview of the volume of campaigns executed. It's a fundamental metric for tracking the breadth of your marketing efforts over time.
+Best Open Rate (%)
+The "Best Open Rate" represents the highest percentage of recipients who opened a campaign among all your campaigns. It signifies the campaign with the most successful open rate. Identifying the "Best Open Rate" helps you pinpoint your most engaging campaigns. Clicking to see this specific campaign allows you to learn from its success and potentially replicate its strategies in future campaigns.
+Average Open Rate (%)
+The "Average Open Rate" is the mean percentage of recipients who opened your campaigns across all your campaigns. It provides a general sense of how engaging your campaigns are on average. Monitoring the "Average Open Rate" helps you assess the overall effectiveness of your campaigns in capturing your audience's attention. It's a valuable benchmark for your marketing performance.
+Best Conversion
+"Best Conversion" identifies the campaign with the highest conversion rate. A conversion rate typically measures the percentage of users who take a desired action, such as making a purchase or signing up, in response to a campaign. Recognizing the "Best Conversion" campaign allows you to analyze what elements or strategies contributed to its success. It's an opportunity to uncover tactics that lead to higher conversion rates and apply them to other campaigns.
+Average Conversion
+"Average Conversion" provides the mean conversion rate across all your campaigns. It offers an overall picture of how effective your campaigns are at driving user actions. Monitoring the "Average Conversion" helps you gauge the typical response rate across your campaigns. It's a useful metric for assessing the overall impact of your marketing efforts on user behavior.
+Reports for Messages
+The key distinctions between a "Report for Automated/Transactional/Geofence Messages" and a "Report for Send Messages" are grounded in the nature of the campaigns or messages they monitor and the associated data they provide:
+Automation
+These reports focus on automated, transactional, or geofence-triggered messages. Messages in this category are typically dispatched based on predefined triggers or scenarios, which may include user actions, specific events, or geographical location. For example, an automated message might be sent to a user who has abandoned their shopping cart on an e-commerce site, a transactional message might confirm a recent purchase, and a geofence-triggered message might welcome a user to a physical store when they enter a specific area.
+Data Source
+The data for these messages comes from campaigns that are configured to run automatically, guided by predefined rules or specific user interactions. Whether it's an abandoned cart, a completed purchase, or a user entering a geofenced location, these messages are highly personalized and event-driven.
+Report for Send Messages
+Manual Campaigns
+These reports pertain to messages sent manually as part of planned marketing campaigns. Unlike automated, transactional, or geofence-triggered messages, they are not automatically triggered but are initiated by marketing teams according to predefined scenarios or strategic plans. These messages are often part of broader marketing strategies, such as newsletters or promotional campaigns.
+Data Source
+Send message reports compile data from campaigns that are initiated and managed by the marketing team. These campaigns may encompass mass communications to a selected audience, such as newsletters, promotional messages, or announcements.
+Key Takeaways:
+Automated, transactional, and geofence-triggered message reports focus on delivering highly personalized and event-driven messages, often initiated by user interactions or predefined scenarios.
+Send message reports center around messages sent as part of planned marketing campaigns, initiated manually by the marketing team. These messages are typically part of broader marketing strategies and may target specific audiences.
+While both types of reports encompass common metrics like open rates, conversions, and success indicators, the primary differentiation lies in the automation aspect and the source of data for each message type.
+Report Analysis
+Start Date
+This column records the precise date and time when each automated campaign was initiated. It allows for tracking the exact moment when the campaign began.
+Campaign Id
+The "Campaign Id" serves as a unique numerical identifier for each automated campaign. It is particularly useful for internal tracking, referencing, and data organization, enabling efficient management of multiple campaigns.
+Campaign Name 
+In this column, you find the descriptive name of each automated campaign. The "Campaign Name" succinctly outlines the purpose or content of the campaign, providing instant clarity.
+Campaign Title
+The "Campaign Title" is a more condensed and engaging version of the campaign's name. It is often used to grab recipients' attention and spark interest in the message.
+Message Text
+This column contains the actual content or text of the automated message. It is the main body of the message, conveying the campaign's information, call to action, or relevant details.
+Expire Date
+The "Expire Date" signifies the date when the campaign or message is set to expire or become inactive. It is crucial for managing the lifecycle of automated campaigns.
+Scenario
+In this column, you find a brief description of the scenario or trigger that initiates the automated message. Understanding the scenario provides context for why and when the message is sent.
+
+In summary, the primary difference is in the origin and nature of the messages—automated messages are event-driven, while send messages are manually initiated as part of planned campaigns.
+Campaign Summary
+Message Label
+The "Message Label" column assigns a tag or category to each campaign, typically for organizational and segmentation purposes. Labels help group campaigns with common characteristics, making them easier to manage.
+Target Audience
+This column specifies the intended recipients or demographic group for each campaign. It defines the audience for which the campaign is designed, ensuring precise targeting.
+Dates
+Success: The "Success" column indicates whether each campaign achieved its intended goals or objectives. It may use values like "Yes" or "No" to denote success or failure.
+Start Date: 11-08-2023 (example)
+End Date: 21-08-2023 (example)
+Reporting Frequency Options: Daily, Weekly, Monthly
+Direct App Opens: Here, you find the count of times recipients opened a mobile app directly through the campaign. This metric measures the campaign's ability to drive app engagement.
+Metrics and Data Fields
+Open Rate: The "Open Rate" column calculates the percentage of recipients who opened the campaign. A higher open rate signifies more engaged and responsive recipients.
+Target Audience: This column represents the intended recipients or demographic group for marketing campaigns.
+Success: This column measures the success of marketing campaigns, indicating whether they reached to their target audience or not.
+Direct App Opens: This column counts the number of times recipients opened an app directly through a campaign.
+Open Rate: This column calculates the percentage of recipients who opened a campaign, indicating their campaign engagement.
+Conversion: This column represents the number of users who completed desired actions as a result of campaigns, measuring campaign effectiveness.
+Rev. (Revenue): This column quantifies the total financial income generated due to campaigns, reflecting the financial impact of marketing efforts.
+Avg. Rev. (Average Revenue): This column calculates the average revenue generated per user who converted as a result of campaigns, offering insights into the average value of conversions.
+Avg. Time In App: This metric measures the average amount of time users spent within your mobile app during or after engaging with the campaign. It provides insights into user engagement and app usage.
+Data Presentation
+Conv. (Conversion): The "Conv." column represents the number of users who completed a desired action as a direct result of the campaign. These actions can vary based on campaign goals.
+Rev. (Revenue): This column quantifies the total financial income generated due to each campaign. It encompasses revenue from various sources attributed to campaign-driven actions.
+The table appears to present campaign data for the specified date range (for example 11-08-2023 to 21-08-2023) across different reporting frequencies (Daily, Weekly, Monthly). The data is organized to provide insights into various metrics for different target audiences during this time frame. For each metric, the table displays a summation (Σ) of the relevant data.
+Avg. Rev. (Average Revenue): "Avg. Rev." calculates the average revenue generated per user who converted as a result of the campaign. It helps gauge the average value of conversions.
+Please note that while the table structure is defined, specific data values are not provided in this summary. The actual data would be populated within the table for each corresponding date, target audience, and reporting frequency.
+This summary table allows you to track and analyze campaign performance, engagement, and financial outcomes across different time periods and target audiences, providing valuable insights for decision-making and optimization of marketing strategies.
+
+Whether it's automated messages triggered by user actions, transactional messages confirming purchases, geofence-triggered messages, or manually initiated send messages, our reports offer a detailed view of key metrics such as open rates, conversions, and success indicators. 
+This data empowers us to make informed decisions, optimize messaging strategies, and ultimately enhance our communication with our audience. With these reports, we're equipped to drive meaningful engagement, achieve our campaign goals, and deliver exceptional user experiences.

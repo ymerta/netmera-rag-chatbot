@@ -1,20 +1,82 @@
-Unlocking Digital Communication with İleti Yönetim Sistemi (IYS)
-In a groundbreaking move on March 10, 2021, Turkey introduced İleti Yönetim Sistemi (IYS), reshaping the dynamics of commercial electronic messages. This pivotal framework intricately manages communication permissions, consumer choices, and legal obligations, influencing how businesses and consumers engage in the digital sphere.
-At its core, IYS, or the "Message Management System," acts as a gatekeeper, directing the flow of commercial messages while granting consumers control over their preferences. Senders undergo a mandatory registration process, disclosing crucial company details, while consumers utilize the IYS platform to articulate personalized communication preferences, ensuring a dynamic and responsive system.
-Navigating IYS Rules: Compliance and Consumer Control
-IYS mandates a comprehensive registration process for senders, emphasizing compliance with potential fines for incomplete or non-compliant registrations. The platform places communication control in consumers' hands, allowing seamless opt-in or opt-out mechanisms, with automatic processing of requests to fortify regulatory frameworks.
-The Significance of IYS in the Digital Realm
-IYS plays a pivotal role as a guardian of consumer rights and privacy, fostering a respectful digital space. Simultaneously, it propels businesses forward by tailoring marketing strategies to consumer preferences, ensuring higher engagement. Beyond efficiency, IYS acts as a compass for businesses, navigating digital regulations, fostering trust, and offering streamlined message management.
-Netmera's Crucial Role in IYS Integration
-Businesses navigating IYS complexities often turn to Netmera for streamlined services. Netmera facilitates seamless integration, automates IYS processes, and ensures continuous monitoring for accuracy. Its expertise in data synchronization across channels, utilizing Rest API and SDK, adds a layer of reliability to the integration process.
-Integrating IYS with your Netmera Panel is a straightforward process, consisting of three simple steps to seamlessly enhance your data security and message management system.
-Access the Connectors Section: Access the Connectors section within your Netmera panel. Locate the list of "Available" connectors.
-Choose Data Security / İleti Yönetim Sistemi: From the available connectors,  choose "Data Security" > "İleti Yönetim Sistemi" and click the "Install" button to initiate the integration process.
-Configure IYS: In the provided spaces, input your "Brand Code" and "IYS Code" This crucial step activates the IYS connector within your Netmera account. Once the installation is complete, proceed to configure IYS to tailor it to your campaign requirements.
-Important Reminder: 
-Ensure you have your Brand and IYS codes accessible from your IYS account, as these details are necessary for a seamless integration process. By following these steps, you'll be well-equipped to leverage the full potential of IYS within your Netmera environment.
-By diligently following these outlined steps, the synchronization of all your users with IYS becomes a systematic and efficient process. The synchronization commences on the night of installation and progresses in batches until all users are seamlessly integrated.
-Navigate to the 'İş Ortaklığı' section of your IYS Panel and search for 'Netmera' by using the name shown below. Once located, authenticate Netmera on your IYS panel by ensuring that the "Message Permissions," "Call Permissions," and "Email Permissions" options are enabled, as depicted in the image below. This step will facilitate the seamless transfer of permissions to Netmera, ensuring optimal integration functionality.
-In summary, İleti Yönetim Sistemi (IYS) revolutionizes digital communication in Turkey by combining consumer empowerment, legal compliance, and efficient messaging. Netmera, as a trusted partner, brings expertise to simplify the integration and management of IYS for businesses navigating modern communication complexities. Together, they create a respectful and efficient digital landscape for businesses and consumers alike.
-Last updated 23 days ago
-Was this helpful?
+The İleti Yönetim Sistemi, or Message Management System, allows consumers to manage their opt-in and opt-out preferences for electronic communications such as SMS, email, and voice calls. At the same time, it requires businesses to register and manage consent records systematically.
+Integrating İYS with Netmera
+Netmera offers a built-in integration with İYS to help you synchronize your users' communication permissions securely and efficiently.
+Note: Make sure you have access to your brand’s IYS credentials before starting the integration.
+
+Follow these steps to connect your İYS account with Netmera:
+Go to the Connectors Section
+In your Netmera panel, navigate to the Connectors section and find the list of available connectors.
+Select İleti Yönetim Sistemi under Data Security
+Choose Data Security > İleti Yönetim Sistemi, then click Install to start the integration.
+Enter Your Brand and IYS Codes
+When prompted, enter your Brand Code and IYS Code (retrieved from your IYS account). These are required to activate the connector.
+
+Once the connector is installed, Netmera will automatically begin syncing user permissions with İYS. The synchronization process starts during the night of installation and continues in batches until all users are processed.
+Authorizing Netmera in the İYS Panel
+To enable full functionality, you must authorize Netmera within the İYS platform:
+Log in to your IYS Panel.
+Go to the İş Ortaklığı (Partnerships) section.
+Search for and select Netmera as your solution partner.
+Make sure the following permissions are enabled:
+Message Permissions
+Call Permissions
+Email Permissions
+This step allows Netmera to receive and manage user permission data on your behalf, ensuring that all communication is aligned with İYS regulations.
+
+Uploading Email and SMS Data for İYS Sync
+To import user permissions into Netmera for İYS synchronization, use the specific formats outlined below. This applies if you’re uploading bulk data manually in addition to automatic syncing.
+Mutabakat Yönetimi
+Make sure the setting Mutabakat Yönetimi is enabled in your IYS Panel. 
+Without this setting, synchronization cannot proceed.
+
+File Transfer For IYS
+Navigate to Netmera Panel > Targeting > File Transfers and choose Email Uploads or SMS Uploads.
+
+Email Upload Format
+To synchronize email permissions with İYS, your upload file must include the following columns in the specified order:
+Email Address
+Must be a valid email format.
+Example: test@example.com
+Platform
+You can use values such as EMAIL, mobileapp, or other relevant channels, depending on your use case.
+Permission
+Must be either ONAY (consent) or RET (rejection), written in uppercase.
+Timestamp
+Must follow this format: dd.MM.yyyy HH:mm:ss
+Example: 15.05.2025 14:23:00
+ExternalID (optional)
+A unique identifier for the user in your system.
+Example: test@example.com; mobileapp; ONAY; 15.05.2025 14:23:00; user123
+
+The upload file must be in .txt or .csv format.
+Do not include a header row in the file.
+
+
+Key Points to Follow
+The permission column must include either ONAY  or RET
+Users marked with ONAY will be directly reflected in İYS.
+Users marked with RET will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.
+SMS Upload Format
+To sync SMS permissions with İYS, your upload file must include the following columns:
+Phone number with country code
+Example: 905331234562
+Platform
+Platfrom you acquired consent from: mobile/web, form, etc.
+Permission
+Must be either ONAY  or RET, written in uppercase.
+Timestamp
+Must follow this format: dd.MM.yyyy HH:mm:ss
+Example: 15.05.2025 14:23:00
+ExternalID (optional)
+A unique identifier for the user in your system.
+Example: 905331234562; SMS; RET; 15.05.2025 14:23:00; user456
+File Format
+The upload file must be in .txt or .csv format.
+Do not include a header row in the file.
+
+
+Key Points to Follow
+The permission column must include either ONAY  or RET
+Phone numbers must start with the country code (e.g., 90 for Turkey) and should not include spaces, dashes, or special characters.
+Users marked with ONAY will be directly reflected in İYS.
+Users marked with RET will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.

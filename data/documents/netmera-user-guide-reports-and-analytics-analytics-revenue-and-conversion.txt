@@ -1,0 +1,41 @@
+Analyzing your campaign’s success starts with understanding two key metrics: Revenue and Conversion. In Netmera, these metrics help you measure both the financial return and the effectiveness of your engagement strategies.
+What is Revenue?
+Revenue refers to the total income generated from user actions—typically from "Purchase" events. In Netmera, revenue is automatically tracked when users complete a purchase. This metric helps you evaluate the financial impact of your campaigns and user activities.
+What is Conversion?
+Conversion measures whether users took the desired action after seeing your campaign. You may set your Conversion Events while creating your campaigns on Step 2: What. This could be a purchase, sign-up, or any other custom event you define in Netmera. It’s not always about money—it’s about tracking successful events based on your goals.
+Conversion vs. Revenue
+Revenue reflects the financial outcome of a campaign.
+Conversion reflects the goal completion, whether it’s financial or not.
+A purchase event can count toward both metrics, but conversion allows more flexibility by including other events as well.
+Using the Revenue-Conversion Dashboard
+The Revenue-Conversion Dashboard lets you analyze performance across campaigns by filtering key parameters:
+Time Period
+This Week, This Month, This Year, or a custom date range.
+Platform
+Analyze all platforms together or focus on iOS, Android, Web, etc.
+Conversion Event
+Select the specific event that represents success for your campaign—e.g., "Purchase," "Sign-up," or a custom event.
+Once these are selected, the dashboard displays a visual graphic showing performance trends.
+Setting Up and Viewing Reports
+How to Track Conversions
+To track conversions:
+In campaign setup, go to Step 2: What.
+Choose your Conversion Event (e.g., "Sign-Up" or "Product Viewed").
+After launch, view the Conversion Report to monitor goal completion.
+How to Track Revenue
+To track revenue:
+In Step 2: What, choose a monetary event like "Purchase" as your conversion event.
+Netmera will automatically generate a Revenue Report based on user purchases.
+Use this report to assess the campaign’s financial impact.
+The culmination of these choices manifests in the creation of a dynamic Revenue-Conversion graphic, providing a visual representation of the chosen parameters. 
+Campaign-Level Insights
+The dashboard also provides detailed breakdowns by campaign. You’ll see both conversion and revenue results for each campaign, including:
+Campaign Method: Automated, transactional, or standard campaign.
+Campaign Type: Push notifications, widgets, etc.
+Mobile Platforms: Total, iOS, and Android performance.
+Web Platforms: Total, MacOS, Chrome, and Firefox performance.
+These insights help you understand what works best across different channels and devices.
+Exporting Data
+To download campaign data:
+Click the Export button at the bottom right of the dashboard.
+Data is exported in Excel format for easy sharing and deeper analysis.

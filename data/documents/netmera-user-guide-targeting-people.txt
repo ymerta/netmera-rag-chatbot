@@ -1,0 +1,101 @@
+People
+Create Personalized, Engaging Experiences that Resonate with Your Audience
+Basics of People
+In Netmera, "People" refers to the individuals who make up your user base. Managing and targeting these users effectively is essential for engaging with your audience, delivering personalized content, and optimizing your communication strategy. The "People" section is your gateway to understanding and interacting with your user base.
+Managing and Targeting Users
+Within the "People" section, you can manage and target users based on a wide range of criteria. You have the flexibility to create highly specific segments of users, ensuring that your messages are relevant to their characteristics, behaviors, and preferences. Whether it's segmenting users based on their interactions, profile attributes, or even device preferences, Netmera's "People" feature equips you with the tools to fine-tune your communication strategy and reach the right audience at the right time. This dynamic approach to managing and targeting users is fundamental to successful omnichannel customer engagement, allowing you to deliver tailored and engaging content to your audience.
+
+How to Search for People
+In Netmera, the ability to search for and identify specific individuals within your user base is a powerful feature that allows you to precisely manage and target users. This functionality is crucial for tailoring your communication strategy, ensuring that your messages are relevant and engaging. To initiate a search for individuals, follow these simple steps:
+Navigate to Targeting > People: To begin your search, access the "People" section within the Netmera platform. This section serves as your central hub for managing and targeting users effectively.
+Choose Your Search Option: Within the "People" s
+ection, you'll find three distinct search options to choose from:
+Option 1: "Select People": This option allows you to filter and select users based on various criteria. It's a versatile tool for segmenting your user base and refining your targeting.
+Option 2: "Advanced": The "Advanced" option provides more refined and detailed criteria for user selection. It's ideal for creating highly specific user segments.
+Option 3: "Find Person": "Find Person" is your gateway to searching for and locating specific users within your user base. This feature is particularly valuable when you need to interact with or analyze the behavior of individual users.
+
+Option 1: Select People
+"Select People" in Netmera is your intuitive filter system, allowing you to handpick the users you want to reach with precision. It simplifies your customer engagement strategy by offering versatile filters that help you segment users based on interactions, profile attributes, and device preferences. This makes personalization easy, as you can send tailored messages to different groups, resulting in highly engaging communications. It's like having a user-friendly toolkit for efficient targeting and message crafting, all while saving you valuable time and effort.
+Below you might find the options that you might use for filtering your target people. We suggest that you look into each of these in your panel and find specific customizations you may create with these options. 
+Push Permission
+This targeting option allows you to segment users based on their permission to receive push notifications. You can separate users into groups based on whether they have given consent to receive these notifications. This is particularly useful for ensuring that you're sending push notifications only to those who have opted in, respecting user preferences and potentially improving your engagement rates.
+Category Permission
+Category Permission targeting lets you segment users based on their permission to access specific content categories within your app. It's a way to ensure that users are only receiving content that aligns with their preferences or interests. For example, if your app has different content categories like "Sports," "Technology," and "Fashion," you can tailor notifications to users who have expressed an interest in a particular category.
+Platform
+This targeting option allows you to segment users based on the platform they are using, such as iOS or Android. By categorizing users in this way, you can deliver platform-specific notifications that are optimized for their particular device. This ensures that your messages are well-suited to the user's device, offering a seamless experience.
+Device Type
+By Device Type targeting is about categorizing users based on the type of device they are using, whether it's a mobile device, tablet, or desktop. This allows you to send notifications that are tailored to the device the user is currently using. For example, you can provide a different user experience for mobile users compared to desktop users, ensuring that your messages are well-suited to their device type.
+Tag
+Tags are versatile markers that empower you to categorize and organize your user base effectively. You create tags within the 'Targeting > Tags' section, and these tags serve as labels you can assign to users based on specific characteristics, interests, or behaviors. They act as filters, allowing you to segment users with precision. Furthermore, you can refine your targeting by using logical operators 'And' or 'Or.' This added flexibility means you can reach specific user groups who share particular characteristics or behaviors. For example, you could target users who share multiple tags, enhancing the relevance of your messages to them.
+Segment
+Segments are dynamic groups of users that are formed based on their interactions within your app. Users can enter or exit these segments depending on their actions and behaviors. The dynamic nature of segments is highly valuable, particularly when you want to engage with users based on real-time actions. For more in-depth insights, consider referring to the 'Define Segment' section for a comprehensive understanding of how to create and manage segments effectively.
+
+Profile
+The Profile targeting option allows you to select users based on specific attributes in their profiles. You have the power to choose users whose profile attributes match particular values. For example, you can specifically target users whose "gender" attribute is "female" or those whose "age" attribute is "25." This level of granularity ensures that your messaging is tailored to users who fit precise criteria.
+Response
+With the Response targeting option, you can fine-tune your push notification targeting strategy. This option lets you select users who have or have not interacted with previously sent push notifications. This allows you to personalize your messaging and improve engagement rates by directing notifications to users who are more likely to respond. It's a data-driven approach to maximize the impact of your communication.
+Location
+The Location targeting option is instrumental for reaching users based on their physical location. You can specify a geographic region, such as a city, state, or country, and send push notifications to users situated in that area. This is incredibly useful for businesses looking to promote events, offers, or location-specific content to the right audience.
+
+Location Preferences
+Location Preferences targeting lets you segment users based on their permissions regarding location access. You can send push notifications to users who've granted location access to your app or, conversely, exclude users who have denied location access. It's a way to respect user preferences while still delivering relevant messages.
+Device
+This option allows you to segment users by the type of device they are using. Whether it's an iPhone, an Android phone, or other specific device types, you can send push notifications tailored to the user's device preferences.
+Operator
+The Operator targeting option lets you segment users based on their telecom operator. This means you can send push notifications to users using a specific telecom operator. This can be highly effective for region-specific promotions or partnerships.
+App Version
+Segment users based on the version of your app they have installed. You can send push notifications to users using a specific app version or exclude those with outdated versions. This ensures that users receive messages tailored to their app version, helping to maintain a consistent user experience.
+Operating System
+Target users based on the operating system of their device, whether it's iOS or Android. By segmenting users this way, you can deliver notifications optimized for their specific operating system, enhancing the user experience.
+
+Installation Source
+This targeting option becomes available due to Netmera's integration with Adjust. It allows you to track users who installed your app from advertising campaigns. This means you can send push notifications tailored to the campaign that brought users to your app.
+By App Tracking (Android Only)
+Specific to Android devices, this option enables you to track and target users based on their in-app behaviors. This can include their usage frequency or specific actions taken within the app. It's a powerful tool for refining your targeting and delivering push notifications to users who are more likely to engage.
+By App Installation
+This feature is all about targeting users based on their app installation status. It empowers you to create personalized communication strategies for different user groups. For example, you can engage new users with onboarding messages and welcome offers, target active users with relevant content and updates, re-engage inactive users with reminders and incentives, and encourage non-users to download the app with promotional campaigns. It's a versatile way to ensure that each user segment receives the right message.
+Android Provider
+This targeting option allows you to segment users based on their Android provider, like Google or Huawei. This can be particularly useful for tailoring your messages to specific device providers or regions where certain providers are dominant.
+Promotion
+The Promotion targeting option allows you to target users based on whether they have a promotion code or not. This means you can send push notifications to users who possess a promotion code, encouraging them to use it and potentially drive more sales.
+
+Each of these targeting options provides a powerful tool to help you communicate with your audience more effectively and in a way that is tailored to their specific attributes, behaviors, and preferences. If you have any specific questions or need further guidance on using these options in your campaigns, please don't hesitate to ask for additional assistance.
+
+Option 2: Advanced Search
+In the Netmera platform, the "People > Advanced > Add Condition / Add Group" feature offers advanced capabilities for refining your audience selection. Let's explore this in more detail:
+Should I choose Or / And?
+"Or" means that at least one condition within the group must be met,
+"And" means that all conditions within the group must be met for the search to apply.
+Add Condition: This feature allows you to specify individual conditions or criteria based on various factors. When you add a condition, you are setting specific requirements that a user must meet to be included in your targeted audience. These criteria can be based on a wide range of attributes, behaviors, and preferences, depending on your campaign's goals. For example, you could set a condition to target users who have made a purchase in the last 30 days or users who have opened your app more than five times.
+
+Add Group: Adding a group is a way to organize and structure your conditions logically. Groups can contain multiple conditions and help you create complex rules for audience selection. For example, you could create a group for "Active Users" and then add conditions within this group to specify that an active user is someone who has logged in at least once in the last seven days and has made a purchase in the last 30 days.
+
+Using "Add Condition" and "Add Group" in combination allows you to create intricate and specific targeting criteria for your campaigns. This advanced level of audience refinement ensures that your messages reach the right users based on a combination of factors, resulting in more effective and personalized communication.
+
+Option 3: Find Person
+This functionality likely enables you to search for and identify specific individuals within your user base. It allows you to locate and select particular users by specifying search criteria. This can be useful when you need to interact with or analyze the behavior of individual users.
+External ID: External ID is a means to identify users based on unique identifiers from external sources or systems. This is particularly valuable for integrating data and user information from external platforms or databases. It allows you to link users in Netmera with their corresponding profiles in other systems.
+Email: You can target users by their email addresses. This is a powerful method for engaging with users through email campaigns. It allows you to send personalized emails to specific segments of your user base.
+
+Find Person Results
+The results provide a comprehensive snapshot of the users, including their platform, User ID, External ID (an external identifier linking them to your system), device model, phone number, email address, name, surname, and installation date. These details offer a complete profile of the identified user, allowing for in-depth analysis and personalized engagement based on their characteristics and behavior.
+Detailed User Information:
+If you wish to acquire more information about a specific user, simply click on their external ID, and you'll gain access to their detailed information and profile. This feature enables you to dive deeper into the user's characteristics and behavior, making it easier to tailor your engagement strategies and provide a more personalized experience.
+Targeting People
+After you've selected your target audience (people), the next step is to click "Find." Once you do that, you'll see the results, which will include the number of users who match your criteria. These users will be displayed in a list.
+Within this list, you have the option to click on the "External ID" of a specific user. This click will grant you access to detailed information about that individual user. It's like peeking into their profile and understanding their behavior within the app, which can be super useful for crafting tailored messages.
+If you're looking to reach out to the entire group of users that match your criteria, there's a convenient option. You can simply click "Target Users Found" This action allows you to engage with the entire user group that meets the criteria you've defined.
+
+Tagging Found User List
+Start Tagging
+If you want to apply specific tags to the users who received the message, select the "Start Tagging" option. This will allow you to categorize and label these users for further engagement or analysis. 
+Write a name for your "Tag" and continue by clicking "Start Tagging".
+After tagging your audience, you will be directed to "Tags" dashboard, where you may find your created Tag and its details for user count, created date, updated date and status. Moreover, in actions button you may find "Delete", "Send Message to Tag", or "Export". 
+You may read our title Tags for further information.
+Export
+If you need to export the list of users who received the 'Netmera' message for external purposes or analysis, select the "Export" option. This allows you to export the selected users' information, including their:
+Export Information: External ID, Email, MSISDN, and Mobile Advertiser ID.
+Export Format: *.csv or *.xlsx format depending on your needs.
+Select the action that aligns with your goals for engaging with this audience, and proceed accordingly. This step offers flexibility in how you manage and interact with users in your omnichannel customer engagement efforts.
+
+In the vibrant world of Netmera, "People" is not just a list of users; it's the gateway to personalized connections and meaningful engagement. By understanding and targeting individuals with precision, you transform data into dynamic conversations. With "People," you have the tools to make each interaction feel like a friendly chat, enriching the digital journey for both users and businesses. So, whether it's a quick search or in-depth profiling, "People" is your partner in creating user experiences that are not just data-driven but also delightfully human.

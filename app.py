@@ -1,3 +1,4 @@
+
 import streamlit as st
 import os
 import faiss
@@ -9,6 +10,10 @@ from dotenv import load_dotenv
 import csv
 from datetime import datetime
 import pandas as pd
+import json
+from fuzzywuzzy import fuzz
+from rank_bm25 import BM25Okapi
+from nltk.tokenize import word_tokenize
 
 
 load_dotenv()
@@ -20,6 +25,38 @@ client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 index = faiss.read_index("data/embeddings/index.faiss")
 with open("data/embeddings/texts.pkl", "rb") as f:
     texts = pickle.load(f)
+    
+# 📚 Netmera FAQ JSON dosyasını yükle
+with open("data/faq_answers.json", "r", encoding="utf-8") as f:
+    faq_qa_map = json.load(f)
+
+corpus = [doc["text"] for doc in texts]
+tokenized_corpus = [word_tokenize(doc.lower()) for doc in corpus]
+bm25_model = BM25Okapi(tokenized_corpus)
+
+def compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score):
+    norm_bm25 = bm25_score / 100
+    norm_faiss = -faiss_score  # çünkü FAISS uzaklık: daha küçük daha iyi
+    norm_fuzzy = fuzzy_score / 100
+    return 0.4 * norm_bm25 + 0.3 * norm_fuzzy + 0.3 * norm_faiss
+
+# ✅ Kullanıcının sorusu sık sorulardan biriyle eşleşiyor mu?
+def check_faq_match(user_input, threshold=80):
+    lowered = user_input.lower()
+    best_score = 0
+    best_answer = None
+    best_source = None
+
+    for key, entry in faq_qa_map.items():
+        score = fuzz.partial_ratio(lowered, key.replace("_", " ").lower())
+        if score > best_score:
+            best_score = score
+            best_answer = entry["answer"]
+            best_source = entry["source"]
+
+    if best_score >= threshold:
+        return f"{best_answer}\n\n📄 **Kaynak belge**: [FAQ]({best_source})"
+    return None
 
 # 🔁 Belirli dosyalar için manuel URL eşlemeleri
 file_to_url_map = {
@@ -93,6 +130,10 @@ def detect_language(text):
 
 # 🔗 Dosya adını Netmera döküman linkine çevir
 def filename_to_url(filename: str) -> str:
+    # 🆕 0️⃣ Eğer bu bir FAQ embed'iyse (örnek: faq-email_quota_limits.json)
+    if filename.startswith("faq-"):
+        return "https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/faqs"
+
     # 1️⃣ Manuel eşleşme varsa onu döndür
     if filename in file_to_url_map:
         return file_to_url_map[filename]
@@ -109,7 +150,6 @@ def filename_to_url(filename: str) -> str:
     for top_level, subfolders in top_level_sections.items():
         if parts[0] == top_level:
             rest = parts[1:]
-            # İkinci veya üçüncü klasör seviyesi eşleşmesi varsa
             for i in range(2, 5):
                 candidate = "-".join(rest[:i])
                 if candidate in subfolders:
@@ -117,13 +157,16 @@ def filename_to_url(filename: str) -> str:
                     return f"{base_url}/{top_level}/{section}/{'-'.join(rest[i:])}"
             return f"{base_url}/{top_level}/{'-'.join(rest)}"
 
-    # 4️⃣ Compound klasör fallback (örn: mobile-push/creating-a-mobile-push)
+    # 4️⃣ Compound klasör fallback
     for i in range(2, 6):
         candidate = "-".join(parts[:i])
         if candidate in compound_sections:
             section = candidate
             rest = parts[i:]
             return f"{base_url}/{section}/{'-'.join(rest)}"
+
+    # 5️⃣ Fallback
+    return f"{base_url}/{'/'.join(parts)}"
 
     # 5️⃣ Hiçbiri eşleşmezse düz path döndür (fallback)
     return f"{base_url}/{'/'.join(parts)}"
@@ -202,7 +245,7 @@ ANSWER:"""
             ],
         )
         turkish_answer = translation.choices[0].message.content.strip()
-        return f"{turkish_answer}\n\n🌐 (Orijinal İngilizce yanıt: {english_answer})"
+        return turkish_answer
     else:
         return english_answer
 
@@ -271,72 +314,70 @@ if selected_question and not user_input:
     user_input = selected_question
 
 # 🔁 RAG süreci – son mesajla aynıysa tekrar ekleme
-if user_input and (
-    len(st.session_state.chat_history) == 0
-    or user_input != st.session_state.chat_history[-1][1]
-):
+if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.session_state.chat_history[-1][1]):
+    # ✅ Önce FAQ kontrolü
+    faq_response = check_faq_match(user_input)
+    
+    if faq_response:
+        answer = faq_response
+        st.session_state.chat_history.append(("user", user_input))
+        st.session_state.chat_history.append(("assistant", answer))
 
-    # 🌐 Dil algılama
-    if not lang:
-        lang = detect(user_input)
-        if lang not in ["en", "tr"]:
-            lang = "English"
-        elif lang == "tr":
-            lang = "Türkçe"
-        else:
-            lang = "English"
-        st.info(f"🧠 Algılanan dil: {lang}")
-
-    st.session_state.chat_history.append(("user", user_input))
-
-    # 🔎 FAISS'ten en yakın 3 belgeyi getir
-    embedding, translated_input = embed_question(user_input)
-    distances, indices = index.search(embedding, k=3)
-
-    candidate_docs = []
-    for i, idx in enumerate(indices[0]):
-        doc = texts[idx]
-        doc["faiss_score"] = distances[0][i]
-        candidate_docs.append(doc)
-
-    # 🔢 Re-ranking
-    ranked_answers = []
-    for doc in candidate_docs:
-        prompt = f"""
-Belge:
-{doc['text']}
-
-Soru:
-{translated_input}
-
-Bu belge soruyu ne kadar iyi yanıtlıyor? 0 (hiç) - 100 (mükemmel) arası puan ver. Sadece sayı yaz:
-"""
-        score_response = client.chat.completions.create(
-            model="gpt-4o", messages=[{"role": "user", "content": prompt}]
-        )
-        try:
-            relevance_score = int(score_response.choices[0].message.content.strip())
-        except:
-            relevance_score = 0
-        ranked_answers.append((relevance_score, doc))
-
-    best_doc = sorted(ranked_answers, key=lambda x: x[0], reverse=True)[0][1]
-
-    if best_doc["faiss_score"] > 0.6:
-        answer = no_info_message
-        source_file = best_doc["source"]
-        source_url = filename_to_url(source_file)
-        answer_text = ""
     else:
-        top_k_context = best_doc["text"]
+        # 🌐 Dil algılama
+        if not lang:
+            lang = detect(user_input)
+            if lang not in ["en", "tr"]:
+                lang = "English"
+            elif lang == "tr":
+                lang = "Türkçe"
+            else:
+                lang = "English"
+            st.info(f"🧠 Algılanan dil: {lang}")
+
+        st.session_state.chat_history.append(("user", user_input))
+
+        # 🔎 FAISS'ten en yakın 3 belgeyi getir
+        embedding, translated_input = embed_question(user_input)
+        distances, indices = index.search(embedding, k=5)
+       # Tokenize user input
+        tokenized_query = word_tokenize(user_input.lower())
+        bm25_scores = bm25_model.get_scores(tokenized_query)
+        
+        candidate_docs = []
+        for i, idx in enumerate(indices[0]):
+            doc = texts[idx]
+            faiss_score = distances[0][i]
+            bm25_score = bm25_scores[idx]
+            fuzzy_score = fuzz.partial_ratio(translated_input.lower(), doc["text"][:1000].lower())
+            hybrid = compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score)
+            
+            doc["faiss_score"] = faiss_score
+            doc["bm25_score"] = bm25_score
+            doc["fuzzy_score"] = fuzzy_score
+            doc["hybrid_score"] = hybrid
+            candidate_docs.append(doc)
+        
+        # 🪵 Logla: FAISS ve Fuzzy skorları
+        st.markdown("#### 🔍 Karşılaştırılan Belgeler (Debug)")
+        for doc in candidate_docs:
+            st.code(f"📄 {doc['source']} — FAISS: {doc['faiss_score']:.2f}, BM25: {doc['bm25_score']:.2f}, Fuzzy: {doc['fuzzy_score']} → Hybrid: {doc['hybrid_score']:.2f}")
+
+        best_doc = max(candidate_docs, key=lambda d: d["hybrid_score"])
+
+        top_docs = sorted(candidate_docs, key=lambda d: d["hybrid_score"], reverse=True)[:3]
+        top_k_context = "\n\n---\n\n".join([doc["text"] for doc in top_docs])
         answer_text = ask_openai(user_input, top_k_context, lang)
         source_file = best_doc["source"]
         source_url = filename_to_url(source_file)
 
-        answer = f"{answer_text}\n\n📄 **Kaynak belge**: [{source_file}]({source_url})"
+        if "Ekim 2023'e kadar olan veriler" in answer_text:
+            answer = no_info_message
+        else:
+            answer = f"{answer_text}\n\n📄 **Kaynak belge**: [{source_file}]({source_url})"
 
-    st.session_state.chat_history.append(("assistant", answer))
-    log_interaction(user_input, answer, source_file, best_doc["faiss_score"])
+        st.session_state.chat_history.append(("assistant", answer))
+        log_interaction(user_input, answer, source_file, best_doc["faiss_score"])
 
 
 # 💬 Geçmişi göster

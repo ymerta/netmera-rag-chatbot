@@ -1,0 +1,20 @@
+People Insight is a dynamic feature within the Netmera platform that empowers businesses and app developers to gain profound insights into their user base. It provides a comprehensive view of user behaviors, preferences, and engagement patterns. With People Insight, you can segment users based on various criteria, enabling highly targeted communication and personalized user experiences. By harnessing this tool, you can enhance user engagement, drive conversions, and optimize your app's performance.
+Creating People Insight
+Begin your journey into People Insight by locating the "Plus" button, represented by a "+". This is your entry point for defining specific user criteria.
+Define User Conditions: Add Condition
+Now, it's time to specify the conditions users must meet to be included in your analysis. You can choose from a range of criteria:
+Push Permission: Discover users who have allowed or denied push notifications.
+Segment: Target specific user groups for in-depth analysis.
+Tag: Isolate users labeled with specific tags.
+Profile: Explore user attributes such as location or behavior.
+Behavior: Understand user actions and interactions within your app.
+Combine Conditions: Add Group
+To refine your criteria, group conditions together using logical operators like "and" or "or." This allows you to create more intricate and precise user segments. For example, you can seek users who belong to Segment A and have allowed push notifications.
+Once you've configured your criteria and groups, take the next step by clicking the "Find" button. This will initiate the search and generate a list of users who meet your specified conditions.
+Unique Devices Found
+The search results will provide you with valuable insights into the unique devices that match your criteria. These insights can inform your engagement and communication strategies.
+🔁 Tagging Options
+Use the circular arrow icon (🔁) to create tags for the users within your targeted group. Tags are labels that help you categorize and organize users for future reference.
+Tagging and Export Options
+You have the flexibility to tag or export selected users to a file. Choose the export format that suits your needs, such as *.csv or *.xlsx. You can also select which user identifiers to include, such as External Id, Email, MSISDN, or Mobile Advertiser ID. You may use these tags while launching your campaigns or export this data for further analysis.
+With People Insight, you gain the power to define, discover, and engage with specific user segments, enhancing your app's user experience and driving meaningful interactions.

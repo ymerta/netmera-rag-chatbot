@@ -1,0 +1,66 @@
+Start Creating
+With customization options and pre-designed templates, you can easily tailor the widget to fit your brand and campaign needs, ultimately increasing visitor engagement and conversions.
+
+Design Widget
+To create an effective Web Widget, you have the flexibility to customize its appearance and behavior according to your branding and campaign objectives. You can choose from a range of pre-designed templates and edit them according to your needs; or create a custom design that aligns with your brand identity. This includes selecting colors, fonts, images, and other visual elements that reflect your brand's personality and captivate the attention of your visitors.
+Quick Steps Guideline
+Go to your Netmera Panel and click:
+Web Tools -> Widget -> Design Widget
+Select your widget from Widget Gallery or Your Widgets and edit your design.
+If you want to create a new custom widget, select "Blank Widget", add a name and configure your widget in Extend Widget.
+Customize your widget using drag and drop widget tools in Elements.
+Define Click Actions for your buttons or images.
+Click on Save Widget & Return.
+Pre-Existing Widgets
+Widget Gallery
+Your Widgets
+Create a New Widget
+Extend Widget
+Further Actions
+Customize Components
+Assign Click Actions
+Publish Widget
+Publish
+Widget Gallery
+First, enter Web Tools and Go to Widget and Design Widget. There are pre-designed templates that you might edit and use in your campaigns according to your needs. For this purpose, you may choose "Mail-Only Subscription, Discount, Mail Subscription, Do you like the website?, Feedback with Slider, Feedback with Emojis". 
+The pre-designed templates are illustrated with images that could help you to choose the best widget for your purpose. Don't forget that when you choose a pre-designed widget, you may still edit it and save it for your later campaigns.
+Once you've selected a template, you have the flexibility to customize it to match your brand identity and campaign requirements. You can modify the colors, fonts, images, and text to ensure consistency with your website's design and messaging. It's important to review and edit the content within the widget to convey your message effectively and provide clear instructions to your visitors.
+
+
+Widget Gallery
+Your Widgets
+In the "Your Widgets" section, you have access to the widgets you have created previously. This section provides you with a range of options to manage and maintain your widgets efficiently. Here's a breakdown of the available options:
+Search
+The search option allows you to quickly find specific widgets by entering keywords or relevant terms. This is particularly useful if you have a large number of widgets and want to locate a specific one without manually scrolling through the list.
+Edit
+Once you click on the widget, you may make modifications to your existing widgets. By selecting the edit option, you can access the customization settings and update the design, content, or functionality of the widget. This flexibility allows you to keep your widgets up-to-date and aligned with your evolving campaign needs.
+Delete
+The delete option allows you to remove unwanted or outdated widgets from your collection. If you no longer require a particular widget, selecting the delete option will permanently remove it from your list. This helps to declutter your widget management interface and maintain a streamlined collection.
+Clone
+The clone option enables you to create a duplicate of an existing widget. This can be useful when you want to create a similar widget with minor modifications. By selecting the clone option, you can save time and effort by leveraging the design and configuration of an existing widget as a starting point for a new one.
+Example:
+You want "Welcome Discount" widget to have a slight modification to offer a 15% discount instead of 10%. You navigate to the "Your Widgets" section, locate the "Welcome Discount" widget, and select the "Edit" option. You make the necessary changes to the discount percentage and save the updated widget. Therefore, you don't need to create a new widget for your updated campaigns.
+These options provide you with the necessary tools to manage, customize, and organize your widgets effectively. Whether you need to make changes, remove obsolete widgets, or create variations of existing ones, the "Your Widgets" section empowers you to maintain a well-organized and optimized widget library.
+How to Create a New Widget
+In order to customize a Web Widget you may whether choose a "Blank Widget", a pre-prepared widget from "Widget Gallery", or a widget from "Your Widgets". All these three options have the same customization tool where you may tailor your Widget according to your needs. In order to design and save your widget, you need to follow 2 steps which are called, Extend Widget and Elements.
+Extend Widget
+In the "Extend Widget" section, you have the flexibility to configure your widget according to your preferences. First, provide a name that accurately describes your widget's purpose, making it easier for you to identify and manage it.
+Tip:
+By utilizing the customization options available in the "Extend Widget" section, you can create a widget that seamlessly integrates with your website, effectively communicates your message, and engages your visitors. Whether it's a subscription form, a special offer announcement, or a feedback widget, adapting the settings to match your specific goals and branding will help maximize the impact and user experience.
+
+Name
+This name will help you select and monitor this widget around the Netmera. Give your widget a descriptive and memorable name that reflects its purpose. For example, if you're creating a pop-up widget for a summer sale, you could name it "Summer Sale Pop-up" or "Hot Deals Alert."
+Description
+Provide a brief explanation of your widget to the specific purpose of your widget. For instance, if your widget offers exclusive discounts or promotes new products, you could mention that in the description.
+Type
+Choose the type of widget that best suits your needs. If you're looking to grab your visitors' attention with a visually appealing element, the "Popup" type is an excellent choice. It allows you to create pop-up widgets that can display offers, promotions, or important messages. However, there are three choices for you the pop-up type which are all excellent according to your purposes,
+Floating Bar: This type of widget appears as a slim, persistent bar that floats at the top or bottom of the screen. It's a great choice for displaying important announcements, notifications, or calls to action that are always visible to your website visitors.
+Pop-up: Pop-up widgets are attention-grabbing elements that appear as overlays on the screen, capturing the user's focus. They can be used for various purposes such as displaying special offers, promotions, or collecting email subscriptions. You have the freedom to design the content and appearance of the pop-up to align with your branding and goals.
+Feedback: The feedback widget allows you to gather valuable insights and opinions from your website visitors. It can be in the form of a survey, rating system, or comment box, enabling users to provide feedback on their experience or share their thoughts. This type of widget helps you gather valuable feedback to improve your website or products.
+Close Button Location
+You also have the option to choose the location of the close button within the widget. Placing it in a prominent and easily accessible spot ensures that users can close the widget if they wish to dismiss it. Select where you want the close button to appear within the widget. You can place the close button in the top-right corner of the widget, above the right corner of the widget or you may choose none.
+Close Button Color
+The close button is a small icon or symbol as an "X," located in a place where you decided in a widget. Its primary function is to allow users to close or dismiss the widget when they no longer need it. By customizing the close button color, you can make it more visually appealing and align it with your brand's color scheme or design preferences.
+Placement
+Mobile: Consider how you want the widget to be displayed on mobile web browsers. You can choose to display the widget on top, center or bottom of the screen.
+Desktop: Determine the ideal placement of the widget on desktop web browsers. You can choose from different options to suit your design and engage users effectively. 

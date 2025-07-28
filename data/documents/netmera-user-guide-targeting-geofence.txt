@@ -1,0 +1,41 @@
+Sending Timely Notifications in your Digital Territories
+What is Geofence?
+Geofence, short for geographical fence, is a virtual perimeter defined around a real-world geographic area. In the realm of Netmera, Geofence serves as a powerful tool to enhance user engagement by delivering real-time notifications when individuals enter or exit designated physical locations. This innovative feature enables businesses to create personalized and location-aware communication strategies.
+Geofences Tab Overview
+To access the Geofences tab and gain valuable insights into your location-based strategies, follow these steps: Navigate to Targeting > Geofences.
+The Geofences tab provides a comprehensive overview of your created geofences:
+ID & Geofence Names: Displays the IDs and names of previously created geofences in your panel.
+Groups: Shows any groups associated with the geofences for organizational purposes.
+Entry and Exit Counts: Provides information on the number of entries and exits to the geofence location.
+Status: Indicates the current status of each geofence as "Active" or "Passive".
+Actions: You may edit, delete or continue using your geofences with these icons.
+You can easily search for specific geofences or groups by typing the name in the "Enter Geofence or Group Name" field.
+Creating a Geofence
+Targeting -> Geofence -> Create Geofence
+
+1.Navigate to Geofence Creation:
+Start by going to the "Targeting" section in Netmera.
+From there, click on "Geofences" and then select "Create Geofence."
+2.Name Your Geofence:
+Give your geofence a name that clearly represents its purpose or location. This will help you identify it easily later.
+3.Optional Grouping for Organization:
+If you're managing multiple locations or campaigns, you have the option to create a group. This helps keep things organized.
+4.Specify the Location:
+Decide on the location of your geofence. You can do this in two ways:
+Search: Use the search field to find the exact location you want.
+Map: Alternatively, you can directly select the location on the map using the Circle option.
+5.Determine the Size:
+Set the size of your geofence by specifying the distance from the chosen center point. This defines the area where your geofence will be active.
+Advanced Option: Manual Selection
+For precise geofence customization, use the Polygon option to manually draw the geofence area on the map.
+6.Complete the geofence creation by clicking the "Save" button.
+
+Publishing Geofences to Devices
+Targeting -> Geofence -> Publish to Devices
+After creating a new geofence, it is essential to publish it to devices. Follow these steps:
+1.Go to the Geofences tab.
+2.Locate the newly created geofence.
+3.Click the Publish to Devices button.
+Why do I need to Publish to Devices?
+This action triggers a silent push notification to the devices, ensuring that users receive timely and relevant information based on their location. 
+That's it! You've successfully created and published a geofence in Netmera, empowering you to engage with your users in a more personalized and location-aware manner. If you have any further questions, feel free to contact our support team for assistance.

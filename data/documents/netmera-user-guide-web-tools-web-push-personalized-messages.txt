@@ -1,0 +1,16 @@
+One of the message types available to you is the "Personalized Message/Personalized Subtext" which allows you to reach your users based on specific parameters such as their names, surnames, age, and more. Personalized messages help to create a more meaningful and impactful notification, which can increase user engagement and ultimately lead to better retention and loyalty.
+Example:
+You may create personalized messages that include the user's name, fitness goal, and a reminder to log their workout. For example, a user named John who has set a goal to run a 5K might receive a message that says, "Hey John, time to lace up those shoes and hit the pavement to achieve your 5K challenge!"
+Personalized message can be sent if you have profile attributes for users. You may do this by transferring user informations such as name, surname, age to Netmera. For instance,
+Default message: “Happy birthday!”
+Personalized message/subtext: “Wishing you a sweet {@age}th birthday {@name}!” becomes “Wishing you a sweet 26th birthday Simon!”
+Profile Attributes are needed: 
+In the "Profile Attributes" section, you can select the desired attributes of your opt-in users and add them to your message by clicking the "Add" button. You can also insert promotion codes into your message by clicking the "Add" button in the "Promotion Code" section. Prior to sending personalized messages, it is necessary to implement profile attributes for your users. Please see Profile Attributes or Coupon Code Lists title for more information.
+Personalized Message
+During the creation of a new campaign in Step 2: What, you'll encounter the Personalized Message section. Here, you can input your personalized attribute using the {@} format, or alternatively, select a profile attribute from the drop-down menu and simply click "Add." This feature allows you to tailor your campaign messages with precision, ensuring maximum relevance and engagement with your audience.
+When any of the parameter is null:
+"Do not send message" means that your users whose desired profile attribute section is empty in your database will not receive any message. The second option is "Send notification message," which means that your users whose desired profile attribute section is empty will receive the default "Notification Message" instead of your "Personalized Message".
+Personalized Subtext
+During the creation of a new campaign in Step 2: What, you'll encounter the Personalized Subtext section. Here, you can input your personalized attribute using the {@} format, or alternatively, select a profile attribute from the drop-down menu and simply click "Add." This feature allows you to tailor your campaign messages with precision, ensuring maximum relevance and engagement with your audience.
+When any of the parameter is null:
+"Do not send message" means that your users whose desired profile attribute section is empty in your database will not receive any message. The second option is "Send notification message," which means that your users whose desired profile attribute section is empty will receive the default "Notification Message" instead of your "Personalized Message".

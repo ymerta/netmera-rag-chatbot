@@ -1,0 +1,36 @@
+Uncover Insights, Drive Success
+Journey Analytics
+The Analytics & Journey dashboard offers a comprehensive view of your marketing campaigns or user journeys. It is designed to help you monitor key performance metrics, analyze user behavior, and refine your strategies to enhance engagement and conversion rates. By leveraging this dashboard, you can gain actionable insights and make data-driven decisions to optimize your marketing efforts.
+
+Journey Details
+The Journey Details section offers a detailed view of user interactions and campaign performance. By closely monitoring these metrics, you can gain valuable insights into user behavior, identify areas for improvement, and implement strategies to enhance the overall effectiveness of your marketing efforts.
+Messages Sent
+This metric indicates the total number of messages dispatched as part of the journey. It provides a clear picture of the campaign's outreach efforts. Monitoring this metric helps you understand the volume of communication with users and assess if the messaging strategy aligns with the campaign goals.
+Total Entries
+This metric reflects the number of users or multiple user entries in the journey. It serves as an indicator of user engagement and interest. A high number of entries suggests that the campaign is attracting attention, while a lower number may prompt a review of the entry criteria or promotional tactics used to drive traffic to the journey.
+Conversion Rate
+The conversion rate is a crucial metric that measures the effectiveness of a marketing journey by indicating the percentage of users who complete a desired action, such as making a purchase, signing up for a service, or achieving other predefined goals. This metric directly corresponds to the Conversion Event you define in Step 1: Setup of your journey configuration.
+Total Exits
+This metric shows the number of entries that exited the journey without converting. Understanding exit points is vital for identifying potential barriers or drop-off points within the journey. By analyzing where users are exiting, you can make targeted adjustments to improve retention and conversion rates.
+
+Entry Counts
+The entry count is vital for tracking user flow through the journey. It helps identify where users might be dropping off and allows you to analyze the effectiveness of each journey stage. By comparing the initial and current entry counts, you can assess the journey's performance and make informed decisions to optimize user engagement and conversion rates.
+Initial Entry Count (example: 50): This number represents the total entries at the start of the journey, indicating how many users or actions triggered the journey. It serves as a baseline for understanding the journey's reach and initial engagement level.
+Current Entry Count (example: 48): This reflects the number of users who have continued to the "Send Mobile Push" action. The slight decrease from the initial entry count suggests that some users did not progress to this stage, highlighting potential drop-off points or engagement barriers.
+Understanding the logic behind entry counts enables you to pinpoint areas for improvement, such as refining the trigger action, enhancing the personalization of messages, or adjusting the journey schedule to better align with user behavior. This ensures that your journey remains effective and continues to drive desired outcomes.
+
+Entry Count Event Metrics
+The results provide a detailed breakdown of actions users take at a specific step in a journey. Each journey step can be configured with different actions, and the analytics displayed will vary depending on the type of step, such as push notifications, in-app messages, or other engagement points. The breakdown offers insights into user engagement and the success of specific actions.
+Dynamic Event Metrics:
+Depending on the type of journey component, different event metrics will be shown. For example, for push notifications, you may see metrics related to sent, clicked, and failed events. Other actions such as in-app messages or custom events will have unique metrics based on their respective interactions.
+User Flow and Metrics Overview
+The numbers displayed in the analytics represent counts such as "Entry User Count" (the total number of users entering that step), "Sent Count" (messages or actions sent), "Clicked Count" (how many users interacted with the action), and platform-specific metrics like "Android Clicked Count" or "iOS Sent Count."
+Step-Specific Event Tracking
+Each journey step is tracked for key user actions. The events and counts you see will reflect the configured outcome for that particular journey step. In the case of mobile push notifications, this would include sent, clicked, and failed messages.
+Custom Events and Variability
+The events and metrics displayed can be tailored to match the particular action in the journey, such as "Purchase Complete" for e-commerce or "Subscription Activated" for media apps. This means the displayed analytics will adjust based on the type of user interaction defined within that step.
+Interpretation of the Results
+Use the journey step breakdown to identify trends and adjust your strategy. If, for example, a high number of sent messages are recorded, but the clicked count is low, this indicates low engagement with the message content. Similarly, failed counts suggest technical issues that may need attention.
+This breakdown helps optimize user engagement by providing detailed insights for every journey step, improving the overall effectiveness of the journey.
+
+The Analytics & Journey dashboard provides a comprehensive overview of marketing campaigns and user journeys, allowing you to monitor key performance metrics, analyze user behavior, and refine strategies to boost engagement and conversion rates.

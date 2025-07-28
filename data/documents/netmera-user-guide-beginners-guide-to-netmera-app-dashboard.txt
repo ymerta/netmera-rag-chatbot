@@ -1,55 +1,88 @@
+App Dashboard
 The App Dashboard within the Netmera Panel serves as the central hub for tracking and summarizing vital statistics derived from your app's user engagement efforts. In this section, we'll explore how the Dashboard empowers you with a comprehensive overview of your app's performance, providing you with the insights needed to make informed decisions.
+My Apps
 Total Users Overview: On the left panel, you'll find a variety of features at your disposal. This section serves as your hub for various activities related to your app. From managing your account details, including your name and roles within Netmera Panel, to streamlining access to multiple applications, this panel has you covered.
 Quick Access: If you're using more than one application, the search function allows you to easily locate and access them. No more navigating through multiple screens - it's all right here for your convenience.
 Dashboard and Campaigns: For quick access to crucial areas, you'll find two prominently placed buttons - Dashboard and Campaigns. These shortcuts make it a breeze to jump directly into the heart of your app management. The Dashboard provides insights into Daily Active Users (depicted in green) and Notifications (represented in gray) through an intuitive graph.
+
+App Dashboard
 Within the App Dashboard, you'll find a snapshot of key metrics that provide valuable insights into your app's performance and user engagement.
 Total Devices: This section provides a breakdown of the devices on which your app is installed. It categorizes them by operating system, including iOS, Android, Chrome, Safari, and Firefox. This data allows you to understand your app's reach across different platforms.
 Push Opt-in: Here, you can see the percentage of users who have opted in to receive push notifications on their respective devices. This information is crucial for tailoring your communication strategies to effectively engage your audience.
 Active Devices: This section represents the number of currently active devices for each platform. It indicates the devices currently using your app, helping you gauge real-time user activity.
+
+Real Time Analytics
 In this dynamic section of the panel, you'll gain real-time insights into the activity of your app's users. The data is presented in an interactive graph format, making it easy to grasp trends and patterns without the need to focus on specific numbers.
 Active Sessions: The top section of the graph illustrates the current active sessions in your app, providing an instant overview of user engagement. It's a powerful way to understand how users are interacting with your app in real time.
 Platform Breakdown: The graph is further divided into iOS and Android sections, each represented by its own distinctive color. This segmentation allows you to monitor the real-time activity on each platform separately, helping you tailor your strategies based on platform-specific trends.
 Period and Scale Customization: You have the flexibility to customize the data display to suit your needs. Choose the period you want to focus on, such as the last 30 minutes, and set the scale for granularity, whether it's 5 minutes or any other interval. This level of control empowers you to delve deeper into specific timeframes or maintain a broader perspective. 
 Reports Settings
 Further customizations about the periods of your campaign reports, you may our Reports Settings page.
+
+User Activity
 In the User Activity section, you gain insights into user interactions and activities within your app. This data is presented in a visual format, making it easy to understand trends and patterns without specific numerical details.
 Period Customization: You have the flexibility to customize the period of analysis. For example, you can choose to focus on the last 30 minutes, allowing you to track recent user activity and behavior.
 [eventnames]: Under the [events] category, you can monitor user interactions related to those events within your app. 
 User Activity Customization
 The User Activity section offers customization options (green botton on the bottom right corner) that empower you to explore different aspects of user behavior within your app. This allows you to tailor your analysis to specific needs or areas of interest.
+
+Activity on App
 The Activity Log provides a record of events related to message sending and segment preparation within your app. It helps you track the progress of these crucial tasks.
 Message Sending Completed: This entry indicates that a message sending process is successfully finished. It signifies that messages are delivered as intended.
 Message Sending Started: It shows when a new message sending process begins.
 Segment Preparation: The log also includes updates on the readiness of segments, ensuring you have up-to-date information on the status of your app's segmentation.
+
+Top Segments
 In the "Top Segments" section, you get a summary of various segments and their associated metrics. This data helps you understand the performance of different user segments within your app, allowing you to tailor your engagement strategies effectively.
 Segment: This column lists the names of the different user segments being tracked.
 Monthly Revenue: The "Monthly Revenue" column displays the revenue generated by each segment. This metric provides insights into the financial impact of specific user groups.
 Users: The "Users" column indicates the number of users within each segment. Understanding the user distribution across segments is crucial for targeted engagement efforts.
+
+App Versions
 In the "App Versions" section, you'll find a breakdown of different versions of your app, categorized by platform. This information helps you keep track of the distribution of app versions among your user base.
 Platform: This column specifies the platform for which different app versions are available. In this case, there are versions for both iOS and Android.
 Version: The "Version" column lists the specific numerical or alphanumeric designations of your app's versions.
 Users: The "Users" column provides insights into the number of users currently using each app version. This data is valuable for understanding the adoption of different versions among your user base.
+
+Performance
 In the "Performance" section, you can assess the performance of your app over a specified date range, allowing you to track trends and analyze user engagement on a daily basis. Here are the key components:
 Date Range Selection: You can customize the date range for your analysis. In this case, the range is set between September 11, 2023, and September 18, 2023. This enables you to focus on a specific period of time to evaluate your app's performance.
 Scale: The scale is set to "Daily," which means you'll be examining daily performance metrics. This provides a granular view of how your app is performing throughout the selected date range.
 Day of the Week: The graph displays the days of the week (Mon, Tue, Wed, Thu, Fri, Sat, Sun) along the x-axis. This allows you to identify patterns and trends in user engagement that may vary based on the day of the week.
 Total: The "Total" line on the graph represents the combined daily performance metrics for both iOS and Android users. It provides an overview of the overall app performance during the selected date range.
 iOS and Android: The graph also includes separate lines for iOS and Android performance metrics. This separation enables you to compare the engagement patterns of users on different platforms.
+Active Users / Notifications
 Active Users (Unique Users Opening the Application): Within the "Performance" section, you can track the number of unique users who open your application on a daily basis. This metric is crucial for understanding the reach and engagement of your app among your user base.
 Notifications Sent: In the "Performance" section, you can assess the number of notifications sent from your app on a daily basis. This metric is vital for understanding your app's communication reach and the frequency of notifications being delivered to users.
+
+Revenue / Installs / Uninstalls
 Revenue: Within the "Performance" section, you can analyze the revenue generated by your app on a daily basis. This metric provides insights into the financial performance of your app and helps you track revenue trends over time. Revenue tracked in Netmera is all purchases from customers who received a push notification in the past 24 hours leading up to the purchase or clicked a notification leading to a purchase.
 Installs: The "Installs" graph provides a visual representation of the number of app installations on different days of the week. This metric helps you track the distribution of app installations and understand when users are most likely to download and install your app.
 Uninstalls: "Uninstall" refers to the action taken by a user to remove or delete a previously installed application (app) from their device. This metric helps you track the distribution of app removals and understand when users are more likely to uninstall your app.
+Why is my Uninstall Data Increasing on Android Devices?
+At Netmera, we receive device token information for your apps through Firebase Cloud Messaging (FCM). Tokens from devices that haven't connected to FCM for over 270 days become invalid. These tokens are linked to passive devices, which have likely been inactive for a long time. Messages sent to these old tokens won't be delivered.
+Reasons for inactive tokens:
+Devices lost, destroyed, or forgotten
+Long periods of inactivity
+If a token is inactive for 270 days, FCM marks it as invalid. Once a device reconnects, it gets a new token, and Netmera assigns a new installation ID. This process can lead to higher uninstall numbers, as previously successful message deliveries to these old tokens are now counted as failures. However, this change specifically impacts Android devices inactive for 270+ days.
 
+App Conversion Rate % / Avg. Session Lenght / Avg. User Frequency
 App Conversion Rate %: App Conversion Rate % is a key performance indicator (KPI) used to measure the effectiveness of your app in converting users from one stage to another within a specific action or goal. It's usually expressed as a percentage and represents the proportion of users who take a desired action out of the total number of users who had the opportunity to do so.
+
 The formula for calculating App Conversion Rate %
-(Number of Users Who Completed the Desired ActionTotal Number of Users Who Had the Opportunity to Complete the Action)×100%\text{} \left( \frac{\text{Number of Users Who Completed the Desired Action}}{\text{Total Number of Users Who Had the Opportunity to Complete the Action}} \right) \times 100\%
+((Total Number of Users Who Had the Opportunity to Complete the Action) /
+(Number of Users Who Completed the Desired Action))×100%
+
 Average Session Lenght Minutes: This graph offers a detailed view of user engagement within your app throughout the week. It tracks the average session length, measured in minutes, on each day from Monday (Mon) to Sunday (Sun). The session length represents the duration users typically spend interacting with your app during each session.
 Average Usage Frequency: This graph provides a detailed analysis of user engagement patterns within your app throughout the week. It focuses on the average usage frequency of a user, highlighting how often users interact with your app on each day of the week, from Monday (Mon) to Sunday (Sun).
+
+Revenue / Retention
 This graph offers a comprehensive view of your app's financial performance and user retention rates over the last 6 months, from April (Apr) to September (Sep).
 Revenue (ARPU): The upper part of the graph represents Average Revenue Per User (ARPU) on a scale from 0.00 to 1.00. ARPU measures the average revenue generated from each user during a specific period. As the months progress, you can see fluctuations in ARPU, indicating changes in the app's revenue generation.
 Retention Rate: The lower part of the graph illustrates the Retention Rate, displayed as a percentage. This metric reflects the percentage of users who continue to use your app over time, relative to the total number of users. As you move from April to September, you can track how well your app is retaining users, which is crucial for sustaining long-term success.
 These metrics provide valuable insights into your app's financial health and user engagement. Analyzing trends in ARPU and retention rates can inform strategic decisions to optimize your app's performance and enhance your omnichannel customer engagement strategies.
+
+FAQs
 FAQ 1: How can I use Real-Time Analytics to improve user engagement?
 Answer: Real-Time Analytics provides immediate insights into user behavior. To enhance user engagement, monitor trends, and identify popular features. For example, if you notice a sudden surge in users on a particular feature, consider promoting it or sending targeted notifications to boost engagement further.
 FAQ 2: What should I do if my App Dashboard shows a drop in active users?
@@ -60,5 +93,9 @@ FAQ 4: Why is it important to track app versions in App Versions?
 Answer: Tracking app versions in App Versions helps ensure a smooth user experience. Newer versions may include bug fixes, security updates, or new features. By monitoring version distribution, you can prioritize updates and address compatibility issues to keep your users satisfied.
 FAQ 5: How can I use Performance Insights to improve my app's financial performance?
 Answer: Performance Insights provide a deep understanding of user engagement and financial trends. To enhance financial performance, identify revenue-generating opportunities, such as optimizing in-app purchases or subscriptions based on usage patterns. Additionally, use retention rate data to focus on retaining high-value users and boosting long-term revenue.
-Last updated 19 days ago
+Previous
+Integrating Netmera
+Next
+Design Guide
+Last updated 1 month ago
 Was this helpful?

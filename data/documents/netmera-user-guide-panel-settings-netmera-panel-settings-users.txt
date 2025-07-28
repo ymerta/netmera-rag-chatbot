@@ -1,0 +1,13 @@
+Settings -> Users ->  Create New User
+In Netmera, "Users" typically refer to individuals or entities who have access to the Netmera Panel. These users can belong to different roles, each with specific permissions and access levels within the panel.
+Invite New User
+
+To invite a new user, click on the "Invite New User" button.
+Enter the email address of the new user you want to invite.
+Select the appropriate role for the new user from the available options. Roles define the level of access and permissions the user will have within the panel.
+Click on the "Send Invitation" button to invite the new user.
+User Info
+If you want to assign or remove roles for an existing user, you can use the search function to find the user by name.
+Once you locate the user, click on their profile to access the user settings.
+Update the user's profile by assigning or removing roles as needed.
+Don't forget to save the changes by clicking on the "Save" button.

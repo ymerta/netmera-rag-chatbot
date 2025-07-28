@@ -1,5 +1,7 @@
 Creating custom profile attributes is a pivotal step in tailoring your customer data management to your unique business needs. These attributes enable you to capture and store specific pieces of information about your customers that may not be covered by standard attributes. Whether you want to track custom preferences, product interactions, or any other distinctive data points, custom profile attributes offer the flexibility to do so. 
+How to Create a Custom Profile Attribute
 This process involves defining the attribute, setting its data type (such as text, numeric, or date), and determining how it will be used in your engagement strategies. Once created, these custom attributes become essential building blocks for segmentation, personalization, and analytics, empowering you to deliver more tailored and effective customer experiences. With the ability to capture precisely the data that matters most to your business, creating custom profile attributes is a powerful tool for enhancing customer engagement and understanding.
+Step 1: Create Attribute
 To access the "Create Attribute" section in Netmera, go to,
 Developers -> Profile Attributes -> Create Attribute
 Profile Attribute Name: Begin by specifying a unique name for the attribute. This name serves as a reference within your application code and is crucial for identifying and utilizing the attribute programmatically.
@@ -17,6 +19,7 @@ Order: 2 (for placement within your list of profile attributes)
 Description: Records the customer's preferred communication channel, such as email, SMS, or app notifications.
 Data Type: String (to capture a single preferred communication channel)
 In this scenario, the custom profile attribute "communicationPreference" captures the customer's choice of communication channel for receiving notifications or updates.
+Step 2: Save and Generate
 After configuring your custom profile attribute, save the settings. This action triggers the generation of code that your developers can seamlessly integrate into your application to implement the new attribute. 
 The generated code will be accessible under the 'User Class' section on the previous page. This code is designed for integration by your developers into your application, allowing the new attribute to be effectively implemented and utilized within your customer data management system.
 On how to implement the code to your system, please visit our title Developer Guide | User.

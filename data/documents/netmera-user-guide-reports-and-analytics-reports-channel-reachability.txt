@@ -1,0 +1,96 @@
+
+What is the Channel Reachability Report?
+The Channel Reachability Report provides a detailed overview of the users who have opted in or out of receiving push notifications for your campaigns. It helps to understand user preferences regarding messaging permissions, enabling you to tailor communication strategies based on the level of user engagement.
+Create a Channel Reachability Report
+To create a Channel Reachability Report, follow these steps:
+Reports > Channel Reachability > Create Report
+
+1.Navigate to Reports
+Go to the Reports section, then select Channel Reachability from the menu.
+2.Create a New Report
+Click on Create Report to begin generating a new report.
+3.Enter the Report Details
+Report Name: Provide a descriptive name for the report.
+Segment: Select the desired segment from the dropdown.
+Segment is not necessary:
+If you want to include all your opt-in and opt-out data without filtering by a specific segment, leave the segment field empty. This will generate a report covering all users.
+4.Generate the Report
+Once you've entered the necessary details, click on the Save button to generate your Channel Reachability Report.
+
+Channel Reachability Report Details
+The Channel Reachability Report offers a breakdown of user permissions across different communication channels, as Mobile, Web, Email and SMS, helping you understand user engagement on a more granular level. The channels tracked in this report include:
+
+Opt-in Users
+Displays the total number of users who have granted permission to receive notifications for each communication channel across all tabs, including Mobile, Web, Email, and SMS. Each tab indicates the specific channels where users have opted in, demonstrating their active engagement and willingness to receive updates, promotional content, or important alerts.
+Opt-out Users
+Shows the total number of users who have not provided permission for notifications for each communication channel in the respective tabs. Users identified as opted out will not receive any messages through Mobile, Web, Email, or SMS, based on the tab selected. This information highlights user preferences for less frequent communication or specific types of content and helps tailor your engagement strategies accordingly.
+Email and SMS Tabs are visible if you have completed integration:
+The Email and SMS tabs in the Channel Reachability Report will only be visible if you have successfully completed the integration for these communication channels. This means:
+Email: Appears once your platform has been integrated with an email service provider to manage and send email campaigns. The tab will display opt-in and opt-out data for users who have given permission to receive email communications from your brand.
+SMS: Becomes visible after the integration of an SMS service provider. Once integrated, the tab will show data regarding users who have opted in or out of receiving SMS messages.
+
+Components of the Report
+Channel Reachability Update Frequency
+The opt-in and opt-out metrics at the top of the report are updated in real time, ensuring you have immediate access to the latest user permission statuses. In contrast, the detailed data in the tables below refreshes nightly, offering a broader view of user engagement trends over time.
+Opt-in and Opt-out Counting Logic
+The report is designed to evaluate user permissions on a user-by-user basis, independent of the number of devices they use. A user is classified as opted in if at least one of their devices has granted permission for notifications. Conversely, a user is classified as opted out only if all their devices have declined permission.
+Example:
+if a user has three devices—two opted in and one opted out—they would be counted as an opted-in user. In contrast, if another user has two devices and both are opted out, that user would be classified as opted out. This counting method ensures that, regardless of the number of devices, the first user would be recorded as one opted-in user, while the second user would be noted as one opted-out user.
+
+Daily Trends Graph
+The graph provides a visual representation of user behavior over a selected date range. It shows:
+Total Users (blue): The total number of users for whom push notification permissions are tracked.
+Opt-in Users (green): The number of users who opted in for push notifications during the selected time frame.
+Opt-out Users (red): The number of users who opted out over the same period.
+
+Bar Graph
+The bar graph displays the daily trends of users who have opted in or out of receiving push notifications over a specified period.
+Total Users (blue): Represents the overall number of users considered each day.
+Opt-in Users (green): These are users who have consented to receive notifications.
+Opt-out Users (red): These users have either not given consent or have withdrawn it.
+Each day is represented by a set of three bars, showing the total users, opt-in users, and opt-out users. This visualization allows you to easily track user engagement and permission trends over time.
+
+Date Selection
+Here you specify the time period for which you would want to view the user trend data in the graph. Here's how it works:
+Quick Select Options: There are options to quickly select common time frames such as "Last Week," "Last Month," and "Last Year." These options automatically adjust the date range accordingly.
+Date Range Display: The selected date range is shown at the top of the calendar, allowing you to confirm their selection before closing the tool.
+Report Creation Dependency: 
+The date range cannot be set to dates before the report was created. This is because data saving begins only after a report is initiated. While the data is stored in the database, it is only saved and accessible on your panel from the moment you create a report.
+
+Daily Changes List View
+The Daily Changes List View provides a comprehensive overview of user engagement metrics on a daily basis. This view is essential for tracking fluctuations in user permissions and overall engagement trends. Here's how to interpret and utilize this list:
+Components:
+Date: This column lists each specific date for which the user engagement data is recorded.
+Total: Represents the total number of users for each date. This figure reflects any changes in the overall user base, providing insight into user growth or decline.
+Opt-in Users: Displays the number of users who have opted in to receive notifications. Monitoring this column helps identify daily changes in user consent and engagement levels.
+Opt-out Users: Indicates the number of users who have opted out of receiving notifications. This data is crucial for understanding user withdrawal trends and potential dissatisfaction.
+By reviewing the daily changes, you can identify patterns or anomalies in user engagement. This helps in understanding the effectiveness of recent campaigns or external influences on user behavior.
+
+Opt-in and Opt-out Users Based on Category
+The "Opt-in and Opt-out Users Based on Category" table provides a detailed breakdown of user engagement according to specific message categories. This view helps in understanding user preferences and engagement levels across different types of communications.
+ID: Each row starts with a unique identifier for the message category, which helps in distinguishing between different categories.
+Category: This column lists the name of each message category that users have created under Settings > Message Categories. Message Categories can include various types of communications, such as announcements, promotions, and more.
+Opt-in Users: Displays the number of users who have opted in to receive notifications for each specific category. This indicates user interest and engagement with the type of content represented by the category.
+Opt-out Users: Shows the number of users who have opted out of receiving notifications for each category. This helps identify categories that may not resonate well with users.
+By examining the opt-in numbers, you can determine which message categories are most popular among users, guiding content creation and prioritization. On the other hand, high opt-out numbers in certain categories may suggest the need for content revision or better targeting strategies to align with user interests.
+
+Tag and Export
+Tag or Export feature provides functionality to manage and export user data efficiently. Here's a breakdown of how to use this feature:
+Tag Users:
+Tag Users: This option allows you to assign a tag to selected users. Tags can be used to categorize users based on specific criteria or behaviors, facilitating targeted marketing and communication strategies.
+Enter a Tag Name: Input a name for the tag you want to assign to the users. This helps in organizing and retrieving user groups easily.
+Start Tagging: Click this button to initiate the tagging process for your selected users.
+Export Selected Users:
+Export Options: You can choose to export user data based on different identifiers:
+External ID: Export users using their external identifiers.
+Email: Export users based on their email addresses.
+MSISDN: Export users using their mobile numbers.
+Mobile Advertiser ID: Export users based on their mobile advertiser identifiers.
+Select File Type: Choose the format for your exported file:
+XLSX: Export data in Excel format, suitable for detailed analysis and reporting.
+CSV: Export data in CSV format, ideal for integration with other systems or applications.
+Export Button: Click this button to execute the export process, generating a file with the selected user data in your chosen format.
+This feature is essential for efficiently managing user data, allowing you to categorize users with tags or export their information for further analysis and strategic planning.
+
+In summary, the Channel Reachability Report is a crucial tool for understanding user engagement across various communication channels. It provides detailed insights into opt-in and opt-out behaviors, allowing businesses to tailor messaging strategies to user preferences. 
+The report includes real-time updates, channel-specific breakdowns, and efficient data export options, supporting targeted marketing and strategic planning. By utilizing these insights, organizations can enhance communication strategies, improve user satisfaction, and drive effective engagement. 📈

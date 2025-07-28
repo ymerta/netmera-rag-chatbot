@@ -1,0 +1,8 @@
+Message Labels
+Settings -> Message Labels -> Create New Message Label
+Message Label is a unique identifier assigned to a message label in the Netmera platform. It serves as an internal reference point for the system to identify and manage different labels efficiently.
+When users interact with the Netmera dashboard and view message analytics, this label allows them to filter and view specific messages associated with a particular label. By using dashboard message labels, users can gain insights into message performance and user engagement across different message categories or campaigns.
+Label ID
+The identifier assigned to each message label in the Netmera platform. It serves as a primary key to uniquely identify and differentiate one message label from another. The Label ID is primarily used by the system for internal operations, data management, and reference purposes. It helps in ensuring the integrity and consistency of the Netmera database by uniquely identifying message labels and their associated data.
+Label Name
+The name given to a message label in the Netmera platform. It serves as a readable identifier to describe the purpose or category of the messages associated with the label. Users can create label names that are meaningful and intuitive, helping them to easily identify the type of messages grouped under a specific label. The Label Name is visible to users in the Netmera dashboard, allowing them to quickly recognize and manage different message labels effectively.

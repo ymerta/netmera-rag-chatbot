@@ -1,143 +1,286 @@
-This page shows you the second step of how to launch your notification!
-The second step in launching your notification is What section. In the What step, the content of the push notification is created. Fields such as message text, message title, thumbnail that will appear on target devices are defined in this step. 
-For some additional steps you need to follow for Banner, Carousel, Slider and Product Discovery types of notifications please also check our additional notes. However, this page will still be crucial for your campaign.
-Title
-Title of your notification
-Necessary in all notification types
-Notification Message
-Your message to be delivered in your notification
-Necessary in all notification types
-Android Media URL
-Images that appear inside of your notification
-Necessary if any media notification is chosen
-Category
-Category of your messages based on your own predefined criteria or use case Message Categories
-Optional
+Define Notification Content: What
+The What step is where you define the content of your push notification. In this step, you will configure the core components of your message—such as the title, body, visuals, and personalization settings—that will appear on users’ devices.
+Dedicated Guide for Banner, Carousel, Slider and Product Discovery
+This step applies to all push notification types, including Standard, Banner, Carousel, Slider, and Product Discovery. Additional configuration for advanced formats is available in their dedicated guide. However, the fields described below remain relevant and crucial for all types.
+
+Mobile Push Notifications Elements
+a. Small Icon: 24×24 – 96×96, white PNG with transparent background.
+b. Title: Max 50 characters.
+c. Body (Notification Message): Max 150 characters.
+d. Image: 1440×720 (2:1 ratio), PNG/JPG/GIF (not animated).
+e. App Name: Shown as notification source. Cannot be customized.
+f. Time Stamp: Shows when the message was received.
+g. Thumbnail (Icon): 192×192+, PNG/JPG/GIF (not animated).
+h. Action Buttons: Configurable in Settings > Button Sets (up to 3).
+
+1. Title: Title of your notification  
+   → Necessary in all notification types
+2. Notification Message: Your message to be delivered in your notification  
+   → Necessary in all notification types
+3. Android Media URL: Images that appear inside of your notification  
+   → Necessary if any media notification is chosen
+4. Category: Category of your messages based on predefined criteria or use case  
+   → Optional
+5. Personalized Message: Your personalized message aiming your user information  
+   → Optional
+6. Personalized Title: Your personalized title aiming your user information  
+   → Optional
+7. Subtext: Additional text to be shown next to your application name  
+   → Optional
+8. Personalized Subtext: Personalized attribute using the {@} format  
+   → Optional
+9. Custom Push Icon: Send message with custom icons (needs integration)  
+   → Optional
+10. Android/iOS Thumbnail URL: Images next to text messages that can't be expanded  
+    → Optional
+11. Vibration: Notification delivered with vibration if enabled  
+    → Optional
+12. Show in Push Inbox: Message goes to application inbox (needs integration)  
+    → Optional
+13. Opt-out Inbox Enabled: Sends message even to opt-out users’ inbox  
+    → Optional
+14. Don't Notify: Message won’t be shown as notification (inbox only)  
+    → Optional
+15. Play Sound: Delivered with sound (needs integration)  
+    → Optional
+16. Disable Webhooks: Message logs won’t be sent to backend  
+    → Optional
+17. Push Click Action: Actions triggered when user clicks  
+    → Optional
+18. Fallback: Scenarios for users who didn’t receive notification  
+    → Optional
+19. Conversion Analytics: Conversion event can be tracked  
+    → Optional
+
+Message Content
+Message Category
+Purpose: Organize your campaigns based on their function or content.
+Use the Category field to classify your campaign under a label such as:
+Promotions
+Announcements
+Account Alerts
+Transactional Messages
+Categorizing helps with future campaign filtering, reporting, and analytics.
+Notification Message (Body)
+Purpose: Communicates the primary message to users.
+This is the main text content of your push notification. Keep it:
+Informative
+Concise
+Action-oriented
+You may use text and emojis for added emphasis and visual appeal.
+Example:
+“Your payment was successful 🎉” or
+“🚨 Suspicious login detected. Tap to secure your account.”
+
 Personalized Message
-Your personalized message aiming your user information Personalized Messages
-Optional and can be used if you have profile attributes for users
+Purpose: Increases engagement by tailoring content using user profile data.
+You can personalize messages using attributes such as name, age, or preferences stored in Netmera. Use {@attribute} syntax or the dropdown selector to insert available attributes. You must create profile attributes before using them in your notifications.
+Example:
+Default: “Happy birthday!”
+Personalized: “Wishing you a sweet {@age}th birthday, {@name}!”
+→ Displays as: “Wishing you a sweet 26th birthday, Simon!”
+Use cases include:
+Greeting users by name
+Recommending products based on past behavior
+Sending localized or weather-based messages
+Tip: Ensure your app transmits the necessary profile data to Netmera beforehand.
+Title
+Purpose: Grabs attention and provides immediate context.
+Create a compelling notification title that encourages the user to engage. You can use emojis and concise text to improve visibility.
 Personalized Title
-Your personalized title aiming your user information 
-Optional and can be used if you have profile attributes for users
-Sub Text
-Additional text to be shown next to your application name
-Optional
-Android / iOS Thumbnail URL
-Images that appear next to text messages that can't be expanded  
-Optional
+If user profile data is available, personalize the title for stronger impact.
+Example:
+“Hey {@name}, your exclusive offer is here!”
+→ Becomes: “Hey Emily, your exclusive offer is here!”
+Personalized titles can:
+Increase open rates
+Strengthen user-brand connection
+Improve retention metrics
+
+Subtext
+Purpose: Adds secondary context, shown next to your app’s name.
+Subtext supports personalization and often appears in the notification header on supported devices. It can include:
+Additional details
+A brief summary
+A call to action
+Example: “Limited-time offer · Ends tonight!”
+Personalized Subtext
+You can use the same {@} format or dropdown menu to insert dynamic user data into the subtext.
+Example:
+“Your challenge score: {@score}” → “Your challenge score: 850”
+
+Custom Push Icon
+Purpose: Displays a custom app logo or image beside the notification (platform-specific).
+Requires SDK integration.
+If not configured, the default icon from your app settings will be used.
+Refer to:
+iOS Push Icon Page
+Android Push Icon Page
+When Custom Push is Turned Off:
+If a default notification icon is provided and custom push icon is turned off, the default icon from the Developer App Info will be used.
+
+Android/iOS Thumbnail URL
+Purpose: Displays a thumbnail image alongside the notification text.
+Can be uploaded or referenced via direct URL.
+Offers a static, non-expandable visual.
+Ideal for logos, product previews, or branded content.
+
+Android/iOS Media URL
+Purpose: Embeds rich media (images or videos) in the notification.
+Media is shown more prominently than thumbnails.
+Enhances visual appeal and message clarity.
+Example Use Case:
+Include a product image in a push notification announcing a new collection.
+Upload from your computer or insert a URL. Ensure the media is optimized for fast loading.
 Vibration
-Notifications will be delivered via vibration if you switch on
-Optional
+Adds a vibration alert when the notification is received.
+Enhances visibility for users in noisy or muted environments.
+Can be enabled or disabled per campaign.
 Show in Push Inbox
-Send message to application inbox (needs integration, please refer to Developer Guide)
-Optional
+Requires SDK integration
+This option needs integration, please refer to Developer Guide. After you have integrated this option with your developers, you may choose this option on this step. 
+Once integrated, selecting this option allows the message to be stored in your app’s internal Push Inbox, enabling users to revisit it later.
+Use this feature for:
+Important announcements
+Time-sensitive content
+Summarized communications
 Opt-out Inbox Enabled
-Send message to all targeted users’ inbox regardless they are opt-in or not
-Optional
+Enables message delivery even to users who have opted out of push notifications. The message is silently delivered to the inbox without triggering a notification.
+Useful for:
+Critical updates
+Transactional information
 Don't Notify
-Your message will not be shown as notification. Use only for inbox.
-Optional
+If selected, the message will only appear in the push inbox and will not trigger an actual notification on the device.
+Use this to:
+Avoid disturbing the user
+Provide contextual messages inside the app
 Play Sound
-Notification are delivered with sound (needs integration, please refer to Developer Guide)
-Optional
+Requires SDK integration
+This option needs integration, please refer to Developer Guide. After you have integrated this option with your developers, you may choose this option on this step. 
+After setup, you can upload or select a custom sound to play when the notification arrives.
+Use distinct sounds for priority messages
+Ensure sound files meet platform requirements
 Disable Webhooks
-Message logs won’t be directed to application backend
-Optional
-Push Click Action
-Actions can be taken when the user clicks the notification
-Optional
-Fallback
-Scenarios can be created for the users that did not receive your notification (needs integration, please refer to Developer Guide)
-Optional
-Conversion Analytics
-Conversion event can be determined according to your aim
-Optional
-This allows you to categorize your messages based on your own predefined criteria or use case. For example, you might have categories such as "Promotions," "News Updates," "Account Notifications," or any other relevant labels that align with your messaging strategy. By assigning each notification to a specific category, you can quickly access and manage related messages at a glance. Whether you're sending promotional offers, important announcements, or transactional updates, Message Categories streamline your workflow and enhance your notification management. 
-The notification message is the main body of your notification and it's important to make it informative and engaging. This can include text and emojis to convey your message effectively. For instance, you could send a notification message to alert users of a low balance or unusual activity or use emojis to make a notification message more exciting and encourage users to visit the app for a special offer.
-You can use personalized messages to greet your users by their first name, or send them notifications about products or services that are specifically relevant to their interests or past behavior on your app. 
-By doing so, you can create a more personal connection with your users and make them feel valued, which can increase their loyalty to your brand. Additionally, you can use personalized messages to provide timely and relevant information to your users, such as weather updates, local news, or personalized reminders. This can help to increase the overall usefulness of your notifications, and make them more likely to be acted upon.
-Personalized message can be sent if you have profile attributes for users. You may do this by transferring user informations such as name, surname, age to Netmera. For instance,
-Default message: “Happy birthday!”
-Personalized message: “Wishing you a sweet {@age}th birthday {@name}!” becomes “Wishing you a sweet 26th birthday Simon!”
-Example:
-You may create personalized messages that include the user's name, fitness goal, and a reminder to log their workout. For example, a user named John who has set a goal to run a 5K might receive a message that says, "Hey John, time to lace up those shoes and hit the pavement to achieve your 5K challenge!" 
-When sending notifications, it's important to use a title that catches the user's attention and gives them a reason to engage with the message. You can use text and emojis to create a title that is both informative and attention-grabbing.
-If you have profile attributes for your users, you can personalize the title to create a more meaningful and impactful notification. By transferring user information such as name, surname, or location to Netmera, you can create a personalized title that will increase user engagement and ultimately lead to better retention and loyalty.
-For example, a retail app could use a personalized title such as "Hey [Name], we have a special offer for you!" to make the user feel valued and encourage them to check out the offer.
-Tips for Increasing Engagement:
-The notification body and title are crucial for grabbing users' attention and conveying the message effectively. Personalizing the title and body based on user profile information can increase engagement. By crafting effective titles and bodies and personalizing them when possible, you can create notifications that drive user engagement and achieve your business goals.
-Sub Text is a great way as it can give your users more information about the notification, such as a brief summary of what the notification is about or a clear call to action. It appears next to your application name and can help to provide more context to your users.
-Thumbnails are small images that appear next to the text in your notification. If you want to include a thumbnail for your Android or iOS notification, you can upload it from your computer or provide a URL. Please note that thumbnails do not expand when clicked or held, unlike the media added to your push notification.
-It allows you to include a small image or icon next to your notification text. This thumbnail can provide a visual cue to the user about the content of the notification, and can help your notification stand out from others. Additionally, if your notification appears in a list with other notifications, a thumbnail can make it easier for the user to quickly identify and distinguish your notification from others.
-Adding media URLs to your push notifications can make them more engaging and visually appealing. This can help to keep your users interested in your app and increase their engagement. If you want to include media in your Android or iOS notification, you can upload it from your computer or provide a URL. Please note that all notification types that include media require a media URL.
-Example:
-You may use media URLs in push notifications for Android and iOS platforms to showcase new products or services. By including an image of a new product or service as a media URL in a push notification, you can provide users with a visual preview of the item without requiring them to navigate to the app or website. This can help you to increase user engagement and ultimately drive more purchases.
-The vibration feature can add an extra layer of notification alert to your users. When turned on, users will receive notifications with a vibration, in addition to any sounds or visual cues.
-Needs Integration:
-This option needs integration, please refer to Developer Guide. After you have integrated this option with your developers, you may choose this option on this step. 
-This option allows you to send the notification message directly to your application's inbox. This is useful if you have a specific area in your app where users can view all their notifications in one place. By selecting this option, users can easily find and access the notification later on.
-With this option, you can send notifications to all users, regardless of whether they have opted-in to receive notifications or not. This can be useful in situations where you want to reach all users with an important message, even if they haven't explicitly opted-in to receive notifications.
-This feature is used when you don't want to send a notification to the user's device, but still want to send a message to their inbox. This is useful if you have an inbox feature in your app and want to communicate with users without interrupting their current activity.
-Needs Integration:
-This option needs integration, please refer to Developer Guide. After you have integrated this option with your developers, you may choose this option on this step. 
-This feature allows you to add a sound to your notification. You can upload a custom sound file to be played when the notification is received. Adding a sound to your notification can help grab the user's attention and make your message more noticeable.
-Disabling webhooks means that when a user interacts with your push notification, Netmera won't send any information about that interaction to your application backend via a webhook. This can be useful if you don't need to track user interactions or if you prefer to handle them in a different way, such as through Netmera's reporting dashboard. However, if you want to track user interactions in your own system, it's important to keep webhooks enabled so that you can receive that information in real-time.
-Push Click Action refers to the action that occurs when a user clicks on a push notification. Depending on the purpose of the notification, you can set up different click actions to redirect the user to a specific page or content within your app, or open the app itself. 
-This feature can be customized according to your app's needs and can greatly enhance the user experience. For example, if you are sending a notification about a new product, you can set the click action to redirect the user to that product page within your app, making it easier for them to explore and potentially make a purchase.
-Example:
-You may use push click actions to redirect users to a specific news story or category when they click on the notification. For example, if a breaking news story occurs, you can send a push notification that says "Breaking News: Major earthquake hits California" and set the click action to redirect users to the full news story in the app. This makes it easy for users to get the latest information on the event, without requiring them to navigate through the app. By using push click actions in this way, you can improve user engagement and make it easier for users to find the content they are interested in.
-The actions that can be executed when the users clicks on the push notification:
+When this option is enabled, any webhooks connected to the campaign are deactivated for this notification.
+This is useful when:
+Testing a message
+Sending isolated notifications that should not trigger backend workflows
+Push Click Actions
+The Click Action defines what happens when a user taps the notification. Each action allows you to create specific user journeys based on your campaign goals.
+
+Available Actions
+1. Open App:  
+   Opens the app's main screen. Suitable for general awareness messages.
+2. Show Web Page:  
+   Opens a specific URL in the device's browser. Useful for external content or promotions.
+3. Go to Deeplink:  
+   Navigates to a specific screen in the app using a deeplink URL. Ideal for contextual or personalized experiences.
+4. Show Custom Page:  
+   Displays an in-app landing page or message. Great for promos or targeted in-app content.
+5. Open Widget:  
+   Opens a widget already defined in your app. Widgets must be created in advance.
+6. Nothing:  
+   No action is taken. The notification is dismissed. Used for informational alerts.
+
 Open App
-Opens the home page of the application. It will take the user directly to the home page of the application. This can be useful for notifying users about new content or features within the app that they may be interested in.
+Opens the main screen or homepage of your app. Ideal for general engagement campaigns where no specific destination is required.
 Show Web Page
-This action allows you to open a web page with the given URL when the user clicks on the push notification. This can be useful for directing users to a specific web page or promoting a particular online campaign.
+Opens a web page in the device’s browser. A valid URL must be entered. Useful for:
+Redirecting users to campaign-specific landing pages.
+Linking to help center articles.
+Promoting time-sensitive offers.
 Go to Deeplink
-This option allows you to redirect users to a specific page or feature within your app. A deep link is a specific URL that can take the user directly to a specific content or section within your app.
-When you choose "Go to Deeplink" option, you can select a predefined deeplink from the list or enter a custom deeplink URL. This way, when the user clicks on the notification, they will be taken directly to the page or feature you have specified within the app.
-This feature can be particularly useful for promoting specific content or features within your app, as it provides a direct path for users to access them.
+Navigates users to a specific page or section within your app using a deeplink. This is recommended for personalized or feature-specific campaigns.
+You can choose from a list of predefined deeplinks or input a custom one.
+Deeplinks must be registered in your app’s routing system.
 Show Custom Page
-This feature allows you to create and display custom in-app messages or landing pages to your users when they click on your push notification. You can use templates or create your own custom pages for various purposes, such as surveys, app ratings, images, or any other content you would like to share with your users. This can help to increase user engagement and drive specific actions within your app.
+Displays a custom in-app page. Often used for:
+In-app promotional screens.
+Full-screen messages.
+Targeted announcements without navigating away from the app.
+Open Widget
+Triggers an in-app widget. Widgets must be created in advance and can be used to:
+Collect feedback.
+Display dynamic offers.
+Show embedded content directly.
+
+Example Use Cases:
+Surveys & Feedback Forms: Prompt users to complete a short survey or provide feedback.
+Live Reports & Dashboards: Show real-time analytics, personalized reports, or updates.
+Product Recommendations: Display items or content tailored to the user's interests.
+Gamification with Spin to Win: Engage users with gamified elements.
+Quick Actions: Enable users to complete actions like confirming appointments, redeeming offers, or checking their latest transactions.
+
 Nothing
-No action will be taken when the user clicks on the push notification. The notification will simply be dismissed and the user will stay on their current screen. This can be useful for notifications that do not require any immediate action from the user, but are more informational in nature.
-Setting user attributes or tags when a user clicks a push notification can be a powerful tool for personalization and targeted marketing. By using this feature, you can gather valuable information about your users and use it to tailor future messages to their specific needs and preferences. You may use set user attributes or tags to create targeted marketing campaigns for specific user groups.
-Example:
-If you send a push notification advertising a sale on men's clothing, you can set a user attribute or tag for users who click on the notification and browse the men's section of your app. This allows you to create a group of users who are interested in men's clothing, and target them with future promotions and discounts specifically for that category. By using user attributes and tags in this way, you can improve the effectiveness of your marketing campaigns and increase conversions.
-Needs Integration
-This option needs integration, please refer to Developer Guide. After you have integrated this option with your developers, you may choose this option on this step. 
+No action is triggered; the notification is dismissed. This is suitable for passive updates such as:
+Informational alerts.
+Background data sync confirmations.
+
+Add Custom Parameters
+Enhance push behavior with additional key-value data passed alongside the notification. These parameters can be read and interpreted by the app upon user click.
+1. Key:  
+   Parameter name (e.g., campaignId, source).
+2. Value:  
+   Corresponding value (e.g., spring2025, web).
+3. Action:  
+   Click "Add" to include the parameter.
+Example Use Cases:
+Open App → add type: promotion, id: 12345
+Show Web Page → add url: https://example.com/special
+
+Web Hook for Push Click
+When enabled, the WebhookClick event is triggered upon notification interaction. This allows your backend systems to log or respond to click events in real time.
+1. Web Hook:  
+   Select a webhook endpoint from your system.
+2. pushParameter:  
+   Pass additional data (e.g., campaign type, user ID, offer ID).
+Example Use Case:
+Click triggers a webhook that logs the event and updates CRM with user behavior context.
+
+Set User a Profile Attribute
+Updates user profile data upon click. This is useful for segmentation and campaign personalization.
+1. Attribute:  
+   Name of the attribute (e.g., Status)
+2. Value:  
+   New value to be assigned (e.g., Active)
+Example Use Case:
+Clicking a loyalty campaign updates LoyaltyStatus to Gold.
+
+Example Use
+Suppose you want to update a user's credit limit when they click on a push notification:
+Enter "CreditLimit" as the attribute name.
+Input the desired credit limit value in the text box.
+This configuration ensures that when the notification is clicked, the user's profile is updated with the new credit limit. It's like filling out a form to set someone's credit limit. When they press the button (click the notification), the limit gets updated automatically.
+Put User in a Tag
+This option allows you to assign a tag to the user. Tags are used to group users based on specific characteristics or behaviors. For instance, you might use tags like "VIP", "Newsletter Subscriber", or "Frequent Buyer".
+If the tag name you enter already exists, the user will be added to that existing tag rather than creating a new one.
+
+Fallback
 Fallback scenarios can be thought of as a backup plan in case your push notification fails to reach its intended audience. By creating a fallback scenario, you can ensure that users who do not receive your push notification can still receive the message through an alternative channel, such as SMS.
+Example Use Case:
+If the push is undelivered within X minutes, an SMS is sent with similar content.
+
+Label
+Campaign labels allow internal users to organize and filter campaigns more effectively. Unlike tags or attributes, labels are for internal tracking and do not affect segmentation or targeting.
+Example Labels:
+New Users
+Promo_May2025
+Onboarding_Step1
+Use labels to streamline campaign reporting and searchability, especially for teams managing high campaign volumes.
+
+Conversion Analytics
+Measure post-click behavior by setting conversion events. Helps quantify the impact of your notification campaign.
+1. Purchase Event:  
+   Track how many users bought after clicking.
+2. Registration Event:  
+   Measure new signups triggered by the notification.
+3. View Content:  
+   See if users viewed a specific screen or item.
+Multiple events can be tracked per campaign.
+Data is available in real-time on the Netmera Dashboard.
+
+Control Group
+The Control Group option enables data-backed performance evaluation. A selected percentage of your audience is excluded from the push to compare outcomes.
 Example:
-You may use fallback scenarios to ensure that important notifications are received by all users, even if they do not have the app open. For example, if you send a push notification to remind users about an upcoming bill payment, you can create a fallback scenario that sends an SMS message to users who did not receive the push notification. This ensures that all users receive the reminder, even if they are not actively using the app. By using fallback scenarios in this way, you can improve user engagement and ensure that important information is always communicated effectively to your users.
-Labels are an optional feature that allows panel users to tag their campaigns with specific labels for organizational purposes. Labels can be used to categorize campaigns and make it easier to search for and analyze campaign performance in reporting pages. For example, if you have multiple campaigns targeting different user segments, you can label each campaign accordingly (e.g. "New Users", "Retargeting", "Holiday Sale") to quickly filter and compare results. Labels are not required but can be a helpful tool for managing and optimizing your campaigns.
-Labels are used for organizing and searching campaigns in the reporting pages, while setting attributes and tags is used for collecting and storing user data and segmentation.
-When you set attributes or tags, you are defining user data that will be used to personalize notifications, create segments, and trigger automation campaigns. For example, you can set attributes such as age, location, or language, and then target users based on those attributes.
-Labels, on the other hand, are used for organizing campaigns and do not impact the user data or segmentation in any way. They are simply a way to group campaigns based on specific criteria, making it easier to find and analyze them in the reporting pages.
-Example:
-You may use labels to organize and search for campaigns in your reporting page. For example, if you have multiple campaigns running simultaneously, you can assign specific labels to each campaign based on the campaign type, target audience, or other relevant criteria. This allows you to easily search for and view data on specific campaigns in your reporting page, improving the overall efficiency of your marketing efforts. By using labels in this way, you can more effectively manage your campaigns and optimize your marketing strategy.
-Conversion Analytics is a feature that allows you to track user behavior and measure the effectiveness of your campaigns by monitoring specific events that occur after a user interacts with your push notification.
-For example, if you want to track how many users made a purchase after receiving a notification about a sale, you can set a conversion event called "Purchase" and track how many users clicked the notification and then made a purchase. This helps you to understand the ROI of your push notification campaigns and make data-driven decisions for future campaigns.
-You can set multiple conversion events for a single campaign and track different user behaviors, such as app installs, sign-ups, or content views. Netmera provides conversion tracking for both Android and iOS platforms and allows you to view conversion data in real-time in the Netmera dashboard.
-Example:
-You may use conversion analytics to track user behavior and optimize your sales funnel. For example, by selecting the "PaySuccess" conversion event, you can track the number of users who clicked a push notification and then completed a payment transaction. This allows you to measure the effectiveness of your push notifications and identify opportunities to improve your sales funnel.
- "Use control group to calculate conversion %" 
-In the Netmera Panel, the Control Group option allows you to choose a specific percentage of your target audience for comparison in a campaign you intend to send. When this option is activated, the selected percentage of your audience, known as the "control group," does not receive a push notification, while the rest of the audience does.
-Control Group Example:
-In the context of a control group, consider a scenario with a total audience of 100,000. Upon activating the control group option and setting a percentage, for instance, 1%, a push notification is not sent to a randomly selected 1% of this audience. Subsequently, push notifications are delivered to the remaining 99,000 users.
-In the reports, the conversion difference between the 99,000 who received the push notifications and the 1,000 in the control group who did not receive them is analyzed. This enables an assessment of the effectiveness of the push notification by comparing the outcomes of those who received it against those who did not, providing valuable insights into the impact of the notification on user behavior.
-a. Small Icon 
-24×24 - 96×96 to fit all device sizes. Must be white with a transparent background. PNG.
-b. Title (Title)
-Restricted to 50 characters.
-c. Body (Notification Message)
-Restricted to 150 characters.
-d. Large Picture (Android/iOS Media URL)
-1440×720 or 2:1 aspect ratio. PNG, JPG, GIF (not animated).
-e. App Name
-Can't be changed.
-f. Time Stamp
-Time message received.
-g. Icon (Android/iOS Thumbnail)
-192×192 or larger. PNG, JPG, GIF (not animated).
-h. Action Buttons  (Settings->Button Sets)
-Supports up to 3 buttons can be edited in Settings -> Button Sets
-Last updated 3 months ago
-Was this helpful?
+Out of 100,000 users, setting a 1% control group sends the push to 99,000. The behavior of the 1,000 unnotified users is compared against the recipients.
+Use control groups to attribute campaign impact with higher confidence.

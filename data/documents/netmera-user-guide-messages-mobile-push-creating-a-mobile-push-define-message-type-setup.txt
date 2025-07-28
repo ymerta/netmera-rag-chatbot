@@ -1,12 +1,36 @@
-In this page we're going to discover the first step of launching your notification!
-When you click the "Create New Campaigns" button located on the right side of the Campaigns Dashboard page, a new campaign creation screen will open. 
-On this screen, you will be guided through a series of steps, including Setup, What, Who, When, and GO to configure various aspects of the campaign, such as the target group, delivery time, and more. Once you have completed these steps, you can access all the information related to the message created in the GO stage, and after testing with test devices, you can send it for Approval Admin approval.
-Setup section is the first step in the Create New Campaign process, where you can set a name for your campaign in the "Campaign Name" section. You can also determine the type of campaign you want to create, such as push notification, web push, SMS, or email, in the "Campaign Type" section.  For mobile push notification, on this step you are going to choose Push Notification type to continue editing your notification for mobile.
-On the right side of the Campaign Type section, you can see the estimated number of users and devices that the message can reach, broken down by iOS and Android platforms, as well as the total number of potential recipients. This information provides you with valuable insights into the reach of your campaign across different platforms.
-Estimated Reach Tips:
-By using the estimated reach feature, you can see the number of users and devices that your message can potentially reach on both iOS and Android platforms. This information helps you understand the potential impact of your campaign and adjust your messaging or target audience if necessary. 
-For example, if you see that your campaign has a higher estimated reach on iOS compared to Android, you may want to adjust your messaging to better appeal to iOS users. 
-Additionally, by understanding the total number of potential recipients, you can better plan and allocate resources for your campaign. By using this feature, you can make data-driven decisions about your push notification campaign and improve its overall effectiveness.
-To read more about Campaign Types visit Types of Push Notifications. 
-Last updated 5 months ago
+
+Define Message Type Setup
+The Setup step defines the general information and initial configuration of the campaign.
+Campaign Name
+In the Campaign Name field, enter a unique and descriptive name to identify your campaign.
+This name will appear in dashboards and reports, so choose something relevant and easy to recognize.
+Campaign Type
+In the Campaign Type dropdown, select the type of message you want to send. Available types include:
+Push Notification (mobile apps)
+Web Push (web browsers)
+SMS
+Email
+For mobile app messaging:
+Select Push Notification to proceed with configuring a push notification campaign for iOS and/or Android devices.
+
+Estimated Reach
+Located to the right of the Campaign Type section, the Estimated Reach panel provides a real-time overview of how many users your campaign can potentially reach.
+Breakdown Includes:
+Total Devices: Combined reach across platforms.
+iOS Devices: Number of iOS users/devices eligible to receive the campaign.
+Android Devices: Number of Android users/devices eligible to receive the campaign.
+
+Tips for Using Estimated Reach
+This feature helps you assess your campaign’s reach and scope before sending.
+Use the breakdown to determine if your message needs platform-specific adjustments.
+Example: If iOS users make up a larger portion of your audience, consider tailoring content or visuals accordingly.
+By understanding the total estimated audience size, you can better:
+Allocate internal or external resources
+Align timing with peak engagement hours
+Evaluate whether to A/B test for certain segments
+Previous
+Creating a Mobile Push
+Next
+Define Notification Content: What
+Last updated 1 month ago
 Was this helpful?

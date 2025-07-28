@@ -1,0 +1,97 @@
+mprove the User Experience by Delivering Timely Information
+Quick Steps Guidelines
+Messages > Transactional > Create New Transactional Message
+Access the Transactional Messages Section: Navigate to the "Messages" section in the menu. Select the "Transactional" option.  Click on the "Create new transactional" button. Choose between text or image options for the Web Transactional Push.
+Configure Message Content: Proceed to the "What" section and fill in the required message details.
+API & Configuration: Move on to the "API & Config" section.
+Send a Push: Use the provided sample code in Postman for sending a transactional push.
+Understanding Transactional Push
+ Transactional Push messages serve a  role in delivering crucial information, updates, and notifications directly linked to your users' interactions with your platform. These notifications, facilitated through backend integration, offer customization options and target specific recipients. Typically automated and immediate, these messages are triggered by user actions or behaviors, providing essential information or confirmations related to a transaction. They contribute to improving the overall user experience by delivering timely and pertinent information to customers. Examples of transactional notifications include order confirmations, shipping updates, appointment reminders, and password reset emails.
+
+Web Transational Push
+The primary purpose of the Web Transactional Push feature is to establish a seamless and highly personalized communication channel between your platform and end-users. This functionality enables the timely delivery of transactional messages, contributing significantly to the enhancement of the overall user experience.
+For instance, it allows you to deliver specific updates, confirmations, or notifications directly relevant to individual user interactions, creating a more engaging and user-centric communication experience. This ensures that each user receives timely and personalized information, contributing to an enhanced overall user journey on your platform.
+Sending a Web Transactional Push
+Follow the steps outlined below to successfully create and send a Web Transactional Push:
+Step 1: Setup
+Messages > Transactional > Create New Transactional Message
+Navigate to the "Messages" section in the menu and select the "Transactional" option. This initial step provides access to the platform's transactional messaging features. Click on the "Create New Transactional Message" button. This action initiates the process of generating a new transactional push, allowing you to define the parameters and content of the message. 
+
+Choose between the available options, including text, image, or adding buttons, to define the message type for your Web Transactional Push. This step allows you to customize the visual and interactive elements of your message, tailoring it to the specific needs of your communication strategy.
+Text: When selecting the "Text" option for your Web Transactional Push, you are choosing to convey your message through written content. This can include informative text, announcements, or any other textual information relevant to the transaction or interaction with the user.
+Image: Opting for the "Image" option allows you to incorporate visual elements into your Web Transactional Push. This could be graphics, pictures, or illustrations that complement and enhance the message you want to convey. Visual content can be a powerful way to capture user attention and convey information more effectively.
+Add Buttons (Interactive): Choosing to "Add Buttons" introduces interactive elements to your Web Transactional Push. Buttons enable users to take specific actions directly from the notification. For example, you can include buttons for "View Details," "Confirm," or other relevant calls-to-action. This interactive feature enhances user engagement by providing a quick and convenient way for users to respond to or interact with the message.
+
+Summary of "Users can be reached" & "Devices can be reached"
+On the right-hand side of the interface, you will find a summary detailing the reachability metrics for both users and devices. This information provides an overview of the potential impact and coverage of your Web Transactional Push.
+Users can be reached: This metric indicates the number of users within your target audience who can receive the transactional push. It considers factors such as user preferences, opt-in settings, and other criteria that determine the reachability of your message.
+Devices can be reached: This metric outlines the number of devices capable of receiving the Web Transactional Push. It encompasses various devices such as smartphones, tablets, or desktops, ensuring that your message is compatible and accessible across a range of platforms.
+Step 2: What
+In this step, you are required to fill in the essential information for your notification. This includes the specific details that will be presented to users when they receive the push notification. Here's a breakdown of the information you need to provide:
+Notification Message
+The notification message is the main body of your notification and it's important to make it informative and engaging. This can include text and emojis to convey your message effectively. For instance, you could send a notification message to alert users of a low balance or unusual activity or use emojis to make a notification message more exciting and encourage users to visit the app for a special offer.
+Personalized Message
+You can use personalized messages to greet your users by their first name, or send them notifications about products or services that are specifically relevant to their interests or past behavior on your app. 
+By doing so, you can create a more personal connection with your users and make them feel valued, which can increase their loyalty to your brand. Additionally, you can use personalized messages to provide timely and relevant information to your users, such as weather updates, local news, or personalized reminders. This can help to increase the overall usefulness of your notifications, and make them more likely to be acted upon.
+Personalized message can be sent if you have profile attributes for users. You may do this by transferring user informations such as name, surname, age to Netmera. For instance,
+Default message: “Happy birthday!”
+Personalized message: “Wishing you a sweet {@age}th birthday {@name}!” becomes “Wishing you a sweet 26th birthday Simon!”
+Title
+When sending notifications, it's important to use a title that catches the user's attention and gives them a reason to engage with the message. You can use text and emojis to create a title that is both informative and attention-grabbing.
+Icon URL
+The "Icon URL" is where you can specify the URL of the thumbnail image that will appear alongside the notification text. This image  serves as a quick visual identifier for the notification. It is a small image or logo that represents your brand or the content of the notification. Adding an icon URL can make your web push notification more visually appealing and help it stand out to your users.
+User Interaction Required (Chrome Only)
+This option is only available for Google Chrome users and allows you to make the push notification stay visible until the user interacts with it, such as clicking on it or dismissing it manually. This can be useful if the notification contains important information that you want to make sure the user sees before it disappears. Therefore, by enabling this section, you can make your web push notification persistent until the user interacts with it.
+
+Push Button (Chrome Only)
+This option is also only available for Google Chrome users and allows you to add a button set to your web push notification. The button sets provide predefined actions that the user can take, such as accepting or rejecting an offer or adding an event to their calendar. This can help to increase user engagement and encourage them to take specific actions. The possible button sets may be "Accept/Reject", "Add to Calendar/Dismiss", and "Snooze/Dismiss".
+To understand how to create button sets, you may visit: Button Sets.
+Disable Webhooks
+Disabling webhooks means that when a user interacts with your push notification, Netmera won't send any information about that interaction to your application backend via a webhook. This can be useful if you don't need to track user interactions or if you prefer to handle them in a different way, such as through Netmera's reporting dashboard. However, if you want to track user interactions in your own system, it's important to keep webhooks enabled so that you can receive that information in real-time.
+
+Push Click Action
+Show Web Page: This option directs users to a specific web page when they click on the push notification.
+Go to Deeplink: Alternatively, you can choose this option to navigate users to a custom Deeplink, providing a more dynamic and personalized experience. Please see our documentation onWeb Transactional Push Deeplink for further information about how to add custom deeplinks.
+Fallback (SMS/Call External URL)
+SMS Fallback Needs Integration:
+This option needs integration, please refer to Developer Guide. After you have integrated this option with your developers, you may choose this option on this step. 
+Fallback scenarios can be thought of as a backup plan in case your push notification fails to reach its intended audience. By creating a fallback scenario, you can ensure that users who do not receive your push notification can still receive the message through an alternative channel, such as SMS or Calling an External URL.
+
+Conversion Analytics
+The Label and Conversion Analytics features are both used to help track and analyze the performance of your campaigns, but in different ways.
+Conversion Analytics allows you to track specific user actions that result from your campaigns. For example, you can track how many users made a purchase or completed a sign-up form after clicking on your notification. This can help you measure the effectiveness of your campaigns and make data-driven decisions to optimize future campaigns.
+Conversion event can be determined according to your aim to have the user do. For instance, “the number of users who clicked the notification made a payment transaction” can be tracked by selecting “PaySuccess” conversion event.
+Control Group
+ "Use control group to calculate conversion %" 
+In the Netmera Panel, the Control Group option allows you to choose a specific percentage of your target audience for comparison in a campaign you intend to send. When this option is activated, the selected percentage of your audience, known as the "control group," does not receive a push notification, while the rest of the audience does.
+Control Group Example:
+In the context of a control group, consider a scenario with a total audience of 100,000. Upon activating the control group option and setting a percentage, for instance, 1%, a push notification is not sent to a randomly selected 1% of this audience. Subsequently, push notifications are delivered to the remaining 99,000 users.
+In the reports, the conversion difference between the 99,000 who received the push notifications and the 1,000 in the control group who did not receive them is analyzed. This enables an assessment of the effectiveness of the push notification by comparing the outcomes of those who received it against those who did not, providing valuable insights into the impact of the notification on user behavior.
+
+Step 3: API & Config
+Once the configuration is complete, send the request within Postman. This action will trigger the process of sending the transactional push, utilizing the specified parameters in the sample code. Through these steps, you can effectively use Postman to test and confirm the successful delivery of the push notification.
+Message Key 
+It is a unique identifier or Message ID that is used to distinguish your message from other messages in the system. It is an important component of the transactional message API and is necessary to ensure that the message is sent and received correctly.
+Message Parameters
+They are the profile attributes or user data that you used in your message. These parameters can be customized and personalized to provide a more relevant and engaging message to the user. For example, you can include the user's name, account information, or other details that are specific to the user.
+Allow API to override any of message settings 
+It allows API users to override the default settings of a message while sending it through the API. This means that if this option is enabled, the API user can specify different settings for the message than what is set as default in the message settings.
+Tip:
+When "Allow API to override any of message settings" is activated, if a message is set to be sent at a specific time with a certain message content and user targeting, the API user can override any of these settings and specify a different time, message content, or user targeting when sending the message through the API. This provides flexibility and customization options for API users who may have specific requirements for sending messages to their users.
+Sample Request 
+It is a test API request that can be made to send the message. This is useful for testing and debugging purposes and allows you to ensure that the message is being sent correctly before sending it to a larger group of users.
+Sample Response
+It is the API response that is returned after the sample request is made. It contains information about whether the message was sent successfully or if there were any errors or issues that need to be addressed.
+Tip:
+Transactional push notifications are not part of a campaign, but rather individual messages triggered by a specific user action or event. These types of notifications are usually time-sensitive and highly personalized, and their delivery is not based on a predefined campaign schedule. Therefore, there is no need to set a campaign period for them. Instead, transactional push notifications are typically sent as soon as possible after the triggering event occurs.
+Ignore User Message Limits: This option allows you to bypass any pre-set message limits that a user may have on their device. For instance, if a user has disabled push notifications for your app or has set a limit on the number of messages they can receive, selecting this option will ensure that your message is still delivered to the user.
+Total Limit: This option allows you to set a maximum limit for the number of push notifications that will be sent out for a particular campaign. This can help to prevent your users from feeling overwhelmed by too many messages, and can also help to ensure that your messaging remains effective and targeted.
+Limit: This option allows you to set a limit on the number of push notifications that will be sent to an individual user within a specified time period. For example, you may choose to limit the number of messages sent to a user to one per day or one per week, depending on the nature of your messaging campaign.
+Push Time Restriction: This option allows you to set specific time periods during which push notifications can be sent to users. For instance, you may choose to restrict messaging to business hours only, or to certain days of the week. This can help to ensure that your messages are delivered at the most appropriate times, and can also help to prevent users from receiving messages at inconvenient times.
+
+Step 4: GO!
+Once you have completed all four steps, you can access all the information related to the message created in the GO stage.
+Test on Device
+On the right side of the page you can see how the push would look like on target devices. Before launching your notification, you may test your notification on your registered test devices or only on your own test device which can be edited in Settings -> Test Devices. You may visit Test Devices page for more information on how to add a test device.
+
+After creating the campaign, you will find it listed in the campaigns section. This allows you to easily locate and manage the campaigns you've initiated. The campaign list provides a comprehensive overview of your active campaigns, enabling efficient monitoring and tracking of their performance. 

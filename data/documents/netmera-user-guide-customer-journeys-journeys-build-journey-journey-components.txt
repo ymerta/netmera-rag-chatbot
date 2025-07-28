@@ -1,0 +1,122 @@
+Journey Components
+Fundamental Building Blocks
+State Components
+State components are fundamental building blocks in user engagement automation workflows. They help in defining the flow and timing of actions based on specific triggers and conditions. These components are essential for creating dynamic, personalized journeys that respond to user behavior and system events, ensuring timely and relevant interactions.
+
+On Event
+This component triggers an action based on a specific event occurring, such as a user action or a system event. It is ideal for scenarios where specific user behavior (e.g., making a purchase, logging in) should prompt subsequent steps in the journey.
+
+Use Cases:
+User Registration: Activate an automated welcome sequence that offers a personalized tour of the platform, highlights key features, and suggests initial actions to get started.
+Purchase Completion: Automatically send a confirmation email with transaction details, followed by personalized product recommendations and an invitation to join a loyalty program.
+Feedback Submission: Trigger a thank-you message and a follow-up survey to gather more detailed insights, enhancing user engagement and loyalty.
+Example Scenario:
+Automated Welcome Sequence: When a new user signs up for an online learning platform, the "On Event" component triggers a welcome email that introduces the user to the course catalog, suggests relevant courses, and offers a discount on the first purchase. This sequence helps in acclimating the user to the platform and encourages initial engagement.
+Delay
+This component introduces a time-based delay before proceeding to the next step in the journey. It is suitable for pacing the journey, ensuring there is a controlled time gap between interactions.
+
+Use Cases:
+Follow-Up Reminders: Insert a 24-hour delay to send a gentle reminder to users who abandoned their shopping carts, encouraging them to complete their purchase.
+Drip Campaigns: Space out a series of educational emails over several days to avoid overwhelming the user and to ensure gradual learning.
+Event-Based Notifications: Delay sending a reminder email a week before an upcoming event to increase attendance and participation.
+Example Scenario: 
+Cart Recovery Campaign: If a user adds items to their cart but doesn't complete the purchase, the "Delay" component waits 24 hours before sending a reminder email. If the user still hasn’t completed the purchase after another 48 hours, a second email offering a discount is sent to incentivize the purchase.
+Attribute Wait (Coming Soon)
+This component delays the journey until a particular user attribute reaches a specified condition, useful for personalized targeting where actions depend on user profile changes.
+Use Cases:
+Subscription Activation: Wait until a user's subscription status updates to ‘active’ before sending a welcome package or access details to premium content.
+Milestone Achievements: Delay further communications until a user achieves certain milestones, like completing a tutorial or reaching a usage threshold, to send congratulatory messages or rewards.
+Profile Completeness: Hold off sending specific offers or communications until the user’s profile is fully completed.
+Example Scenario: 
+Enhanced Onboarding: After a user registers for a fitness app, the journey waits until the user's subscription status changes from ‘pending’ to ‘active’ before sending a welcome email that includes personalized workout plans and tips on getting started.
+On Interaction (Coming Soon)
+This component triggers the next step based on user interactions with previous steps, effective for reactive journeys where subsequent actions depend on user engagement.
+Use Cases:
+Email Engagement: If a user opens an email and clicks on a link, trigger a follow-up action such as sending additional resources or exclusive content.
+In-App Behavior: Trigger messages or actions based on in-app behavior, like completing a tutorial or making an in-app purchase.
+Survey Participation: Depending on the user's response to a survey, follow up with personalized messages or offers.
+Example Scenario: 
+Interactive Learning Path: During an online course, users receive an email with a link to an assessment quiz. If they complete the quiz, the "On Interaction" component triggers a follow-up email with feedback and next steps. If they don’t interact, a reminder email is sent encouraging them to complete the quiz.
+Branch Components
+Branch components are essential for creating personalized and adaptive user journeys. By segmenting and branching based on user attributes, behaviors, and interactions, these components allow marketers to tailor experiences to different user groups, optimizing engagement and outcomes.
+
+User Branch
+This component splits the journey based on user segments or demographic data, allowing for targeted actions based on user characteristics. It is useful for creating separate paths for different user groups (e.g., new users vs. returning users).
+
+Use Cases:
+New vs. Returning Users: Create distinct journeys for new users who need onboarding and returning users who need re-engagement.
+Demographic Targeting: Tailor communications based on demographic data such as age, location, or gender for increased relevance.
+Behavioral Segmentation: Differentiate paths based on user behaviors, such as frequent shoppers versus occasional buyers, to optimize engagement strategies.
+Example Scenario: 
+E-Commerce Personalization: An e-commerce platform uses the User Branch component to create distinct journeys for new users and returning users. New users receive a series of onboarding emails with a welcome discount, while returning users get personalized product recommendations based on their past purchases.
+Check Interaction
+This component branches the journey based on whether a user interacted with a previous push notification or campaign that was sent before the journey creation step. It allows for creating conditional flows where subsequent actions depend on prior user engagement, ensuring that follow-up communications are relevant and timely. 
+
+Note:
+The Check Interaction component branches the journey based on user engagement with a push notification or campaign that was sent before the journey creation. This component is useful for creating conditional flows that adapt based on prior actions, ensuring personalized follow-ups.
+The upcoming On Interaction component will trigger the next step within the journey based on real-time interactions with previous steps by checking engagement with the push messages planned within the journey. 
+If you would like to target push interactions set within the journeys, we recommend using the On Interaction component, which will be available soon.
+Use Cases:
+Push Notification Engagement: Branch the journey based on whether the user interacted with a previous push notification. Users who engaged can be sent additional content or exclusive offers, while those who did not engage can receive a follow-up push or alternative communication.
+Campaign Participation: Determine follow-up actions based on whether a user engaged with a previous campaign. Tailor subsequent emails or messages to reflect their level of participation.
+App Content Interaction: Trigger different follow-up actions based on whether a user interacted with specific in-app content or previous notifications, ensuring personalized user journeys.
+Example Scenario: 
+Event Follow-Up: After sending a push notification inviting users to a webinar, use the Check Interaction component to branch the journey. Users who opened the notification and registered for the webinar receive a thank-you email with event details, while those who did not interact with the push notification receive a reminder notification with additional information to encourage sign-up.
+Variants
+This component enables A/B testing by creating variants of a particular journey step to test different scenarios or messages. It is ideal for optimizing journeys by testing different versions of a message or action to see which performs better.
+
+Use Cases:
+Email Campaign Testing: Test different subject lines or email content to determine which version yields higher open or click-through rates.
+Push Notification Variants: Evaluate the effectiveness of different push notification messages to see which prompts more app engagement.
+Landing Page Experiments: Experiment with various landing page designs to see which one drives more conversions or sign-ups.
+Example Scenario:
+Promotional Campaign Optimization: For a promotional campaign, use the Variants component to test two versions of an email: one with a discount offer and another with a free shipping offer. Analyze the results to determine which incentive drives more sales and then implement the more effective strategy in future campaigns.
+Action Components
+
+Update Profile
+This component updates the user's profile with new information or attributes. It helps in keeping user data current and relevant, ensuring personalized content and actions.
+Use Cases:
+Collecting User Preferences: Automatically update a user's profile after they select preferences for content or product categories.
+Tracking Subscription Status: Update user profiles when they subscribe or unsubscribe from newsletters or service updates.
+Loyalty Program Updates: Update points or tier levels in a user's profile based on purchases or interactions.
+Example Scenario:
+Update Profile After Purchasing: When a user makes a purchase, the Update Profile component adjusts their loyalty points. This ensures that their current loyalty tier is up-to-date, allowing the user to access new benefits or rewards immediately.
+
+Send Mobile Push
+This component sends a push notification to the user's mobile device. It is effective for real-time communication, nudging users with timely and relevant messages.
+Use Cases:
+Event Reminder: Send a push notification reminding users of an upcoming event or promotion they've shown interest in.
+Re-engagement: Encourage inactive users to return by offering personalized incentives or updates.
+Transactional Updates: Notify users of important changes, such as shipping confirmations or payment issues.
+Example Scenario:
+User Retention Case: A fitness app uses the Send Mobile Push component to remind users about their scheduled workout session, encouraging them to attend and stay engaged with the app.
+
+In App Message
+This component displays a message within the app when the user is active. It is ideal for engaging users directly within the app to provide information, prompts, or offers.
+
+Use Cases:
+Feature Highlight: Showcase a new or underused feature to increase user engagement.
+Real-Time Promotion: Display a limited-time offer directly within the app when the user is most active.
+Survey Prompt: Prompt users to provide feedback about their app experience or purchase via an in-app message.
+Example Scenario:
+Limited-Time Sale: An e-commerce app uses the In-App Message component to promote a limited-time sale while users are browsing, displaying a personalized discount to encourage immediate purchase.
+Fire Event
+This component triggers a custom event within the journey. It is useful for logging specific actions or triggering other integrated systems based on events within the journey.
+
+Use Cases:
+Logging Key Interactions: Track when users complete significant actions, like making a purchase or visiting a key page.
+Trigger External Systems: Activate workflows in external platforms (e.g., CRM or marketing automation) when users perform specific actions.
+Event-Based Targeting: Use logged events to personalize future interactions within the journey, such as offering rewards after a milestone.
+Example Scenario:
+User Action Follow-Ups: A music streaming app uses the Fire Event component to log when a user creates a new playlist. This event triggers a follow-up process that suggests similar playlists based on the user's music preferences.
+Send E-Mail
+This component sends an email to the user. It is suitable for broader communication needs, such as newsletters, promotions, or transactional messages.
+
+Use Cases:
+Welcome Series: Send an automated series of onboarding emails to new users, introducing them to key features.
+Promotional Offers: Email users with time-sensitive offers or discounts to boost engagement or conversions.
+Transactional Updates: Automatically send order confirmations, payment receipts, or shipping updates to users.
+Example Scenario:
+Order Confirmation Mail: An online retailer uses the Send E-Mail component to deliver an order confirmation email, including estimated delivery dates and tracking information, right after a user completes a purchase.
+
+By comprehensively understanding these components, users can effectively design and manage their user engagement journeys, ensuring they are tailored to specific user behaviors and attributes, thereby enhancing overall engagement and personalization.

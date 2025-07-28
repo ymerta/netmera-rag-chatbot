@@ -1,34 +1,45 @@
+Design Guide
 From mobile operating systems like Apple iOS and Google Android to diverse web browsers and smart devices, push notifications have gained widespread acceptance. Each platform's unique requirements for text, images, headers, and display mechanisms, designing effective notifications can be a nuanced endeavor. To simplify this process, we've compiled a comprehensive guide tailored to the specific needs of each platform, ensuring your push notifications effectively engage your audience.
+Netmera Push Notifications Image / Video Guides
 Images for media push notifications can be added in the What step by entering the URL of the image to Android Media URL and IOS Media URL text fields seperately or uploading the media files from the device. gif and video formatted media pushes are only supported by IOS devices.
+
+Add Media
+Image
+iOS
+Android
 Filetypes
 Recommended:  jpg, jpeg, png, gif  
 Recommended: jpg, jpeg, png    
 Resolution
 Recommended: 2:1 aspect ratio landscape 
-
 Common Sizes: 512x256px
                           1440x720px 
-
 Min Width: 300 pixels
 Max Width: 4096 pixels
 Recommended: 2:1 aspect ratio landscape 
-
 Common Sizes: 512x256px
                           1440x720px 
-
 Min Width: 300 pixels
 Max Width: 2000 pixels 
+Supported Video File Types for iOS Media URL
 Video formatted media pushes are only supported for IOS devices.
+Video
+Supported file types
+Maximum size
 Video
 MPEG
 MPEG-2
 MP4
 AVI
-50 MB
+5 MB
+Netmera Widget Image Sizes
 Determining the ideal image size for widgets is a flexible process as there are no strict requirements as your widgets can be customized to fit various resolutions and dimensions. You may use the appropriate image size widgets can be prepared with resolutions adjusted to the desired dimensions.
+
 Tips for Full-Width Image Widgets:
 If you prefer a full-width display, aligning the widget size with the image size can be a suitable approach by setting the widget size equal to the image size. This flexibility ensures that you can tailor widget images to your specific needs.
+2023 Updates and Other Platform Requirements
 With the release of iOS 16.4, web app push notifications have become available for users across various browsers, including Safari, Google Chrome, and Edge. These notifications function similarly to traditional push notifications, providing updates and alerts from specific websites. It's important to note the following key points:
+
 Browser Icon
 The icon that is initially defined in the manifest and cannot be edited for individual messages.
 Title
@@ -39,6 +50,9 @@ App Name
 App name as saved in the Web Application Manifest (non-editable).
 Message Text
 120-150 characters (before truncation).
+Web Push
+Chrome for macOS Monterey
+
 a. Browser Icon
 Chrome icon. This can’t be changed.
 b. Title
@@ -52,6 +66,8 @@ Restricted to 120-150 characters.
 f. Action Buttons
 Supports up to 2 buttons.
 Note that character restrictions vary depending on if an icon is present and the characters used.
+Firefox for macOS Monterey
+
 a. Browser Icon
 Firefox icon. This can’t be changed.
 b. Title
@@ -65,12 +81,16 @@ Restricted to 120-150 characters.
 f. Action Buttons
 Supports up to 2 buttons.
 Note that character restrictions vary depending on if an icon is present and the characters used.
+Safari for macOS Monterey
+
 a. Icon
 This is set once and can’t be changed per individual message. Must be 256×256. PNG, JPG, GIF (not animated).
 b. Title
 Restricted to 60-80 characters.
 c. Content
 Restricted to 120-150 characters.
+Chrome for Windows 11
+
 a. Banner Image
 360×180 or 2:1 aspect ratio. PNG, JPG, GIF (not animated).
 b. Browser + Browser Icon
@@ -90,6 +110,8 @@ Restricted to 120 characters.
 i. Domain
 Website user is subscribed to. Can’t be changed.
 Windows offers the most screen real estate for imagery, with both the banner image and icon on display.
+Microsoft Edge for Windows 11
+
 a. Banner Image
 360×180 or 2:1 aspect ratio. PNG, JPG, GIF (not animated).
 b. Browser + Browser Icon
@@ -108,6 +130,8 @@ h. Content
 Restricted to 120 characters.
 i. Domain
 Website user is subscribed to. Can’t be changed.
+Firefox for Windows 11
+
 a. Browser + Browser Icon
 Can’t be changed.
 b. Icon
@@ -123,6 +147,8 @@ Restricted to 120 characters.
 g. Domain
 Website user is subscribed to. Can’t be changed.
 Note that Firefox on Windows 11 does not have a banner image or action buttons like Chrome and Edge.
+Chrome for Android 12
+
 a. Badge
 72×72 or larger. Must be white with a transparent background. PNG.
 b. Title
@@ -141,6 +167,9 @@ h. Icon
 192×192 or larger. PNG, JPG, GIF (not animated).
 i. Action Buttons
 Supports up to 2 buttons.
+Mobile Push
+iOS 15 Native
+
 a. App Icon
 Uses the app’s default icon and can’t be changed.
 b. Rich Media
@@ -154,6 +183,8 @@ Restricted to 150 characters.
 f. Action Buttons
 Supports up to 4 buttons.
 iOS also has support for a subtitle. Note that unlike Android, iOS currently has no support for web push, but we suspect iOS web push support may be coming soon.
+Android 12 Native
+
 a. Small Icon
 24×24 – 96×96 to fit all device sizes. Must be white with a transparent background. PNG.
 b. Title
@@ -170,7 +201,10 @@ g. Icon
 192×192 or larger. PNG, JPG, GIF (not animated).
 h. Action Buttons
 Supports up to 3 buttons.
+Older Web Operating Systems 
 Now we’ll look at previous versions of these operating systems (macOS Big Sur, iOS 14, Android 11) for reference.
+Chrome for macOS Big Sur
+
 a. Browser Icon
 Chrome icon. This can’t be changed.
 b. Title
@@ -188,6 +222,8 @@ g. Icon
 h. Action Buttons
 Supports up to 2 buttons.
 Note that character restrictions vary depending on if an icon is present and the characters used. The main differences between macOS Big Sur and its predecessors is that messages can be expanded with a larger icon and the browser icon is smaller, allowing more room for content.
+Firefox for macOS Big Sur
+
 a. Browser Icon
 Firefox icon. This can’t be changed.
 b. Title
@@ -205,6 +241,8 @@ g. Icon
 h. Action Buttons
 These cannot be customized for Firefox.
 Note that character restrictions vary depending on if an icon is present and the characters used. The main differences between macOS Big Sur and its predecessors is that messages can be expanded with a larger icon and the browser icon is smaller, allowing more room for content.
+Safari for macOS Big Sur
+
 a. Icon
 This is set once and can’t be changed per individual message. Must be 256×256. PNG, JPG, GIF (not animated).
 b. Title
@@ -215,6 +253,8 @@ d. Website Name
 Can’t be changed.
 e. Time Stamp
 When the message was received.
+Chrome for macOS Catalina
+
 a. Browser Icon
 Chrome icon. This can’t be changed.
 b. Title
@@ -226,6 +266,8 @@ Restricted to 20-80 characters.
 e. Icon
 192×192 or larger. PNG, JPG, GIF (not animated).
 Note that character restrictions vary depending on if an icon is present and the characters used. Chrome for macOS also has support for 2 action buttons.
+Firefox for macOS Catalina
+
 a. Browser Icon
 Firefox icon. This can’t be changed.
 b. Title
@@ -237,6 +279,8 @@ Restricted to 20-80 characters.
 e. Icon
 192×192 or larger. PNG, JPG, GIF (not animated).
 Note that character restrictions vary depending on if an icon is present and the characters used.
+Safari for macOS Catalina
+
 a. Icon
 This is set once and can’t be changed per individual message. Must be 256×256. PNG, JPG, GIF (not animated).
 b. Title
@@ -244,6 +288,8 @@ Restricted to 40 characters.
 c. Content
 Restricted to 90 characters.
 Notice how Safari doesn’t have a browser icon. Nor does it display the domain.
+Chrome for Windows 10
+
 a. Banner Image
 360×180 or 2:1 aspect ratio. PNG, JPG, GIF (not animated).
 b. Icon
@@ -259,6 +305,8 @@ Restricted to 120 characters.
 g. Domain
 Website user is subscribed to. Can’t be changed.
 Windows offers the most screen real estate for imagery, with both the banner image and icon on display.
+Firefox for Windows 10
+
 a. Title
 Restricted to 40 characters.
 b. Icon
@@ -269,6 +317,8 @@ d. Content
 Restricted to 140-190 characters.
 e. Settings
 Can’t be changed.
+Microsoft Edge for Windows 10
+
 a. Title
 Restricted to 40 characters.
 b. Icon
@@ -279,6 +329,8 @@ d. Content
 Restricted to 140-190 characters.
 e. Domain
 Website user is subscribed to. Can’t be changed.
+Chrome for Android 11
+
 a. Badge
 72×72 or larger. Must be white with a transparent background. PNG.
 b. Title
@@ -295,6 +347,9 @@ g. Time Stamp
 When the message was received.
 h. Icon
 192×192 or larger. PNG, JPG, GIF (not animated).
+Older Mobile Operating Systems
+Android 11 Native
+
 a. Small Icon
 24×24 – 96×96 to fit all device sizes. Must be white with a transparent background. PNG.
 b. Title
@@ -311,6 +366,8 @@ g. Time Stamp
 Time message received.
 h. Icon
 192×192 or larger. PNG, JPG, GIF (not animated).
+iOS 14 Native
+
 a. App Icon
 Uses the app’s default icon and can’t be changed.
 b. Rich Media
@@ -326,5 +383,9 @@ Can’t be changed.
 g. Action Buttons
 Supports up to 4 buttons.
 iOS also has support for a subtitle. Note that unlike Android, iOS currently has no support for web push.
-Last updated 1 month ago
+Previous
+App Dashboard
+Next
+Troubleshooting and Support
+Last updated 12 months ago
 Was this helpful?

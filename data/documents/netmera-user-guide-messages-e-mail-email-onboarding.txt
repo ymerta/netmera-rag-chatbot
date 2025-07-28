@@ -1,15 +1,14 @@
 Quick Steps Guidelines
-Upload User List: Begin by preparing your subscriber list in a compatible format and upload it to Netmera. This step ensures that you have your target audience ready for your email campaigns.
-Connect with Amazon or Setrow: Once you share the necessary account information with us, we take the initiative to establish contact with the respective Amazon or Setrow team on your behalf.
-IYS Integration: Determine whether you will manage your Permission Management System (IYS) within Netmera or through your email provider. Consult with our experts to configure the IYS settings and define the necessary codes for seamless integration.
-Mail Delivery Onboarding: Dive into our comprehensive onboarding program that covers email deliverability best practices, authentication and security protocols, content optimization techniques, segmentation and personalization strategies, and email metrics and analytics.
-By following these quick steps, you'll be well on your way to leveraging the power of Netmera for your email marketing campaigns. Our team is here to support you throughout the process, ensuring your success in delivering impactful and engaging emails to your audience.
-For further reading on Amazon and Setrow, you may visit the following websites,
-In the following sections, you will find the information about email onboarding on Netmera.
-Upload Email List
-Amazon and Setrow Integration
-IYS (İleti Yönetim Sistemi)
-Mail Delivery Onboarding
-
-Last updated 1 month ago
-Was this helpful?
+1.Upload User List
+Prepare your subscriber list in a supported format and upload it to Netmera. This ensures your target audience is ready for email campaigns.
+2.Connect with a Mail Integration
+Share your account details with us, and we will coordinate directly with the Amazon or Setrow teams to establish the necessary connections on your behalf.
+3.Complete IYS Integration
+Decide whether to manage your Permission Management System (IYS) within Netmera or through your email provider. Our experts will assist you in configuring IYS settings and defining the required codes for smooth integration.
+4.Mail Delivery Onboarding
+Engage with our comprehensive onboarding program covering:
+• Email deliverability best practices
+• Authentication and security protocols
+• Content optimization techniques
+• Segmentation and personalization strategies
+• Email metrics and analytics

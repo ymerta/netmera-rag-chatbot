@@ -1,19 +1,34 @@
 Targeting -> Segments -> Create New Segment.
 To create a custom segment for your target audience, you can access the Segments tab and select the option to create a new segment. Once you've chosen a name for your segment, you can use various criteria to narrow down your target audience, including targeting users based on their push permission, tag, profile attributes, previous response, or behavior within a specific time interval or location.
-Channel / Platform (push permission)
-The users that opt-in or opt-out to push notifications for your application. 
+Segment: Channel / Platform (push permission)
+
+Description:
+The users that opt-in or opt-out to push notifications for your application.
+
+Possible Use Case:
 You may target users who have opted out of push notifications to encourage them to re-engage with the app by offering new content or incentives.
-By Tag
-The users that are in or out of the selected tag. 
+
+Segment: By Tag
+
+Description:
+The users that are in or out of the selected tag.
+
+Possible Use Case:
 By tagging, you may create a segment of users who have previously made a purchase and offer them exclusive discounts or early access to new products or services.
-By Profile
+Segment: By Profile
+Description:
 The users’ profile attribute that has selected relation such as equals, greater than with entered value.
+Possible Use Case:
 You can send targeted messages to users based on their profile attributes, such as their location, age, or interests, to increase the relevance of your messages and improve engagement.
-By Response
+Segment: By Response
+Description:
 The users’ response to a preceding push notification.
+Possible Use Case:
 You may follow up with users who have previously engaged with a push notification, such as those who clicked a link or made a purchase, with a personalized message to increase the chances of them taking further action.
-By Behaviour
+Segment: By Behaviour
+Description:
 It selects the users which performed specified actions with desired values within a time interval and/or within a specific location.
+Possible Use Case:
 Identify users who have shown a specific behavior, such as visiting a particular page or making a specific in-app action, and send them a push notification with relevant content or offers to drive them towards a desired action.
 Example:
 You want to send a promotional push notification to your users who have recently shown interest in men's shoes. You name the segment "Interested in Men's Shoes" and select the "By Tag" criteria to include users who have viewed or added men's shoes to their cart in the last 7 days. Additionally, you select "By Profile" and choose the attribute "Gender" with a value of "Male" to further narrow down your audience.
