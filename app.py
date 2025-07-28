@@ -14,7 +14,20 @@ import json
 from fuzzywuzzy import fuzz
 from rank_bm25 import BM25Okapi
 from nltk.tokenize import word_tokenize
+import nltk
+import os
 
+# Punkt verisi yoksa indir (Streamlit Cloud için uygun)
+nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
+
+nltk.data.path.append(nltk_data_dir)
+
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt", download_dir=nltk_data_dir)
 
 load_dotenv()
 
