@@ -8,3 +8,5 @@ beautifulsoup4
 tqdm
 langdetect
 fuzzywuzzy[accelerate]
+rank_bm25
+nltk
