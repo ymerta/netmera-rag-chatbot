@@ -17,18 +17,9 @@ from nltk.tokenize import word_tokenize
 import nltk
 import os
 
-# Streamlit Cloud uyumlu nltk data setup
-nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
-if not os.path.exists(nltk_data_dir):
-    os.makedirs(nltk_data_dir)
+nltk.download('punkt')
 
-nltk.data.path.append(nltk_data_dir)
 
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt", download_dir=nltk_data_dir)
-    
 load_dotenv()
 
 # 🔐 API anahtarı doğrudan girildi
