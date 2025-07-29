@@ -22,15 +22,12 @@ nltk.download('all')
 
 load_dotenv()
 
-# 🔐 API anahtarı doğrudan girildi
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-# 📦 FAISS index ve metinler
 index = faiss.read_index("data/embeddings/index.faiss")
 with open("data/embeddings/texts.pkl", "rb") as f:
     texts = pickle.load(f)
     
-# 📚 Netmera FAQ JSON dosyasını yükle
 with open("data/faq_answers.json", "r", encoding="utf-8") as f:
     faq_qa_map = json.load(f)
 
@@ -40,13 +37,11 @@ bm25_model = BM25Okapi(tokenized_corpus)
 
 def compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score):
     norm_bm25 = bm25_score / 100
-    norm_faiss = -faiss_score  # çünkü FAISS uzaklık: daha küçük daha iyi
+    norm_faiss = -faiss_score 
     norm_fuzzy = fuzzy_score / 100
     return 0.4 * norm_bm25 + 0.3 * norm_fuzzy + 0.3 * norm_faiss
 
-# ✅ Kullanıcının sorusu sık sorulardan biriyle eşleşiyor mu?
 def check_faq_match(user_input, threshold=80):
-    # 🔄 Türkçeyi İngilizceye çevir
     try:
         translation = client.chat.completions.create(
             model="gpt-4o",
@@ -62,7 +57,6 @@ def check_faq_match(user_input, threshold=80):
     except Exception:
         translated_input = user_input
 
-    # 🔍 FAQ eşleşmesi (fuzzy)
     best_score = 0
     best_answer = None
     best_source = None
@@ -75,10 +69,9 @@ def check_faq_match(user_input, threshold=80):
             best_source = entry["source"]
 
     if best_score >= threshold:
-        return f"{best_answer}\n\n📄 **Kaynak belge**: [FAQ]({best_source})"
+        return f"{best_answer}\n\n **Kaynak belge**: [FAQ]({best_source})"
     return None
 
-# 🔁 Belirli dosyalar için manuel URL eşlemeleri
 file_to_url_map = {
     "netmera-user-guide-messages-e-mail-email-onboarding-iys-ileti-yoenetim-sistemi.txt": "https://user.netmera.com/netmera-user-guide/messages/email/email-onboarding/iys-ileti-yonetim-sistemi",
     "netmera-user-guide-customer-data-iys-integration.txt": "https://user.netmera.com/netmera-user-guide/customer-data/iys-integration",
@@ -94,7 +87,6 @@ file_to_url_map = {
     "netmera-user-guide-messages-sms-sms-onboarding.txt": "https://user.netmera.com/netmera-user-guide/messages/sms/sms-onboarding",
 }
 
-# 📁 Compound klasör fallback'leri
 compound_sections = [
     "customer-data",
     "email-onboarding",
@@ -106,7 +98,6 @@ compound_sections = [
     "sms",
 ]
 
-# 📂 Üst seviye ve alt seviye klasörler — Sidebar yapısına göre
 top_level_sections = {
     "messages": [
         "about-push-notifications",
@@ -146,7 +137,7 @@ def detect_language(text):
         else:
             return "English"
     except:
-        return "English"  # Default
+        return "English"  
 
 def filename_to_url(filename: str) -> str:
   
@@ -284,7 +275,7 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 if lang == "Türkçe":
-    st.markdown("### 📌 Sık Sorulan Konular")
+    st.markdown("### Sık Sorulan Konular")
     faq_questions = [
         "Push gönderiminde 'Send All' özelliği tüm kullanıcılara ulaşır mı?",
         "Toplu mesaj gönderimi yarıda durdurulabilir mi?",
@@ -299,7 +290,7 @@ if lang == "Türkçe":
     input_placeholder = "Bir soru yazın..."
     no_info_message = "⚠️ Bu konuda yeterli bilgi yok. Lütfen daha açık şekilde sorun."
 else:
-    st.markdown("### 📌 Frequently Asked Questions")
+    st.markdown("### Frequently Asked Questions")
     faq_questions = [
         "If the ‘Send All’ option is selected for a push notification in the Netmera panel, will it be delivered to all users, even those who are not integrated with Netmera?",
         "Can I stop bulk push sending midway?",
@@ -344,7 +335,7 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
                 lang = "Türkçe"
             else:
                 lang = "English"
-            st.info(f"🧠 Algılanan dil: {lang}")
+           
 
         st.session_state.chat_history.append(("user", user_input))
         embedding, translated_input = embed_question(user_input)
@@ -380,13 +371,13 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
 for role, msg in st.session_state.chat_history:
     st.chat_message(role).markdown(msg)
 st.markdown("---")
-st.markdown("### 📊 Konuşma Kayıtları")
+st.markdown("### Konuşma Kayıtları")
 
 if os.path.exists("logs/conversation_log.csv"):
     try:
         df_logs = pd.read_csv("logs/conversation_log.csv")
         st.download_button(
-            label="📥 Logları CSV olarak indir",
+            label="Logları CSV olarak indir",
             data=df_logs.to_csv(index=False).encode("utf-8"),
             file_name="conversation_log.csv",
             mime="text/csv"
