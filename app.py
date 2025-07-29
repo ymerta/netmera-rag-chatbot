@@ -84,6 +84,7 @@ file_to_url_map = {
     "netmera-user-guide-messages-mobile-push-creating-a-mobile-push-define-notification-content-what-advanced-ios-settings.txt": "https://user.netmera.com/netmera-user-guide/messages/mobile-push/creating-a-mobile-push/define-notification-content-what/advanced-ios-settings",
     "netmera-user-guide-messages-email-sending-a-mail-campaign.txt": "https://user.netmera.com/netmera-user-guide/messages/email/sending-a-mail-campaign",
     "netmera-user-guide-messages-email-sending-a-mail-campaign-step-1-setup.txt": "https://user.netmera.com/netmera-user-guide/messages/email/sending-a-mail-campaign/step-1-setup",
+    "netmera-user-guide-customer-journeys-journeys-journey-examples-action-based-engagement-journey.txt":"https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/journey-examples/action-based-engagement-journey",
     "netmera-user-guide-messages-sms-sms-onboarding.txt": "https://user.netmera.com/netmera-user-guide/messages/sms/sms-onboarding",
 }
 
@@ -127,6 +128,10 @@ top_level_sections = {
         "your-feedback",
         "design-guide",
         "troubleshooting-and-support",
+    ],
+    "customer-journeys": [
+        "journeys",
+        "journeys/journey-examples",
     ],
 }
 def detect_language(text):
