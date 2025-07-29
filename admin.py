@@ -13,10 +13,10 @@ if uploaded_file:
     file_path = os.path.join("data/new_docs", uploaded_file.name)
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
-    st.success(f"✅ Dosya yüklendi: {uploaded_file.name}")
+    st.success(f"Dosya yüklendi: {uploaded_file.name}")
 
     if st.button("Embed ve Güncelle"):
         with st.spinner("🔄 Belgeler embed ediliyor..."):
             result = subprocess.run(["python", "update_index.py"], capture_output=True, text=True)
             st.text(result.stdout)
-        st.success("✅ Güncelleme tamamlandı.")
+        st.success("Güncelleme tamamlandı.")
