@@ -18,6 +18,8 @@ import nltk
 import os
 
 nltk.download('all')
+
+
 load_dotenv()
 
 # 🔐 API anahtarı doğrudan girildi
@@ -375,15 +377,15 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
 
         # 🔎 FAISS'ten en yakın 3 belgeyi getir
         embedding, translated_input = embed_question(user_input)
-        distances, indices = index.search(embedding, k=5)
+        
        # Tokenize user input
         tokenized_query = word_tokenize(user_input.lower())
         bm25_scores = bm25_model.get_scores(tokenized_query)
         
         candidate_docs = []
-        for i, idx in enumerate(indices[0]):
-            doc = texts[idx]
-            faiss_score = distances[0][i]
+        for idx, doc in enumerate(texts):
+            doc_embedding = index.reconstruct(idx)  # FAISS'te her vektörü yeniden al
+            faiss_score = np.linalg.norm(doc_embedding - embedding)
             bm25_score = bm25_scores[idx]
             fuzzy_score = fuzz.partial_ratio(translated_input.lower(), doc["text"][:1000].lower())
             hybrid = compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score)
