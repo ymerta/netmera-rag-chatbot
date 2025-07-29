@@ -49,14 +49,13 @@ Promotion Name: Descriptive name for internal tracking.
 Promotion Expiry Date: Format: YYYY-MM-DD
 File: Text file (.txt)
 Format: externalid, promotionvalue
+
 Geofence Uploads
 Used to upload geolocation targeting areas.
 File: CSV file only.
 Format (semicolon-separated):
-Copy
 Name;Latitude;Longitude;Radius;Entity Status;Distance Unit;Group
 Processing may take up to 5 minutes.
-
 Each row must contain the following values in the exact order listed below:
 1.Name: A unique identifier for the geofence. Example: ShoppingCentre1, OfficeBuilding2.
 2.Latitude: The center point’s latitude, in decimal degrees. Example: 40.712776
@@ -65,7 +64,6 @@ Each row must contain the following values in the exact order listed below:
 5.Entity Status: The operational state of the geofence. Accepted values: ACTIVE or INACTIVE
 6.Distance Unit: The unit for the radius. Accepted values: METERS or KM
 7.Group: A label used to categorize the geofence. Example: RetailGroupA, BusinessGroupB
-
 Example
 ShoppingCentre1;40.712776;74.005974;500;ACTIVE;METERS;RetailGroup
 OfficeBuilding2;34.052235;118.243683;300;ACTIVE;METERS;BusinessGroup

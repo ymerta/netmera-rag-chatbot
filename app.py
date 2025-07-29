@@ -18,7 +18,6 @@ import nltk
 import os
 
 nltk.download('all')
-
 load_dotenv()
 
 # 🔐 API anahtarı doğrudan girildi
@@ -399,6 +398,20 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
         best_doc = max(candidate_docs, key=lambda d: d["hybrid_score"])
 
         top_docs = sorted(candidate_docs, key=lambda d: d["hybrid_score"], reverse=True)[:3]
+            # ⬇️ Debug bilgilerini göster 
+        with st.expander("🛠️ Hybrid Score Hesaplama Detayları"):
+          for doc in top_docs:
+            st.markdown(f"""
+             **Belge:** `{doc["source"]}`  
+        **Hybrid Score:** `{doc["hybrid_score"]:.4f}`  
+        - FAISS Distance: `{doc["faiss_score"]:.4f}`  
+        - BM25 Score: `{doc["bm25_score"]:.2f}`  
+        - Fuzzy Score: `{doc["fuzzy_score"]}`  
+        - Normalized:
+            - FAISS: `{-doc["faiss_score"]:.4f}`  
+            - BM25: `{doc["bm25_score"]/100:.4f}`  
+            - Fuzzy: `{doc["fuzzy_score"]/100:.4f}`  
+        """)
         top_k_context = "\n\n---\n\n".join([doc["text"] for doc in top_docs])
         answer_text = ask_openai(user_input, top_k_context, lang)
         source_file = best_doc["source"]
