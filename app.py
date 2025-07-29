@@ -262,7 +262,7 @@ QUESTION:
     else:
         return english_answer
 
-lang_manual = st.toggle("🌐 Dili manuel seç", value=False)
+lang_manual = st.toggle("Dil seç", value=False)
 if lang_manual:
     lang = st.radio("Dil / Language", ("Türkçe", "English"), horizontal=True)
 else:
