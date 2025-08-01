@@ -23,6 +23,7 @@ from config import (
     SYSTEM_PROMPT, TRANSLATE_PROMPT, TURKISH_TRANSLATION_PROMPT,
     FAQ_QUESTIONS_TR, FAQ_QUESTIONS_EN
 )
+nltk.download('all')
 
 load_dotenv()
 
