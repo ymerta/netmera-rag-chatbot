@@ -1,104 +1,115 @@
-Terms to Know
-A
-A/B Testing 
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/terms-to-know
+A/B Testing
 A/B testing is a method employed to compare the performance of two versions of a message or campaign. It allows you to assess which version performs better in terms of user engagement and response. By randomly sending one of the two versions to different segments of your audience, you can determine which approach is more effective and refine your messaging strategy accordingly.
-App Tracker 
-The App Tracker is a tool designed exclusively for Android applications. It serves as a means to monitor user usages through different mobile apps. To utilize this feature, developers must integrate the Netmera SDK into their app. This integration enables the tracking of various apps on your user's device, which are then transmitted to Netmera's backend for analysis and reporting.
-API (Visit API Doc)
+App Tracker
+The App Tracker
+API (Visit
+API Doc
 An API, or Application Programming Interface, consists of a set of protocols and rules that facilitate communication between different software applications. APIs enable these applications to exchange data and interact seamlessly. They function as intermediaries, allowing software components to work together without the need for developers to understand the internal workings of each system.
-Automated Push 
-Automated push refers to the automated delivery of messages to users based on predefined conditions or triggers. This feature eliminates the need for manual message sending and ensures that messages are dispatched to users at optimal times. Automated push campaigns are set up in advance and are triggered automatically when specified criteria are met, enhancing efficiency and timeliness in messaging.
-B
-Bulk Campaign 
+Automated Push
+Automated push
+refers to the automated delivery of messages to users based on predefined conditions or triggers. This feature eliminates the need for manual message sending and ensures that messages are dispatched to users at optimal times. Automated push campaigns are set up in advance and are triggered automatically when specified criteria are met, enhancing efficiency and timeliness in messaging.
+Bulk Campaign
 A bulk campaign is a messaging campaign that targets a large group of users simultaneously. It is an efficient way to reach a wide audience with a consistent message. Bulk campaigns are typically used for mass announcements, promotions, or other communication initiatives that require widespread distribution.
-C
-Churn Rate 
+Churn Rate
 Churn rate is a metric that quantifies the rate at which users discontinue their use of an app or unsubscribe from messaging services. It is an essential measure for assessing user retention and gauging the health of an app's user base. High churn rates may indicate issues that need to be addressed to maintain user engagement.
-Custom Event 
-A custom event is a specific user action or behavior that is tracked and analyzed within Netmera. These events are defined by app administrators and can include actions such as making a purchase, completing a registration, or any other user interaction deemed valuable. Tracking custom events allows for in-depth analysis of user behavior and engagement.
+Custom Event
+custom event
+is a specific user action or behavior that is tracked and analyzed within Netmera. These events are defined by app administrators and can include actions such as making a purchase, completing a registration, or any other user interaction deemed valuable. Tracking custom events allows for in-depth analysis of user behavior and engagement.
 Customer Journeys
 Customer journeys in the context of Netmera refer to the orchestrated series of interactions a customer has with your brand across various channels like email, SMS, and push notifications. These journeys are meticulously crafted to guide customers through their engagement with your products or services, from initial contact to conversion and beyond. You have the power to design, automate, and personalize these journeys, ensuring that each customer's experience is tailored to their preferences and behaviors.
-D
-Data Privacy 
+Data Privacy
 Data privacy pertains to the safeguarding of user data and adherence to privacy regulations in the handling of user information. It encompasses the responsible and secure management of user data, ensuring compliance with legal requirements and the protection of user confidentiality and rights.
-Deep Linking 
+Deep Linking
 Deep linking involves the inclusion of specific URLs within messages to direct users to precise content or pages within a mobile app. Unlike regular links that open the app's homepage, deep links provide a seamless and direct path to the desired location within the app. This enhances the user experience by simplifying navigation.
-E
-Engagement Rate 
+Engagement Rate
 Engagement rate measures the level of user interaction and response to messages and campaigns. It quantifies how actively users engage with the content and actions presented to them. A higher engagement rate indicates more user involvement and a positive response to messaging efforts.
-Events 
-In the context of Netmera, events refer to specific actions or occurrences within an app that are tracked and monitored. These events can include user interactions, such as clicking a button, making a purchase, or viewing specific content. Events provide insights into user behavior and help in optimizing app performance.
-Event Tracking 
-Event tracking involves monitoring and analyzing user interactions and actions within an app. It provides valuable data on how users engage with the app, including which features they use most frequently, which buttons they click, and their overall behavior. Event tracking is essential for making data-driven decisions to improve app usability.
-F
-File Transfer Protocol (FTP) Push 
-FTP push is a feature that allows users to transfer data files to a designated server using the File Transfer Protocol (FTP). It streamlines the data management process by automatically copying important data files to a specified server as soon as they are closed. FTP push ensures efficient and secure data transfer.
+Events
+In the context of Netmera,
+events
+refer to specific actions or occurrences within an app that are tracked and monitored. These events can include user interactions, such as clicking a button, making a purchase, or viewing specific content. Events provide insights into user behavior and help in optimizing app performance.
+Event Tracking
+Event tracking
+involves monitoring and analyzing user interactions and actions within an app. It provides valuable data on how users engage with the app, including which features they use most frequently, which buttons they click, and their overall behavior. Event tracking is essential for making data-driven decisions to improve app usability.
+File Transfer Protocol (FTP) Push
+FTP push is a feature that allows users to transfer data files to a designated server using the
+File Transfer Protocol (FTP)
+. It streamlines the data management process by automatically copying important data files to a specified server as soon as they are closed. FTP push ensures efficient and secure data transfer.
 Funnel Analysis
-Funnel is a crucial analytical method used in marketing and app development to track and optimize the user journey or conversion process. Imagine a funnel; it's wide at the top and narrows down at the bottom. Similarly, a funnel analysis visualizes how users progress through various steps or stages in an app or website, with the goal of ultimately achieving a specific action or conversion, such as making a purchase or signing up for a newsletter.
-G
-Geofence Push 
-Geofence push is a feature that enables the targeted delivery of messages to users when they enter or exit specific geographical areas, known as geofences. It allows businesses to engage with users based on their physical location, making it useful for location-based marketing and promotions.
-I
-In-App Messaging 
-In-app messaging enables the real-time delivery of messages and content directly to users while they are actively using a mobile app. It provides a means for businesses to engage with users within the app interface, delivering relevant information, updates, and offers. In-app messaging enhances user experience and encourages user interaction.
-Inbox Message 
+Funnel
+is a crucial analytical method used in marketing and app development to track and optimize the user journey or conversion process. Imagine a funnel; it's wide at the top and narrows down at the bottom. Similarly, a funnel analysis visualizes how users progress through various steps or stages in an app or website, with the goal of ultimately achieving a specific action or conversion, such as making a purchase or signing up for a newsletter.
+Geofence Push
+Geofence push
+is a feature that enables the targeted delivery of messages to users when they enter or exit specific geographical areas, known as geofences. It allows businesses to engage with users based on their physical location, making it useful for location-based marketing and promotions.
+In-App Messaging
+In-app messaging
+enables the real-time delivery of messages and content directly to users while they are actively using a mobile app. It provides a means for businesses to engage with users within the app interface, delivering relevant information, updates, and offers. In-app messaging enhances user experience and encourages user interaction.
+Inbox Message
 An inbox message is a message that is stored within the user's message inbox within the app. Users can access these messages at their convenience. Inbox messages are typically used for delivering important or time-sensitive information that users may need to reference later.
-Integration and Implementation (Visit Developer Guide)
-Integration and implementation refer to the process of seamlessly incorporating the Netmera SDK (Software Development Kit) into a mobile application. This process involves configuring the SDK to work harmoniously with the app and defining custom events that need to be tracked. Successful integration ensures that Netmera's tools and features are effectively utilized within the app.
-K
-Key Performance Indicator (KPI) 
-Key Performance Indicators (KPIs) are specific metrics and measurements used to evaluate the success and performance of campaigns or apps. KPIs provide quantifiable data that helps assess the effectiveness of messaging efforts, user engagement, and overall app performance. They serve
-L
-Location-Based Marketing 
+Integration and Implementation (Visit
+Developer Guide
+Location-Based Marketing
 Location-based marketing is a strategic approach that targets users based on their physical location. Businesses use this strategy to deliver messages, promotions, or offers tailored to users in specific geographic areas. Location-based marketing capitalizes on the relevance of location to enhance user engagement and drive foot traffic to physical locations.
-M
-Message Personalization 
-Message personalization involves customizing messages with user-specific details to increase engagement and relevance. Personalized messages may include the user's name, recent activity, or personalized recommendations. This approach fosters a sense of individualized communication and resonates more effectively with users.
-Message Category 
-Message category refers to the application category selected when creating messages. It helps Netmera offer default events and segments tailored to specific app types. For instance, if an app falls under the category of "E-Commerce," Netmera provides relevant options and features suited for e-commerce campaigns, streamlining the messaging process.
-Message Labels 
-Message labels are descriptive tags or identifiers applied to messages for organizational purposes. They help categorize and classify messages based on their content, purpose, or target audience. Message labels facilitate efficient message management and retrieval, ensuring that messages are appropriately organized within the messaging system.
-N
-Netmera Panel 
+Message Personalization
+Message personalization
+involves customizing messages with user-specific details to increase engagement and relevance. Personalized messages may include the user's name, recent activity, or personalized recommendations. This approach fosters a sense of individualized communication and resonates more effectively with users.
+Message Category
+Message category
+refers to the application category selected when creating messages. It helps Netmera offer default events and segments tailored to specific app types. For instance, if an app falls under the category of "E-Commerce," Netmera provides relevant options and features suited for e-commerce campaigns, streamlining the messaging process.
+Message Labels
+Message labels
+are descriptive tags or identifiers applied to messages for organizational purposes. They help categorize and classify messages based on their content, purpose, or target audience. Message labels facilitate efficient message management and retrieval, ensuring that messages are appropriately organized within the messaging system.
+Netmera Panel
 The Netmera Panel is the user interface where administrators manage their Netmera accounts and campaigns. It serves as a centralized hub for creating, monitoring, and controlling messaging campaigns. Users can access tools and features to ensure that messages are effectively delivered to their intended recipients.
-O
-Opt-In User
+Opt-In
+User
 Opt-In is the process through which users grant their explicit permission to receive messages from a mobile app or service. It signifies a user's consent to be included in messaging campaigns and signifies their interest in staying informed or engaged with the app's content.
 Opt-Out User
 Opt-Out refers to the process by which users choose to unsubscribe or discontinue receiving messages from an app or service. It allows users to revoke their prior consent for messaging and indicates their preference to stop receiving future communications.
-P
 People Insight
-People Insight involves the analysis of user actions and interactions within an app to gain insights into user behavior. It helps app administrators understand how users engage with the app, which features they use most, and where improvements can be made.
+People Insight i
+nvolves the analysis of user actions and interactions within an app to gain insights into user behavior. It helps app administrators understand how users engage with the app, which features they use most, and where improvements can be made.
 Performance Metrics
-Performance Metrics on App Dashboard encompass the data and measurements used to evaluate the effectiveness of a campaign or messaging strategy. These metrics provide insights into how well a campaign is performing and include key indicators like click-through rates, conversion rates, engagement rates, and other relevant statistics.
-Profile Attributes 
+Performance Metrics on
+App Dashboard
+encompass the data and measurements used to evaluate the effectiveness of a campaign or messaging strategy. These metrics provide insights into how well a campaign is performing and include key indicators like click-through rates, conversion rates, engagement rates, and other relevant statistics.
+Profile Attributes
 Profile Attributes are specific data points or characteristics associated with a user's profile. These attributes, such as age, location, interests, and purchase history, are used for segmentation and personalization, enabling targeted messaging based on user traits.
-R
 Re-Engagement Campaign
 A Re-Engagement Campaign is designed to rekindle user interest and participation, specifically targeting inactive or lapsed users. These campaigns aim to bring users back into the app's fold by offering enticing content, promotions, or incentives.
-Recall 
-Recall is a feature that empowers users to retrieve push notifications that have already been delivered to a user's device and inbox. It allows businesses to rectify mistakes, update content, or make necessary adjustments to enhance the user experience even after messages have been sent.
-Retention 
+Recall
+Recall
+is a feature that empowers users to retrieve push notifications that have already been delivered to a user's device and inbox. It allows businesses to rectify mistakes, update content, or make necessary adjustments to enhance the user experience even after messages have been sent.
+Retention
 Retention measures an app's ability to retain users and keep them actively engaged over an extended period. High retention rates indicate that users continue to find value in the app and remain active users.
-Rich Push Notifications 
+Rich Push Notifications
 Rich Push Notifications are a type of push notification that includes multimedia content, such as images, videos, or interactive elements. They offer a visually appealing and engaging way to convey messages, making them more compelling to recipients.
-S
 Segments
-Segmentation involves categorizing users into distinct groups or segments based on predefined criteria, such as demographics, behavior, or preferences. Segmentation is a valuable strategy for delivering targeted messages and campaigns to specific user groups. It ensures that messages are personalized and relevant to the unique characteristics of each segment.
-T
-Tags 
-Tags are descriptive labels or keywords applied to users or messages for organizational purposes. They help categorize and classify users or content, facilitating efficient management and retrieval within the messaging system.
-Transactional Push 
-Transactional Push refers to push notifications that are triggered by specific user actions or transactions within the app. These notifications provide real-time updates and information related to user-initiated events, such as order confirmations or password resets.
-U
-Uninstall Tracking 
-Uninstall Tracking involves the activation of silent push notifications for the purpose of tracking when users uninstall an app. It helps businesses understand user churn and take appropriate actions to re-engage users or improve app retention.
-User Feedback 
-User Feedback comprises input, comments, and suggestions provided by users regarding their experience with an app or messaging such as Web Feedback Button. It is valuable for gathering user opinions and identifying areas for enhancement.
-User Profiles 
-User Profiles consist of a collection of user data and attributes that are used to personalize messages and campaigns. These profiles enable businesses to deliver content and offers that align with individual user preferences and characteristics.
-W
-Webhooks 
-Webhooks are a method for receiving real-time data updates and notifications from Netmera's platform. They enable external systems to receive automated notifications when specific events or actions occur within the Netmera ecosystem.
+Segmentation
+involves categorizing users into distinct groups or segments based on predefined criteria, such as demographics, behavior, or preferences. Segmentation is a valuable strategy for delivering targeted messages and campaigns to specific user groups. It ensures that messages are personalized and relevant to the unique characteristics of each segment.
+Tags
+Tags
+are descriptive labels or keywords applied to users or messages for organizational purposes. They help categorize and classify users or content, facilitating efficient management and retrieval within the messaging system.
+Transactional Push
+Transactional Push
+refers to push notifications that are triggered by specific user actions or transactions within the app. These notifications provide real-time updates and information related to user-initiated events, such as order confirmations or password resets.
+Uninstall Tracking
+Uninstall Tracking
+involves the activation of silent push notifications for the purpose of tracking when users uninstall an app. It helps businesses understand user churn and take appropriate actions to re-engage users or improve app retention.
+User Feedback
+User Feedback comprises input, comments, and suggestions provided by users regarding their experience with an app or messaging such as
+Web Feedback Button.
+It is valuable for gathering user opinions and identifying areas for enhancement.
+User Profiles
+User
+Profiles
+consist of a collection of user data and attributes that are used to personalize messages and campaigns. These profiles enable businesses to deliver content and offers that align with individual user preferences and characteristics.
+Webhooks
+Webhooks
+are a method for receiving real-time data updates and notifications from Netmera's platform. They enable external systems to receive automated notifications when specific events or actions occur within the Netmera ecosystem.
 Web Widgets
-Widgets are interactive elements or components integrated into the user interface of a website. They provide quick access to specific features or information, enhancing the overall user experience and usability of the app.
+Widgets
+are interactive elements or components integrated into the user interface of a website. They provide quick access to specific features or information, enhancing the overall user experience and usability of the app.
+Your Feedback
+Guided Videos
+3 months ago

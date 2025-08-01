@@ -1,22 +1,48 @@
-Settings -> Test Devices ->  Invite Tester
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/panel-settings/netmera-panel-settings/test-devices
+Panel Settings
+Netmera Panel Settings
+Test Devices
+Settings ->
+Test Devices ->
+Invite Tester
 A test device refers to a specific mobile device or simulator/emulator that is used by developers and testers to thoroughly evaluate and test a mobile application before its official release to the public.
 Tip:
 Using test devices is crucial to identify and resolve potential issues, bugs, or compatibility problems that may arise on different devices, operating systems, or network configurations.
 Adding Test Devices for Testing
 Important Note:
-To successfully complete this process, it's important to have your iOS URL Schema and Android Package Name values correctly set in the "Developers -> App Info" screen.
+To successfully complete this process, it's important to have your
+iOS URL Schema and Android Package Name
+values correctly set in the
+"Developers -> App Info"
+screen.
 Option 1: Inviting Testers via Email
-Navigate to the left menu of the panel and select "Settings."
-Click on "Test Devices" to access the test device management screen.
-Locate the "Invite Tester" button and click on it.
+Navigate to the left menu of the panel and select "
+Settings
+Click on "
+Test Devices
+" to access the test device management screen.
+Locate the "
+Invite Tester
+" button and click on it.
 Enter your email address in the provided field to receive the invitation link.
 Check your email for the received invitation link.
 On the device you want to add as a test device, click on the invitation link from the email.
 The link will redirect you to the mobile application and automatically add the device as a test device.
 Option 2: Adding Test Devices with External ID
-In the "Settings -> Test Devices" screen, find and click on the "Add Tester" button.
-Enter your external ID in the provided field.
+In the "
+Settings -> Test Devices
+" screen, find and click on the "Add Tester" button.
+Enter your
+external ID
+in the provided field.
 The system will list available devices for you to add as test devices.
 Click on the desired device from the list to add it as a test device with a single click.
 Important Note:
-To successfully complete this process, it's important to have your iOS URL Schema and Android Package Name values correctly set in the "Developers -> App Info" screen.
+To successfully complete this process, it's important to have your
+iOS URL Schema and Android Package Name
+values correctly set in the
+"Developers -> App Info"
+screen.
+General Settings
+Users
+1 year ago

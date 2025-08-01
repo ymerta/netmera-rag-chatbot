@@ -1,19 +1,35 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-push/fancy-box-setup
+Web Tools
+Web Push
+Fancy Box Setup
 Developers > Netmera Onboarding > Web Onboarding > Step 4: Fancy Box Settings
-The Fancy Box is a pop-up panel that requests permission from users to enable web push notifications. As a customizable feature, it gives you the flexibility to tailor its appearance and behavior, making it fit the specific needs of your application. Below are the key settings and customization options you can use to optimize the Fancy Box experience for your users.
-
+The
+Fancy Box
+is a pop-up panel that requests permission from users to enable web push notifications. As a customizable feature, it gives you the flexibility to tailor its appearance and behavior, making it fit the specific needs of your application. Below are the key settings and customization options you can use to optimize the Fancy Box experience for your users.
 Fancy Box Settings
-Enable Fancy Box: Choose whether to display the Fancy Box for notification prompts or rely solely on the native browser permission request.
-Show Again After: Set the timeframe for when the Fancy Box should reappear for users who declined the notification permission initially.
-Animate Fancy Box: Enable this option to add animated effects to the Fancy Box for a more engaging user experience.
-Preview Use the preview option to see how the Fancy Box will appear to users.
-Customize Fancy Box: Personalize the Fancy Box design in this section.
-
+Enable Fancy Box:
+Choose whether to display the Fancy Box for notification prompts or rely solely on the native browser permission request.
+Show Again After:
+Set the timeframe for when the Fancy Box should reappear for users who declined the notification permission initially.
+Animate Fancy Box:
+Enable this option to add animated effects to the Fancy Box for a more engaging user experience.
+Preview
+Use the preview option to see how the Fancy Box will appear to users.
+Customize Fancy Box:
+Personalize the Fancy Box design in this section.
 Customization Options
-1.Text
+Text
 Personalize the header, informational text, and button labels.
 Deliver clear and inviting messaging to users to encourage interaction.
-2.Size
+Size
 Adjust dimensions such as width, height, and border radius.
 Change text size to ensure the Fancy Box fits seamlessly with your website's layout.
-3.Customize font colors to align with your site’s branding and color palette.
-4.Ensure the font selection complements your website's typography for a cohesive design.
+Color
+Select background colors for the Fancy Box frames and buttons.
+Customize font colors to align with your site’s branding and color palette.
+Font
+Choose from a variety of font styles, including inherit, initial, italic, normal, oblique, revert, or unset.
+Ensure the font selection complements your website's typography for a cohesive design.
+Tags / Upload User List
+Web Transactional Push
+6 months ago

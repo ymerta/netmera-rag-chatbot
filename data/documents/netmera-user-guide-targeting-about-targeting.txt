@@ -1,14 +1,43 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/about-targeting
+Targeting
+About Targeting
 Finding the Right Audience for Your Campaigns
 Targeting in a Nutshell
 In the digital world, targeting involves using tools and strategies to identify and connect with the people who are most likely to benefit from or engage with your content, products, or services. It's like showing a movie ad to people who love movies and not to those who don't. Targeting helps you make your communication more effective and relevant to the people you want to reach.
 Therefore, targeting is all about making sure your message or content reaches the right people who are most likely to be interested in it. By targeting your specific audience, you're more likely to get a positive response because you're speaking to the right audience.
-
 Exploring Targeting Components
 In Netmera, we offer a set of powerful tools to help you effectively connect with your audience. These tools are like a finely tuned messaging system that allows you to send the right messages to the right people. Think of it as having a collection of filters that you can use to sort your audience based on various criteria, such as their interests, behaviors, or location. This way, you can tailor your messages to specific groups of users, ensuring that your communication is not only relevant but also more likely to resonate with your intended audience.
 Whether you're reaching out to individuals, categorizing users with similar characteristics, or creating dynamic groups, our targeting components empower you to refine your messaging strategy and engage your users more effectively. Within Netmera, you'll discover a set of core components that enable you to fine-tune your targeting efforts:
-People: This feature offers a deep dive into individual user profiles, providing insights into their unique attributes and actions. It's the foundational element for crafting personalized communication that resonates with each user.
-Tags: Tags serve as a categorization tool, grouping users based on shared characteristics or interests. This categorization is the key to sending customized messages that cater to the specific preferences of these user groups.
-Segments: Segments are dynamic clusters of users that automatically update based on criteria you define. This dynamic nature ensures that you can reach users who meet specific conditions, allowing for timely and relevant messaging.
-File Transfers: File Transfers feature is a tool designed for handling different types of data uploads and updates related to your targeted campaigns.This feature provides you with the ability to transfer files containing information such as user identifiers, distribution lists, tags, user details, email lists, promotion values, and geofences.
-Geofence: Geofence in Netmera allows you to define virtual perimeters around physical locations, enabling real-time notifications and personalized interactions when users enter or exit these designated areas.Going Deeper into Targeting
+People:
+This feature offers a deep dive into
+individual
+user
+profiles
+, providing insights into their unique attributes and actions. It's the foundational element for crafting personalized communication that resonates with each user.
+Tags:
+Tags serve as a
+categorization
+tool, grouping users based on shared characteristics or interests. This categorization is the key to sending customized messages that cater to the specific preferences of these user groups.
+Segments:
+Segments are
+dynamic
+clusters of users that automatically update based on criteria you define. This dynamic nature ensures that you can reach users who meet specific conditions, allowing for timely and relevant messaging.
+File Transfers:
+File Transfers feature is a tool designed for handling different types of
+data uploads and updates
+related to your targeted campaigns.This feature provides you with the ability to transfer files containing information such as user identifiers, distribution lists, tags, user details, email lists, promotion values, and geofences.
+Geofence:
+Geofence in Netmera allows you to define virtual perimeters around
+physical
+locations
+, enabling real-time notifications and personalized interactions when users enter or exit these designated areas.
+Going Deeper into Targeting
 In the upcoming sections, we'll delve into each of these targeting components, offering a more comprehensive understanding along with practical insights. Whether you're just getting started with Netmera or seeking to refine your targeting strategies, this documentation serves as your comprehensive guide.
+People
+Tags
+Segments
+File Transfers
+Geofence
+IYS Integration
+People
+1 year ago

@@ -1,0 +1,37 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-push/define-segment
+Web Tools
+Web Push
+Define Segment
+Targeting -> Segments -> Create New Segment
+To create a custom segment for your target audience, you can access the Segments tab and select the option to create a new segment. Once you've chosen a name for your segment, you can use various criteria to narrow down your target audience, including targeting users based on their push permission, tag, profile attributes, previous response, or behavior within a specific time interval or location.
+Segments
+Description
+Possible Use Case
+By Push Permission
+The users that opt-in or opt-out to push notifications for your application.
+You may target users who have opted out of push notifications to encourage them to re-engage with the app by offering new content or incentives.
+By Tag
+The users that are in or out of the selected tag.
+By tagging, you may create a segment of users who have previously made a purchase and offer them exclusive discounts or early access to new products or services.
+By Profile
+The users’ profile attribute that has selected relation such as
+equals
+greater than
+with entered value.
+You can send targeted messages to users based on their profile attributes, such as their location, age, or interests, to increase the relevance of your messages and improve engagement.
+By Response
+The users’ response to a preceding push notification.
+You may follow up with users who have previously engaged with a push notification, such as those who clicked a link or made a purchase, with a personalized message to increase the chances of them taking further action.
+By Behaviour
+It selects the users which performed specified actions with desired values within a time interval and/or within a specific location.
+Identify users who have shown a specific behavior, such as visiting a particular page or making a specific in-app action, and send them a push notification with relevant content or offers to drive them towards a desired action.
+Example:
+You want to send a promotional push notification to your users who have recently shown interest in men's shoes. You name the segment "Interested in Men's Shoes" and select the "By Tag" criteria to include users who have viewed or added men's shoes to their cart in the last 7 days.
+Additionally, you select "By Profile" and choose the attribute "Gender" with a value of "Male" to further narrow down your audience. Once the segment is created, you draft a promotional push notification for a discount on men's shoes and schedule it to be sent out to this specific segment during peak shopping hours. This targeted approach helps to increase engagement and conversion rates for your promotional campaigns.
+In the scenario below, it selects the users who did
+“Bill Payment”
+event more than 5 times with the amount greater than 300 in the last 3 months and between 09:00 and 18:00 in London.
+A sample scenario
+Button Sets
+Tags / Upload User List
+1 year ago

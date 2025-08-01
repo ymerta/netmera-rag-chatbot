@@ -1,15 +1,32 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/segments/rule-based-segments
+Targeting
+Segments
 Rule Based Segments
-When creating a new segment without selecting the "is predefined segment" option (which shows your segment on "Ready to Use Segments", the segment will be displayed in the Rule-Based Segments module. Each segment, customizable and dynamic, ensures tailored communication strategies. 
-Active Segment Count (Number): This metric represents the total number of currently active segments within the Rule-Based Segments module.
-Most Used Segment: This section highlights the segment that has been utilized the most within the last 1 month. It provides information on the number of campaigns associated with this particular segment during that period.
-Most Successful Segment: This metric identifies the segment that has achieved the highest success rate. Success is measured based on the average click rate percentage, which reflects the proportion of users within a segment who have interacted positively with the messages sent.
-Rule-Based Segments Overview: This section allows users to enter and manage Rule-Based Segments. Key attributes associated with each segment include:
-Segment Name: The unique identifier for the segment.
-Users: The number of users included in the segment.
-Message Sent: Indicates the number of messages sent to the users within the segment.
-Status: The current status of the segment (e.g., ready, calculating).
-Type: Specifies the type of segment in terms of if it's daily calculated or not.
-Remarketing: Indicates the remarketing actions associated with the segment, such as "Send users to Facebook." Connector setup with Facebook is required for this feature. Additionally, future integrations with Google and TikTok are in development.
-Actions: Any specific actions associated with the segment. Here you may pause, refresh, remove, edit, export your segments or you may send messages directly to your segment group.
+Rule Based Segments
+When creating a new segment without selecting the "is predefined segment" option (which shows your segment on "Ready to Use Segments", the segment will be displayed in the Rule-Based Segments module. Each segment, customizable and dynamic, ensures tailored communication strategies.
+Active Segment Count (Number):
+This metric represents the total number of currently active segments within the Rule-Based Segments module.
+Most Used Segment:
+This section highlights the segment that has been utilized the most within the last 1 month. It provides information on the number of campaigns associated with this particular segment during that period.
+Most Successful Segment:
+This metric identifies the segment that has achieved the highest success rate. Success is measured based on the average click rate percentage, which reflects the proportion of users within a segment who have interacted positively with the messages sent.
+Rule-Based Segments Overview:
+Segment Name:
+The unique identifier for the segment.
+Users:
+The number of users included in the segment.
+Message Sent:
+Indicates the number of messages sent to the users within the segment.
+Status:
+The current status of the segment (e.g., ready, calculating).
+Type:
+Specifies the type of segment in terms of if it's daily calculated or not.
+Remarketing:
+Indicates the remarketing actions associated with the segment, such as "Send users to Facebook." Connector setup with Facebook is required for this feature. Additionally, future integrations with Google and TikTok are in development.
+Actions:
+Any specific actions associated with the segment. Here you may pause, refresh, remove, edit, export your segments or you may send messages directly to your segment group.
 Daily Calculated Segments:
 These segments undergo daily recalculation based on changing user attributes. It enables you to target the correct audience every day with your daily updated lists.
+Ready to Use Segments
+Create New Rule Based Segment
+4 months ago

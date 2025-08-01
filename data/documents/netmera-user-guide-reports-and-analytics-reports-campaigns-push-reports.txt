@@ -1,63 +1,150 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/campaigns/push-reports
+Reports & Analytics
+Reports
+Campaigns
+Push Reports
 Data-Driven Push Insights for Better Engagement and Performance
-The Push Notification Summary and Metrics document provides a comprehensive overview of how to analyze and optimize push notification campaigns. By tracking key data points such as user engagement, message performance, and conversion metrics, marketers can better understand the effectiveness of their campaigns and make data-driven decisions to improve user interaction and achieve campaign goals. 📱
-
+The Push Notification Summary and Metrics document provides a comprehensive overview of how to analyze and optimize push notification campaigns. By tracking key data points such as user engagement, message performance, and conversion metrics, marketers can better understand the effectiveness of their campaigns and make data-driven decisions to improve user interaction and achieve campaign goals.
 Push Notification Summary
-The Message Report Dashboard provides detailed insights into the performance of push notification campaigns, helping to track user engagement, message effectiveness, and overall campaign success.
+The
+Message Report Dashboard
+provides detailed insights into the performance of push notification campaigns, helping to track user engagement, message effectiveness, and overall campaign success.
 1. Campaign Name & Message ID
-Name: This is the title given to a push notification campaign. It helps in quickly identifying and referencing a specific campaign within the system.
-Message ID: A unique identifier assigned to each push notification message. This helps in tracking and managing messages in the system.
+Name
+: This is the title given to a push notification campaign. It helps in quickly identifying and referencing a specific campaign within the system.
+Message ID
+: A unique identifier assigned to each push notification message. This helps in tracking and managing messages in the system.
 2. Message Type
 This indicates the type of message being delivered to the users. The type of message helps determine the method of delivery and the medium through which users will interact.
 3. Message Text
 The actual content of the push notification or message sent to the users. It includes the key message or call-to-action, such as "Your latest transaction is ready for review.
-4. Method
-Creator: The individual who created and initiated the campaign or message. This is useful for accountability and understanding who to reach out to if there are any questions or issues related to the campaign.
-Selection Criteria / Broadcasting: If the message was broadcasted, it means it was sent to all your users without using segmentation or tagging. 
-Selection Criteria / Segments & Tags: Alternatively, the message might be sent to a specific segments or tags based on user behavior, demographics, or preferences. Then it will show you a summary of the segments or tags you used.
-5. Campaign Status
-Finished: Indicates that the campaign has ended, and no further messages will be sent.
-Sending: Indicates that the campaign is ongoing and messages are still being sent.
-6. Timing
-Create: The date and time the message was created in the system. This helps in understanding when the campaign was initiated and allows you to correlate timing with user engagement.
-Start: The time when the push notification was sent out to users. If the campaign has a scheduled send time, this will indicate when the message was actually delivered to the users' devices.
-End: The time the campaign or message ended, whether it is the conclusion of the message's send period or the end of a specific promotional or informational window.
+Method
+Creator:
+The individual who created and initiated the campaign or message. This is useful for accountability and understanding who to reach out to if there are any questions or issues related to the campaign.
+Selection Criteria / Broadcasting:
+If the message was
+broadcasted
+, it means it was sent to all your users without using segmentation or tagging.
+Selection Criteria / Segments & Tags:
+Alternatively, the message might be sent to a specific
+segments or tags
+based on user behavior, demographics, or preferences. Then it will show you a summary of the segments or tags you used.
+Campaign Status
+Finished
+: Indicates that the campaign has ended, and no further messages will be sent.
+Sending
+: Indicates that the campaign is ongoing and messages are still being sent.
+Timing
+Create
+: The date and time the message was created in the system. This helps in understanding when the campaign was initiated and allows you to correlate timing with user engagement.
+Start
+: The time when the push notification was sent out to users. If the campaign has a scheduled send time, this will indicate when the message was actually delivered to the users' devices.
+End
+: The time the campaign or message ended, whether it is the conclusion of the message's send period or the end of a specific promotional or informational window.
 This dashboard highlights key details like message content, delivery method, timing, and the creator. It also includes information on the selection criteria, campaign status, and timing, enabling marketers to analyze and optimize push notifications based on user interaction and engagement.
 Push Notification Metrics
-
 Target Audience
-The Target Audience metric represents the total number of devices or users that you aim to reach with a push notification. This is the intended scope of your campaign. It reflects your campaign's reach, showing the number of devices you plan to engage with your message.
-Example: If your campaign is designed to reach 1000 users, the "Target Audience" is 1000. It doesn't mean that the notifications have been sent yet; it just sets the goal for the reach.
+The
+Target Audience
+metric represents the total number of devices or users that you aim to reach with a push notification. This is the
+intended scope
+of your campaign. It reflects your campaign's reach, showing the number of devices you plan to engage with your message.
+Example
+: If your campaign is designed to reach 1000 users, the "Target Audience" is 1000. It doesn't mean that the notifications have been sent yet; it just sets the goal for the reach.
 Users
-The Users metric refers to the actual number of individual users who received the push notification. This indicates how effective the push notification delivery was in terms of reaching the intended audience. 
-Example: If 800 out of the 1000 intended users received the notification, the "Users" count will be 800. This is the number of unique individuals who actually received the push notification.
+The
+Users
+metric refers to the
+actual number of individual users
+who received the push notification. This indicates how effective the push notification delivery was in terms of reaching the intended audience.
+Example
+: If 800 out of the 1000 intended users received the notification, the "Users" count will be 800. This is the number of unique individuals who actually received the push notification.
 Difference Between Target Audience and Users:
-While Target Audience shows the number of users you planned to reach, Users reflects how many of those people actually received the push notification.
-Key Difference: The Target Audience is the goal or intended reach, and Users shows the actual number of users who received the message. If you experience issues with delivery or targeting, the "Users" count might fall short of your "Target Audience."
+While
+Target Audience
+shows the number of users you planned to reach,
+Users
+reflects how many of those people actually received the push notification.
+: The
+Target Audience
+is the
+goal
+intended
+reach, and
+Users
+shows the actual number of users who received the message. If you experience issues with delivery or targeting, the "Users" count might fall short of your "Target Audience."
 Sent
-The Sent metric indicates the total number of push notifications dispatched to the target audience. It shows how many messages were sent out as part of the campaign, whether they were successfully delivered or not.
-Example: If your campaign is designed to reach 1200 people, but you actually sent 1000 notifications (perhaps due to some retry mechanism or delivery issues), the "Sent" count would be 1000. This metric helps assess how many notifications were placed into the delivery pipeline.
+The
+Sent
+metric indicates the
+total number of push notifications dispatched
+to the target audience. It shows how many messages were sent out as part of the campaign, whether they were successfully delivered or not.
+Example
+: If your campaign is designed to reach 1200 people, but you actually sent 1000 notifications (perhaps due to some retry mechanism or delivery issues), the "Sent" count would be 1000. This metric helps assess how many notifications were placed into the delivery pipeline.
 Success
-Success refers to the successful delivery of push notifications to users or devices. This metric reveals how many of the intended push notifications actually reached the recipients.
-Example: If you sent 1200 notifications but only 1000 were successfully delivered due to delivery issues (e.g., network problems or invalid device tokens), then the "Success" count would be 1000. It represents the actual outcome of your distribution process.
+Success
+refers to the
+successful delivery
+of push notifications to users or devices. This metric reveals how many of the intended push notifications actually reached the recipients.
+Example
+: If you sent 1200 notifications but only 1000 were successfully delivered due to delivery issues (e.g., network problems or invalid device tokens), then the "Success" count would be 1000. It represents the actual outcome of your distribution process.
 Clicked
-The Clicked metric shows the percentage of users who interacted with the push notification by clicking on it. This metric indicates how engaging the push notification was to the users.
-Example: If 1000 users received the notification and 200 users clicked on it, the "Clicked" percentage would be 20%. This is crucial for understanding how compelling and relevant the notification is to the users.
+The
+Clicked
+metric shows the
+percentage
+of users who interacted with the push notification by clicking on it. This metric indicates how engaging the push notification was to the users.
+Example
+: If 1000 users received the notification and 200 users clicked on it, the "Clicked" percentage would be 20%. This is crucial for understanding how compelling and relevant the notification is to the users.
 Avg. Time In App
-Average Time In App refers to the average duration users spend in the app after they click on the push notification. This metric provides insights into the level of user engagement and the impact the notification has on driving users to interact with the app more.
-Example: If users, on average, stay in the app for 10 minutes after clicking on the push notification, this reflects the effectiveness of your push notification in increasing user engagement.
+Average Time In App
+refers to the
+average duration
+users spend in the app after they click on the push notification. This metric provides insights into the
+level of user engagement
+and the impact the notification has on driving users to interact with the app more.
+Example
+: If users, on average, stay in the app for 10 minutes after clicking on the push notification, this reflects the effectiveness of your push notification in increasing user engagement.
 Hot Conversion
-Hot Conversion refers to the number of users who took a conversion action after clicking the push notification. A conversion action could be a purchase, sign-up, or any other predefined goal.
-Example: If you set up a conversion event like a "purchase" after clicking a notification, the "Hot Conversion" metric shows how many users went ahead and made a purchase. To view this data, you must first define a conversion event under the Conversion Analytics section in your campaign setup.
+Hot Conversion
+refers to the number of users who took a
+conversion action
+after clicking the push notification. A conversion action could be a purchase, sign-up, or any other predefined goal.
+Example
+: If you set up a conversion event like a "purchase" after clicking a notification, the "Hot Conversion" metric shows how many users went ahead and made a purchase. To view this data, you must first define a conversion event under the
+Conversion Analytics
+section in your campaign setup.
 Hot Revenue
-Hot Revenue represents the monetary value generated by users who completed a conversion action after interacting with the push notification. This metric ties the push notification campaign to financial outcomes.
-Example: If a conversion event was a purchase and users who clicked on the notification spent $1000 in total, this amount would be reflected as "Hot Revenue." To view this, you need to have a purchase-related conversion event set up during the campaign creation process.
+Hot Revenue
+represents the
+monetary value
+generated by users who completed a conversion action after interacting with the push notification. This metric ties the push notification campaign to
+financial outcomes
+Example
+: If a conversion event was a purchase and users who clicked on the notification spent $1000 in total, this amount would be reflected as "Hot Revenue." To view this, you need to have a purchase-related conversion event set up during the campaign creation process.
 Push Clicks
-The Push Clicks metric indicates the total number of clicks users made on the push notification, regardless of whether they converted or not. This measure gives a broad view of interaction with the notification.
-Example: If your push notification was clicked 500 times by different users, the "Push Clicks" count would be 500. It shows how much interest the notification sparked among users.
-Key Differences: Target Audience, Sent, and Success
-Target Audience is your initial goal—the number of people you want to reach.
-Sent is the number of notifications you’ve actually distributed to your target audience. It shows the volume of messages that went out, including any retry attempts or added users.
-Success is the number of notifications that were successfully delivered to the users. It's the real-world outcome of your campaign's distribution efforts.
+The
+Push Clicks
+metric indicates the
+total number of clicks
+users made on the push notification, regardless of whether they converted or not. This measure gives a
+broad view of interaction
+with the notification.
+Example
+: If your push notification was clicked 500 times by different users, the "Push Clicks" count would be 500. It shows how much interest the notification sparked among users.
+Differences: Target Audience, Sent, and Success
+Target Audience
+is your
+initial goal
+—the number of people you want to reach.
+Sent
+is the number of notifications you’ve
+actually distributed
+to your target audience. It shows the volume of messages that went out, including any retry attempts or added users.
+Success
+is the number of notifications that were
+successfully delivered
+to the users. It's the real-world outcome of your campaign's distribution efforts.
 Example:
 Let’s say:
 You want to reach 1000 people (Target Audience).
@@ -66,231 +153,382 @@ You sent 800 notifications (Sent).
 Out of 750 delivered notifications, 200 users clicked the notification (Clicked).
 50 users made a purchase after clicking the notification (Hot Conversion).
 The total revenue from these purchases was $5000 (Hot Revenue).
-In this case, Target Audience = 1000, Sent = 800, Success = 750, Clicked = 200, Hot Conversion = 50, and Hot Revenue = $5000.
+In this case,
+Target Audience
+= 1000,
+Sent
+= 800,
+Success
+= 750,
+Clicked
+= 200,
+Hot Conversion
+= 50, and
+Hot Revenue
+= $5000.
 This breakdown helps you assess the performance of your push notification campaign at each stage—from initial delivery to actual user interaction and the resulting conversions and revenue.
 Features of the Push Clicks Chart
 Hourly Insights for Metrics
-The chart displays Push Clicks, Sessions, and Revenue values on an hourly basis. This enables you to identify the hours when:
+The chart displays
+Push Clicks
+Sessions
+, and
+Revenue
+values on an
+hourly basis
+. This enables you to identify the hours when:
 The most users clicked on your push notifications (Push Clicks),
 Users actively engaged with your app (Sessions),
 Revenue was generated as a result of the campaign (Revenue).
-Highlighted Key Timeframes
-A central line on the chart represents the exact time when the push notification was sent. You can compare activity before and after the push notification to evaluate its impact.
-Pre-Send Activity: Understand baseline user activity and revenue before sending the notification.
-Post-Send Impact: Assess the spike in clicks, sessions, and revenue following the campaign.
+central line on the chart
+represents the exact time when the push notification was sent. You can compare activity
+before and after
+the push notification to evaluate its impact.
+Pre-Send Activity
+: Understand baseline user activity and revenue before sending the notification.
+Post-Send Impact
+: Assess the spike in clicks, sessions, and revenue following the campaign.
 Data Exploration
 By selecting a specific metric (e.g., Push Clicks, Sessions, or Revenue), the chart highlights the corresponding values for each hour, giving you a focused view of the metric's performance.
-
 Session Duration in Hourly Chart
-The default session duration displayed on the chart is 180 seconds.
-Netmera SDK ensures accurate session tracking by preserving the application session even when the app goes into the background for short periods.
-This mechanism prevents unnecessary foreground/background transitions, providing reliable session data.
+The default session duration displayed on the chart is
+180 seconds
+accurate session tracking
+by preserving the application session even when the app goes into the background for short periods.
+This mechanism prevents unnecessary
+foreground/background transitions
+, providing reliable session data.
 Session Expire Interval Settings
-You can adjust session duration settings through: Developers App Info > Session Expire Interval
+You can adjust session duration settings through:
+Developers App Info > Session Expire Interval
 Example: If the session expire interval is set to 180 seconds, the app session will remain active when the user briefly navigates away and returns within 3 minutes.
 Export to Excel
-You can download the chart data in an Excel file format using the "Export to Excel" button. The exported file includes:
+You can download the chart data in an Excel file format using the
+"Export to Excel"
+button. The exported file includes:
 Date
 Hourly Push Clicks
 Sessions
 Revenue data
 View Message Details
 This section provides an overview of your push notification campaign, covering important details like the campaign name, type, and the platforms targeted (iOS and Android). It explains how the message is scheduled, including delivery speed and timing, and what the push notification will look like, including the text, sound, and vibration settings.
-
 It also describes the action users will take when they click on the notification, such as opening the app's home screen. Lastly, it mentions whether conversion tracking is enabled, allowing you to monitor how users interact with your campaign after they click the notification. This setup helps you focus your efforts on specific users and measure the success of your campaign.
-
 Performance
 The Performance section encompasses key metrics that offer a comprehensive view of your messaging campaign's effectiveness. Let's delve into each component.
 Push Clicks By Platform
-The Push Clicks By Platform section provides a detailed breakdown of push notification performance metrics segmented by platform—Total, iOS, and Android. This allows you to analyze how your push notifications performed across different operating systems.
-Total: The total number of push notifications sent to users on each platform.
-Sent: The total number of push notifications dispatched to devices on each platform, representing the campaign's reach.
-Success: The number of notifications that were successfully delivered to users' devices on iOS and Android.
-Failed: The number of notifications that failed to be delivered due to issues such as invalid device tokens, network errors, or other delivery obstacles.
-Clicked: The total number of push notifications clicked by users on each platform, providing insights into platform-specific engagement rates.
-Not-Clicked: The number of delivered notifications that were not clicked, showing how many users ignored the notification.
-Conversion: Platform-specific conversion data, indicating the number of users who took a predefined conversion action (e.g., purchase or sign-up) after clicking on the notification.
-Revenue Metrics: Revenue generated from conversions is broken down by the following time intervals:
-1-hour revenue: Revenue generated within the first hour after notification click.
-3-hour revenue: Revenue within the first three hours.
-12-hour revenue: Revenue within the first 12 hours.
-24-hour revenue: Revenue accumulated within the first day.
-
+The
+Push Clicks By Platform
+section provides a detailed breakdown of push notification performance metrics segmented by
+platform
+Total
+iOS
+, and
+Android
+. This allows you to analyze how your push notifications performed across different operating systems.
+Total
+: The total number of push notifications sent to users on each platform.
+Sent:
+The total number of push notifications dispatched to devices on each platform, representing the campaign's reach.
+Success
+: The number of notifications that were successfully delivered to users' devices on iOS and Android.
+Failed:
+The number of notifications that failed to be delivered due to issues such as invalid device tokens, network errors, or other delivery obstacles.
+Clicked:
+The total number of push notifications clicked by users on each platform, providing insights into platform-specific engagement rates.
+Not-Clicked
+: The number of delivered notifications that were not clicked, showing how many users ignored the notification.
+Conversion
+: Platform-specific conversion data, indicating the number of users who took a predefined conversion action (e.g., purchase or sign-up) after clicking on the notification.
+Revenue Metrics
+: Revenue generated from conversions is broken down by the following time intervals:
+1-hour revenue
+: Revenue generated within the first hour after notification click.
+3-hour revenue
+: Revenue within the first three hours.
+12-hour revenue
+: Revenue within the first 12 hours.
+24-hour revenue
+: Revenue accumulated within the first day.
 Inbox Stats
-The Inbox Stats section provides insights into how users interact with notifications stored in their inbox. These metrics are segmented by platform—iOS and Android—to help you evaluate user engagement and behavior across different operating systems.
-Platform: Indicates whether the data pertains to Total, iOS, or Android, allowing for platform-specific analysis.
-Read: The total number of in-app messages that users have opened and viewed. This reflects the level of user engagement and interest in your messaging content.
-Unread: The total number of messages delivered but not yet opened by users. A high unread count may indicate that the content or timing of the message could be optimized.
-Deleted: The number of messages users have removed from their inbox without reading. This indicates content that might not resonate or is perceived as irrelevant.
-
+The
+Inbox Stats
+section provides insights into how users interact with notifications stored in their inbox. These metrics are segmented by platform—
+iOS
+and
+Android
+—to help you evaluate user engagement and behavior across different operating systems.
+Platform
+: Indicates whether the data pertains to
+Total
+iOS
+, or
+Android
+, allowing for platform-specific analysis.
+Read
+: The total number of in-app messages that users have opened and viewed. This reflects the level of user engagement and interest in your messaging content.
+Unread
+: The total number of messages delivered but not yet opened by users. A high unread count may indicate that the content or timing of the message could be optimized.
+Deleted
+: The number of messages users have removed from their inbox without reading. This indicates content that might not resonate or is perceived as irrelevant.
 Events in Push Session
-The Events in Push Session field within the Performance section offers a detailed view of user interactions during sessions initiated by push notifications. This analysis helps measure the effectiveness of your campaigns by highlighting user actions and behaviors following notification delivery. Data is segmented into Total, iOS, and Android to provide platform-specific insights.
-
+The
+Events in Push Session
+field within the
+Performance
+section offers a detailed view of user interactions during sessions initiated by push notifications. This analysis helps measure the effectiveness of your campaigns by highlighting user actions and behaviors following notification delivery. Data is segmented into
+Total
+iOS
+, and
+Android
+to provide platform-specific insights.
 Why Results Might Not Be Visible
-Lack of Data:
+Lack of Data
 Reports are only generated if relevant data exists for the selected push message and its parameters. No report will appear if there are no interactions or events logged for a specific campaign or event type.
-Event Configuration:
-Ensure that the events you want to track are properly configured in your analytics setup. Confirm that the Netmera SDK is implemented correctly to capture all user actions.
+Event Configuration
+Ensure that the events you want to track are properly configured in your analytics setup. Confirm that the
+is implemented correctly to capture all user actions.
 Push Clicks By Profile Attributes
-The Push Clicks By Profile Attributes section provides a detailed analysis of how different user segments, based on specific profile attributes, engage with your push notifications. By customizing parameters such as demographic, behavioral, or transactional data, this feature helps uncover trends and user behavior patterns, enabling targeted campaign optimization.
-Profile Attribute Name: 
-This metric represents the specific attribute used to categorize users. Profile attributes could include data such as age group, location, subscription type, or membership status.
+The
+Push Clicks By Profile Attributes
+section provides a detailed analysis of how different user segments, based on specific profile attributes, engage with your push notifications. By customizing parameters such as demographic, behavioral, or transactional data, this feature helps uncover trends and user behavior patterns, enabling targeted campaign optimization.
+Profile Attribute Name
+This metric represents the specific attribute used to categorize users. Profile attributes could include data such as
+age group
+location
+subscription type
+, or
+membership status
 Example: If the profile attribute is "Subscription Type," you might see different performance metrics for users with "Premium" subscriptions versus "Free" subscriptions.
-Total:
+Total
 This is the total number of push notifications that were intended for users within the selected profile attribute.
 This metric reflects how many notifications were dispatched to users who share a particular characteristic, providing a sense of the reach for that specific group.
-Success: 
+Success
 This metric tells you how many users received the notification based on the profile criteria. Successful delivery means that the notification was properly received by the device.
-Failed: 
+Failed
 The number of push notifications that failed to be delivered due to issues such as invalid device tokens, network errors, or other obstacles.
 This metric helps you identify problems in the delivery process, which could be related to technical issues or users who have disabled push notifications.
-Clicked and Not-Clicked:
-Clicked: The number of notifications that were clicked by users within the selected profile attribute. This shows the level of engagement, indicating how many users interacted with the push notification.
+Clicked and Not-Clicked
+Clicked
+: The number of notifications that were clicked by users within the selected profile attribute. This shows the level of engagement, indicating how many users interacted with the push notification.
 Example: If 200 users clicked on the notification, the "Clicked" count would be 200.
-Not-Clicked: The number of notifications that were delivered but not clicked by users. This helps assess how effective your notification's content and targeting were. If a large portion of users didn’t click, it may indicate that the content needs improvement.
+Not-Clicked
+: The number of notifications that were delivered but not clicked by users. This helps assess how effective your notification's content and targeting were. If a large portion of users didn’t click, it may indicate that the content needs improvement.
 Example: If 300 notifications were delivered but not clicked, the "Not-Clicked" count would be 300.
-Conversions: 
+Conversions
 The number of users who performed a predefined action (such as making a purchase, signing up, or taking another key action) after clicking the push notification.
 This metric helps you measure how well your push notification led to desired outcomes. If conversions are low, it may be necessary to adjust your call-to-action or refine your segmentation.
-Revenue Total:
+Revenue Total
 The total revenue generated from conversions by users within the selected profile attribute.
 This metric quantifies the financial impact of the push notification within that specific profile group. It helps you understand the ROI of your campaigns based on user behavior within each profile.
-Revenue Per User: 
+Revenue Per User:
 The average revenue generated per user within the profile attribute, based on conversions.
 This metric provides insights into the average financial contribution of a user from a particular segment. It helps you assess the value of different user segments and optimize your targeting to focus on higher-value groups.
-
 Push Clicks By Segment
-The Push Clicks By Segment section provides data about how users in different segments engage with push notifications. This data can help you understand how different user groups respond to your notifications, and it’s crucial for optimizing your targeting strategies. If the recipients of the message aren’t part of any segment, no report will be created.
-Segment: 
+The
+Push Clicks By Segment
+section provides data about how users in different segments engage with push notifications. This data can help you understand how different user groups respond to your notifications, and it’s crucial for optimizing your targeting strategies. If the recipients of the message aren’t part of any segment, no report will be created.
+Segment
 This refers to the user segment that is being analyzed. Segments are groups of users who share certain characteristics, such as demographics, behaviors, or purchase history.
 Example: A segment might include users who have made a purchase in the last 30 days or users who are located in a specific geographic region.
-Total: 
+Total
 The total number of push notifications sent to users within the selected segment.
 This metric shows how many push notifications were intended to be delivered to the specific group of users. It helps you measure the reach of your campaign within that segment.
-Failed: 
+Failed
 The number of push notifications that failed to be delivered to users within the segment.
 Failures can occur for several reasons, such as invalid device tokens, poor network conditions, or users turning off push notifications on their devices.
-Clicked: 
+Clicked
 The number of push notifications that were clicked by users in the segment.
 This metric provides insight into how many users engaged with the push notification by clicking it. A high number of clicks typically indicates good engagement with the content of the notification.
-Not-Clicked:
+Not-Clicked
 The number of delivered push notifications that were not clicked by users within the segment.
 This shows how many users received the notification but did not interact with it. Understanding this can help you assess how effective your notification’s content and timing were at engaging users.
-Conversions: 
+Conversions
 The number of users who took a predefined action after clicking the push notification. This could be anything from making a purchase to signing up for a service, depending on the goal of your campaign.
 This metric helps you measure the effectiveness of the push notification in driving user behavior. If the goal is to increase sales, a high number of conversions would indicate success.
-Revenue Total: 
+Revenue Total
 The total revenue generated by the segment as a result of conversions triggered by the push notification.
 This metric shows the financial impact of your push notification campaign. It helps you measure the return on investment (ROI) by calculating how much revenue the campaign generated from the segment.
-Revenue Per User: 
+Revenue Per User
 The average revenue generated per user within the segment who interacted with the notification.
 This metric gives you a sense of how much each user contributes to the overall revenue after receiving the notification. It’s useful for assessing the financial value of the segment.
 Why Results Might Not Be Visible
 If there are no recipients within the selected segment, the system cannot generate a report. This could happen if:
 The recipients of the push notification do not belong to any defined segment.
 The segment data for the specific campaign is missing or incorrectly set up.
-
 Heatmap
-The heatmap provides a visual representation of the distribution and volume of push notifications received by users. It focuses on the density of successful deliveries, helping you understand where your campaign has had the widest reach or areas with lower delivery rates.
+The heatmap provides a visual representation of the
+distribution and volume of push notifications received by users
+. It focuses on the density of successful deliveries, helping you understand where your campaign has had the widest reach or areas with lower delivery rates.
 Color Representation in the Heatmap
-Warmer Colors (e.g., Red, Orange): Indicate areas or segments where a larger number of notifications were successfully received. These regions or groups have the highest concentration of delivered messages.
-Cooler Colors (e.g., Blue, Green): Indicate areas or segments with fewer notifications received, reflecting a lower delivery density.
-
+Warmer Colors (e.g., Red, Orange)
+: Indicate areas or segments where a larger number of notifications were successfully received. These regions or groups have the highest concentration of delivered messages.
+Cooler Colors (e.g., Blue, Green)
+: Indicate areas or segments with fewer notifications received, reflecting a lower delivery density.
 Conversion & Revenue
 Conversion
-The Conversion Report provides detailed insights into how user groups interact with your campaign's push notifications and their corresponding financial impact.
-Key Features of the Conversion Section
+The
+Conversion Report
+provides detailed insights into how user groups interact with your campaign's push notifications and their corresponding financial impact.
 Conversion Event:
 Displays the specific event being tracked to measure the campaign's success.
 User Groups Analysis:
 Breaks down results for each user group (e.g., Received Push, Clicked Push, Control Group, Not In Target).
 Helps assess engagement and conversion contributions by segment.
 Metrics by Time Frame:
-Provides data in intervals of In Push Session, 1 Hour, 3 Hours, 12 Hours, and 24 Hours for a detailed timeline of user behavior.
+Provides data in intervals of
+In Push Session
+1 Hour
+3 Hours
+12 Hours
+, and
+24 Hours
+for a detailed timeline of user behavior.
 Default Session Duration
-The default session duration displayed on the chart is 180 seconds.
+The default session duration displayed on the chart is
+180 seconds
 Session Expire Interval Settings
-You can adjust session duration settings through: Developers App Info > Session Expire Interval.
-Key Metrics:
-Received Push: Total number of notifications successfully delivered to users.
-Clicked Push: Number of users who interacted with the notification by clicking it.
-Control Group: Users excluded from receiving the push as part of A/B testing or experimentation to measure the campaign’s incremental impact.
-Not In Target: Metrics for users outside the targeted campaign audience.
-Total: Cumulative values across all user groups.
-
+You can adjust session duration settings through:
+Developers App Info > Session Expire Interval.
+Received Push:
+Total number of notifications successfully delivered to users.
+Clicked Push:
+Number of users who interacted with the notification by clicking it.
+Control Group:
+Users excluded from receiving the push as part of A/B testing or experimentation to measure the campaign’s incremental impact.
+Not In Target:
+Metrics for users outside the targeted campaign audience.
+Total:
+Cumulative values across all user groups.
 Conversion Event Must Be Set on Campaign Creation
-To accurately track and analyze the success of your push campaign, a conversion event must be defined during the campaign creation process. This ensures that key user actions, such as message interactions and goal completions, are effectively recorded and provide valuable insights for optimizing future campaigns.
-
+To accurately track and analyze the success of your push campaign,
+a conversion event must be defined during the campaign creation process
+. This ensures that key user actions, such as message interactions and goal completions, are effectively recorded and provide valuable insights for optimizing future campaigns.
 Revenue
-The Revenue Section is a critical component for understanding the financial performance of your push notification campaigns. It provides a granular view of how various User Groups contribute to revenue over different timeframes, enabling data-driven decision-making and campaign optimization.
-
-Key Features of the Revenue Section
+The
+Revenue Section
+is a critical component for understanding the financial performance of your push notification campaigns. It provides a granular view of how various
+User Groups
+contribute to revenue over different timeframes, enabling data-driven decision-making and campaign optimization.
 Segmentation by User Groups
 The data is categorized into four key user groups to provide a detailed understanding of their impact on revenue generation:
-Received Push: Users who received the push notification but may or may not have interacted with it.
-Clicked Push: Users who clicked on the notification, indicating active engagement with the campaign.
-Control Group: Users excluded from receiving the push as part of A/B testing or experimentation to measure the campaign’s incremental impact.
-Not In Target: Users who were outside the campaign’s targeted audience.
+Received Push:
+Users who received the push notification but may or may not have interacted with it.
+Clicked Push:
+Users who clicked on the notification, indicating active engagement with the campaign.
+Control Group:
+Users excluded from receiving the push as part of A/B testing or experimentation to measure the campaign’s incremental impact.
+Not In Target:
+Users who were outside the campaign’s targeted audience.
 Revenue Metrics Across Time Intervals
 Revenue is tracked over multiple predefined time periods to assess both immediate and delayed effects of the campaign:
-In Push Session: Revenue generated within the app session initiated immediately after interacting with the notification. Push session
-1 Hour, 3 Hours, 12 Hours, and 24 Hours: Revenue attributed to users within these timeframes after receiving the push. These intervals allow marketers to analyze short-term and longer-term revenue effects.
+In Push Session:
+Revenue generated within the app session initiated immediately after interacting with the notification. Push session
+1 Hour, 3 Hours, 12 Hours, and 24 Hours:
+Revenue attributed to users within these timeframes after receiving the push. These intervals allow marketers to analyze short-term and longer-term revenue effects.
 By understanding revenue trends across these intervals, you can pinpoint when your campaign drives the highest return and tailor your messaging accordingly.
 Default Session Duration
-The default session duration displayed on the chart is 180 seconds.
+The default session duration displayed on the chart is
+180 seconds
 Session Expire Interval Settings
-You can adjust session duration settings through: Developers App Info > Session Expire Interval.
+You can adjust session duration settings through:
+Developers App Info > Session Expire Interval.
 Event Insight
-The Event Insight section is designed to provide in-depth analysis of user actions, focusing on specific events tied to push notifications. This section allows you to dissect and understand how users interact with notifications, providing valuable insights into campaign performance and user behavior.
-Key Features of the Event Insight Section
+The
+Event Insight
+section is designed to provide in-depth analysis of user actions, focusing on specific events tied to push notifications. This section allows you to dissect and understand how users interact with notifications, providing valuable insights into campaign performance and user behavior.
 User Action Analysis
 The core of the Event Insight section revolves around understanding user actions related to push notifications. You can analyze:
-Users Who Received Push: Tracks the reach and actions taken by users after receiving the campaign message.
-Users Who Clicked: Tracks user actions performed after clicking the campaign push notification.
+Users Who Received Push
+: Tracks the reach and actions taken by users after receiving the campaign message.
+Users Who Clicked
+: Tracks user actions performed after clicking the campaign push notification.
 The ability to selectively view users based on these actions helps isolate the exact impact of the campaign on user behavior and allows for deeper analysis of engagement patterns.
-
 Time Period Selection
 The Event Insight section allows you to filter data based on specific timeframes, enabling precise analysis of user behavior over various periods:
-Last 1 hour, 3 hours, 12 hours, or 24 hours: These options help assess short-term reactions to your campaign.
-Custom Date Range: You can select a custom range within the push session to analyze trends over specific timeframes that matter most to your campaign objectives.
+Last 1 hour, 3 hours, 12 hours, or 24 hours
+: These options help assess short-term reactions to your campaign.
+Custom Date Range
+: You can select a custom range within the push session to analyze trends over specific timeframes that matter most to your campaign objectives.
 These time periods provide flexibility in analyzing how quickly users engage with the push notification and how their actions evolve over time.
 Event Selection (Search Event)
 The "Search Event" field allows you to focus your analysis on specific user actions or events. By selecting events from a predefined list, you can track actions like:
-Open App: Users opening the app after receiving the push.
-Purchase Event: Users making a purchase after interaction with the notification.
-Any Custom Event: Any action or event tracked within the app that is relevant to your campaign.
+Open App
+: Users opening the app after receiving the push.
+Purchase Event
+: Users making a purchase after interaction with the notification.
+Any Custom Event
+: Any action or event tracked within the app that is relevant to your campaign.
 This feature makes it easy to zoom in on the specific event you want to analyze, improving the precision of your insights.
 Event Analytics by Dimensions
 Narrowing Down by Event Details
 After selecting a specific event in the Event Insight section, you can narrow down your analysis further by choosing specific dimensions. These dimensions provide deeper insights into the selected event, such as:
-External ID: This helps track individual user behavior and how specific users interact with your push notifications.
-Month: This lets you analyze user actions across different months, showing trends and patterns over time.
+External ID
+: This helps track individual user behavior and how specific users interact with your push notifications.
+Month
+: This lets you analyze user actions across different months, showing trends and patterns over time.
 The table generated after selecting these dimensions shows detailed results, such as:
 How many users performed the event (e.g., "Open App") in each month.
 The specific exterrnal IDs tied to the event, allowing you to identify high-value users or understand specific user behavior.
 By drilling down into these dimensions, you gain a more granular understanding of how users are engaging with your app after receiving notifications.
-
 Data Export
 Exporting Data for Further Analysis
-The results from the Event Insight analysis can be easily exported for further review and reporting. The data is available in Excel format, which can be downloaded by clicking the "Export to Excel" button located in the lower right corner. This feature ensures that the data can be integrated into larger datasets or shared with stakeholders for in-depth analysis.
+The results from the Event Insight analysis can be easily exported for further review and reporting. The data is available in
+Excel format
+, which can be downloaded by clicking the
+"Export to Excel"
+button located in the lower right corner. This feature ensures that the data can be integrated into larger datasets or shared with stakeholders for in-depth analysis.
 The ability to export data means you can further analyze trends, create reports, and present findings to other teams in your organization.
-Q: How do I set up a conversion event for my push notification campaign?
-To set up a conversion event, you must define it during the campaign creation process. This ensures that key user actions, such as message interactions or goal completions, are tracked accurately. The conversion event can be selected from a predefined list of events or a custom event can be created to monitor specific user behaviors.
-Q: How can I adjust the session duration settings for my campaign reports?
-The default session duration for your reports is set to 180 seconds. However, you can modify this setting by navigating to Developers > App Info > Session Expire Interval within your application configuration. This allows you to tailor the session duration to your specific campaign needs.
-Q: Can I analyze the performance of specific user actions tied to my push notifications?
-Yes, the Event Insight section allows you to analyze specific user actions associated with your push notifications. You can track actions like Open App, Purchase Event, or any Custom Event defined in your app. You can filter the data by user behavior (e.g., users who clicked or received the push) and specific time periods for more detailed insights. You might also access this Dashboard from Event Insight.
-Q: What does the "Control Group" represent in conversion and revenue reports?
-The Control Group consists of users who were deliberately excluded from receiving the push notifications. This group is used for A/B testing or for Conversion settings to measure the incremental impact of the campaign, by comparing it to users who received the notifications.
-Q: Can I analyze the impact of a push notification campaign on users who did not interact with it and target them for future campaigns?
-Yes, the Received Push group tracks users who received the push notification but did not engage with it. This helps analyze broader reach and potential indirect effects of the campaign. You may also tag or export these users for future campaigns.
-Q: Why am I unable to see data under Performance Metrics?
-If you're unable to see data for Profile Attributes, Segments, or other specific metrics in your conversion or revenue reports, it could be due to one or more of the following reasons:
-1.Data Not Collected or Recorded
+FAQs
+How do I set up a conversion event for my push notification campaign?
+To set up a conversion event, you must define it during the campaign creation process. This ensures that key user actions, such as message interactions or goal completions, are tracked accurately. The conversion event can be selected from a predefined list of events or a custom event can be created to monitor specific user behaviors. Please see
+Creating a Mobile Push
+How can I adjust the session duration settings for my campaign reports?
+The default session duration for your reports is set to 180 seconds. However, you can modify this setting by navigating to
+Developers > App Info > Session Expire Interval
+within your application configuration. This allows you to tailor the session duration to your specific campaign needs.
+Can I analyze the performance of specific user actions tied to my push notifications?
+Yes, the
+Event Insight
+section allows you to analyze specific user actions associated with your push notifications. You can track actions like
+Open App
+Purchase Event
+, or any
+Custom Event
+defined in your app. You can filter the data by user behavior (e.g., users who clicked or received the push) and specific time periods for more detailed insights. You might also access this Dashboard from
+Event Insight
+What does the "Control Group" represent in conversion and revenue reports?
+The
+Control Group
+consists of users who were deliberately excluded from receiving the push notifications. This group is used for A/B testing or for Conversion settings for experimental purposes to measure the incremental impact of the campaign, providing a comparison against users who were exposed to the notifications.
+Can I analyzethe impact of a push notification campaign on users who did not interact with it and target them for future campaigns?
+Yes, the
+Received Push
+group tracks users who received the push notification but did not necessarily engage with it. Analyzing this group helps you understand the broader reach and potential indirect effects of the campaign, even on users who didn't actively click on the notification. Furthermore, you may tag or export these users for re-marketing campaigns.
+Why am I unable to see data under Performance Metrics?
+If you're unable to see data for
+Profile Attributes
+Segments
+, or other specific metrics in your conversion or revenue reports, it could be due to one or more of the following reasons:
+Data Not Collected or Recorded
 The profile attributes or segments might not be properly configured or collected during your campaign setup. Ensure that the necessary data (e.g., user events, segments, profile attributes) are being tracked by your app or system. Check that these attributes are correctly configured in your campaign setup and that your user data has been properly captured.
-2.Attributes or Events Not Set Up in Campaign
-Attributes or segments need to be explicitly set up to be tracked and reported within the campaign. If they were not configured during the campaign creation, data may not be visible. Check the campaign setup to ensure that attributes are being properly tracked and linked to the campaign events. You may need to define them as part of the campaign's event tracking or user segmentation.
-3.Incorrect Configuration
-If incorrectly defined or not applied to the data you're analyzing, the results may not show up in your reports. Double-check the segment, event or profile attribution definitions in your campaign settings to ensure that you are trying to analyze are properly configured and associated with the relevant user actions or profiles.
-4.Permissions or Access Issue:
-It’s possible that you lack the necessary permissions to view specific data or segments, especially if the data is restricted to certain user roles or access levels within the platform. Check your user role and permissions within the platform to make sure you have access to the necessary data and reports. If you're not an admin, you may need to request access from someone with the appropriate privileges.
+Attributes or Events Not Set Up in Campaign
+Attributes or segments need to be explicitly set up to be tracked and reported within the campaign. If they were not configured during the
+campaign creation
+, data may not be visible. Check the
+campaign setup
+to ensure that
+attributes
+are being properly tracked and linked to the campaign events. You may need to define them as part of the campaign's event tracking or user segmentation.
+Incorrect Configuration
+If incorrectly defined or not applied to the data you're analyzing, the results may not show up in your reports. Double-check the
+segment, event or profile attribution definitions
+in your campaign settings to ensure that you are trying to analyze are properly configured and associated with the relevant user actions or profiles.
+Permissions or Access Issue:
+It’s possible that you lack the necessary permissions to view specific data or segments, especially if the data is restricted to certain user roles or access levels within the platform. Check your
+user role
+and
+permissions
+within the platform to make sure you have access to the necessary data and reports. If you're not an admin, you may need to request access from someone with the appropriate privileges.
+Campaigns
+Email Reports
+7 months ago

@@ -1,15 +1,27 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/analytics/profile
+Reports & Analytics
+Analytics
+Profile
 This powerful feature allows you to gain valuable insights into your user profiles, helping you make informed decisions to enhance user engagement and retention. In this guide, we'll walk you through how to use Profile Analytics effectively.
 Profile Analytics provides you with the flexibility to select different time periods for your analysis. Here are the available options:
-Last Week: This option lets you analyze user profiles for the past week.
-Last Month: Select this to focus on user profiles from the last month.
-Last Year: Choose this option to examine user profiles from the past year.
+Last Week
+: This option lets you analyze user profiles for the past week.
+Last Month
+: Select this to focus on user profiles from the last month.
+Last Year
+: Choose this option to examine user profiles from the past year.
 Additionally, you have the option to set a custom date range by selecting "Dates Between." This is particularly useful when you want to zoom in on specific events or changes within a defined period.
 Profile Analytic
-1.Selecting Attributes: Begin by selecting the profile attributes you want to analyze. These attributes can encompass user demographics, preferences, or engagement levels.
-2.Attribute Values: You can further refine your analysis by choosing additional attribute values. This allows you to zoom in on particular user segments and identify trends or patterns within your user base.
+Selecting Attributes
+: Begin by selecting the profile attributes you want to analyze. These attributes can encompass user demographics, preferences, or engagement levels.
+Attribute Values
+: You can further refine your analysis by choosing additional attribute values. This allows you to zoom in on particular user segments and identify trends or patterns within your user base.
 Making Data-Driven Decisions
 With these insights at your disposal, you can make data-driven decisions to:
 Personalize user experiences based on specific attributes.
 Fine-tune your marketing strategies to target the right audience.
 Improve overall user satisfaction by tailoring your app's offerings.
 Profile Analytics is your gateway to understanding and optimizing user profiles within your app. By leveraging this feature, you can create more personalized and engaging experiences for your users, ultimately driving app success.
+Create New Funnel
+Event Insight
+4 months ago

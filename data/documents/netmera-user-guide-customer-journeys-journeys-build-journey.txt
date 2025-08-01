@@ -1,3 +1,7 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/build-journey
+Customer Journeys
+Journeys
+Build Journey
 Crafting Experiences That Resonate
 Step 4: Build
 Quick Steps Guideline
@@ -11,14 +15,15 @@ Customize each component according to your specific requirements and goals.
 Continue Until Finalizing Your Journey:
 Proceed with the configuration process until you are satisfied with the final design of your journey.
 In the Build step of the Journey is the fourth step and several components are designed to facilitate the creation and management of user engagement journeys. Here’s a breakdown of the key components:
-
 Journey Flow
 Journey Flow area in the Build screen is a visual workspace where users can see the layout and sequence of steps within a user engagement journey. It shows how each step connects to the next, providing a clear depiction of the campaign flow from start to finish.
 Add Step Button
 Add Step button is located at the bottom of the Journey Flow area. This button enables you to add new steps to their journey. Each step represents a specific event or action that contributes to the overall engagement process. By clicking this button, you can expand your journey by incorporating additional interactions or triggers.
-
 Step Container
 Each step within the journey is contained within a Step Container. This container includes several elements. You can click on these containers to edit the configurations and rules for each step. This typically involves setting the criteria for the step, such as the trigger event or the audience segment it targets. The container visually represents the step in the context of the entire journey, making it easy to see where it fits within the flow.
-
 Journey Name and Status
 At the top of the screen, the Status area displays the current status of your journey (e.g., Draft, Stopped or Active) and the last saved time. This serves as a quick reference for you to understand which journey you are working on and its progression state.
+In the next page you will see the journey components you may add to your journey to make it more comprehensive and effective.
+Audience
+Journey Components
+9 months ago

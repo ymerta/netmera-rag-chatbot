@@ -1,29 +1,48 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/setup
+Customer Journeys
+Journeys
 Setup
 Get Started with Seamless Configuration
 Step 1: Setup
 Quick Steps Guideline
 Journey Step 1: Setup
-Open Journey Section: Click Journey from the menu to access the listing page.
-Create Journey: Click Create new Journey to start the creation process.
-Enter Journey Name (necessary): A warning message will appear if you try to proceed without entering a name.
-Add Description (optional): Describe the journey's purpose.
-Select Conversion Event (optional): Choose an event to define success.
-Add Trigger Filters (optional): Enable and configure filters for specific event properties.
-
+Open Journey Section
+: Click
+Journey
+from the menu to access the listing page.
+Create Journey
+: Click
+Create new Journey
+to start the creation process.
+Enter Journey Name (necessary)
+: A warning message will appear if you try to proceed without entering a name.
+Add Description (optional)
+: Describe the journey's purpose.
+Select Conversion Event (optional)
+: Choose an event to define success.
+Add Trigger Filters (optional)
+: Enable and configure filters for specific event properties.
 Start a Journey
 Access the Journey Section:
-To begin, navigate to the main menu click on the Journey option. This action opens the Journey listing page, where all existing journeys are displayed. Here, you can view details, see the journey, or stop existing journeys.
+To begin, navigate to the main menu click on the
+Journey
+option. This action opens the Journey listing page, where all existing journeys are displayed. Here, you can view details, see the journey, or stop existing journeys.
 Create a New Journey:
-To initiate a new journey, locate and click the Create new Journey button. This button is positioned at the top or center of the page. Clicking it will direct you to the journey creation wizard, designed to guide you through the setup process step-by-step.
-
+To initiate a new journey, locate and click the
+Create new Journey
+button. This button is positioned at the top or center of the page. Clicking it will direct you to the journey creation wizard, designed to guide you through the setup process step-by-step.
 Enter Journey Information
-Enter Journey Name (necessary): 
+Enter Journey Name (necessary):
 The journey name is a mandatory field. Provide a unique and descriptive name for your journey, such as "Customer Retention Campaign." You must enter a name to proceed. If you attempt to move forward without entering a name, a warning message will appear beneath the input field, prompting you to fill in the required information.
 Enter Journey Description (optional):
 This optional field allows you to provide more context about the journey's objective. For example, your description could be "A campaign aimed at increasing the retention rate of new users by sending personalized offers based on their browsing history and recent purchases." Providing a detailed description helps in effectively communicating the journey’s intent to your team.
 Choose a Conversion Event
 What is a Conversion and Conversion Event?
-A "Conversion" refers to the successful completion of a specific, predefined action by a user, which is valuable to the business. A "Conversion Event" is the specific action or series of actions that a user must take in order to be counted as a conversion. It is a predefined metric set by the business or marketing team. For example:
+A "
+Conversion
+" refers to the successful completion of a specific, predefined action by a user, which is valuable to the business. A "
+Conversion Event
+" is the specific action or series of actions that a user must take in order to be counted as a conversion. It is a predefined metric set by the business or marketing team. For example:
 Making a purchase
 Applying for a credit card
 Updating profile information
@@ -31,13 +50,24 @@ Conversions are crucial metrics for measuring the effectiveness of marketing cam
 Choose Conversion Event:
 In this section, you must select an event that signifies the success of the journey. This metric is crucial for evaluating the journey's effectiveness. Use the dropdown menu provided to select a conversion event that aligns with your journey's goals. An example might be selecting "Purchase" to indicate successful transactions as the journey's target outcome.
 Events Information:
-To select a conversion event in this journey, the event must first be created under Developers > Events. If the event is not set up there, it won't be available for selection here. For detailed instructions on how to create a new event, please refer to Events.
+To select a conversion event in this journey, the event must first be created under
+Developers > Events
+. If the event is not set up there, it won't be available for selection here. For detailed instructions on how to create a new event, please refer to
+Events
 Set a Conversion Event Before Starting the Journey:
 A conversion event must be defined before launching the journey. Once the journey begins, it is not possible to add or modify the conversion event. Ensure this step is completed to accurately track and measure the success of your campaign.
-
 Add Trigger Filters:
-If you wish to track specific attributes of the chosen conversion event, check the Add Trigger Filters box. This option reveals additional configuration settings, allowing you to define and link specific properties using and logic to refine the conditions under which the event is tracked. For instance, you might track events where the "Product Category" is "Electronics" and the "Purchase Amount" exceeds $100. These filters help to enhance targeting precision and ensure that only significant events are monitored.
+If you wish to track specific attributes of the chosen conversion event, check the
+Add Trigger Filters
+box. This option reveals additional configuration settings, allowing you to define and link specific properties using
+and logic
+to refine the conditions under which the event is tracked. For instance, you might track events where the "Product Category" is "Electronics" and the "Purchase Amount" exceeds $100. These filters help to enhance targeting precision and ensure that only significant events are monitored.
 Event Properties Information:
-To access event properties, you must define these properties when creating the event under Developers > Events. If properties are not provided during event creation, they will not be available for selection later.
-
-Once all necessary fields and optional settings are completed, proceed by clicking the Next button located in the bottom right corner of the screen. This action takes you to the next phase of journey setup, where you can define entry rules, set up your target audience, and customize the journey flow.
+To access event properties, you must define these properties when creating the event under
+Developers > Events
+. If properties are not provided during event creation, they will not be available for selection later.
+Once all necessary fields and optional settings are completed, proceed by clicking the
+button located in the bottom right corner of the screen. This action takes you to the next phase of journey setup, where you can define entry rules, set up your target audience, and customize the journey flow.
+Journeys
+Entry Rules
+9 months ago

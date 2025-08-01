@@ -1,0 +1,87 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/segments/rule-based-segments/create-new-rule-based-segment
+Targeting
+Segments
+Rule Based Segments
+Create New Rule Based Segment
+Create New Segment
+To create a custom segment for your target audience, you can access the Segments tab and select the option to create a new segment. Once you've chosen a name for your segment, you can use various criteria to narrow down your target audience, including targeting users based on their push permission, tag, profile attributes, previous response, or behavior within a specific time interval or location.
+Targeting > Segments > Create New Segment
+Step 1:
+Create New Segment
+Begin by following these steps:
+Navigate to the "Targeting" section within the Netmera panel.
+In the "
+Targeting
+" section, locate and select "
+Segments
+." This is where you'll start the process of creating a new segment.
+Segment Name
+: Start by giving your segment a unique and descriptive name. This name will help you identify and manage the segment easily. Enter the desired name in the "Enter Segment Name" field.
+Segment Criteria
+: Now, you need to define the criteria for your segment. This is where you specify the characteristics, behaviors, or actions that will categorize users into this segment. You can set multiple criteria to narrow down your target audience effectively. For example, you might create a segment for users who have made a purchase in the last 30 days and live in a specific geographic area. Customize your segment criteria as needed.
+Send to Facebook
+: If you want to integrate this segment with Facebook for targeted advertising, you can enable the "Send to Facebook" option.
+Is Predefined Segment
+: If you've previously defined a segment that you intend to edit, you can use this option to indicate whether it's a predefined segment.
+"Is predefined segment" option saves your segment to ready to use segments dahsboard:
+When creating a new segment (
+Create New Segment
+)  selecting the "is predefined segment" option during the creation of a new segment on your Netmera panel, the system will integrate and make this segment visible on the "Ready to Use Segments" dashboard after the subsequent 12 am update.
+Warning
+To create a segment, you must define at least one criteria and unique segment name.
+Step 2: Define Segment Criteria
+To create a segment or edit an existing one, follow these steps:
+Select Segment Criteria: Any or All
+To begin defining your segment criteria, start by selecting whether you want "
+Any
+" or "
+All
+" of the following conditions to be true. This choice determines how your criteria are evaluated.
+Should I choose Any or All?
+Any
+" means that at least one condition within the group must be met
+All
+" means that all conditions within the group must be met for the segment to apply.
+Conditions for Your Segment
+This option allows you to specify individual conditions based on various factors. You get to decide precisely how you want to categorize and group your users based on the following criteria:
+Channel
+This condition allows you to target users based on the channels or platforms through which they have interacted. For example, you can segment users who have engaged through email, push notifications, SMS, or specific communication channels used in your omnichannel strategy. It's a way to pinpoint users based on their preferred interaction mediums.
+Platform
+With this condition, you can narrow down your audience based on the specific platforms or devices they use. For instance, you can create segments for users on iOS or Android devices, different app versions, or categorize users by their device type (mobile, tablet, desktop). This allows you to customize your messaging for different device experiences.
+Tag
+Tags are labels or identifiers assigned to users. This condition enables you to target users with specific tags associated with their profiles. You can create segments based on shared interests, characteristics, or user attributes represented by these tags. For example, you can segment users who have tags like "loyal customers" or "product enthusiasts."
+Profile
+Criteria related to user profile attributes allow you to create segments based on user-specific information. This can include attributes like age, location, language preference, or any other data you've collected about your users. Segments based on user profiles are helpful for highly personalized campaigns.
+Response
+This condition deals with how users have responded to your messages. You can create segments for users who received, clicked, did not click, or did not receive specific messages. It's particularly useful for retargeting or optimizing your communication strategy based on user engagement.
+Behavior
+Behavior-based segments focus on the predefined events or actions users have taken within your app or platform. For instance, you can segment users who have made a purchase, completed a specific in-app action, or reached a certain level in a game. Behavior-based segments are effective for targeting users based on their actions and interactions.
+Behavior Aggregation
+Behavior aggregation involves summarizing and aggregating user behavior data. This means you can segment users who have exhibited specific behavior patterns or reached certain thresholds. For example, you might create a segment for users who have made more than five in-app purchases or spent a certain amount of time using your app. It allows you to group users based on their cumulative activities.
+Apply Time & Location Restrictions for Behavior
+Applying time and location restrictions for behavior in your segment criteria allows you to precisely target users based on when and where they've performed specific actions or events. This is particularly useful for creating segments that focus on certain timeframes or geographic locations. Here's how you can apply time and location restrictions:
+Time Restriction
+: When you want to specify a time-based condition, you can set parameters related to when a user performed a particular behavior. For example, you might want to target users who made a purchase on working hours or completed a specific action at night. This helps you engage with users based on recent interactions.
+Location Restriction
+: Location-based restrictions are valuable for targeting users in specific geographic areas. You can set criteria such as users who have taken a particular action within a designated city, state, or region. For example, you might create a segment for users who made reservations at your restaurant in a specific city.
+Groups for Your Segments
+If you have complex criteria that require grouping multiple conditions together, you can use the "Add Group" option. This is particularly useful when you need to combine conditions with "Any" or "All" logic within a sub-group.
+Suggestion:
+We suggest you to use "Add Group" option for your complex criteria. If you have more than two conditions it's advisable to use "Add Group" option.
+Clicking "
+Save and Generate
+" will generate this segment based on the criteria you've specified. The segment will then be available for use in your campaigns and messaging.
+Step 3: Targeting your Segmented Users
+After you've successfully created or selected your segment, the next phase is to engage with this audience through targeted campaigns. Here's how to proceed:
+Save Your Segment
+: Ensure that you've saved your segment criteria or selected the desired segment from the dashboard. This segment now represents a specific group of users based on the criteria you've defined.
+Navigate to the Segments Dashboard
+: You'll typically be directed to the Segments Dashboard after saving your segment. This dashboard is where you can manage, review, and select your segments for various campaigns and messaging.
+Select Your Segment
+: From the Segments Dashboard, locate the segment you want to target with your campaign. Once you've found it, select the segment to indicate that you want to use it for your messaging.
+Send Your Message
+: With your segment selected, you can now proceed to create and send a message or campaign that specifically targets this group. Click on the "Send Message" option to configure your campaign details, message content, and scheduling.
+In essence, segments are the foundation of your ability to send the right message to the right audience. They help you make your communication more relevant, engaging, and effective. Whether it's re-engaging inactive users, targeting your most loyal customers, or personalizing content based on behavior, segments are the key to enhancing your omnichannel customer engagement efforts within Netmera.
+Rule Based Segments
+Connector Segments
+6 months ago

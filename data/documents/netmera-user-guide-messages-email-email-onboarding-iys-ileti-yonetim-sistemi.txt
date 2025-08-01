@@ -1,0 +1,38 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/messages/email/email-onboarding/iys-ileti-yonetim-sistemi
+Messages
+Email
+Email Onboarding
+IYS (İleti Yönetim Sistemi)
+IYS (İleti Yönetim Sistemi)
+is a platform in Turkey that enhances digital communication by combining consumer empowerment, legal compliance, and efficient message management. Netmera supports your business by simplifying IYS integration and management, helping you navigate regulatory requirements with ease.
+Steps to Integrate IYS into Your Netmera Panel
+Access the Connectors Section
+In your Netmera panel, go to
+Connectors
+and find the list of
+Available
+connectors.
+Select and Install IYS Connector
+Choose
+Data Security > İleti Yönetim Sistemi
+and click
+Install
+to start the integration.
+Configure IYS Settings
+Enter your
+Brand Code
+and
+IYS Code
+in the respective fields to activate the connector in your account. Customize the settings to fit your campaign needs.
+Important Notes
+Have your
+Brand Code
+and
+IYS Code
+ready from your IYS account before starting the integration.
+After installation, user synchronization with IYS begins automatically
+overnight
+and continues in batches until all users are fully integrated.
+Upload Email List
+Email Integrations
+2 months ago

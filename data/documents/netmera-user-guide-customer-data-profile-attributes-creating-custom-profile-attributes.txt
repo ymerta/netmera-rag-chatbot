@@ -1,27 +1,49 @@
-Creating custom profile attributes is a pivotal step in tailoring your customer data management to your unique business needs. These attributes enable you to capture and store specific pieces of information about your customers that may not be covered by standard attributes. Whether you want to track custom preferences, product interactions, or any other distinctive data points, custom profile attributes offer the flexibility to do so. 
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/profile-attributes/creating-custom-profile-attributes
+Customer Data
+Profile Attributes
+Creating Custom Profile Attributes
+Creating custom profile attributes is a pivotal step in tailoring your customer data management to your unique business needs. These attributes enable you to capture and store
+specific pieces of information about your customers
+that may not be covered by standard attributes. Whether you want to track custom preferences, product interactions, or any other distinctive data points, custom profile attributes offer the flexibility to do so.
 How to Create a Custom Profile Attribute
 This process involves defining the attribute, setting its data type (such as text, numeric, or date), and determining how it will be used in your engagement strategies. Once created, these custom attributes become essential building blocks for segmentation, personalization, and analytics, empowering you to deliver more tailored and effective customer experiences. With the ability to capture precisely the data that matters most to your business, creating custom profile attributes is a powerful tool for enhancing customer engagement and understanding.
 Step 1: Create Attribute
 To access the "Create Attribute" section in Netmera, go to,
 Developers -> Profile Attributes -> Create Attribute
-Profile Attribute Name: Begin by specifying a unique name for the attribute. This name serves as a reference within your application code and is crucial for identifying and utilizing the attribute programmatically.
-Label: Next, provide a label for the attribute. This label will be visible within the control panel screens and reports, making it user-friendly and easier to identify for those managing and analyzing customer data.
-Order: Define the order for the attribute. This order plays a role in sorting and organizing attributes, aiding in data management and retrieval.
-Description: Offer a brief but informative description of the attribute. This description helps convey the purpose and significance of the attribute, facilitating its understanding and usage.
-Data Type: Specify the data type for the attribute. The data type determines the kind of information that can be stored within the attribute, whether it's text, numeric values, dates, or other data types.
-Is Array: Check this box if the profile attribute should be treated as an array. Arrays allow for storing multiple values within a single attribute, which can be useful for various data scenarios.
-Is Private Info: Check this box if the profile attribute contains private or sensitive information. Flagging an attribute as private ensures that it is handled with utmost confidentiality and in compliance with data privacy regulations.
+Profile Attribute Name
+: Begin by specifying a unique name for the attribute. This name serves as a reference within your application code and is crucial for identifying and utilizing the attribute programmatically.
+Label
+Order
+: Define the order for the attribute. This order plays a role in sorting and organizing attributes, aiding in data management and retrieval.
+Description
+: Offer a brief but informative description of the attribute. This description helps convey the purpose and significance of the attribute, facilitating its understanding and usage.
+Data Type
+: Specify the data type for the attribute. The data type determines the kind of information that can be stored within the attribute, whether it's text, numeric values, dates, or other data types.
+Is Array
+: Check this box if the profile attribute should be treated as an array. Arrays allow for storing multiple values within a single attribute, which can be useful for various data scenarios.
+Is Private Info
+: Check this box if the profile attribute contains private or sensitive information. Flagging an attribute as private ensures that it is handled with utmost confidentiality and in compliance with data privacy regulations.
 Example:
 Suppose you are creating a custom profile attribute for tracking the customer's preferred communication channel. Here's an example:
-Name: communicationPreference
-Label: Communication Preference
-Order: 2 (for placement within your list of profile attributes)
-Description: Records the customer's preferred communication channel, such as email, SMS, or app notifications.
-Data Type: String (to capture a single preferred communication channel)
+Name
+communicationPreference
+Label
+Communication Preference
+Order
+(for placement within your list of profile attributes)
+Description
+Records the customer's preferred communication channel, such as email, SMS, or app notifications.
+Data Type
+String
+(to capture a single preferred communication channel)
 In this scenario, the custom profile attribute "communicationPreference" captures the customer's choice of communication channel for receiving notifications or updates.
 Step 2: Save and Generate
-After configuring your custom profile attribute, save the settings. This action triggers the generation of code that your developers can seamlessly integrate into your application to implement the new attribute. 
-The generated code will be accessible under the 'User Class' section on the previous page. This code is designed for integration by your developers into your application, allowing the new attribute to be effectively implemented and utilized within your customer data management system.
-On how to implement the code to your system, please visit our title Developer Guide | User.
-Last updated 5 months ago
-Was this helpful?
+After configuring your custom profile attribute, save the settings. This action triggers the generation of code that your developers can seamlessly integrate into your application to implement the new attribute.
+The generated code will be accessible under the '
+User Class
+' section on the previous page. This code is designed for integration by your developers into your application, allowing the new attribute to be effectively implemented and utilized within your customer data management system.
+On how to implement the code to your system, please visit our title
+Developer Guide | User
+Profile Attributes
+Events
+1 year ago

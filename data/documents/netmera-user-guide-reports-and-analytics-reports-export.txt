@@ -1,0 +1,101 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/export
+Reports & Analytics
+Reports
+Export
+Export
+tool enables you to automate the process of exporting specific types of data from Netmera to your
+FTP server
+. This automation ensures that selected data is regularly and systematically transferred to the designated location at specified intervals, reducing the need for manual intervention.
+manually
+generate FTP reports
+Choose your report type and file format,
+Click
+Send
+to trigger an export (up to
+3 times per day
+This allows you to update and retrieve the latest data on demand.
+Reports: Export Data Types
+Analytics > Export > Reports
+Select the desired report type, then configure events and parameters on the next screen.
+1. Push Reports
+Provides performance metrics for marketing campaigns, including open rates, conversions, and user engagement.
+External ID Breakdown:
+Enable this option to segment data by external ID for deeper campaign analysis.
+2. Event Data
+Captures user activities within your app, including event type, timestamp, and details.
+You can customize which events (e.g.,
+Open App
+Widget Shown
+) are exported for analysis.
+3. App Tracking
+Identifies other apps installed on user devices, helping you understand user preferences beyond your app.
+4. Installation & Permission
+Includes installation details (e.g., app installation date) and granted permissions.
+Monthly and Bulk Exports
+are only available for
+Installation Reports
+5. Channel Permission
+Provides data on user reachability across multiple communication channels, including
+Mobile
+Web
+SMS
+, and
+Email
+Note:
+The first export delivers
+all available data
+, while subsequent exports include
+only the updated or changed attributes
+File Types
+You can export data in
+.xlsx
+.csv
+format.
+If you select
+.csv
+, the
+Delimiter Type
+option becomes available.
+Supported delimiters include
+Comma
+Pipe
+Tilde
+Broken Pipe
+Caret
+, or
+Semicolon
+, allowing you to choose the format that best fits your requirements.
+Export Settings
+Analytics > Export > Settings
+Server:
+FTP server address (URL) where data will be delivered.
+Port:
+Port number for FTP data transfer.
+Path:
+Directory location on the FTP server for storing exports.
+Username & Password:
+Credentials for FTP server access.
+Export Frequency:
+Daily:
+Users updated in the last 24 hours.
+Monthly:
+Users updated in the last 30 days.
+Bulk:
+All users, regardless of update date.
+Monthly and Bulk Exports:
+Please note that the
+Monthly
+and
+Bulk
+export options
+are only applicable for the Installation Report.
+Using an SSH key for authentication is an alternative option for establishing a secure connection and gaining access to FTP machines.
+as the authentication type.
+The system creates a secure public key automatically.
+Click
+to save it to your clipboard.
+Grant FTP Access:
+Add the copied SSH key to the FTP server to allow secure connections.
+Audit Logs
+Channel Reachability
+8 days ago

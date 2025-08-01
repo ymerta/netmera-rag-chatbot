@@ -1,0 +1,30 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/audit-logs
+Reports & Analytics
+Reports
+Audit Logs
+Within the Netmera platform, "
+Audit Logs"
+serve as a meticulous record of every action and event that transpires
+within the Netmera Panel system.
+These logs offer a comprehensive view of user activities, system events, and changes made over time. They include details such as who performed specific actions, what those actions were, and when they occurred.
+Tip:
+In practical terms, Audit Logs can reveal a wealth of information. For instance, they can show who accessed a particular screen, how many times it was accessed, and whether any modifications were made while on that screen. Audit Logs can also highlight user login/logout times, content creation or modification, and interactions with specific features.
+User Action
+"User Action" is a specific event or activity initiated by a user within the Netmera platform. It encompasses actions such as logging in, creating or modifying content, accessing specific features, or making configuration changes. User actions are logged in the audit trail to provide a detailed account of who did what and when within the system.
+Log Date
+This represents the date on which a specific user action or event occurred within Netmera. It allows you to pinpoint when a particular action was taken, aiding in tracking and investigating system activities.
+Results
+Date:
+This is the date when a specific action or event occurred within the system. It provides a chronological record of activities, enabling you to track when particular events took place.
+User Action:
+This column describes the action or event that was performed by a user within the system. It could encompass a wide range of activities, such as logging in, accessing a specific screen, modifying content, or making configuration changes. Each action is recorded here for reference.
+Description:
+The description field provides additional details or context about the specific user action. It helps clarify what exactly happened during the recorded event, providing insights into the nature of the action.
+User Name:
+This column displays the username of the user who initiated the action. It identifies the individual responsible for the recorded activity, allowing for user-specific tracking and accountability.
+User IP:
+The User IP column reveals the IP (Internet Protocol) address associated with the user who performed the action. It provides information about the user's device or location at the time of the activity, which can be valuable for security and tracking purposes.
+In essence, Audit Logs provides transparency and accountability within the Netmera platform. They allow you to track user behaviors, maintain system integrity, and investigate any unusual or unauthorized activities effectively. Whether it's monitoring screen access, user actions, or system changes, Audit Logs offer a comprehensive record that empowers you to make informed decisions and maintain a secure and efficient platform.
+Application Version
+Export
+1 year ago

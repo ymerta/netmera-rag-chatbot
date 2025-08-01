@@ -1,36 +1,56 @@
-
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/messages/mobile-push/creating-a-mobile-push/define-message-type-setup
+Messages
+Mobile Push
+Creating a Mobile Push
 Define Message Type Setup
-The Setup step defines the general information and initial configuration of the campaign.
+The
+Setup
+step defines the general information and initial configuration of the campaign.
 Campaign Name
-In the Campaign Name field, enter a unique and descriptive name to identify your campaign.
+In the
+Campaign Name
+field, enter a unique and descriptive name to identify your campaign.
 This name will appear in dashboards and reports, so choose something relevant and easy to recognize.
 Campaign Type
-In the Campaign Type dropdown, select the type of message you want to send. Available types include:
-Push Notification (mobile apps)
-Web Push (web browsers)
+In the
+Campaign Type
+dropdown, select the type of message you want to send. Available types include:
+Push Notification
+(mobile apps)
+Web Push
+(web browsers)
 SMS
 Email
-For mobile app messaging:
-Select Push Notification to proceed with configuring a push notification campaign for iOS and/or Android devices.
-
+For mobile app messaging
+Select
+Push Notification
+to proceed with configuring a push notification campaign for iOS and/or Android devices.
+Types of Mobile Push Notifications
+Types of Push Notifications
 Estimated Reach
-Located to the right of the Campaign Type section, the Estimated Reach panel provides a real-time overview of how many users your campaign can potentially reach.
+Located to the
+right of the Campaign Type section
+, the
+Estimated Reach panel
+provides a real-time overview of how many users your campaign can potentially reach.
 Breakdown Includes:
-Total Devices: Combined reach across platforms.
-iOS Devices: Number of iOS users/devices eligible to receive the campaign.
-Android Devices: Number of Android users/devices eligible to receive the campaign.
-
+Total Devices
+: Combined reach across platforms.
+iOS Devices
+: Number of iOS users/devices eligible to receive the campaign.
+Android Devices
+: Number of Android users/devices eligible to receive the campaign.
 Tips for Using Estimated Reach
-This feature helps you assess your campaign’s reach and scope before sending.
+This feature helps you assess your campaign’s
+reach and scope
+before sending.
 Use the breakdown to determine if your message needs platform-specific adjustments.
-Example: If iOS users make up a larger portion of your audience, consider tailoring content or visuals accordingly.
+Example
+: If iOS users make up a larger portion of your audience, consider tailoring content or visuals accordingly.
 By understanding the total estimated audience size, you can better:
 Allocate internal or external resources
 Align timing with peak engagement hours
 Evaluate whether to A/B test for certain segments
-Previous
 Creating a Mobile Push
-Next
 Define Notification Content: What
-Last updated 1 month ago
-Was this helpful?
+1 month ago

@@ -1,45 +1,84 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/messages/transactional-messages
+Messages
+Transactional Messages
 Transactional Messages feature allows you to send timely and personalized messages to your users triggered by specific actions or events within your app or website.
 Messages -> Transactional -> Create New Transactional Message
 What is a Transactional Message?
 These messages play a crucial role in providing important information, updates, and notifications that are directly related to your users' interactions with your platform.
-Transactional notifications are messages that are delivered to users via backend integration, and they can be customized and directed to specific recipients. These types of notifications are typically automated and immediate, triggered by a user's action or behavior, and provide important information or confirmation related to the transaction. 
-They are often used to improve the user experience and provide timely and relevant information to their customers. Examples of transactional notifications include order confirmations, shipping updates, appointment reminders, and password reset emails.
-
+Transactional notifications are messages that are delivered to users via backend integration, and they can be customized and directed to specific recipients. These types of notifications are typically automated and immediate, triggered by a user's action or behavior, and provide important information or confirmation related to the transaction.
+They are often used to improve the user experience and provide timely and relevant information to their customers. Examples of transactional notifications include
+order confirmations, shipping updates, appointment reminders,
+and
+password reset
+emails.
 Messages -> Transactional -> Create New Transactional Message
 Quick Steps Guideline
 Identify the type of transactional message you want to send, such as an account update or order confirmation.
-Use an API or backend integration to send the message to your users.
-Use a Message Key to distinguish your message from other messages and aid in tracking.
-Personalize the message by including relevant profile attributes using Message Parameters.
+Use an
+API or backend integration
+to send the message to your users.
+Use a
+to distinguish your message from other messages and aid in tracking.
+Personalize the message by including relevant
+profile attributes
+using Message Parameters.
 Choose whether or not to Allow API to override any of message settings.
-Set any message limits, such as Ignore User Message Limits or Total Limit, to control the number of messages sent.
-Use a Sample Request to test the message before sending it to your users and review the Sample Response to ensure the message was sent successfully and launch your notification.
-
+Set any message
+limits
+, such as Ignore User Message Limits or Total Limit, to control the number of messages sent.
+Use a
+Sample Request
+to test the message before sending it to your users and review the Sample Response to ensure the message was sent successfully and launch your notification.
 Steps 1/2: How to Define a Transactional Message
-The only difference in steps you follow when creating a Transactional Message is the API & Config step. All the other steps are the same with creating a push message, which will change according to your push notification type. 
-You may check the others steps (Setup, What, Go) on pages Mobile Push,  SMS or e-mail.
+The only difference in steps you follow when creating a
+Transactional Message
+is the
+API & Config
+step. All the other steps are the same with creating a push message, which will change according to your push notification type.
+You may check the others steps (
+Setup, What, Go
+) on pages
+Mobile Push
+SMS
+e-mail
 Step 3: API & Config
-API stands for "Application Programming Interface". It refers to a set of protocols, routines, and tools that developers use to build software applications. APIs allow different software systems to communicate with each other and share data, functionality, and services.
-In the context of push notifications, API refers to the interface that developers use to send push notifications to users. With an API, developers can integrate push notifications into their applications and send targeted and personalized messages to their users.
-"Config" is short for "configuration" and refers to the settings and parameters that are used to customize the behavior of software applications. In the context of push notifications, config refers to the various settings that can be configured to control how push notifications are sent and received, such as the message content, delivery time, and target audience.
-Message Key 
+API stands for "
+Application Programming Interface
+". It refers to a set of protocols, routines, and tools that developers use to build software applications. APIs allow different software systems to communicate with each other and share data, functionality, and services.
+In the context of push notifications, API refers to the interface that developers use to send push notifications to users.
+With an API, developers can integrate push notifications into their applications and send targeted and personalized messages to their users.
+Config
+" is short for "configuration" and refers to the settings and parameters that are used to customize the behavior of software applications. In the context of push notifications, config refers to the various settings that can be configured to control how push notifications are sent and received, such as the message content, delivery time, and target audience.
 It is a unique identifier or Message ID that is used to distinguish your message from other messages in the system. It is an important component of the transactional message API and is necessary to ensure that the message is sent and received correctly.
 Message Parameters
-They are the profile attributes or user data that you used in your message. These parameters can be customized and personalized to provide a more relevant and engaging message to the user. For example, you can include the user's name, account information, or other details that are specific to the user.
-Allow API to override any of message settings 
-It allows API users to override the default settings of a message while sending it through the API. This means that if this option is enabled, the API user can specify different settings for the message than what is set as default in the message settings.
+They
+are the profile attributes or user data that you used in your message. These parameters can be customized and personalized to provide a more relevant and engaging message to the user. For example, you can include the user's name, account information, or other details that are specific to the user.
+Allow API to override any of message settings
+allows API users to override the default settings of a message while sending it through the API. This means that if this option is enabled, the API user can specify different settings for the message than what is set as default in the message settings.
 Tip:
 When "Allow API to override any of message settings" is activated, if a message is set to be sent at a specific time with a certain message content and user targeting, the API user can override any of these settings and specify a different time, message content, or user targeting when sending the message through the API. This provides flexibility and customization options for API users who may have specific requirements for sending messages to their users.
-Sample Request 
+Sample Request
 It is a test API request that can be made to send the message. This is useful for testing and debugging purposes and allows you to ensure that the message is being sent correctly before sending it to a larger group of users.
 Sample Response
-It is the API response that is returned after the sample request is made. It contains information about whether the message was sent successfully or if there were any errors or issues that need to be addressed.
-
+is the API response that is returned after the sample request is made. It contains information about whether the message was sent successfully or if there were any errors or issues that need to be addressed.
+API & Config
 Tip:
 Transactional push notifications are not part of a campaign, but rather individual messages triggered by a specific user action or event. These types of notifications are usually time-sensitive and highly personalized, and their delivery is not based on a predefined campaign schedule. Therefore, there is no need to set a campaign period for them. Instead, transactional push notifications are typically sent as soon as possible after the triggering event occurs.
-Ignore User Message Limits: This option allows you to bypass any pre-set message limits that a user may have on their device. For instance, if a user has disabled push notifications for your app or has set a limit on the number of messages they can receive, selecting this option will ensure that your message is still delivered to the user.
-Total Limit: This option allows you to set a maximum limit for the number of push notifications that will be sent out for a particular campaign. This can help to prevent your users from feeling overwhelmed by too many messages, and can also help to ensure that your messaging remains effective and targeted.
-Limit: This option allows you to set a limit on the number of push notifications that will be sent to an individual user within a specified time period. For example, you may choose to limit the number of messages sent to a user to one per day or one per week, depending on the nature of your messaging campaign.
-Push Time Restriction: This option allows you to set specific time periods during which push notifications can be sent to users. For instance, you may choose to restrict messaging to business hours only, or to certain days of the week. This can help to ensure that your messages are delivered at the most appropriate times, and can also help to prevent users from receiving messages at inconvenient times.
-
-You may check the following steps for Transactional Messages (Setup, What, Go) on pages Mobile Push,  SMS or e-mail.
+Ignore User Message Limits:
+This option allows you to bypass any pre-set message limits that a user may have on their device. For instance, if a user has disabled push notifications for your app or has set a limit on the number of messages they can receive, selecting this option will ensure that your message is still delivered to the user.
+Total Limit:
+This option allows you to set a maximum limit for the number of push notifications that will be sent out for a particular campaign. This can help to prevent your users from feeling overwhelmed by too many messages, and can also help to ensure that your messaging remains effective and targeted.
+Limit:
+This option allows you to set a limit on the number of push notifications that will be sent to an individual user within a specified time period. For example, you may choose to limit the number of messages sent to a user to one per day or one per week, depending on the nature of your messaging campaign.
+Push Time Restriction:
+This option allows you to set specific time periods during which push notifications can be sent to users. For instance, you may choose to restrict messaging to business hours only, or to certain days of the week. This can help to ensure that your messages are delivered at the most appropriate times, and can also help to prevent users from receiving messages at inconvenient times.
+Limit
+You may check the following steps for Transactional Messages (
+Setup, What, Go
+) on pages
+Mobile Push
+SMS
+e-mail
+Automated Messages
+Geofence Messages
+5 months ago

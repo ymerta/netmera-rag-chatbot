@@ -1,131 +1,191 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-pop-up-widget/start-creating/customize-components/spin-to-win
+Web Tools
+Web Pop-Up / Widget
+Start Creating
+Customize Components
 Spin to Win
-Web Tools > Widget > Design Widget 
-The spin to win element adds an interactive and engaging feature to your widget. Users can spin a wheel or dial and receive random rewards or outcomes. You can customize the design, prizes, and probabilities of winning to create an exciting and interactive experience for your users. The "Spin to Win" widget is a versatile feature that can be utilized both on mobile and web platforms.
-
+Web Tools > Widget > Design Widget
+The spin to win element adds an interactive and engaging feature to your widget. Users can spin a wheel or dial and receive random rewards or outcomes. You can customize the design, prizes, and probabilities of winning to create an exciting and interactive experience for your users. The "
+Spin to Win
+" widget is a versatile feature that can be utilized both on
+mobile and web
+platforms.
 How to Design Spin to Win
 One of the standout features of the Spin to Win widget is its high degree of customization. You have the power to edit and personalize all the components and text elements within the widget.
 Step 1: Wheel Design
 Within this section, you have the capability to create and configure Slices that will appear on the wheel. To do so, follow these steps:
 Visual Customizations
-Button Text: Specify the text displayed on the spin button.
-Button Background Color: Define the button’s background color using a color code.
-Center Area Color or Image:
+Button Text
+: Specify the text displayed on the spin button.
+Button Background Color
+: Define the button’s background color using a color code.
+Center Area Color or Image
 Set a solid color using a color code.
 Upload an image by providing its hosted URL.
-Pin Color: Customize the pin or marker color using a color code.
+Pin Color
+: Customize the pin or marker color using a color code.
 Slice Customizations
-Each Slice on the wheel represents a potential outcome for the user.
-Slice Name: Assign a unique name for each slice (visible to users).
-Win Result: Define the text displayed on the Congratulations screen when a user lands on this slice.
-Coupon Code: Assign a coupon code to the slice. (Refer to the Netmera guide Coupon Code Lists for uploading coupon lists.)
-Link: Redirect users to a specific deeplink or URL upon winning.
-Weight (Probability Setting):
+Each
+Slice
+on the wheel represents a potential outcome for the user.
+Slice Name
+: Assign a unique name for each slice (visible to users).
+Win Result
+: Define the text displayed on the
+Congratulations
+screen when a user lands on this slice.
+Coupon Code
+: Assign a coupon code to the slice. (Refer to the Netmera guide
+Coupon Code Lists
+for uploading coupon lists.)
+Link
+: Redirect users to a specific
+deeplink
+URL
+upon winning.
+Weight (Probability Setting)
 Adjust the likelihood of a slice appearing.
-The total weight must sum up to 100%.
+The total weight must sum up to
+100%
 If no weight is assigned, all slices will have equal probability.
-Example: If there are four slices and no weights are set, each slice will have 25% probability.
-
+Example: If there are
+four slices
+and no weights are set, each slice will have
+25% probability
 Step 2: Success Screen Deeplinks
 Scenario 1: Adding a Separate Deeplink/Web Link for Each Slice
 In this scenario, each slice of the spin is configured with a unique deeplink or web link. This allows users to be redirected to different pages based on the slice they land on.
 Add Links to Slices:
 Assign a separate deeplink or web link for each slice.
-Web links must be entered in the format: https://yourwebsite.com.
-
+Web links must be entered in the format:
+https://yourwebsite.com
 Access the Link Component:
 The Link component includes previously defined deeplinks.
 Users can manually add a new link if required.
 Configure the Success Page:
-Once links are added to slices, the Add A Link checkbox is activated.
+Once links are added to slices, the
+Add A Link
+checkbox is activated.
 Set Deeplink and CTA Preferences:
-Deeplink Type: Select "Separate link for each slice" to ensure unique redirection.
-CTA Type: Choose either Hyperlink or Button (both have character limits).
-Customization: Modify the text and background colors for buttons and hyperlinks as needed.
-
+Deeplink Type:
+Select
+"Separate link for each slice"
+to ensure unique redirection.
+CTA Type:
+Choose either
+Hyperlink
+Button
+(both have character limits).
+Customization:
+Modify the text and background colors for buttons and hyperlinks as needed.
 Scenario 2: Adding a Single Deeplink/Web Link for the Entire Spin
 In this scenario, all slices redirect to the same link after the coupon code is revealed. This simplifies the configuration by applying a single deeplink or web link for all outcomes
 Enable Single Link Option:
-Select "Single link" as the deeplink type.
+Select
+"Single link"
+as the deeplink type.
 Choose or Add a Link:
 Use an existing deeplink from the Link component.
-Alternatively, manually enter a new web link (https://yourwebsite.com).
+Alternatively, manually enter a new web link (
+https://yourwebsite.com
 Finalize Configuration on the Success Page:
 No separate deeplinks are needed for each slice.
 The redirection applies to all slices uniformly.
-
 Wheel Previews
-
 Button
-
 Hyperlink
 Step 3: Success Screen Design
-During this step, you have the opportunity to customize the design of the success screen that your users will see upon winning. You can adjust header details, font size, font color, and background color to align with your brand's aesthetic. Additionally, the "Click to Copy Text" button simplifies the process for users to easily save their codes, enhancing their overall experience. ✨
-Modal Header: Define the header text that appears at the top of the modal. For instance, if you want the header to say "Congratulations," enter this text in the designated field.
-Header Font Size: Specify the font size for the header text. This allows you to control the visual prominence of the header within the modal.
-Win Result Text: If you wish to display a special message when users win in the modal, enter the desired text in this field. Alternatively, if you prefer to show a default message, specify it here. 
-Win Result Font Size: Determine the font size for the win result text to ensure readability and visual consistency.
-Modal Background: Customize the background of the modal by selecting a color or gradient. You can choose from options such as white (#FFFFFF), a specific color code, or a radial gradient.
-Click to Copy Text: If your modal includes a feature for users to copy text (such as a coupon code), provide the text that appears as a prompt for users to click and copy the code.
-If there is no coupon code left: Specify the message to display if no coupon codes are available. For instance, you might use "There is currently no available coupon code. Please try again." 
+During this step, you have the opportunity to customize the design of the success screen that your users will see upon winning. You can adjust header details, font size, font color, and background color to align with your brand's aesthetic. Additionally, the "
+" button simplifies the process for users to easily save their codes, enhancing their overall experience.
+Modal Header
+: Define the header text that appears at the top of the modal. For instance, if you want the header to say "Congratulations," enter this text in the designated field.
+Header Font Size
+: Specify the font size for the header text. This allows you to control the visual prominence of the header within the modal.
+Win Result Text
+: If you wish to display a special message when users win in the modal, enter the desired text in this field. Alternatively, if you prefer to show a default message, specify it here.
+Win Result Font Size
+: Determine the font size for the win result text to ensure readability and visual consistency.
+Modal Background
+: Customize the background of the modal by selecting a color or gradient. You can choose from options such as white (#FFFFFF), a specific color code, or a radial gradient.
+: If your modal includes a feature for users to copy text (such as a coupon code), provide the text that appears as a prompt for users to click and copy the code.
+If there is no coupon code left
+: Specify the message to display if no coupon codes are available. For instance, you might use "There is currently no available coupon code. Please try again."
 If there is no coupon code left:
 This is a message that your users will see if you have no avaiable coupons for that slice. This message ensures transparency and helps manage user expectations. You can display a message like the following: "We're sorry, but there are no available coupon codes for this slice at the moment."
-
 Sending Coupon Codes with SMS and Push Messages
 Step 1: Define Profile Attributes
 Developers > Profile Attributes > Create New Profile Attribute
-To incorporate coupon codes and expiry dates into both push notifications and SMS messages, it's crucial to establish two fundamental profile attributes: "coupon code" and "expiry date." These attributes serve as the backbone of your campaign, allowing for efficient management and distribution of promotional offers.
+To incorporate coupon codes and expiry dates into both push notifications and SMS messages, it's crucial to establish two fundamental profile attributes:
+"coupon code"
+and
+"expiry date."
+These attributes serve as the backbone of your campaign, allowing for efficient management and distribution of promotional offers.
 Create a Coupon Code Attribute
-The cornerstone of your promotional strategy, the coupon code profile attribute should be configured with a data type of "String." This ensures compatibility and flexibility, enabling the inclusion of alphanumeric codes, special characters, and varying lengths to accommodate diverse promotional campaigns.
+The cornerstone of your promotional strategy, the coupon code profile attribute should be configured with a data type of
+"String."
+This ensures compatibility and flexibility, enabling the inclusion of alphanumeric codes, special characters, and varying lengths to accommodate diverse promotional campaigns.
 Navigate to your Netmera dashboard and access the "Profile Attributes" section.
 Click on "Add Attribute" and name it "couponcode." You have the option to use a different name for this attribute based on your preferences.
 Set the data type to "String" to accommodate alphanumeric codes.
-
 Create an Expiry Date Attribute
-Equally vital is the expiry date attribute. The expiry date should be configured with a data type of "Date" to accurately track and manage the validity period of coupon codes. By specifying a date format, you can interpret and act upon expiration dates, enhancing the effectiveness of your promotional campaigns.
+Equally vital is the expiry date attribute. The expiry date should be configured with a data type of
+"Date"
+to accurately track and manage the validity period of coupon codes. By specifying a date format, you can interpret and act upon expiration dates, enhancing the effectiveness of your promotional campaigns.
 Access the "Profile Attributes" section in your Netmera dashboard.
 Create a new attribute named "expirydate." You have the option to use a different name for this attribute based on your preferences.
 This time, set the data type to "Date" to accurately track validity periods.
-
 Step 2: Create Transactional Campaigns
 Messages > Transactional > Create New Transactional Message
-Once the profile attributes are defined, proceed to create transactional SMS and push notification campaigns.  Access the Netmera dashboard and navigate to the Messages section. Select "Transactional" and then click on "Create New Transactional Message."
+Once the profile attributes are defined, proceed to create transactional SMS and push notification campaigns.
+Access the Netmera dashboard and navigate to the Messages section. Select "Transactional" and then click on "Create New Transactional Message."
 Create Your Personalized Message with Profile Attributes
 On the "Step 2: What" step of creating a new transactional message, locate the Personalized Message" section. Utilize your predefined profile attributes "CouponCode" and "ExpiryDate" to personalize the message content. Incorporate these attributes into your message to dynamically display coupon codes and expiration dates to recipients.
 Follow the Steps for "Transactional Messages" Page
-Proceed to configure additional settings and details for your transactional push notification. This may include specifying the target audience, scheduling the message delivery, and customizing the appearance of the notification. Follow the prompts and instructions provided on the Transactional Messages page to complete the setup of your campaign.
+Proceed to configure additional settings and details for your transactional push notification. This may include specifying the target audience, scheduling the message delivery, and customizing the appearance of the notification. Follow the prompts and instructions provided on the
+Transactional Messages
+page to complete the setup of your campaign.
 Sample Transactional Push Notification:
-
-Sample Transactional SMS Campaign:
-
+Sample
+Transactional
+SMS Campaign:
 Step 3: Upload Coupon Codes
 Settings > Coupon Code Lists > Upload Coupon Code List
 When uploading coupon code lists, users now have the option to enable SMS and Push Notification delivery for each individual code. This enhancement provides greater flexibility and customization in reaching out to customers with promotional offers. Here's how to utilize this feature effectively:
 Uploading Coupon Code List
-List Name: Define the name of your coupon code list. For instance, name it "CouponCode".
-Coupon Codes: Specify the coupon codes available in the list. If they are fixed, list them accordingly. For that, first enter the coupon code, then specify the number of codes.
-Warning Limit: Set the threshold for warning notifications. When the available coupon codes fall below this limit, users will receive warning emails. For instance, if you set the warning limit to 9000, emails will be triggered when the count reaches below 9000.
-Expiry Date: Determine the expiration date for the coupon code list. 
-
+List Name:
+Define the name of your coupon code list. For instance, name it "CouponCode".
+Coupon Codes:
+Specify the coupon codes available in the list. If they are fixed, list them accordingly. For that, first enter the coupon code, then specify the number of codes.
+Warning Limit:
+Set the threshold for warning notifications. When the available coupon codes fall below this limit, users will receive warning emails. For instance, if you set the warning limit to 9000, emails will be triggered when the count reaches below 9000.
+Expiry Date:
+Determine the expiration date for the coupon code list.
 In the following steps, you have the option to choose between sending coupon codes via SMS or push notifications. These methods can be toggled on or off based on your preference, allowing you to select the most suitable method for your campaign.
 Send SMS
 Determine if coupon codes will be sent via SMS. The SMS text and placeholders for the coupon code and expiry date are predefined and cannot be customized. Use the pre-made profile attributes for the coupon code and expiry date that you have created before.
 Needs SMS Integration
-It's crucial to note that in order to utilize the SMS option for sending coupon codes, you must first integrate Netmera for SMS campaigns. This integration allows for efficient distribution of coupon codes via SMS. You may refer to the following guide for SMS Onboarding: SMS Onboarding.
+It's crucial to note that in order to utilize the SMS option for sending coupon codes, you must first integrate Netmera for SMS campaigns. This integration allows for efficient distribution of coupon codes via SMS. You may refer to the following guide for SMS Onboarding:
+SMS Onboarding
 Send Push Notification
 Decide if coupon codes will be sent via push notifications. The notification message and placeholders for the coupon code and expiry date are predefined and cannot be customized. Utilize the pre-made profile attributes for the coupon code and expiry date that you have created before.
-
-Once integrated, you may send your coupon codes, along with their respective expiry dates, via both SMS and push notifications. This feature enhances the effectiveness of your promotional efforts by ensuring timely communication of expiring offers to your customers. 🎉
+Once integrated, you may send your coupon codes, along with their respective expiry dates, via both SMS and push notifications. This feature enhances the effectiveness of your promotional efforts by ensuring timely communication of expiring offers to your customers.
 Spin to Wind Standard Events
 To navigate to the relevant event in Analytics, follow these steps:
-Go to Analytics > Event Insight
+Go to
+Analytics
+Event Insight
 Within the Event Insight dashboard, you'll find a list of events tracked by your system.
 Select the event related to the spin wheel interactions, such as "Spin To Win Shown," "Spin Button Clicked," "Coupon Code Assigned," "Coupon Code Assigned Failed," or "Coupon Code Copied".
-Spin To Win Shown: This event represents the moment when the spin wheel widget is displayed to the user, providing a trigger for the user to interact with the wheel.
-Spin Button Clicked: This event signifies the moment when the user clicks on the "Spin" button on the spin wheel, initiating the spinning process.
-Coupon Code Assigned: This event tracks the successful assignment of a coupon code after the spin wheel is spun. It is triggered when a coupon code is automatically assigned as a result of the user spinning the wheel.
-Coupon Code Assigned Failed: This event is triggered when the assignment of a coupon code fails. For instance, if the user spins the wheel but does not receive the expected outcome, resulting in the failure to assign a coupon code.
-Coupon Code Copied: This event represents the moment when the user copies the provided coupon code after spinning the wheel. It is triggered when the user copies the coupon code following their interaction with the spin wheel.
-
+Spin To Win Shown:
+This event represents the moment when the spin wheel widget is displayed to the user, providing a trigger for the user to interact with the wheel.
+Spin Button Clicked:
+This event signifies the moment when the user clicks on the "Spin" button on the spin wheel, initiating the spinning process.
+Coupon Code Assigned:
+This event tracks the successful assignment of a coupon code after the spin wheel is spun. It is triggered when a coupon code is automatically assigned as a result of the user spinning the wheel.
+Coupon Code Assigned Failed:
+This event is triggered when the assignment of a coupon code fails. For instance, if the user spins the wheel but does not receive the expected outcome, resulting in the failure to assign a coupon code.
+Coupon Code Copied:
+This event represents the moment when the user copies the provided coupon code after spinning the wheel. It is triggered when the user copies the coupon code following their interaction with the spin wheel.
 FAQs
 What message will users see if there are no available coupon codes?
 If there are no coupon codes available for a particular slice, users will see a message indicating this. This message ensures transparency and helps manage user expectations. You can display a message like the following: "We're sorry, but there are no available coupon codes for this slice at the moment."
@@ -137,3 +197,6 @@ How many transactional campaigns can I create with Netmera?
 Netmera offers users the freedom to create as many transactional campaigns as needed, accommodating diverse usage requirements and objectives. Whether it's promoting exclusive offers, announcing limited-time deals, or rewarding loyal customers, users can customize campaigns to align with their marketing strategies and goals. This scalability empowers users to adapt and refine their messaging tactics in response to evolving business needs and market dynamics.
 Can I create separate campaigns for each coupon code?
 Yes, depending on the nature of the coupon code, you have the flexibility to tailor your campaigns accordingly. You can opt to create separate campaigns for each unique code, allowing for targeted messaging and tracking of individual promotions. Alternatively, you may choose to consolidate multiple codes within a single campaign, ideal for events like spins or promotions with a unified theme. This approach streamlines campaign management and ensures a cohesive brand experience across channels.
+Customize Components
+Assign Click Actions
+4 months ago

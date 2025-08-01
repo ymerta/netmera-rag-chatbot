@@ -1,16 +1,33 @@
-The Installs & Uninstalls dashboard provides key insights into user acquisition, engagement, and churn trends. By tracking these metrics across daily, weekly, or monthly timeframes, you can better understand user behavior and make data-driven decisions to optimize growth and retention.
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/installs
+Reports & Analytics
+Reports
 Installs
-The Installs metric represents the number of new users who have installed your platform or application within the selected timeframe. Tracking installs on a daily, weekly, and monthly basis helps you evaluate the effectiveness of your strategies for attracting new users.
+The
+Installs & Uninstalls
+dashboard provides key insights into user acquisition, engagement, and churn trends. By tracking these metrics across daily, weekly, or monthly timeframes, you can better understand user behavior and make data-driven decisions to optimize growth and retention.
+Installs
+The
+Installs
+metric represents the number of new users who have installed your platform or application within the selected timeframe. Tracking installs on a daily, weekly, and monthly basis helps you evaluate the effectiveness of your strategies for attracting new users.
 A consistently high install rate indicates strong acquisition strategies, while fluctuations may signal the need for adjustments in marketing, promotions, or app store visibility.
 Reinstalls
-Reinstalls track users who previously uninstalled the app but have reinstalled it within the given timeframe. This metric provides insights into user re-engagement and brand loyalty.
+Reinstalls
+track users who previously uninstalled the app but have reinstalled it within the given timeframe. This metric provides insights into user re-engagement and brand loyalty.
 A high reinstall rate may indicate users reconsidering your platform after initial disengagement. Analyzing reinstall trends can help optimize re-engagement campaigns and improve retention strategies.
 Uninstalls
-The Uninstalls metric reflects the number of users who have removed your platform or application from their devices. Tracking uninstall trends helps identify potential issues affecting user retention, such as onboarding friction, performance issues, or lack of engagement.
+The
+Uninstalls
+metric reflects the number of users who have removed your platform or application from their devices. Tracking uninstall trends helps identify potential issues affecting user retention, such as onboarding friction, performance issues, or lack of engagement.
 High uninstall rates could indicate usability challenges, unmet expectations, or onboarding gaps. Consider conducting A/B tests, optimizing user flows, or gathering feedback from churned users to enhance the experience.
 Understanding Android Uninstall Data Fluctuations
-In some cases, an increase in uninstalls on Android devices may be linked to inactive device tokens rather than actual user churn.
-At Netmera, we receive device token data through Firebase Cloud Messaging (FCM). When a device remains inactive for 270+ days, FCM invalidates its token. If a previously inactive user returns, a new token and installation ID are assigned, which may contribute to higher uninstall counts.
+In some cases, an increase in uninstalls on
+Android
+devices may be linked to
+inactive device tokens
+rather than actual user churn.
+At Netmera, we receive device token data through Firebase Cloud Messaging (FCM). When a device remains inactive for
+270+ days
+, FCM invalidates its token. If a previously inactive user returns, a new token and installation ID are assigned, which may contribute to higher uninstall counts.
 Common causes of inactive tokens:
 Devices that are lost, broken, or no longer in use
 Extended periods of inactivity without connecting to FCM
@@ -21,4 +38,9 @@ By analyzing installs, reinstalls, and uninstalls together, you can:
 Identify trends in user acquisition and churn
 Optimize re-engagement campaigns to win back lost users
 Improve onboarding and in-app experiences to reduce uninstall rates
-Tracking these insights allows you to make data-driven improvements that enhance user satisfaction, engagement, and long-term platform growth.
+Tracking these insights allows you to make
+data-driven improvements
+that enhance user satisfaction, engagement, and long-term platform growth.
+Total Users
+Event Reports
+4 months ago

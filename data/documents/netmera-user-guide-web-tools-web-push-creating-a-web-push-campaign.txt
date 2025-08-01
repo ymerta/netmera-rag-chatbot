@@ -1,0 +1,260 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-push/creating-a-web-push-campaign
+Web Tools
+Web Push
+Creating a Web Push Campaign
+In this page we're going to deep dive into five steps of how to send push notifications on Netmera for Web Push Message.
+Quick Steps Guideline
+Go to your Netmera Panel and click:
+Messages
+Campaigns page ->
+Create New Campaign
+Add
+Campaign Name
+and select
+Notification Type (Web Push)
+Setup
+Add information about your
+Notification Message, Title
+and more on
+What
+page.
+Select your
+target group
+Who
+page.
+Decide on your
+notification time, expiry date and speed
+When
+page.
+On the last page
+, check the information about your notification and test message on your device if you need to, then click
+SEND
+to publish your notification
+There are two types of web pushes in Netmera to reach your users.
+Text :
+Notifications that have title, thumbnail and message which can be personalized. Also you can add interactive buttons to your notification.
+Image :
+Notification that have banner, title, thumbnail and message which can be personalized. Also you can add interactive buttons to your notification.
+Web Push with Image
+There are 5 steps for creating a web push campaign,
+Create New Campaign
+Step 1: Setup
+Step 2: What
+Step 3: Who
+Step 4: When
+Step 5: Go!
+Create New Campaign
+When you click the
+"Create New Campaigns"
+button located on the right side of the Campaigns Dashboard page, a new campaign creation screen will open.
+On this screen, you will be guided through a series of steps, including
+Setup, What, Who, When, and GO
+to configure various aspects of the campaign, such as the target group, delivery time, and more. Once you have completed these steps, you can access all the information related to the message created in the GO stage, and after testing with test devices, you can send it for Approval Admin approval.
+Step 1: Setup
+Setup section is the first step in the Create New Campaign process, where you can set a name for your campaign in the
+"Campaign Name"
+section. You can also determine the type of campaign you want to create, such as
+push notification, web push, SMS, or email
+, in the
+"Campaign Type"
+section. For web push notification, on this step you are going to choose
+Web Push
+type to continue editing your notification for mobile.
+On the left side you have to choose one of the two options "
+Text"
+or "
+Image"
+, also you can add interactive buttons to your web push both for text and image options by clicking the checkbox “
+Add Buttons (Interactive)
+On the right side of the Campaign Type section, you can see the estimated
+number of users and devices
+that the message can reach, broken down by internet browser types, as well as the
+total number of potential recipients
+. This information provides you with valuable insights into the reach of your campaign across different platforms.
+Step 2 : What
+The second step in launching your notification is
+What
+section. In the
+What
+step, the content of the push notification is created. Fields such as
+message text, message title, thumbnail
+that will appear on target devices are defined in this step.
+Category
+This allows you to categorize your messages based on your own predefined criteria or use case. For example, you might have categories such as "Promotions," "News Updates," "Account Notifications," or any other relevant labels that align with your messaging strategy. By assigning each notification to a specific category, you can quickly access and manage related messages at a glance. Whether you're sending promotional offers, important announcements, or transactional updates, Message Categories streamline your workflow and enhance your notification management.  (
+Message Categories
+Notification Message
+The notification message is the
+main body
+of your notification and it's important to make it informative and engaging. This can include
+text
+and
+emojis
+to convey your message effectively. For instance, you could send a notification message to alert users of a low balance or unusual activity or use emojis to make a notification message more exciting and encourage users to visit the app for a special offer.
+Personalized Message
+You can use personalized messages to greet your users by their first name, or send them notifications about products or services that are specifically relevant to their interests or past behavior on your app.
+By doing so, you can create a more personal connection with your users and make them feel valued, which can increase their loyalty to your brand. Additionally, you can use personalized messages to provide timely and relevant information to your users, such as weather updates, local news, or personalized reminders. This can help to increase the overall usefulness of your notifications, and make them more likely to be acted upon.
+Personalized message can be sent if you have
+profile attributes
+for users. You may do this by transferring user informations such as name, surname, age to Netmera. For instance,
+Default message:
+“Happy birthday!”
+Personalized message:
+“Wishing you a sweet
+{@age}
+th birthday
+{@name}
+!” becomes “Wishing you a sweet 26th birthday Simon!”
+Title
+When sending notifications, it's important to use a title that catches the user's attention and gives them a reason to engage with the message. You can use text and emojis to create a title that is both informative and attention-grabbing.
+Click URL
+Click URL option is specific to web push notifications, which are notifications that appear on a user's web browser rather than on their mobile device. When the user clicks on the web push notification, they can be redirected to a specific URL that you have specified in this section. This can be useful for directing users to a landing page, a specific product page, or any other relevant destination on your website.
+Icon URL
+The "Icon URL" is where you can specify the URL of the thumbnail image that will appear alongside the notification text. This image is typically small and square, and serves as a quick visual identifier for the notification. It is usually a small image or logo that represents your brand or the content of the notification. Adding an icon URL can make your web push notification more visually appealing and help it stand out to your users.
+Image URL (Chrome Only)
+Image URL (Chrome Only) option allows you to include a larger banner image within the notification, which is only available for users who are using Google Chrome. This banner image can be more eye-catching and can provide more visual information to the user.
+Important:
+In order to send an Image URL, you need to select "
+Image
+" push notification on
+Step 1: Setup
+. Image Details are as follows,
+Recommended Max Size 2048x1024 or Aspect Ratio: 2:1.
+User Interaction Required (Chrome Only)
+This option is only available for Google Chrome users and allows you to make the push notification stay visible until the user interacts with it, such as clicking on it or dismissing it manually. This can be useful if the notification contains important information that you want to make sure the user sees before it disappears. Therefore, by enabling this section, you can make your web push notification persistent until the user interacts with it.
+Push Button (Chrome Only)
+This option is also only available for Google Chrome users and allows you to add a button set to your web push notification. The button sets provide predefined actions that the user can take, such as accepting or rejecting an offer or adding an event to their calendar. This can help to increase user engagement and encourage them to take specific actions. The possible button sets may be "Accept/Reject", "Add to Calendar/Dismiss", and "Snooze/Dismiss".
+To understand how to create button sets, you may visit:
+Button Sets
+Disable Webhooks
+Disabling webhooks means that when a user interacts with your push notification, Netmera won't send any information about that interaction to your application backend via a webhook. This can be useful if you don't need to track user interactions or if you prefer to handle them in a different way, such as through Netmera's reporting dashboard. However, if you want to track user interactions in your own system, it's important to keep webhooks enabled so that you can receive that information in real-time.
+Fallback (SMS/Call External URL)
+SMS Fallback Needs Integration:
+This option needs integration, please refer to
+Developer Guide
+After you have integrated this option with your developers, you may choose this option on this step.
+Fallback scenarios can be thought of as a
+backup plan
+in case your push notification fails to reach its intended audience. By creating a fallback scenario, you can ensure that users who do not receive your push notification can still receive the message through an alternative channel, such as SMS or Calling an External URL.
+Message Label
+Labels are an optional feature that allows panel users to tag their campaigns with specific labels for organizational purposes. Labels can be used to categorize campaigns and make it easier to
+search for and analyze campaign performance
+in reporting pages. For example, if you have multiple campaigns targeting different user segments, you can label each campaign accordingly (e.g. "New Users", "Retargeting", "Holiday Sale") to quickly filter and compare results. Labels are not required but can be a helpful tool for managing and optimizing your campaigns.
+Conversion Analytics
+The Label and Conversion Analytics features are both used to help
+track and analyze
+the performance of your campaigns, but in different ways.
+Conversion Analytics allows you to track specific user actions that result from your campaigns. For example, you can track how many users made a purchase or completed a sign-up form after clicking on your notification. This can help you measure the effectiveness of your campaigns and make data-driven decisions to optimize future campaigns.
+Conversion event can be determined according to your aim to have the user do. For instance, “the number of users who clicked the notification made a payment transaction” can be tracked by selecting “PaySuccess” conversion event.
+Control Group
+"Use control group to calculate conversion %"
+In the Netmera Panel, the Control Group option allows you to choose a specific percentage of your target audience for comparison in a campaign you intend to send. When this option is activated, the selected percentage of your audience, known as the "control group,"
+does not receive a push notification,
+while the rest of the audience does.
+Control Group Example:
+In the context of a control group, consider a scenario with a total audience of 100,000. Upon activating the control group option and setting a percentage, for instance, 1%, a push notification is not sent to a randomly selected 1% of this audience. Subsequently, push notifications are delivered to the remaining 99,000 users.
+In the reports, the conversion difference between the 99,000 who received the push notifications and the 1,000 in the control group who did not receive them is analyzed. This enables an assessment of the effectiveness of the push notification by comparing the outcomes of those who received it against those who did not, providing valuable insights into the impact of the notification on user behavior.
+Step 3: Who
+In the
+Who
+step, the target audience for your push notification is determined. The push notification can be sent to
+all users
+or your target audience can be narrowed by selecting the users by
+"Select Users", "Advanced", and "Distribution List"
+which are explained below.
+Send All
+This option allows you to send your web push to all of your subscribers who have opted in to receive web push notifications.
+Select Users
+This option enables you to target specific users based on different criteria, such as location, language, and more.
+Select Users Options
+Tag
+You can segment your users based on tags that you have created in the 'Targeting->Tags' section. Once you have added at least two tags, you can modify your tag preference using 'And/Or' logical operators. This allows you to refine your targeting and reach specific groups of users who share certain characteristics or behaviors.
+Segment
+Segments are groups of users that are dynamically structured. Based on the actions they take on the app, users can either enter or exit these segments. In this section you can seperate your users by their segment. After adding at least 2 parameters, you can modify your segment preference with "
+And/Or
+" logical operators. Also you can add new segments from "
+Targeting->Segments
+". To learn more, please refer to the
+Define Segment
+section.
+Device Type
+You can separate your users by their device type, such as
+Desktop, Mobile, Tablet
+. Additionally, you can modify your device type preference using logical operators "And/Or" after adding at least 2 parameters. This allows for greater flexibility in targeting specific groups of users based on their device type.
+Profile
+The users who’s specified profile attribute is equal to specified value. This refers to a targeting option where you can select users whose specific profile attribute matches a particular value. For example, you can select users whose "gender" attribute is equal to "female" or users whose "age" attribute is equal to "25". After adding at least 2 parameters, you can modify your profile attribute preference with "
+And/Or
+" logical operators.
+Response
+The targeting for the push notification will be based on users who either did or did not interact with a specific previous push notification. For example, if you select a previous push notification that advertised a sale and then choose to target users who did not interact with it, your new push notification might offer a different promotion to try to entice those users who didn't take advantage of the previous sale.
+Location
+This targeting option allows you to select users based on their geographic location. You can specify a region, such as a city, state, or country, and target users who are located within that area. You can search location by its latitude and longitude. Or you can just simply search by the location name. Also from distance part you can select the radius value and type for your location then by clicking on map you can select your location by determined radius.
+Advanced
+This option provides more advanced settings for targeting specific users based on specific actions or behaviors they have taken on your website or app. This feature allows you to create highly personalized and targeted web push notifications to drive engagement and conversions.
+New filters can be defined using conditions and groups by selecting
+Advanced
+option.
+The advanced filter options allow you to create specific target audiences for your promotional web campaigns. By adding conditions and groups, you can tailor your web push promotions to customers who have shown an interest in your brand by either purchasing a specific product, subscribing to your newsletter, or browsing your website. Using the "AND" option ensures that only customers who meet all the conditions are included in your target audience, while the "OR" option includes a broader audience of customers who meet any of the conditions. This makes your promotions more relevant and effective in driving sales for your business.
+By clicking
+"Add Condition"
+"Add Group"
+you may choose the criteria which suits your notification the best.
+When "
+AND
+" is chosen, if
+all criteria
+is met by the conditions/groups they will be listed as your target audience and they will be shown on the right section of the page.
+When "
+" is chosen, if
+any criteria
+is met by the conditions/groups, they will be listed as your target audience and they will be shown on the right section of the page.
+After you have chosen your target audience,
+Selection Criteria
+will show you who you are broadcasting to,
+number of users, number of devices, and number of separate internet browsers
+the notification will be delivered.
+Ignore User Message Limits
+It is an option that allows sending push notifications to users who have exceeded their message limits. Normally, push notification providers set limits on the number of push notifications that can be sent to a user within a certain period of time to prevent spamming or overwhelming the user.
+However, in some cases, it may be necessary to send a message to a user even if they have exceeded their limit, such as for urgent notifications or time-sensitive information. In these cases, the "Ignore User Message Limits" option can be used to bypass the limit and ensure that the message is delivered.
+It's important to use this option judiciously, as sending too many notifications to a user can lead to annoyance and increased opt-out rates.
+Limit Target Users
+When you select "Limit Target Users" option in a campaign, you can specify the maximum number of users who will receive that campaign. This is useful when you want to control the campaign reach and ensure that it doesn't go beyond a certain limit. Once the maximum number of users is reached, the campaign will stop being sent to any additional users, even if they meet the campaign's targeting criteria.
+For example, if you are sending a promotional message about a limited-time offer, you may want to limit the number of users who receive the message to ensure that you do not exceed your inventory or capacity. Similarly, if you are testing a new messaging strategy or campaign, you may want to limit the number of users who receive the message to a small sample size before rolling it out to your entire audience.
+Step 4: When
+On "
+Start sending messages
+" section you have two options you can send your messages instantly with selecting "
+Now
+" or you can set them for further date with selecting "
+On specific time
+Example
+If you want to send a daily reminder to your users to complete their to-do list for the day, you can use the specific time option to schedule your notification to be sent every morning at a specific time, such as 9:00 AM. By using this feature, you can create a consistent and personalized user experience for your user base.
+Start Sending Messages
+From the "
+Delivery speed
+" option, you can choose how you want to send your web push notifications. If you select "
+Send Fast
+," the notification will be sent to all users at once. However, if you have a large number of users, it may be more efficient to send the push notifications in packages. In this case, you can select "
+Send In Packages
+" and choose the size of each package. The system will then send the push notifications to users in each package before moving on to the next one until all users have received the notification.
+Delivery Speed
+From the "
+Message expiry when not reached to client
+" setting, you can choose what will happen to your web push notification if your user is not reachable. If you select "
+Never
+," your web push notification will continue to wait until your user is reachable again. If you choose "
+Until a specific time,
+" your web push notification will be disabled after a specific time has passed. This setting allows you to control how long you want to wait for your user to receive the notification before deciding to disable it.
+Message Expire Time
+Step 5: Go!
+Once you have completed all four steps, you can access all the information related to the message created in the GO stage, and after testing with test devices, you can send it for Approval Admin approval.
+Test on Device
+On the right side of the page you can see how the push would look like on target devices. Before launching your notification, you may test your notification on your registered test devices or only on your own test device which can be edited in
+Settings -> Test Devices
+Test on Device:
+This allows you to see how the notification will look on different operating systems, device types, and screen sizes. By testing the notification on different devices, you can identify any potential display issues or content errors before sending the notification to all of your users. This ensures that your users receive a visually appealing and accurate push notification, leading to increased user engagement and satisfaction with your app.
+After checking the details and testing on your device, it's finally time to send your notification to your audience. Just click on "
+Send
+" and wait for your Reports!
+Web Push
+Mobile Web Push for iOS
+1 year ago

@@ -1,6 +1,7 @@
-
-
-
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/glossary
+Reports & Analytics
+Reports
+Glossary
 Application Version
 Application Version refers to the specific version or release of your mobile or web application. It is essential to track and manage different versions to ensure compatibility and provide users with the latest features and improvements.
 Audit Logs
@@ -17,7 +18,6 @@ Avg. Time In App
 Avg. Time In App represents the average amount of time users spend within your mobile application after engaging with a specific marketing campaign. This metric provides valuable information about user engagement and post-campaign behavior. It helps you measure the duration of user interaction and assess the effectiveness of your campaigns in retaining user interest.
 Avg. Usage Frequency (Times)
 Avg. Usage Frequency measures how often users engage with your mobile or web application within a specified time frame. It represents the average number of times users interact with your app, providing valuable insights into user engagement frequency.
-
 Best Conversion
 Best Conversion identifies the marketing campaign that achieved the highest conversion rate among all your campaigns. This metric highlights the most successful campaign in terms of driving user actions or events. By identifying the campaign with the best conversion rate, you can gain valuable insights into the strategies and content that resonate most effectively with your audience.
 Best Open Rate
@@ -26,40 +26,34 @@ Daily Active
 Daily Active refers to the number of users who interact with your application on a daily basis. This interaction can include actions such as opening the app, clicking on features, making purchases, or any other user engagement within the app. This metric provides insights into the frequency and consistency of user usage patterns, helping you understand how often users actively use your app each day. In essence, it measures the daily user activity within your application, indicating how many users are actively using the app on a typical day.
 Daily Event Count
 Daily Event Count represents the total number of specific events or user interactions recorded within your application on a daily basis. These events can include actions such as clicks, purchases, or interactions with specific features. This metric is a powerful tool that allows you to closely examine these events and their attributes over time, providing valuable insights into user interactions.
-
 Hourly Events (Average)
 Hourly Events (Average) indicates the average number of specific events or user interactions recorded within your application on an hourly basis. It provides a granular view of user activity and engagement throughout the day.
-
 Installs
 Installs refer to the number of times your mobile or web application has been downloaded and installed by users. This metric helps you track the adoption and popularity of your app.
-
 Number Of Campaigns
 Number Of Campaigns refers to the overall count of marketing campaigns that have been conducted within a specified period, typically referring to a specific time frame or date range. This metric offers an essential overview of your campaign activity, helping you track and assess the volume of campaigns executed over time.
-
 Open Rate
 Open Rate is the percentage of recipients who opened a marketing campaign. It measures the level of engagement and interest among the campaign's recipients, providing valuable insights into the effectiveness of your campaign's subject lines, content, and overall appeal.
 Opt-in
 Opt-in refers to the number of users voluntarily agreeing to receive communications, notifications, or marketing messages from your application. Users may opt-in to push notifications, emails, or other forms of communication.
-
 Periodic Export
 Periodic Export is the recurring process of automatically exporting data or reports from a system or platform at scheduled intervals. This ensures that data is regularly copied, backed up, or shared with relevant individuals or departments according to predefined schedules. Periodic exports are typically set up to maintain data continuity, facilitate analysis, or meet reporting requirements.
-
 Revenue
 Revenue represents the total financial income generated as a direct result of your marketing campaign. This metric quantifies the financial impact of your marketing efforts, allowing you to assess the profitability and return on investment (ROI) of your campaigns. It's a crucial indicator of your campaign's success in driving revenue.
 Retention
 Retention is a metric that measures the ability of a product, service, or application to retain its users over a specific period. It quantifies the percentage of users who continue to engage with or use the product or service after an initial interaction or installation. Higher retention rates indicate that a larger proportion of users are returning and using the product consistently, which is often a positive indicator of user satisfaction and long-term success. Retention analysis is crucial for understanding user loyalty, product stickiness, and overall user engagement.
 30 Days Retention (%)
 30 Days Retention (%) measures the percentage of users who continue to engage with your application 30 days after their initial interaction or installation. It is a critical metric for assessing user loyalty and long-term engagement.
-
 Session Length (Minute)
 Session Length (Minute) indicates the average duration of user sessions within your application, measured in minutes. It helps you understand how long users typically interact with your app in a single session.
 Success
 Success indicates whether a marketing campaign achieved its intended goals or objectives. This metric helps you evaluate campaign effectiveness by determining whether the desired outcomes, such as increased sales, user sign-ups, or other predefined goals, were met. Success metrics play a vital role in assessing campaign performance and alignment with your overall business objectives.
-
 Today Number of Campaigns
 Today Number of Campaigns represents the total number of marketing campaigns that have been executed on the current day. This real-time metric provides an up-to-date view of daily campaign activity, helping you monitor and track campaign deployment on a daily basis.
 Total Devices
 Total Devices represents the cumulative count of all devices on which your application is installed. It provides an overview of the app's reach across various devices and platforms.
-
 Uninstalls
 Uninstalls represent the number of times users have removed or deleted your application from their devices. This metric helps you track user churn and identify reasons for app removal.
+Reports
+Campaigns
+1 year ago

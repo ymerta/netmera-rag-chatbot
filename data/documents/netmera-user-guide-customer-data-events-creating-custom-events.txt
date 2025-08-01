@@ -1,74 +1,115 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/events/creating-custom-events
+Customer Data
+Events
 Creating Custom Events
 Quick Steps Guidelines
 Developer > Events > Create New Event
-Navigate to the Developers > Events section in the Netmera Dashboard.
-Click the "Create New Event" button.
-Define the event attributes, data types, and specify mandatory parameters as needed. 
-After creating a custom event, Netmera Dashboard will automatically generate the necessary code and source files for your event.
-Developers will fire the event you have created on Netmera Panel. Please read through our guide How to Fire Events to understand how to fire an event you generate in your Netmera Panel. 
+Navigate to the
+Developers > Events
+section in the Netmera Dashboard.
+Click the "
+Create New Event
+" button.
+Define the event attributes, data types, and specify mandatory parameters as needed.
+After creating a custom event, Netmera Dashboard will automatically
+generate the necessary code
+and source files for your event.
+Developers will fire the event you have created on Netmera Panel. Please read through our guide
+How to Fire Events
+to understand how to fire an event
+you generate in your Netmera Panel.
 Step 1: Event Details
 Provide the following details for your event:
-Event Name: This is the name of the event as it will be used in your application's code. Choose a descriptive and unique name that represents the action or behavior you want to track.
-Event Label: The event label is used in the control panel screens and reports within Netmera. It should be a user-friendly name that helps you easily identify the event in the interface.
-Event Description: Write a brief description that explains the purpose and significance of the event. This will help other team members understand its usage.
-Base Event (optional): If your custom event is an extension or modification of a standard event provided by Netmera, you can select the base event here. This helps maintain consistency and categorization within your event tracking.
+Event Name:
+This is the name of the event as it will be used in your application's code. Choose a descriptive and unique name that represents the action or behavior you want to track.
+Event Label:
+The event label is used in the control panel screens and reports within Netmera. It should be a user-friendly name that helps you easily identify the event in the interface.
+Event Description:
+Write a brief description that explains the purpose and significance of the event. This will help other team members understand its usage.
+Base Event (optional):
+If your custom event is an
+extension
+modification
+of a standard event provided by Netmera, you can select the base event here. This helps maintain consistency and categorization within your event tracking.
 Step 2: Attributes
 You need to define the attributes for your custom event. Attributes provide additional context and information about the event. Each attribute has its own properties:
 Attribute Create
-Data Type: Choose the appropriate data type for your attribute. Netmera supports various data types such as string, integer, double, boolean, date, long, and timestamp.
-
-DataType: String
-Definition: A sequence of characters, digits, or symbols treated as text.
-Examples: "hello", "+1-999-666-3333"
-
-DataType: Integer
-Definition: Numeric data without decimal fractions.
-Examples: -707, 0, 707
-
-DataType: Double
-Definition: Real numbers including decimals and scientific notation. Can hold 15-16 digits before/after the decimal.
-Examples: 4.5672, -5.22234, 0.15197e-7
-
-DataType: Boolean
-Definition: Represents true or false values.
-Examples: 0 (false), 1 (true)
-
-DataType: Date
-Definition: A date in YYYY-MM-DD format.
-Examples: 2021-09-28
-
-DataType: Long
-Definition: Large 32- or 64-bit integers.
-Examples: -2147483648 to 2147483647
-
-DataType: Timestamp
-Definition: Number of seconds since Unix epoch (1970-01-01 00:00:00 UTC).
-Examples: 1632855600
-
-Name: Provide a descriptive name for the attribute.
-Label: The label is used in the control panel screens and reports within Netmera to identify the attribute.
-Mandatory: Specify whether the attribute is mandatory or optional for the event. This helps ensure that the necessary data is captured.
-Array: If the attribute can have multiple values, enable the array option. This is useful when tracking events with multiple selections or choices.
-Private Info: If the attribute contains sensitive or personally identifiable information, mark it as private info to handle it according to privacy regulations.
-Code: Assigned unique code to each attribute. This code will be used in your application's code to reference the attribute.
-
-Step 3: Adding More Attributes on Attribute Creation
+Data Type:
+Choose the appropriate data type for your attribute. Netmera supports various data types such as string, integer, double, boolean, date, long, and timestamp.
+Data Types
+Data Type
+Definition
+Example
+String
+Sequence of characters, digits or symbols - always treated as text.
+hello, +1-999-666-3333
+Integer
+Numeric data type for numbers without fractions
+-707, 0, 707
+Double
+Double data can be represents in real number (1, 10), decimals (0.1, 11.002) and minus (-1, -0.00002). It can hold approximately 15 to 16 digits before and after the decimal point.
+4.5672, 2.45354, -5.22234, 3.12345678901, 0.15197e-7
+Boolean
+True or false values
+0 (false), 1 (true)
+Date
+Date in the YYYY-MM-DD format (ISO 8601 syntax)
+2021-09-28
+Long
+Long data types are often 32- or 64-bit integers in code
+numbers ranging in value from -2,147,483,648 to 2,147,483,647
+Timestamp
+Number of seconds that have elapsed since midnight (00:00:00 UTC), 1st January 1970 (Unix time)
+1632855600
+Name:
+Provide a descriptive name for the attribute.
+Label:
+The label is used in the control panel screens and reports within Netmera to identify the attribute.
+Mandatory:
+Specify whether the attribute is mandatory or optional for the event. This helps ensure that the necessary data is captured.
+Array:
+If the attribute can have multiple values, enable the array option. This is useful when tracking events with multiple selections or choices.
+Private Info:
+If the attribute contains sensitive or personally identifiable information, mark it as private info to handle it according to privacy regulations.
+Code:
+Assigned unique code to each attribute. This code will be used in your application's code to reference the attribute.
 Repeat the attribute creation process as needed for your custom event, adding all the relevant attributes that provide valuable context and information.
 Review your event details and attribute configurations to ensure accuracy and completeness.
-
 Step 4: Save and Generate Code
 After Creating a Custom Event
 Once you've successfully created a custom event using the Netmera Dashboard, integrating it into your project becomes a straightforward process. The Netmera Dashboard automates the generation of the necessary code for your custom event, making it effortless. Here's how it works:
-Event Configuration: After defining the attributes, data types, and mandatory parameters for your custom event within the Netmera Dashboard, save your event configuration.
-Code Generation: To obtain the code for your custom event, simply navigate to the bottom of the event configuration page and click the "Save and Generate Code" button.
+Event Configuration:
+After defining the attributes, data types, and mandatory parameters for your custom event within the Netmera Dashboard, save your event configuration.
+Code Generation:
+To obtain the code for your custom event, simply navigate to the bottom of the event configuration page and click the
+"Save and Generate Code"
+button.
 By taking this step, the Netmera Dashboard instantly generates the required code snippets and source files specifically tailored to your custom event. These generated files are ready for integration into your project, ensuring that your custom event tracking seamlessly becomes part of your application.
 Step 5: Fire Event
-Ask your developers to read through our Netmera Developer Guide on "How to Fire Events" that you have generated the code for in your Netmera Panel. It is a comprehensive guide guiding your developers fire your desired event with the generated code in your applications.
+Ask your developers to read through our
+Netmera
+Developer Guide
+How to Fire Events
+that you have generated the code for in your Netmera Panel. It is a comprehensive guide guiding your developers fire your desired event with the generated code in your applications.
 Importing Events to Apps
 If you have multiple apps in the Netmera Panel, you can import events from one app to another. This lets you reuse events across apps efficiently.
-Go to the Developers section and select Events.
-Click Import Event Definition.
-Choose the Application Name from which you want to import events.
-
-Select the specific custom event(s) you want to import.
-Click the Import button in the Action section.
+Go to the
+Developers
+section and select
+Events.
+Click
+Import Event Definition.
+Choose the
+Application Name
+from which you want to import events.
+Select the specific
+custom event(s)
+you want to import.
+Click the
+Import
+button in the
+Action
+section.
+Netmera Events
+Event Insight
+5 months ago

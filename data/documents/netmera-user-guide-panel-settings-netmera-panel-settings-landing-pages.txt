@@ -1,7 +1,12 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/panel-settings/netmera-panel-settings/landing-pages
+Panel Settings
+Netmera Panel Settings
+Landing Pages
 Settings > Landing Pages > Publish to Devices / Create New Template
-Landing Pages refer to web pages specifically designed for marketing or promotional purposes. These pages are often used to drive traffic, engage users, and encourage specific actions such as sign-ups, downloads, or purchases. They are typically linked to from various channels, including push notifications, email campaigns, social media, or advertisements.
-Create New TemplateThis feature enables users to create new landing pages using pre-defined dynamic templates. Users can select a template from the available dynamic templates, customize the content, and publish a unique landing page.
-
+Landing Pages
+refer to web pages specifically designed for marketing or promotional purposes. These pages are often used to drive traffic, engage users, and encourage specific actions such as sign-ups, downloads, or purchases. They are typically linked to from various channels, including push notifications, email campaigns, social media, or advertisements.
+Create New Template
+This feature enables users to create new landing pages using pre-defined dynamic templates. Users can select a template from the available dynamic templates, customize the content, and publish a unique landing page.
 Template Name
 A user-defined name assigned to a dynamic template.
 Serves as a reference to distinguish different templates within the Netmera platform.
@@ -11,16 +16,25 @@ Users can customize this content to create visually appealing and interactive la
 The dynamic template supports placeholders, variables, or tags that dynamically populate content based on user attributes or data from the Netmera platform.
 This feature enables personalized user experiences by tailoring content dynamically.
 Save and Publish to Devices
+Save and Publish to Devices
 After creating or editing a landing page:
-Save:
+Save
 The landing page, including its ID, name, and content, is displayed on the Landing Pages Dashboard.
-Publish to Devices:
+Publish to Devices
 To update all users' devices with the newly created or edited landing page, click the "Publish to Devices" button at the top-right corner of the dashboard.
-This action sends a Silent Push Notification to all users of the mobile application.
-Publish to Devices allows the app administrators or developers to send a silent push notification to all users of the mobile application. The purpose of this silent push is to inform users about an update or changes.
+This action sends a
+Silent Push Notification
+to all users of the mobile application.
+Publish to Devices allows the app administrators or developers to send a
+silent push notification
+to all users of the mobile application. The purpose of this silent push is to inform users about an update or changes.
 What is a Silent Push?
-Silent Push refers to a type of push notification that is sent to a user's device without displaying a visible message or alert to the user. Unlike traditional push notifications that show a message on the device's screen, silent push notifications operate in the background, allowing for the execution of specific tasks or updates without directly engaging the user. 
-How Silent Push Works in Netmera
+Silent Push refers to a type of push notification that is sent to a user's device without displaying a visible message or alert to the user. Unlike traditional push notifications that show a message on the device's screen, silent push notifications operate in the background, allowing for the execution of specific tasks or updates without directly engaging the user.
+How
+Silent Push Works in Netmera
 Silent push notifications are configurable via the Netmera API or the Netmera Panel.
 This method ensures flexibility and allows for thorough testing of notifications and their impact.
 Silent pushes are particularly useful for background updates without interrupting the user experience.
+Message Labels
+WebHooks
+6 months ago

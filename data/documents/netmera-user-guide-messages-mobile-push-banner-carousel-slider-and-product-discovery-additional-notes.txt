@@ -1,9 +1,27 @@
-As some notification types include different components there are some differences in Step 2: What that you need to follow. 
-We suggest you to also read Define Message Type: Setup page for further information about how to define your message content.
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/messages/mobile-push/banner-carousel-slider-and-product-discovery-additional-notes
+Messages
+Mobile Push
+Banner, Carousel, Slider and Product Discovery Additional Notes
+As some notification types include different components there are some differences in
+Step 2: What
+that you need to follow.
+We suggest you to also read
+Define Message Type: Setup
+page for further information about how to define your message content.
+Banner
 While sending a banner notifitication you need to enter a background, left and right image URL or you may select images from your device. In Text Type you can choose Text or Image and customize it according to your needs.
-When you click on Carousel Items -> Add New Item, you will see a page where you may add your items to be seen in a series of images. You may choose Click Action and add separate items to be swiped through in the notification.
+Banner
+Carousel
+When you click on
+Carousel Items -> Add New Item
+, you will see a page where you may add your items to be seen in a series of images. You may choose Click Action and add separate items to be swiped through in the notification.
+Carousel
+Slider
 Different from Carousel, on Slider notification you can only add images and choose Click Action for your audience.
+Slider
+Product Discovery
 On Product Discovery, each product can be customized with image, title, content, button name and button color. You may add different Deeplinks for each product to direct your audience to your target page.
-
-Last updated 3 months ago
-Was this helpful?
+Product Discovery
+Add Image or Video to Push Notifications
+SMS
+1 year ago

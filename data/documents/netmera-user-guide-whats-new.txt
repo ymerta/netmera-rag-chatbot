@@ -1,0 +1,201 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/whats-new
+What's New?
+A Place Where You Track the Newest Updates on Netmera
+Welcome to the hub for tracking the latest updates on Netmera! This page is your go-to destination for staying informed about the newest features, enhancements, and developments within our platform. We're dedicated to keeping you informed with all the exciting changes that can help you maximize your experience with Netmera.
+June, 2025
+New Supported Export File Types
+You can export data in
+.xlsx
+.csv
+format.
+If you select
+.csv
+, the
+Delimiter Type
+option becomes available.
+Supported delimiters include
+Comma
+Pipe
+Tilde
+Broken Pipe
+Caret
+, or
+Semicolon
+, allowing you to choose the format that best fits your requirements.
+Exporting Options
+May, 2025
+Platform-Specific Push Actions
+You can now assign distinct push notification click actions for iOS and Android devices via REST API. For example, within the same push notification, iOS users can be directed to open the app’s home screen, while Android users can be routed to a specific deep link. This feature enables tailored user experiences and offers detailed delivery tracking by platform.
+Unique Open Rates for Deeper Insights
+In addition to open rates, email reports now include Unique Open metrics. This gives you a more accurate view of how many individual users engaged with your message—offering deeper insights into your campaign’s true reach and helping you make more informed, performance-driven decisions.
+April, 2025
+Smarter Tracking with Zero Setup
+We’ve made it easier to understand what your users are clicking on. Now, when someone taps a button or selects an item, Netmera automatically captures the name of that specific item—no manual setup required. With Tagless Data Capture, it’s now simpler to track exactly what your users are engaging with.
+Tagless Data Capture
+Funnels with Precision Targeting: Segmentation & Exclusion
+Netmera’s funnel builder lets you precisely segment users by behavior and demographics. With the 'Did Not' filter, you can exclude users who performed or skipped specific events, helping you pinpoint drop-offs and refine your funnel analysis. This powerful combination enhances accuracy and delivers deeper insights to optimize user journeys effectively.
+Funnels
+March, 2025
+Advanced Panel Security
+Your platform just got significantly more secure with new protection options to match your needs:
+Minimum 12-character password requirement
+On-demand IP-restricted panel access
+On-demand domain-restricted panel access
+On-demand email OTP for panel login
+Email Conversion & Revenue Tracking
+You can now analyze the impact of your email campaigns more effectively. With this new feature, any sales action performed via app or web by users redirected from your emails can now be tracked and reported within the Netmera panel—giving you clear visibility into ROI.
+Conversion and Revenue Metrics
+February, 2025
+Web Analytics
+Web Analytics in Netmera is a powerful feature designed to help you track, analyze, and understand user interactions on your websites. By providing comprehensive insights into user behavior, engagement metrics, and key performance indicators, Web Analytics empowers you to optimize your digital strategies and improve your online presence.
+Web Analytics
+Open Widgets with Push Clicks
+Push notifications are now more interactive than ever. With this new feature, users can open relevant widgets directly from a push notification, allowing them to access key features and content without extra taps.
+Push Click Actions
+Custom Widget Button Deeplinks
+Widget buttons can now redirect users to personalized pages based on their profile and adapt in real-time to user data — whether it’s directing them to a specific bill payment page, transaction history, or account details.
+Custom Button Deeplinks
+Mobile Web Push for iOS
+You can now expand your reach with mobile web push notifications for iOS and iPadOS users. This feature allows you to engage users directly and drive traffic to your website or platform, ensuring your message reaches a broader audience.
+Mobile Web Push for iOS
+Notification Grouping
+With notification grouping, you can now organize and send notifications in different categories, making them easier for users to follow and manage. By grouping relevant content, ensure users stay informed about important updates without feeling overwhelmed.
+Notification Grouping
+Spin to Win Coupon Deeplinks
+Enhance your gamification strategy with direct coupon deeplinks that make claiming rewards easy and fun. Users can instantly access their rewards without any extra steps, which drives higher engagement and increases participation in your promotions.
+Step 2: Success Screen Deeplinks
+Reinstall Reports
+With the new reinstall metrics, you can track when users reinstall your app after uninstalling. This allows you to analyze trends and identify key dates that drive re-engagement, helping you optimize your retention strategies with data.
+Reinstall Reports
+January, 2025
+Spin to Win Custom Text Colors
+The Spin Design Editor has a new feature enabling you to add
+custom text colors
+to individual wheel segments. This addition allows for greater personalization and creativity, offering you a more dynamic and tailored design process. By incorporating these custom text colors, you can align the visual aesthetics of their designs with brand themes or personal preferences, ensuring a more cohesive and engaging presentation.
+Instant Show Option for Widgets
+Applicable to Widgets and In-app Messages triggered by automated messages, this feature ensures that widgets appear
+immediately once the triggering condition is met.
+If technical issues prevent the widget from appearing at the moment, it will not attempt to reappear in future sessions or on different screens, thereby streamlining user interaction and reducing redundancy, which is particularly beneficial for ensuring that users remain focused on the most relevant and timely content. For more information, please refer to the following topic
+Instant Show
+December, 2024
+Netmera Live Activities
+Netmera now supports Apple’s Live Activities, enabling real-time updates on the Lock Screen, iPhone StandBy, and Dynamic Island. By combining Live Activities with Netmera’s targeting, you can start, update, and track events, offering users glanceable information without reopening the app.
+Ideal for tracking live sports scores, deliveries, or fitness metrics, Live Activities provide prioritized updates for easy monitoring, enhancing user engagement with real-time information. You may visit our page
+Live Activities
+for further information! 🎉
+November, 2024
+VIA Integration
+With Netmera’s VIA Integration, obtaining customer permissions is now easier and more secure than ever. Collect approvals such as electronic communication consent, explicit consent agreements, and customer registration contracts swiftly and securely, all integrated within your workflows.
+October, 2024
+Channel Reachability Report
+The
+Channel Reachability
+Report provides a detailed overview of users' messaging preferences, showing who has opted in or out of push notifications across multiple platforms. With these insights, you can analyze engagement trends and fine-tune your communication strategies to match each user’s preferred level of interaction.
+September, 2024
+Netmera Journey Orchestration
+We’re thrilled to announce the launch of
+Journeys
+, an innovative feature that will revolutionize your customer engagement strategy! With Journeys, you can craft
+personalized
+dynamic
+pathways
+that guide your customers through unforgettable experiences, tailored to their unique interactions and behaviors.
+Imagine effortlessly designing workflows that respond to specific user actions,
+delivering timely and
+relevant communications across multiple channels
+—be it email, push notifications, or in-app messages. Journeys makes this vision a reality! By targeting users based on their individual preferences, you’ll significantly
+boost engagement, increase conversion rates, and foster unwavering customer loyalty
+resulting in an unparalleled user experience.
+With
+Journeys
+, you’re not just creating interactions; you’re building meaningful connections that elevate customer satisfaction and cultivate lasting relationships.
+Dive into our comprehensive guide
+Journeys
+to learn more, and don’t miss the chance to see
+Journeys
+in action!
+August, 2024
+Netmera AI Text Generator
+We are pleased to announce the launch of the Netmera Text Generator! This tool allows you to easily create content that connects with your audience. Use our AI-powered Push Notification Message Generator to boost engagement and conversion rates.
+It's designed to help you develop creative and effective campaigns. Enhance your communication strategy with Netmera. Explore the future of content creation today. You may see our page
+Netmera AI Text Generator
+for more information!
+July, 2024
+Retention & Cohort Enhancements
+Understanding your users just got easier with our enhanced
+Retention and Cohort
+screens. These improvements allow you to identify patterns and trends within different user groups, helping you to analyze retention rates and cohort behaviors more effectively.
+You can now pinpoint the factors that drive user engagement and retention, enabling you to make data-driven decisions to keep your users coming back.
+Customer Touch Improvements
+You asked, we listened! We’ve added a Time Filter to our Customer Touch Screens, allowing you to search your data with greater precision. Whether you're tracking daily interactions or analyzing long-term trends,
+Customer Touch
+now provides a detailed view of customer behavior over specific periods. This improvement helps you understand customer journeys better, optimize interactions, and enhance the overall user experience.
+June, 2024
+Migration to HTTP v1
+We've upgraded to Firebase Messaging Library version 20.3.0 for smoother notifications and raised the minimum supported Android version to 5.0 for better device compatibility. Simply migrate to the new Firebase versions to keep your app up-to-date with the latest improvements and features.
+New Onboarding Dashboards
+Designed with simplicity in mind, these dashboards are your go-to tools for integrating your platforms with Netmera. To ensure seamless integration with the latest technologies, we took proactive steps to revamp our Onboarding screens accordingly.
+May, 2024
+Segmentation by ‘By Used Last Device’
+Now accessible through the Create New Campaign > Who > Advanced > Add Condition menu, by selecting 'By Last Device Used', you gain the power to precisely reach out to users based on their last recent device activity. If you don't see this option in your segmentation, please contact your dedicated Customer Success Managers.
+Standard Spin to Win Events
+Now, you can track events with the Spin to Win widget -
+Spin To Win Shown, Spin Button Clicked, Coupon Code Assigned, Coupon Code Assigned Failed, Coupon Code Copied
+- With this update, you can now export these events for in-depth data analysis within Event Insights. For further information please visit
+Uzman Posta Integration
+Exciting news! Netmera has officially integrated with Uzman Posta, marking a significant milestone for our platform. This collaboration presents an opportunity for Netmera users looking to engage with local email service providers. By integrating with Uzman Posta, we've not only simplified access to services but also enriched the array of options available, thereby elevating user satisfaction and expanding the scope of email engagement strategies. Please see our guide on
+Email Integrations
+to learn more about this integration.
+April, 2024
+Netmera 🤝 Adjust
+We're thrilled to share the news of our seamless integration with Adjust! This exciting development empowers us to effortlessly transfer vital user data straight to our Netmera dashboard, enhancing our analytics and insights capabilities. You may learn more through our
+Developer Guide.
+Export Page Enhancements: Vol. 2
+We've worked on another enhancement on our Export page. Now with an even more elevated design, you can manually your FTP exports daily, add desired
+events
+profile attributes, external IDs
+to your reports. Please visit our page dedicated on
+Export
+for further information.
+Android Location Permission Request with Widgets
+To add location permission requests to your mobile app widgets in Netmera, simply create a Mobile Blank Widget, design it with buttons for allowing and denying location access, and set the click actions with "Background Location Permission." After clicking the button, the app user will be automatically directed to the Settings screen on their Android phone to set up their location preferences. Please visit
+Android Background Location Permission
+page for further information.
+March, 2024
+Enhanced Export Feature
+Enjoy a more streamlined and user-friendly export process with the improvements made to the export page, enabling seamless data extraction and analysis for informed decision-making. Now you can manually
+trigger
+your FTP exports daily, add desired
+events
+external ID
+s to your reports, and more. Please visit our page dedicated on
+Export
+for further information.
+Improvements on Retention and Cohort Screens
+Experience enhanced visuals and new and improved retention and cohort screens. We've worked to make the experience smoother segmentation and analysis capabilities in the new and improved retention and cohort experience. Please visit our page dedicated on
+Retention and Cohort
+for further information.
+February, 2024
+Sending Coupon Code Information through SMS and Push Messages
+With this enhancement, you can now efficiently distribute coupon codes to your audience via SMS or push notifications, ensuring timely communication of expiring offers and maximizing engagement across channels.
+Integrate this feature into your marketing strategies to drive conversions and enhance customer satisfaction. Please see the following title for further information!
+Improvements of Funnel Analysis
+Dive deeper into your data to track user interactions and optimize strategies with advanced analytics capabilities. These updates make analyzing your data simpler and more efficient, empowering you to stay ahead of the curve and maximize impact. Stay tuned for these exciting updates on Netmera's platform. You might see the updates on
+Create New Funnel
+Different Custom Sounds for Message Variants
+This new feature allows you to personalize your messaging experience by adding custom sounds to your campaigns. After selecting "Add" to your push campaign variants, you now have the option to choose custom sounds for iOS and Android for each notification variant.
+This update provides you with greater flexibility in tailoring your messaging experience, ensuring that notifications resonate with your audience on all languages and platforms.
+Step 2: What
+Play Sound
+'Get Web Push Permission' Action with Design Web Widget
+When the "Get Web Push Permission" action is integrated into a component designed using the Design Web Widget, triggering this action prompts the native permission pop-up on the corresponding website. Upon user consent, the notification permission data is seamlessly synchronized with the Netmera panel. For further details, please visit the relevant page on
+Assign Click Actions
+Personalized Subtext
+In the "What Step" section for submissions from the panel, a new section named "Personalized Subtext" has been introduced alongside the existing subtext section. This enhancement allows you to send personalized subtext by utilizing your profile attributes. For more details, please refer to
+Personalized Subtext
+for further information.
+Spin to Win - Design Enhancements
+We've fine-tuned your Spin to Win experience with a host of exciting update. We've conducted a preliminary review of the current Spin to Win integration and, based on the findings, we've crafted design improvements with your needs in mind. Here's what's in store for you. You may also visit the relevant page
+Spin to Win
+Beginner's Guide to Netmera
+8 days ago

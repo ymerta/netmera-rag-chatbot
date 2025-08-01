@@ -1,49 +1,95 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/tags
+Targeting
+Tags
 Basics of Tags
-In Netmera, the process of tagging your audience is labeling or categorizing individuals based on their shared characteristics or interests. It's like putting sticky notes on different groups of people so that you can easily identify them later. 
+In Netmera, the process of tagging your audience is labeling or categorizing individuals based on their shared characteristics or interests. It's like putting sticky notes on different groups of people so that you can easily identify them later.
 These tags serve as handy markers that help you create more personalized and targeted communication. For example, you can tag users who are interested in a specific product, allowing you to send them relevant updates or offers. This tagging system simplifies the process of tailoring your messages to different segments of your audience, making your communication more engaging and relevant.
-
 Tags Dashboard
-Targeting > Tags 
-1.To review your tags and their details, go to the "Targeting" section and select "Tags."
-2.In the Tags Dashboard, you will find a list of your created tags. Each tag will have the following details:
-User Count: This indicates the number of users associated with the tag.
-Created Date: This shows when the tag was initially created.
-Updated Date: This displays the last date when the tag was modified.
-Status: The status indicates whether the tag is ready or not.
-3.Under each tag, you will see an "Actions" button. Here are the available actions:
-Delete: Use this option to remove the tag if it's no longer needed or relevant.
-Send Message to Tag: If you want to send a message or campaign to users associated with a specific tag, this action enables you to do so.
-Export: This action allows you to export user data associated with the tag. You can select the format in which you want to export the data, such as *.csv or *.xlsx.
+Targeting > Tags
+To review your tags and their details, go to the "Targeting" section and select "Tags."
+In the Tags Dashboard, you will find a list of your created tags. Each tag will have the following details:
+User Count
+: This indicates the number of users associated with the tag.
+Created Date
+: This shows when the tag was initially created.
+Updated Date
+: This displays the last date when the tag was modified.
+Status
+: The status indicates whether the tag is ready or not.
+Under each tag, you will see an "
+Actions
+" button. Here are the available actions:
+Delete
+: Use this option to remove the tag if it's no longer needed or relevant.
+Send Message to Tag
+: If you want to send a message or campaign to users associated with a specific tag, this action enables you to do so.
+Export
+: This action allows you to export user data associated with the tag. You can select the format in which you want to export the data, such as
+*.csv or *.xlsx.
 The Tags Dashboard is a convenient place to manage and review the tags you've created for your omnichannel customer engagement strategy. It provides easy access to key information and actions related to these tags.
-
 Upload a New Tag
 Targeting -> Tags -> Upload & Tag Users
-To upload your user list, go to the Targeting tab and select Tags. From there, click on Upload & Tag Users and provide a name for the tag that will be assigned to your list. Choose the .csv or .txt file you wish to upload from your device, ensuring that each line contains a single user identifier.
+To upload your user list, go to the Targeting tab and select Tags. From there, click on
+Upload & Tag Users
+and provide a name for the tag that will be assigned to your list. Choose the
+.csv
+.txt
+file you wish to upload from your device, ensuring that each line contains a single user identifier.
 Example:
-For example, you want to target a specific group of customers who have made a purchase in the past six months. For this, you navigate to the targeting tab and choose Tags. Then, you select Upload & Tag Users and upload a list of customer IDs in a .csv file. Later, you can assign a name to the tag, such as "Recent Purchasers" and apply it to a marketing campaign targeted to that specific audience.
-
+For example, you want to target a specific group of customers who have made a purchase in the past six months. For this, you navigate to the targeting tab and choose Tags. Then, you select
+Upload & Tag Users a
+nd upload a list of customer IDs in a
+.csv
+file. Later, you can assign a
+name
+to the tag, such as
+"Recent Purchasers"
+and apply it to a marketing campaign targeted to that specific audience.
+Upload User List
 How to Tag Audience in Netmera Panel
 Step 1: Navigate to your Campaign Reports
-To tag an audience in the Netmera panel, you should first navigate to your Campaign Reports. This is an essential step to access the campaign data and make the necessary tags. Here's how to do it:
-1.Navigate to "Campaign Reports" section in the Netmera panel. 
-2.Click on your desired Campaign and scroll down to see performance section.
-3.Click on the "Campaign Reports" section to access your campaign data and reports.
+To tag an audience in the Netmera panel, you should first navigate to your
+Campaign Reports.
+This is an essential step to access the campaign data and make the necessary tags. Here's how to do it:
+Navigate to "
+Campaign Reports
+" section in the Netmera panel.
+Click on your desired Campaign and scroll down to see
+performance
+section.
+Click on the "
+Campaign Reports
+" section to access your campaign data and reports.
 Step 2: Click 🔁 Button
 In this step, you'll be working with the '🔁' button to manage user selection based on specific criteria. Follow these instructions:
-1.Within the Campaign Reports section, locate and select the campaign for which you want to tag your audience. This campaign should contain the message or communication you want to tag users for.
-2.Once you've selected the campaign, you should see an option or button represented by the '🔁' symbol. Click on this '🔁' button to initiate the tagging process.
-3.In this step, you might see the summary as "You selected users who received the message..."
+Within the Campaign Reports section, locate and select the campaign for which you want to tag your audience. This campaign should contain the message or communication you want to tag users for.
+Once you've selected the campaign, you should see an option or button represented by the '🔁' symbol. Click on this '🔁' button to initiate the tagging process.
+In this step, you might see the summary as "You selected users who received the message..."
 Step 3: Choose your Action
 Once you've selected the users who received the 'Netmera' message, it's time to choose your desired action. The Netmera panel provides you with several options. Here's how to proceed:
-1.Start Tagging
-If you want to apply specific tags to the users who received the message, select the "Start Tagging" option. This will allow you to categorize and label these users for further engagement or analysis. 
+Start Tagging
+If you want to apply specific tags to the users who received the message, select the "Start Tagging" option. This will allow you to categorize and label these users for further engagement or analysis.
 Write a name for your "Tag" and continue by clicking "Start Tagging".
-After tagging your audience, you will be directed to "Tags" dashboard, where you may find your created Tag and its details for user count, created date, updated date and status. Moreover, in actions button you may find "Delete", "Send Message to Tag", or "Export".
-2.Create New Campaign
-If your intention is to create a new campaign targeting the users who received or clicked your message, choose the "Create New Campaign" option. This enables you to set up a follow-up campaign to engage with this specific audience.
-3.Export
+After tagging your audience, you will be directed to "
+Tags
+dashboard
+"Delete", "Send Message to Tag",
+"Export".
+Create New Campaign
+If your intention is to create a new campaign targeting the users who
+received
+clicked
+your message, choose the "Create New Campaign" option. This enables you to set up a follow-up campaign to engage with this specific audience.
+Export
 If you need to export the list of users who received the 'Netmera' message for external purposes or analysis, select the "Export" option. This allows you to export the selected users' information, including their:
-Export Information: External ID, Email, MSISDN, and Mobile Advertiser ID.
-Export Format: *.csv or *.xlsx format depending on your needs.
+Export Information: External ID, Email, MSISDN,
+and
+Mobile Advertiser ID.
+Export Format:
+*.csv or *.xlsx format depending on your needs.
 Select the action that aligns with your goals for engaging with this audience, and proceed accordingly. This step offers flexibility in how you manage and interact with users in your omnichannel customer engagement efforts.
-These are all the details about Tags, so far. Tags serve as invaluable markers, providing a structured and efficient way to categorize your audience based on shared interests, behaviors, or attributes.
+These are all the details about
+Tags
+People
+Segments
+1 year ago

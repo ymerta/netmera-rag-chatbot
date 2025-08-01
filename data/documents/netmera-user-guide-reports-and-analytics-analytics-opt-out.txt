@@ -1,27 +1,51 @@
-The Opt Out page in the Netmera platform is a pivotal feature for monitoring user preferences and consent management. It enables you to gain insights into users who have opted out of receiving messages, helping you respect user choices and maintain effective communication strategies. Here's a summary of the key functionalities:
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/analytics/opt-out
+Reports & Analytics
+Analytics
+Opt Out
+The
+Opt Out
+page in the Netmera platform is a pivotal feature for monitoring user preferences and consent management. It enables you to
+gain insights into users who have opted out of receiving messages,
+helping you respect user choices and maintain effective communication strategies. Here's a summary of the key functionalities:
 Choose a Time Period
-Last Week: This option allows you to analyze opt out that occurred in the previous week, giving you insights into recent opt out trends.
-Last Month: "Last Month" provides data on opt out that happened over the course of the entire previous month. It's valuable for understanding opt out patterns over a longer time frame.
-Last Year: "Last Year" offers a comprehensive view of opt out over the past year, allowing you to track long-term trends.
-Dates Between: This option enables you to set custom date ranges for your opt out analysis. It's particularly useful when you want to focus on a specific time frame.
+Last Week:
+This option allows you to analyze opt out that occurred in the previous week, giving you insights into recent opt out trends.
+Last Month:
+"Last Month" provides data on opt out that happened over the course of the entire previous month. It's valuable for understanding opt out patterns over a longer time frame.
+Last Year:
+"Last Year" offers a comprehensive view of opt out over the past year, allowing you to track long-term trends.
+Dates Between:
+This option enables you to set custom date ranges for your opt out analysis. It's particularly useful when you want to focus on a specific time frame.
 Export Opt Out Users
 Within the Opt Out feature, you have the option to export a list of opted out users. This export file contains the external ID information of the audience that uninstalled your app within the specified date range.
 It's important to note that any changes made to the chart or analysis settings do not affect the export file. This means that you can modify and customize your data analysis without impacting your ability to export the list of opted out users. This feature provides you with the flexibility to delve into the data while still having the opted out user information readily available for further analysis or actions.
 Analysis of Opt Out Charts
 Number of Push Messages Received In Last 7 Days Before (By Opted Out Users) between x/x dates.
 This section provides valuable insights into the engagement of users who opted out of receiving messages from your app during a specified time frame, which, in this case, spans from 17/07/2023 to 17/08/2023.
-Number of Push Messages Received: This metric quantifies the total count of push messages delivered to users who opted out of receiving messages from your app within the defined time frame. It helps you gauge how many push messages were sent to this group of users.
-Last 7 Days Before: This time frame considers the seven days immediately preceding the date range you've specified. It focuses on the last week of interactions before users opted out of message delivery.
-(By Opted Out Users): This qualifier specifies that the analysis pertains exclusively to users who chose to opt out of receiving messages from your app during the selected date range. It allows you to assess how push messages may have influenced users' decisions to opt out.
+Number of Push Messages Received:
+This metric quantifies the total count of push messages delivered to users who opted out of receiving messages from your app within the defined time frame. It helps you gauge how many push messages were sent to this group of users.
+Last 7 Days Before:
+This time frame considers the seven days immediately preceding the date range you've specified. It focuses on the last week of interactions before users opted out of message delivery.
+(By Opted Out Users):
+This qualifier specifies that the analysis pertains exclusively to users who chose to opt out of receiving messages from your app during the selected date range. It allows you to assess how push messages may have influenced users' decisions to opt out.
 This data is pivotal for assessing the efficacy of your messaging strategy and comprehending how users who eventually opted out engaged with your messages in the days preceding their decision. It provides you with valuable insights to fine-tune your messaging approach, minimize opt-out rates, and bolster overall user retention. 📊
 Last Campaigns
 The "Last Campaigns" section offers an overview of user engagement with a specific marketing campaign during a designated time frame. In the context of opt-outs analysis, it enables you to observe how users who eventually opted out of your communications interacted with a particular campaign in the days leading up to their decision.
 This data helps you assess whether the campaign may have played a role in their choice to opt out. It's invaluable for refining your marketing strategies to minimize opt-out rates and improve user retention. By tracking campaign engagement before opt-outs, you gain insights into the effectiveness of your campaigns in retaining users.
 Last Events
-"Events in last (x) days" refers to the number of events that occurred within a specific time frame, indicated as "(x) days." This metric allows you to monitor and measure user interactions, actions, or events associated with your app or platform during this defined period.
-"By retained/churned users who were active between (x/x)" focuses on two distinct user groups: "retained" and "churned" users. "Retained" users continue to engage with your app or platform, while "churned" users have ceased their interactions. The term "active between (x/x)" specifies a particular time frame when these users were actively involved with your app.
-You can choose between "Total Event" and "Unique User" as the measurement type. "Total Event" counts the total number of events, regardless of how many times they were performed by the same user. "Unique User" counts each user's interaction as one, regardless of how frequently they performed the event.
-Retain (illustrated with green): "Retain" signifies the number of users who have continued to engage with your app or platform within the specified time frame. These users exhibit ongoing interest and activity within your application during the defined period.
-Churn (illustrated with red): "Churn" represents the number of users who have discontinued their engagement with your app or platform during the specified time frame. A higher churn rate suggests that a significant number of users have ceased their engagement, which can be a concern for user retention and overall app health.
-In summary, "Retain" characterizes actively engaged users within the specified time frame, while "Churn" signifies users who have discontinued their engagement. Monitoring and interpreting these metrics are pivotal for comprehending user dynamics, refining retention strategies, and sustaining a robust and satisfied user base. For example, "Retain:2 Churn:1" suggests that within the specified time frame, there are 2 users who have continued using your app (retain), while 1 user has opted out (churn). These numbers provide insights into user retention and attrition, enabling you to assess user engagement and make informed decisions to improve retention strategies.
-By leveraging the "Opt Out" analytics feature in these use cases, you can gain valuable insights, reduce opt-out rates, and enhance user retention, ultimately improving the overall effectiveness of your mobile app or messaging strategy. 
+"Events in last (x) days"
+refers to the number of events that occurred within a specific time frame, indicated as "(x) days." This metric allows you to monitor and measure user interactions, actions, or events associated with your app or platform during this defined period.
+"By retained/churned users who were active between (x/x)"
+focuses on two distinct user groups: "retained" and "churned" users. "Retained" users continue to engage with your app or platform, while "churned" users have ceased their interactions. The term "active between (x/x)" specifies a particular time frame when these users were actively involved with your app.
+You can choose between
+"Total Event" and "Unique User"
+as the measurement type. "Total Event" counts the total number of events, regardless of how many times they were performed by the same user. "Unique User" counts each user's interaction as one, regardless of how frequently they performed the event.
+Retain (illustrated with green)
+: "Retain" signifies the number of users who have continued to engage with your app or platform within the specified time frame. These users exhibit ongoing interest and activity within your application during the defined period.
+Churn (illustrated with red)
+: "Churn" represents the number of users who have discontinued their engagement with your app or platform during the specified time frame. A higher churn rate suggests that a significant number of users have ceased their engagement, which can be a concern for user retention and overall app health.
+In summary, "Retain" characterizes actively engaged users within the specified time frame, while "Churn" signifies users who have discontinued their engagement. Monitoring and interpreting these metrics are pivotal for comprehending user dynamics, refining retention strategies, and sustaining a robust and satisfied user base. For example, "Retain:2 Churn:1" suggests that within the specified time frame, there are 2 users who have continued using your app (retain), while 1 user has opted out (churn). These numbers provide insights into user retention and attrition, enabling you to assess user engagement and make informed decisions to improve retention strategies. 📊📅📩📈
+By leveraging the "Opt Out" analytics feature in these use cases, you can gain valuable insights, reduce opt-out rates, and enhance user retention, ultimately improving the overall effectiveness of your mobile app or messaging strategy.
+Uninstall
+Revenue and Conversion
+4 months ago

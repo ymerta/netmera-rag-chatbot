@@ -1,6 +1,37 @@
-Welcome to the core of your app's success – Analytics. In today's digital landscape, data isn't just numbers; it's the driving force behind informed decisions and continuous improvement. Analytics is your compass, helping you navigate the vast sea of user interactions. It provides insights into how users navigate your app, understand user demographics, and track specific actions. This data-driven approach empowers you to enhance user experiences, optimize conversions, and foster user loyalty.
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/analytics
+Reports & Analytics
+Analytics
+📊 Analytics: Unveiling the Power of Data
+Welcome to the core of your app's success –
+Analytics
+. In today's digital landscape, data isn't just numbers; it's the driving force behind informed decisions and continuous improvement. Analytics is your compass, helping you navigate the vast sea of user interactions.
+It provides insights into how users navigate your app, understand user demographics, and track specific actions.
+This data-driven approach empowers you to enhance user experiences, optimize conversions, and foster user loyalty.
 Analytics is like a map that guides you through the user journey. It reveals where users excel and where they might drop off, enabling you to refine the user experience. With profile analytics, you gain a deeper understanding of your users, their preferences, and behaviors, helping you tailor your app to meet their needs.
-Every interaction within your app tells a story. Event analytics deciphers these stories, allowing you to track specific user interactions and refine your app's features. People analytics helps you segment users based on common characteristics, making personalized content and experiences more accessible.
-When users leave your app, Uninstall analytics helps you understand why, providing opportunities for re-engagement and retention strategy improvement. Opt Out analytics respects user privacy, allowing them to control their data and privacy settings.
-Revenue-Conversion analytics tracks conversions that lead to revenue, while Customer Touch analytics enhances user engagement. Retention and cohort analytics measure user loyalty over time.
-In summary, Analytics is your tool to uncover user behavior patterns, understand demographics, and improve the user experience. It's a data-driven journey to enhance your app's performance and build lasting relationships with your users. 
+Every interaction within your app tells a story.
+Event analytics
+deciphers these stories, allowing you to track specific user interactions and refine your app's features.
+People analytics
+helps you segment users based on common characteristics, making personalized content and experiences more accessible.
+When users leave your app,
+Uninstall
+analytics
+helps you understand why, providing opportunities for re-engagement and retention strategy improvement.
+Opt Out analytics
+respects user privacy, allowing them to control their data and privacy settings.
+Revenue-Conversion analytics
+tracks conversions that lead to revenue, while
+Customer Touch analytics
+enhances user engagement.
+Retention and cohort analytics
+measure user loyalty over time.
+In summary, Analytics is your tool to uncover user behavior patterns, understand demographics, and improve the user experience. It's a data-driven journey to enhance your app's performance and build lasting relationships with your users. Dive in and let the data-driven adventure begin! 🚀
+Funnel Analysis
+Profile
+Event Insight
+People Insight
+Uninstall
+Opt Out
+Channel Reachability
+Funnel Analysis
+1 year ago

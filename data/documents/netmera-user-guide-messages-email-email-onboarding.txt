@@ -1,0 +1,25 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/messages/email/email-onboarding
+Messages
+Email
+Email Onboarding
+Quick Steps Guidelines
+Upload User List
+Prepare your subscriber list in a supported format and upload it to Netmera. This ensures your target audience is ready for email campaigns.
+Connect with a Mail Integration
+Share your account details with us, and we will coordinate directly with the Amazon or Setrow teams to establish the necessary connections on your behalf.
+Complete IYS Integration
+Decide whether to manage your Permission Management System (IYS) within Netmera or through your email provider. Our experts will assist you in configuring IYS settings and defining the required codes for smooth integration.
+Mail Delivery Onboarding
+Engage with our comprehensive onboarding program covering:
+Email deliverability best practices
+Authentication and security protocols
+Content optimization techniques
+Segmentation and personalization strategies
+Email metrics and analytics
+Upload Email List
+Email Integrations
+IYS (İleti Yönetim Sistemi)
+Email Delivery Onboarding
+Email
+Upload Email List
+2 months ago

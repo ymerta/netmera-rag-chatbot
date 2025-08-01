@@ -1,6 +1,15 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/event-reports
+Reports & Analytics
+Reports
+Event Reports
 Welcome to Event Reports. Our reporting tools empower you to explore event data on both an hourly and daily basis, providing you with a granular understanding of user engagement. Let's delve into the key features and capabilities of these dynamic reporting pages.
 Daily Event Reports
-Long-term Trends: Assess daily event averages to understand overarching trends in user behavior. Identify patterns and seasonality that influence engagement.
+Long-term Trends:
+Assess daily event averages to understand overarching trends in user behavior. Identify patterns and seasonality that influence engagement.
 Hourly Event Reports
-Real-time Insights: Gain real-time visibility into how specific events unfold throughout the day. Monitor hourly event averages and spot trends as they happen.
-Explore the Event Reports to unlock the power of data-driven decision-making. Whether you're monitoring real-time event trends or examining long-term behavior patterns, these reports equip you with the insights needed to optimize your platform or application for sustained success. 
+Real-time Insights:
+Gain real-time visibility into how specific events unfold throughout the day. Monitor hourly event averages and spot trends as they happen.
+Explore the Event Reports to unlock the power of data-driven decision-making. Whether you're monitoring real-time event trends or examining long-term behavior patterns, these reports equip you with the insights needed to optimize your platform or application for sustained success.
+Installs
+Daily Event Count
+11 months ago

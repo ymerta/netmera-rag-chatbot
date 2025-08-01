@@ -1,81 +1,165 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/file-transfers
+Targeting
+File Transfers
 Netmera's File Transfer simplifies the process of updating and managing user data for campaign targeting. This flexible feature supports various upload types, enabling efficient segmentation, tagging, and permission synchronization.
 Navigation Path
 Targeting > File Transfers > File Type > Upload
-1.Navigate to Targeting: Access the Targeting section from the left-hand menu in your Netmera panel.
-2.Access File Transfers: Click on File Transfers to open the upload interface.
-3.Choose File Type: Select the appropriate file type depending on your goal (e.g., Distribution List, Tag Upload, User Upload).
-4.Enter List or File Name: Provide a unique name for the file. This name will appear on the File Transfers screen.
-5.Select and Upload File: Choose your file, ensuring it follows the correct format.
-6.Initiate Transfer: Click to begin the upload. Netmera will validate and process the data.
+Navigate to Targeting:
+Access the
+Targeting
+section from the left-hand menu in your Netmera panel.
+Access File Transfers:
+Click on
+File Transfers
+to open the upload interface.
+Choose File Type:
+Select the appropriate file type depending on your goal (e.g., Distribution List, Tag Upload, User Upload).
+Enter List or File Name:
+Provide a unique name for the file. This name will appear on the File Transfers screen.
+Select and Upload File:
+Choose your file, ensuring it follows the correct format.
+Initiate Transfer:
+Click to begin the upload. Netmera will validate and process the data.
 File Transfer Dashboard
 General File Requirements
-The file must be in .csv or .txt format.
-Each column must contain a single data entry.
+The file must be in
+.csv
+.txt
+format.
+Each column must contain a
+single data entry
 Avoid unnecessary spacing, headers, or formatting.
-To avoid character encoding issues (especially with Turkish characters), ensure your files are saved in UTF-8 format before uploading.
+To avoid character encoding issues (especially with Turkish characters), ensure your files are saved in
+UTF-8
+format before uploading.
 Upload Distribution Lists
 The Upload Distribution List feature allows you to create and manage lists for targeted distribution. This streamlined process facilitates the efficient organization and utilization of distribution lists for your tailored campaigns.
 Used to create audience segments based on user identifiers.
-List Name: Unique name used for targeting.
-File: Text file (.txt or .csv)
-Format: One user identifier per line.
+List Name:
+Unique name used for targeting.
+File:
+Text file (.txt or .csv)
+Format:
+One user identifier per line.
+250B
+File Transfer - Sample Distrubition List.txt
 Tag Uploads
 Used to assign a specific tag to a group of users for segmentation.
-Tag Name: The name of the tag to assign.
-File: Text file (.txt)
-Format: Each line should include a single user identifier.
+Tag Name:
+The name of the tag to assign.
+File:
+Text file (.txt)
+Format:
+Each line should include a single user identifier.
+250B
+File Transfer - Sample Tag Upload.txt
 User Uploads
 Used to update user information with external IDs and tokens.
-File Name: Descriptive file name for File Transfers screen.
-File: Text file (.txt)
-Format: Each line should follow the format: token, externalId
+File Name:
+Descriptive file name for File Transfers screen.
+File:
+Text file (.txt)
+Format:
+Each line should follow the format:
+token, externalId
 APA91bGxyz... , user123
 c2a62iOS... , user456
+200B
+File Transfer - Sample User Upload.txt
 Additional Notes
 If your file includes device tokens (used for push notifications), Netmera will automatically identify the platform (iOS or Android) based on the structure of the token:
-Tokens beginning with strings like APA91bG... typically represent Android devices.
-Tokens beginning with strings like c2a62... are often associated with iOS devices.
+Tokens beginning with strings like
+APA91bG...
+typically represent
+Android
+devices.
+Tokens beginning with strings like
+c2a62...
+are often associated with
+iOS
+devices.
 This automatic detection ensures correct routing of notifications without requiring manual platform selection.
 Email Uploads
-This section allows you to upload a list of email addresses to create or update your audience within Netmera. Please note that this functionality does not perform İYS permission synchronization. It is used solely for uploading standard email lists. If you want to sync with İYS, see Email Upload Format title.
-File Name: Descriptive identifier.
-Tag Name (Optional): For segmenting uploaded users.
-File: Text file (.txt or .csv)
-Format: One email per line.
-IYS Sync: If you want to synchronize user permissions with İleti Yönetim Sistemi (İYS), you must follow a separate upload format. For İYS-compatible uploads, please refer to Email Upload Format. 
+This section allows you to upload a list of email addresses to create or update your audience within Netmera. Please note that this functionality
+does not perform İYS permission synchronization
+. It is used solely for uploading standard email lists.
+If you want to sync with İYS
+, see
+Email Upload Format
+title.
+File Name:
+Descriptive identifier.
+Tag Name (Optional):
+For segmenting uploaded users.
+File:
+Text file (.txt or .csv)
+Format:
+One email per line.
+IYS Sync:
+If you want to synchronize user permissions with
+İleti Yönetim Sistemi (İYS)
+, you must follow a separate upload format. For İYS-compatible uploads, please refer to
+Email Upload Format
+334B
+File Transfer - Sample Email Upload.csv
 Promotion Value Uploads
 Used to associate a promotion value with specific users.
-Promotion Name: Descriptive name for internal tracking.
-Promotion Expiry Date: Format: YYYY-MM-DD
-File: Text file (.txt)
-Format: externalid, promotionvalue
-
+Promotion Name:
+Descriptive name for internal tracking.
+Promotion Expiry Date:
+Format: YYYY-MM-DD
+File:
+Text file (.txt)
+Format:
+externalid, promotionvalue
+104B
+File Transfer - Sample Promotion Value.txt
 Geofence Uploads
 Used to upload geolocation targeting areas.
-File: CSV file only.
+File:
+CSV file only.
 Format (semicolon-separated):
 Name;Latitude;Longitude;Radius;Entity Status;Distance Unit;Group
 Processing may take up to 5 minutes.
 Each row must contain the following values in the exact order listed below:
-1.Name: A unique identifier for the geofence. Example: ShoppingCentre1, OfficeBuilding2.
-2.Latitude: The center point’s latitude, in decimal degrees. Example: 40.712776
-3.Longitude: The center point’s longitude, also in decimal degrees. Example: 74.005974
-4.Radius: The radius around the center point that defines the geofence boundary. Example: 500
-5.Entity Status: The operational state of the geofence. Accepted values: ACTIVE or INACTIVE
-6.Distance Unit: The unit for the radius. Accepted values: METERS or KM
-7.Group: A label used to categorize the geofence. Example: RetailGroupA, BusinessGroupB
+Name
+: A unique identifier for the geofence. Example:
+ShoppingCentre1
+OfficeBuilding2
+Latitude
+: The center point’s latitude, in decimal degrees. Example:
+40.712776
+Longitude
+: The center point’s longitude, also in decimal degrees. Example:
+74.005974
+Radius
+: The radius around the center point that defines the geofence boundary. Example:
+500
+Entity Status
+: The operational state of the geofence. Accepted values:
+ACTIVE
+INACTIVE
+Distance Unit
+: The unit for the radius. Accepted values:
+METERS
+Group
+: A label used to categorize the geofence. Example:
+RetailGroupA
+BusinessGroupB
 Example
 ShoppingCentre1;40.712776;74.005974;500;ACTIVE;METERS;RetailGroup
 OfficeBuilding2;34.052235;118.243683;300;ACTIVE;METERS;BusinessGroup
-ParkArea3;37.774929;122.419418;3;ACTIVE;KM;PublicGroup
 Do not change the order of the columns.
 Do not include additional spaces or line breaks.
 Processing time may take up to 5 minutes depending on file size.
-
+187B
+File Transfer - Sample Geofence Uploads.csv
 Uploading Email and SMS Data for İYS Sync
 To import user permissions into Netmera for İYS synchronization, use the specific formats outlined below. This applies if you’re uploading bulk data manually in addition to automatic syncing.
 Mutabakat Yönetimi
-Make sure the setting Mutabakat Yönetimi is enabled in your IYS Panel. 
+Make sure the setting
+Mutabakat Yönetimi
+is enabled in your IYS Panel.
 Without this setting, synchronization cannot proceed.
 File Transfer For IYS
 Navigate to Netmera Panel > Targeting > File Transfers and choose Email Uploads or SMS Uploads.
@@ -83,43 +167,97 @@ Email Upload Format
 To synchronize email permissions with İYS, your upload file must include the following columns in the specified order:
 Email Address
 Must be a valid email format.
-Example: test@example.com
+Example:
+[email protected]
 Platform
-You can use values such as EMAIL, mobileapp, or other relevant channels, depending on your use case.
+You can use values such as
+EMAIL
+mobileapp
+, or other relevant channels, depending on your use case.
 Permission
-Must be either ONAY (consent) or RET (rejection), written in uppercase.
+Must be either
+ONAY
+(consent) or
+RET
+(rejection), written in uppercase.
 Timestamp
-Must follow this format: dd.MM.yyyy HH:mm:ss
-Example: 15.05.2025 14:23:00
-ExternalID (optional)
+Must follow this format:
+dd.MM.yyyy HH:mm:ss
+Example:
+15.05.2025 14:23:00
+ExternalID
+(optional)
 A unique identifier for the user in your system.
-Example: test@example.com; mobileapp; ONAY; 15.05.2025 14:23:00; user123
-The upload file must be in .txt or .csv format.
+Example:
+[email protected]
+; mobileapp; ONAY; 15.05.2025 14:23:00; user123
+The upload file must be in
+.txt
+.csv
+format.
 Do not include a header row in the file.
-Key Points to Follow
-The permission column must include either ONAY  or RET
-Users marked with ONAY will be directly reflected in İYS.
-Users marked with RET will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.
+Sample File
+119B
+Email IYS File Upload.csv
+The
+permission
+column must include either
+ONAY
+RET
+Users marked with
+ONAY
+will be directly reflected in İYS.
+Users marked with
+RET
+will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.
 SMS Upload Format
 To sync SMS permissions with İYS, your upload file must include the following columns:
 Phone number with country code
-Example: 905331234562
+Example:
+905331234562
 Platform
-Platfrom you acquired consent from: mobile/web, form, etc.
+Platfrom you acquired consent from:
+mobile/web
+form
+, etc.
 Permission
-Must be either ONAY  or RET, written in uppercase.
+Must be either
+ONAY
+RET
+, written in uppercase.
 Timestamp
-Must follow this format: dd.MM.yyyy HH:mm:ss
-Example: 15.05.2025 14:23:00
-ExternalID (optional)
+Must follow this format:
+dd.MM.yyyy HH:mm:ss
+Example:
+15.05.2025 14:23:00
+ExternalID
+(optional)
 A unique identifier for the user in your system.
-Example: 905331234562; SMS; RET; 15.05.2025 14:23:00; user456
+Example:
+905331234562; SMS; RET; 15.05.2025 14:23:00; user456
 File Format
-The upload file must be in .txt or .csv format.
+The upload file must be in
+.txt
+.csv
+format.
 Do not include a header row in the file.
-Key Points to Follow
-The permission column must include either ONAY  or RET
-Phone numbers must start with the country code (e.g., 90 for Turkey) and should not include spaces, dashes, or special characters.
-Users marked with ONAY will be directly reflected in İYS.
-Users marked with RET will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.
-
+110B
+SMS IYS File Upload.csv
+The
+permission
+column must include either
+ONAY
+RET
+Phone numbers must
+start with the country code
+(e.g.,
+for Turkey) and should not include spaces, dashes, or special characters.
+Users marked with
+ONAY
+will be directly reflected in İYS.
+Users marked with
+RET
+will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.
+Segment Details
+Geofence
+19 days ago

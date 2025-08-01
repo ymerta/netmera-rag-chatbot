@@ -1,99 +1,239 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/tagless-data-capture
+Customer Data
+Tagless Data Capture
 Tagless Tracking for Smarter Data Collection
-Netmera Tagless Data Capture automatically detects and collects screen views and user interaction events—without requiring any manual tagging or custom development effort. It provides a faster, low-code way to collect behavioral data, helping product teams and marketers optimize experiences with real-time insights.
-Currently available in iOS and Android SDKs. Cross-platform SDKs such as Flutter and React Native are not yet supported.
-
+Netmera Tagless Data Capture automatically detects and collects
+screen views
+and
+user interaction events
+—without requiring any manual tagging or custom development effort. It provides a faster, low-code way to collect behavioral data, helping product teams and marketers optimize experiences with real-time insights.
 Screen Tracking Dashboard
-Path: Settings > Screen Tracking > Views / Actions
+Path:
+Settings > Screen Tracking > Views / Actions
 This dashboard is your control center for screen and action mapping.
 Sections:
 Track Views / Track Actions:
 Displays current screen and interaction events that have already been mapped and published.
 Unmapped Views / Actions:
 Shows user actions detected on your test devices that are not yet linked to defined events. These will need to be manually named and published.
-
 Step 1: Enable Tracking
-Path: Settings > Screen Tracking > Track Views / Track Actions / Collect Values
-
+Path:
+Settings > Screen Tracking > Track Views / Track Actions / Collect Values
 Turn on Track Views, Track Actions and Collect Values on their respective pages to start collecting data.
 What Each Toggle Does
 Track Views:
-Enables the collection of full-screen transitions such as Home Page, Product Page, Cart, etc. This helps you understand which pages users are navigating to.
+Enables the collection of full-screen transitions such as
+Home Page
+Product Page
+Cart
+, etc. This helps you understand which pages users are navigating to.
 Track Actions:
 Captures user interactions with the interface, such as taps, clicks, or selections on specific elements. Useful for analyzing feature usage and engagement.
 Collect Values:
-Extends action tracking by capturing the specific value of the item clicked or interacted with.
-For example, if a user taps a product titled "Blue Sneakers" at the end of a path like /category/shoes, this toggle ensures that "Blue Sneakers" is included in the data payload.
-This allows you to not only track which action was triggered but also what the user selected or interacted with.
-
+Extends action tracking by capturing the
+specific
+value
+of the item clicked or interacted with.
+For example, if a user taps a product titled "Blue Sneakers" at the end of a path like
+/category/shoes
+, this toggle ensures that
+"Blue Sneakers"
+is included in the data payload.
+This allows you to not only track
+which
+action was triggered but also
+what
+the user selected or interacted with.
 Step 2: Add Test Devices
-Path: Settings > Test Devices > Invite Tester / Add Tester
-To begin collecting screen views and user interaction events, you must first register test devices. These devices are used to simulate app usage in a controlled environment so that Netmera can detect and log potential screen and action events for mapping. Refer to Test Devices for further information.
+Path:
+Settings > Test Devices > Invite Tester / Add Tester
+To begin collecting screen views and user interaction events, you must first register test devices. These devices are used to
+simulate
+app usage in a controlled environment so that Netmera can detect and log potential screen and action events for mapping. Refer to
+Test Devices
+for further information.
+Option 1: Inviting Testers via Email
+Navigate to the left menu of the panel and select "
+Settings
+Click on "
+Test Devices
+" to access the test device management screen.
+Locate the "
+Invite Tester
+" button and click on it.
+Enter your email address in the provided field to receive the invitation link.
+Check your email for the received invitation link.
+On the device you want to add as a test device, click on the invitation link from the email.
+The link will redirect you to the mobile application and automatically add the device as a test device.
+Option 2: Adding Test Devices with their External ID
+In the "
+Settings -> Test Devices
+" screen, find and click on the "
+Add Tester
+" button.
+Enter your
+external ID
+in the provided field.
+The system will list available devices for you to add as test devices.
+Click on the desired device from the list to add it as a test device with a single click.
+Option 3: Adding a Tester with User Details
+Navigate to the left menu of the panel and select "
+Targeting
+Click on "
+People
+" to access the people search screen. Then, click on "
+Find Person
+Write their
+External ID
+email
+and click "
+Find
+When you see your user's results, click on "
+User ID
+" which is shown in color green.
+You will see a warning about action loggings saying "You are accessing user private data, your action will be logged." click
+Yes.
+On top of the page, you will see three options. Click on "
+Assign as a Tester
+" >
+"Get Devices."
+You are going to see a list of all the platforms you may use this user as a tester. Select your Platform (sms, email, etc.) and choose
+"Add Tester."
+If you haven't set an External ID for your user please follow these steps:
+updateUser() methods to set xid:
+To set xid, you can use the updateUser() method with the userId. For detailed information, refer to our developer documentation with the following links.
+iOS User Documentation
+Android User Documentation
 Precondition:
-Set your iOS URL Schema and Android Package Name under Developers > App Info.
+Set your
+iOS URL Schema
+and
+Android Package Name
+under
+Developers > App Info
 Step 3: Simulate Flows with Test Devices
 Once your test device is registered, interact with your application to simulate user flows. Netmera Tagless Data Capture will automatically generate candidate event paths based on your actions—no manual coding required.
 Views Example:
-"Home" → "Product List" → "Product Detail" → "Cart"
+"Home"
+"Product List"
+"Product Detail"
+"Cart"
 This captures the sequential screen transitions as a user navigates through your app.
 Actions Example:
-"Tap Search" → "Select Filter" → "Tap Add to Favorites"
+"Tap Search"
+"Select Filter"
+"Tap Add to Favorites"
 These represent individual user interactions with buttons or interactive elements.
 Values Example:
-"Tap Product: Running Shoes" → "Tap Color Option: Red" → "Tap Size: 42"
-The Collect Values feature appends contextual details—such as the name, label, or value of the item clicked—at the end of the action path.
+"Tap Product: Running Shoes"
+"Tap Color Option: Red"
+"Tap Size: 42"
+The
+Collect Values
+feature appends contextual details—such as the name, label, or value of the item clicked—at the end of the action path.
 These automatically generated candidate paths can later be reviewed, named, and published for consistent tracking across your application.
 Step 4: Create and Save Mappings
-Navigate to:Unmapped Views or Unmapped Actions under the Tagless Data Collection section.
-Click “Create New” to open the mapping editor for the selected view or action.
+Navigate to:
+Unmapped Views
+Unmapped Actions
+under the Tagless Data Collection section.
+Click “Create New”
+to open the mapping editor for the selected view or action.
 Assign a Screen Name:
-Enter a meaningful and consistent name that reflects the purpose of the screen (e.g., ProductDetail, OnboardingStep1).
+Enter a meaningful and consistent name that reflects the purpose of the screen (e.g.,
+ProductDetail
+OnboardingStep1
 Choose Tracking Option:
-Use the Track toggle/button to decide whether this mapping should be actively tracked. This allows you to save mappings without enabling them immediately if needed.
+Use the
+Track
+toggle/button to decide whether this mapping should be actively tracked. This allows you to save mappings without enabling them immediately if needed.
 Match Android and iOS Paths (Optional but Recommended):
-Netmera allows you to group equivalent screen views or actions across platforms into a single mapping. Use the Add button in the Mappings table to attach a corresponding path from the other platform (e.g., match the Android product/detail screen with the iOS productDetailsView). This ensures consistency in reporting and simplifies cross-platform analytics.
+Netmera allows you to group equivalent screen views or actions across platforms into a single mapping. Use the
+Add
+button in the Mappings table to attach a corresponding path from the other platform (e.g., match the Android
+product/detail
+screen with the iOS
+productDetailsView
+). This ensures consistency in reporting and simplifies cross-platform analytics.
 Finalize and Save:
-Once both platforms (if applicable) are matched, click the green Add button to save your mapping.
+Once both platforms (if applicable) are matched, click the green
+Add
+button to save your mapping.
 Publish the Changes:
-After saving, return to the Views / Actions dashboard and click the “Publish” button.
-Publishing is required to activate the mappings—otherwise, they remain in draft and will not be applied.
-
+After saving, return to the
+Views / Actions
+dashboard and click the
+“Publish”
+button.
+Publishing is required
+to activate the mappings—otherwise, they remain in draft and will not be applied.
+How to Match Corresponding Mappings Between Android and iOS
+To unify event tracking across platforms, Netmera allows you to
+combine Android and iOS paths
+into a single mapping entry. This helps reduce duplication and makes reports easier to interpret.
+Steps to match paths:
+In the
+Mappings table
+of the mapping creation screen, locate the existing path for one platform (e.g., Android).
+Find the corresponding path from the other platform listed under Unmapped Views/Actions.
+Click the
+“Add”
+button next to the correct platform entry.
+The selected path will be added under the same mapping, allowing you to track Android and iOS screens/actions as one.
+Example:
+You might have the Android path
+/product/detail
+and the iOS path
+productDetailScreen
+. Matching both under a single mapping called
+ProductDetail
+will allow you to see unified analytics for that screen.
 Step 5: Screen your Data with User Path
-Path: Analytics > User Path
+Path:
+Analytics > User Path
 User Path Analytics allows you to preview flow efficiency, drop-offs, and repetitive actions using data from your test sessions.
 Filter Options:
-Segment: Analyze specific user groups (e.g., VIPs, new users)
-Device: Filter by operating system or device version
-Filter: Choose a specific screen or action
-Direction: See what precedes or follows a selected event
-Date Range: Observe behavior trends over time
-
-EventType: Show View Test Event
-Description: Fired when a screen is shown on test devices only.
-Notes: Not visible in production.
-
-EventType: Show View Event
-Description: Triggered when a mapped screen is viewed.
-Notes: Live tracking for analytics.
-
-EventType: View Action Test Event
-Description: Triggered when an action is taken on a test device.
-Notes: Used during test flow creation.
-
-EventType: View Action Event
-Description: Triggered when a mapped interaction occurs.
-Notes: Visible in analytics and segmentation.
-
-Issue: Can’t See Track Views/Actions Pages
-Solution: Ask your Success Manager to enable permissions.
-
-Issue: No Data Collected from Test Device
-Solution: Confirm that the device is registered and actively used.
-
-Issue: Mapping Doesn’t Appear in Dashboard
-Solution: Ensure you clicked “Add” after matching and then “Publish”.
-
-Issue: User Path Shows No Events
-Solution: Check if test events were generated and mapped properly.
-
-Issue: Session Expiry Issues
-Solution: Update Session Expiration Interval in Developers > App Info.
+Segment:
+Analyze specific user groups (e.g., VIPs, new users)
+Device:
+Filter by operating system or device version
+Filter:
+Choose a specific screen or action
+Direction:
+See what precedes or follows a selected event
+Date Range:
+Observe behavior trends over time
+Tagless Data Capture Event Types
+Event
+Description
+Notes
+Show View Test Event
+Fired when a screen is shown on test devices only
+Not visible in production
+Show View Event
+Triggered when a mapped screen is viewed
+Live tracking for analytics
+View Action Test Event
+Triggered when an action is taken on a test device
+Used during test flow creation
+View Action Event
+Triggered when a mapped interaction occurs
+Visible in analytics and segmentation
+Troubleshooting Tips
+Issue
+Solution
+Can’t See Track Views/Actions Pages
+Ask your Success Manager to enable permissions
+No Data Collected from Test Device
+Confirm that the device is registered and actively used
+Mapping Doesn’t Appear in Dashboard
+Ensure you clicked “Add” after matching and then “Publish”
+User Path Shows No Events
+Check if test events were generated and mapped properly
+Session Expiry Issues
+Update
+Session Expiration Interval
+Developers > App Info
+Event Insight
+IYS Integration
+2 months ago

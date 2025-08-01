@@ -1,0 +1,22 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/panel-settings/netmera-panel-settings
+Panel Settings
+Netmera Panel Settings
+Empower Your Engagement, Insights, and Success
+Netmera Panel is a platform that empowers app developers, marketers, and administrators to effectively manage their campaigns and engage with their users in a personalized and data-driven manner. It serves as the centralized control center where various aspects of the app can be configured, campaigns can be created, and insightful analytics can be accessed.
+Whether you're creating dynamic templates for landing pages, managing webhook configurations, or fine-tuning business unit criteria, Netmera Panel Settings serves as the gateway to a customer engagement management experience. With a wealth of features and tools at your disposal, you can take full control of your app's performance, user engagement, and data analysis, driving your app's success to new heights.
+General Settings
+Test Devices
+Users
+Roles and Permissions
+Button Sets
+Message Labels
+Message Labels
+Landing Pages
+WebHooks
+App Tracker
+Reports Settings
+Business Units
+Coupon Code Lists
+Web Analytics
+General Settings
+1 year ago

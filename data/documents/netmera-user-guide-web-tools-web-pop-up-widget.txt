@@ -1,4 +1,16 @@
-he Web Pop-up/Widget is a powerful tool that allows you to engage with your website visitors and capture their attention.
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-pop-up-widget
+Web Tools
+Web Pop-Up / Widget
+The Web Pop-up/Widget is a powerful tool that allows you to engage with your website visitors and capture their attention.
 The Web Widget, also referred to as a pop-up, is a versatile and interactive element that you can incorporate into your website to engage with your visitors in a more targeted and dynamic manner. It typically appears as a small window or overlay that pops up on the screen when triggered by specific conditions or user actions.
-The primary purpose of the Web Widget is to capture the attention of your website visitors and encourage them to take a desired action. It serves as a valuable tool for various purposes, such as promoting special offers, collecting customer feedback, providing assistance or support, announcing important updates or announcements, and much more.
+The primary purpose of the Web Widget is to capture the attention of your website visitors and encourage them to take a desired action. It serves as a valuable tool for various purposes, such as
+promoting special offers, collecting customer feedback, providing assistance or support, announcing important updates or announcements
+, and much more.
 When strategically implemented, the Web Widget can significantly enhance user experience, increase engagement, and drive conversions on your website. It allows you to deliver relevant and personalized messages directly to your visitors, making it more likely for them to respond positively to your call-to-action.
+Start Creating
+How to Customize Widgets
+Assign Click Actions
+Publish
+Web Transactional Push Deeplink
+Start Creating
+6 months ago

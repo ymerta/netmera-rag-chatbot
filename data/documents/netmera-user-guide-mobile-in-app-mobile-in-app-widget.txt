@@ -1,0 +1,36 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/mobile-in-app/mobile-in-app-widget
+Mobile In-App
+Mobile In-App / Widget
+Mobile Widget is a dynamic and interactive element that empowers you to engage with your app users in a targeted and captivating manner.
+The Mobile Widget functions as a small, customizable window or overlay that appears on the screen based on
+specific triggers or user actions
+. Its purpose is to capture the attention of your app users and prompt them to take desired actions. By strategically leveraging the Mobile Widget, you can
+promote special offers, collect valuable feedback, provide timely support, announce important updates,
+and so much more.
+With the Mobile Widget, you have the opportunity to deliver relevant and personalized content to your users, fostering a deeper connection and increasing engagement. Whether you aim to
+boost conversions, gather insights, or deliver important announcements
+, the Mobile Widget is your go-to tool.
+In this user guide, we will walk you through the various features, customization options, and best practices for leveraging the Mobile Widget to its fullest potential. From designing eye-catching widgets to defining triggers and actions, we will equip you with the knowledge and resources you need to create impactful and effective mobile widget experiences.
+Let's dive in and discover the endless possibilities of the Mobile Widget!
+Before we start, you may refer to the following
+Netmera Blog Posts
+about
+Mobile Widgets
+. These blog posts delve into different scenarios and demonstrate how Netmera features can be utilized effectively to enhance various aspects of your goals.
+Blog Posts
+Boost Your App Performance & User Engagement with In-App Widgets
+Netmera - Omni channel marketing solution
+In-App Widgets
+Get Valuable Customer Feedback With Feedback Widgets - Netmera
+Netmera - Omni channel marketing solution
+Customer Feedback
+How to Use In-App Messaging to Retain Customers - Netmera
+Netmera - Omni channel marketing solution
+In-App Messaging to Retain Customers
+Start Creating
+Customize Components
+Assign Click Actions
+Publish
+Netmera AI Text Generator
+Start Creating
+6 months ago

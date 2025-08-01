@@ -1,14 +1,25 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/integrating-netmera
+Beginner's Guide to Netmera
 Integrating Netmera
 Onboarding with Netmera
-Customers onboard with Netmera through our Support Teams in a seamless process. It begins with an initial contact, followed by a thorough needs assessment. Our Support Team crafts a tailored onboarding plan and provides comprehensive training and education. They assist with technical integration, conduct testing, and offer ongoing support. 
+Customers onboard with Netmera through our Support Teams in a seamless process. It begins with an initial contact, followed by a thorough needs assessment. Our Support Team crafts a tailored onboarding plan and provides comprehensive training and education. They assist with technical integration, conduct testing, and offer ongoing support.
 Monitoring and optimization ensure that customers achieve their app objectives effectively. Throughout this collaborative journey, our experienced teams work closely with customers to ensure a smooth and successful onboarding experience, helping them harness the full potential of Netmera's services for enhanced user engagement and app performance.
-Resources for SDK Integrations
-Before diving into the specifics of system integration, we recommend referring to our comprehensive Developer Guide. It contains detailed instructions and insights for integrating Netmera's SDKs into your applications. You can access the Developer Guide here.
+Developer Guide
+here
 Onboarding Guides
 To get started with specific integration methods, you may find the following onboarding guides valuable:
-App Admin Contacts Developer: The process begins with the App Administrator reaching out to the app developer. This step is essential for coordinating the integration of Netmera's services into the application.
-Review of REST API SDK: The developer conducts a thorough review of Netmera's REST API Software Development Kit (SDK). This SDK provides essential tools and resources for integrating Netmera's features into both mobile and web applications.
-Mobile and Web Integration: Following the SDK review, the developer proceeds to integrate Netmera's services into both the mobile and web versions of the application. This integration ensures that Netmera's features are accessible and functional across multiple platforms, enhancing user engagement and communication.
-SMS and Email Integration: As part of the integration process, the developer also incorporates SMS and email functionality into the application. This allows the app to send messages and notifications to users via SMS and email, enhancing communication and user engagement.
-User Data Collection: To facilitate targeted messaging and personalized user experiences, user data is collected. This data can be gathered using Netmera's SDK or through the REST API. It includes valuable information about user behavior and preferences.
-User Data Upload: In addition to real-time data collection, historical user data can also be integrated into Netmera. This is achieved through a process known as "user upload." By securely uploading previous user data, the application ensures that this information remains protected and accessible for creating highly targeted and effective messaging campaigns.
+App Admin Contacts Developer:
+The process begins with the App Administrator reaching out to the app developer. This step is essential for coordinating the integration of Netmera's services into the application.
+The developer conducts a thorough review of Netmera's REST API
+Mobile and Web Integration:
+SMS
+and
+Email
+Integration:
+As part of the integration process, the developer also incorporates SMS and email functionality into the application. This allows the app to send messages and notifications to users via SMS and email, enhancing communication and user engagement.
+User Data Collection
+User Data Upload:
+In addition to real-time data collection, historical user data can also be integrated into Netmera. This is achieved through a process known as "user upload." By securely uploading previous user data, the application ensures that this information remains protected and accessible for creating highly targeted and effective messaging campaigns.
+Introduction to Netmera
+App Dashboard
+1 month ago

@@ -1,10 +1,25 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/segments/connector-segments
+Targeting
+Segments
+Connector Segments
 Connector Segments
 A connector segment refers to a specific grouping of users within the Netmera platform, created and defined through a connector. These segments allow users to categorize and target individuals based on criteria such as analytics data or other connected sources, enhancing the precision and effectiveness of user engagement strategies. Connectors typically integrate with external tools or analytics platforms like Mixpanel.
-Segment Name: This is the unique identifier for the Connector's segment, allowing for easy reference and categorization.
-Connector (e.g., Mixpanel) Users: Indicates the number of users within the segment as defined by your Connector's users.
-Netmera Users: Represents the count of users that were successfully imported to the segment on Netmera.
-Message Sent: Specifies the number of messages that have been sent to users within the identified segment.
-Description: Provides a brief overview or description of the segment, outlining its purpose or characteristics.
-Last Update Date: Indicates the date of the last update made to the segment.
-Status: Communicates the current status of the segment (e.g., ready, calculating), providing visibility into its operational state.
-Actions: Offers a set of actions that can be performed on the segment such as send message, message report and refresh.
+Segment Name:
+This is the unique identifier for the Connector's segment, allowing for easy reference and categorization.
+Connector (e.g., Mixpanel) Users:
+Indicates the number of users within the segment as defined by your Connector's users.
+Netmera Users:
+Represents the count of users that were successfully imported to the segment on Netmera.
+Message Sent:
+Specifies the number of messages that have been sent to users within the identified segment.
+Description:
+Provides a brief overview or description of the segment, outlining its purpose or characteristics.
+Last Update Date:
+Indicates the date of the last update made to the segment.
+Status:
+Communicates the current status of the segment (e.g., ready, calculating), providing visibility into its operational state.
+Actions:
+Offers a set of actions that can be performed on the segment such as send message, message report and refresh.
+Create New Rule Based Segment
+Segment Details
+4 months ago

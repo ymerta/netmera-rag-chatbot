@@ -1,6 +1,19 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-feedback-button
+Web Tools
 Web Feedback Button
 Stop making decisions with instinct, get user feedback without interrupting user experience, and make the right decisions.
-The Feedback Button allows you to gather valuable insights and feedback from your website visitors. By incorporating a feedback widget into your web pages, you can provide an interactive and convenient way for users to share their thoughts, suggestions, and concerns directly with your team. 
-
-Let's explore how you can effectively set up and utilize the Feedback Button feature.
+The Feedback Button allows you to gather valuable insights and feedback from your website visitors. By incorporating a feedback widget into your web pages, you can provide an interactive and convenient way for users to
+share their thoughts, suggestions, and concerns directly with your team.
+Let's explore how you can effectively set up and utilize the
+Feedback Button
+feature.
 Before we proceed, we recommend checking out the following blog post for more details on the potential uses of this feature. Netmera blog posts delve into different scenarios and demonstrate how Netmera features can be utilized effectively to enhance various aspects. Reading these posts will provide you with valuable insights and inspiration for leveraging your goals to their full potentials.
+Feedback Button vs. Feedback Pop-Up: What’s the difference? - Netmera
+Netmera - Omni channel marketing solution
+Feedback Button vs. Feedback Pop-Up
+Create a New Web Feedback Button
+How to Customize Widgets
+Adding Click Action
+Analyze
+Create a New Web Feedback Button
+1 year ago

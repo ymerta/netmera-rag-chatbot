@@ -1,5 +1,21 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/segments/ready-to-use-segments
+Targeting
+Segments
 Ready to Use Segments
-The Segments Dashboard an overview of the 'Ready to Use' segments, providing users with a quick and accessible snapshot of their pre-configured segments. This dashboard is designed to enhance user efficiency by presenting key information at a glance.
-For each 'Ready to Use' segment, the dashboard displays essential details, including the segment's name, count of users falling within that segment, and a concise summary outlining the characteristics or criteria defining the segment. This structured presentation enables users to rapidly assess the composition and significance of each segment.
+Ready to Use Segments
+The Segments Dashboard an overview of the
+'Ready to Use'
+segments, providing users with a quick and accessible snapshot of their pre-configured segments. This dashboard is designed to enhance user efficiency by presenting key information at a glance.
+For each 'Ready to Use' segment, the dashboard displays essential details, including the segment's
+name
+count of users falling within that segment
+, and a concise
+summary outlining the characteristics or criteria defining the segment.
+This structured presentation enables users to rapidly assess the composition and significance of each segment.
 "Is predefined segment" option saves your segment to ready to use segments dahsboard:
-When creating a new segment ( Create New Rule Based Segment)  selecting the "is predefined segment" option during the creation of a new segment on your Netmera panel, the system will integrate and make this segment visible on the "Ready to Use Segments" dashboard after the subsequent 12 am update. 
+When creating a new segment (
+Create New Rule Based Segment
+)  selecting the "is predefined segment" option during the creation of a new segment on your Netmera panel, the system will integrate and make this segment visible on the "Ready to Use Segments" dashboard after the subsequent 12 am update.
+AI-Based Segments
+Rule Based Segments
+4 months ago

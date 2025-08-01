@@ -1,0 +1,113 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/mobile-in-app/mobile-in-app-widget/start-creating/customize-components/custom-button-deeplinks
+Mobile In-App
+Mobile In-App / Widget
+Start Creating
+Customize Components
+Custom Button Deeplinks
+With the
+Custom Button Deeplink
+feature, you can dynamically redirect users to personalized destinations based on their profile attributes. Instead of using static links, you can configure deeplinks that adapt to each user's data—whether it’s directing them to a specific bill payment page, transaction history, or account details.
+Step 1: Create a Deeplink with Profile Attributes
+Go to the Developers Section
+Navigate to Deeplinks in the panel.
+Define a Profile Attribute-Based Deeplink
+When creating a deeplink, include a profile attribute placeholder in the format:
+@{profileAttribute}
+Example:
+https://example.com/@{profileAttribute}
+This ensures that the link is dynamically adjusted based on each user’s profile attribute value at the time of message delivery.
+Add the Deeplink to the Widget
+Once the deeplink is created, it must be assigned within the widget configuration.
+Step 2: Configure the Widget for Transactional Push
+Navigate to the Widget Design Page
+Go to the
+Widget Design
+section where the transactional push will be configured.
+Enter the Deeplink in the Action Settings
+Under the
+Action
+settings, choose the
+Deep Link
+option.
+You may choose one of the pre-defined deeplinks with Select Deep Link.
+You may also input the deeplink using the profile attribute placeholder with Entry Deep Link.
+@{profileAttribute}
+Add and Select the Deeplink
+Click Add to save the deeplink.
+Set Up Transactional Push Delivery
+When sending the push notification, the
+profile attribute value
+can be manipulated dynamically, ensuring the correct deeplink is assigned per user.
+Step 3: Create a Transactional Message with Profile Attributes
+To send a transactional push notification using a deeplink based on a user’s
+profile attribute
+, use the following
+cURL request
+curl --location --request POST 'https://restapi.netmera.com/rest/3.0/sendNotification' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"message": {
+"params": {
+"profileAttribute": "https://example.com/@{profileAttribute}"
+"target": {
+"extId": "userexid"
+Parameters
+Explanation of Request Components
+: The unique identifier for the transactional notification.
+message → params → profileAttribute
+: Defines the deeplink, which can be dynamically replaced based on the user’s profile attribute.
+target → extId
+: Specifies the external user ID (
+extId
+) to whom the push notification is sent.
+User Experience
+When the
+transactional push
+is sent, the system checks the
+profile attribute
+for each user.
+The deeplink dynamically updates with the corresponding
+profile attribute value
+Users receive a
+widget with a customized
+button
+deeplink
+redirecting them to their specific destination.
+How it Works? Real Life Scenario
+Imagine an eCommerce brand running a loyalty rewards campaign. The company wants users to spin a wheel and, based on the outcome, be redirected to a personalized reward page. Each user has a loyalty tier stored as a profile attribute (e.g., Silver, Gold, Platinum).
+How It Works
+When a user spins the wheel in the widget, they win a discount based on their loyalty tier.
+The custom button on the success screen
+contains a deeplink that redirects
+users to their tier-specific reward page.
+Instead of manually assigning links, the system dynamically inserts the user’s profile attribute into the deeplink.
+Example Configuration
+Define the Profile Attribute-Based Deeplink
+In the Developers > Deeplinks section, create a deeplink using a placeholder:
+https://example.com/rewards/@{loyaltyTier}
+This ensures that:
+Silver users go to →
+https://example.com/rewards/silver
+Gold users go to →
+https://example.com/rewards/gold
+Platinum users go to →
+https://example.com/rewards/platinum
+Set Up the Custom Button in the Widget
+In the Widget Design > Action Settings, enter the deeplink as:
+@{loyaltyTier}
+Add and select this deeplink for the CTA button (e.g., Claim Your Reward).
+Trigger the Transactional Push
+When the push notification is sent, the system
+retrieves the user’s loyalty tier
+from their profile and updates the deeplink accordingly.
+User Experience
+User A (Gold Tier) spins the wheel and wins a 15% discount.
+On the success screen, the button text says: "Claim Your Reward".
+Clicking the button redirects them to:
+https://example.com/rewards/gold
+This ensures each user lands on a
+customized page
+relevant to their loyalty status, enhancing their engagement and increasing conversions.
+Spin to Win
+Assign Click Actions
+4 months ago

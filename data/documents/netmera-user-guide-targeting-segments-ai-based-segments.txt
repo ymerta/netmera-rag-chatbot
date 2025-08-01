@@ -1,59 +1,109 @@
-
-Netmera’s AI-Based Predictive Segments offer a highly flexible, event-driven structure that allows businesses to build predictive models based on any event—such as purchases, clicks, or notifications. Whether aiming to prevent churn, boost conversions, or re-engage users, Netmera’s AI adapts to each use case by learning from behavioral patterns and identifying real-time correlations for proactive engagement.
-
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/segments/ai-based-segments
+Targeting
+Segments
+AI-Based Segments
+Netmera’s AI-Based Predictive Segments offer a
+highly flexible
+, event-driven structure that allows businesses to build predictive models based on any event—such as purchases, clicks, or notifications. Whether aiming to prevent churn, boost conversions, or re-engage users, Netmera’s AI adapts to each use case by learning from
+behavioral patterns
+and
+identifying real-time correlations
+for proactive engagement.
 AI-based segments can be customized to suit a wide variety of business goals. Some common predictive segment types may include:
-Churn Risk Predictor – Identifies users likely to disengage or stop using the product.
-Abandonment Recovery – Predicts users who are likely to abandon their actions (e.g., cart or form).
-High-Value Customer Predictor – Highlights users with the potential for high lifetime value.
-Engagement Booster – Targets users who are likely to respond positively to increased interaction.
-Likely-to-Convert Audience – Pinpoints users who are statistically more inclined to complete a defined conversion event.
+Churn Risk Predictor
+– Identifies users likely to disengage or stop using the product.
+Abandonment Recovery
+– Predicts users who are likely to abandon their actions (e.g., cart or form).
+High-Value Customer Predictor
+– Highlights users with the potential for high lifetime value.
+Engagement Booster
+– Targets users who are likely to respond positively to increased interaction.
+Likely-to-Convert Audience
+– Pinpoints users who are statistically more inclined to complete a defined conversion event.
 These use cases are examples—you are free to define your own custom events and goals. Netmera's AI segmentation engine is designed to calculate and adapt to any scenario defined by you.
 Example Use Cases
 Netmera’s AI-Based Predictive Segments are fully customizable—there are no fixed or default events. You can define any event that matters to your business goals and build predictive segments around it. Below are some example use cases to inspire how you might apply AI segmentation in your own strategies.
-
 AI Based Conversion Segments
 A conversion event is any interaction that signals a meaningful action for your business, such as a purchase, registration, or form completion. With AI-based conversion segments, you can:
 Predict which users are most likely to complete a specific action (e.g., making a purchase or subscribing).
 Identify behavioral patterns that lead to conversions and create proactive campaigns to accelerate them.
-Example events: Purchase Completed, Add to Cart, Form Submission, Plan Upgrade
+Example events:
+Purchase Completed
+Add to Cart
+Form Submission
+Plan Upgrade
 AI Based Churn Segments
 Churn segments help identify users who may be losing interest or are likely to disengage. With this setup, you can:
 Define what signals disengagement for your product—this could be no activity, absence from a key feature, or a drop in frequency.
 Use the AI to detect at-risk users early, enabling timely retention efforts.
-Example events: Open App, Message Read, Content Viewed, Transaction Made
+Example events:
+Open App
+Message Read
+Content Viewed
+Transaction Made
 AI-Based Engagement Segments
 These segments focus on boosting interaction with your platform by targeting users who are likely to respond to increased engagement efforts.
 Identify users with emerging interest who might benefit from nudges like personalized content or push campaigns.
 Set up custom engagement-related events and trigger points to detect growing or declining interest.
-Example events: Screen Viewed, Click Notification, Browse Content, Feature Used
+Example events:
+Screen Viewed
+Click Notification
+Browse Content
+Feature Used
 AI-Based High-Value Segments
 These segments help highlight users with high potential lifetime value or strong interest indicators.
 Use behavioral trends to predict which users are likely to become VIPs or big spenders.
 Focus marketing efforts on nurturing these valuable users.
-Example events: Frequent Purchases, Multiple Logins, Premium Feature Usage, Referral Sent
+Example events:
+Frequent Purchases
+Multiple Logins
+Premium Feature Usage
+Referral Sent
 How it Works?
 Calculation Metrics for Netmera's AI-Based Segments
 Netmera’s AI-Based Segments are designed to help you predict user behavior by analyzing historical event data and projecting future actions. This predictive approach relies on three core stages:
-Past (P1) – Historical data: User actions within a defined time window
-Present (P2) – The moment the analysis occurs
-Future (P3) – The predicted outcome window
-You can define both the past analysis period (e.g., "last 7 days") and the prediction timeframe (e.g., "next 3 days"), making the AI model fully customizable to specific goals such as conversions, churn, or engagement.
-
-Key Metrics Used in Predictions
+Past (P1)
+– Historical data: User actions within a defined time window
+Present (P2)
+– The moment the analysis occurs
+Future (P3)
+– The predicted outcome window
+You can define both the
+past analysis period
+(e.g., "last 7 days") and the
+prediction timeframe
+(e.g., "next 3 days"), making the AI model fully customizable to specific goals such as conversions, churn, or engagement.
 To deliver reliable predictions, the AI model uses several key behavioral metrics. These metrics allow the AI model to form a nuanced understanding of user behavior, which can be used to predict the likelihood of a future event.
-Recency – Measures how recently a user performed an action. This is crucial for understanding current engagement levels. Recency helps identify users who are still interacting versus those who may need re-engagement strategies.
-Frequency – Tracks how often a specific event occurs within the defined time period. Helps identify highly active users or popular behaviors. For example, frequent visits to a product page may indicate high purchase intent.
-Duration Between Events – Measures the time intervals between two specific user actions. This helps detect patterns in user pacing—whether they act quickly or drop off over time. It’s especially useful for spotting inactivity that could indicate churn.
+Recency –
+Measures how recently a user performed an action. This is crucial for understanding current engagement levels. Recency helps identify users who are still interacting versus those who may need re-engagement strategies.
+Frequency –
+Tracks how often a specific event occurs within the defined time period. Helps identify highly active users or popular behaviors. For example, frequent visits to a product page may indicate high purchase intent.
+Duration Between Events –
+Measures the time intervals between two specific user actions. This helps detect patterns in user pacing—whether they act quickly or drop off over time. It’s especially useful for spotting inactivity that could indicate churn.
 Precision Level
-The Precision Level determines how strictly the AI model classifies users into a segment. It reflects how many users identified by the model are actually likely to perform the predicted action.
-High Precision Level → Smaller, more accurate segments
-Low Precision Level → Larger segments with broader targeting
-Precision is calculated as: Precision = True Positives / (True Positives + False Positives)
+The
+Precision Level
+determines how strictly the AI model classifies users into a segment. It reflects how many users identified by the model are
+actually
+likely to perform the predicted action.
+High Precision Level
+→ Smaller, more accurate segments
+Low Precision Level
+→ Larger segments with broader targeting
+Precision is calculated as:
+Precision = True Positives / (True Positives + False Positives)
 Choosing a higher precision level results in more confident predictions, but fewer users in the segment. A lower precision level includes more users but may increase the chance of including those less likely to take the action.
-
+FAQs
 Is there a recommended precision level?
 There isn’t a one-size-fits-all answer. It depends on your goal. Want high certainty and accurate targeting? Go for higher precision. Need to reach more people, even if it includes some who won’t convert? Use a lower setting. Your CSM can help you choose the right balance.
 How often are AI-Based Segments updated?
-Your segments are updated every night. This daily refresh means your predictions are always based on the latest user behavior, giving you up-to-date insights for smarter decisions.
+Your segments are updated
+every night
+. This daily refresh means your predictions are always based on the latest user behavior, giving you up-to-date insights for smarter decisions.
 How can I create a new AI-Based Segment?
-To create your own AI-Based Segment, just contact your Customer Success Manager (CSM). They’ll walk you through the setup and make sure it matches your goals. Once it's ready, you can use it in your campaigns like any other segment.
+To create your own AI-Based Segment, just contact your
+Customer Success Manager (CSM)
+. They’ll walk you through the setup and make sure it matches your goals. Once it's ready, you can use it in your campaigns like any other segment.
+Segments
+Ready to Use Segments
+3 months ago

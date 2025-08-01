@@ -1,0 +1,41 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/launch
+Customer Journeys
+Journeys
+Launch
+Take Off with Confidence
+Before Launching Your Journey
+Consider the following steps to ensure your journey is properly configured for your purposes:
+Step 1: Setup
+Begin by navigating to the Journey section and clicking on
+Create New Journey
+. You will need to enter a journey name, which is mandatory, and you may also add a description if desired. Additionally, you can select a conversion event or trigger filters as optional parameters.
+Step 2: Entry Rules
+Time-based
+Action-based
+rule to initiate the journey. Define the specific timing or event associated with your chosen rule, and determine how frequently users can enter the journey.
+Step 3: Audience
+Then, focus on your audience by adding segments to target specific users. If you choose not to select any segments, the journey will automatically apply to all users. Once you've defined your audience, click
+to continue.
+Step 4: Build Journey
+Finally, it's time to build your journey. Use the
+Add Step
+button to incorporate various components into your journey flow. Ensure to configure each component as necessary until you achieve a complete journey.
+Launch Your Journey
+Once your journey is ready, click
+Save & Launch
+in Step 4: Build to immediately start the journey with your users. If you wish to continue editing, click
+Save
+to save your progress as a draft and launch later after making the necessary changes.
+The
+Back
+button will return you to the previous step, saving any branches you've created in the
+Build
+step.
+However, if you click
+Back to Journey List
+, your journey will not be saved, and you'll be returned to the Journey List.
+After launching your Journey, you can continue with analyzing your journey by tracking key performance metrics, reviewing user interactions, evaluating segment effectiveness, and optimizing components for better results.
+YESSS!
+Action
+Journey Analytics
+9 months ago

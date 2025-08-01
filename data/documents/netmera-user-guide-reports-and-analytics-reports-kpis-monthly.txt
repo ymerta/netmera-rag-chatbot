@@ -1,0 +1,19 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/kpis-monthly
+Reports & Analytics
+Reports
+App Conversion Rate %
+Average Revenue per User
+The Average Revenue per User (ARPU) reflects the average financial contribution from each user during the month. ARPU is a crucial metric for evaluating the financial health of your platform. It can help you identify trends in user spending, pricing strategies, and the overall financial impact of your product.
+30 Days Retention (%)
+Retention is a pivotal metric indicating the percentage of users who continue to engage with your platform or application 30 days after their initial interaction. A higher retention rate suggests that your product retains users effectively, indicating strong user satisfaction and product stickiness.
+Session Length (Minute)
+Session length measures the average duration of user sessions on your platform. Understanding session length can provide insights into user engagement and how effectively your product holds users' attention. Longer sessions often indicate higher user satisfaction and engagement.
+Avg. Usage Frequency (Times)
+Making the Best of
+Dive Deep
+Monitor Trends
+Investigate Deviations
+Continuously Evolve
+Hourly Usage
+App Tracking
+4 months ago

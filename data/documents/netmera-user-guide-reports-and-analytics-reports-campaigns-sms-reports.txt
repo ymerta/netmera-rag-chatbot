@@ -1,12 +1,19 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/campaigns/sms-reports
+Reports & Analytics
+Reports
+Campaigns
+SMS Reports
 Track, Analyze, and Optimize Your SMS Campaigns with Netmera
-SMS Reports serve as a powerful tool for you to assess and optimize the performance of your SMS campaigns. By consolidating key metrics and insights into one centralized platform, this dashboard provides a clear understanding of user engagement, delivery success, and campaign outcomes.
+SMS Reports
+serve as a powerful tool for you to assess and optimize the performance of your SMS campaigns. By consolidating key metrics and insights into one centralized platform, this dashboard provides a clear understanding of user engagement, delivery success, and campaign outcomes.
 SMS Summary
-The Message Report Dashboard offers a comprehensive overview of  your SMS campaigns, allowing marketers to analyze and optimize their efforts effectively. Below is an expanded breakdown of its features and how they support campaign management:
-
+The
+Message Report Dashboard
+offers a comprehensive overview of  your SMS campaigns, allowing marketers to analyze and optimize their efforts effectively. Below is an expanded breakdown of its features and how they support campaign management:
 Campaign Name & Message ID
-Campaign Name:
+Campaign Name
 Every campaign is given a unique, descriptive title that makes it easy to locate and reference. For example, titles like "Holiday Promo 2024" or "Product Update Alert" can instantly inform marketers about the campaign’s purpose or timing.
-Message ID:
+Message ID
 Each message is assigned a distinct ID, which acts as a tracking tool to manage and monitor specific messages. It ensures no overlap or confusion, especially in large-scale campaigns.
 Message Type
 The message type identifies the delivery method, such as transactional, promotional, or informational. This classification helps determine:
@@ -17,76 +24,118 @@ This section focuses on the content users receive, including the core message an
 “Your latest transaction is ready for review. Click here to access your account.”
 “Flash Sale: Enjoy 50% off for the next 24 hours. Shop now!”
 Delivery Method
-Creator:
-This field indicates who initiated the campaign. Knowing the creator helps with accountability and offers a point of contact for any questions or adjustments.
-Broadcasting: Messages sent to all users without segmentation. Suitable for announcements or general updates.
-Segments/Tags: Targeted messages sent to specific user groups, defined by their behavior, demographics, preferences, or other attributes. For example:
+Creator
+Broadcasting
+: Messages sent to all users without segmentation. Suitable for announcements or general updates.
+Segments/Tags
+: Targeted messages sent to specific user groups, defined by their behavior, demographics, preferences, or other attributes. For example:
 Campaign Status
-Finished: Indicates that the campaign has concluded, with no further messages being sent. This status helps analyze results post-campaign.
-Sending: Shows that the campaign is ongoing, giving real-time insight into delivery progress.
+Finished
+: Indicates that the campaign has concluded, with no further messages being sent. This status helps analyze results post-campaign.
+Sending
+: Shows that the campaign is ongoing, giving real-time insight into delivery progress.
 Timing
-Create:
+Create
 The exact date and time the message was created in the system. This provides a timeline for campaign planning.
-Start:
+Start
 Specifies when the message began delivery to users. It’s particularly useful for campaigns scheduled to align with specific times, such as peak activity periods.
-End:
+End
 Denotes the campaign’s conclusion. This can signify the end of a promotional window or when all messages have been delivered.
-Key Metrics in SMS Reports
-
 Target Audience
-The Target Audience metric represents the total number of devices that you aim to reach with an SMS. This is the intended scope of your campaign. It reflects your campaign's reach, showing the number of devices you plan to engage with your message.
-Example: If your campaign is designed to reach 1000 users, the "Target Audience" is 1000. It doesn't mean that the notifications have been sent yet; it just sets the goal for the reach.
+The
+Target Audience
+metric represents the total number of devices that you aim to reach with an SMS. This is the
+intended scope
+of your campaign. It reflects your campaign's reach, showing the number of devices you plan to engage with your message.
+Example
+: If your campaign is designed to reach 1000 users, the "Target Audience" is 1000. It doesn't mean that the notifications have been sent yet; it just sets the goal for the reach.
 Sent
-The Sent metric indicates the total number of SMS dispatched to the target audience. It shows how many messages were sent out as part of the campaign, whether they were successfully delivered or not.
-Example: If your campaign is designed to reach 1200 people, but you actually sent 1000 messages (perhaps due to some retry mechanism or delivery issues), the "Sent" count would be 1000. This metric helps assess how many messages were placed into the delivery pipeline.
+The
+Sent
+metric indicates the
+total number of SMS dispatched
+to the target audience. It shows how many messages were sent out as part of the campaign, whether they were successfully delivered or not.
+Example
+: If your campaign is designed to reach 1200 people, but you actually sent 1000 messages (perhaps due to some retry mechanism or delivery issues), the "Sent" count would be 1000. This metric helps assess how many messages were placed into the delivery pipeline.
 Delivered
-Delivered refers to the successful delivery of messages to users or devices. This metric reveals how many of the intended messages actually reached the recipients.
-Example: If you sent 1000 messages but only 750 were successfully delivered due to delivery issues (e.g., network problems or invalid device tokens), then the "Success" count would be 750. It represents the actual outcome of your distribution process.
+Delivered
+refers to the
+successful delivery
+of messages to users or devices. This metric reveals how many of the intended messages actually reached the recipients.
+Example
+: If you sent 1000 messages but only 750 were successfully delivered due to delivery issues (e.g., network problems or invalid device tokens), then the "Success" count would be 750. It represents the actual outcome of your distribution process.
 Performance
-The Performance section encompasses key metrics that offer a comprehensive view of your messaging campaign's effectiveness. 
+The Performance section encompasses key metrics that offer a comprehensive view of your messaging campaign's effectiveness.
 Performance By Platform
-The By Platform section provides a detailed breakdown of SMS performance metrics segmented by delivered and failed metrics. This allows you to analyze how your messages performed and also tag your users according to their behaviour.
-Sent: The total number of messages dispatched to devices on each platform, representing the campaign's reach.
-Success: The number of messages that were successfully delivered to users' devices on iOS and Android.
-Failed: The number of messages that failed to be delivered due to issues such as invalid device tokens, network errors, or other delivery obstacles.
-
+The
+By Platform
+section provides a detailed breakdown of SMS performance metrics segmented by
+delivered and failed
+metrics. This allows you to analyze how your messages performed and also
+tag
+your users according to their behaviour.
+Sent:
+The total number of messages dispatched to devices on each platform, representing the campaign's reach.
+Success
+: The number of messages that were successfully delivered to users' devices on iOS and Android.
+Failed:
+The number of messages that failed to be delivered due to issues such as invalid device tokens, network errors, or other delivery obstacles.
 Heatmap
-The heatmap provides a visual representation of the distribution and volume of messages received by users. It focuses on the density of successful deliveries, helping you understand where your campaign has had the widest reach or areas with lower delivery rates.
+The heatmap provides a visual representation of the
+distribution and volume of messages received by users
+. It focuses on the density of successful deliveries, helping you understand where your campaign has had the widest reach or areas with lower delivery rates.
 Color Representation in the Heatmap
-Warmer Colors (e.g., Red, Orange): Indicate areas or segments where a larger number of messages were successfully received. These regions or groups have the highest concentration of delivered messages.
-Cooler Colors (e.g., Blue, Green): Indicate areas or segments with fewer messages received, reflecting a lower delivery density.
-
+Warmer Colors (e.g., Red, Orange)
+: Indicate areas or segments where a larger number of messages were successfully received. These regions or groups have the highest concentration of delivered messages.
+Cooler Colors (e.g., Blue, Green)
+: Indicate areas or segments with fewer messages received, reflecting a lower delivery density.
 Event Insight
-The Event Insight section is designed to provide in-depth analysis of user actions, focusing on specific events tied to SMS messages. This section allows you to dissect and understand how users interact with SMS messages, providing valuable insights into campaign performance and user behavior.
-Key Features of the Event Insight Section
+The
+Event Insight
+section is designed to provide in-depth analysis of user actions, focusing on specific events tied to SMS messages. This section allows you to dissect and understand how users interact with SMS messages, providing valuable insights into campaign performance and user behavior.
 User Action Analysis
 The core of the Event Insight section revolves around understanding user actions related to your messages. You can analyze:
-Received Users: Tracks the reach and actions taken by users after receiving the campaign message.
+Received Users
+: Tracks the reach and actions taken by users after receiving the campaign message.
 The ability to selectively view users based on these actions helps isolate the exact impact of the campaign on user behavior and allows for deeper analysis of engagement patterns.
-
 Time Period Selection
 The Event Insight section allows you to filter data based on specific timeframes, enabling precise analysis of user behavior over various periods:
-Last 1 hour, 3 hours, 12 hours, or 24 hours: These options help assess short-term reactions to your campaign.
-Custom Date Range: You can select a custom range within the message session to analyze trends over specific timeframes that matter most to your campaign objectives.
+Last 1 hour, 3 hours, 12 hours, or 24 hours
+: These options help assess short-term reactions to your campaign.
+Custom Date Range
+: You can select a custom range within the message session to analyze trends over specific timeframes that matter most to your campaign objectives.
 These time periods provide flexibility in analyzing how quickly users engage with the message and how their actions evolve over time.
 Event Selection (Search Event)
 The "Search Event" field allows you to focus your analysis on specific user actions or events. By selecting events from a predefined list, you can track actions like:
-Open App: Users opening the app after receiving the message.
-Purchase Event: Users making a purchase after interaction with the message.
-Any Custom Event: Any action or event tracked within the app that is relevant to your campaign.
+Open App
+: Users opening the app after receiving the message.
+Purchase Event
+: Users making a purchase after interaction with the message.
+Any Custom Event
+: Any action or event tracked within the app that is relevant to your campaign.
 This feature makes it easy to zoom in on the specific event you want to analyze, improving the precision of your insights.
 Event Analytics by Dimensions
 Narrowing Down by Event Details
 After selecting a specific event in the Event Insight section, you can narrow down your analysis further by choosing specific dimensions. These dimensions provide deeper insights into the selected event, such as:
-External ID: This helps track individual user behavior and how specific users interact with your messages.
-Month: This lets you analyze user actions across different months, showing trends and patterns over time.
+External ID
+: This helps track individual user behavior and how specific users interact with your messages.
+Month
+: This lets you analyze user actions across different months, showing trends and patterns over time.
 The table generated after selecting these dimensions shows detailed results, such as:
 How many users performed the event (e.g., "Open App") in each month.
 The specific exterrnal IDs tied to the event, allowing you to identify high-value users or understand specific user behavior.
 By drilling down into these dimensions, you gain a more granular understanding of how users are engaging with your app after receiving messages.
-
 Data Export
 Exporting Data for Further Analysis
-The results from the Event Insight analysis can be easily exported for further review and reporting. The data is available in Excel format, which can be downloaded by clicking the "Export to Excel" button located in the lower right corner. This feature ensures that the data can be integrated into larger datasets or shared with stakeholders for in-depth analysis.
+The results from the Event Insight analysis can be easily exported for further review and reporting. The data is available in
+Excel format
+, which can be downloaded by clicking the
+"Export to Excel"
+button located in the lower right corner. This feature ensures that the data can be integrated into larger datasets or shared with stakeholders for in-depth analysis.
 The ability to export data means you can further analyze trends, create reports, and present findings to other teams in your organization.
-With the  SMS Reports, you can gain the clarity needed to enhance your campaigns and engage your users effectively. By tracking performance, refining strategies, and exporting actionable insights, you can create more impactful messaging that drives results and strengthens your customer connections.
+With the
+SMS Reports
+, you can gain the clarity needed to enhance your campaigns and engage your users effectively. By tracking performance, refining strategies, and exporting actionable insights, you can create more impactful messaging that drives results and strengthens your customer connections.
+Email Reports
+Automated, Transactional & Geofence Push Reports
+7 months ago

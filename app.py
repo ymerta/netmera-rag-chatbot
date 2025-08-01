@@ -1,4 +1,3 @@
-
 import streamlit as st
 import os
 import faiss
@@ -15,48 +14,35 @@ from fuzzywuzzy import fuzz
 from rank_bm25 import BM25Okapi
 from nltk.tokenize import word_tokenize
 import nltk
-import os
 
-nltk.download('all')
-
+from config import (
+    EMBEDDING_MODEL, CHAT_MODEL,
+    BM25_WEIGHT, FAISS_WEIGHT, FUZZY_WEIGHT,
+    EMBEDDINGS_PATH, TEXTS_PATH, FAQ_PATH,
+    BASE_DOC_URL, FAQ_URL,
+    SYSTEM_PROMPT, TRANSLATE_PROMPT, TURKISH_TRANSLATION_PROMPT,
+    FAQ_QUESTIONS_TR, FAQ_QUESTIONS_EN
+)
 
 load_dotenv()
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-index = faiss.read_index("data/embeddings/index.faiss")
-with open("data/embeddings/texts.pkl", "rb") as f:
+index = faiss.read_index(EMBEDDINGS_PATH)
+with open(TEXTS_PATH, "rb") as f:
     texts = pickle.load(f)
     
-with open("data/faq_answers.json", "r", encoding="utf-8") as f:
+with open(FAQ_PATH, "r", encoding="utf-8") as f:
     faq_qa_map = json.load(f)
 
 corpus = [doc["text"] for doc in texts]
 tokenized_corpus = [word_tokenize(doc.lower()) for doc in corpus]
 bm25_model = BM25Okapi(tokenized_corpus)
 
-def compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score):
-    norm_bm25 = bm25_score / 100
-    norm_faiss = -faiss_score 
-    norm_fuzzy = fuzzy_score / 100
-    return 0.4 * norm_bm25 + 0.3 * norm_fuzzy + 0.3 * norm_faiss
+def compute_hybrid_score(doc, norm_bm25, norm_faiss, norm_fuzzy):
+    return BM25_WEIGHT * norm_bm25 + FUZZY_WEIGHT * norm_fuzzy + FAISS_WEIGHT * norm_faiss
 
-def check_faq_match(user_input, threshold=80):
-    try:
-        translation = client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "Translate the question to English. If it's already in English, return it as-is. Only return the sentence.",
-                },
-                {"role": "user", "content": user_input},
-            ],
-        )
-        translated_input = translation.choices[0].message.content.strip()
-    except Exception:
-        translated_input = user_input
-
+def check_faq_match(translated_input, threshold=80):
     best_score = 0
     best_answer = None
     best_source = None
@@ -72,167 +58,30 @@ def check_faq_match(user_input, threshold=80):
         return f"{best_answer}\n\n **Kaynak belge**: [FAQ]({best_source})"
     return None
 
-file_to_url_map = {
-    "netmera-user-guide-messages-e-mail-email-onboarding-iys-ileti-yoenetim-sistemi.txt": "https://user.netmera.com/netmera-user-guide/messages/email/email-onboarding/iys-ileti-yonetim-sistemi",
-    "netmera-user-guide-customer-data-iys-integration.txt": "https://user.netmera.com/netmera-user-guide/customer-data/iys-integration",
-    "netmera-user-guide-messages-multi-language-push.txt": "https://user.netmera.com/netmera-user-guide/messages/multi-language-push",
-    "netmera-user-guide-beginners-guide-to-netmera-troubleshooting-and-support.txt": "https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/troubleshooting-and-support",
-    "netmera-user-guide-beginners-guide-to-netmera-faq.txt": "https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/faqs",
-    "netmera-user-guide-beginners-guide-to-netmera-app-dashboard.txt": "https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/app-dashboard",
-    "netmera-user-guide-messages-mobile-push-creating-a-mobile-push.txt": "https://user.netmera.com/netmera-user-guide/messages/mobile-push/creating-a-mobile-push",
-    "netmera-user-guide-messages-mobile-push-creating-a-mobile-push-define-notification-content-what.txt": "https://user.netmera.com/netmera-user-guide/messages/mobile-push/creating-a-mobile-push/define-notification-content-what",
-    "netmera-user-guide-messages-mobile-push-creating-a-mobile-push-define-notification-content-what-advanced-ios-settings.txt": "https://user.netmera.com/netmera-user-guide/messages/mobile-push/creating-a-mobile-push/define-notification-content-what/advanced-ios-settings",
-    "netmera-user-guide-messages-email-sending-a-mail-campaign.txt": "https://user.netmera.com/netmera-user-guide/messages/email/sending-a-mail-campaign",
-    "netmera-user-guide-messages-email-sending-a-mail-campaign-step-1-setup.txt": "https://user.netmera.com/netmera-user-guide/messages/email/sending-a-mail-campaign/step-1-setup",
-    "netmera-user-guide-customer-journeys-journeys-journey-examples-action-based-engagement-journey.txt":"https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/journey-examples/action-based-engagement-journey",
-    "netmera-user-guide-messages-sms-sms-onboarding.txt": "https://user.netmera.com/netmera-user-guide/messages/sms/sms-onboarding",
-}
-
-compound_sections = [
-    "customer-data",
-    "email-onboarding",
-    "message-categories",
-    "mobile-push",
-    "push-notifications",
-    "beginners-guide-to-netmera",
-    "email",
-    "sms",
-]
-
-top_level_sections = {
-    "messages": [
-        "about-push-notifications",
-        "mobile-push",
-        "sms",
-        "email",
-        "automated-messages",
-        "transactional-messages",
-        "geofence-messages",
-        "push-a-b-testing",
-        "file-transfer-protocol-ftp-push",
-        "multi-language-push",
-        "recall-campaigns",
-        "netmera-ai-text-generator",
-    ],
-    "customer-data": [
-        "about-customer-data",
-        "autotracking",
-        "events",
-        "profile-attributes",
-    ],
-    "beginners-guide-to-netmera": [
-        "introduction-to-netmera",
-        "integrating-netmera",
-        "faq",
-        "app-dashboard",
-        "your-feedback",
-        "design-guide",
-        "troubleshooting-and-support",
-    ],
-    "customer-journeys": [
-        "journeys",
-        "journeys/journey-examples",
-    ],
-}
 def detect_language(text):
     try:
         lang_code = detect(text)
-        if lang_code == "tr":
-            return "Türkçe"
-        else:
-            return "English"
+        return "Türkçe" if lang_code == "tr" else "English"
     except:
         return "English"  
 
 def filename_to_url(filename: str) -> str:
-  
     if filename.startswith("faq-"):
-        return "https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/faqs"
+        return FAQ_URL
+    if filename.startswith("netmera-user-guide-"):
+        filename = filename[len("netmera-user-guide-"):]
+    if filename.endswith(".txt"):
+        filename = filename[:-4]
+    url_path = filename.replace("-", "/")
+    return f"{BASE_DOC_URL}/{url_path}"
 
-    if filename in file_to_url_map:
-        return file_to_url_map[filename]
-
-    name = filename.replace(".txt", "")
-    if name.startswith("netmera-user-guide-"):
-        name = name[len("netmera-user-guide-") :]
-
-    parts = name.split("-")
-    base_url = "https://user.netmera.com/netmera-user-guide"
-
-    for top_level, subfolders in top_level_sections.items():
-        if parts[0] == top_level:
-            rest = parts[1:]
-            for i in range(2, 5):
-                candidate = "-".join(rest[:i])
-                if candidate in subfolders:
-                    section = candidate
-                    return f"{base_url}/{top_level}/{section}/{'-'.join(rest[i:])}"
-            return f"{base_url}/{top_level}/{'-'.join(rest)}"
-
-    for i in range(2, 6):
-        candidate = "-".join(parts[:i])
-        if candidate in compound_sections:
-            section = candidate
-            rest = parts[i:]
-            return f"{base_url}/{section}/{'-'.join(rest)}"
-
-    return f"{base_url}/{'/'.join(parts)}"
-
-    return f"{base_url}/{'/'.join(parts)}"
-
-
-
-def embed_question(question):
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "Translate the question to English. If it's already in English, return it as-is. Only return the sentence.",
-                },
-                {"role": "user", "content": question},
-            ],
-        )
-        translated = response.choices[0].message.content.strip()
-    except Exception as e:
-        translated = question
-
+def embed_question(translated_input):
     response_embed = client.embeddings.create(
-        input=[translated], model="text-embedding-ada-002"
+        input=[translated_input], model=EMBEDDING_MODEL
     )
-    return np.array(response_embed.data[0].embedding, dtype=np.float32).reshape(1, -1), translated
-
-
-def log_interaction(question, answer, source_file, faiss_score):
-    with open(
-        "logs/conversation_log.csv", "a", newline="", encoding="utf-8"
-    ) as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(
-            [
-                datetime.now(),
-                question,
-                source_file,
-                faiss_score,
-                answer.replace("\n", " "),
-            ]
-        )
-
+    return np.array(response_embed.data[0].embedding, dtype=np.float32).reshape(1, -1)
 
 def ask_openai(question, context, lang="English"):
-    system_prompt = """
-You are NetmerianBot, a knowledgeable assistant specialized in Netmera's features and documentation.
-
-Your job is to answer the user's question using only the provided content. If the content contains relevant information, provide a clear, concise answer. 
-
-Guidelines:
-- Use only the content below.
-- Do not mention training data or your knowledge cut-off.
-- Rephrase and summarize naturally.
-- If the content does not answer the question, respond with: "There is no relevant information available."
-"""
-
     user_prompt = f"""
 CONTENT:
 {context}
@@ -241,37 +90,28 @@ QUESTION:
 {question}
 """
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model=CHAT_MODEL,
         messages=[
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}
         ]
     )
-
     english_answer = response.choices[0].message.content.strip()
 
     if lang == "Türkçe":
         translation = client.chat.completions.create(
-            model="gpt-4o",
+            model=CHAT_MODEL,
             messages=[
-                {"role": "system", "content": ("You are a professional translator. Translate the following response to Turkish accurately and naturally."
-                                               "⚠️ However, do NOT translate technical terms like 'Send All', 'Push Notification', 'Segment', 'SDK', etc. "
-                                               "Keep them exactly as they are. Do not add anything."),},
+                {"role": "system", "content": TURKISH_TRANSLATION_PROMPT},
                 {"role": "user", "content": english_answer},
             ],
         )
         turkish_answer = translation.choices[0].message.content.strip()
-        if len(turkish_answer) < 5:
-            return english_answer
-        return turkish_answer
-    else:
-        return english_answer
+        return turkish_answer if len(turkish_answer) >= 5 else english_answer
+    return english_answer
 
 lang_manual = st.toggle("Dil seç", value=False)
-if lang_manual:
-    lang = st.radio("Dil / Language", ("Türkçe", "English"), horizontal=True)
-else:
-    lang = None  
+lang = st.radio("Dil / Language", ("Türkçe", "English"), horizontal=True) if lang_manual else None
 
 st.set_page_config(page_title="NetmerianBot", layout="centered")
 st.title("🤖 NetmerianBot")
@@ -279,38 +119,9 @@ st.title("🤖 NetmerianBot")
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-if lang == "Türkçe":
-    st.markdown("### Sık Sorulan Konular")
-    faq_questions = [
-        "Push gönderiminde 'Send All' özelliği tüm kullanıcılara ulaşır mı?",
-        "Toplu mesaj gönderimi yarıda durdurulabilir mi?",
-        "Netmera SDK hangi kullanıcı davranışlarını takip eder?",
-        "Push gönderim başarısız olduğunda sistem uyarı verir mi?",
-        "Segmentler ne zaman pasif hale gelir?",
-        "Push gönderiminde buton eklemek API ile mümkün mü?",
-        "Netmera, kullanıcı uygulamayı silince bunu nasıl anlar?",
-        "Funnel verileri neden değişiklik gösterir?",
-        "Netmera web'de anonim kullanıcıları nasıl izler?",
-    ]
-    input_placeholder = "Bir soru yazın..."
-    no_info_message = "⚠️ Bu konuda yeterli bilgi yok. Lütfen daha açık şekilde sorun."
-else:
-    st.markdown("### Frequently Asked Questions")
-    faq_questions = [
-        "If the ‘Send All’ option is selected for a push notification in the Netmera panel, will it be delivered to all users, even those who are not integrated with Netmera?",
-        "Can I stop bulk push sending midway?",
-        "Which user behaviors does Netmera SDK track?",
-        "Does Netmera warn if a push fails?",
-        "When do segments become inactive?",
-        "Can buttons be added to push via API?",
-        "How does Netmera detect when a user uninstalls the app?",
-        "Why do funnel values fluctuate?",
-        "How does Netmera track anonymous web users?",
-    ]
-    input_placeholder = "Type a question..."
-    no_info_message = (
-        "⚠️ There is not enough information on this topic. Please ask more clearly."
-    )
+faq_questions = FAQ_QUESTIONS_TR if lang == "Türkçe" else FAQ_QUESTIONS_EN
+input_placeholder = "Bir soru yazın..." if lang == "Türkçe" else "Type a question..."
+no_info_message = "⚠️ Bu konuda yeterli bilgi yok. Lütfen daha açık şekilde sorun." if lang == "Türkçe" else "⚠️ There is not enough information on this topic. Please ask more clearly."
 
 cols = st.columns(2)
 selected_question = None
@@ -319,75 +130,67 @@ for i, q in enumerate(faq_questions):
         selected_question = q
 
 user_input = st.chat_input(input_placeholder)
-
 if selected_question and not user_input:
     user_input = selected_question
 
 if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.session_state.chat_history[-1][1]):
-    faq_response = check_faq_match(user_input)
-    
-    if faq_response:
-        answer = faq_response
-        st.session_state.chat_history.append(("user", user_input))
-        st.session_state.chat_history.append(("assistant", answer))
+    try:
+        translation = client.chat.completions.create(
+            model=CHAT_MODEL,
+            messages=[
+                {"role": "system", "content": TRANSLATE_PROMPT},
+                {"role": "user", "content": user_input},
+            ],
+        )
+        translated_input = translation.choices[0].message.content.strip()
+    except Exception:
+        translated_input = user_input
 
+    faq_response = check_faq_match(translated_input)
+    st.session_state.chat_history.append(("user", user_input))
+
+    if faq_response:
+        st.session_state.chat_history.append(("assistant", faq_response))
     else:
         if not lang:
-            lang = detect(user_input)
-            if lang not in ["en", "tr"]:
-                lang = "English"
-            elif lang == "tr":
-                lang = "Türkçe"
-            else:
-                lang = "English"
-           
+            lang = detect_language(user_input)
 
-        st.session_state.chat_history.append(("user", user_input))
-        embedding, translated_input = embed_question(user_input)
+        embedding = embed_question(translated_input)
+        embedding_vector = embedding[0]
         tokenized_query = word_tokenize(user_input.lower())
         bm25_scores = bm25_model.get_scores(tokenized_query)
+        bm25_mean = np.mean(bm25_scores)
+        bm25_std = np.std(bm25_scores) or 1.0
+
         candidate_docs = []
         for idx, doc in enumerate(texts):
             doc_embedding = index.reconstruct(idx)
-            faiss_score = np.linalg.norm(doc_embedding - embedding)
+            norm_doc = np.linalg.norm(doc_embedding)
+            norm_query = np.linalg.norm(embedding_vector)
+            cosine_sim = np.dot(doc_embedding, embedding_vector) / (norm_doc * norm_query) if norm_doc and norm_query else 0.0
             bm25_score = bm25_scores[idx]
-            fuzzy_score = fuzz.partial_ratio(translated_input.lower(), doc["text"][:1000].lower())
-            hybrid = compute_hybrid_score(doc, bm25_score, faiss_score, fuzzy_score)
-            
-            doc["faiss_score"] = faiss_score
-            doc["bm25_score"] = bm25_score
-            doc["fuzzy_score"] = fuzzy_score
-            doc["hybrid_score"] = hybrid
+            norm_bm25 = (bm25_score - bm25_mean) / bm25_std
+            fuzzy_score = fuzz.partial_ratio(translated_input.lower(), doc["text"][:1000].lower()) / 100
+            hybrid = compute_hybrid_score(doc, norm_bm25, cosine_sim, fuzzy_score)
+
+            doc.update({
+                "faiss_score": cosine_sim,
+                "bm25_score": norm_bm25,
+                "fuzzy_score": fuzzy_score,
+                "hybrid_score": hybrid
+            })
             candidate_docs.append(doc)
-        
 
         best_doc = max(candidate_docs, key=lambda d: d["hybrid_score"])
         top_docs = sorted(candidate_docs, key=lambda d: d["hybrid_score"], reverse=True)[:3]
         top_k_context = "\n\n---\n\n".join([doc["text"] for doc in top_docs])
         answer_text = ask_openai(user_input, top_k_context, lang)
         source_file = best_doc["source"]
-        source_url = filename_to_url(source_file)
-        answer = f"{answer_text}\n\n📄 **Kaynak belge**: [{source_file}]({source_url})"
-
+        source_url = best_doc.get("url") or filename_to_url(source_file)
+        short_name = source_url.replace("https://user.netmera.com/netmera-user-guide/", "").replace("-", " ").replace("/", " > ").title()
+        label_source = "📄 **Kaynak belge**" if lang == "Türkçe" else "📄 **Source document**"
+        answer = f"{answer_text}\n\n{label_source}: [{short_name}]({source_url})"
         st.session_state.chat_history.append(("assistant", answer))
-        log_interaction(user_input, answer, source_file, best_doc["faiss_score"])
-
 
 for role, msg in st.session_state.chat_history:
     st.chat_message(role).markdown(msg)
-st.markdown("---")
-st.markdown("### Konuşma Kayıtları")
-
-if os.path.exists("logs/conversation_log.csv"):
-    try:
-        df_logs = pd.read_csv("logs/conversation_log.csv")
-        st.download_button(
-            label="Logları CSV olarak indir",
-            data=df_logs.to_csv(index=False).encode("utf-8"),
-            file_name="conversation_log.csv",
-            mime="text/csv"
-        )
-    except Exception as e:
-        st.warning(f"Log dosyası okunurken hata oluştu: {e}")
-else:
-    st.info("Henüz herhangi bir log dosyası bulunmuyor.")

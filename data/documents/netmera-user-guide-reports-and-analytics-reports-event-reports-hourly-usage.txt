@@ -1,29 +1,45 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/event-reports/hourly-usage
+Reports & Analytics
+Reports
+Event Reports
+Hourly Usage
 Hourly Events Dashboard
-The "Hourly Events (Average)" page equips you with the tools to explore and understand how specific events are distributed throughout the day. By selecting different time periods and events, you can uncover patterns, identify peak usage hours, and gain insights into user behavior, ultimately guiding data-driven decisions and optimizations for your platform or application.
+The "Hourly Events (Average)" page equips you with the tools to explore and understand how
+specific events are distributed throughout the day.
+By selecting different time periods and events, you can uncover patterns, identify peak usage hours, and gain insights into user behavior, ultimately guiding data-driven decisions and optimizations for your platform or application.
 Time Period:
-Today: This timeframe allows you to view and analyze hourly event averages for the current day.
-Last Week: You can assess hourly event averages for the past week, which is a valuable comparison to understand any trends or changes.
-Last Month: The "Last Month" option provides insights into event averages over the past month, enabling you to detect longer-term patterns.
-Last Year: For a broader perspective, you can examine hourly event averages over the past year, offering insights into annual trends.
-Dates Between: If you have specific date ranges in mind, you can use the "Dates Between" option to customize the time period for your analysis.
+Today:
+This timeframe allows you to view and analyze hourly event averages for the current day.
+Last Week:
+You can assess hourly event averages for the past week, which is a valuable comparison to understand any trends or changes.
+Last Month:
+The "Last Month" option provides insights into event averages over the past month, enabling you to detect longer-term patterns.
+Last Year:
+For a broader perspective, you can examine hourly event averages over the past year, offering insights into annual trends.
+Dates Between:
+If you have specific date ranges in mind, you can use the "Dates Between" option to customize the time period for your analysis.
 Events and Event Properties
 Event attributes are specific characteristics or details associated with an event. They provide additional context or data points that can help analyze user behavior more precisely.
 Available Events
-Event attributes in Netmera are specific characteristics or details associated with an event, providing additional context or data points for more precise user behavior analysis. The available event attributes can vary based on the event type. 
-Standard Netmera events come with predefined attributes, while custom events have attributes you define during their creation. You may see Netmera Events for futher information on how to create your own custom events.
+Event attributes in Netmera are specific characteristics or details associated with an event, providing additional context or data points for more precise user behavior analysis. The available event attributes can vary based on the event type.
+Standard Netmera events come with predefined attributes, while custom events have attributes you define during their creation. You may see
+Netmera Events
+for futher information on how to create your own custom events.
 How to Add Event Properties to Your Report?
 Follow these steps to find and add event attributes in your Daily Event Count dashboard:
-1.Select Events:
+Select Events
 Choose the event you want to analyze (e.g., "View Push")
-2.Select Event Properties:
+Select Event Properties
 Click on the "Add Event Property",
 Click on the dropdown to choose specific values for the selected property. For example, if you chose "Message Id" as the attribute, you can select a specific message ID from the list (e.g., equals: 3613/7351/8140).
 Click on "Add."
 Example Scenario
 Suppose you want to analyze the number of users who has completed a specific event such as "View Push" (with a particular Message Id). Here’s how you would do it:
-1.Select "View Push" as the event.
-2.Choose "Message ID" as the event property.
-3.Select the specific values you want to analyze.
-4.Click on "Add" and set the time range.
-5.Click "Find" to generate the report.
+Select "View Push" as the event.
+Choose "Message ID" as the event property.
+Select the specific values you want to analyze.
+Click on "Add" and set the time range.
+Click "Find" to generate the report.
 By following these steps, you can efficiently utilize event attributes to gain deeper insights into user interactions on your platform.
+Daily Event Count
+11 months ago

@@ -1,0 +1,15 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/journey-examples
+Customer Journeys
+Journeys
+Journey Examples
+Journey orchestration is a powerful tool for personalizing user experiences and driving engagement through targeted, behavior-driven actions. By understanding and responding to user actions in real-time, businesses can craft seamless journeys that enhance customer interactions, boost conversions, and strengthen loyalty.
+In the next section, you’ll see several practical examples of how businesses can use journey orchestration to engage users effectively. These journeys are designed to respond to user actions and ensure each interaction feels personalized, timely, and relevant.
+Let's start with our first example:
+Action-Based Engagement Journey
+For more inspiration, you might also explore our blog posts:
+Understanding Customer Journeys
+Create Personalized and Engaging Customer Journeys with Netmera
+These resources dive deeper into the principles and strategies behind successful journey orchestration, offering actionable insights to help you optimize your customer engagement.
+Journey Analytics
+Action-Based Engagement Journey
+7 months ago

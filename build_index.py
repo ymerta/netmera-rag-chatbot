@@ -28,13 +28,15 @@ documents = load_txt_documents("data/documents")
 print(f"{len(documents)} dosya bulundu.")
 
 cleaned_docs = []
-for filename, doc in documents:
+for doc in documents:
+    text = doc["text"]
     for phrase in CLEANUP_PHRASES:
-        doc = doc.replace(phrase, "")
-    doc = doc.strip()
+        text = text.replace(phrase, "")
+    text = text.strip()
     cleaned_docs.append({
-        "text": doc,
-        "source": filename  
+        "text": text,
+        "source": doc["source"],
+        "url": doc["url"]  
     })
 
 for key, value in faq_qa_map.items():

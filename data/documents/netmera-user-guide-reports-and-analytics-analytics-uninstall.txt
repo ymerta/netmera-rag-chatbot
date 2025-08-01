@@ -1,36 +1,66 @@
-The Uninstall feature in Netmera empowers you to gain insights into app uninstallation trends within your chosen time frame and specific user segments. This data is invaluable for optimizing user retention strategies and enhancing your app's overall performance. To discover how you might see your uninstalls, follow these steps,
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/analytics/uninstall
+Reports & Analytics
+Analytics
+Uninstall
+Uninstalls
+The Uninstall feature in Netmera empowers you to gain insights into
+app uninstallation
+trends within your chosen time frame and specific user segments. This data is invaluable for optimizing user retention strategies and enhancing your app's overall performance. To discover how you might see your uninstalls, follow these steps,
 Why is my Uninstall Data Increasing on Android Devices?
 At Netmera, we receive device token information for your apps through Firebase Cloud Messaging (FCM). Tokens from devices that haven't connected to FCM for over 270 days become invalid. These tokens are linked to passive devices, which have likely been inactive for a long time. Messages sent to these old tokens won't be delivered.
 Reasons for inactive tokens:
 Devices lost, destroyed, or forgotten
 Long periods of inactivity
-If a token is inactive for 270 days, FCM marks it as invalid. Once a device reconnects, it gets a new token, and Netmera assigns a new installation ID. This process can lead to higher uninstall numbers, as previously successful message deliveries to these old tokens are now counted as failures. However, this change specifically impacts Android devices inactive for 270+ days.
+If a token is inactive for 270 days, FCM marks it as invalid. Once a device reconnects, it gets a new token, and Netmera assigns a new installation ID. This process can lead to higher uninstall numbers, as previously successful message deliveries to these old tokens are now counted as failures. However, this change specifically impacts
+Android
+devices inactive for 270+ days.
 Choose a Time Period
-Last Week: This option allows you to analyze app uninstalls that occurred in the previous week, giving you insights into recent uninstall trends.
-Last Month: "Last Month" provides data on uninstalls that happened over the course of the entire previous month. It's valuable for understanding uninstall patterns over a longer time frame.
-Last Year: "Last Year" offers a comprehensive view of app uninstalls over the past year, allowing you to track long-term trends.
-Dates Between: This option enables you to set custom date ranges for your uninstall analysis. It's particularly useful when you want to focus on a specific time frame.
+Last Week:
+This option allows you to analyze app uninstalls that occurred in the previous week, giving you insights into recent uninstall trends.
+Last Month:
+"Last Month" provides data on uninstalls that happened over the course of the entire previous month. It's valuable for understanding uninstall patterns over a longer time frame.
+Last Year:
+"Last Year" offers a comprehensive view of app uninstalls over the past year, allowing you to track long-term trends.
+Dates Between:
+This option enables you to set custom date ranges for your uninstall analysis. It's particularly useful when you want to focus on a specific time frame.
 Choose a Segment (Optional)
-Select Segment: In this section, you can refine your uninstall analysis by choosing a specific user segment. Segmentation allows you to target and analyze uninstalls among specific user groups, helping you identify patterns and make data-driven decisions.
+Select Segment:
+In this section, you can refine your uninstall analysis by choosing a specific user segment. Segmentation allows you to target and analyze uninstalls among specific user groups, helping you identify patterns and make data-driven decisions.
 Export Uninstalled Users
 Within the Uninstall feature, you have the option to export a list of uninstalled users. This export file contains the external ID information of the audience that uninstalled your app within the specified date range.
 It's important to note that any changes made to the chart or analysis settings do not affect the export file. This means that you can modify and customize your data analysis without impacting your ability to export the list of uninstalled users. This feature provides you with the flexibility to delve into the data while still having the uninstalled user information readily available for further analysis or actions.
 Analysis of Uninstall Charts
 Number of Push Messages Received In Last 7 Days Before (By Uninstalled Users) between x/x dates.
 This section provides insights into the engagement of users who uninstalled your app during a specified time frame, which is from 17/07/2023 to 17/08/2023 in this case.
-Number of Push Messages Received: This metric indicates the total count of push messages that were delivered to users who uninstalled your app during the specified time frame. It helps you understand how many push messages were sent to this group of users.
-Last 7 Days Before: This time frame considers the seven days immediately before the date range you've specified. It focuses on the last week of interactions before users uninstalled your app.
-(By Uninstalled Users): This qualifier specifies that the analysis pertains specifically to users who uninstalled your app during the chosen date range. It allows you to evaluate how push messages may have influenced users' decisions to uninstall.
+Number of Push Messages Received:
+This metric indicates the total count of push messages that were delivered to users who uninstalled your app during the specified time frame. It helps you understand how many push messages were sent to this group of users.
+Last 7 Days Before:
+This time frame considers the seven days immediately before the date range you've specified. It focuses on the last week of interactions before users uninstalled your app.
+(By Uninstalled Users):
+This qualifier specifies that the analysis pertains specifically to users who uninstalled your app during the chosen date range. It allows you to evaluate how push messages may have influenced users' decisions to uninstall.
 This data can be crucial for assessing the effectiveness of your push messaging strategy and understanding how users who eventually uninstalled your app engaged with your messages in the days leading up to their uninstallation. It helps you tailor your messaging approach to reduce uninstall rates and improve user retention. 📊📅📩📈
 Last Campaigns
-The "Last Campaigns" section provides a snapshot of user engagement with a specific marketing campaign, represented by its name, over a specified period. In the context of uninstallation analysis, it allows you to observe how users who eventually uninstalled your app interacted with a particular campaign in the days leading up to their uninstallation. 
+The "Last Campaigns" section provides a snapshot of user engagement with a specific marketing campaign, represented by its name, over a specified period. In the context of uninstallation analysis,
+it allows you to observe how users who eventually uninstalled your app interacted with a particular campaign in the days leading up to their uninstallation.
 This data helps you evaluate whether the campaign may have influenced their decision to uninstall and can be crucial for refining your marketing strategies to reduce uninstall rates and enhance user retention. By tracking campaign engagement before uninstallation, you gain insights into the effectiveness of your campaigns in retaining users.
 Last Events
-Events in last (x) days: This refers to the number of events that have occurred within a specific timeframe, denoted as "(x) days." It allows you to track and measure user interactions, actions, or events related to your app or platform during this defined period.
-By retained/churned users who were active between (x/x): This section focuses on two distinct groups of users—retained and churned users. "Retained" users are those who continue to use your app or platform, while "churned" users are those who have stopped using it. The term "active between (x/x)" specifies a specific timeframe when these users were actively engaged with your app.
-Total Event or Unique User: This choice represents the type of measurement you want to apply to the events. "Total Event" typically means you are counting the total number of events that occurred, regardless of whether they were performed by the same user multiple times. "Unique User," on the other hand, counts each user's interaction as one, regardless of how many times they performed the event.
-Retain (illustrated with green): "Retain" refers to the number of users who have continued to engage with your app or platform within the specified time frame. This term is referring to the number of users who have been retained or are still using your app or platform within the specified time frame. These users have shown ongoing interest and activity within your application during the defined period.
-Churn (illustrated with red): "Churn" represents the number of users who have discontinued their engagement with your app or platform during the specified time frame. A higher churn rate indicates that a significant number of users are leaving your app, which can be a concern for user retention and overall app health.
-In essence, "Retain" characterizes actively engaged users within the specified time frame, while "Churn" signifies users who have discontinued their engagement. Monitoring and interpreting these metrics are pivotal for comprehending user dynamics, refining retention strategies, and sustaining a robust and satisfied user base
+Events in last (x) days:
+This refers to the number of events that have occurred within a specific timeframe, denoted as "(x) days." It allows you to track and measure user interactions, actions, or events related to your app or platform during this defined period.
+By retained/churned users who were active between (x/x):
+This section focuses on two distinct groups of users—retained and churned users. "Retained" users are those who continue to use your app or platform, while "churned" users are those who have stopped using it. The term "active between (x/x)" specifies a specific timeframe when these users were actively engaged with your app.
+Total Event or Unique User:
+This choice represents the type of measurement you want to apply to the events. "Total Event" typically means you are counting the total number of events that occurred, regardless of whether they were performed by the same user multiple times. "Unique User," on the other hand, counts each user's interaction as one, regardless of how many times they performed the event.
+Retain (illustrated with green):
+"Retain" refers to the number of users who have continued to engage with your app or platform within the specified time frame. This term is referring to the number of users who have been retained or are still using your app or platform within the specified time frame. These users have shown ongoing interest and activity within your application during the defined period.
+Churn (illustrated with red):
+"Churn" represents the number of users who have discontinued their engagement with your app or platform during the specified time frame. A higher churn rate indicates that a significant number of users are leaving your app, which can be a concern for user retention and overall app health.
+In essence, "
+Retain
+" characterizes actively engaged users within the specified time frame, while "
+Churn
+" signifies users who have discontinued their engagement. Monitoring and interpreting these metrics are pivotal for comprehending user dynamics, refining retention strategies, and sustaining a robust and satisfied user base
 So, in the example "Retain:2 Churn:1," it suggests that during the specified time frame, there are 2 users who have continued to use your app (retain), while 1 user have stopped using it (churn). These numbers provide insights into user retention and attrition, which can be valuable for assessing user engagement and making informed decisions to improve user retention strategies.
 In conclusion, the Uninstall page empowers you to delve deep into user uninstallation trends, identify potential areas of improvement, and take proactive steps to enhance user retention. It's a vital tool for app developers and marketers seeking to reduce churn.
+People Insight
+Opt Out
+4 months ago

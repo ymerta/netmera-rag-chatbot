@@ -1,0 +1,35 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/web-tools/web-personalization/create-a-new-experience
+Web Tools
+Web Personalization
+Create a New Experience
+Web Tools -> Experiences -> Web Personalization -> Publish a New Experience
+Quick Steps Guidelines
+Go to your Netmera Panel and click:
+Go to the
+Web Personalization
+page in the Web Tools
+section.
+Click on the "
+Publish a New Experience
+" button.
+Give your experience a
+name and decide on filters
+and complete the information in
+Setup and Rules
+Click on "
+Add Changes
+" in Rules / Changes section.
+Customize your new content
+to make sure it looks the way you want it to.
+Click
+Save
+and
+Done,
+and
+the changes
+will directly apply to your web page.
+Setup and Rules
+Creating Experiences
+Web Personalization Dashboard
+Setup and Rules
+1 year ago

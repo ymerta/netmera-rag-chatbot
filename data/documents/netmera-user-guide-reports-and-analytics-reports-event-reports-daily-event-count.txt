@@ -1,38 +1,58 @@
-Events are a fundamental aspect of data analytics for platforms and applications. They represent specific user interactions or occurrences within your platform or app that are essential for understanding user behavior, tracking engagement, and making informed decisions. The "Daily Events (Count)" page is a powerful tool that allows you to closely examine these events and their attributes over time, providing valuable insights into user interactions.
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/reports-and-analytics/reports/event-reports/daily-event-count
+Reports & Analytics
+Reports
+Event Reports
+Daily Event Count
+Events
+are a fundamental aspect of data analytics for platforms and applications. They represent specific user interactions or occurrences within your platform or app that are essential for understanding user behavior, tracking engagement, and making informed decisions. The "Daily Events (Count)" page is a powerful tool that allows you to closely examine these events and their attributes over time, providing valuable insights into user interactions.
 The "Daily Events (Count)" page is designed to help you track and analyze events within your platform or application on a daily basis. Here's a breakdown of its key components:
 First and Second Event
-1.First Event: You can specify the first event that you want to track and count. This event represents a particular user interaction or action within your platform. For instance, it could be a user signing up, making a purchase, or completing a specific task.
-2.Platform: You have the option to choose the platform or application on which you wish to track the selected event. This allows you to gather data specific to a particular platform if your product is available on multiple platforms.
-3.Second Event (Optional): You can optionally track a second event. This event could be different from the first and provides a more comprehensive view of user interactions. Tracking multiple events can reveal valuable patterns and correlations.
-4.Last x days: Specify the timeframe for which you want to count these events. You can choose the number of days, and the system will calculate the event counts for each day within this duration. This enables you to analyze how event frequencies change over time.
-5.Second Event Attribute (Optional): If you choose to track a second event, you can further refine the data by selecting a specific attribute associated with this event. Attributes provide additional context or categorization for the event, helping you gain deeper insights.
+First Event:
+You can specify the first event that you want to track and count. This event represents a particular user interaction or action within your platform. For instance, it could be a user signing up, making a purchase, or completing a specific task.
+Platform:
+You have the option to choose the platform or application on which you wish to track the selected event. This allows you to gather data specific to a particular platform if your product is available on multiple platforms.
+Second Event (Optional):
+You can optionally track a second event. This event could be different from the first and provides a more comprehensive view of user interactions. Tracking multiple events can reveal valuable patterns and correlations.
+Last x days:
+Specify the timeframe for which you want to count these events. You can choose the number of days, and the system will calculate the event counts for each day within this duration. This enables you to analyze how event frequencies change over time.
+Second Event Attribute (Optional):
+If you choose to track a second event, you can further refine the data by selecting a specific attribute associated with this event. Attributes provide additional context or categorization for the event, helping you gain deeper insights.
 Event Attributes
 Event attributes are specific characteristics or details associated with an event. They provide additional context or data points that can help analyze user behavior more precisely. Event attributes can be selected for both "First Event" and the "Second Event."
 Available Event Attributes
-Event attributes in Netmera are specific characteristics or details associated with an event, providing additional context or data points for more precise user behavior analysis. The available event attributes can vary based on the event type. 
-Standard Netmera events come with predefined attributes, while custom events have attributes you define during their creation. You may see Netmera Events for futher information on how to create your own custom events.
+Event attributes in Netmera are specific characteristics or details associated with an event, providing additional context or data points for more precise user behavior analysis. The available event attributes can vary based on the event type.
+Standard Netmera events come with predefined attributes, while custom events have attributes you define during their creation. You may see
+Netmera Events
+for futher information on how to create your own custom events.
 How to Add Event Attributes to Your Report?
 Follow these steps to find and add event attributes in your Daily Event Count dashboard:
-1.Select Events:
+Select Events
 Choose the first event you want to analyze (e.g., "View Push").
 Choose the second event you want to analyze (e.g., "Add to Cart").
-2.Select Event Attributes:
-For the First Event Attribute, click on the "Select Attribute" dropdown and choose the relevant attribute.
-For the Second Event Attribute, click on the "Select Attribute" dropdown and choose the relevant attribute.
-3.Select Attribute Values:
+Select Event Attributes
+For the
+First Event Attribute
+, click on the "Select Attribute" dropdown and choose the relevant attribute.
+For the
+Second Event Attribute
+, click on the "Select Attribute" dropdown and choose the relevant attribute.
+Select Attribute Values
 After selecting an attribute, a new field "Attribute Value" will appear.
 Click on the "Select Attribute Value" dropdown to choose specific values for the selected attribute. For example, if you chose "Message Id" as the attribute, you can select a specific message ID from the list (e.g., 3613, 7351, 8140).
-4.Set the Time Range:
+Set the Time Range
 In the "Last" field, select the time range for your analysis (e.g., the last 7 days).
-5.Analyze and Export the Data
+Analyze and Export the Data
 If you need to export the data for further analysis or reporting, click the "Export to Excel" button.
 Example Scenario
 Suppose you want to analyze the number of users who has completed a specific event such as "View Push" (with a particular Message Id) and then added a product to their cart. Here’s how you would do it:
-1.Select "View Push" as the first event.
-2.Choose "Message ID" as the first event attribute.
-3.Select "Add to Cart" as the second event.
-4.Choose "Product Name" as the second event attribute.
-5.In the "Attribute Value" dropdown, select the specific values you want to analyze.
-6.Set the time range.
-7.Click "Find" to generate the report.
+Select "View Push" as the first event.
+Choose "Message ID" as the first event attribute.
+Select "Add to Cart" as the second event.
+Choose "Product Name" as the second event attribute.
+In the "Attribute Value" dropdown, select the specific values you want to analyze.
+Set the time range.
+Click "Find" to generate the report.
 By following these steps, you can efficiently utilize event attributes to gain deeper insights into user interactions on your platform.
+Event Reports
+Hourly Usage
+11 months ago

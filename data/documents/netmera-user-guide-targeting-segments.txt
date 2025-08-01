@@ -1,5 +1,10 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/targeting/segments
+Targeting
 Segments
 Send the Right Message to the Right Audience
-Understanding Segments 
+Understanding Segments
 In Netmera, segments play a pivotal role in tailoring your communication and engagement strategies. Think of segments as virtual buckets that you can create to group your users based on specific characteristics and behaviors. These characteristics can include details like their behavioral patterns (like the features they've used or actions they've taken), or even the time and location of their interactions.
 By defining segments, you gain the power to send targeted and personalized messages to these distinct user groups. For instance, you can create a segment for users who frequently make purchases, allowing you to send them special offers. Alternatively, you can focus on a segment of users located in a specific region, delivering location-specific content. Segments can also be constructed based on user actions, events, or tags associated with them. This versatility enables you to align your marketing and engagement strategies with your audience's unique preferences and behaviors.
+Tags
+AI-Based Segments
+4 months ago

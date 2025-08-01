@@ -1,98 +1,183 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-journeys/journeys/entry-rules
+Customer Journeys
+Journeys
 Entry Rules
 Define Your Path to Precision
 Step 2: Entry Rules
 Quick Steps Guidelines
 Journey Step 2: Entry Rules
 Select Your Entry Rule:
-Choose between a Time-based or Action-based entry to initiate your journey.
+Choose between a
+Time-based
+Action-based
+entry to initiate your journey.
 Define Timing for Time-based Entry Rules:
 Specify the time intervals or specific times when users will enter the journey.
 Define Events for Action-based Entry Rules:
 Identify the specific user actions or events that will trigger entry into the journey.
 Determine User Eligibility Options:
 Decide how frequently users can enter the journey based on the defined eligibility criteria.
-The "Entry Rules" step defines the conditions under which users will enter the journey. Essentially, this step determines when and under what circumstances a user will enter the first step of the journey. There are two types of entry rulesTime-based Entry Rules or Action-based Entry Rules where you can set for time and you will decide how many times your users can enter the journey with Eligibility Options.
-
+The "Entry Rules" step defines the conditions under which users will enter the journey. Essentially, this step determines when and under what circumstances a user will enter the first step of the journey. There are two types of entry rules
 Time-based Entry Rules
-In the Time-Based option, users are expected to enter the journey at specific times or intervals. The journey operates on a scheduled time frame, with different use cases tailored to your needs. Some examples include:
-Onboarding Campaigns: A journey for users who download the app every day could initiate a welcome or onboarding campaign.
-Specific Day Campaigns: One-time events such as New Year's Day, Mother’s or Father’s Day, Black Friday.
-Scheduled Journeys: For instance, a store could run a journey during Eid al-Adha for four days, offering discounts. This journey would operate only during the holiday period.
-Uninstall Follow-Up: Daily feedback emails or SMS can be triggered for users who uninstall the app.
-Weekly or Monthly Campaigns: Campaigns that run on specific days of the week or month, like the last day of the month or weekends.
-Birthday Communications: Special messages or offers triggered on a user’s birthday.
+Action-based Entry Rules
+where you can set for time and you will decide how many times your users can enter the journey with
+Eligibility Options
+Time-based Entry Rules
+Action-based Entry Rules
+Eligibility Options
+Time-based Entry Rules
+In the
+Time-Based
+option, users are expected to enter the journey at specific times or intervals. The journey operates on a scheduled time frame, with different use cases tailored to your needs. Some examples include:
+Onboarding Campaigns
+: A journey for users who download the app every day could initiate a welcome or onboarding campaign.
+Specific Day Campaigns
+: One-time events such as New Year's Day, Mother’s or Father’s Day, Black Friday.
+Scheduled Journeys
+: For instance, a store could run a journey during Eid al-Adha for four days, offering discounts. This journey would operate only during the holiday period.
+Uninstall Follow-Up
+: Daily feedback emails or SMS can be triggered for users who uninstall the app.
+Weekly or Monthly Campaigns
+: Campaigns that run on specific days of the week or month, like the last day of the month or weekends.
+Birthday Communications
+: Special messages or offers triggered on a user’s birthday.
 Entry Rules for Ongoing Journeys
-Enter Users as Soon as Journey is Launched:
+Enter Users as Soon as Journey is Launched
 This option allows users to enter the journey without any time constraints. Once users are eligible for the journey, they will be included regardless of when the journey is initiated.
 For example, if the target audience includes new users, any user who enters the "new user" segment will join the journey as soon as they qualify. Similarly, users flagged as "churn" will enter the journey whenever they are identified as such.
 An Optimal Time for Users to be Entered into this Journey:
 This option allows you to create a journey that triggers for users at specific times. For instance, a journey could be set to run on the last day of each month for users within a target audience. Similarly, journeys can be designed for specific days such as Wednesday community campaigns or New Year’s campaigns.
-You can set the Frequency Type to define how often the journey will run:
-Once: The journey runs only once (e.g., a "Welcome" message for first-time app users, or a New Year’s campaign).
-Daily: Runs daily or in the frequency of the days you set (e.g., a daily meditation reminder or morning greeting).
-Weekly: Runs weekly or in the frequency of the weeks you set on specific days of the week (e.g., a weekend offer or Wednesday promotion).
-Monthly: Runs monthly or in the frequency of the months you set for recurring campaigns (e.g., monthly discounts or newsletters).
-
+You can set the
+Frequency Type
+to define how often the journey will run:
+Once
+: The journey runs only once (e.g., a "Welcome" message for first-time app users, or a New Year’s campaign).
+Daily
+: Runs daily or in the frequency of the days you set (e.g., a daily meditation reminder or morning greeting).
+Weekly
+: Runs weekly or in the frequency of the weeks you set on specific days of the week (e.g., a weekend offer or Wednesday promotion).
+Monthly
+: Runs monthly or in the frequency of the months you set for recurring campaigns (e.g., monthly discounts or newsletters).
 Example Use Case for Time-Based Rules
 A customer wants to run a campaign on New Year’s Day to greet all users with a "Happy New Year" message. The journey could be set to start on January 1st at midnight in the users' local time zones.
 Once
-The Once frequency option is used for journeys that will run only one time. For instance, it can be applied to scenarios such as:
-Sending a Welcome Message to users who register for the app for the first time.
-Running one-time campaigns for New Year’s Day, Mother’s Day, or Father’s Day.
-To schedule the journey, a start date is required, but setting an end date is optional. The customer can choose to run the campaign according to either their own time zone or the time zone of the users.
+The
+Once
+frequency option is used for journeys that will run only one time. For instance, it can be applied to scenarios such as:
+Sending a
+Welcome Message
+to users who register for the app for the first time.
+Running one-time campaigns for
+New Year’s Day
+Mother’s Day
+, or
+Father’s Day
+To schedule the journey, a
+start date
+is required, but setting an
+end date
+is optional. The customer can choose to run the campaign according to either their own time zone or the time zone of the users.
 Example: New Year’s Campaign
 A customer wants to send a "Happy New Year" campaign to all users at midnight on January 1st, 2025. They can set up a time-based rule to launch the journey at exactly 00:00 AM on January 1st, based on the users' time zones.
-
 Daily
-The Daily frequency option is ideal for journeys that need to run on a daily basis. For example:
-Sending daily meditation reminders.
-Sending a morning greeting message each day.
-Frequency: This sets the frequency of days you want your journey to begin. If you choose 1, the journey starts daily; if you choose 2 or more the journey will start every two or more days.
+The
+Daily
+frequency option is ideal for journeys that need to run on a daily basis. For example:
+Sending daily
+meditation reminders
+Sending a
+morning greeting
+message each day.
+Frequency:
+This sets the frequency of days you want your journey to begin. If you choose 1, the journey starts daily; if you choose 2 or more the journey will start every two or more days.
 Example: Daily Campaign
-Let’s say a customer wants to run a journey once per day throughout the month of July. In this case, they would select the daily frequency type and set the frequency value to 1. This means the journey will run once a day. After specifying the start and end dates, the customer can complete the setup of their journey.
-
+Let’s say a customer wants to run a journey once per day throughout the month of July. In this case, they would select the
+daily
+frequency type and set the
+frequency
+value to 1. This means the journey will run once a day. After specifying the
+start
+and
+end
+dates, the customer can complete the setup of their journey.
 Weekly
-The Weekly frequency option is useful for journeys that need to run on specific days of the week. For example:
-Running a Wednesday Sale campaign.
+The
+Weekly
+frequency option is useful for journeys that need to run on specific days of the week. For example:
+Running a
+Wednesday Sale
+campaign.
 Setting up special communication for weekends.
-Frequency: This sets the frequency of weeks you want your journey to begin. If you choose 1, the journey starts weekly; if you choose 2 or more the journey will start every two or more weeks.
+Frequency:
+This sets the frequency of weeks you want your journey to begin. If you choose 1, the journey starts weekly; if you choose 2 or more the journey will start every two or more weeks.
 Example: Weekend Journey
-A customer wants to run a special weekend campaign throughout the month of July. They would select the weekly frequency type and choose Saturday and Sunday from the available days of the week options.
-
+A customer wants to run a special weekend campaign throughout the month of July. They would select the
+weekly
+frequency type and choose
+Saturday
+and
+Sunday
+from the available
+days of the week
+options.
 Monthly
-The Monthly frequency option is suitable for journeys that should run once a month or for recurring monthly campaigns. For example:
-Monthly promotional campaigns, like July discounts.
-Regular monthly newsletters.
-Frequency: This sets the frequency of months you want your journey to begin. If you choose 1, the journey starts monthly; if you choose 2 or more the journey will start every two or more months.
+The
+Monthly
+frequency option is suitable for journeys that should run once a month or for recurring monthly campaigns. For example:
+Monthly promotional campaigns, like
+July discounts
+Regular
+monthly newsletters
+Frequency:
+This sets the frequency of months you want your journey to begin. If you choose 1, the journey starts monthly; if you choose 2 or more the journey will start every two or more months.
 Example: Monthly Campaign
 A customer can create a journey that runs once per month, such as a promotional campaign designed to operate only once each month.
-
 Action-based Entry Rules
-In the Action-based section, users enter the journey based on specific actions they take, defined by an event and trigger type. Once a user completes the specified event, if they meet the criteria set within the target audience, they will enter the first step of the journey.
-
+In the
+Action-based
+section, users enter the journey based on specific actions they take, defined by an event and trigger type. Once a user completes the specified event, if they meet the criteria set within the target audience, they will enter the first step of the journey.
 Select Event
-A customer sets the event as a credit application, and the trigger specifies that the journey should start when a user applies for a credit. In this case, when the user triggers the specified event and meets the conditions, the journey begins for them.
-
+A customer sets the event as a
+credit application
+, and the trigger specifies that the journey should start when a user applies for a credit. In this case, when the user triggers the specified event and meets the conditions, the journey begins for them.
 Add Trigger Filters
-In the Action-Based section, the journey's start rule is defined based on selected events and trigger types, unlike time-based rules. After a specific event is triggered by a user, if that user is part of the target audience, the first step of the journey will begin for them.
+In the
+Action-Based
+section, the journey's start rule is defined based on selected events and trigger types, unlike time-based rules. After a specific event is triggered by a user, if that user is part of the target audience, the first step of the journey will begin for them.
 Example: Credit Application Event
-In the example below, the event selected is a Credit Application. The journey will start when a user triggers the credit application event and applies for a loan with a credit amount greater than 10,000. This way, the journey initiation rules can be tailored to meet the customer’s specific needs, allowing them to trigger journeys based on certain actions or event properties.
-
+In the example below, the event selected is a
+Credit Application
+. The journey will start when a user triggers the
+credit application event
+and applies for a loan with a credit amount greater than 10,000. This way, the journey initiation rules can be tailored to meet the customer’s specific needs, allowing them to trigger journeys based on certain actions or event properties.
 Add Journey Value
-This feature allows you to create a profile attribute that can be used within the journey. For example, continuing with the credit application scenario, you could create a journey value called "credit amount" and use it within personalized notifications. For instance, you could send a push notification stating, "You have applied for a credit of 10,000" To do this, you would need to define a value name for easy reference in personalized notifications. 
+This feature allows you to create a
+profile attribute
+that can be used within the journey. For example, continuing with the credit application scenario, you could create a journey value called "credit amount" and use it within personalized notifications. For instance, you could send a push notification stating, "You have applied for a credit of 10,000" To do this, you would need to define a
+value name
+for easy reference in
+personalized notifications.
 Creating Notifications with Journey Values:
-You may use your Journey Value attribute while you are creating your push notifications on 'Build' step under Journey Value section. You may see the related document on State >Send Mobile Push.
-
+You may use your Journey Value attribute while you are creating your push notifications on 'Build' step under Journey Value section. You may see the related document on
+State >
+Send Mobile Push
 Add Correlation
-In this journey setup, a single correlation attribute is assigned at the beginning of the journey. This correlation attribute acts as a unique identifier that links all events and actions throughout the entire journey. By using a consistent correlation, you ensure that all relevant actions within the journey are grouped together and processed based on the same identifier.
-Check the Add Correlation option.
-Define the Correlation Attribute: Enter the attribute that will act as the correlation key for the entire journey. This could be a unique identifier like: Order ID, User ID, Message ID.
+In this journey setup, a single correlation attribute is assigned at the beginning of the journey. This correlation attribute acts as
+a unique identifier that links all events and actions throughout the entire journey.
+By using a consistent correlation, you ensure that all relevant actions within the journey are grouped together and processed based on the same identifier.
+Check the
+Add Correlation
+option.
+Define the Correlation Attribute:
+Enter the attribute that will act as the correlation key for the entire journey. This could be a unique identifier like:
+Order ID, User ID, Message ID.
 The correlation attribute ensures that all events triggered by the same identifier are grouped together in the journey.
 Journey Processing:
 Once the correlation attribute is set, it will be applied to all events within the journey.
 All actions related to the correlation (e.g., actions by the same user or related to the same order) will follow the journey flow based on this single attribute.
 Example:
-If your chosen correlation attribute is Order ID:
+If your chosen correlation attribute is
+Order ID
 A customer places an order (Order ID: 12345).
 The "Open App" event and subsequent actions (like "Add to Cart," "Purchase," etc.) will all be associated with Order ID 12345.
 This ensures that all actions related to this order are tracked together and managed as a single journey instance.
@@ -101,14 +186,25 @@ The correlation attribute must be selected during the journey creation and canno
 By applying a single correlation for the entire journey, all related events will be consistently grouped and processed based on the same identifier, ensuring accurate event handling and reporting.
 Eligibility Options
 In this section, you can define whether and how users can enter the journey, even if they meet the initial entry conditions. This allows you to refine the criteria for user participation, ensuring that the journey is relevant to each user's behavior and preferences.
-
 User Eligibility Type:
-Only One Time:
+Only One Time
 Users can only enter the journey once. For instance, if a journey targets new users, once a user enters the journey, they won’t enter it again.
-
-Multiple Times:
+Multiple Times
 Users can enter the journey multiple times according to the defined rules.
-Lock Duration: This controls when users can re-enter the journey. For example, after entering the journey once, the user will be locked out for a set duration (e.g., 3 days). Once the lock period ends, the user can enter the journey again.
-Entry Capping: This defines how many times a user can enter the journey. For instance, you can set the journey to allow a user to enter a maximum of 3 times.
+Lock Duration:
+This controls when users can re-enter the journey. For example, after entering the journey once, the user will be locked out for a set duration (e.g.,
+3 days
+). Once the lock period ends, the user can enter the journey again.
+Entry Capping:
+This defines how many times a user can enter the journey. For instance, you can set the journey to allow a user to enter a
+maximum of 3 times
 Specify a Capping Time Period
-Capping Time Period: You can define a specific time frame after which the entry cap resets. For example, if a user enters the journey 3 times within 30 days, they will be prevented from entering again until the 30-day period resets. Once the period resets, they can re-enter according to the same rules.
+Capping Time Period:
+You can define a specific time frame after which the entry cap resets. For example, if a user enters the journey
+3 times within 30 days
+, they will be prevented from entering again until the
+30-day period resets
+. Once the period resets, they can re-enter according to the same rules.
+Setup
+Audience
+9 months ago

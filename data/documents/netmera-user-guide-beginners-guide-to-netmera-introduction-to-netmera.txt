@@ -1,4 +1,8 @@
-Netmera is a Software as a Service (SaaS) platform that empowers businesses to deliver meaningful, data-driven customer engagement across multiple channels. With over a decade of experience, Netmera supports more than 300 enterprise clients across various industries, providing scalable and intelligent solutions for today’s marketing challenges.
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/beginners-guide-to-netmera/introduction-to-netmera
+Beginner's Guide to Netmera
+Introduction to Netmera
+Netmera
+is a Software as a Service (SaaS) platform that empowers businesses to deliver meaningful, data-driven customer engagement across multiple channels. With over a decade of experience, Netmera supports more than 300 enterprise clients across various industries, providing scalable and intelligent solutions for today’s marketing challenges.
 Backed by a team of 50+ dedicated professionals, our platform is built to meet the evolving needs of digital marketers and product managers. Netmera enables personalized, real-time customer interactions through a robust omnichannel engagement suite, including:
 Mobile and web push notifications
 In-app messaging and pop-ups
@@ -8,3 +12,6 @@ AI-driven marketing automation
 Customer journey orchestration
 Our mission is to help companies reach, convert, and retain users more effectively by enabling personalized and consistent customer journeys. Whether the goal is to increase ROI, drive revenue, or boost retention, Netmera provides the tools and insights marketers need to stay competitive in a fast-paced digital landscape.
 By combining innovation with performance, Netmera gives organizations the edge they need to build strong, lasting relationships with their customers.
+Beginner's Guide to Netmera
+Integrating Netmera
+1 month ago

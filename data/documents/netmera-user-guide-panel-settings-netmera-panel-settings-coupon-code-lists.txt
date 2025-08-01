@@ -1,82 +1,124 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/panel-settings/netmera-panel-settings/coupon-code-lists
+Panel Settings
+Netmera Panel Settings
+Coupon Code Lists
 Quick Steps Guidelines
 Settings -> Coupon Code Lists
 View your existing coupon codes on the Coupon Code page, including code details and expiration dates.
-To upload new coupon codes, click the "Upload Coupon Lists" button.
-Choose between fixed coupon or coupon list.
-Set a warning limit to receive notifications when the code count is low.
-Specify expiry dates for coupon codes to define their usage period.
-Export coupon code usage data, including external and user ID information, by clicking "Export."
+To upload new coupon codes, click the "
+Upload Coupon Lists
+" button.
+Choose between
+fixed coupon
+coupon list
+Set a
+warning limit
+to receive notifications when the code count is low.
+Specify
+expiry dates
+for coupon codes to define their usage period.
+Export coupon code usage data, including external and user ID information, by clicking "
+Export
 Netmera's Coupon Code Lists feature is a valuable component that simplifies the management and distribution of coupon codes, making it an essential tool for businesses looking to enhance your customer engagement strategies.
-
 Important: Coupon Code Generation Not Supported
-Kindly be informed that Netmera does not support the generation of coupon codes. This section is dedicated to the management and tracking of your existing codes exclusively.
+management and tracking of your existing codes exclusively
 Upload Coupon Code Lists
 Step 1: Coupon Code Lists
 Begin by navigating to the "Settings" page in the menu.
-Within the "Settings" page, you'll notice a new section titled "Coupon Code Lists" Click on this section to access the coupon code management page. This is where you can efficiently manage and oversee your coupon codes for various promotional campaigns.
+Within the "Settings" page, you'll notice a new section titled "
+Coupon Code Lists
+" Click on this section to access the coupon code management page. This is where you can efficiently manage and oversee your coupon codes for various promotional campaigns.
 Step 2: Coupon Codes Dashboard
 Here in this section, you can conveniently review a comprehensive list of coupon codes that you have previously uploaded. This list provides essential details about your coupon codes, including:
-List Name: Each code is clearly displayed for easy reference.
-Available Coupons: You can see the quantity of codes that are currently available for use.
-Expiry Date: Allows you to track when the codes will no longer be valid.
+List Name:
+Each code is clearly displayed for easy reference.
+Available Coupons:
+You can see the quantity of codes that are currently available for use.
+Expiry Date:
+Allows you to track when the codes will no longer be valid.
 Step 3: Upload Coupon Code List
-List Name: Begin by entering a name for your coupon code list. This name will be displayed in the "Coupon Codes List" section, making it easier for you to identify and manage your lists.
-Coupon Codes: Next, you have the option to choose between two methods for adding coupon codes to your list:
+List Name:
+Begin by entering a name for your coupon code list. This name will be displayed in the "Coupon Codes List" section, making it easier for you to identify and manage your lists.
+Coupon Codes:
 Option 1: Fixed Coupon Code
-Fixed coupon codes are a type of coupon code where every user receives the same exact code. In other words, there is no variation in the coupon code provided to different users; it remains consistent for all recipients. Here's a breakdown of how fixed coupon codes work
+Fixed coupon codes are a type of coupon code
+where every user receives the same exact code
+. In other words, there is no variation in the coupon code provided to different users; it remains consistent for all recipients. Here's a breakdown of how fixed coupon codes work
 Select this option if you want to provide the same coupon code to every user. Specify the number of codes you wish to generate.
 Fixed Coupon Code Example:
 Fixed coupon codes are often used for promotions or campaigns where all customers are offered the same discount or benefit. For instance, if you're running a site-wide sale and want every customer to receive a 10% discount, you can create a fixed coupon code for that purpose.
 Option 2: Coupon List
-When you choose the "Coupon List" option, you're essentially saying that you want to provide individual, unique coupon codes to users from a list you've prepared in advance. This option is useful when you want to provide distinct offers to different users or when you have a predetermined set of unique coupon codes that you want to distribute through your campaign. It's a way to ensure that each user gets a code that hasn't been used by someone else. Here's how this works:
+When you choose the "Coupon List" option, you're essentially saying that you want to provide individual, unique coupon codes to users from a list you've prepared in advance. This option is useful when you want to
+provide distinct offers to different users or when you have a predetermined set of unique coupon codes
+that you want to distribute through your campaign. It's a way to ensure that each user gets a code that hasn't been used by someone else. Here's how this works:
 You need to create a list of coupon codes in advance. Each code should be on a separate line in a text file (.txt file). This list can include as many codes as you need, and each code can offer different discounts or benefits.
 After uploading your list, Netmera will distribute these individual codes to users. Each user will receive a different code from the list, ensuring that the coupons are unique.
 Coupon List File Format:
-Ensure that your .txt file follows the specified format, with each coupon code on a separate row. This format is crucial for the system to process the codes correctly.
+Ensure that your
+.txt f
+ile follows the specified format, with
+each coupon code on a separate row
+. This format is crucial for the system to process the codes correctly.
 Warning Limit
 The Warning Limit is a feature that allows you to set a predefined threshold for the number of available coupon codes in your list. When the actual quantity of available coupon codes in the list falls below this threshold, the system will automatically send warning emails to notify you.
 Here's how it works:
-Threshold Setting: You can specify a numeric value as the Warning Limit. For example, if you set the Warning Limit to 50, it means that when the number of available coupon codes in your list drops to 50 or lower, the system will trigger a warning.
-Email Notifications: When the system detects that your available coupon codes have reached or fallen below the Warning Limit, it will send email notifications to a designated recipient.
+Threshold Setting:
+You can specify a numeric value as the Warning Limit. For example, if you set the Warning Limit to 50, it means that when the number of available coupon codes in your list drops to 50 or lower, the system will trigger a warning.
+Email Notifications:
+When the system detects that your available coupon codes have reached or fallen below the Warning Limit, it will send email notifications to a designated recipient.
 Purpose:
 The purpose of this feature is to keep you informed about the status of your coupon code inventory. It ensures that you are aware when the availability of coupon codes is running low. This proactive alert system allows you to take timely action, such as replenishing the coupon codes, to avoid any disruptions in your promotional campaigns.
-
 Expiry Date
 The Expiry Date is the specific date on which your coupon code list will no longer be valid for use. It marks the endpoint of the period during which the coupon codes within this list can be redeemed. This feature allows you to set a clear and defined timeframe for the availability of your coupon codes, ensuring that they remain active only until the chosen expiration date.
-
 Upload Coupon
 In the following steps, you have the option to choose between sending coupon codes via SMS or push notifications. These methods can be toggled on or off based on your preference, allowing you to select the most suitable method for your campaign.
 Send SMS
 Determine if coupon codes will be sent via SMS. The SMS text and placeholders for the coupon code and expiry date are predefined and cannot be customized. Use the pre-made profile attributes for the coupon code and expiry date that you have created before.
 Needs SMS Integration:
-It's crucial to note that in order to utilize the SMS option for sending coupon codes, you must first integrate Netmera for SMS campaigns. This integration allows for efficient distribution of coupon codes via SMS. You may refer to the following guide for SMS Onboarding: SMS Onboarding.
+It's crucial to note that in order to utilize the SMS option for sending coupon codes, you must first integrate Netmera for SMS campaigns. This integration allows for efficient distribution of coupon codes via SMS. You may refer to the following guide for SMS Onboarding:
+SMS Onboarding
 Send Push Notification
 Decide if coupon codes will be sent via push notifications. The notification message and placeholders for the coupon code and expiry date are predefined and cannot be customized. Utilize the pre-made profile attributes for the coupon code and expiry date that you have created before.
 Sending Coupon Codes to Users:
-For further information on how to send coupon codes with SMS and Push Notifications, please refer to the following title: 
-
+For further information on how to send coupon codes with SMS and Push Notifications, please refer to the following title:
 Editing Existing Coupon Lists
-Once coupon codes are created, you can easily manage them by clicking the "Edit" button in the coupon code list table. This allows you to update expiration dates and the code list. You can specify an expiry date for your coupon codes, indicating the timeframe during which the codes can be used.
-
+Once coupon codes are created, you can easily manage them by clicking the "
+Edit
+" button in the coupon code list table. This allows you to update expiration dates and the code list. You can specify an expiry date for your coupon codes, indicating the timeframe during which the codes can be used.
 Exporting Coupon Code Usage
-To employ this feature, you simply click on the "Export" button within your coupon code management system. When you initiate the export process, the system generates a detailed list of coupon codes that have been redeemed by customers. The example export file includes external and user ID information.
-
+To employ this feature, you simply click on the "
+Export
+" button within your coupon code management system. When you initiate the export process, the system generates a detailed list of coupon codes that have been redeemed by customers. The example export file includes external and user ID information.
 User Coupon Codes
 Targeting: Coupon Code Tab on User Details Page
-On the Targeting -> User details page, you will find a dedicated section as the "Coupon Codes" This feature serves as a comprehensive repository where you can view all the coupon codes your users have acquired and the corresponding time of acquisition.
+On the
+Targeting -> User
+details page, you will find a dedicated section as the
+"Coupon Codes
+" This feature serves as a comprehensive repository where you can view all the coupon codes your users have acquired and the corresponding time of acquisition.
 This tab provides valuable insights into a user's coupon code history, allowing you to easily access and reference the coupon codes they've received, along with the timestamps indicating when they were obtained. It offers a convenient and transparent way for users to manage and keep track of their rewards.
 This Coupon Code Tab enhances the overall user experience by providing a user-friendly interface for coupon code management and retrieval.
-
 Sending Coupon Codes to Users:
-For further information on how to send coupon codes with SMS and Push Notifications, please refer to the following title: 
+For further information on how to send coupon codes with SMS and Push Notifications, please refer to the following title:
 FAQs
 FAQ 1: Can I generate coupon codes using Netmera's Coupon Code Lists feature?
-Answer: No, Netmera does not support the generation of coupon codes. This platform is exclusively designed for the management and tracking of existing coupon codes. If you need to create new coupon codes, you'll need to do so through a different method or platform.
+Answer:
+No, Netmera does not support the generation of coupon codes. This platform is exclusively designed for the management and tracking of existing coupon codes. If you need to create new coupon codes, you'll need to do so through a different method or platform.
 FAQ 2: Is there a limit to the number of coupon codes I can upload in a single list?
-Answer: Netmera does not impose a strict limit on the number of coupon codes you can upload in a single list. However, practical considerations, such as system performance and the capacity of your hosting environment, may affect the maximum number of codes you can manage effectively. 
+Answer:
+Netmera does not impose a strict limit on the number of coupon codes you can upload in a single list. However, practical considerations, such as system performance and the capacity of your hosting environment, may affect the maximum number of codes you can manage effectively.
 FAQ 3: Is there a limit to the number of coupon code lists I can create and manage within Netmera?
-Answer: Netmera typically does not impose strict limits on the number of coupon code lists you can create and manage. However, practical considerations such as organizational needs and system resources may influence the number of lists you maintain. You can consult with Netmera's support or your account administrator for guidance on managing multiple lists effectively.
+Answer:
+Netmera typically does not impose strict limits on the number of coupon code lists you can create and manage. However, practical considerations such as organizational needs and system resources may influence the number of lists you maintain. You can consult with Netmera's support or your account administrator for guidance on managing multiple lists effectively.
 FAQ 4: Is there a recommended file format for uploading coupon lists?
-Answer: When uploading coupon lists, it's essential to ensure that your file follows a specific format. Each coupon code should be on a separate line in a .txt file. This format helps the system process the codes correctly, so it's important to maintain this structure for successful uploads.
+Answer:
+When uploading coupon lists, it's essential to ensure that your file follows a specific format. Each coupon code should be on a separate line in a
+.txt file.
+This format helps the system process the codes correctly, so it's important to maintain this structure for successful uploads.
 FAQ 5: Can I edit or update existing coupon lists after they've been created?
-Answer: Yes, you can easily edit existing coupon lists by clicking the "Edit" button in the coupon code list table as shown in Step 5. This allows you to update expiration dates and modify the code list as needed to accommodate changes in your campaigns.
+Answer:
+Yes, you can easily edit existing coupon lists by clicking the "Edit" button in the coupon code list table as shown in
+Step 5
+. This allows you to update expiration dates and modify the code list as needed to accommodate changes in your campaigns.
+Business Units
+1 year ago

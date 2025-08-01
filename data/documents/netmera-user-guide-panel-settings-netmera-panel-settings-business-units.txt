@@ -1,5 +1,11 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/panel-settings/netmera-panel-settings/business-units
+Panel Settings
+Netmera Panel Settings
+Business Units
 Settings -> Business Units -> Create New Business Unit
-A business unit is a logical grouping or division within your organization that operates independently and has its own marketing strategies. It allows you to manage different segments of your user base separately based on their characteristics, behaviors, or preferences. Using business units, you can target specific groups of users with personalized content and campaigns, tailoring your marketing efforts to suit their unique needs.
+A business unit is a logical
+grouping or division within your organization that operates independently and has its own marketing strategies.
+It allows you to manage different segments of your user base separately based on their characteristics, behaviors, or preferences. Using business units, you can target specific groups of users with personalized content and campaigns, tailoring your marketing efforts to suit their unique needs.
 Example:
 For example, if your organization has multiple brands or product lines, you can create different business units for each brand or product line. This way, you can customize the messages and content sent to users who are interested in specific brands or products.
 Create New Business Unit
@@ -10,9 +16,13 @@ Business Unit Name
 A "Business Unit Name" is a unique and descriptive name that you assign to a business unit. It helps you easily identify and differentiate between different business units. Choose a name that reflects the purpose or theme of the business unit.
 Logo URL
 The "Logo URL" refers to the web address (URL) where the logo image of the business unit is stored. This logo will appear as a small thumbnail on mobile phones and represents the branding or identity of the business unit.
-Profile Attribute 
+Profile Attribute
 A "Profile Attribute" is a characteristic or parameter associated with user profiles in Netmera. You can define specific profile attributes based on user information, behavior, or preferences. For example, you might have profile attributes for user age, location, interests, or purchase history.
 Create your Business Unit Criteria
 This is an important aspect of business units in Netmera. "Business Unit Criteria" refers to the conditions or rules you set to define the members of a particular business unit. These criteria help ensure that the right users are targeted and included in the specific business unit's campaigns.
 Example:
 For instance, you can create criteria based on user actions, such as users who made a purchase within the last month or users who have not opened the app in the last two weeks. By defining such criteria, you can dynamically include or exclude users from the business unit based on their behavior, allowing you to deliver personalized content and promotions.
+Business Unit
+Reports Settings
+Coupon Code Lists
+1 year ago
