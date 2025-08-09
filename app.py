@@ -411,7 +411,7 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
               for q, a in validated_questions:
                 st.session_state.suggestions_cache[q] = {
                 "answer": a,
-                "source_url": url or (best_doc.get("url") or filename_to_url(best_doc["source"]))
+                "source_url": source_url or (best_doc.get("url") or filename_to_url(best_doc["source"]))
                  }
                 st.session_state.suggestion_buttons.append(q)
            else:
