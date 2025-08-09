@@ -1,3 +1,19 @@
+"""
+Netmera Documentation Scraper
+
+This script scrapes all user-facing documentation pages from the Netmera User Guide sidebar and saves the cleaned
+text content of each page into individual .txt files. Each file includes the source URL for traceability.
+
+Steps:
+1. Fetch all sidebar links under /netmera-user-guide/
+2. Extract only the main readable content of each page
+3. Clean the text by removing navigation, update info, and UI noise
+4. Save as plain text files with structured filenames
+
+Output:
+- Text files saved under `data/documents/`, prefixed with `netmera-user-guide-`
+- Each file begins with `[SOURCE_URL]: <url>` as the first line
+"""
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -9,6 +25,12 @@ SAVE_FOLDER = "data/documents"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
 def get_all_sidebar_links():
+    """
+    Parses the Netmera User Guide sidebar and returns all internal documentation URLs.
+
+    Returns:
+        List[str]: A sorted list of full URLs to documentation pages.
+    """
     response = requests.get(START_PAGE)
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -22,6 +44,15 @@ def get_all_sidebar_links():
     return sorted(links)
 
 def get_main_content(html):
+    """
+    Extracts the main content block from a documentation HTML page.
+
+    Args:
+        html (str): Raw HTML content of the page.
+
+    Returns:
+        str: Extracted text content from <main> or <article> tag, fallback to full page text if not found.
+    """
     soup = BeautifulSoup(html, "html.parser")
     main = soup.find("main") or soup.find("article")
     if main:
@@ -35,6 +66,15 @@ REMOVE_PHRASES = [
 ]
 
 def clean_text(text):
+    """
+    Cleans the extracted page text by removing unwanted boilerplate phrases and short lines.
+
+    Args:
+        text (str): Raw text extracted from HTML.
+
+    Returns:
+        str: Cleaned, line-separated text suitable for embedding and retrieval.
+    """
     lines = text.splitlines()
     cleaned = []
 
@@ -51,6 +91,15 @@ def clean_text(text):
     return "\n".join(cleaned)
 
 def url_to_filename(url: str) -> str:
+    """
+    Converts a documentation URL to a filesystem-safe filename.
+
+    Args:
+        url (str): Full Netmera URL starting with BASE_URL.
+
+    Returns:
+        str: Filename string prefixed with 'netmera-user-guide-' and using '-' as separators.
+    """
     path = url.replace(BASE_URL + "/netmera-user-guide/", "")
     return "netmera-user-guide-" + path.replace("/", "-") + ".txt"
 
