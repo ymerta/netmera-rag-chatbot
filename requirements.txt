@@ -10,3 +10,4 @@ langdetect
 fuzzywuzzy[accelerate]
 rank_bm25
 nltk
+langsmith
