@@ -161,6 +161,36 @@ def filename_to_url(filename: str) -> str:
     url_path = filename.replace("-", "/")
     return f"{BASE_DOC_URL}/{url_path}"
 
+def find_source_for_question(question_text):
+    # İstersen burada önce çeviri yapabilirsin; çoğu embedding modelinde gerek olmayabilir.
+    embedding = embed_question(question_text)[0]
+    tokenized_q = word_tokenize(question_text.lower())
+
+    bm25_scores_q = bm25_model.get_scores(tokenized_q)
+    bm25_mean_q = np.mean(bm25_scores_q)
+    bm25_std_q = np.std(bm25_scores_q) or 1.0
+
+    best = None
+    best_score = -1e9
+
+    for idx, doc in enumerate(texts):
+        doc_emb = index.reconstruct(idx)
+        nd = np.linalg.norm(doc_emb)
+        nq = np.linalg.norm(embedding)
+        cos = np.dot(doc_emb, embedding) / (nd * nq) if nd and nq else 0.0
+
+        bm25_norm = (bm25_scores_q[idx] - bm25_mean_q) / bm25_std_q
+        fuzzy = fuzz.partial_ratio(question_text.lower(), doc["text"][:1000].lower()) / 100.0
+
+        hybrid = compute_hybrid_score(doc, bm25_norm, cos, fuzzy)
+        if hybrid > best_score:
+            best_score = hybrid
+            best = doc
+
+    if not best:
+        return None
+
+    return best.get("url") or filename_to_url(best["source"])
 def embed_question(translated_input):
     """
     Embeds the translated user input into a vector using OpenAI's embedding API.
@@ -193,6 +223,7 @@ def generate_answerable_questions(context, user_lang="English", max_try=5):
     for q in raw_questions[:max_try]:
         ans = ask_openai(q, context, user_lang)
         if ans: 
+            src_url = find_source_for_question(q)  
             validated.append((q, ans))
 
 
@@ -380,7 +411,7 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
               for q, a in validated_questions:
                 st.session_state.suggestions_cache[q] = {
                 "answer": a,
-                "source_url": source_url,
+                "source_url": url or (best_doc.get("url") or filename_to_url(best_doc["source"]))
                  }
                 st.session_state.suggestion_buttons.append(q)
            else:
@@ -399,9 +430,10 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
                       else:
                            a = ask_openai(q, top_k_context, lang)
                            if a:
+                                url_q = find_source_for_question(q) 
                                 st.session_state.suggestions_cache[q] = {
                                 "answer": a,
-                                "source_url": source_url,  
+                                "source_url": url_q,  
                                  }
                                 validated_fallbacks.append(q)
 
