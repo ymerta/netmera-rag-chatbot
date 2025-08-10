@@ -162,7 +162,6 @@ def filename_to_url(filename: str) -> str:
     return f"{BASE_DOC_URL}/{url_path}"
 
 def find_source_for_question(question_text):
-    # İstersen burada önce çeviri yapabilirsin; çoğu embedding modelinde gerek olmayabilir.
     embedding = embed_question(question_text)[0]
     tokenized_q = word_tokenize(question_text.lower())
 
@@ -216,18 +215,63 @@ def suggest_similar_questions(user_input, faq_questions, top_n=3):
     top_suggestions = sorted(scored, key=lambda x: x[1], reverse=True)[:top_n]
     return [q for q, _ in top_suggestions]
 
-def generate_answerable_questions(context, user_lang="English", max_try=5):
-    raw_questions = generate_questions_from_context(context, user_lang)
-    validated = [] 
+@st.cache_data(ttl=900)
+def generate_answerable_questions(context_docs, lang="Türkçe", base_doc_url="", max_q=3):
+    """
+    context_docs: list of dicts like [{"id":"DOC0","text":..., "source":...,"url":...}, ...]
+    Dönen: [(question, answer, source_url)]
+    """
+    
+    joined = []
+    for d in context_docs:
+        joined.append(f"[{d['id']}] SOURCE: {d.get('url') or d.get('source')}\n{d['text']}")
+    ctx = "\n\n---\n\n".join(joined)
 
-    for q in raw_questions[:max_try]:
-        ans = ask_openai(q, context, user_lang)
-        if ans: 
-            src_url = find_source_for_question(q)  
-            validated.append((q, ans))
+    if lang == "Türkçe":
+        instr = (
+            "Bağlama dayanarak en fazla 3 kısa kullanıcı sorusu ve kısa, doğrudan cevap üret. "
+             "Tüm soruları ve cevapları Türkçe yaz. "
+        "Her öneri için JSON objesi döndür: {\"question\":..., \"answer\":..., \"doc_id\": \"DOC0|DOC1|DOC2\"}. "
+        "Sadece JSON dizi döndür; başka metin ekleme."
+        )
+    else:
+        instr = (
+            "Based on the context, produce up to 3 concise user questions and short, directly grounded answers. "
+            "For each item, return JSON: {\"question\":..., \"answer\":..., \"doc_id\": \"DOC0|DOC1|DOC2\"}. "
+            "Return only a JSON array; no extra text."
+        )
 
+    resp = client.chat.completions.create(
+        model=CHAT_MODEL,
+        messages=[
+            {"role":"system","content": SYSTEM_PROMPT},
+            {"role": "system", "content": f"Kullanıcı dili: {lang}. Tüm soruları ve cevapları bu dilde yaz."},
+            {"role":"user","content": f"CONTEXT:\n{ctx}\n\n{instr}"}
+        ],
+        timeout=15,
+        temperature=0.3,
+        max_tokens=400
+    )
+    raw = resp.choices[0].message.content.strip()
 
-    return validated[:3] 
+    try:
+        data = json.loads(raw)
+    except Exception:
+        txt = raw.strip().strip("`")
+        txt = txt.replace("json", "")
+        data = json.loads(txt)
+
+    id2url = {d["id"]: (d.get("url") or (BASE_DOC_URL + "/" + d["source"].replace("netmera-user-guide-","").replace(".txt","").replace("-","/")))
+              for d in context_docs}
+
+    out = []
+    for item in data[:max_q]:
+        q = item["question"].strip()
+        a = item["answer"].strip()
+        doc_id = item.get("doc_id","DOC0").strip()
+        src_url = id2url.get(doc_id)
+        out.append((q, a, src_url))
+    return out
 
 @traceable(name="Ask OpenAI")
 def ask_openai(question, context, lang="English"):
@@ -269,7 +313,6 @@ QUESTION:
     if not english_answer or any(p in english_answer.lower() for p in fallback_phrases):
         return None
 
-    # 🇹🇷 Türkçeye çevir
     if lang == "Türkçe":
         translation = client.chat.completions.create(
             model=CHAT_MODEL,
@@ -398,20 +441,26 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
          answer_text = ask_openai(user_input, top_k_context, lang)
         
         if answer_text is None:
+           context_docs = []
+           for i, d in enumerate(top_docs[:3]):
+               context_docs.append({
+                   "id": f"DOC{i}",
+                   "text": d["text"],
+                   "source": d["source"],
+                   "url": d.get("url")
+                })
+
            with st.status("Öneriler hazırlanıyor…", expanded=False) as status:
-            validated_questions = generate_answerable_questions(top_k_context, lang)
+            validated = generate_answerable_questions(context_docs, lang, BASE_DOC_URL, max_q=3)
             status.update(label="Öneriler hazır ✅", state="complete")
-           if validated_questions:
+            
+           if validated:
               st.session_state.suggestions_cache.clear()
               st.session_state.suggestion_buttons = []
-
-              source_file = best_doc["source"]
-              source_url = best_doc.get("url") or filename_to_url(source_file)
-  
-              for q, a in validated_questions:
+              for q, a, src_url in validated:
                 st.session_state.suggestions_cache[q] = {
                 "answer": a,
-                "source_url": source_url or (best_doc.get("url") or filename_to_url(best_doc["source"]))
+                "source_url": src_url
                  }
                 st.session_state.suggestion_buttons.append(q)
            else:
@@ -427,15 +476,6 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
                              "source_url": FAQ_URL,
                          }
                          validated_fallbacks.append(q)
-                      else:
-                           a = ask_openai(q, top_k_context, lang)
-                           if a:
-                                url_q = find_source_for_question(q) 
-                                st.session_state.suggestions_cache[q] = {
-                                "answer": a,
-                                "source_url": url_q,  
-                                 }
-                                validated_fallbacks.append(q)
 
 
                     if validated_fallbacks:
