@@ -1,0 +1,64 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/campaigns/mobile-push/add-image-or-video-to-push-notifications
+Campaigns
+Mobile Push
+Add Image or Video to Push Notifications
+Images for media push notifications can be added in the
+What
+step by entering the URL of the image to
+Android Media URL
+and
+IOS Media URL
+text fields seperately or uploading the media files from the device.
+gif
+and
+video
+formatted media pushes are only supported by IOS devices.
+You may find detailed information about different notification type images
+here
+Add Media
+Supported Image File Types
+Image
+iOS
+Android
+Filetypes
+Recommended:
+jpg, jpeg, png, gif
+Recommended:
+jpg, jpeg, png
+Resolution
+Recommended:
+2:1 aspect ratio landscape
+Common Sizes:
+512x256px
+1440x720px
+Min Width:
+300 pixels
+Max
+Width:
+4096 pixels
+Recommended:
+2:1 aspect ratio landscape
+Common Sizes:
+512x256px
+1440x720px
+Min Width:
+300 pixels
+Max
+Width:
+2000 pixels
+Supported Video File Types for iOS Media URL
+Video formatted media pushes are
+only supported
+for IOS devices.
+Video
+Supported file types
+Maximum size
+Video
+MPEG
+MPEG-2
+MP4
+AVI
+5 MB
+Add Custom Sounds
+Banner, Carousel, Slider and Product Discovery Additional Notes
+1 year ago

@@ -1,0 +1,73 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications/push-icon
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Push Icon
+By default, iOS displays the app icon in push notifications. However, you can personalize the notifications with custom icons to better align with your branding and messaging. Below are the steps to set up and manage custom push icons.
+Requirements
+Media Push Integration
+: Media push integration must also be implemented. Please see our documentation for more details on
+Media Push
+Default Push Icon
+When creating a new campaign, if the "Custom Push Icon" option is turned off or not configured.
+The system checks the icon name specified in
+Developer > App Info > iOS Push Style > Default Notification Icon
+If an icon name is provided in this field, push notifications will use the default icon.
+iOS Push Notifications with Custom Icons
+In iOS, push notifications are displayed with your app icon by default. If you update your app icon via
+Xcode > Assets > App Icon
+, the push notification icon will automatically reflect this update.
+Using Custom Icons for Push Notifications
+To send push notifications with a custom icon instead of the default app icon, follow these steps:
+App Icon
+: Appears as a
+small icon
+Netmera Icon
+) in the bottom-right corner of the notification.
+Custom Icon
+: Serves as the primary,
+larger icon
+Impact Icon
+) in the notification.
+This feature enables personalized notifications while maintaining brand recognition with the app icon.
+Step 2: Add Communication Notification Capability
+Integrate the
+Communication Notification
+capability into your project. This enables the custom push functionality for your app.
+Step 3: Configure
+Info.plist
+Add
+NSUserActivityTypes
+with
+InSendMessageIntent
+item 0
+to the Info.plist of the main project.
+Step 4: Include Visuals in Service Extension
+Add your custom icon image to the
+Service Extension
+section of your project to ensure that the icon is used and displayed properly in the notification.
+Step 5: Push Icon Configuration
+Navigate to
+Netmera Panel > Developer > App Info > iOS Push Style
+and enter the name of your custom push icon in the
+Default Notification Icon
+field.
+When entering the custom icon file name, include the full file name along with its extension (e.g.,
+icon.png
+Creating a Push with Custom Push Icon
+In the "What" Step
+of the campaign setup, enable the
+Custom Push Icon
+option.
+Select Custom Icon
+: Choose your desired custom icon.
+When Custom Push Icon Is Turned Off:
+If the
+Custom Push Icon
+option is disabled, the system will use the default notification icon specified in
+Developer > App Info > iOS Push Style
+(if provided).
+Custom Web View Presentation
+Live Activities
+1 month ago

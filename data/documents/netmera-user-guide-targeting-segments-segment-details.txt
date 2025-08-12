@@ -72,4 +72,4 @@ Segment Details
 screen provides a set of tools for managing and analyzing user segments. By understanding and utilizing these features, you can optimize your engagement efforts, track performance, and make data-driven decisions for more effective campaigns.
 Connector Segments
 File Transfers
-4 months ago
+5 months ago

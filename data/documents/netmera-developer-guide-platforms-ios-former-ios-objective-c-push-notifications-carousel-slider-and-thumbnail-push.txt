@@ -1,0 +1,123 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications/carousel-slider-and-thumbnail-push
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Carousel, Slider and Thumbnail Push
+Warning:
+You should build your application with
+Xcode 8 or higher
+to use iOS10 media push on your application.
+Step 1: Create New Target
+Ensure
+Xcode 8 or higher is installed.
+In Xcode
+: Navigate to
+File > New > Target
+Select
+Notification Content Extension
+A new class named
+NotificationViewController
+will be created.
+Extend
+it from
+NetmeraNotificationContentExtension
+Switching Back to Debugging
+If you accidentally "Activate", you can return to debugging your app using Xcode, which is located alongside the play button.
+Step 2: Add your Project to Pod File
+Remove
+the Objective-C Bridging Header file.
+Add
+NetmeraNotificationContentExtension
+in the NotificationContent.swift file.
+In your
+Podfile
+, add:
+target 'your_content_extension_target_name' do
+pod "Netmera/NotificationContentExtension"
+end
+Run
+pod update
+to apply the changes.
+Warning
+: Run
+pod update
+after editing the Podfile.
+Step 3: Add Code to Notification Content Extension Class
+The new
+NotificationViewController
+class should extend
+NetmeraNotificationContentExtension
+Swift
+Objective-C
+class NotificationViewController: NetmeraNotificationContentExtension {
+override func viewDidLoad() {
+super.viewDidLoad()
+// Do any required interface initialization here.
+#import <NetmeraNotificationContentExtension/NetmeraNotificationContentExtension.h>
+@interface NotificationViewController : NetmeraNotificationContentExtension
+@end
+#import "NotificationViewController.h"
+#import <UserNotifications/UserNotifications.h>
+#import <UserNotificationsUI/UserNotificationsUI.h>
+@interface NotificationViewController ()
+@end
+@implementation NotificationViewController
+- (void)viewDidLoad {
+[super viewDidLoad];
+// If you want to change the background color, uncomment the next line
+// self.view.backgroundColor = [UIColor whiteColor];
+@end
+Step 4: Info.plist Configuration
+Make sure the
+info.plist
+file under the content extension looks like this.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>AppGroupName</key> <string>your group name</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+<key>NSExtension</key>
+<dict>
+<key>NSExtensionAttributes</key>
+<dict>
+<key>UNNotificationExtensionCategory</key>
+<array>
+<string>NetmeraGeneral</string>
+<string>NetmeraCarousel</string>
+</array>
+<key>UNNotificationExtensionInitialContentSizeRatio</key>
+<integer>1</integer>
+</dict>
+<key>NSExtensionMainStoryboard</key>
+<string>MainInterface</string>
+<key>NSExtensionPointIdentifier</key>
+<string>com.apple.usernotifications.content-extension</string>
+</dict>
+</dict>
+</plist>
+Delete
+Label
+MainInterface
+If you want to add slide action to Carousel property,
+UserInteractionEnabled
+must be set
+YES
+Enable App Groups for both your application and the NotificationContent extension in the Capabilities settings of your project. Then add "
+group.com.yourcompany.carousel
+" to your app groups.
+Specify the app group name in the app delegate method where you set the
+Netmera.start()
+method. Use the following codes as examples:
+Swift
+Objective-C
+Netmera.setAppGroupName = "group.com.yourcompany.carousel"
+[Netmera setAppGroupName:@"group.com.yourcompany.carousel"];
+Media Push
+Custom Web View Presentation
+5 months ago

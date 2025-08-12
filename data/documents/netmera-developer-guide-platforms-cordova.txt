@@ -1,0 +1,10 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/cordova
+Platforms
+Cordova
+Push Notifications
+Sound & Vibration
+Push Inbox
+Events
+User & Attributes
+Geofence & Location
+Changelog

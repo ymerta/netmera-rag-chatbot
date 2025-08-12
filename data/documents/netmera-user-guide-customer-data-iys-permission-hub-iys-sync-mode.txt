@@ -1,0 +1,421 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/iys-permission-hub/iys-sync-mode
+Customer Data
+IYS Permission Hub
+IYS Sync Mode
+The İleti Yönetim Sistemi (İYS) enables consumers in Turkey to manage their
+opt-in
+and
+opt-out
+preferences for electronic communications such as
+SMS, email, and voice calls
+It also requires businesses to
+register and maintain consent records
+in a standardized way.
+Netmera provides a
+built-in integration with İYS
+so you can securely synchronize user communication permissions without manual overhead
+Before you begin:
+Make sure you have your
+Brand Code
+and
+İYS Code
+ready from the İYS platform.
+Two Modes of IYS Integration
+Mode
+Description
+IYS Sync Mode
+IYS is the master source and Netmera regularly imports consent data
+Netmera can
+read
+and
+update
+existing user records in IYS but cannot create new users.
+IYS Integrator Mode
+Netmera manages permissions and updates IYS directly
+Netmera can
+create
+your brand entry under a user’s IYS profile and
+push
+consent
+records
+directly to IYS.
+Step 1: Access the Connectors Section
+In your
+Netmera Panel
+, navigate to
+Connectors
+Locate
+İleti Yönetim Sistemi
+under
+Data Security
+Click
+Install
+to start the integration.
+Step 2: Enter Your İYS Credentials
+When prompted:
+Brand Code:
+Retrieved from your İYS account.
+İYS Code:
+Retrieved from your İYS account.
+These codes are required to activate the connector.
+Optional settings:
+Via Integration: If you want to use Via, select the checkbox.
+See detailed documentation
+here
+for configuration instructions.)
+İYS Integrator: If you want Netmera to act as the source for updating İYS records, check İYS Integrator and continue from the
+IYS Integrator Mode
+page.
+Authorizing Netmera in the İYS Panel
+To enable full functionality, you must authorize Netmera within the İYS platform:
+Log in to your IYS Panel.
+Go to the
+İş Ortaklığı (Partnerships)
+section.
+Search for and select
+Netmera
+as your solution partner.
+Make sure the following permissions are enabled:
+Message Permissions
+Call Permissions
+Email Permissions
+This step allows Netmera to receive and manage user permission data on your behalf, ensuring that all communication is aligned with İYS regulations.
+Once the connector is installed,
+Netmera will automatically begin syncing user permissions
+with İYS.
+The
+initial synchronization
+starts overnight and runs in batches until all existing user records are processed.
+After the initial sync is complete, Netmera will continue to
+update user permissions
+based on your latest İYS data.
+Updating User Permissions
+After synchronizing your data with IYS, you can update existing user permissions in
+Targeting > Contact Upload
+Please note:
+IYS Sync
+can only
+read
+and
+update
+permissions for users
+who already exist
+in your IYS records.
+You cannot create new users in IYS
+via this process.
+To create your brand entry under a user’s IYS profile and send consent records directly to IYS, you must use the
+IYS Integrator Mode
+Once you
+synchronize
+your data with IYS, you can
+update
+your
+user's current permission
+through
+Targeting > Contact Upload
+Contact Upload with IYS Integration
+You can upload user data via CSV or TXT files under
+Targeting > Contact Upload
+. When your file contains any of the following identifiers, Netmera will match and update the corresponding user profile and
+update
+their status in Netmara Panel and İYS:
+email
+phonenumber
+external_id
+Netmera uses these identifiers to locate the user and apply the latest permissions.
+The newest upload always overrides existing data.
+For every user in the uploaded file, you must also include the following IYS-specific fields:
+IYSSource
+IYSConsentDate
+IYSStatus
+Field Matching
+During upload, you'll be prompted to match columns in your file to profile attributes in Netmera. If column headers match existing attributes (e.g.,
+email
+external_id
+phonenumber
+), they’ll be auto-detected.
+Required Columns in IYS Integrator Mode
+IYSource
+: The consent collection channel. Must be one of the following values:
+IYSStatus
+: Consent status must be either
+ONAY
+(approved) or
+RET
+(rejected).
+IYSConsentDate
+: Consent timestamp in the format
+dd.mm.yy hh:mm:ss
+email / phonenumber
+: You must upload at least one (email or phone number). You may upload both, provided the consent status (
+ONAY
+RET
+) is the same for both channels.
+Optional Columns
+External ID
+: An external ID for the user. If not provided, users will be matched by their email or phone number.
+If any required IYS fields are missing, the upload is blocked. If fields are partially filled or contain errors, affected users are created as
+optout
+Country code is mandatory
+in phone number values (e.g., +905XXXXXXXXX)
+If email and phone number have different consent statuses, do not upload in the same file.
+Adding Profile Attributes
+After defining the required identifiers (
+email
+phonenumber
+, or
+external_id
+) and IYS-specific fields (
+IYSSource
+IYSStatus
+IYSConsentDate
+), you may include additional
+profile attributes
+as extra columns in your upload file.
+Before uploading the file, all profile attributes you intend to use must be
+pre-configured
+in the Netmera Panel under
+Developers > Profile Attributes
+. If they are not pre-configured, you will receive an error notification in the
+result screen
+indicating which columns were unmatched or ignored.
+Status Selection
+During upload, select one of the following statuses:
+Subscribed / Unsubscribed
+If this status is selected:
+IYS fields are
+optional
+Use when uploading users with fixed consent values (all optin or all optout)
+Note:
+Users added in this flow
+won’t be updated in IYS.
+IYS Syncronize
+Enables consent synchronization between Netmera and IYS. File must include IYS fields.
+You must
+choose
+this option to update your data to IYS through your uploaded file.
+Step 4: Matching Contact Information
+After uploading your contact file, you’ll be taken to the Profile Attributes screen. This step ensures that the columns in your file are accurately mapped to Netmera’s profile attributes.
+In this screen:
+System-required fields like
+IYSSource
+IYSStatus
+, and
+IYSConsentDate
+will be automatically matched if named correctly.
+Additional fields such as
+surname
+, or
+address
+will also be listed as profile attributes.
+A total count of columns to be imported is shown at the bottom.
+What to Do If Any Field Appears Red
+If any field appears in
+red
+, it means the column header does not match any pre-configured profile attribute in Netmera.
+To resolve this, click the ✏️
+Edit
+icon and select the appropriate profile attribute from the dropdown.
+Once all mappings are correct, click
+Save
+to proceed.
+If any custom attribute in your file has not been pre-configured in Netmera’s panel (
+Developers > Profile Attributes
+), it must be created
+before
+uploading. Otherwise, it will not be imported, and you will receive an error prompt during the upload summary.
+Once you upload your files to Netmera, processing times depend on the IYS systems:
+Updating users permissions
+: When you are updating an existing contact, it may take
+2–3 hours
+to complete.
+Case Scenarios
+Case 1: Same Email/SMS Permissions
+Upload includes both
+email
+and
+phonenumber
+columns with identical IYS values. Consent status is applied uniformly.
+Both email and SMS have identical consent values.
+Status
+applies
+both
+channels
+If email and phone number (SMS) have different consent statuses, do not upload in the same file.
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+[email protected]
++905377778888
+HS_WEB
+ONAY
+01.08.25 14:23:45
+[email protected]
++905377778887
+HS_MOBIL
+RET
+28.07.25 09:15:10
+178B
+Case1_Same_Email_SMS.csv
+Case 2: Email-Only Upload
+File contains email as identifier and complete IYS fields. SMS permission data is set opt-out if it did not exist before.
+SMS permission defaults to optout if not provided.
+Recommended if you’re only collecting email permissions.
+Only email is
+provided
+. SMS defaults to
+opt-out
+if the information did not exist before.
+email
+IYSSource
+IYSStatus
+IYSConsentDate
+[email protected]
+HS_WEB
+ONAY
+05.08.25 11:05:30
+[email protected]
+HS_EPOSTA
+RET
+30.07.25 16:45:12
+139B
+Case2_Email_Only.csv
+Case 2.1: Email and SMS Exists Under Same User
+Only email permission is updated. Existing SMS permission data remains unchanged unless explicitly updated in the file.
+Only email permission is
+updated
+; SMS remains
+unchanged
+unless specified in file.
+email
+IYSSource
+IYSStatus
+IYSConsentDate
+[email protected]
+HS_WEB
+ONAY
+08.08.25 13:10:22
+89B
+Case2_1_Email_Exists_SMS_Exists.csv
+Case 3: SMS-Only Upload
+Upload where
+phonenumber
+is the first column and includes IYS fields.
+Country code is mandatory
+in phone number values (e.g., +905XXXXXXXXX)
+SMS with country code; no email provided. Email defaults to
+opt-out
+if not existed before, if existed before, it remains
+unchanged
+unless specified in file.
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
++905377778888
+ONAY
+07.08.25 10:25:00
++905399998877
+HS_MOBIL
+RET
+02.08.25 19:15:40
+146B
+Case3_SMS_Only.csv
+Case 4: Uploading with External ID
+Upload uses
+external_id
+as key and includes
+email
+phonenumber
+, and IYS fields.
+Uses
+external_id
+as the primary match key.
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+extId
+[email protected]
++905366667788
+HS_WEB
+ONAY
+03.08.25 09:00:00
+2001
+[email protected]
++905377778899
+HS_MOBIL
+RET
+04.08.25 17:35:55
+2002
+194B
+Case4_External_ID.csv
+Case 5: Uploading with Profile Attributes
+Any profile attribute that is pre-defined in the Netmera panel can be added to the file alongside contact and IYS consent fields.
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+extId
+name
+city
+[email protected]
++905366667710
+HS_WEB
+ONAY
+03.08.25 09:00:00
+2001
+Emir
+İstanbul
+[email protected]
++905377778811
+HS_MOBIL
+RET
+04.08.25 17:35:55
+2002
+Aslı
+Case5_Profile_Attributes.csv
+— This file includes only contact details and IYS consent fields along with profile attributes.
+217B
+Case5_Profile_Attributes.csv
+Case5_External_ID_and_Profile_Attributes.csv
+— This file includes the
+extId
+column to explicitly match or create users based on external IDs.
+233B
+Case5_External_ID_and_Profile_Attributes.csv
+Case 6: Invalid Format
+If any IYS fields are missing or incorrectly formatted:
+Netmera creates the user as
+optout
+Consent status is updated later if matched with existing IYS records
+Missing or incorrectly formatted IYS fields → User created as opt-out initially. (Mobile and Onaylandı entries are incorrect in the following table.)
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+exId
+[email protected]
++905344445566
+Mobile
+ONAY
+07.08.25 17:35:55
+1008
+[email protected]
++905355556677
+HS_WEB
+ONAYLANDI
+12.10.25 14:00:00
+1009
+Best Practices
+Use consistent and accurate formatting for date fields and phone number (SMS).
+If uploading mixed-consent users,
+split them into separate files
+IYS Permission Hub
+IYS Integrator Mode
+29 minutes ago

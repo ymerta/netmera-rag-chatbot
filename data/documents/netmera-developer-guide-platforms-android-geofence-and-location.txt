@@ -1,0 +1,171 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/geofence-and-location
+Platforms
+Android
+Geofence & Location
+Checking and Requesting Location Permission
+Users may select
+"Only Once"
+"While Using the App"
+, or
+"Always"
+when prompted for location permission. However, they can later change this permission via system settings.
+To ensure
+accurate
+location tracking, always check the
+current
+system-level location permission before accessing any location-based features. If the required permission is missing or no longer valid, re-trigger the location permission request using Netmera.
+What to do:
+Check the current location permission status.
+If the permission is
+missing or limited
+Request location permission again via Netmera.
+Always ensure the necessary permission is granted before initializing any location-based operations.
+Geofence Push Notifications on Android 10 and Above
+On Android 10 and later, geofence push notifications require background location access. However, Android
+does not allow
+apps to request this permission directly in the app. Instead, users must manually enable
+"Allow all the time"
+in the system settings.
+Best Practice:
+Before redirecting users to settings, display an
+explanatory message
+about why location access is needed. You can use
+Netmera widgets
+to communicate this effectively. You may see the next page
+Background Location Permission
+on how to create these widgets to ask for location permissions.
+Step 1: Add Required Permissions
+In your
+AndroidManifest.xml
+file, add the following permissions:
+uses-permission
+android
+name
+"android.permission.ACCESS_FINE_LOCATION"
+uses-permission
+android
+name
+"android.permission.ACCESS_COARSE_LOCATION"
+uses-permission
+android
+name
+Step 2: Request Permissions at Runtime
+For
+Android 6.0 (API Level 23)
+and later, location permission must be requested while the app is running. Netmera provides a built-in permission request flow:
+// Request location permission
+Netmera.requestPermissionsForLocation();
+After calling this method, the
+default permission dialog
+will appear if the app does not already have location access. Once the user grants permission, Netmera will handle location operations based on your settings in the
+Netmera Dashboard
+Step 3: Enable Location History
+To track user location, enable
+Location History
+in the Netmera web panel:
+Developers > App Info > App Config > Location History Enabled
+Step 4: Set Maximum Active Geofence Regions
+To limit the number of active geofences, use the following method:
+Netmera.setNetmeraMaxActiveRegions(95);
+If you set a value
+greater than 95
+less than 0
+, it will be reset to the default
+(95)
+Step 5: Configure Location Hardware Requirements (Optional)
+If your app requires location-based services but should still be visible on devices
+without GPS hardware
+, add the following declarations in
+AndroidManifest.xml
+<uses-feature
+android:name="android.hardware.location"
+android:required="false" />
+<uses-feature
+android:name="android.hardware.location.gps"
+android:required="false" />
+Troubleshooting
+1. Crash Resolution: Update to gms:play-services-location Version 21.0.1
+If you encounter the following crash and are using
+gms:play-services-location
+, it is advisable to upgrade to version 21.0.1.
+2. Geofence Update Events: Common Causes and Solutions
+Geofence Update
+event when there is a change in the geofence area, prompted by the operating system. However, if the operating system does not trigger this event, you may not see the geofence update events. This can occur due to various reasons such as operating system limitations or device settings.
+Possible Reasons for Not Seeing Geofence Update Events
+Operating System Does Not Trigger the Event:
+Geofence events are triggered by the operating system. However, due to power-saving policies or system restrictions, this trigger may not occur.
+Background Process Restrictions
+Some Android devices, particularly those with low memory, may restrict background processes.
+If the app has been "Force Stopped," geofence events will not be triggered.
+Battery Optimization Mode
+If the device is in battery optimization mode, geofence services may operate with limited functionality.
+For example, background location services may be disabled.
+Device and Operating System Manufacturer Restrictions
+Some device manufacturers (e.g., Xiaomi, Oppo, Huawei) may restrict geofence events through their own power-saving mechanisms.
+Location Services Disabled
+If the user has disabled location services on the device, geofence events cannot be triggered.
+Missing App Permissions
+Location Permission
+is not granted, or if the permission level is restricted (e.g., "Only While Using the App"), geofence events will not be received.
+Suggestions for Optimizing Geofence Events
+1. Prompt Users to Enable Permissions
+You can show an informative message to remind users to keep location services and permissions enabled.
+Example message:
+"If your location services are off, you may not see geofence events. Go to Settings > Location > [App Name] > Allow Always to update your permissions."
+You can also inform users through
+Netmera Widgets
+2. Check Battery Optimization Settings
+Due to energy-saving modes, background processes may be restricted. Direct users to add your app to the battery optimization exceptions list.
+Steps:
+Go to
+Settings
+Apps
+> Find
+[App Name]
+Enter
+Battery
+settings.
+Enable
+Battery Optimization
+Select
+Don’t Optimize
+No Restrictions
+3. Disable Background Process Restrictions
+Some device manufacturers may automatically restrict background app processes. To remove these restrictions, follow the steps according to the device type:
+Xiaomi:
+Go to
+Settings
+Battery & Performance
+App Battery Saver
+Select the app and choose
+No Restrictions
+Huawei:
+Go to
+Settings
+Battery
+App Launch Management
+Disable
+Automatic Management
+for the app.
+Enable all permissions under
+Manual Management
+Oppo and Vivo:
+Go to
+Settings
+Power Management
+Background Restrictions
+Ensure your app is not listed here.
+4. Increase Location Accuracy
+To improve geofence performance, check and adjust the device’s location accuracy settings.
+Steps:
+Go to
+Settings
+Location
+Advanced
+Enable
+Google Location Accuracy
+High Accuracy Mode
+Ensure the above settings are properly configured on users' devices to enable geofence update events to be received correctly. Adding informative messages to guide users in optimizing these settings will help enhance geofence functionality.
+Events
+Background Location Permission
+8 days ago

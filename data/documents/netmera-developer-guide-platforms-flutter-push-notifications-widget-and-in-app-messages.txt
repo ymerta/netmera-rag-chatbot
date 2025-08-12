@@ -1,0 +1,30 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/flutter/push-notifications/widget-and-in-app-messages
+Platforms
+Flutter
+Push Notifications
+Widget and In-App Messages
+Pop-up and In-App Message Presentation Behavior
+All push notifications in Netmera work automatically—no additional coding is required. However, you can customize pop-up presentations and listen to push callbacks.
+By default, when a popup notification or in-app message is received:
+immediately
+when the app returns to the foreground.
+Receiving Popups and In-App Messages in the Background
+To receive popups or in-app messages when the application is in the background, you need to enable
+Remote Notifications
+under
+Background Modes
+Capabilities
+Pop-up Presentation Logic
+Enable Pop-up Presentations
+To enable pop-up presentation, you need to call the
+enablePopupPresentation()
+method on the page where you want to display the pop-up.
+Netmera.enablePopupPresentation();
+To show pop-up on the app start or everywhere in the app, please add this to
+initState()
+method on your
+main.dart
+file.
+Push Notification Permissions
+Flutter iOS Media Push
+5 months ago

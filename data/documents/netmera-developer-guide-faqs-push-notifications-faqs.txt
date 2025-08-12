@@ -1,0 +1,115 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/faqs/push-notifications-faqs
+FAQs
+Push Notifications FAQs
+Common Errors
+Error: BadDeviceToken
+This error occurs when the device token is incorrect or does not match the environment the application is running in.
+Navigate to
+Developers > Push Backends > Certificate Type
+Ensure the certificate type is set to
+Prod
+for applications downloaded from the Store or cloud. It is crucial to keep the certificate type as
+Prod
+in the production environment. Changing it will prevent your customers from receiving push notifications until the certificate type is set back to
+Prod
+The
+Dev
+certificate type should be selected for applications built and run from a cable (i.e., direct builds from development machines). This is necessary for developers to receive push notifications during testing phases, as they typically use cable-connected builds for push tests.
+Error: TopicDisallowed
+The app identifier (bundle ID) used for sending the push notification may not match the one registered with APNs. Please verify the bundle ID value set in the panel and ensure it is correctly configured. To resolve it, go to the panel, navigate to
+Developers > Push Backends > iOS
+, and verify the accuracy of the
+Topic (Bundle ID)
+value.
+Error: DeviceTokenNotForTopic
+This indicates a mismatch or issue with the application's certificate, often related to the Bundle ID.
+Verify the Bundle ID of the application to ensure it matches across all platforms.
+If there is a discrepancy, the certificate may need to be renewed. The certificate's Bundle ID value must match the application's Bundle ID value and the configuration within the panel.
+Error: APNSTokenInvalid
+This error is usually encountered when attempting to send push notifications to an iOS emulator.
+iOS emulators do not support receiving push notifications. Ensure that you are testing push notifications on a physical iOS device rather than an emulator.
+Error: Device is Unregistered
+This error occurs when push notifications are attempted to be sent to a device that has disabled push notification permissions.
+Check the device's settings to ensure that push notification permissions are enabled for the application in question.
+Error: Sender Id Mismatch (Unknown Error)
+This error arises when the Sender ID configured in the Netmera panel does not match the Sender ID set in the Firebase console and within the Netmera initialization method in the application.
+Verify that the Sender ID configured in the Netmera panel matches the Sender ID obtained from the Firebase console.
+Check the Netmera initialization method within the application to ensure that the correct Sender ID is set.
+Confirm that the
+google-services.json
+file used in the application is retrieved from the same Firebase Console account where the Sender ID is configured.
+Error: Java Socket Error
+The Java Socket Error indicates an issue with establishing a network connection via sockets in a Java application. Certificate renewal is necessary to address Java Socket Errors.
+iOS
+Handling Push Notification Issues
+In didFinishLaunchingWithOptions
+In scenarios where push notifications do not reflect when clicked on iOS devices, to ensure push notifications are handled correctly on iOS devices, the following method may be implemented within the didFinishLaunchingWithOptions method. It should be placed at the top of didFinishLaunchingWithOptions.
+Swift
+Objective-C
+//in didFinishLaunchingWithOptions
+if #available(iOS 10.0, *) {
+UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+} else {
+// Fallback on earlier versions
+//in didFinishLaunchingWithOptions
+[UNUserNotificationCenter currentNotificationCenter].delegate = self;
+iOS Widget and In App Messages Troubleshooting
+If you are experiencing difficulties in receiving popups, please follow these troubleshooting steps:
+Increase Session Duration
+Go to Netmera panel.
+Navigate to
+Developer > App Info
+and find the
+App Config
+section.
+Increase the value in the 'Session Expire Interval' field by 1.
+Click 'Apply' to save the changes.
+Retry displaying the popup.
+Check for Other False Settings
+Examine your project to ensure that no other parts of your code are setting values to 'false' that might affect popup functionality.
+Verify Method Placement
+Confirm that the method is placed at the top of the '
+didFinishLaunchingWithOptions
+' function within your code.
+if #available(iOS 10.0, *) {
+UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+} else {
+// Fallback on earlier versions
+Check for Third-Party Tool Integration
+Ensure that Netmera is initialized at the top of your project if any third-party tools are integrated.
+Multiple Concurrent Popups
+If multiple popups are set to display simultaneously, it may lead to issues with popup loading.
+Low Device Storage
+Note that if the device's storage is nearly full, popups may not load correctly.
+iOS Media Push Troubleshooting
+Service extension target settings
+In the service extension target settings, if the minimum deployment version is set higher than the device's version, it may result in the inability to retrieve images. You may check the following location to see it in XCode.
+Select your main target.
+Go to "Build Phases."
+Expand "Embed App Extensions."
+Android Widget and In App Messages Troubleshooting
+Widget / In App Issues
+If you are experiencing difficulties in receiving popups, please follow these troubleshooting steps:
+Increase Session Duration:
+Go to Netmera panel.
+Navigate to
+Developer > App Info
+and find the
+App Config
+section.
+Increase the value in the 'Session Expire Interval' field by 1.
+Click 'Apply' to save the changes.
+Retry displaying the popup.
+Check for Other False Settings:
+Examine your project to ensure that no other parts of your code are setting values to 'false' that might affect popup functionality.
+Check for Third-Party Tool Integration:
+Ensure that Netmera is initialized at the top of your project if any third-party tools are integrated.
+Multiple Concurrent Popups:
+If multiple popups are set to display simultaneously, it may lead to issues with popup loading.
+Low Device Storage:
+Note that if the device's storage is nearly full, popups may not load correctly.
+Additional Tips
+Always double-check your environment settings (Development vs. Production) when encountering issues with push notifications.
+Ensure that your application's push notification service (e.g., APNS for iOS) is correctly configured and that the certificates are up to date.
+Error Responses
+7 months ago

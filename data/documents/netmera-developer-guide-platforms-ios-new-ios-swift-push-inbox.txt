@@ -1,0 +1,131 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/push-inbox
+Platforms
+iOS
+New iOS (Swift)
+Push Inbox
+Push Inbox Overview
+Install Netmera Notification Inbox
+To integrate the
+NetmeraNotificationInbox
+, add it to your
+Podfile
+pod
+'NetmeraNotificationInbox'
+Install the dependency and proceed with integration.
+Filter and Fetch Notification
+Create a
+NetmeraInboxFilter
+instance to specify which push notifications to fetch. You can filter by:
+Status
+: Read, Unread, or Deleted.
+Categories
+: Filter by specific categories.
+Expired Notifications
+: Include or exclude expired notifications.
+Page Size
+: Number of notifications to fetch per request.
+Define Inbox Manager
+var
+inboxManager: NetmeraInboxManager
+Create a Filter
+Define the properties to filter notifications, such as status, categories, and page size.
+let filter = NetmeraInboxFilter(status: status,
+pageSize: 10,
+shouldIncludeExpiredObjects: true,
+categories: ["category_names"]) // Optional
+Initialize Inbox Manager
+self.inboxManager = Netmera.inboxManager(with: filter)
+Fetch the First Page
+Request the list of matching push notifications.
+inboxManager?.inbox(callback: { result in
+// Handle the result
+Sample Code
+// Step 1: Define the inbox manager
+var inboxManager: NetmeraInboxManager?
+// Step 2: Create a filter for fetching inbox notifications
+let filter = NetmeraInboxFilter(
+status: status,                        // Notification status: .unread, .read, or .deleted
+pageSize: 10,                          // Number of notifications to retrieve per page
+shouldIncludeExpiredObjects: true,     // Include expired notifications
+categories: ["category_names"]         // (Optional) Filter by specific categories
+// Step 3: Fetch Inbox
+inboxManager?.inbox(callback: { result in
+switch result {
+case .success:
+// Display inbox UI with inboxManager?.objects
+case .failure(let error):
+// Handle error
+Update Notification Status
+Push notifications can have three statuses:
+Unread
+Read
+Deleted
+You can update the status of notifications to allow users to mark messages as read, unread, or deleted.
+Examples:
+Update the status of a
+single
+notification:
+inboxManager?.updateStatus(status, for: [object]) { result in
+// Handle status update
+Update the status of
+all
+notifications:
+inboxManager?.updateStatusForAllPushObjects(status) { result in
+// Handle status update
+If there are more notifications than the defined page size, fetch the next page:
+inboxManager?.nextPage(callback: { result in
+// Handle the next page
+All fetched notifications are stored in
+inbox.objects
+, and
+checks if more pages are available.
+Incremental Fetching
+The
+NetmeraInbox
+instance returned from
+-fetchInboxUsingFilter:completion:
+keeps the list of fetched notifications in
+inbox.objects
+. As you fetch more pages, new notifications are added to this list.
+For example, if you set a page size of 10 and fetch 3 pages,
+inbox.objects
+will contain all 30 notifications from the 3 pages. This allows you to display the entire list of notifications in a table or collection view.
+Error Handling
+If the operation fails, the
+completion block
+will be triggered with an error describing the failure. If there are no more pages to fetch, the method will immediately call the completion block with an appropriate error.
+Checking if All Pages are Fetched
+You can check if there are more pages to fetch by using the
+property of the
+NetmeraInbox
+instance. If it returns
+false
+, it means all pages have been fetched.
+Push Notification Counts
+To get the total count of notifications based on status:
+self.inboxManager?.count(for: NetmeraInboxStatus.read)
+This method provides the count of notifications in the specified status.
+Manage Push Notification Categories
+These APIs allow you to enable or disable specific categories for each user (e.g., enabling "campaign" notifications while disabling "information" messages).
+Fetch User Category Preferences
+Netmera.getUserCategoryPreferenceList { result in
+switch result {
+case .success(let preferences):
+// Handle the list of NetmeraUserCategoryPreference
+print(preferences)
+case .failure(let error):
+// Handle the error
+print("Error: \(error)")
+Set User Category Preference
+Netmera.setUserCategoryPreference(
+categoryId: 123,
+categoryEnabled: true
+) { result in
+switch result {
+case .success(let isSuccess):
+print("Update success: \(isSuccess)")
+case .failure(let error):
+print("Error: \(error)")
+Sound & Vibration
+Events
+7 days ago

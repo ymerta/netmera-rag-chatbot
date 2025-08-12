@@ -1,0 +1,58 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/cordova/sdk-integration
+Platforms
+Cordova
+npm: cordova-plugin-netmera-v2
+npm
+Step 1: Install Cordova Plugin
+Open your terminal and navigate to your Cordova project folder. Run the following command to install the Cordova plugin:
+ionic cordova plugin add cordova-plugin-netmera-v2
+In your
+package.json
+, add the following dependency for the wrapper:
+"@awesome-cordova-plugins/netmera": "
+[email protected]
+:Netmera/awesome-cordova-plugin-netmera.git",
+Run the following command to install the dependencies:
+npm install
+Sample
+package.json
+snippet
+"dependencies": {
+...
+"@awesome-cordova-plugins/netmera": "
+[email protected]
+:Netmera/awesome-cordova-plugin-netmera.git",
+...
+Add the required preferences in your
+config.xml
+<preference name="NetmeraBaseUrl" value="example-base-url" />
+<preference name="AppGroupName" value="group.com.example.groupname" />
+<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+...
+<application android:name="com.netmera.cordova.plugin.NetmeraApplication" />
+...
+</edit-config>
+Command
+Purpose
+Necessity
+Required
+Firebase Sender ID on your Firebase project
+Required
+AppGroupName
+Group name on your Apple developer project (for carousel push)
+Optional
+NetmeraBaseUrl
+Base URL on your server (for on premise setup)
+Optional
+Step 2: Initialize Netmera Plugin
+Import the Netmera Plugin in your application:
+import { NetmeraPlugin } from '@awesome-cordova-plugins/netmera/ngx';
+In your constructor, initialize the plugin:
+constructor(private netmera: NetmeraPlugin) {}
+Standard Push Notifications
+Interactive Push Notifications
+Widgets
+Push Notifications with Deeplinks
+Cordova
+Push Notifications
+1 month ago

@@ -1,0 +1,69 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/geofence-and-location
+Platforms
+iOS
+New iOS (Swift)
+Geofence & Location
+Checking and Requesting Location Permission
+Users may select
+"Only Once"
+"While Using the App"
+, or
+"Always"
+when prompted for location permission. However, they can later change this permission via system settings.
+To ensure
+accurate
+location tracking, always check the
+current
+system-level location permission before accessing any location-based features. If the required permission is missing or no longer valid, re-trigger the location permission request using Netmera.
+What to do:
+Check the current location permission status.
+If the permission is
+missing or limited
+Request location permission again via Netmera.
+Always ensure the necessary permission is granted before initializing any location-based operations.
+Add Dependencies (If Using a Podfile)
+If your project uses a
+Podfile
+, add the following dependencies:
+pod
+"NetmeraLocation"
+pod
+"NetmeraGeofence"
+If you are not using a
+Podfile
+, you can skip this step.
+Step 1: Enable Location History
+To target users based on location, enable
+Location History
+in the Netmera web panel:
+Developers > App Info > App Config > Location History Enabled
+Step 2: Configure Location Permissions
+Add the necessary authorization keys to your
+Info.plist
+file:
+For Geofence Messaging (iOS 10 and earlier)
+Set
+NSLocationAlwaysUsageDescription
+with a description of why the app uses region monitoring.
+For Geofence Messaging (iOS 11 and later)
+Set
+NSLocationAlwaysAndWhenInUseUsageDescription
+with a description of why the app uses region monitoring.
+For Occasional Location Updates
+Set
+NSLocationWhenInUseUsageDescription
+with a description.
+This sends the most recent location once per session.
+Step 3: Request Location Authorization
+Request location access from users by calling:
+Netmera.requestLocationAuthorization()
+Step 4: Configure Geofence Region Limits
+To set the maximum number of active geofence regions, use:
+Netmera.setNetmeraMaxActiveRegions(20) // Default is 20
+If you set the number greater than
+or less than
+, it will be reset to
+by default.
+Events
+User & Attributes
+8 days ago

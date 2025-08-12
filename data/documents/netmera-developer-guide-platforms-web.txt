@@ -1,0 +1,8 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/web
+Platforms
+Web
+Mobile Web Push for iOS
+Deep Linking
+Events
+User & Attributes
+Changelog

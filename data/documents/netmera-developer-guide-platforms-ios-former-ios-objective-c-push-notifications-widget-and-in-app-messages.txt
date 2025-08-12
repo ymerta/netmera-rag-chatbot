@@ -1,0 +1,86 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications/widget-and-in-app-messages
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Widget and In-App Messages
+Pop-up and In-App Message Presentation Behavior
+All push notifications in Netmera work automatically—no additional coding is required. However, you can
+customize
+pop-up presentations and
+listen to push callbacks
+By default, when a popup notification or in-app message is received:
+If the app is in the
+foreground
+immediately
+If the app is in the
+background
+when the app returns to the foreground.
+Receiving Popups and In-App Messages in the Background
+To receive popups or in-app messages when the application is in the background, you need to enable
+Remote Notifications
+under
+Background Modes
+Capabilities
+Pop-up Presentation Logic
+Enable / Disable Immediate Presentations
+To prevent immediate pop-up presentation (e.g., during video playback, gaming, or checkout), use:
+Swift
+Objective -C
+// Call this method to disable immediate popup presentation
+Netmera.setEnabledPopupPresentation(false)
+// Call this method to re-enable immediate popup presentation
+Netmera.setEnabledPopupPresentation(true)
+// Call this method to disable immediate popup presentation
+[Netmera setEnabledPopupPresentation:false];
+// Call this method to re-enable immediate popup presentation
+[Netmera setEnabledPopupPresentation:true];
+Devices in Low Battery Mode
+Devices
+cannot
+receive popups or in-app messages while the application is closed or killed if the device is in
+low battery mode
+, as this mode disables background application refresh.
+Troubleshooting Pop-up and In-App Message Issues
+If you are facing issues with receiving pop-ups or in-app messages, follow the troubleshooting steps below:
+1. Increase Session Expiry Duration
+Increase the session expiration interval to give the app more time to display pop-ups:
+Navigate to
+Developer > App Info
+in your dashboard.
+Under
+App Config
+, increase the
+Session Expire Interval
+by 1.
+Click
+Apply
+to save the changes and retry the pop-up.
+2. Check for Conflicting Code Settings
+Ensure that no part of your code is setting values to
+false
+that may interfere with pop-up functionality.
+3. Verify Delegate Method Placement
+The
+UNUserNotificationCenter
+delegate method must be placed at the
+top
+of the
+didFinishLaunchingWithOptions
+function to ensure proper notification handling:
+// Ensure this line is at the top of didFinishLaunchingWithOptions
+if #available(iOS 10.0, *) {
+UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+} else {
+// Fallback for earlier iOS versions
+4. Ensure Proper Initialization with Third-Party Tools
+If you're integrating third-party tools, ensure that
+Netmera is initialized
+at the beginning of your project to avoid conflicts.
+5. Handling Multiple Pop-ups
+Displaying multiple pop-ups at once can cause loading issues. Ensure that your app logic accounts for displaying one pop-up at a time to avoid this problem.
+6. Device Storage Limitations
+Pop-ups may not display correctly if the device's storage is near full. Ensure that your device has enough available storage for proper notification delivery.
+Push Payload Receivers
+Customizing In-App Messages
+5 months ago

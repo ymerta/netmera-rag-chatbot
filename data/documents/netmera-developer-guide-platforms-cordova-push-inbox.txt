@@ -1,0 +1,79 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/cordova/push-inbox
+Platforms
+Cordova
+Push Inbox
+Push Inbox Overview
+NetmeraInbox
+allows you to access and manage previously sent push notifications in an inbox-style interface. You cannot instantiate
+NetmeraInbox
+Filtering Notifications
+Create a
+NetmeraInboxFilter
+instance to specify which push notifications to fetch. You can filter by:
+Status
+: Read, Unread, or Deleted.
+Categories
+: Filter by specific categories.
+Expired Notifications
+: Include or exclude expired notifications.
+Page Size
+: Number of notifications to fetch per request.
+Here is a sample code to determine filtering options:
+import
+{ Netmera
+NetmeraInboxFilter }
+from
+'@awesome-cordova-plugins/netmera/ngx'
+const
+netmeraInboxFilter
+new
+NetmeraInboxFilter
+Netmera Inbox Object
+export interface NetmeraInboxFilter {
+status?: number;
+pageSize?: number;
+categories?: string[];
+includeExpiredObjects?: boolean;
+Fetching the First Page
+Use
+fetchInbox()
+to retrieve notifications that match the filter:
+fetchInbox() {
+let newFilter: NetmeraInboxFilter = {
+status: NetmeraPushStatus.all,
+pageSize: 1
+this.netmera.fetchInboxUsingFilter(newFilter).then(inbox => {
+console.log("FetchInbox Success: ", JSON.stringify(inbox));
+}).catch(err => {
+console.log("FetchInbox Error", err);
+});
+Once the first page is retrieved, use
+to get additional pages:
+}).catch(err => {
+});
+Calling
+when no additional pages exist will trigger an error.
+Updating Push Notification Status
+Notifications can have three states:
+Unread
+Read
+Deleted
+Use
+updateStatus
+to change a notification's status asynchronously:
+this.netmera.updatePushStatus(index, length, NetmeraPushStatus.read).then(result => {
+console.log("Update Status: ", result);
+}).catch(err => {
+console.log("Update Error: ", err);
+});
+Counting Notifications by Status
+Retrieve the count of notifications by status:
+//get count unread push objects
+this.netmera.countForStatus(NetmeraPushStatus.unread).then(count => {
+console.log("Count: ", count);
+}).catch(err => {
+console.log(err);
+});
+Sound & Vibration
+Events
+1 month ago

@@ -1,0 +1,60 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/cordova/push-notifications
+Platforms
+Cordova
+Push Notifications
+Push Callbacks
+Netmera has following push callbacks:
+Push Register
+Push Receive
+Push Click
+Push Button Click
+import
+{ NetmeraPlugin }
+from
+'@awesome-cordova-plugins/netmera/ngx'
+constructor
+(private netmera: NetmeraPlugin) {}
+...
+this
+netmera
+.requestPushNotificationAuthorization
+this
+netmera
+.subscribePushNotification
+.subscribe
+(pushObject
+console
+.log
+"Notification Payload"
+});
+this
+netmera
+.subscribePushClick
+.subscribe
+(pushObject
+console
+.log
+"Notification Payload"
+});
+this
+netmera
+.subscribePushButtonClick
+.subscribe
+(pushObject
+console
+.log
+"Notification Payload"
+});
+Netmera Push Object
+export interface NetmeraPush {
+title: string;
+subtitle: string;
+body: string;
+pushId: string;
+pushInstanceId: string;
+pushType: number;
+inboxStatus: number;
+sendDate: any;
+deeplinkUrl: string;
+Sound & Vibration
+1 month ago

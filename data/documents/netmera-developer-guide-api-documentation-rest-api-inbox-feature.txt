@@ -1,0 +1,161 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/api-documentation/rest-api/inbox-feature
+API Documentation
+REST API
+Inbox Feature
+Netmera’s REST Inbox API allows you to fetch, display, and manage push notifications stored on the server. It supports pagination, filtering by status or time range, and updating message states (e.g., read, deleted).
+Parameters in the Request Body
+Parameter
+Description
+Required
+Type
+extId
+The unique external ID of the user.
+✅ Yes
+String
+status
+Filters the messages based on read status.
+✅ Yes
+Integer
+Accepted values:
+1 = Read
+2 = Unread
+3 = Read & Unread
+4 = Deleted
+7 = All
+numberOfNotification
+Defines the number of messages to return per page. Defaults to 20 if not provided.
+❌ No
+Integer
+prms.index
+Used for pagination. Represents the
+pushInstanceId
+of the last message received in the previous response.
+❌ No
+Long
+startDate
+Filters messages starting from this date. Epoch timestamp in milliseconds.
+❌ No
+Long
+endDate
+Filters messages until this date. Epoch timestamp in milliseconds.
+❌ No
+Long
+category
+Filters messages by categories.
+❌ No
+Array<Integer>
+piids
+Used in
+/statusChange
+to define the messages whose statuses will be updated.
+✅ Yes (for
+/statusChange
+Array<Integer>
+Inbox Retrieval
+Endpoint
+POST /rest/
+3.0
+/inbox/getAllInbox
+Sample Request
+curl -X POST https:
+//restapi.netmera.com/rest/3.0/inbox/getAllInbox \
+"X-netmera-api-key: your_rest_api_key"
+"Content-Type: application/json"
+-d '{
+"extId"
+"your_extId"
+"status"
+"startDate"
+1681635178000
+"endDate"
+1684227178000
+"numberOfNotification"
+Sample Response
+"msgs": [
+"msgId": 25965,
+"pushInstanceId": 3101819,
+"title": "test",
+"message": "Test",
+"status": "UNREAD",
+"sts": 1681635178000,
+"subText": "test"
+"cnts": {
+"2": 1
+"prms": {
+"index": 3101819
+Using Pagination (via
+prms.index
+Pagination allows you to retrieve messages in batches. After the first call, the response returns a
+prms.index
+value – which is the
+pushInstanceId
+of the last message in that batch. To fetch the
+next page
+, you must pass this index value in the next request.
+Pagination Flow Example
+Page 1 – Request
+"extId": "externalid",
+"status": 7,
+"startDate": 1738405578000,
+"endDate": 1740997578000,
+"numberOfNotification": 3
+Page 1 – Response
+"msgs": [
+{ "msgId": 12941, "pushInstanceId": 10758003, "title": "msgtitle", ... },
+{ "msgId": 12939, "pushInstanceId": 10758002, "title": "msgtitle", ... },
+{ "msgId": 12941, "pushInstanceId": 10742004, "title": "msgtitle", ... }
+"cnts": { "1": 2, "2": 3, "4": 0 },
+"prms": { "index": 10742004 }
+The
+prms.index
+value (
+10742004
+) will be used in the second request to fetch the next page.
+Page 2 – Request
+"extId": "externalid",
+"status": 7,
+"startDate": 1738405578000,
+"endDate": 1740997578000,
+"numberOfNotification": 3,
+"prms": {
+"index": 10742004
+Page 2 – Response
+"msgs": [
+{ "msgId": 12942, "pushInstanceId": 10734004, "title": "msgtitle", ... },
+{ "msgId": 12941, "pushInstanceId": 10734003, "title": "msgtitle", ... }
+"cnts": { "1": 2 }
+When to Use
+prms
+not
+include the
+prms
+parameter in the
+initial request
+Only use
+prms.index
+in subsequent requests for
+pagination
+Avoid showing
+prms
+in the first example of your documentation to reduce confusion.
+Retrieve a Single Inbox Message
+Endpoint
+GET /rest/3.0/inbox/get?piid={pushInstanceId}
+Sample Request
+curl -X GET 'https://restapi.netmera.com/rest/3.0/inbox/get?piid=3103726' \
+-H 'X-netmera-api-key: your_rest_api_key' \
+-H 'Content-Type: application/json'
+Change Message Status
+Endpoint
+POST /rest/3.0/inbox/statusChange
+Sample Request
+curl -X POST 'https://restapi.netmera.com/rest/3.0/inbox/statusChange' \
+-H 'X-netmera-api-key: your_rest_api_key' \
+-H 'Content-Type: application/json' \
+-d '{
+"extId": "your_extId",
+"piids": [2584151],
+"st": 4
+User & Device Management
+GDPR
+5 days ago

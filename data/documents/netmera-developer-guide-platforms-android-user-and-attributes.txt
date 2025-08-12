@@ -1,0 +1,327 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/user-and-attributes
+Platforms
+Android
+User & Attributes
+Managing User Data
+The
+NetmeraUser
+class allows you to send structured information about your application's users to Netmera. The ideal time to manage user data is immediately after the user logs in.
+User ID Management
+For optimal performance and data integrity:
+Update at login:
+Always update the user identifiers immediately after the user logs in.
+Unique
+userId
+Ensure every user is assigned a unique
+userId
+. Reusing the same ID across different users will result in data inconsistencies and is not supported.
+As of version
+v4.4.0
+, the
+updateUser
+method has been
+deprecated
+. Use the following methods instead:
+identifyUser
+: Sets or updates identifiers such as
+userId
+email
+, and
+msisdn
+updateUserProfile
+: Updates user profile attributes like name, gender, birthday, occupation, etc.
+Updating User Information
+Step 1: Identify the User
+Use
+identifyUser
+after the user logs in:
+Java
+val
+user
+NMUser
+user.
+setUserId
+"the_greatest"
+user.
+setMsisdn
+"001XXXXXXXXX"
+user.
+setEmail
+[email protected]
+Netmera.
+identifyUser
+(user)
+NMUser
+user
+new
+NMUser()
+user
+setUserId
+"the_greatest"
+user
+setMsisdn
+"001XXXXXXXXX"
+user
+setEmail
+[email protected]
+Netmera
+identifyUser
+(user);
+Step 2: Update Profile Attributes
+Use
+updateUserProfile
+to send user details:
+Java
+val profile = NMUserProfile()
+profile.name.set("Muhammad Ali")
+profile.surname.set("Clay")
+profile.externalSegments.set(listOf("sports", "box"))
+profile.gender.set(Gender.MALE)
+profile.maritalStatus.set(MaritalStatus.MARRIED)
+profile.childCount.set(9)
+profile.country.set("USA")
+profile.state.set("Arizona")
+profile.city.set("Scottsdale")
+profile.district.set("Old Town Scottsdale")
+profile.occupation.set("Professional Boxer")
+profile.industry.set("Sports")
+profile.favoriteTeam.set("My Team")
+profile.language.set("English")
+Netmera.updateUserProfile(profile)
+NMUserProfile profile = new NMUserProfile();
+profile.getName().set("Muhammad Ali");
+profile.getExternalSegments().set(Arrays.asList("sports", "box"));
+profile.getGender().set(Gender.MALE);
+profile.getMaritalStatus().set(MaritalStatus.MARRIED);
+profile.getChildCount().set(9);
+profile.getCountry().set("USA");
+profile.getState().set("Arizona");
+profile.getCity().set("Scottsdale");
+profile.getDistrict().set("Old Town Scottsdale");
+profile.getOccupation().set("Professional Boxer");
+profile.getIndustry().set("Sports");
+profile.getFavoriteTeam().set("My Team");
+profile.getLanguage().set("English");
+Netmera.updateUserProfile(profile);
+Important Notes
+You should send a
+single
+user update request at a time.
+Do not use
+updateUser
+—it is deprecated and replaced by the two methods above.
+Managing attributes with
+set
+add
+remove
+, and
+unset
+Operation
+Description
+Data Type
+set()
+Completely replaces the profile attribute
+Available for all data types
+unset()
+Completely deletes the profile attribute
+Available for all data types
+add()
+Adds new element(s) to the profile attribute
+Available only for Array-type attributes
+remove()
+Removes specified element(s) from the profile attribute
+Available only for Array-type attributes
+For profile attributes defined as arrays, you do not need to manage the entire list at once. You can update them incrementally using
+add()
+and
+remove()
+In the following examples, we use
+externalSegments
+, which is a predefined array-type profile attribute in the Netmera platform. However, you are free to define and use your own custom profile attributes as needed.
+set()
+– Create List from Scratch
+Java
+val profile = NMUserProfile()
+val segments = listOf("sports_fans", "premium_subscriber")
+profile.externalSegments.set(segments)
+Netmera.updateUserProfile(profile)
+NMUserProfile profile = new NMUserProfile();
+List<String> segments = Arrays.asList("sports_fans", "premium_subscriber");
+profile.getExternalSegments().set(segments);
+Netmera.updateUserProfile(profile);
+Explanation:
+This operation clears any existing values in the
+externalSegments
+field and assigns the new list containing
+"sports_fans"
+and
+"premium_subscriber"
+. Only the provided segments will be retained.
+Use case:
+Reinitializing the user's profile with a new segment configuration.
+add()
+– Add New Elements
+Java
+val profile = NMUserProfile()
+val segments = listOf("black_friday_2025")
+profile.externalSegments.add(segments)
+Netmera.updateUserProfile(profile)
+NMUserProfile profile = new NMUserProfile();
+List<String> segments = Arrays.asList("black_friday_2025");
+profile.getExternalSegments().add(segments);
+Netmera.updateUserProfile(profile);
+Explanation:
+Preserves existing values in the
+externalSegments
+list and appends the new segment
+"black_friday_2025"
+Use case:
+Temporarily adding a user to a campaign-specific segment.
+remove()
+– Remove Elements
+Java
+val profile = NMUserProfile()
+val segments = listOf("sports_fans")
+profile.externalSegments.remove(segments)
+Netmera.updateUserProfile(profile)
+NMUserProfile profile = new NMUserProfile();
+List<String> segments = Arrays.asList("sports_fans");
+profile.getExternalSegments().remove(segments);
+Netmera.updateUserProfile(profile);
+Explanation:
+Removes the
+"sports_fans"
+value from the user's
+externalSegments
+list. Other segment values remain unchanged.
+Use case:
+Reflecting changes in user interests or preferences.
+unset()
+– Clear All Data
+Java
+val profile = NMUserProfile()
+profile.externalSegments.unset()
+Netmera.updateUserProfile(profile)
+NMUserProfile profile = new NMUserProfile();
+profile.getExternalSegments().unset();
+Netmera.updateUserProfile(profile);
+Explanation:
+Clears all data from the
+externalSegments
+field. The user will no longer be associated with any segment.
+Use case:
+When a user account is closed or profile data needs to be reset.
+Important Note
+To avoid update conflicts,
+ensure that only one profile update request is sent at a time
+To remove an attribute, set it to
+null
+Java
+val user = NMUser()
+user.email = null
+Netmera.identifyUser(user)
+NetmeraUser profile = new NMUser();
+profile.setEmail(null);
+Netmera.identifyUser(profile);
+Removing Attributes With Unset
+Java
+val profile = NMUserProfile()
+profile.favoriteTeam.unset()
+Netmera.updateUserProfile(profile)
+NMUserProfile profile = new NMUserProfile();
+profile.getFavoriteTeam().unset();
+Netmera.updateUserProfile(profile);
+Creating Custom Profile Attributes
+Step 1: Navigate to the Developers section
+Custom profile attributes must be created and configured in the Netmera Panel before they can be used in the application.
+Go to
+Panel
+Developers > Profile Attributes > Create New Attribute.
+Step 2: Fill in Attribute Details
+Define the following information:
+Name
+: The unique identifier for the attribute.
+Label
+: A user-friendly name for the attribute.
+Description
+: A brief description of the attribute.
+Data Type
+: Choose the appropriate data type for the attribute.
+Is Array
+: Define whether the attribute can hold multiple values.
+Step 3: Save the Attribute
+After clicking
+Save
+, the custom attribute will be available for assignment to your users.
+Step 4: Generated Code for Custom Attributes
+Once the attribute is defined in the Netmera Panel, the generated code can be found at the bottom of the
+Profile Attribute
+page, under the
+Generate Code
+section. This code must be added to your Netmera Panel under
+Profile Attributes > User Class
+Private Information Considerations
+Mark profile attributes as
+Private Information
+in the panel if they are sensitive.
+not
+send these fields to the backend during
+identifyUser
+updateUserProfile
+calls.
+Fetching Coupons
+Retrieve and display user-earned coupons:
+Netmera.fetchCoupons(0, 10, object : NMFetchCouponsResultListener {
+override fun onSuccess(coupons: List<NMCouponDetail>?) {
+// Handle coupons
+override fun onFailure(error: String?) {
+Toast.makeText(context, error ?: "No error message", Toast.LENGTH_SHORT).show()
+User Update with Listener
+To track update status:
+Netmera.updateUserProfile(profile, new NMUpdateUserProfileListener() {
+@Override
+public void onSuccess() {
+Log.i("NetmeraApp", "User updated successfully");
+@Override
+public void onFailure(@Nullable String error) {
+Log.e("NetmeraApp", "Update failed: " + error);
+});
+Email Subscription Preferences
+Check Email Subscription Status
+Use the following method to check if the user has allowed email subscriptions:
+Netmera.getEmailPermission()
+Returns
+: A
+Boolean
+value (
+true
+if the user has allowed email subscriptions, otherwise
+false
+Update Email Subscription Preferences
+Set the user's preference for email subscriptions using one of the methods below:
+Allow Email Subscriptions
+Netmera.setEmailPermission(true)
+Disallow Email Subscriptions
+Netmera.setEmailPermission(false)
+These methods enable you to respect user preferences for email communications within your application.
+SMS Subscription Preferences
+Check SMS Subscription Status
+Use the following method to check if the user has allowed SMS subscriptions:
+Netmera.getSmsPermission()
+Returns
+: A
+Boolean
+value (
+true
+if the user has allowed SMS subscriptions, otherwise
+false
+Update SMS Subscription Preferences
+Set the user's preference for SMS subscriptions using one of the methods below:
+Allow SMS Subscriptions
+Netmera.setSmsPermission(true)
+Disallow SMS Subscriptions
+Netmera.setSmsPermission(false)
+These methods enable you to respect user preferences for email communications within your application.
+Background Location Permission
+Data Transfer
+1 month ago

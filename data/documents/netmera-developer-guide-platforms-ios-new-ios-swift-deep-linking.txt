@@ -1,0 +1,77 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/deep-linking
+Platforms
+iOS
+New iOS (Swift)
+Deep Linking
+Deep Linking
+To redirect users to a specific page or view in your app via push notifications with custom action buttons, you can use deep links. Follow these steps to set up deep linking in your app:
+Set Up a URL Scheme
+In your Xcode project, define a custom URL scheme (
+your_deeplink_scheme://
+Configure Info.plist
+Open your
+Info.plist
+file.
+Add a new key:
+URL types
+Xcode will create an array with a dictionary called
+Item 0
+Inside
+Item 0
+, add:
+URL identifier
+> Set it to your custom scheme.
+URL Schemes
+>This creates an array.
+Item 0
+inside
+URL Schemes
+> Set it to your custom scheme.
+Handle the Deep Link
+Implement the following method in your
+AppDelegate.swift
+to handle deep links:
+func
+application
+app
+: UIApplication,
+open
+url
+: URL,
+options
+Any
+Bool
+print
+"openUrl:
+\(url)
+return
+true
+Universal Links
+To handle universal links from Netmera push actions (e.g.,
+https://your_domain/scheme?query
+Set Netmera Push Delegate
+didFinishLaunchingWithOptions
+, add:
+Netmera.setPushDelegate(self)
+Ensure that your
+AppDelegate
+conforms to the
+NetmeraPushDelegate
+protocol.
+Implement Universal Link Handlers
+Add the following methods to handle universal links:
+shouldHandleOpenURL
+: Checks if the URL should be handled. Return
+true
+to process it.
+handleOpenURL
+: Executes when the URL is triggered by a Netmera push action.
+func shouldHandleOpenURL(_ url: URL, for pushObject: NetmeraBasePush) -> Bool {
+if url.host == "your_domain" {
+return true
+return false
+func handleOpenURL(_ url: URL, for pushObject: NetmeraBasePush) {
+print("openUrl \(url)")
+Live Activities
+Custom Deep Links
+6 months ago

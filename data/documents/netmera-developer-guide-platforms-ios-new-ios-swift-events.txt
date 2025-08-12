@@ -1,0 +1,139 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/events
+Platforms
+iOS
+New iOS (Swift)
+Events
+Netmera offers a complete set of trackable events, giving you valuable insights into user behavior and app performance. These events fall into two main categories:
+Standard Events
+, which include Automated and Pre-defined Events and
+Custom Events
+Detailed Event Definitions:
+For detailed information on event definitions, please consult our
+User Guide.
+Automated Events
+App Installs
+App Opens
+Push Receipts (requires dashboard configuration)
+Push Opens
+Log Events
+Time in App
+Geofence Enter/Exit (requires geofence setup)
+Web View Actions
+Pre-defined Events
+Pre-defined Events are built-in, ready-to-use events that you can easily integrate into your application. These events come with pre-written code examples to simplify implementation. You can trigger these events using the provided sample code patterns:
+Pre-defined Events List
+Screen View Event
+: Logs when a specific screen is viewed.
+Login Event
+: Captures user login actions.
+Register Event
+: Tracks user registration actions.
+Search Event
+: Records search actions performed by users.
+Share Event
+: Logs when content is shared from the app.
+In-App Purchase Event
+: Captures in-app purchase transactions.
+Banner Click Event
+: Tracks clicks on banners within the app.
+Category View Event
+: Logs views of specific categories.
+Battery Level Event
+: Monitors the battery level during app usage.
+Product View Event
+: Tracks when a product is viewed.
+Product Rate Event
+: Logs when a product is rated.
+Product Comment Event
+: Captures comments made on products.
+Order Cancel Event
+: Records when an order is canceled.
+Purchase Event
+: Logs completed purchase transactions.
+Cart View Event
+: Tracks views of the shopping cart.
+Add To Cart Event
+: Captures when items are added to the cart.
+Remove From Cart Event
+: Logs when items are removed from the cart.
+Add To Wishlist Event
+: Tracks when items are added to a wishlist.
+Content Comment Event
+: Captures comments made on content.
+Content Rate Event
+: Logs ratings given to content.
+Content View Event
+: Tracks views of media content.
+Swift
+// Generate an event instance
+// This can be any NetmeraEvent subclass (e.g., NetmeraLoginEvent)
+let event = NetmeraLoginEvent(userId: "USER_ID")
+// Send the event
+Netmera.send(event!)
+Custom Events
+Custom Events provide flexibility beyond the standard and pre-defined options to allow you to track specific user interactions and behaviors within your application.
+Step 1: Define the Event in the Netmera Panel
+Go to the
+Netmera Panel
+and navigate to
+Developers > Events > Create New Event
+section.
+Create a new event and specify the event parameters.
+Set parameter types, define mandatory fields, and configure arrays if required.
+Refer to the
+Creating Custom Events
+guide for detailed instructions.
+Step 2: Import the Generated Code
+After creating the event,
+Netmera
+generates a code snippet.
+Import this generated code into your project to integrate the custom event.
+Sample Generated Code
+Step 3: Extend the Event Class in Your Code
+Choose a built-in event subclass or extend from
+NetmeraEvent
+Define event parameters and ensure they match the panel setup.
+Step 4: Fire the Event
+Make sure the event is correctly set up in the
+Netmera Panel
+before triggering it.
+Implement the event call in your application code.
+Ensure Mandatory Parameters Are Included
+If a required parameter is missing, the request will fail with a
+bad request
+error. Always send mandatory parameters to avoid rejection.
+Custom Events Sample Codes
+When you create an event on the panel, you will receive a code. You are supposed to import the code the panel created for you in your project. Below you will see examples.
+Swift
+var event = new SampleEvent();
+event.intParameter = 2147483647;
+event.stringParameter = "String Parameter";
+event.stringArrayParameter = ["Member1", "Member2"];
+event.doubleParameter = 7.99;
+event.booleanParameter = true;
+event.longParameter = 9223372036854775807;
+event.dateParameter = new Date();
+event.timestampParameter = new Date();
+Netmera.send(event);
+Importing Events to Apps
+If you have multiple apps in the Netmera Panel, you can import events from one app to another. This lets you reuse events across apps efficiently.
+Go to the
+Developers
+section and select
+Events.
+Click
+Import Event Definition.
+Choose the
+Application Name
+from which you want to import events.
+Select the specific
+custom event(s)
+you want to import.
+Click the
+Import
+button in the
+Action
+section.
+Push Inbox
+Geofence & Location
+12 days ago

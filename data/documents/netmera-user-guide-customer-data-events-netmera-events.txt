@@ -77,4 +77,4 @@ Define event attributes, set data types, and specify mandatory parameters as nee
 Once you create a custom event, the Netmera Dashboard automatically generates the necessary source files. You can then integrate these files into your project. The next page provides the codes needed to trigger your custom event.
 Events
 Creating Custom Events
-5 months ago
+6 months ago

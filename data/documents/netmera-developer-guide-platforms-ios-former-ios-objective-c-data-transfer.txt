@@ -1,0 +1,16 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/data-transfer
+Platforms
+iOS
+Former iOS (Objective-C)
+Data Transfer
+Start Data Transfer
+The following method restarts previously stopped requests. It is used when you're ready to resume data transfer after pausing.
+[Netmera stopDataTransfer];
+Stop Data Transfer
+The following method pauses all data requests. It is useful if you need to halt transfers temporarily due to issues like network disruptions. Use
+startDataTransfer()
+to resume.
+[Netmera startDataTransfer];
+User & Attributes
+Advertising ID
+5 months ago

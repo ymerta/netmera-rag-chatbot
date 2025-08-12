@@ -1,0 +1,56 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/api-documentation/rest-api/setup
+API Documentation
+REST API
+Setup
+To access Netmera’s REST API, you must include your
+REST API key
+in the request headers.
+Log in to the
+Netmera Panel
+Navigate to:
+Developers > API
+REST API key
+from the provided field.
+Use
+only the REST API key
+(not JavaScript or mobile keys) for REST API requests.
+Include the API key in the
+X-netmera-api-key
+header of your request.
+Example:
+curl -X POST https:
+//restapi.netmera.com/rest/3.0/sendBulkNotification \
+"Content-Type: application/json"
+-d '{
+"extId"
+"user123"
+"notification"
+"title"
+"Hello"
+"message"
+"Welcome to Netmera!"
+Always include the header
+Content-Type: application/json
+when sending JSON payloads.
+What is
+extId
+(External ID)?
+The
+extId
+is the unique identifier you assign to a
+user
+in your system. It ensures consistency across devices and platforms.
+It must be
+unique per user
+Used to group all app installations (e.g., smartphone, tablet) under a single user.
+Required in most REST API requests (e.g., inbox retrieval, status update).
+Example:
+If John uses your app on both an iPhone and an iPad:
+Both installations should send the same
+extId
+, e.g.,
+"extId": "john123"
+Netmera recognizes these as different devices belonging to the same user.
+REST API
+Notifications
+5 days ago

@@ -1,0 +1,78 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/campaigns/mobile-push
+Campaigns
+Mobile Push
+Mobile push notifications are one of the most effective ways to deliver real-time messages to your users. With Netmera, you can send a variety of mobile push notifications that help you engage, inform, and guide your audience wherever they are.
+These notifications appear directly on users’ mobile devices, allowing you to deliver
+timely
+and
+personalized
+messages. Whether you're sharing a product update, promotional offer, or important alert, mobile push notifications ensure your message is seen.
+Types of Mobile Push Notifications
+Types of Push Notifications
+Text
+Text notifications contain
+only
+text
+, making them quick and easy to read. They are suitable for delivering essential updates such as account changes, limited-time offers, or breaking news alerts. While they are limited in terms of visual content, their simplicity makes them ideal for clear and urgent communication.
+Image
+Image notifications include visual elements such as
+images
+videos
+. These can be used to make your message more engaging and visually appealing. For example, you can showcase a product image, display a promotional banner, or highlight travel destinations. Although these notifications draw more attention, they may not be suitable for conveying detailed information, and users may need to tap through to get the full context.
+Banner (Android only)
+Banner notifications are
+supported
+Android
+devices
+and allow you to display custom content directly on specific screens within your app. This format is useful for drawing attention to urgent updates such as weather alerts or time-sensitive news. Banners are prominent and informative, but should be used thoughtfully, as overuse can affect the user experience.
+Carousel
+Carousel notifications allow you to present
+multiple
+pieces
+content
+within a single message. Users can swipe through different items, such as a selection of products, articles, or media. This format works well when you want to showcase several related items at once. It offers an interactive experience, but including too much content can make the message overwhelming.
+Slider
+Slider notifications let users switch between content items in a
+scrollable
+format. They are especially useful for highlighting a group of products, promoting a music playlist, or guiding users through a fitness routine. While similar to carousels, slider notifications focus more on product exploration within a single message. Depending on your content type, this format may or may not be the right fit for your goals.
+Product Discovery (Android only)
+Product discovery notifications display product details directly within the message, allowing users to view rich content without needing to open the app. This format is ideal for personalized product recommendations based on user behavior, such as recent views or purchase history. As this feature is only available on Android devices, it's best used in campaigns that target this user group specifically.
+Choosing the Right Format
+Each notification type offers different advantages depending on the message you want to send and the experience you want to create. Text-based formats provide simplicity and speed. Media-rich formats increase engagement. Interactive formats like carousels and sliders allow users to explore multiple items in one message. Android-specific formats such as banners and product discovery notifications provide additional opportunities for targeting and customization.
+Notification
+Strenghts
+Weaknesses
+Platform
+Text
+Quick and easy to read. Can be used to convey important information.
+Limited in terms of visual content.
+Mobile
+Image
+Messages can be enriched by adding images or videos, more visually appealing.
+May not be suitable for delivering text-heavy information. Users may need to click through to view the full message.
+Mobile
+Banner
+Can be used to deliver important information quickly and prominently.
+Only available on Android devices. Can be intrusive if used excessively.
+Mobile (android)
+Carousel
+Can display multiple images and products in a single notification. Can be interactive, encouraging users to swipe through the carousel.
+Can be overwhelming if too many items are included. Users may need to swipe through multiple screens to view all content.
+Mobile
+Slider
+Similar to carousel notifications, but with the added ability to switch between products. Can be used to promote new products or services.
+May not be suitable for all types of apps.
+Mobile
+Product Discovery
+Contains details about the product, allows users to view the product content directly from the notification.
+Only available on Android devices.
+Mobile (android)
+So, if you're ready, let's start Creating a Mobile Push.
+Before you begin, you may want to refer to the following Netmera blog post about mobile push notifications. It explores various scenarios and provides examples of how Netmera features can be used to effectively support your engagement goals.
+Related Reading
+How to Build an Efficient Mobile Push Notification Strategy? - Netmera
+Netmera - Omni channel marketing solution
+Efficient Mobile Push Strategy
+About Push Notifications
+Creating a Mobile Push
+1 month ago

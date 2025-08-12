@@ -1,0 +1,40 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/web/sdk-setup/self-hosted-sdk-setup
+Platforms
+Web
+Step 1: Access the Netmera Panel
+Navigate to
+Netmera Panel
+Go to
+Developers
+Netmera Onboarding
+Web
+Site URL
+: Enter the URL of the website where the integration will be performed.
+: This key determines which Netmera Panel will receive data from your site.
+Developer > App Info
+Integration Code
+<script>var netmera = netmera || []</script>
+<script src="CDN_GENERATED_ON_PANEL" async></script>
+On-prem Integration Only:
+If you are completing an on-prem integration, instead of using the code snippet from the panel, use the custom code snippet below with your own CDN host.
+Add this code to the head section of every page on your website
+to complete the integration.
+<script>
+var netmera = netmera || [];
+</script>
+<script src="REPLACE_NM_CDN_HOST" async></script>
+REPLACE_NM_CDN_HOST
+: Replace this with your own CDN host information.
+Integration Files
+Do not download the integration files directly from the panel.
+Instead, refer to the documentation provided at the link
+Integration Documentation
+Important Command Modification
+To modify the commands listed in the
+README
+, you need to add the following command:
+REPLACE_NM_WEB_TOOLS_ENABLED
+Note
+When this command is added, your Netmera CDN-powered widgets, personalization features, etc., will not function. It is essential for the you to implement this command.
+Mobile Web Push for iOS
+22 days ago

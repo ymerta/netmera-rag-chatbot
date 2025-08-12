@@ -1,0 +1,187 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/push-inbox
+Platforms
+React Native
+Push Inbox
+Push Inbox Overview
+NetmeraInbox
+allows you to access and manage previously sent push notifications in an inbox-style interface. You cannot instantiate
+NetmeraInbox
+Filtering Notifications
+Create an instance to specify which push notifications to fetch. You can filter by:
+Status
+: Read, Unread, or Deleted.
+Categories
+: Filter by specific categories.
+Expired Notifications
+: Include or exclude expired notifications.
+Page Size
+: Number of notifications to fetch per request.
+Here is a sample code to determine filtering options:
+import
+{ Netmera
+NetmeraInboxFilter }
+from
+'react-native-netmera'
+const
+netmeraInboxFilter
+new
+NetmeraInboxFilter
+();
+// Filter to show Read or Unread notifications
+netmeraInboxFilter
+.status
+Netmera
+PUSH_OBJECT_STATUS_READ_OR_UNREAD
+netmeraInboxFilter
+.pageSize
+netmeraInboxFilter
+.categories
+"category_1"
+"category_2"
+netmeraInboxFilter
+.includeExpiredObjects
+true
+Fetching the First Page
+Use
+fetchInbox
+to retrieve notifications that match the filter:
+fetchInbox = async() => {
+try{
+const netmeraInboxFilter = new NetmeraInboxFilter()
+netmeraInboxFilter.status = Netmera.PUSH_OBJECT_STATUS_READ_OR_UNREAD
+netmeraInboxFilter.pageSize = 10
+netmeraInboxFilter.categories = ["category_1", "category_2"]
+netmeraInboxFilter.includeExpiredObjects = true
+const inbox = await Netmera.fetchInbox(netmeraInboxFilter)
+console.log("inbox", inbox)
+}catch(e){
+console.log("error", e)
+Once the first page is retrieved, use
+to get additional pages:
+try{
+console.log("inbox", inbox)
+}catch(e){
+console.log("error", e)
+Updating Push Notification Status
+Notifications can have three states:
+Unread (PUSH_OBJECT_STATUS_UNREAD)
+Read (PUSH_OBJECT_STATUS_READ)
+Deleted (PUSH_OBJECT_STATUS_DELETED)
+Use
+inboxUpdateStatus
+to change a notification's status asynchronously:
+await Netmera.inboxUpdateStatus(0, 5, Netmera.PUSH_OBJECT_STATUS_DELETED)
+After React Native 1.5.0 Update:
+With the React Native version 1.5.0 update,  the usage of d.ts (declaration) files is no longer necessary in TypeScript projects.
+Additionally, to access Inbox statuses, it is now done through the
+NMInboxStatus
+enum instead of the
+Netmera
+class.
+For example,
+import {NMInboxStatus} from "react-native-netmera";
+Netmera.PUSH_OBJECT_STATUS_ALL
+// becomes
+NMInboxStatus.STATUS_ALL
+Updating The Status of All Notifications
+You can update the status of all pushes inside inbox using
+updateAll
+method.
+await Netmera.updateAll(Netmera.PUSH_OBJECT_STATUS_READ)
+await Netmera.updateAll(Netmera.PUSH_OBJECT_STATUS_DELETED)
+Counting Notifications by Status
+Retrieve the count of notifications by status:
+//get count of unread push objects
+const count = await Netmera.countForStatus(Netmera.PUSH_OBJECT_STATUS_UNREAD)
+//get count of read push objects
+const count = await Netmera.countForStatus(Netmera.PUSH_OBJECT_STATUS_READ)
+After React Native 1.5.0 Update:
+With the React Native version 1.5.0 update,
+NMInboxStatusCountFilter
+is now directly imported:
+import {NMInboxStatusCountFilter} from "react-native-netmera";
+Inbox Examples
+constructor() {
+super();
+this.state = {
+inbox: [],
+inboxState: Netmera.PUSH_OBJECT_STATUS_ALL,
+countForStatus: 0
+fetchInbox = async () => {
+try {
+const netmeraInboxFilter = new NetmeraInboxFilter();
+netmeraInboxFilter.status = this.state.inboxState;
+netmeraInboxFilter.pageSize = 2;
+const inbox = await Netmera.fetchInbox(netmeraInboxFilter);
+console.log("inbox", inbox);
+this.setState({inbox: inbox});
+} catch (e) {
+console.log("error", e)
+try {
+this.setState({inbox: inbox});
+console.log("inbox", inbox)
+} catch (e) {
+console.log("error", e)
+updateAll = async () => {
+if (!this.state.inbox !== undefined) {
+let updateStatus = this.state.inboxState;
+if (updateStatus === Netmera.PUSH_OBJECT_STATUS_ALL) {
+Alert.alert("Error", "Please select different status than all!!")
+console.log("Please select different status than all!!");
+return;
+try {
+Netmera.updateAll(this.state.inboxState).then(() => {
+this.fetchInbox();
+}).catch((error) => {
+console.log("error: " + error)
+} catch (error) {
+console.log("error: " + error)
+//Use this method to trigger the action associated with a push message in the inbox
+handlePushObject = async () => {
+if (this.state.inbox !== undefined && this.state.inbox.length > 0) {
+Netmera.handlePushObject(this.state.inbox[0].pushId)
+handleInteractiveAction = async () => {
+if (this.state.inbox !== undefined && this.state.inbox.length > 0) {
+for (let i = 0; i < this.state.inbox.length; i++) {
+const element = this.state.inbox[i];
+if (element.interactiveActions !== undefined && element.interactiveActions.length > 0) {
+const action = JSON.parse(element.interactiveActions)[0]
+Netmera.handleInteractiveAction(action.id);
+return;
+countForStatus = async () => {
+try {
+const count = await Netmera.countForStatus(this.state.inboxState);
+this.setState({countForStatus: count})
+} catch (e) {
+inboxUpdateStatus = async () => {
+if (this.state.inboxState === Netmera.PUSH_OBJECT_STATUS_ALL) {
+Alert.alert("Error", "Please select different status than all!!")
+console.log("Please select different status than all!!");
+return;
+if (this.state.inbox === undefined || this.state.inbox < 2) {
+Alert.alert("Error", "Push objects count is less then 2!")
+console.log("Push objects count is less then 2!");
+return;
+Netmera.inboxUpdateStatus(0, 2, this.state.inboxState).then(() => {
+console.log("2 push object status was changed successfully.")
+}).catch((error) => {
+console.log("error: " + error)
+});
+updateInboxState = (value) => {
+this.setState({inboxState: value})
+inboxCountForStatus = async () => {
+try {
+const filter = new NMInboxStatusCountFilter();
+filter.nmInboxStatus = this.state.inboxState;
+filter.includeExpired = true;
+const nmInboxStatusCount = await Netmera.getInboxCountForStatus(filter);
+let countStatusText =
+"READ: " +  nmInboxStatusCount[NMInboxStatus.STATUS_READ] + ", " +
+"UNREAD: " +  nmInboxStatusCount[NMInboxStatus.STATUS_UNREAD]
+this.setState({countForStatus: countStatusText})
+console.log("nmInboxStatusCount: ", countStatusText);
+} catch (e) {
+console.log("error", e)
+Sound & Vibration
+Events
+1 month ago

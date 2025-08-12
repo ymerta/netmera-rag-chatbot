@@ -1,0 +1,77 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/web/deep-linking
+Platforms
+Web
+Deep Linking
+Adding Deep Links in REST API
+After creating a web transactional push from the panel, you can customize the desired Deeplink using the sample code in the API & Config step (in Postman). Here's an example:
+curl --location 'https:
+//restapi.netmera.com/rest/3.0/sendNotification' \
+"X-netmera-api-key: your_rest_api_key"
+"Content-Type: application/json"
+-d '{
+"1000"
+"target"
+"extId"
+"exidn"
+"message"
+"params"
+"click"
+"deeplink"
+"https://www.netmera.com?id=5&name=@{exid}&cat=webpush"
+Ensure Deeplink Parameters Match User Data
+Parameters like
+@{extID}
+must match the user’s profile data. If not, the notification delivery will fail. Double-check that parameters used in the Deeplink exist in the user data.
+Add Deeplink in "Click" Node
+Set the Deeplink directly in the
+click
+node
+deeplink
+. Parameters like
+@{parameter}
+should be replaced with actual profile attributes.
+Adding Deep Links on Netmera Panel
+Creating a Web Transactional Push:
+To learn how to create a Web Transactional Push on the Netmera Panel, please refer to our
+User Guide
+for step-by-step instructions and detailed information.
+Step 1: Create a New Deeplink
+Log into the Netmera Panel.
+Go to
+Developers
+Deeplinks
+Click
+Create New Deeplink
+Step 2: Provide Deeplink Details
+Deeplink Name
+: Give a unique name for the Deeplink.
+Deeplink URL
+: Use placeholders like
+https://www.netmera.com@{age}
+, where parameters are in
+Step 3: Define Deeplink Parameters
+@{parameter}
+: Refers to Profile Attributes set on the Netmera Panel. These parameters change based on the user’s profile data. For example,
+https://www.netmera.com/alex
+https://www.netmera.com/jimmy
+{parameter}
+: This is defined in
+Deeplink Parameters
+and is used across all users in the campaign. For example, if
+{parameter}
+{city}
+, it will appear as
+https://www.netmera.com/london
+for all users.
+Step 4: Configure Deeplink Parameters
+Once saved, you can use parameters like
+{city}
+in the Deeplink URL. For example, if
+{city}
+is set as
+London
+, users will receive
+https://www.netmera.com/london
+Mobile Web Push for iOS
+Custom Deep Links
+5 months ago

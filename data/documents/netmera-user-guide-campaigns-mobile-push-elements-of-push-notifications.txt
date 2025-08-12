@@ -1,0 +1,30 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/campaigns/mobile-push/elements-of-push-notifications
+Campaigns
+Mobile Push
+Elements of Push Notifications
+Elements of Mobile Push Notifications
+Elements of Push Notifications
+a. Small Icon
+24×24 - 96×96 to fit all device sizes. Must be white with a transparent background. PNG.
+b. Title
+(Title)
+Restricted to 50 characters.
+c. Body
+(Notification Message)
+Restricted to 150 characters.
+d. Large Picture
+(Android/iOS Media URL)
+1440×720 or 2:1 aspect ratio. PNG, JPG, GIF (not animated).
+e. App Name
+Can't be changed.
+f. Time Stamp
+Time message received.
+g. Icon
+(Android/iOS Thumbnail)
+192×192 or larger. PNG, JPG, GIF (not animated).
+h. Action Buttons
+(Settings->Button Sets)
+Supports up to 3 buttons can be edited in Settings -> Button Sets
+Test and Send: GO!
+Message Categories
+1 year ago

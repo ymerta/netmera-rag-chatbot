@@ -1,0 +1,92 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/geofence-and-location/background-location-permission
+Platforms
+Android
+Geofence & Location
+Background Location Permission
+Background Location Access for Android 10+
+Android 10 and later introduce stricter privacy controls, limiting background location access. This guide explains required permissions, Google’s changes, and how Netmera helps request background location access.
+To access location in the background, your application must request the
+permission.
+Google’s Privacy Changes
+Privacy Enhancements
+: Apps can’t request background location permission directly. Users initially see only “Allow only while using the app” or “Deny.”
+User Control
+: To enable background location, users must manually update settings:
+Settings > Apps > [Your App] > Permissions > Location > Allow always
+How Netmera Helps
+Netmera provides tools to request background location access smoothly.
+Background Location Permission Event
+What It Does
+: Triggers when the app requests
+How It Works
+: This event can start an automation guiding users to enable background location.
+Setting Up a Background Location Permission Widget
+This feature enables Netmera customers to display a widget that informs users about background location permissions. Here’s how to set it up:
+Step 1: Create a Mobile Widget
+Use the panel to create a widget that informs users about the need for background location access. Further information can be found on our User Documentation about how to create
+Widgets
+and
+Adding Click Actions
+Design Your Widget
+Configure Button Actions
+Set up two button actions:
+Allow Permission
+button: Directs users to
+Settings > Location
+so they can enable
+“Allow always”
+Deny Permission
+button: Provides the option to decline.
+Step 2: Configure the Permission Event
+Add
+to your app’s code.
+This triggers the event, launching automation.
+Step 3: Automate a Push Notification
+Send a notification when the event triggers.
+Use
+Handle Special Action
+to prompt users.
+Further information can be found on our User Documentation about Automation Scenarios and
+Handle Special Action
+Example Scenario for Automation Setup
+Automation Setup:
+Begin by setting up the automation in Create New Automation section.
+Select the
+Handle Special Action
+tab during the automation configuration.
+Event Selection:
+In the
+Event
+section, choose the
+Background Location Permission
+Occurrence Selection:
+Under
+Occurrence
+, select
+. This ensures that the event is triggered once, upon the first request for background location permission.
+User Limit:
+When the
+Background Location Permission
+Background Location Permission event
+It’s important to set a
+limit
+for how often the widget (asking for permission) is shown to the user. This will prevent showing the widget too frequently and ensure the user experience remains positive.
+Example of widget frequency limit
+: Set the widget to appear no more than
+once per week
+or based on other suitable time intervals to avoid overuse.
+Step 4: Users Updating Settings
+When users tap the
+Update Setting
+Background Location Permission
+Event Trigger Conditions
+The event will trigger when
+all of the following
+are true:
+The device is running Android 10 or above,
+The app includes background location permission in the manifest,
+The app already has foreground location permission.
+If both foreground and background permissions are granted, this event will not trigger.
+Geofence & Location
+User & Attributes
+5 months ago

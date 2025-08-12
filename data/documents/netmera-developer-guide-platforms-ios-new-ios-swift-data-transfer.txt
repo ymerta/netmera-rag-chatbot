@@ -1,0 +1,31 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/data-transfer
+Platforms
+iOS
+New iOS (Swift)
+Data Transfer
+Start Data Transfer
+The following method restarts previously stopped requests. It is used when you're ready to resume data transfer after pausing.
+Netmera.
+setDataTransferEnabled
+true
+Stop Data Transfer
+The following method pauses all data requests. It is useful if you need to halt transfers temporarily due to issues like network disruptions. Use
+setDataTransferEnabled()
+to resume.
+Netmera.
+setDataTransferEnabled
+false
+Check Data Transfer Status
+The following method
+returns the current status
+of the data transfer setting.
+It will return
+true
+if data transfer is enabled, and
+false
+if it is disabled.
+Netmera.
+isDataTransferEnabled
+User & Attributes
+Advertising ID
+1 month ago

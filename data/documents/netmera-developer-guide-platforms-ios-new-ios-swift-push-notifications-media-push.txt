@@ -1,0 +1,151 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/push-notifications/media-push
+Platforms
+iOS
+New iOS (Swift)
+Push Notifications
+Media Push
+Step 1: Create a New Notification Service Extension
+To create a new Notification Service Extension to your application:
+Xcode
+click
+File > New > Target
+. Choose
+Notification Service Extension
+Choose
+Notification Service Extension
+A new class named
+NotificationService
+will be created. It should be extended from
+MyNetmeraNotificationServiceExtension
+class.
+Your
+NotificationService
+class should look like the following:
+import
+UserNotifications
+import
+NetmeraNotificationServiceExtension
+class
+NotificationService
+NotificationServiceExtension
+override
+func
+didReceive
+request
+: UNNotificationRequest,
+withContentHandler
+contentHandler
+@escaping
+(UNNotificationContent)
+Void
+) {
+super.
+didReceive
+request, withContentHandler
+contentHandler
+override
+func
+serviceExtensionTimeWillExpire
+() {
+super.
+serviceExtensionTimeWillExpire
+Optional: Integrating Notification Service Extension Using CocoaPods
+If you're using a
+Podfile
+for dependency management, follow these steps along with the rest of the steps from 1 to 5:
+Add
+NetmeraNotificationServiceExtension
+in your Podfile:
+Install it to your extension target.
+pod 'NetmeraNotificationServiceExtension'
+Note:
+If you're not using CocoaPods, you can skip this step.
+Step 2: Add App Group Capability
+You need to add the App Groups capability to both your main app target and your Service Extension target via the Signing & Capabilities section.
+Open your project in Xcode.
+Go to the Signing & Capabilities tab.
+Select App Groups from the list.
+Add or select an existing App Group (e.g.,
+group.example.app
+Repeat steps 2–6 for your
+Service Extension target
+Add the App Group name under the appropriate key (e.g.,
+NetmeraAppGroup
+) to match the App Group you added in Xcode.
+Open the
+Netmera-Config.plist
+file in your project.
+Step 3: Add Your
+AppGroupName
+Add your
+AppGroupName
+in your Netmera-Config.plist.
+<key>sdk_params</key>
+<dict>
+<key>app_group_name</key> // Add this line in Config.plist
+<string>{YourAppGroupName}</string> // Add this line in Config.plist
+<key>use_ui_scene</key>
+<false/>
+<key>api_key</key>
+<key>custom_events</key>
+<array>
+<string>{YourCustomEvent}</string>
+</array>
+</dict>
+If you don't have a
+Netmera-Config.plist
+see the step here
+1. Configure with Netmera Plist
+Step 4: Select Targets in Target Membership
+Select
+all three targets
+in the Target Membership section on the right.
+Step 5: Select Main Project & Service Extension
+Go to
+Notification Service > Target Membership
+Select both the main project and the service extension.
+Step 6: Receiving Http Media Contents
+Sample Service Extention Info.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+<key>NSExtension</key>
+<dict>
+<key>NSExtensionPointIdentifier</key>
+<string>com.apple.usernotifications.service</string>
+<key>NSExtensionPrincipalClass</key>
+<string>$(PRODUCT_MODULE_NAME).NotificationService</string>
+</dict>
+</dict>
+</plist>
+If you want to allow your application to receive http media contents:
+Click
+Info.plist
+under
+Notification Service Extension,
+Add
+App Transport Security Settings,
+Add
+Allow Arbitrary Loads
+under App Transport Security Settings and set it to
+YES.
+Troubleshooting
+If push notifications do not display correctly:
+Go to
+Build Settings > Runpath Search Paths
+in the extension target. Ensure the following paths are added:
+@executable_path/../../Frameworks
+@executable_path/Frameworks
+@loader_path/Frameworks
+Remove the
+default label
+MainInterface
+Widget and In-App Messages
+Carousel, Slider and Thumbnail Push
+3 months ago

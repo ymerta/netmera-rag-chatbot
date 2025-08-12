@@ -1,0 +1,587 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/sdk-integration
+Platforms
+Android
+Onboarding Checklist: Android
+Please find the Onboarding Checklist for iOS and Android below. Follow the titles in the checklist to ensure you have completed each essential step in your onboarding process with Netmera.
+Netmera Mobile Technical Onboarding Checklist.xlsx
+Step 1: Select a Platform
+Navigate to
+Developers
+Netmera Onboarding
+Select
+Android
+and click
+Start
+to proceed.
+Step 2: Create a Firebase Configuration
+Netmera uses Firebase Cloud Messaging (FCM) for delivering push notifications.
+Go to the
+Firebase Developers Console
+and create a new project.
+Generate a new
+(JSON file) for your project.
+Upload the JSON file you downloaded from Firebase Cloud Messaging to the
+Project > app-level root
+directory
+Choose one of the four options:
+Node.js, Java, Python, and Go
+Upload this file in
+Native Android
+Do not
+use the API key from a
+test
+panel
+in production.
+Each panel has a unique API key
+, and using the wrong one can result in data misdirection or errors.
+Go to the Netmera Panel.
+Standard Gradle
+If your project is using Standard Gradle:
+Project's build.gradle
+App's build.gradle
+In this step, only copy the url specified below and add it to maven.
+buildscript {
+repositories {
+google()
+maven {url 'https://developer.huawei.com/repo/'} // only include for HMS copy the url and add it to maven
+dependencies {
+classpath 'com.android.tools.build:gradle:{your_project_android_tools_version}'
+classpath 'com.google.gms:google-services:{your_google_services_version}'
+classpath 'com.huawei.agconnect:agcp:{your_agcp_version}' // only include for HMS
+allprojects {
+repositories {
+google()
+maven {url 'https://developer.huawei.com/repo/'} // only include for HMS  copy the url and add it to maven
+maven { url "https://release.netmera.com/release/android" }
+You should add Netmera dependency to your dependencies section in your:
+build.gradle(:app)
+Check
+Changelog
+dependencies {
+implementation 'com.netmera:nmcore:4.x.x'
+implementation 'com.netmera:nmfcm:4.x.x'
+implementation 'com.netmera:nmhms:4.x.x'
+// If you only need to support Google services, use the following versions:
+// implementation 'com.netmera:nmcore:4.x.x'
+// implementation 'com.netmera:nmfcm:4.x.x'
+// For applications that only want to support Huawei devices, use these dependencies:
+// implementation 'com.netmera:nmcore:4.x.x'
+// implementation 'com.netmera:nmhms:4.x.x'
+// Must be added at the bottom of the app's build.gradle
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect' // only include for HMS
+Netmera BOM (Bill of Materials) Support
+BOM support is available starting from version 4.5.0.
+nmcore
+nmfcm
+, and
+nmhms
+modules.
+dependencies {
+implementation platform('com.netmera:netmera-bom:4.x.x')
+implementation 'com.netmera:nmcore'
+implementation 'com.netmera:nmfcm'
+implementation 'com.netmera:nmhms'
+// If you only need to support Google services, use the following versions:
+// implementation platform('com.netmera:netmera-bom:4.x.x')
+// implementation 'com.netmera:nmcore'
+// implementation 'com.netmera:nmfcm'
+// For applications that only want to support Huawei devices, use these dependencies:
+// implementation platform('com.netmera:netmera-bom:4.x.x')
+// implementation 'com.netmera:nmcore'
+// implementation 'com.netmera:nmhms'
+// Must be added at the bottom of the app's build.gradle
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect' // only include for HMS
+Gradle Version Catalogs
+If your project is using
+Gradle Version Catalogs
+Project's build.gradle
+App's build.gradle
+settings.gradle
+libs.version.toml
+plugins {
+alias(libs.plugins.androidApplication) apply false
+alias(libs.plugins.google.services) apply false
+alias(libs.plugins.androidLibrary) apply false
+If you want to integrate Huawei Mobile Services (HMS), add the following configuration to your
+build.gradle
+file before
+plugins
+Following part is only for Huawei integration.
+// This part is only for Huawei integration
+buildscript {
+val agpVersion = "project_agp_version"
+val agcpVersion = "agcp_version"
+repositories {
+maven {
+url = uri("https://developer.huawei.com/repo/")
+dependencies {
+classpath("com.android.tools.build:gradle:$agpVersion")
+classpath("com.huawei.agconnect:agcp:$agcpVersion")on")
+plugins {
+...
+For more information, visit the following link:
+Huawei AppGallery Connect Guide
+Note: Check your
+libs.versions.toml
+file:
+This file is usually located within the
+gradle
+folder in the root directory of your project.
+Review how the relevant plugin is defined.
+plugins {
+alias(libs.plugins.androidApplication)
+alias(libs.plugins.google.services)
+id("com.huawei.agconnect") // only include for HMS
+dependencies {
+implementation(libs.netmera.core)
+implementation(libs.netmera.fcm)
+implementation(libs.netmera.hms) // only include for HMS
+Netmera BOM (Bill of Materials) Support
+BOM support is available starting from version 4.5.0.
+nmcore
+nmfcm
+, and
+nmhms
+modules.
+dependencies {
+implementation(platform(libs.netmera.bom))
+implementation(libs.netmera.core)
+implementation(libs.netmera.fcm)
+implementation(libs.netmera.hms) // only include for HMS
+dependencyResolutionManagement {
+repositories {
+google()
+maven {
+url = uri("https://release.netmera.com/release/android")
+maven {
+url = uri("https://developer.huawei.com/repo/") // only include for HMS
+In this step, only copy the url "https://release.netmera.com/release/android" and add it to maven.
+Check
+Changelog
+[versions]
+netmeraCore = "4.x.x"
+netmeraFcm = "4.x.x"
+netmeraHms = "4.x.x"
+googleServices = "your_google_services_version"
+[libraries]
+netmera-core = { group = "com.netmera", name = "nmcore", version.ref = "netmeraCore" }
+netmera-fcm = { group = "com.netmera", name = "nmfcm", version.ref = "netmeraFcm" }
+netmera-hms = { group = "com.netmera", name = "nmhms", version.ref = "netmeraHms" } // only include for HMS
+[plugins]
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+Netmera BOM (Bill of Materials) Support
+BOM support is available starting from version 4.5.0.
+nmcore
+nmfcm
+, and
+nmhms
+modules.
+[versions]
+netmeraBom = "4.x.x"
+[libraries]
+netmera-bom  = { group = "com.netmera", name = "netmera-bom", version.ref = "netmeraBom" }
+netmera-core = { group = "com.netmera", name = "nmcore" }
+netmera-fcm  = { group = "com.netmera", name = "nmfcm" }
+netmera-hms  = { group = "com.netmera", name = "nmhms" }
+Groovy
+Project's build.gradle
+App's build.gradle
+settings.gradle
+libs.version.toml
+plugins {
+alias(libs.plugins.androidApplication) apply false
+alias(libs.plugins.google.services) apply false
+alias(libs.plugins.androidLibrary) apply false
+If you want to integrate Huawei Mobile Services (HMS), add the following configuration to your
+build.gradle
+file before
+plugins
+Following part is only for Huawei integration.
+// This part is only for Huawei integration
+buildscript {
+val agpVersion = "YOUR_PROJECT_AGP_VERSION" //
+repositories {
+maven { url 'https://developer.huawei.com/repo/' }
+dependencies {
+classpath "com.huawei.agconnect:agcp:your_agcp_version"
+plugins {
+...
+For more information, visit the following link:
+Huawei AppGallery Connect Guide
+Note: Check your
+libs.versions.toml
+file:
+This file is usually located within the
+gradle
+folder in the root directory of your project.
+Review how the relevant plugin is defined.
+plugins {
+alias(libs.plugins.androidApplication)
+alias(libs.plugins.google.services)
+id("com.huawei.agconnect") // only include for HMS
+dependencies {
+implementation libs.netmera.core
+implementation libs.netmera.fcm
+implementation libs.netmera.hms // only include for HMS
+Netmera BOM (Bill of Materials) Support
+BOM support is available starting from version 4.5.0.
+nmcore
+nmfcm
+, and
+nmhms
+modules.
+dependencies {
+implementation platform(libs.netmera.bom)
+implementation libs.netmera.core
+implementation libs.netmera.fcm
+implementation libs.netmera.hms // only include for HMS
+dependencyResolutionManagement {
+repositories {
+google()
+maven {
+url "https://release.netmera.com/release/android"
+maven {
+url "https://developer.huawei.com/repo/"
+In this step, only copy the url "https://release.netmera.com/release/android" and add it to maven.
+Check
+Changelog
+[versions]
+netmeraCore = "4.x.x"
+netmeraFcm = "4.x.x"
+netmeraHms = "4.x.x" // only include for HMS
+googleServices = “your_google_services_version”
+[libraries]
+netmera-core = { group = "com.netmera", name = "nmcore", version.ref = "netmeraCore" }
+netmera-fcm = { group = "com.netmera", name = "nmfcm", version.ref = "netmeraFcm" }
+netmera-hms = { group = "com.netmera", name = "nmhms", version.ref = "netmeraHms" } // only include for HMS
+[plugins]
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+Netmera BOM (Bill of Materials) Support
+BOM support is available starting from version 4.5.0.
+nmcore
+nmfcm
+, and
+nmhms
+modules.
+[versions]
+netmeraBom = "4.x.x"
+[libraries]
+netmera-bom  = { group = "com.netmera", name = "netmera-bom", version.ref = "netmeraBom" }
+netmera-core = { group = "com.netmera", name = "nmcore" }
+netmera-fcm  = { group = "com.netmera", name = "nmfcm" }
+netmera-hms  = { group = "com.netmera", name = "nmhms" }
+Add the following initialization
+code inside the
+onCreate()
+method of your
+Application
+class.
+If Application Class is Not Already Present:
+Create an Application Class
+If your project doesn't yet have an
+Application
+class, create one and include the initialization code as shown below.
+Update AndroidManifest.xml
+In the
+AndroidManifest.xml
+, add your
+Application
+class by specifying
+android:name
+in the
+<application>
+tag.
+Java
+registerActivityLifecycleCallbacks
+method must be called in the Main Threat.
+override fun onCreate() {
+super.onCreate()
+// Must be called on the Main Thread
+registerActivityLifecycleCallbacks(NMActivityLifecycleCallbacks(this))
+val configBuilder = NetmeraConfiguration.Builder()
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.huaweiSenderId(PropertiesUtil.hmsSenderId)  // only include for HMS
+.logging(true)  // enables logging in logcat
+.addProvider(NMFCMProvider())
+.addProvider(NMHMSProvider()) // only include for HMS
+Netmera.init(configBuilder.build(this))
+registerActivityLifecycleCallbacks
+method must be called in the Main Threat.
+@Override
+public void onCreate() {
+super.onCreate();
+// Must be called on the Main Thread
+registerActivityLifecycleCallbacks(new NMActivityLifecycleCallbacks(this));
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.huaweiSenderId(PropertiesUtil.hmsSenderId)  // only include for HMS
+.logging(true);  // enable logging in logcat
+.addProvider(new NMFCMProvider())
+.addProvider(new NMHMSProvider());  // only include for HMS
+Netmera.init(configBuilder.build(this));
+Do not
+If these lines are already present in your code, please
+remove
+them:
+NMInitializer.initializeComponents(this)
+AppInitializer.getInstance(this).initializeComponent(NMFCMProviderInitializer::class.java)
+AppInitializer.getInstance(this).initializeComponent(NMHMSProviderInitializer::class.java)
+Add initialization code in
+onCreate()
+method:
+Add the code below within the
+onCreate()
+method of your class that extends
+android.app.Application.
+If your project does not currently have a class that extends
+Application
+, create one.
+Add the newly created or existing
+Application
+class to your
+AndroidManifest.xml
+file using the
+android:name
+attribute within the
+<application>
+tag.
+Add initialization code below.
+override fun onCreate() {
+super.onCreate()
+val configBuilder = NetmeraConfiguration.Builder()
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.huaweiSenderId(PropertiesUtil.hmsSenderId)  // only include for HMS
+.logging(true)  // Allows Netmera logs to appear in logcat
+Netmera.init(configBuilder.build(this))
+Java
+@Override
+public void onCreate() {
+super.onCreate();
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.huaweiSenderId(PropertiesUtil.hmsSenderId) // only include for HMS
+.logging(true);  // Allows Netmera logs to appear in logcat
+Netmera.init(configBuilder.build(this));
+Warning: Init Method Must Be Added in the Main Thread
+Ensure that
+init
+methods are added in the main thread. Adding them in the background may lead to unexpected behavior and potential issues.
+Autostart Troubleshooting:
+After implementing the necessary enhancements above:
+Call the Initialization Method
+Use the provided initialization method to set up Netmera in your application.
+Create
+NetmeraConfiguration
+NetmeraConfiguration
+object.
+AutoStartup
+If the AutoStartup Feature is Disabled in Your Application:
+above the
+init
+method:
+fun onCreate() {
+super.onCreate()
+NMInitializer.initializeComponents(this)
+AppInitializer.getInstance(this).initializeComponent(NMFCMProviderInitializer::class.java)
+AppInitializer.getInstance(this).initializeComponent(NMHMSProviderInitializer::class.java) // only include for HMS
+...
+Netmera.init(configBuilder.build(this))
+Java
+@Override public void onCreate() {
+super.onCreate();
+NMInitializer.initializeComponents(this);
+AppInitializer.getInstance(this).initializeComponent(NMFCMProviderInitializer.class);
+AppInitializer.getInstance(this).initializeComponent(NMHMSProviderInitializer.class); // only include for HMS
+...
+Netmera.init(configBuilder.build(this));
+Configuring baseUrl for On-Premise Applications
+For On-Premise Applications:
+Include the following code to configure the base URL and API key:
+For Non-On-Premise Applications:
+Only the API key needs to be configured:
+Optional: Initialization Callback
+To implement the initialization callback:
+Add the following code to handle success and failure:
+For detailed information, you can visit >
+Push Callbacks
+Java
+Netmera.init(
+configBuilder.build(this),
+object : NMInitSessionListener {
+override fun onSuccess() {
+Log.i("NetmeraApp", "Session init completed")
+override fun onFailure(error: String?) {
+Log.e(
+"NetmeraApp",
+"Error occurred when trying to init session with Netmera. Error::$error"
+Netmera.init(
+configBuilder.build(this),
+new NMInitSessionListener() {
+@Override
+public void onSuccess() {
+Log.i("NetmeraApp", "Session init completed");
+@Override
+public void onFailure(String error) {
+Log.e(
+"NetmeraApp",
+"Error occurred when trying to init session with Netmera. Error::" + error
+Optional: Enable Logging
+To enable logging for debugging, add the following code in the
+onCreate()
+method of your
+Application
+class:
+Enable logging
+Java
+.logging(true)
+Netmera.logging(true);
+Disable logging for production
+When preparing your app for release, set
+.logging(false)
+Java
+.logging(false)
+Netmera.logging(false);
+Set
+.logging (false)
+while on prod:
+Before releasing your app to the store, make sure that
+.logging
+is disabled (set to
+false
+) in the production environment.
+Step 6: Android 13 Push Notification Permissions
+Android 13 introduced significant changes to how push notification permissions are handled.
+Increased User Control:
+Apps targeting
+API Level 33 and above
+now have more control over when and how they request push notification permissions. This allows for a more user-friendly and context-aware permission request experience.
+Automatic Permission Requests for Older Apps:
+For apps targeting
+API Level 32 and below
+running on Android 13, the system automatically prompts the user for push notification permission when the app creates its first notification channel.
+On Android 13:
+For apps targeting API Level 32 and below, this initialization process will trigger the automatic system prompt for push notification permission.
+On Android 12 and below:
+The system generally assumes push notification permission has already been granted.
+Requesting Push Permission
+Add this method in the
+onCreate()
+method of your
+MainActivity
+, below
+super.onCreate(savedInstanceState)
+to request push notification permissions from the user.
+Java
+Netmera.requestNotificationPermissions(this)
+Netmera.requestNotificationPermissions(this);
+Push Enable/Disable User Flow
+Granting Permission:
+The user triggers
+requestNotificationPermissions()
+, and if they grant permission, a push enable request is sent.
+Handling Denial:
+Denying Permission:
+If the user triggers
+requestNotificationPermissions()
+and denies permission, a push disable request is sent.
+Reattempt After Denial:
+Checking Notification Status
+This method allows checking whether the necessary permissions for the application have been obtained.
+Java
+checkNotificationPermission()
+checkNotificationPermission()
+Responses
+When this method is called, it would return one of the following responses:
+NOTDETERMINED
+The user has opened the app but hasn't made a decision about notification permissions yet.
+GRANTED
+The user has granted notification permission, and the app can send notifications.
+DENIED
+The user has denied permission or has blocked notifications through system settings.
+Managing Push Notifications
+// Enables push notifications
+Netmera.enablePush();
+// Disables push notifications
+Netmera.disablePush();
+Optional: Email Permission Preferences
+In version 3.9.18, the
+Email Preferences
+feature allows you to
+request email permission
+from users. Use the following method to manage email permission:
+Java
+fun setEmailPermission(isAllowed: Boolean)
+public static void setEmailPermission(boolean isAllowed);
+Revoking Email Permission:
+To revoke email permission, execute the following code:
+Java
+Netmera.setEmailPermission(false)
+Netmera.setEmailPermission(false);
+Granting Email Permission:
+To grant email permission, execute:
+Java
+Netmera.setEmailPermission(true)
+Netmera.setEmailPermission(true);
+Optional: Firebase Messaging Service Class
+To integrate Netmera’s push notifications alongside Firebase Cloud Messaging (FCM), follow these steps:
+Override
+onMessageReceived
+In your Firebase Messaging Service class, call Netmera's
+onNetmeraPushMessageReceived
+method inside your own
+onMessageReceived
+method.
+Handle FCM Token Renewal
+When the FCM token is renewed, call the
+Netmera.onNetmeraNewToken(token)
+method below to forward the new token to Netmera. Use the following code to do so:
+Java
+class PushMessaging : FirebaseMessagingService() {
+override fun onMessageReceived(remoteMessage: RemoteMessage) {
+super.onMessageReceived(remoteMessage)
+if (Netmera.isNetmeraRemoteMessage(remoteMessage)) {
+Netmera.onNetmeraPushMessageReceived(remoteMessage)
+} else {
+// Other operations
+override fun onNewToken(token: String) {
+super.onNewToken(token)
+Netmera.onNetmeraNewToken(token)
+public class PushMessaging extends FirebaseMessagingService {
+@Override
+public void onMessageReceived(RemoteMessage remoteMessage) {
+super.onMessageReceived(remoteMessage);
+if (Netmera.isNetmeraRemoteMessage(remoteMessage)) {
+Netmera.onNetmeraPushMessageReceived(remoteMessage);
+} else {
+// Other operations
+@Override
+public void onNewToken(String token) {
+super.onNewToken(token);
+Netmera.onNetmeraNewToken(token);
+Important Note for Obfuscation:
+No special obfuscation rules are needed for Netmera. Its functionality remains unaffected, even with code obfuscation enabled.
+Push Callbacks
+Netmera provides the following push callbacks for better push notification management:
+Push Register, Push Receive, Push Open, Push Dismiss, Push Button Click.
+For detailed implementation, please refer to the full documentation >
+Push Callbacks
+Standard Push Notifications
+Interactive Push Notifications
+Widgets
+Push Notifications with Deeplinks
+Warning During App Store Submission:
+When submitting your application to the App Store, you might encounter the
+com.google.android.gms.permission.AD_ID
+alert. Here’s how to handle it:
+Choose
+'Yes'
+when prompted.
+On the subsequent page, make sure the
+'analytics'
+option is selected.
+After this, no further additions to the manifest are required; simply merging the manifest will suffice.
+Android
+Huawei Integration
+10 days ago

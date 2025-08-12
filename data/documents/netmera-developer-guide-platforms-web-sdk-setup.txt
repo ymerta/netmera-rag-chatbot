@@ -1,0 +1,234 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/web/sdk-setup
+Platforms
+Web
+Supported Platforms
+Mac OS
+Website push notifications are supported by Mac OS X 10.9 ("Mavericks") and later releases.
+Chrome
+Website push notifications are supported by Chrome version 42 and later releases.
+Firefox
+Supported.
+Edge
+Supported.
+Yandex
+Supported.
+Opera
+Supported.
+To see browser penetration you can visit the following sites,
+Browsers usage rate on netmarketshare:
+Browser Market Share
+Browsers usage rate on w3schools:
+Browser Statistics
+Google Chrome Browser
+Step 1:
+Select a Platform
+Navigate to
+Developers > Netmera Onboarding.
+Select
+Web
+to proceed to the next step.
+If integration is complete but requires updates later, click the
+Edit or Continue
+button to make changes.
+Insert the code snippet into the
+head
+section of your project:
+"eslintConfig": {
+"globals": {
+"netmera": true
+//  If you use react or vue, add your code on your project package.json file.
+Include the files in your project's root directory without altering their names or contents.
+Use the
+Recheck Files
+button to check if your files have been uploaded successfully.
+If You Have an Existing
+manifest.json
+File
+Ensure your
+manifest.json
+includes the following important fields:
+"gcm_sender_id"
+"gcm_user_visible_only"
+These fields are critical for enabling push notification functionality and should be prioritized over fields like
+"name"
+and
+"short_name"
+If You Don’t Have a
+manifest.json
+File
+Download the
+manifest.json
+file.
+Open the downloaded file and locate the
+"sender_id"
+field.
+Replace the
+"sender_id"
+value with the
+Firebase Sender ID
+from your FCM project.
+Save the changes and copy the updated
+manifest.json
+file to the
+root directory
+of your website.
+Geolocation enables the collection and tracking of a user’s
+physical location or coordinates
+whenever they visit your website.
+By enabling geolocation, you can gather precise location data for each visit, enhancing user insights and tailoring the experience based on their location.
+Session length refers to the duration (measured in minutes) that a user’s session remains active on your website.
+The
+ensures that the user’s session is preserved even when the web application is running in the background.
+Default Session Length
+The default session length is set to
+30 minutes
+If a user remains active on your website for
+30 minutes or less
+, their session will be maintained, even if they momentarily switch to other tasks or windows.
+Proceed to the third step by clicking the
+Save
+button.
+Guidelines for Successful Testing
+Avoid Testing on Localhost
+Testing on a
+localhost
+environment may not accurately reflect the behavior of features like Fancybox or events.
+For accurate and reliable results, always deploy your project to a
+production environment
+Push Notifications Testing
+Push notifications
+cannot
+be sent in a
+localhost
+environment.
+To effectively test push notifications:
+Use a
+real domain
+or deploy your project to a
+live domain
+Testing on
+localhost
+may result in a
+403 generic error
+Step 3: Push Settings
+Chromium Browsers Push Settings
+Step 1. Chrome Push Settings
+Push Enabled:
+Selecting this option allows you to configure push notifications.
+Push
+Disabled:
+If you select this, the integration completes without push notifications, but users can still access the panel and collect events.
+Ask for Permission After Visits:
+Define when the notification permission prompt appears (default: after 1 visit).
+UTM Parameter:
+Automatically defines Netmera UTM parameters.
+Source: Netmera
+Medium: Campaign Title
+ID: Campaign Name
+Used for authentication when sending notifications.
+Migration: If migrating from another service, add your existing keys.
+Generate New: Use the "Generate" button if no keys exist.
+Icon URL:
+Add a URL for the image icon to display in web push notifications.
+Navigate to Firebase Developer Console > Project Settings > Cloud Messaging.
+Step 2. Firebase Setup
+Go to the
+Firebase console
+and log in with your Google ID.
+Create a New Project
+with a meaningful name, e.g., "(domain name) Push."
+Complete project creation and go to
+Project Settings > Cloud Messaging
+to find your
+Sender ID
+and
+Safari Push Settings
+Site Name:
+Enter your website's name.
+Website Push ID:
+The unique identifier assigned during certificate creation.
+Allowed Sites:
+Specify URLs where Netmera integration will be active.
+Webpush Icon:
+Upload a 256x256 icon for Safari push notifications.
+APNS Certificate:
+Export from Apple Developer Portal in
+p12 format
+Certificate Password:
+Enter the password for the APNS certificate.
+Certificate Type:
+Select
+Prod
+for production use.
+APNS for Mac OS Devices
+To enable macOS push notifications, follow these steps:
+Creating a Web Site Push Identifier
+Log in to the Apple Developer Portal
+Use your Apple ID with "Agent" privileges.
+Navigate to Certificates, Identifiers & Profiles
+Click Manage your certificates, App IDs, devices, and provisioning profiles.
+Create a Website Push ID
+In the left-hand menu, click Identifiers, then select Website Push IDs.
+Click the + button in the top-right corner to create a new Website Push ID.
+Provide Details
+Description: Add a name for your push ID.
+Identifier: Use the reverse domain name format:
+Start with
+web.
+and typically end with
+.push
+(e.g.,
+web.com.example.push
+Finalize
+Click Continue and complete the process.
+Creating a Certificate
+Return to the Certificates Page
+Click the
+button in the top-right corner. Select Website Push ID Certificate under the Production section.
+Choose the Website Push ID
+Select the push ID you created earlier and click Continue.
+Generate a CSR
+Download the Certificate
+It will appear as Website Push ID:
+web.com.example.push
+Expand the certificate by clicking the arrow. Command-click both the certificate and its key. Right-click and choose Export 2 items...
+Save as a p12 File
+Note:
+Save the password for later use.
+Configuration in the Netmera Panel
+Navigate to
+Developers > Netmera Onboarding > Web
+Fill in all required fields and upload the
+p12 file
+Step 4: Fancy Box Settings
+Enable Fancy Box:
+Choose whether to display the Fancy Box for notification prompts or rely solely on the native browser permission request.
+Show Again After:
+Set the timeframe for when the Fancy Box should reappear for users who declined the notification permission initially.
+Animate Fancy Box:
+Enable this option to add animated effects to the Fancy Box for a more engaging user experience.
+Preview
+Use the preview option to see how the Fancy Box will appear to users.
+Customize Fancy Box:
+Personalize the Fancy Box design in this section.
+Customization Options
+Text:
+Customize the header, informational text, and button labels to deliver a clear and inviting message to users.
+Size:
+Adjust the width, height, border radius, and text size to fit seamlessly with your website's layout.
+Color:
+Select the background colors for the Fancy Box frames and buttons, as well as the font colors, to match your site's color palette and branding.
+Font:
+Choose from a variety of font styles, such as
+inherit
+initial
+italic
+normal
+oblique
+revert
+, or
+unset
+, to complement your website's typography.
+After completing all the integration steps:
+Web
+6 months ago

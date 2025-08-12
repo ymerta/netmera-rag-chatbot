@@ -1,0 +1,111 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications/push-payload-receivers
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Push Payload Receivers
+Click Push Events
+, allowing you to track when users interact with notifications. However, if you experience issues with collecting these events, it’s important to ensure that your app is properly configured to handle them.
+Implementing
+UNUserNotificationCenter
+Delegate
+Set up the
+UNUserNotificationCenter.delegate
+at the
+beginning
+of the
+didFinishLaunchingWithOptions
+method in your
+AppDelegate
+file.
+Swift
+Objective-C
+// In didFinishLaunchingWithOptions (AppDelegate.swift)
+#available
+iOS
+10.0
+UNUserNotificationCenter.
+current
+.delegate
+self
+as?
+UNUserNotificationCenterDelegate
+else
+// Fallback on earlier versions
+// In didFinishLaunchingWithOptions (AppDelegate.m)
+[UNUserNotificationCenter currentNotificationCenter].delegate = self;
+Handle Push Notification Click Events
+Once you’ve set the delegate, Netmera will automatically handle push notification events, including click events. Below are the methods to process push notification click events.
+Swift
+Objective-C
+func
+userNotificationCenter
+center
+: UNUserNotificationCenter,
+didReceive
+response
+: UNNotificationResponse,
+withCompletionHandler
+completionHandler
+@escaping
+Void
+) {
+// NetmeraPushObject(dictionary: response.notification.request.content.userInfo)
+// object.alert.body                  // Push Text
+// object.alert.title                 // Push Title
+// object.action.deeplinkURL          // Push Deeplink
+// object.customDictionary            // Custom JSON
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+withCompletionHandler:(void (^)(void))completionHandler
+// NetmeraPushObject *object = [[NetmeraPushObject alloc] initWithDictionary:response.notification.request.content.userInfo];
+// object.alert.body                   // Push Text
+// object.alert.title                  // Push Title
+// object.action.deeplinkURL           // Push Deeplink
+// object.customDictionary             // Custom JSON
+Push Notification Received
+To capture push notifications when the app is in the background or foreground, you can implement the following methods. This method will return latest push object received by device.
+Swift
+Objective-C
+func application(
+_ application: UIApplication,
+didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+) {
+// Netmera.recentPushObject()?.alert.body                  // Push Text
+// Netmera.recentPushObject()?.alert.title                 // Push Title
+// Netmera.recentPushObject()?.action.deeplinkURL          // Push Deeplink
+// Netmera.recentPushObject()?.customDictionary            // Custom JSON
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+// [Netmera recentPushObject].alert.body                   // Push Text
+// [Netmera recentPushObject].alert.title                  // Push Title
+// [Netmera recentPushObject].action.deeplinkURL           // Push Deeplink
+// [Netmera recentPushObject].customDictionary             // Custom JSON
+Push Notification Received on Foreground
+This method allows you to handle push notifications when the app is in the foreground.
+Swift
+Objective-C
+func userNotificationCenter(
+_ center: UNUserNotificationCenter,
+willPresent notification: UNNotification,
+withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+) {
+completionHandler(.alert)
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+willPresentNotification:(UNNotification *)notification
+withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
+completionHandler(UNNotificationPresentationOptionAlert);
+Retrieve Device Push Token
+To get the push token, use the following method:
+Swift
+Objective-C
+func application(
+_ application: UIApplication,
+didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+) {
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+Delegate Methods
+Widget and In-App Messages
+5 months ago

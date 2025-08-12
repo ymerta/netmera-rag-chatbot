@@ -1,0 +1,25 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/unity/changelog
+Platforms
+Unity
+Changelog
+v1.2.2
+November 8, 2024
+IMPROVEMENTS
+Added compatibility for Gradle 8 to enhance build stability and performance.
+v1.2.1
+June 27, 2024
+IMPROVEMENTS
+Updated Dependencies:
+Dependencies have been updated to improve performance and compatibility.
+For more details and to access the latest version, visit our GitHub repository:
+Netmera Unity Plugin
+v1.2.0
+April 16, 2024
+You can update to the latest version by downloading it from the following link:
+Netmera Unity Plugin v1.2.0
+IMPROVEMENTS
+Integrated Android Core and FCM Versions
+The Android version of the plugin has been updated to support the transition to FCM HTTP v1. This update includes the integration of Firebase Messaging version 23.1.2 to support FCM HTTP v1.
+User & Attributes
+Optimove
+6 months ago

@@ -1,0 +1,236 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/user-and-attributes
+Platforms
+iOS
+New iOS (Swift)
+User & Attributes
+Managing User Data
+The
+NetmeraUser
+class allows you to send structured information about your application's users to Netmera. The ideal time to update user attributes
+right after the user logs into your application.
+User ID Management
+For optimal performance and data integrity:
+Update user information at login
+: It’s crucial to update the user information as soon as the user logs in.
+Unique userId
+: Ensure that each user has a unique
+userId
+. Assigning the same
+userId
+to multiple users leads to data inconsistencies and is not recommended.
+As of version
+v4.4.0
+, the
+updateUser
+method has been
+deprecated
+. Use the following methods instead:
+identifyUser
+: Sets or updates identifiers such as
+userId
+email
+, and
+msisdn
+updateUserProfile
+: Updates user profile attributes like name, gender, birthday, occupation, etc.
+Updating User Information
+Step 1: Identify the User
+Use
+identifyUser
+after the user logs in:
+let
+user
+NetmeraUserIdentify
+user.userId
+userId
+user.email
+email
+user.msisdn
+msisdn
+Netmera.
+identifyUser
+user
+Step 2: Update Profile Attributes
+Use
+updateUserProfile
+to send user details:
+let user = NetmeraUserProfile()
+user.name.set("Muhammad Ali")
+user.surname.set("Clay")
+user.externalSegments.set(["sports", "boxing"])
+user.gender.set(.male)
+user.maritalStatus.set(.married)
+user.numberOfChildren.set(9)
+user.country.set("USA")
+user.city.set("Louisville")
+user.district.set("West End")
+user.occupation.set("Professional Boxer")
+user.industry.set("Sports")
+user.favoriteTeam.set("favoriteTeam")
+user.language.set("English")
+user.dateOfBirth.set(Date(timeIntervalSince1970: -915148800))
+Netmera.updateUserProfile(userProfile: user)
+Important Notes
+You should send a
+single
+user update request at a time.
+Do not use
+updateUser
+—it is deprecated and replaced by the two methods above.
+Managing attributes with
+set
+add
+remove
+, and
+unset
+Operation
+Description
+Data Type
+set()
+Completely replaces the profile attribute
+Available for all data types
+unset()
+Completely deletes the profile attribute
+Available for all data types
+add()
+Adds new element(s) to the profile attribute
+Available only for Array-type attributes
+remove()
+Removes specified element(s) from the profile attribute
+Available only for Array-type attributes
+For profile attributes defined as arrays, you do not need to manage the entire list at once. You can update them incrementally using
+add()
+and
+remove()
+In the following examples, we use
+externalSegments
+, which is a predefined array-type profile attribute in the Netmera platform. However, you are free to define and use your own custom profile attributes as needed.
+set()
+– Create List from Scratch
+let user = MyNetmeraUser()
+user.externalSegments.set(["sports_fans","sports_fans"])
+Netmera.updateUserProfile(userProfile: user)
+Explanation:
+This operation clears any existing values in the
+externalSegments
+field and assigns the new list containing
+"sports_fans"
+and
+"sports_fans"
+. Only the provided segments will be retained.
+Use case:
+Reinitializing the user's profile with a new segment configuration.
+add()
+– Add New Elements
+let user = MyNetmeraUser()
+user.externalSegments.add(["black_friday_2025"])
+Netmera.updateUserProfile(userProfile: user)
+Explanation:
+Preserves existing values in the
+externalSegments
+list and appends the new segment
+"black_friday_2025"
+Use case:
+Temporarily adding a user to a campaign-specific segment.
+remove()
+– Remove Elements
+let user = MyNetmeraUser()
+user.externalSegments.remove(["sports_fans"])
+Netmera.updateUserProfile(userProfile: user)
+Explanation:
+Removes the
+"sports_fans"
+value from the user's
+externalSegments
+list. Other segment values remain unchanged.
+Use case:
+Reflecting changes in user interests or preferences.
+unset()
+– Clear All Data
+let user = MyNetmeraUser()
+user.externalSegments.unset()
+Netmera.updateUserProfile(userProfile: user)
+Explanation:
+Clears all data from the
+externalSegments
+field. The user will no longer be associated with any segment.
+Use case:
+When a user account is closed or profile data needs to be reset.
+Creating Custom Profile Attributes
+Step 1: Navigate to the Developers section
+Custom profile attributes must be created and configured in the Netmera Panel before they can be used in the application.
+Go to
+Panel
+Developers > Profile Attributes > Create New Attribute.
+Step 2: Fill in Attribute Details
+Define the following information:
+Name
+: The unique identifier for the attribute.
+Label
+: A user-friendly name for the attribute.
+Description
+: A brief description of the attribute.
+Data Type
+: Choose the appropriate data type for the attribute.
+Is Array
+: Define whether the attribute can hold multiple values.
+Step 3: Save the Attribute
+After clicking
+Save
+, the custom attribute will be available for assignment to your users.
+Step 4: Generated Code for Custom Attributes
+Once the attribute is defined in the Netmera Panel, the generated code can be found at the bottom of the
+Profile Attribute
+page, under the
+Generate Code
+section. This code must be added to your Netmera Panel under
+Profile Attributes > User Class
+Private Information Considerations
+Under the
+law, the sharing of private user data is prohibited. To ensure compliance:
+Private Information Flag
+: When defining profile attributes or events, the
+Private Information
+Private Information
+flag during the
+Netmera.updateUser(user:)
+call. If the flag is set, the request will not be sent to the backend.
+Email Subscription Preferences
+Check Email Subscription Status
+Use the following method to check if the user has allowed email subscriptions:
+Netmera.getEmailPermission()
+Returns
+: A
+Boolean
+value (
+true
+if the user has allowed email subscriptions, otherwise
+false
+Update Email Subscription Preferences
+Set the user's preference for email subscriptions using one of the methods below:
+Allow Email Subscriptions
+Netmera.setEmailPermission(isAllowed: true)
+Disallow Email Subscriptions
+Netmera.setEmailPermission(isAllowed: false)
+These methods enable you to respect user preferences for email communications within your application.
+SMS Subscription Preferences
+Check SMS Subscription Status
+Use the following method to check if the user has allowed SMS subscriptions:
+Netmera.getSmsPermission()
+Returns
+: A
+Boolean
+value (
+true
+if the user has allowed SMS subscriptions, otherwise
+false
+Update SMS Subscription Preferences
+Set the user's preference for SMS subscriptions using one of the methods below:
+Allow SMS Subscriptions
+Netmera.setSmsPermission(isAllowed: true)
+Disallow SMS Subscriptions
+Netmera.setSmsPermission(isAllowed: false)
+These methods enable you to respect user preferences for email communications within your application.
+Geofence & Location
+Data Transfer
+1 month ago

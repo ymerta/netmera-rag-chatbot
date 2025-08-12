@@ -1,0 +1,447 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/via-integration/otp-consent-requests
+Integrated Modules
+VIA Integration
+OTP Consent Requests
+For a full version, please see the board
+here
+Prepare the OTP Consent Form
+Create an OTP consent form using your IYS Panel. Once the form is ready, submit it to IYS for approval.
+Obtain IYS Approval
+After IYS approves the form, it will be ready for use in API calls. The form ID provided by IYS will serve as the
+formId
+value in your requests.
+Send the Consent Form to the User
+Send an email or SMS to the user containing the OTP code. Use the API endpoint
+https://restapi.netmera.com/via/consent
+to share the code with the user.
+Confirm API is used to submit the OTP
+The user enters the OTP code they received. Use the API endpoint
+https://restapi.netmera.com/via/confirm
+to submit the OTP.
+Confirmation Information Sent to the User
+The user will receive a confirmation via email or SMS, detailing the permissions they selected and the status of their submission.
+Consent Data Saved in Netmera
+Netmera automatically saves the user’s permissions in the Netmera Panel. Synchronization occurs every 10 minutes to ensure the latest user preferences are reflected.
+Consent Requests with OTP
+Start the Consent Process
+"Aydınlatma Metni" and "Onay Metni"
+One-time password (OTP)
+for verification.
+requestId
+, which serves as a reference ID for the operation.
+Recipient's Response
+Verification
+The
+confirm
+method is used to verify the OTP by submitting the recipient's OTP and the associated
+requestId
+Consent Finalization
+If the provided OTP matches the one sent to the recipient:
+is recorded on behalf of the brand(s).
+is recorded on behalf of the service provider.
+Netmera Consent Update
+After the consent is successfully validated, the recipient's
+, including EMAIL/SMS notification preferences, is saved in the Netmera system.
+Parameter
+Type
+Description
+Required
+consentTypes
+Array of Objects
+Includes the consent type details.
+Yes
+title
+String
+Type of consent (e.g.,
+Yes
+types
+Array of Strings
+Specifies the communication channel(s) through which the approval is requested.
+["ARAMA"]
+for phone calls
+["MESAJ"]
+for messages
+["ARAMA", "MESAJ"]
+for both
+["EPOSTA"]
+for email
+Yes
+recipientType
+String
+Type of recipient (
+BIREYSEL
+TACIR
+Yes
+formId
+String
+ID of the form sent to the recipient.
+Yes
+recipient
+String
+Recipient's phone number or email address.
+Yes
+verificationType
+String
+Specifies the approval method (SMS or email OTP). For SMS, it is
+SMS_OTP
+, and for email, it is
+EPOSTA_OTP
+Yes
+referenceID
+String
+This identifier is used to create or update user records in the Netmera system.
+Yes
+Notes:
+Replace
+your_rest_api_key
+with your actual REST API key.
+Ensure
+formId
+corresponds to a valid form ID from the
+IYS Web
+VIA Management portal.
+Modify
+recipient
+with the actual recipient’s
+email
+phone number
+based on your use case.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"MESAJ",
+"ARAMA"
+"recipientType": "BIREYSEL"
+"formId": "your_formid",
+"recipient": "+90536.......",
+"verificationType": "SMS_OTP",
+"referenceId": "user1234"
+Successful Response (HTTP 200)
+"requestId": "requestid"
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"EMAIL"
+"recipientType": "BIREYSEL"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_OTP",
+"referenceId": "user1234"
+Successful Response (HTTP 200)
+"requestId": "requestid"
+In case of a failed request, the response will include the following fields:
+message
+(String):
+The error message that describes the issue with the request.
+code
+(String):
+The error code from the IYS system indicating the specific issue.
+value
+(String)
+This field may return the invalid value depending on the type of error, or it may be omitted
+): The invalid value that caused the error.
+Case:
+formId
+does not match the expected type for the given
+verificationType
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"MESAJ"
+"recipientType": "BIREYSEL"
+"formId": "your_formid",
+"recipient": "+90536...",
+"verificationType": "SMS_OTP",
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"message": "The provided verification type (verificationType) does not match the form type. Form type: SHORTURL",
+"code": "H1065"
+Case:
+recipientType
+is missing in the request body.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"EPOSTA"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_OTP",
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"message": "JSON verisinde eksik alanlar: recipientType",
+"code": "H1090"
+Field Name
+Type
+Requirement
+Description
+consentTypes
+Array of Objects
+Yes
+Contains details about the type of consent requested.
+title
+String
+Yes
+types
+Array of Strings
+Yes
+"AYDINLATMA_METNI"
+formId
+String
+Yes
+ID of the form sent to the recipient. The corresponding consent form will be sent to the recipient based on this ID. Obtainable via the
+İYS Web
+verificationType
+String
+Yes
+The method for obtaining consent.
+"SMS_OTP"
+for SMS and
+"EPOSTA_OTP"
+for email OTP.
+recipient
+String
+Yes
+Contact information of the recipient. Either a
+phone number
+email address
+where the consent request will be sent.
+personData
+Object
+name
+String
+Recipient's full name.
+recipientIdNumber
+String
+Recipient's Turkish ID number.
+address
+String
+Recipient's address information.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "+90536.......",
+"verificationType": "SMS_OTP",
+"referenceId": "user1234"
+Successful Response (HTTP 200)
+"requestId": "requestid"
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_OTP",
+"referenceId": "user1234"
+Successful Response (HTTP 200):
+"requestId": "requestid"
+In case of a failed request, the response will include the following fields:
+message
+(String):
+The error message that describes the issue with the request.
+code
+(String):
+The error code from the IYS system indicating the specific issue.
+value
+(String)
+This field may return the invalid value depending on the type of error, or it may be omitted
+): The invalid value that caused the error.
+Case:
+The
+recipientIdNumber
+field contains an improperly formatted ID number.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "cab8467e-6e58-43d0-abec-2aafc047255d",
+"recipient": "+90536.......",
+"verificationType": "SMS_OTP",
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"message": "Girdiğiniz TC kimlik numarası: '134........' formata uygun değildir.",
+"code": "H1096"
+Case:
+The
+title
+field contains an unexpected value.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"title": "X",
+"types": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_OTP",
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"code": "H1013",
+"value": "[X]"
+: The request must include the following fields:
+Verification Method (
+verificationType
+Recipient's Communication Address (
+recipient
+Communication Channel (
+types
+Recipient Type (
+recipientType
+Approval Type (
+title
+Form ID (
+formId
+) (The ID of the approval form to be sent to the recipient)
+: The request must include the following fields:
+Verification Method (
+verificationType
+Recipient's Communication Address (
+recipient
+Recipient's Full Name (
+name
+Recipient's National ID Number (
+recipientIdNumber
+Recipient's Address Information (
+address
+Approval Type (
+title
+Form ID (
+formId
+) (The ID of the approval form to be sent to the recipient)
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"MESAJ",
+"ARAMA"
+"recipientType": "BIREYSEL"
+"types": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "+90536.......",
+"verificationType": "SMS_OTP",
+"referenceId": "user1234"
+Successful Response (HTTP 200)
+"requestId": "requestid"
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"EMAIL"
+"recipientType": "BIREYSEL"
+"types": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_OTP",
+"referenceId": "user1234"
+Successful Response (HTTP Code: 200)
+"requestId": "requestid"
+In case of a failed request, the response will include the following fields:
+message
+(String):
+The error message that describes the issue with the request.
+code
+(String):
+The error code from the IYS system indicating the specific issue.
+value
+(String)
+This field may return the invalid value depending on the type of error, or it may be omitted
+): The invalid value that caused the error.
+Case:
+personData
+field is missing.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"MESAJ",
+"ARAMA"
+"recipientType": "BIREYSEL"
+"types": [
+"formId": "your_formid",
+"recipient": "+90536.......",
+"verificationType": "SMS_OTP",
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"message": "JSON verisinde eksik alanlar: personData",
+"code": "H1090"
+Case:
+types
+field is missing.
+curl --location 'https://restapi.netmera.com/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": [
+"EMAIL"
+"recipientType": "BIREYSEL"
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_OTP",
+"referenceId": "user1234"
+Error Response (HTTP 400):
+"message": "types alanı boş veya null olmamalıdır.",
+"code": "H1057"
+Short URL Consent Requests
+OTP Confirmation Completion
+6 months ago

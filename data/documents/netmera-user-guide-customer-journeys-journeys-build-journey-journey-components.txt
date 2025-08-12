@@ -177,4 +177,4 @@ component to deliver an order confirmation email, including estimated delivery d
 By comprehensively understanding these components, users can effectively design and manage their user engagement journeys, ensuring they are tailored to specific user behaviors and attributes, thereby enhancing overall engagement and personalization.
 Build Journey
 State
-9 months ago
+10 months ago

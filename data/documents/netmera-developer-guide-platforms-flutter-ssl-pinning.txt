@@ -1,0 +1,53 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/flutter/ssl-pinning
+Platforms
+Flutter
+SSL Pinning
+SSL Pinning
+ensures secure communication by allowing only trusted SSL certificates, which is critical for apps handling sensitive user data. To use this feature, integrate
+or above.
+Configuring SSL Pinning
+Specify the trusted SSL certificate hash in
+NetmeraConfiguration.Builder
+using the
+method.
+Single SSL Pin
+Use this code to pin a single SSL certificate:
+NetmeraConfiguration
+Builder
+configBuilder
+new
+NetmeraConfiguration
+Builder
+();
+configBuilder
+baseUrl
+(baseUrl)
+huaweiSenderId
+PropertiesUtil
+huaweiSenderId
+firebaseSenderId
+PropertiesUtil
+gcmSenderId
+logging
+true
+// Set SSL pin keys
+// Replace with the correct sha256 hash
+"sha256/T9g7qeNuY3SHc4tWSlqoHwWb+0Y8whUYn0uuAB3CzHM="
+Multiple SSL Pins
+Use this code to pin multiple SSL certificates for environments where multiple certificates are trusted (e.g., during certificate transitions or backups):
+// Replace with correct sha256 hashes
+"sha256/8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8=",
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+configBuilder
+.baseUrl(baseUrl)
+.huaweiSenderId(PropertiesUtil.huaweiSenderId)
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.logging(true)
+// Set SSL pin keys
+Handling SSL Pinning Errors
+If the server's SSL certificate doesn't match the pinned keys, the app will log an error and terminate the connection.
+Error Log for Invalid SSL Pins
+If Improper SSL Pinning Is Configured
+User & Attributes
+Changelog
+6 months ago

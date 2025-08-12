@@ -1,0 +1,14 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios
+Platforms
+iOS
+Not sure which documentation to use?
+If you have transitioned
+, make sure to use the
+New iOS (Swift)
+If you are
+still using
+the
+, use the
+Former iOS (Objective-C)
+New iOS (Swift)
+5 months ago

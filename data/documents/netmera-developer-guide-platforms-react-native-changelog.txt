@@ -1,0 +1,214 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/changelog
+Platforms
+React Native
+Changelog
+npm: react-native-netmera
+npm
+v1.10.0
+August 4, 2025
+Improvements
+3.27.0-WD
+nmcore
+version
+4.6.1
+nmfcm
+version
+4.5.0
+nmhms
+version
+4.5.0
+v1.9.0
+June 13, 2025
+Improvements
+Standard Event Definitions
+updateUserAsync
+method has been introduced to enable asynchronous user profile updates.
+nmcore
+v4.3.2
+nmfcm
+v4.0.2
+nmhms
+v4.0.1
+The
+README
+file has been updated to provide guidance for users integrating with a
+custom Firebase setup
+v1.8.1
+April 10, 2025
+Improvements
+Integrated with Netmera Android
+nmcore
+v1.8.0
+March 4, 2025
+This update includes the following changes and improvements:
+Improvements
+Integrated with Netmera Android
+nmcore
+Features
+SSL Pinning Mechanism:
+Added for enhanced security.
+checkNotificationPermission
+Method:
+Allows checking the notification permission status.
+v1.7.11
+November 15, 2024
+Improvements
+Updated iOS push callbacks to ensure they no longer trigger for push notifications from other providers.
+v1.7.10
+October 24, 2024
+Improvements
+pod "Netmera", "3.23.16-WithoutDependency"
+pod "Netmera/NotificationServiceExtension", "3.23.16-WithoutDependency"
+pod "Netmera/NotificationContentExtension", "3.23.16-WithoutDependency"
+Bug Fixes
+Fixed an issue where the category list provided as a parameter to the
+getInboxCountForStatus
+method was not being sent to the backend.
+v1.7.9
+September 19, 2024
+Improvements
+Removed
+log events
+pod "Netmera", "3.23.13-WithoutDependency"
+pod "Netmera/NotificationServiceExtension", "3.23.13-WithoutDependency"
+pod "Netmera/NotificationContentExtension", "3.23.13-WithoutDependency"
+v1.7.8
+Aug 28, 2024
+Improvements
+Bug Fixes
+Fixed an issue related to the "Time in App" event.
+v1.7.7
+Aug 2, 2024
+Upgraded to version 3.23.11-WithoutDependency
+pod "Netmera", "3.23.11-WithoutDependency"
+pod "Netmera/NotificationServiceExtension", "3.23.11-WithoutDependency"
+pod "Netmera/NotificationContentExtension", "3.23.11-WithoutDependency"
+Upgraded nmcore to version 3.14.2
+implementation 'com.netmera:nmcore:3.14.2'
+implementation 'com.netmera:nmfcm:3.12.2'
+implementation 'com.netmera:nmhms:3.11.2'
+Integration Changes:
+Ensure that the Netmera pods in your Podfile are updated to version 3.23.11-WithoutDependency
+v1.7.6
+July 4, 2024
+Improvements
+Updated to Android nmcore version 3.14.0
+implementation 'com.netmera:nmcore:3.14.0'
+implementation 'com.netmera:nmfcm:3.12.0'
+implementation 'com.netmera:nmhms:3.11.0'
+Integrated iOS 3.23.7-WD version into the project.
+pod "Netmera", "3.23.7-WithoutDependency"
+pod "Netmera/NotificationServiceExtension", "3.23.7-WithoutDependency"
+pod "Netmera/NotificationContentExtension", "3.23.7-WithoutDependency"
+Bug Fixes
+Resolved the Gradle 8+ issue to ensure smooth builds and improved stability.
+v1.7.5
+May 3, 2024
+WithoutDependency
+into the React Native package.
+Important Update for iOS Developers:
+Apple's Requirement Details:
+v1.7.4
+April 25, 2024
+The iOS 3.23.5-
+WithoutDepedency
+Improvements
+Added the 'Revenue' parameter to the NetmeraEvent class.
+Introduced the
+Netmera.kill()
+Bug Fixes
+Fixed the crash problem related to
+requestNotificationPermissions
+1.7.3
+March 19, 2024
+Improvements
+Added iOS 3.23.4
+WithoutDependency
+An improvement has been implemented to resend push/enable and push/register requests in case of an API key change.
+v1.7.2
+March 8, 2024
+Improvements
+For iOS, cache is now reset when the API key is changed.
+1.7.0
+February 15, 2024
+Improvements
+Added Android Core and FCM version 3.12.0 to support FCM HTTP v1 transition.
+v1.6.4
+February 5, 2024
+Improvements
+Enhanced user update callback functionality. Example usage:
+Netmera.updateUser(user)
+.then(() => {
+console.log('User updated successfully!');
+Toast.show({
+type: 'success',
+text1: 'User updated successfully!',
+});
+.catch(error => {
+console.log(error.code, error.message);
+Toast.show({
+type: 'error',
+text1: error.message,
+});
+});
+Bug Fixes
+Addressed an issue where deeplinks triggered by push click while the iOS application was closed were not being captured.
+v1.6.3
+January 9, 2024
+Improvements
+Push Notifications
+for further information.
+Bug Fixes
+Development has been done to address the autostart problem.
+v1.6.2
+November 3, 2023
+Android 3.10.4 and iOS 3.18.0 versions have been added.
+Features
+The
+fetchCoupons
+method has been introduced.
+Sample fetchCoupons
+Netmera.fetchCoupons(0, 2)
+.then(result => {
+console.log(result);
+.catch(error => console.log(error));
+Improvements
+Possible
+baseUrl
+errors have been resolved by transitioning to Android version 3.10.4 as an improvement.
+v1.6.1
+September 27, 2023
+Improvements
+React Native 1.6.1, which includes Android 3.10.2 and iOS 3.16.0 versions, has been released.
+Android Target API level increased to 33
+Android core and fcm versions upgraded to 3.10.2
+v1.6.0
+Improvements
+React Native 1.6.0, which includes Android 3.10.1 and iOS 3.16.0 versions, has been released.
+v1.5.0
+Improvements
+Transition to TypeScript has been completed.
+v1.4.9
+Features
+areNotificationsEnabled
+and
+requestPushNotificationAuthorization
+methods can now be used for both iOS and Android devices.
+Details
+Push Notification Permissions
+If you don't request notification permission at runtime, you can request it by calling the
+requestPushNotificationAuthorization()
+method. Note: Notification runtime permissions are required on Android 13 (API 33) or higher. Therefore, before calling the method, make sure your project targets an API of 33 and above.
+Netmera.requestPushNotificationAuthorization();
+You can call the
+areNotificationsEnabled()
+method if you need to know the status of permissions.
+await Netmera.areNotificationsEnabled() // Use the enabled status of permission as boolean
+The usage details of the
+areNotificationsEnabled
+and
+requestPushNotificationAuthorization
+methods have been added to the Readme file.
+Advertising ID
+Flutter
+8 days ago

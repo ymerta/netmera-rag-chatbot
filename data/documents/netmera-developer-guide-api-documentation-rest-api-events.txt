@@ -1,0 +1,58 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/api-documentation/rest-api/events
+API Documentation
+REST API
+Events
+Fire Event
+The
+fireEvents
+endpoint is used to send custom events associated with a specific user. Each event must include the
+extId
+parameter to identify the user and a
+name
+parameter to specify the event type. Additional attributes can be included as key-value pairs, based on the event schema defined in the Netmera panel.
+Endpoint
+POST /rest/3.0/fireEvents
+Request Headers
+X-netmera-api-key
+: Your REST API key
+Content-Type
+application/json
+Request Body
+The body must be a JSON array of event objects. Each object should contain the following fields:
+extId
+(string, required): Unique identifier of the user in your system.
+name
+(string, required): Name of the event.
+Custom parameters (optional): Additional event-specific attributes (must match the schema defined in the panel).
+Example – Custom Event
+curl -X POST https:
+//restapi.netmera.com/rest/3.0/fireEvents \
+"X-netmera-api-key: your_rest_api_key"
+"Content-Type: application/json"
+-d '[
+"extId"
+"id_in_my_system_1"
+"name"
+"ShareEvent"
+"itemId"
+"4234"
+"channel"
+"Facebook"
+Cancel Order Event
+This example demonstrates how to fire an
+OrderCancelEvent
+with relevant order-related attributes. The fields used in this example must be configured in the event schema through the Netmera panel.
+Example – Cancel Order Event
+curl -X POST https://restapi.netmera.com/rest/3.0/fireEvents \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"extId": "id_in_my_system_1",
+"name": "OrderCancelEvent",
+"paymentMethod": "Credit Card",
+"subTotal": 20.0,
+"itemCount": 4,
+"grandTotal": 35.0
+Notifications
+User & Device Management
+5 days ago

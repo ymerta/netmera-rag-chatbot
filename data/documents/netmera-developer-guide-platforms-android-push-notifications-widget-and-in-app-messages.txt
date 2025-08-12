@@ -1,0 +1,118 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/push-notifications/widget-and-in-app-messages
+Platforms
+Android
+Push Notifications
+Widget and In-App Messages
+Pop-up and In-App Message Presentation Behavior
+All push notifications in Netmera work automatically—no additional coding is required. However, you can customize pop-up presentations and listen to push callbacks.
+By default, when a popup notification or in-app message is received:
+immediately
+when the app returns to the foreground.
+In-App Messages
+3.4.0 or higher
+Enable / Disable Immediate Presentations
+To prevent immediate pop-up presentation (e.g., during video playback, gaming, or checkout), use:
+Netmera
+disablePopupPresentation
+();
+re-enable
+pop-ups, use:
+Netmera
+enablePopupPresentation
+();
+This should be called in the
+MainActivity
+class, not in Splash or App classes.
+Customizing Styles Using
+themes.xml
+You can customize the appearance of in-app messages using the attributes defined in the
+themes.xml
+file.
+<!-- Custom in-app message style -->
+style
+name
+"NetmeraInAppMessageStyle"
+<!-- In-app message view width in ratio -->
+item
+name
+"inAppMessageWidth"
+>@integer/netmera_default_vertical_width</
+item
+<!-- In-app message view height in ratio -->
+item
+name
+"inAppMessageHeight"
+>@integer/netmera_default_vertical_height</
+item
+<!-- In-app message view weight in ratio -->
+item
+name
+"inAppMessageWeight"
+>@integer/netmera_default_vertical_weight</
+item
+<!-- In-app message view background color -->
+item
+name
+"inAppMessageBackground"
+>@drawable/netmera_bg_in_app_message</
+item
+<!-- In-app message cancel button image -->
+item
+name
+"inAppMessageCancelButtonDrawable"
+>@drawable/netmera_ic_action_cancel</
+item
+<!-- In-app message title size -->
+item
+name
+"android:textSize"
+>@dimen/netmera_text_default_size</
+item
+<!-- In-app message title color -->
+item
+name
+"android:textColor"
+>@color/primary_text_light</
+item
+<!-- In-app message text size -->
+item
+name
+"inAppMessageTextSize"
+>@dimen/netmera_text_default_size</
+item
+<!-- In-app message text color -->
+item
+name
+"inAppMessageTextColor"
+>@color/primary_text_light</
+item
+<!-- In-app message font -->
+item
+name
+"android:fontFamily"
+>@font/custom_font</
+item
+style
+Storing Disabled Pop-ups
+Troubleshooting
+If you experience issues with pop-ups or in-app messages, please review the cases below:
+Increase Session Duration
+Go to
+Developer > App Info > App Config
+Increase
+Session Expire Interval
+by 1.
+Click
+Apply
+and retry.
+Review Code for False Values
+Make sure no other part of your code disables pop-ups.
+Check Third-Party Integrations
+Ensure Netmera is initialized at the top of your project.
+Check Multiple Pop-Ups
+If too many pop-ups trigger at once, they may not load correctly.
+Consider Low Device Storage
+If storage is nearly full, pop-ups may fail to display.
+Push Notifications
+Push Callbacks
+6 months ago

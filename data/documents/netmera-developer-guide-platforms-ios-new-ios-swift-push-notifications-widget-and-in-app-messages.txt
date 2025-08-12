@@ -1,0 +1,51 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/push-notifications/widget-and-in-app-messages
+Platforms
+iOS
+New iOS (Swift)
+Push Notifications
+Widget and In-App Messages
+Pop-up and In-App Message Presentation Behavior
+All push notifications in Netmera work automatically—no additional coding is required. However, you can
+customize
+pop-up presentations and
+listen to push callbacks
+By default, when a popup notification or in-app message is received:
+If the app is in the
+foreground
+immediately
+If the app is in the
+background
+when the app returns to the foreground.
+Enable / Disable Immediate Presentations
+To prevent immediate pop-up presentation (e.g., during video playback, gaming, or checkout), use:
+Enable popup and widget push
+Netmera.
+setEnabledPopupPresentation
+true
+Disable popup and widget push
+Netmera.
+setEnabledPopupPresentation
+false
+Enable banner push
+Netmera.
+setEnabledInAppMessagePresentation
+true
+Disable banner push
+Netmera.
+setEnabledInAppMessagePresentation
+false
+Receiving Popups and In-App Messages in the Background
+To receive popups or in-app messages when the application is in the background, you need to enable
+Remote Notifications
+under
+Background Modes
+Capabilities
+Devices in Low Battery Mode
+Devices
+cannot
+receive popups or in-app messages while the application is closed or killed if the device is in
+low battery mode
+, as this mode disables background application refresh.
+Delegate Methods
+Media Push
+6 months ago

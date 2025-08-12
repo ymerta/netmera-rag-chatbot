@@ -19,4 +19,4 @@ The Power of Competitive Analysis
 This feature assumes the role of a strategic ally in the realm of competitive analysis. By painting a vivid picture of the cohabiting apps on users' devices, it empowers you to conduct insightful competitive assessments. You can discern which competing apps resonate most with your shared audience, understand the allure of their engagement strategies, and ultimately use this intelligence to enhance your own app's performance.
 App Tracking (Android Only) is not merely a feature; it's a gateway to an expansive realm of insights. It offers a comprehensive vantage point into Android user behavior, unveils their app preferences, and equips you with the knowledge to make informed decisions that can elevate your Android application's standing in the ever-evolving mobile landscape.
 Application Version
-4 months ago
+5 months ago

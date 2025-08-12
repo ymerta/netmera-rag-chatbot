@@ -1,0 +1,105 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/push-notifications/push-callbacks
+Platforms
+React Native
+Push Notifications
+Push Callbacks
+Netmera provides the following push notification callbacks:
+Push Register
+: Triggered when a device registers for push notifications.
+Push Receive
+: Triggered when a push notification is received.
+Push Open
+: Triggered when a user taps the notification.
+Push Dismiss
+: Triggered when a user dismisses the notification.
+Push Button Click
+: Triggered when a user interacts with a button inside the notification.
+Carousel Object Select
+: Triggered when a user selects an item in a carousel notification.
+To enable these callbacks in your React Native project, follow the steps below:
+Step 1: Create
+NetmeraPushHeadlessTask.js
+Create a new file named
+NetmeraPushHeadlessTask.js
+in your React Native project and define the callback functions:
+export
+const
+onPushRegister
+async
+(message)
+console
+.log
+"onPushRegister: "
+message);
+export
+const
+onPushReceive
+async
+(message)
+console
+.log
+"onPushReceive: "
+message);
+export
+const
+onPushOpen
+async
+(message)
+console
+.log
+"onPushOpen: "
+message);
+export
+const
+onPushDismiss
+async
+(message)
+console
+.log
+"onPushDismiss: "
+message);
+export
+const
+onPushButtonClicked
+async
+(message)
+console
+.log
+"onPushButtonClicked: "
+message);
+export
+const
+onCarouselObjectSelected
+async
+(message)
+console
+.log
+"onCarouselObjectSelected: "
+message);
+Step 2: Initialize
+NetmeraBroadcastReceiver
+index.js
+In your
+index.js
+file, import the callback functions and initialize
+NetmeraBroadcastReceiver
+import {
+onCarouselObjectSelected,
+onPushButtonClicked,
+onPushDismiss,
+onPushOpen,
+onPushReceive,
+onPushRegister
+} from "./NetmeraPushHeadlessTask";
+Netmera.initBroadcastReceiver(
+onPushRegister,
+onPushReceive,
+onPushOpen,
+onPushDismiss,
+onPushButtonClicked,
+onCarouselObjectSelected
+// Ensure this is called after `Netmera.initBroadcastReceiver`
+AppRegistry.registerComponent(appName, () => App);
+Widget and In-App Messages
+Deep Linking
+6 months ago

@@ -1,0 +1,64 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/advertising-id
+Platforms
+React Native
+Advertising ID
+React Native Advertising ID Integration
+Ad_ID
+(Advertising Identifier) for users. This device identifier allows for targeted actions that help you better understand and engage with your users, although it is not used for displaying advertisements. Instead, the Ad_ID is a key variable for tracking user interactions and behavior.
+Ad_ID Usage
+The Ad_ID is a unique device identifier used for analytics and targeting.
+In Netmera, it is used to understand user behavior and enhance communication.
+does not
+serve ad display purposes.
+React Native: Android
+Ad_ID Permission for Android 13 and Above
+When targeting Android 13 or above:
+Add the following line to your
+AndroidManifest.xml
+uses-permission
+android
+name
+"com.google.android.gms.permission.AD_ID"
+Targeting Android 13 and Above:
+This permission is required for accessing ad tracking information on Android 13 devices. For more details, refer to the
+Google documentation.
+React Native: iOS
+You can retrieve and use Ad_IDs by following the native implementation steps:
+Native iOS Setup via Xcode
+Open your React Native project’s iOS module in
+Xcode
+and follow the instructions in the iOS Advertising ID documentation.
+User Details and Ad_ID in Netmera Panel
+You can view the Ad_ID and its permission status under
+Settings > User
+in the Netmera Panel. The Ad_ID and whether the user has granted permission to track are visible in the last two columns.
+Troubleshooting Ad_ID Panel Visibility
+If you cannot find the
+Ad_ID
+options in the panel or encounter any issues, please reach out to the
+Netmera Success Team
+for assistance.
+Filtering Users Based on Ad_ID Permission
+You can filter users based on their Ad_ID permission status within the
+Targeting > People
+section of the Netmera Panel. This enables you to create campaigns tailored specifically to users who have either granted or denied permission for ad tracking.
+Exporting Users Based on Ad_ID Permission
+After filtering your audience in the
+Targeting > People
+section, use the
+Find
+button to list users fitting your criteria.
+Click on
+Target Users Found
+to export the filtered user list for further analysis or campaign targeting.
+Targeting Based on Ad_ID Permission
+When creating a campaign in the
+Netmera Panel
+, specifically on
+Step 3: Who
+, you can select the
+‘By Advertising ID’
+option. This allows you to target users based on their Ad_ID, providing a more personalized and effective strategy for user engagement.
+User & Attributes
+Changelog
+1 month ago

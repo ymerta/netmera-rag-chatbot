@@ -1,0 +1,180 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/sdk-integration/huawei-integration
+Platforms
+Android
+Huawei Integration
+Netmera uses
+Huawei Push Message
+to deliver push notifications to Android devices.
+To enable this, you must set up and configure a project on >
+Huawei Developers Console
+Huawei Push Message Configuration Steps
+Follow Huawei's official documentation to integrate
+HMS Core
+your project using the links below:
+Preparations for Integrating HUAWEI HMS Core
+Service Enabling and Rights Configuration
+Navigate to the Huawei Developers Console
+Enable the
+service for your application.
+Generate your app's
+SHA-256 fingerprint
+using your keytool.
+Add this fingerprint to your app configuration in the
+Huawei Console
+under the
+App Information
+section.
+Download the
+agconnect-services.json
+file from the Huawei Developers Console.
+Place this file in the root of your app’s folder within your project directory.
+Upon completing the configuration, you will obtain:
+(Client ID generated in the Huawei project)
+App_ID
+Add these values to the
+Netmera Dashboard
+Go to
+Developers > Push Backends > Huawei
+Enter the
+and
+App_ID
+Use App_ID for Initialization:
+During client-side initialization in your application, ensure that you use the
+App_ID
+App_ID
+: Corresponds to the
+Client ID
+generated in the Huawei project.
+: Corresponds to the
+generated for your app.
+Step 2: Integrate Netmera
+Modify Your
+build.gradle
+File
+Update your project's
+build.gradle
+file as follows:
+buildscript {
+repositories {
+google()
+maven { url 'http://developer.huawei.com/repo/' }
+dependencies {
+classpath 'com.android.tools.build:gradle:4.2.2'
+classpath 'com.huawei.agconnect:agcp:1.6.3.300'
+allprojects {
+repositories {
+google()
+maven { url 'http://developer.huawei.com/repo/' }
+maven { url "http://release.netmera.com/release/android" }
+Add the Netmera dependencies in the
+dependencies
+block:
+dependencies {
+implementation 'com.netmera:nmcore:3.9.11'
+implementation 'com.netmera:nmhms:3.9.5'
+At the very
+end
+of your app's
+build.gradle
+file, apply the Huawei plugin:
+apply plugin: 'com.huawei.agconnect'
+Important Note for Obfuscation:
+Step 3: Initialize Netmera
+Add the following initialization
+code inside the
+onCreate()
+method of your
+android.app.Application
+class.
+If Application Class is Not Already Present:
+Create an Application Class
+If your project doesn't yet have an
+Application
+class, create one and include the initialization code as shown below.
+Update AndroidManifest.xml
+In the
+AndroidManifest.xml
+, add your
+Application
+class by specifying
+android:name
+in the
+<application>
+tag.
+@Override
+public void onCreate() {
+super.onCreate();
+// Initialize Netmera components
+NMInitializer.initializeComponents(this);
+// Initialize Huawei Provider
+AppInitializer.getInstance(this).initializeComponent(NMHMSProviderInitializer.class);
+// Configure Netmera
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+configBuilder
+.baseUrl(baseUrl)
+// If there is an on-premise installation, uncomment and set the base URL
+// .setBaseUrl("YOUR PANEL DOMAIN URL")
+.huaweiSenderId(PropertiesUtil.hmsSenderId)
+.logging(true)
+.nmInAppMessageActionCallbacks(new NGInAppMessageActionCallbacks())
+.nmPushActionCallbacks(new NGPushActionCallbacks());
+// Initialize Netmera with the built configuration
+Netmera.init(configBuilder.build(this));
+Do not
+use the API key from a
+test
+panel
+in production.
+Each panel has a unique API key
+, and using the wrong one can result in data misdirection or errors.
+Go to the Netmera Panel.
+Enabling Logging
+To enable logging for debugging purposes, include the following line in the
+onCreate()
+method
+Netmera.logging(true);
+Step 4: Enable Pop-up Presentation
+Netmera allows displaying pop-up notifications within the app using an internal activity class. However, this feature is disabled by default to prevent disrupting your app's flow at launch. To enable pop-up notification presentations,
+Place the following code in your
+main activity
+after it has started:
+// Enable Netmera to display pop-up notifications
+Netmera.enablePopupPresentation();
+Important Note
+Do not include this code in your splash activity
+if your app uses one. This ensures an app launch without interruptions.
+Show Netmera Push with Another HMS Integration
+If you have implemented your own
+Huawei Mobile Services (HMS)
+integration, you can still use Netmera's push notifications. Implement the following steps in your class that extends
+HMSMessageService
+1. Receive and Process Push Messages
+Override the
+onMessageReceived
+method to handle Netmera push messages:
+public class PushMessaging extends HMSMessageService {
+@Override
+public void onMessageReceived(RemoteMessage remoteMessage) {
+super.onMessageReceived(remoteMessage);
+Netmera.onNetmeraPushMessageReceived(remoteMessage);
+2. Handle Token Renewal
+Override the
+onNewToken
+method to forward the token to Netmera:
+@Override
+public void onNewToken(String token) {
+super.onNewToken(token);
+Netmera.onNetmeraNewToken(token);
+Step 5: Huawei Message Receipt
+For successful push message delivery, complete all steps in the
+Huawei Message Receipt Guide
+below. This ensures your configuration aligns with Huawei's requirements for sending push notifications.
+Complete the steps in
+Huawei Message Receipt
+to send push messages.
+Standard Push Notifications
+Interactive Push Notifications
+Widgets
+Push Notifications with Deeplinks
+Huawei Message Receipt
+6 months ago

@@ -235,5 +235,5 @@ Update
 Session Expiration Interval
 Developers > App Info
 Event Insight
-IYS Integration
-2 months ago
+IYS Permission Hub
+3 months ago

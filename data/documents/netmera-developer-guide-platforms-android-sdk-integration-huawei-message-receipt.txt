@@ -1,0 +1,62 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/sdk-integration/huawei-message-receipt
+Platforms
+Android
+Huawei Message Receipt
+Huawei has a message delivery report feature called
+Message Receipt
+After a notification sends to device, Huawei will report the message status to Netmera. By this way, Netmera can track uninstalled devices. To be able to use this feature, you must integrate Message Receipt in Huawei App Gallery.
+Open
+App Gallery Connect
+(first you need to login to your
+HMS
+account)
+Go to
+section
+Click
+Settings
+tab
+Click
+Enable
+button for
+App Receipt
+Click
+New Button
+Enter configurations.
+Callback address
+and
+HTTPS certificate
+must be as below. After you check the details, click
+Submit
+button.
+Callback Address
+https://report.netmera.com/reporter/hms/message-receipt
+HTTPS Certificate
+-----BEGIN CERTIFICATE-----
+MIIGrjCCBZagAwIBAgIJAP8ETGqQ6QYYMA0GCSqGSIb3DQEBCwUAMIG0MQswCQYD
+MBgGA1UEChMRR29EYWRkeS5jb20sIEluYy4xLTArBgNVBAsTJGh0dHA6Ly9jZXJ0
+cy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzEzMDEGA1UEAxMqR28gRGFkZHkgU2Vj
+dXJlIENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTIxMDYyODEwMzAzNFoX
+DTIyMDcyNDA5NTMwMlowOzEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRh
+dGVkMRYwFAYDVQQDDA0qLm5ldG1lcmEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOC
+euQL9ReZCPZsiXI5uUR+/pbQ0kMr3P1+n1r6RaBxDMiSbdY9rTX00TNyQAkoLJU6
+D/H6cJgtepwGAyQx0b2/dhoQPAxr+M/IgecwyQIDAQABo4IDOTCCAzUwDAYDVR0T
+BAQDAgWgMDgGA1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwuZ29kYWRkeS5jb20v
+Z2RpZzJzMS0zMDgwLmNybDBdBgNVHSAEVjBUMEgGC2CGSAGG/W0BBxcBMDkwNwYI
+dG9yeS8wCAYGZ4EMAQIBMHYGCCsGAQUFBwEBBGowaDAkBggrBgEFBQcwAYYYaHR0
+cDovL29jc3AuZ29kYWRkeS5jb20vMEAGCCsGAQUFBzAChjRodHRwOi8vY2VydGlm
+aWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvZ2RpZzIuY3J0MB8GA1UdIwQY
+b22CC25ldG1lcmEuY29tMB0GA1UdDgQWBBRAdote9PLn2EiEVglW7vH5SXLE0TCC
+Cvj5TV0mXCVdx4QAAAF6UivMygAABAMARzBFAiEAoRLiU4sNXZyuQGaO800sP/qC
+4rruS64vCC46ukI1k8gCIEChX/4oNq6fMFEP3VfLNq4Q63hHpvflMtjy80rm2ZZ+
+AHUAIkVFB1lVJFaWP6Ev8fdthuAjJmOtwEt/XcaDXG7iDwIAAAF6UivOhQAABAMA
+RjBEAiAajkS7BvYsEALHk5MJR1X28losDJId9f0bHhzoMrk0UAIgP2L7sIeJhZFR
+Y+1V0Lkmt5fVgrzguA/E58LMGm+Uh80AdQBByMqx3yJGShDGoToJQodeTjGLGwPr
+UMvnxEcHqOWlJZWLxHcQO4HvMSc0zfqroiNTJxJJMZFAmjx8PmLyDWarGDE57g02
+H3YJ6fzASf/E2Y9pZ56pMq/zr9faYPo4IDswP1n5RgWUtfRZFfQ11IVrMmCQ14DE
+D7H0XORkk0/3/jwSbDGypmjDDmtA8YN9ebO9VFeU3nR4d02hcTd5QYdeJ0IV1jnr
+H2lfDBYa+s052yPBckjzuvq+i8w0eJlPxTTasg4tT7ftpQ==
+-----END CERTIFICATE-----
+After performing these operations, you can perform message received and message error analytics on your Huawei devices from Netmera.
+Huawei Integration
+Custom FCM and HMS Implementations
+6 months ago

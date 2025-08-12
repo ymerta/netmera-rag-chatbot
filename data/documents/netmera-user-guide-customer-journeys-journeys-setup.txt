@@ -70,4 +70,4 @@ Once all necessary fields and optional settings are completed, proceed by clicki
 button located in the bottom right corner of the screen. This action takes you to the next phase of journey setup, where you can define entry rules, set up your target audience, and customize the journey flow.
 Journeys
 Entry Rules
-9 months ago
+10 months ago

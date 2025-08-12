@@ -1,0 +1,173 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/user-and-attributes
+Platforms
+React Native
+User & Attributes
+Managing User Data
+The
+NetmeraUser
+class allows you to send structured information about your application's users to Netmera. The ideal time to update user attributes is
+right after the user logs into your application.
+User ID Management
+For optimal performance and data integrity:
+Update user information at login
+: It’s crucial to update the user information as soon as the user logs in.
+Unique userId
+: Ensure that each user has a unique
+userId
+. Assigning the same
+userId
+to multiple users leads to data inconsistencies and is not recommended.
+Updating User Information
+After login, create a
+NetmeraUser
+object, set the attributes, and call
+Netmera.updateUser()
+import
+{ Netmera
+NetmeraUser }
+from
+"react-native-netmera"
+const
+user
+new
+NetmeraUser
+user
+.userId
+"the_greatest"
+user
+.email
+[email protected]
+user
+.msisdn
+"001XXXXXXXXX"
+user
+.name
+"Netmera"
+user
+.surname
+"Notification"
+user
+.gender
+NetmeraUser
+GENDER_MALE
+user
+.externalSegments
+"sports"
+"box"
+user
+.dateOfBirth
+743069748000
+// Unix timestamp
+user
+.maritalStatus
+NetmeraUser
+MARITAL_STATUS_SINGLE
+user
+.country
+"USA"
+user
+.state
+"Arizona"
+user
+.city
+"Scottsdale"
+user
+.district
+"Old Town Scottsdale"
+user
+.favoriteTeam
+"My Team"
+user
+.language
+"English"
+user
+.industry
+"Sports"
+user
+.occupation
+"Professional Boxer"
+// Update user profile in Netmera
+Netmera
+.updateUser
+(user)
+Important:
+userId
+cannot
+be removed.
+You should send a
+single
+user update request at a time.
+After React Native 1.5.0 Update:
+With the React Native version 1.5.0 update, the
+NetmeraUser
+gender information is now accessed through the
+NMUserGender
+enum:
+import {NMUserGender} from "react-native-netmera";
+NetmeraUser.GENDER_NOT_SPECIFIED --> No longer needed
+NMUserGender.NOT_SPECIFIED
+Using Netmera.updateUser() after v1.6.4
+With
+, you can handle user updates with success and error messages like so:
+Netmera.updateUser(user)
+.then(() => {
+console.log('User updated successfully!');
+Toast.show({
+type: 'success',
+text1: 'User updated successfully!',
+});
+.catch(error => {
+console.log(error.code, error.message);
+Toast.show({
+type: 'error',
+text1: error.message,
+});
+});
+Creating Custom Profile Attributes
+Step 1: Navigate to the Developers section
+Custom profile attributes must be created and configured in the Netmera Panel before they can be used in the application.
+Go to
+Panel
+Developers > Profile Attributes > Create New Attribute.
+Step 2: Fill in Attribute Details
+Define the following information:
+Name
+: The unique identifier for the attribute.
+Label
+: A user-friendly name for the attribute.
+Description
+: A brief description of the attribute.
+Data Type
+: Choose the appropriate data type for the attribute.
+Is Array
+: Define whether the attribute can hold multiple values.
+Step 3: Save the Attribute
+After clicking
+Save
+, the custom attribute will be available for assignment to your users.
+Step 4: Generated Code for Custom Attributes
+Once the attribute is defined in the Netmera Panel, the generated code can be found at the bottom of the
+Profile Attribute
+page, under the
+Generate Code
+section. This code must be added to your Netmera Panel under
+Profile Attributes > User Class
+Private Information Considerations
+Under the
+law, the sharing of private user data is prohibited. To ensure compliance:
+Private Information Flag
+: When defining profile attributes or events, the
+Private Information
+Private Information
+flag during the
+(Netmera.update(user))
+call. If the flag is set, the request will not be sent to the backend.
+Fetching Coupons
+Retrieve and display user-earned coupons:
+Netmera.fetchCoupons(0, 2)
+.then(result => {
+console.log(result);
+.catch(error => console.log(error));
+Geofence & Location
+Advertising ID
+6 months ago

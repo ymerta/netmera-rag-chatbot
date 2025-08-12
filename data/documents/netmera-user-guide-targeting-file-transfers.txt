@@ -260,4 +260,4 @@ RET
 will appear in İYS if a previous record exists for that brand. Otherwise, they will not be listed.
 Segment Details
 Geofence
-19 days ago
+1 month ago

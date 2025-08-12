@@ -1,0 +1,77 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/flutter/deep-linking/custom-deep-links
+Platforms
+Flutter
+Deep Linking
+Custom Deep Links
+Custom deep links dynamically generate user-specific links by appending custom parameters, aligning each link with individual profiles or actions. To integrate custom parameters into deep links for transactional messaging based on profile attributes or external IDs, follow these steps.
+Step 1: Navigate to the Transactional Page
+Go to Messages > Transactional
+Click on Create New Transactional Message
+Step 2: Create a Transactional Message on the Netmera Panel
+Complete the Setup and What steps.
+For a detailed breakdown of this process, refer to
+Creating Transactional Messages
+Step 3: Obtain a Sample Request for API & Configuration
+On API & Config step, acquire the sample request for sending via the REST API.
+API & Config
+Step 4: Adding the deeplinkCustomMapParams Class
+Under the existing
+Deep Link
+class:
+Add the
+deeplinkCustomMapParams
+class to map custom parameters within the deep link URL.
+Sample Deep Link Structure
+A customizable deep link in Netmera might look like the following:
+"deeplink": "{end_point_url}?id={dynamicId}&contactId={contactID}&surname={surname}&name=@{name}"
+Parameters like
+{dynamicId}
+{contactID}
+, and
+{surname}
+can be static or dynamically changed for each user.
+Parameters like
+@{name}
+refer to profile attributes pulled directly from the user's profile in Netmera.
+Understanding Deep Link Parameters
+Parameters without '@' - Static Values
+: Parameters without the '@' symbol, such as {dynamicId} and {contactID}, are provided as
+static
+values. These parameters can be set as fixed values or can vary for each user. If a parameter has a static value, it will remain consistent across all uses of the deep link.
+Parameters with '@' - Profile Attributes
+: Parameters that include the '@' symbol, such as @{name}, signify values that will be pulled from
+profile attributes
+defined within the Netmera system. When utilizing these parameters, it's crucial to ensure that the corresponding profile attribute codes are correctly defined and exist within the Netmera system.
+Sample Request
+curl --location 'https://api.example.com/rest/3.0/sendNotification' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"message": {
+"click": {
+"deeplink": "{end_point_url}?id=@{name}&surname=@{surname}&car=@{car}&gender=@{gender}",
+"deeplinkCustomMapParams": {
+"car": {
+"queryMaps": {
+"user1": "car1",
+"user2": "car2",
+"user3": "car3"
+"surname": {
+"queryMaps": {
+"userPhoneNumber1": "Surname1",
+"userPhoneNumber2": "Surname2",
+"userPhoneNumber3": "Surname3"
+"gender": {
+"queryMaps": {
+[email protected]
+": "Male",
+[email protected]
+": "Female",
+[email protected]
+": "Other",
+[email protected]
+" : "Prefer not to say"
+"target": {
+"extId": "targetUserExternalId"
+Deep Linking
+Sound & Vibration
+5 months ago

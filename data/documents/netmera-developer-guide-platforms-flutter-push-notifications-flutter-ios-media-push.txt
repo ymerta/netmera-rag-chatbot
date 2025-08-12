@@ -1,0 +1,32 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/flutter/push-notifications/flutter-ios-media-push
+Platforms
+Flutter
+Push Notifications
+Flutter iOS Media Push
+Step 1: Complete iOS Media Push Steps
+To enable
+iOS10 Media Push
+in your Flutter application, follow the detailed steps outlined in the
+iOS Media Push
+guide >
+Media Push
+Step 2: Update your Podfile
+Ensure you include the necessary dependencies for
+Netmera
+in your Podfile to handle
+Media Push
+notifications. Add the following lines to the top of your
+Podfile
+# Required for receiving Media Push notifications
+pod
+"Netmera"
+"3.23.6"
+pod
+"Netmera/NotificationServiceExtension"
+"3.23.6"
+pod
+"Netmera/NotificationContentExtension"
+"3.23.6"
+Widget and In-App Messages
+Deep Linking
+6 months ago

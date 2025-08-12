@@ -531,4 +531,4 @@ permissions
 within the platform to make sure you have access to the necessary data and reports. If you're not an admin, you may need to request access from someone with the appropriate privileges.
 Campaigns
 Email Reports
-7 months ago
+8 months ago

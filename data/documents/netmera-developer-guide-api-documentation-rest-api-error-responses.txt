@@ -1,0 +1,472 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/api-documentation/rest-api/error-responses
+API Documentation
+REST API
+Error Responses
+ERROR
+NETMERA ERROR CODE
+RESPONSE CODE
+Internal server error
+2001
+500
+Invalid JSON
+2009
+400
+API key is invalid
+2010
+403
+Invalid configuration
+2021
+400
+Missing required parameter
+2020
+400
+Your IP is not allowed
+2021
+403
+You are not authorized to do this action
+2022
+403
+Push message size exceed limit
+2101
+400
+Dist list not found
+2102
+400
+Status of this message is not draft
+2103
+400
+App settings not found
+2104
+500
+Message is not intelligent
+2105
+500
+Due to time restriction settings message can not be sent
+2106
+400
+No such role
+2410
+403
+Role name must be unique
+2411
+400
+You are not allowed for this action
+4000
+403
+Application name has been reserved
+5000
+400
+Application name must be unique
+5002
+400
+Application name cannot be empty
+5001
+400
+Message with given messageId could not be found
+5003
+400
+Tracking App with given id could not be found
+5004
+400
+Deeplink with given id could not be found
+5004
+400
+WebHook with given id could not be found
+5004
+400
+Sound file with given id could not be found
+5004
+400
+Invalid message state
+5005
+400
+The button set with given id could not be found
+5006
+400
+Please login
+5007
+401
+The application is not configured for message approval mechanism
+5008
+400
+A user with this email address already exists
+5009
+400
+Role with the given name does not exist
+5010
+400
+The email verification token is invalid
+5011
+400
+The user is already active
+5012
+400
+Invalid reset password token
+5013
+400
+There must be at least one application admin user
+5014
+400
+An error occurred while uploading your file
+5015
+500
+The user with given identifier is not found
+5016
+400
+The file token is invalid
+5017
+400
+The external id is not found in the current application
+5016
+400
+The geofence with given id could not be found
+5018
+400
+Message performance profile attribute cannot be null
+5019
+400
+Event Definition Code can not be null
+5018
+400
+Unexpected Error Occurred
+5019
+400
+An error occurred while uploading icon
+5020
+500
+Service usage is not allowed
+5021
+400
+Service usage quota is exceeded
+5022
+400
+App schema not defined
+5023
+400
+Geofence name must be unique
+5024
+400
+Segment name must be unique
+5025
+400
+List name must be unique
+5026
+400
+Certificate password error
+5027
+400
+Event is not found
+5028
+400
+Message category name must be unique
+5029
+400
+Event with same event code already exists in this application
+5030
+400
+Profile attribute with same attribute name already exists in this application
+5030
+400
+Android api key is not valid
+5031
+400
+The dynamic template with given id could not be found
+5032
+400
+Product with given id could not be found
+5033
+400
+There is already a funnel with that name
+5034
+400
+There is already an event insight with that name
+5035
+400
+Notification Channel with given id could not be found
+5036
+400
+Web push domain not valid
+5037
+400
+The mail template with given id could not be found
+5038
+400
+There is already a screen view mapping with that screen id
+5039
+400
+Uploaded file is empty
+5040
+400
+Mail content is empty
+5041
+400
+Segment not found
+5042
+400
+There is already an ui action with this pretty name or with this page item id pair in this platform
+5042
+400
+File cannot be created
+5100
+400
+File cannot be renamed
+5101
+400
+Business unit must be selected for business unit roles
+5102
+400
+Multiple business unit can not be assigned a user
+5103
+400
+Mono service unreachable
+5104
+400
+Business unit id is not specified
+5105
+400
+Mono business unit not found
+5106
+400
+Crash symbol not found
+5107
+400
+This placeholder key is already in use
+5108
+400
+Exceeds per placeholder limit
+5109
+400
+An error occurred while symbolicating stack trace
+5110
+400
+An error occurred while uploading crash symbol file
+5111
+400
+There is already an event mapping with that name
+5112
+400
+Invalid address
+6000
+400
+Delivery error
+6001
+500
+You cannot edit an active recommendation! You need to stop this recommendation to first
+7000
+400
+You are not authorized to do this action
+2022
+403
+Push message size exceed limit
+2101
+400
+Dist list not found
+2102
+400
+Status of this message is not draft
+2103
+400
+App settings not found
+2104
+500
+Message is not intelligent
+2105
+500
+Due to time restriction settings message can not be sent
+2106
+400
+No such role
+2410
+403
+Role name must be unique
+2411
+400
+You are not allowed for this action
+4000
+403
+Application name has been reserved
+5000
+400
+Application name cannot be empty
+5001
+400
+Application name must be unique
+5002
+400
+Message with given messageId could not be found
+5003
+400
+Tracking App with given id could not be found
+5004
+400
+Deeplink with given id could not be found
+5004
+400
+WebHook with given id could not be found
+5004
+400
+Sound file with given id could not be found
+5004
+400
+Invalid message state
+5005
+400
+The button set with given id could not be found
+5006
+400
+Please login
+5007
+401
+The application is not configured for message approval mechanism
+5008
+400
+A user with this email address already exists
+5009
+400
+Role with the given name does not exist
+5010
+400
+The email verification token is invalid
+5011
+400
+The user is already active
+5012
+400
+Invalid reset password token
+5013
+400
+There must be at least one application admin user
+5014
+400
+The file token is invalid
+5017
+400
+The external id is not found in the current application
+5016
+400
+The geofence with given id could not be found
+5018
+400
+Message performance profile attribute cannot be null
+5019
+400
+Event Definition Code can not be null
+5018
+400
+Unexpected Error Occurred
+5019
+400
+An error occurred while uploading icon
+5020
+500
+Service usage is not allowed
+5021
+400
+Service usage quota is exceeded
+5022
+400
+App schema not defined
+5023
+400
+Geofence name must be unique
+5024
+400
+Segment name must be unique
+5025
+400
+List name must be unique
+5026
+400
+Certificate password error
+5027
+400
+Message category name must be unique
+5029
+400
+Event with same event code already exists in this application
+5030
+400
+Profile attribute with same attribute name already exists in this application
+5030
+400
+Android api key is not valid
+5031
+400
+The dynamic template with given id could not be found
+5032
+400
+Product with given id could not be found
+5033
+400
+There is already a funnel with that name
+5034
+400
+There is already an event insight with that name
+5035
+400
+Notification Channel with given id could not be found
+5036
+400
+Web push domain not valid
+5037
+400
+The mail template with given id could not be found
+5038
+400
+There is already a screen view mapping with that screen id
+5039
+400
+Uploaded file is empty
+5040
+400
+Mail content is empty
+5041
+400
+Segment not found
+5042
+400
+There is already an ui action with this pretty name or with this page item id pair in this platform
+5042
+400
+File cannot be created
+5100
+400
+File cannot be renamed
+5101
+400
+Business unit must be selected for business unit roles
+5102
+400
+Multiple business unit can not be assigned a user
+5103
+400
+Mono service unreachable
+5104
+400
+Business unit id is not specified
+5105
+400
+Mono business unit not found
+5106
+400
+Crash symbol not found
+5107
+400
+This placeholder key is already in use
+5108
+400
+Exceeds per placeholder limit
+5109
+400
+Invalid address
+6000
+400
+Delivery error
+6001
+500
+You cannot edit an active recommendation! You need to stop this recommendation to first
+7000
+400
+GDPR
+Push Notifications FAQs
+1 year ago

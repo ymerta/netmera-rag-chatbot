@@ -134,7 +134,6 @@ utm_source=facebook&utm_campaign=blackfriday
 This information is stored as an event, allowing users to be segmented based on campaign data.
 Can search bar activity be tracked using events?
 Yes, developers can trigger events with specific data when actions such as pressing the search button occur. For example, when a user performs a search (e.g., searching for hotels), an event is triggered, and the search query can be passed as an event attribute to track the search activity. For more details, visit:
-Netmera Developer Guide - Fire Events
 Which web events can I track?
 Open App
 : Triggered when the user visits the website.

@@ -105,4 +105,4 @@ Storing events locally prevents data loss during temporary connectivity issues, 
 This method allows us to deliver accurate and reliable data, accommodating users' varying connectivity conditions.
 Profile
 People Insight
-4 months ago
+5 months ago

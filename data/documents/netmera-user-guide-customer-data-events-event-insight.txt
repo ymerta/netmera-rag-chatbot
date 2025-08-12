@@ -114,4 +114,4 @@ Remove specific breakdowns or data columns from the table if they are no longer 
 By leveraging these event features and dimensions, you can gain a comprehensive understanding of user interactions and engagement patterns within your app. This detailed analysis supports informed decision-making and enhances your overall customer engagement strategy.
 Creating Custom Events
 Tagless Data Capture
-5 months ago
+6 months ago

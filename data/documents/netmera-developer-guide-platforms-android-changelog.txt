@@ -1,0 +1,689 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/changelog
+Platforms
+Android
+Changelog
+archive
+v4.7.0
+July 28, 2025
+We have released
+with the following enhancements:
+Improvements
+New methods added:
+initWithHoldingOperation
+startOperation
+v4.6.1
+July 22, 2025
+Improvements
+Code Improvement:
+The
+NotificationHelper
+🛠 Bug Fixes
+Fixed splash screen issue:
+Resolved an issue where the splash screen appeared incorrectly due to changes in the web view display mechanism.
+v4.6.0
+July 3, 2025
+implementation platform('com.netmera:netmera-bom:4.6.0')
+implementation 'com.netmera:nmcore'
+implementation 'com.netmera:nmfcm'
+implementation 'com.netmera:nmhms'
+Improvements
+Unified WebView Behavior on Push Clicks:
+push notification clicks
+with that of popup-based widgets.
+Even if the
+enablePopup
+permission is disabled, the WebView will open using the same mechanism as the popup widget. This ensures a
+consistent experience
+across push flows.
+New Permission Management Methods Added:
+The following methods have been introduced to allow developers to
+get and set user communication permissions
+programmatically:
+getEmailPermission()
+setEmailPermission(boolean)
+getSmsPermission()
+setSmsPermission(boolean)
+Android Email & SMS Preferences
+These APIs provide
+greater control
+over user consent states and make it easier to build GDPR/permission-aware flows within your app.
+v4.5.0
+June 18, 2025
+Starting from
+v4.5.0
+implementation 'com.netmera:nmcore:4.5.0'
+implementation 'com.netmera:nmfcm:4.5.0'
+implementation 'com.netmera:nmhms:4.5.0'
+Important:
+When upgrading to
+nmcore:4.5.0
+, make sure to also upgrade
+nmfcm
+and
+nmhms
+to the
+same version (4.5.0)
+to maintain compatibility.
+BOM (Bill of Materials) Support
+We've introduced
+BOM structure
+You can implement Netmera modules like this:
+implementation platform('com.netmera:netmera-bom:4.5.0')
+implementation 'com.netmera:nmcore'
+implementation 'com.netmera:nmfcm'
+implementation 'com.netmera:nmhms'
+This ensures all dependencies automatically align with the correct version, reducing the risk of mismatches.
+⭐ Improvements
+Geofence and Location handling enhanced
+Improved accuracy, reliability, and efficiency in geolocation-based features.
+Crash fix related to deprecated
+isNetmeraRemoteMessage
+method
+This update resolves a known issue where calling a deprecated method could lead to a runtime crash.
+Version compatibility checks added
+v4.4.0
+May 29, 2025
+⭐ Improvements
+The
+updateUser
+method has been
+deprecated
+. It is now replaced by two separate methods:
+updateUserProfile
+: Should be used for updating user
+profile attributes
+identifyUser
+: Should be used for setting or updating
+user identifiers
+such as
+userId
+email
+, or
+msisdn
+session
+and
+init
+requests are sent
+with a callback
+, improving reliability and traceability.
+🛠 Bug Fixes
+Fixed an issue where the
+push token
+could occasionally be returned as
+empty
+in rare cases.
+v4.3.2
+May 28, 2025
+🛠 Bug Fixes
+A bug causing some API calls to be blocked or not dispatched under specific conditions has been resolved.
+Resolved an issue where the
+pushdismiss
+event was not sent while the app was in the background.
+v4.3.1
+May 9, 2025
+🛠 Bug Fixes
+Resolved an issue in the
+init
+method (when called without a callback) that caused repeated requests under certain conditions.
+v4.3.0
+April 25, 2025
+implementation 'com.netmera:nmcore:4.3.0'
+implementation 'com.netmera:nmfcm:4.0.2'
+implementation 'com.netmera:nmhms:4.0.1'
+⭐ Improvements
+Advanced View Hierarchy Tracking
+Child view elements inside
+ListView
+and
+RecyclerView
+components can now be tracked in more detail.
+Automatically collected fields are
+view id
+view tag
+, and
+contentDescription
+This enhancement provides more meaningful insights into user interaction analytics.
+Settings > Screen Tracking > Actions
+on the panel, switch
+Collect Values
+, and click the
+Publish
+button.
+Push Event Enhancements
+A new parameter
+piid
+(Push Instance ID) has been added to push-related events.
+This allows each push notification to be tracked uniquely, enabling more precise event analysis.
+Bug Fixes
+Improved the handling of non-popup push types (e.g., standard or widget-based push notifications) to prevent attempts to open a popup when it is not intended.
+v4.2.0
+April 17, 2025
+⭐ Improvements
+Push callbacks have been updated to trigger
+after
+Deprecated
+v4.0.12
+April 11, 2025
+🛠 Bug Fixes
+Background Thread Initialization Issue Resolved
+init
+method was called from a background thread.
+Updated Dependencies:
+implementation 'com.netmera:nmcore:4.0.12'
+implementation 'com.netmera:nmfcm:4.0.1'
+implementation 'com.netmera:nmhms:4.0.1'
+Integration Notes for Custom FCM and HMS Implementations
+If your platform uses a
+custom
+FirebaseMessagingService
+HmsMessageService
+, you need to update your
+AndroidManifest.xml
+file to avoid service conflicts with Netmera.
+1. Manifest Configuration
+For Custom
+FirebaseMessagingService
+If you are using your own
+FirebaseMessagingService
+class, make sure to add the following line to your
+AndroidManifest.xml
+to remove Netmera's default FCM service:
+<service
+android:name="com.netmera.nmfcm.NMFirebaseService"
+tools:node="remove" />
+For Custom
+HmsMessageService
+If you are using your own
+HmsMessageService
+class, include the following entry in your manifest to remove Netmera’s default HMS service:
+<service
+android:name="com.netmera.nmhms.NMHuaweiService"
+tools:node="remove" />
+2. Handling Push Messages
+Starting from
+, the method:
+Netmera.isNetmeraRemoteMessage(remoteMessage)
+has been
+deprecated
+. Please update your implementation as shown in title 3.
+Before (Deprecated in 4.0.12):
+override fun onMessageReceived(remoteMessage: RemoteMessage) {
+super.onMessageReceived(remoteMessage)
+if (Netmera.isNetmeraRemoteMessage(remoteMessage)) {
+Netmera.onNetmeraPushMessageReceived(remoteMessage)
+} else {
+// Handle other messages
+3. Updated Implementations
+For Custom
+FirebaseMessagingService
+(FCM):
+override fun onMessageReceived(remoteMessage: RemoteMessage) {
+super.onMessageReceived(remoteMessage)
+if (Netmera.isNetmeraRemoteMessage(remoteMessage.data)) {
+Netmera.onNetmeraPushMessageReceived(remoteMessage)
+} else {
+// Handle other messages
+For Custom
+HmsMessageService
+(HMS):
+override fun onMessageReceived(remoteMessage: RemoteMessage) {
+super.onMessageReceived(remoteMessage)
+if (Netmera.isNetmeraRemoteMessage(remoteMessage.dataOfMap)) {
+Netmera.onNetmeraPushMessageReceived(remoteMessage)
+} else {
+// Handle other messages
+v4.0.11
+March 28, 2025
+⭐ Improvements
+Added the ability to disable the
+Boot Receiver module
+, providing greater flexibility in managing its behavior based on application requirements.
+Implementation
+To disable the Boot Receiver, add the following code block to your
+AndroidManifest.xml
+file:
+<receiver
+android:name="com.netmera.NetmeraBootReceiver"
+tools:node="remove"/>
+v4.0.1  Update for
+nmfcm
+and
+nmhms
+April 9, 2025
+To prevent version conflicts with Google’s Material library, the Material components have been removed from the
+nmfcm
+and
+nmhms
+packages.
+How to Update Your Integration:
+implementation 'com.netmera:nmcore:4.0.11'
+implementation 'com.netmera:nmfcm:4.0.1'
+implementation 'com.netmera:nmhms:4.0.1'
+v4.0.10
+February 25, 2025
+Features
+Added a
+Open Widget
+option to the
+Push Click Action
+section during campaign creation. This allows users to be directed to the relevant widget within the platform directly from the push notification.
+v4.0.9
+February 25, 2025
+Features
+Added a new
+timezone
+parameter in
+ids
+v4.0.8
+February 17, 2025
+Features
+Introduced
+Push Notification Grouping
+in the notification center. Notifications sent from the same platform can now be grouped using the
+thread-id
+parameter based on specific categories or events. This enhancement improves notification management and provides a better user experience.
+Sample Code:
+curl --location --request POST 'https://restapi.netmera.com/rest/3.0/sendBulkNotification' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"message": {
+"title": "Your Push Notification Title",
+"platforms": ["ANDROID", "IOS"],
+"text": "Your push message content",
+"threadId": "your-thread-id"
+"target": {
+"sendToAll": true
+v4.0.7
+January 23, 2025
+🛠 Bug Fixes
+Resolved an issue where deep linking was not functioning when the app was in a killed state on Android devices.
+For implementation, use the following dependencies:
+implementation 'com.netmera:nmcore:4.0.7'
+implementation 'com.netmera:nmfcm:4.0.0'
+implementation 'com.netmera:nmhms:4.0.0'
+v4.0.6
+January 6, 2025
+🛠 Bug Fixes
+The issue preventing events from triggering in the autotracking functionality has been resolved.
+v4.0.5
+January 3, 2025
+⭐ Improvements
+Introduced the
+region
+parameter under the device info object in the initial init request.
+v4.0.4
+January 3, 2025
+Features
+Added instant show functionality for widgets and in-app messages.
+v4.0.3
+December 16, 2024
+🛠 Bug Fixes
+Glide Dependency Conflict:
+Resolved an issue causing conflicts with the Glide dependency.
+v4.0.2
+December 5, 2024
+⭐ Improvements
+Geofence Event Enhancement:
+Enhanced the
+n:gu
+geofence event to ensure it is sent even when the application is killed.
+v4.0.1
+December 5, 2024
+⭐ Improvements
+Push Register Logic Enhancement:
+Improved push register status logic for devices running Android 13 and above.
+v4.0.0
+November 14, 2024
+⭐ Improvements
+Removal of the Android Startup Library:
+The Android startup library has been removed.
+Background Thread Management
+Revised Initialization Code:
+Java
+override fun onCreate() {
+super.onCreate()
+// Must be called on the Main Thread
+registerActivityLifecycleCallbacks(NMActivityLifecycleCallbacks(this))
+val configBuilder = NetmeraConfiguration.Builder()
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.huaweiSenderId(PropertiesUtil.hmsSenderId)  // Init example if you are going to call Huawei services
+.logging(true)  // Allows Netmera logs to appear in logcat
+.addProvider(NMFCMProvider())
+.addProvider(NMHMSProvider())
+Netmera.init(configBuilder.build(this))
+@Override
+public void onCreate() {
+super.onCreate();
+// Must be called on the Main Thread
+registerActivityLifecycleCallbacks(new NMActivityLifecycleCallbacks(this));
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.huaweiSenderId(PropertiesUtil.hmsSenderId)  // Init example if you are going to call Huawei services
+.logging(true);  // Allows Netmera logs to appear in logcat
+.addProvider(new NMFCMProvider())
+.addProvider(new NMHMSProvider())
+Netmera.init(configBuilder.build(this));
+do not
+NMInitializer.initializeComponents(this)
+AppInitializer.getInstance(this).initializeComponent(NMFCMProviderInitializer::class.java)
+AppInitializer.getInstance(this).initializeComponent(NMHMSProviderInitializer::class.java)
+v3.15.3
+November 1, 2024
+⭐ Improvements
+AES/GCM/NoPadding
+Added the "Not Determined" option to the
+checkNotificationPermission
+method.
+v3.15.2
+October 17, 2024
+⭐ Improvements
+Push/Enable Issue Improvement:
+Enhanced the functionality to address problems related to enabling push notifications.
+Improved the kill method functionality, allowing it to work even in scenarios where the
+init
+method has not been called.
+v3.15.1
+October 14, 2024
+Features
+Notification Permission Check:
+Added the
+checkNotificationPermission
+Notification Permission Handling with
+Netmera.checkNotificationPermission()
+The
+Netmera.checkNotificationPermission()
+method provides insight into the user's current notification permission status. Based on the response, it returns one of the following statuses:
+DENIED
+, or
+GRANTED
+. This allows you to tailor the notification permission request flow and improve user experience:
+Notification permission is blocked by the system settings, meaning the user has previously disallowed notifications at the system level. In this case, additional permission requests cannot be shown to the user directly. You may consider guiding the user to the settings page to enable notifications manually.
+DENIED:
+The user was previously asked for notification permission but declined. You may choose to request permission again, but it’s important to approach this carefully to avoid annoying the user. Consider implementing a gradual or conditional re-prompt strategy based on user actions.
+GRANTED:
+The user has granted notification permission. The application can now send notifications without the need for further permission checks, allowing seamless user engagement through push notifications.
+By using
+Netmera.checkNotificationPermission()
+, you can manage calls to
+requestNotificationPermission()
+more effectively based on the permission status, resulting in a more thoughtful and user-centric approach to notification permissions.
+⭐ Improvements
+Notification Permission Handling:
+Updated the
+requestNotificationPermission
+method to redirect users to settings on the third and subsequent calls, enhancing the permission request flow.
+🛠 Bug Fixes
+Media Content in Push Notifications:
+Fixed an issue where media content in push notifications was not loading on some devices, ensuring more consistent media display.
+Widget Background Color:
+Resolved an issue where sending widgets back-to-back caused the background to turn white unexpectedly.
+Delayed Web Page Pushes:
+Addressed an issue where "Show Web Page" push notifications were opening slowly or failing to open, improving response time and reliability.
+App Tracker Limit Issue:
+Fixed an issue where the app tracker failed when the
+app tracked list
+Item Click Action for Web Pages:
+Resolved a problem where the app wouldn’t open when "Show Web Page" was selected as the item click action, ensuring correct behavior on selection.
+We recommend updating to this version to benefit from these new features, improvements, and fixes, which enhance performance, reliability, and user experience.
+v3.15.0
+September 27, 2024
+To incorporate this feature, use the following implementations:
+implementation 'com.netmera:nmcore:3.15.0'
+implementation 'com.netmera:nmfcm:3.13.1'
+implementation 'com.netmera:nmhms:3.12.1'
+Features
+SSL Pinning Support:
+Added SSL pinning to enhance security. This feature allows specifying trusted SSL certificates for secure communication.
+To configure SSL pinning, use the following example code:
+Single SSL Pin:
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+configBuilder.baseUrl(baseUrl)
+.huaweiSenderId(PropertiesUtil.huaweiSenderId)
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.logging(true)
+// Replace with the correct sha256 hash
+"sha256/T9g7qeNuY3SHc4tWSlqoHwWb+0Y8whUYn0uuAB3CzHM="
+Multiple SSL Pins:
+// Replace with correct sha256 hashes
+"sha256/8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8=",
+NetmeraConfiguration.Builder configBuilder = new NetmeraConfiguration.Builder();
+configBuilder.baseUrl(baseUrl)
+.huaweiSenderId(PropertiesUtil.huaweiSenderId)
+.firebaseSenderId(PropertiesUtil.gcmSenderId)
+.logging(true)
+Error Logs:
+Error log if the SSL pins are invalid:
+Error log when improper SSL pinning:
+We recommend updating to this version to enhance security with SSL pinning capabilities.
+v3.14.5
+September 10, 2024
+🛠 Bug Fixes
+Location Authorization Event Update:
+Added separate parameter breakdowns for
+Always
+and
+When in Use
+options in the Location Authorization event.
+v3.14.4
+August 28, 2024
+🛠 Bug Fixes
+Resolved an issue with the "Time in App" event.
+This update ensures more accurate tracking of user activity within the app.
+v3.14.3
+August 19, 2024
+The versions
+nmcore 3.14.3
+nmfcm 3.13.0
+, and
+nmhms 3.12.0
+, which include the Target 34 update, have been published. Version changes include:
+⭐ Improvements
+🛠 Bug Fixes
+A bug that prevented the
+Geofence (n:gu)
+event from being sent has been fixed.
+v3.14.2
+July 24, 2024
+🛠 Bug Fixes
+Resolved an issue where, on devices running Android 13 and above, if push notifications were enabled without sending a push disable request during the initial installation, the user would appear as "not registered" on the panel.
+We highly recommend that customers using versions 3.14.0 and 3.14.1 upgrade to this latest version for improved stability and performance.
+v3.14.1
+July 3, 2024
+This update includes a critical bug fix to improve the stability and performance of your applications.
+🛠 Bug Fixes
+A fix has been added to address ANR (Application Not Responding) issues.
+v3.14.0
+June 3, 2024
+⭐ Improvements
+Improved the push enable and push disable scenarios for better functionality.
+v3.13.1
+March 25, 2024
+⭐ Improvements
+v3.13.0
+March 7, 2024
+⭐ Improvements
+Improved the background location widget for improved functionality and performance.
+v.3.12.1
+February 26, 2024
+Features
+A new feature has been added: the
+Netmera.kill()
+method. If this method is called, Netmera will remain in a "kill" state until it is re-initialized.
+v3.12.0
+January 25, 2024
+⭐ Improvements
+NMCore:
+Enhanced security by enforcing TLS version 1.2 and above
+Note: This results in an increased minimum Android version to 21 (Android 5.0).
+Strengthened security measures by removing the MD5 encryption algorithm, replacing it with a more secure system that generates a random byte array on each client.
+NotificationManager
+encounters difficulties locating the app icon.
+NMFcm:
+Upgraded Firebase Messaging version to 23.1.2 to support FCM HTTP v1.
+For detailed information, refer to
+Firebase Cloud Messaging - Migrate to FCM HTTP v1
+Important Note about Migrating from legacy FCM APIs to HTTP v1:
+Important Note:
+v3.11.5
+January 15, 2024
+⭐ Improvements
+🛠 Bug Fixes
+Addressed and fixed the initialization problem occurring when Android startup is in a closed state.
+v3.11.4
+January 9, 2024
+🛠 Bug Fixes
+In the user update callback, the response was sometimes returned as null. This has been addressed, and error responses will now provide more detailed information.
+v3.11.3
+December 11, 2023
+⭐ Improvements
+App version name and app version code are now included in request headers.
+Full names of classes are sent for Auto Tracking instead of simple names.
+onSuccess and onFailure callbacks are added to the Init method. Example usage:
+Netmera.init(configBuilder.build(this), new NMInitSessionListener() {
+@Override
+public void onSuccess() {
+Log.i("NetmeraApp", "Session init completed");
+@Override
+public void onFailure(String error) {
+Log.e("NetmeraApp", "Error occurred when trying to init session with Netmera. Error::"+error );
+});
+🛠 Bug Fix
+Developed a fix for the User Update issue, specifically addressing a problem that occurred after syncing user updates.
+v3.11.2
+December 5, 2023
+⭐ Improvements
+Added the
+onDeeplinkOpen
+callback.
+🛠 Bug Fixes
+Fixed an issue related to sending multiple push/register requests.
+Prepared a fix for the constraint layout problem.
+FCM Updates (3.11.0)
+🛠 Bug Fixes
+Prepared a fix for the autostart problem.
+nm hms v.3.11.0
+Android HMS Package Update
+HMS Location Service Fix:
+The fix for the HMS location service issue has been introduced with
+com.netmera.nmhms:3.11.0
+nmhms
+was used, errors related to Huawei location libraries may occur.
+🛠 Bug Fixes
+Resolved the HMS location problem.
+⭐ Improvements
+Updated the HMS library.
+v3.11.1
+November 22, 2023
+⭐ Improvements
+Enhanced the User Update method with onSuccess and onFailure callbacks.
+Made adjustments to the web view.
+User Update Method Details
+You can continue using the existing method, and with version 3.11.1, you now have the option to listen for results by adding a listener.
+Example Usage:
+Netmera.updateUser(netmeraUser, new NMUpdateUserListener() {
+@Override
+public void onSuccess() {
+Log.i("Netmera App", "Netmera User was updated successfully");
+Toast.makeText(UpdateUserActivity.this, "NetmeraUser was successfully updated.", Toast.LENGTH_SHORT).show();
+@Override
+public void onFailure(@Nullable String error) {
+Log.i("Netmera App", "Netmera User couldn't be updated successfully :: " + error);
+Toast.makeText(UpdateUserActivity.this, "Netmera User couldn't be updated successfully :: \"+ error", Toast.LENGTH_LONG).show();
+});
+v3.11.0
+October 31, 2023
+Note: This is a beta version. Do not update without contacting Netmera.
+Android Netmera Core version 3.11.0 has been released with the following changes:
+Integration of the new auto-tracking structure.
+v3.10.4
+October 26, 2023
+nmcore
+version 3.10.4 is now live.
+Features
+An enhancement for coupon code fetch requests,
+fetchCoupons
+, has been added.
+🛠 Bug Fixes
+The issue where the
+slt
+parameter was not updated when performing a user update with an existing user in the panel has been resolved.
+A fix has been added to address the
+baseUrl
+crash problem.
+v3.10.3
+⭐ Improvements
+Added slt parameter to request containing each ids block
+The widget callback has been improved and can be used as in
+this page.
+3.10.2
+Note: For this version, you need to use version 21.0.1 of the com.google.android.gms:play-services-location package.
+⭐ Improvements
+com.google.android.gms:play-services-location package upgraded to version 21.0.1
+🛠 Bug Fixes
+Fixed the bug that caused the change to not appear in the Netmera dashboard when location permission was changed from the settings.
+v3.10.1
+⭐ Improvements
+Target API level was upgraded to 33.
+🛠 Bug Fixes
+Play core library conflict was fixed.
+v3.10.0
+⭐ Improvements
+Moved user identity and update operations to the backend for better efficiency.
+v3.9.19
+Fixed in-app message callback bug in debug mode.
+Details
+onInAppMessageShown
+" and "
+onInAppMessageOpen
+" functions were not triggered in the
+NMInAppMessageActionCallbacks
+class during banner push tests. With this update, the callbacks will now work as expected, ensuring a seamless user experience with in-app messages.
+Resolved application launch issue with push notifications in kill state.
+Details
+In the previous version (3.9.18), there was an issue where the application did not launch when a push notification was clicked while the application was in the kill state. We are happy to announce that this problem has been resolved, and now the application will start correctly when a push notification is clicked, regardless of its state.
+v3.9.18
+⭐ Improvements
+Email Preference - We have introduced a new method to manage email permissions more efficiently.
+Details
+We have introduced a new method to manage email permissions more efficiently. With the following method, you can easily control email permissions for your users:
+public codepublic static void setEmailPermission(boolean isAllowed);
+By calling
+Netmera.setEmailPermission(false)
+, you can remove email permission for your users on your side. On the other hand, calling
+Netmera.setEmailPermission(true)
+allows you to grant permission for emails.
+v3.9.17
+⭐ Improvements
+Listing the pushes in the notification center can now be done according to the piid (push instance id) value.
+Details
+.usePushInstanceId(true);
+// =>If you want pushes to be listed by piid(push instance id) in notification center, set the above method to true. The default value is pid(push id).
+A development has been made to allow developers to list pushes according to the piid when desired.
+Example usage: Line 20
+🛠 Bug Fixes
+Resolved the issue where the onPushOpen callback was not working when the button click action was set to "nothing".
+Details
+v3.9.16
+🛠 Bug Fixes
+The push token crash issue has been resolved.
+Crashes
+v3.9.15
+The version numbers are as follows:
+nmcore - 3.9.15
+nmfcm - 3.9.5
+nmhms - 3.9.6
+🛠 Bug Fixes
+The issue of the slider and carousel images not being accessible in push notifications, resulting in the notifications not being displayed, has been resolved.
+The problem of email and msisdn being sent as null in the user update request, causing them to be deleted from the panel, has been fixed.
+v3.9.13
+🛠 Bug Fixes
+The solution to the mail crash issues has been implemented.
+The problem of the application coming to the foreground despite the actions of push click and push button click being set to "nothing" has been resolved.
+Push Click Details
+You can add buttons to push notifications.
+In the panel, go to Setting > Button Set page. After defining a new button set using Create New Button Set, click on Publish to Devices button. Then the button set will be available for use.
+When creating a new push notification in Messages > Campaign page, in the Setup step, select Add Button (Interactive) to use the button set you defined.
+In the "What" step, select the button set you added to the panel.
+SSL Pinning
+Web
+8 days ago

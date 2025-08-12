@@ -79,7 +79,7 @@ def compute_hybrid_score(doc, norm_bm25, norm_faiss, norm_fuzzy):
     """
     return BM25_WEIGHT * norm_bm25 + FUZZY_WEIGHT * norm_fuzzy + FAISS_WEIGHT * norm_faiss
 
-def check_faq_match(translated_input, threshold=80):
+def check_faq_match(translated_input, threshold=70):
     """
     Matches the user query with known FAQ questions using fuzzy string matching.
 
@@ -143,23 +143,32 @@ Aşağıdaki içeriğe göre, bir kullanıcının bu bilgiyi sormak için sorabi
     return response.choices[0].message.content.strip().split("\n")
 
 def filename_to_url(filename: str) -> str:
-    """
-    Converts a document filename into its corresponding Netmera documentation URL.
-
-    Args:
-        filename (str): Name of the .txt file.
-
-    Returns:
-        str: Public URL of the documentation page.
-    """
     if filename.startswith("faq-"):
         return FAQ_URL
-    if filename.startswith("netmera-user-guide-"):
-        filename = filename[len("netmera-user-guide-"):]
-    if filename.endswith(".txt"):
-        filename = filename[:-4]
-    url_path = filename.replace("-", "/")
+
+    name = filename
+    if name.endswith(".txt"):
+        name = name[:-4]
+
+    # user-guide
+    if name.startswith("netmera-user-guide-"):
+        path = name[len("netmera-user-guide-"):].replace("-", "/")
+        return f"https://user.netmera.com/netmera-user-guide/{path}"
+
+    # developer-guide
+    if name.startswith("netmera-developer-guide-"):
+        path = name[len("netmera-developer-guide-"):].replace("-", "/")
+        return f"https://user.netmera.com/netmera-developer-guide/{path}"
+
+    # fallback
+    url_path = name.replace("-", "/")
     return f"{BASE_DOC_URL}/{url_path}"
+
+def prettify(url: str) -> str:
+    u = url
+    u = u.replace("https://user.netmera.com/netmera-user-guide/", "")
+    u = u.replace("https://user.netmera.com/netmera-developer-guide/", "")
+    return u.replace("-", " ").replace("/", " > ").title()
 
 def find_source_for_question(question_text):
     embedding = embed_question(question_text)[0]
@@ -487,7 +496,7 @@ if user_input and (len(st.session_state.chat_history) == 0 or user_input != st.s
         else:
          source_file = best_doc["source"]
          source_url = best_doc.get("url") or filename_to_url(source_file)
-         short_name = source_url.replace("https://user.netmera.com/netmera-user-guide/", "").replace("-", " ").replace("/", " > ").title()
+         short_name = prettify(source_url)
          label_source = "📄 **Kaynak belge**" if lang == "Türkçe" else "📄 **Source document**"
          answer = f"{answer_text}\n\n{label_source}: [{short_name}]({source_url})"
          st.session_state.chat_history.append(("assistant", answer))
@@ -506,7 +515,7 @@ if st.session_state.suggestion_buttons:
             cached = st.session_state.suggestions_cache.get(suggestion)
             if cached:
                 label_source = "📄 **Kaynak belge**" if lang == "Türkçe" else "📄 **Source document**"
-                short_name = cached["source_url"].replace("https://user.netmera.com/netmera-user-guide/", "").replace("-", " ").replace("/", " > ").title()
+                short_name = prettify(cached["source_url"])
                 answer = f"{cached['answer']}\n\n{label_source}: [{short_name}]({cached['source_url']})"
                 st.session_state.chat_history.append(("assistant", answer))
             else:

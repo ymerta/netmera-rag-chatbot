@@ -21,4 +21,4 @@ Here, you'll find the sum of user sessions conducted on your platform. A session
 In summary, the "Total Users" page is a powerful tool for monitoring and optimizing your platform's performance, user engagement, and revenue generation. It facilitates data-driven decision-making, helps you track progress toward goals, and provides insights that can lead to improvements in user experiences and overall platform success.
 Automated, Transactional & Geofence Push Reports
 Installs
-4 months ago
+5 months ago

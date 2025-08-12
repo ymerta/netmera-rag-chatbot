@@ -1,0 +1,84 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/campaigns/mobile-push/creating-a-mobile-push/define-notification-content-what/advanced-ios-settings
+Campaigns
+Mobile Push
+Creating a Mobile Push
+Define Notification Content: What
+Advanced iOS Settings
+These settings help fine-tune how your push notifications are presented and prioritized on iOS devices, ensuring that critical or urgent information reaches users effectively, while less important messages are delivered more passively.
+Relevance Score
+The
+Relevance Score
+is a numerical value ranging from
+that determines the importance level of a push notification on iOS devices. Notifications with higher scores appear more prominently in the notification summary, improving visibility and user awareness.
+Range
+Usage
+0.0 – 0.3
+Low importance
+0.4 – 0.7
+Medium importance
+0.8 – 1.0
+High importance
+Relevance Score
+Purpose
+This score enables apps to sort notifications based on relevance and ensure that critical messages do not get buried under less urgent ones.
+Example Use Case
+suspicious transaction alert
+may receive a relevance score of
+0.95
+, placing it at the top of the user’s notification stack.
+holiday announcement
+may receive a score of
+0.2
+, appearing further down in the summary.
+Tip:
+Use higher relevance scores for time-sensitive, security-related, or highly personalized notifications. Lower scores are suitable for informational or promotional messages.
+For more technical details, you can refer to Apple’s documentation on
+iOS Relevance Score
+or our blog post below.
+How to Set Relevance Score For Your Push Notifications? - Netmera
+Netmera - Omni channel marketing solution
+Interruption Level
+Interruption Level
+controls how a push notification interacts with iOS Focus Modes such as “Do Not Disturb,” “Work,” “Sleep,” or “Personal.” By selecting the appropriate level, you can balance between urgency and user experience.
+Interruption Level
+Level
+Description
+Requires Approval
+Passive
+Silent delivery with no sound or vibration. For non-urgent, informative content.
+Active
+Sounds, vibrates, and turns on the screen. Used for general notifications (non-focus mode).
+Time Sensitive
+Overrides focus modes. Vibrates, makes sound, and turns on the screen. Requires justification.
+✅ Requires enforcement
+Critical
+Overrides silent and focus modes. Reserved for emergencies. Requires Apple approval.
+✅ Apple review
+iOS Focus Modes Overview
+iOS < 15
+: Users can enable
+Do Not Disturb
+, silencing all notifications.
+iOS ≥ 15
+: Users have granular control via
+Focus Modes
+for work, sleep, and personal time.
+Example Use Case
+Scenario
+Suggested Level
+App update announcement
+Passive
+New message notification
+Active
+Fraud alert or OTP
+Time Sensitive
+Earthquake warning
+Critical
+Critical notifications
+must be registered with Apple and approved. Use them only for situations like health, security, or natural disasters.
+Learn more about notification prioritization in our detailed blog post to discover how to implement these levels effectively.
+iOS Interruption Level and How is it Used in Netmera?
+Netmera - Omni channel marketing solution
+Define Notification Content: What
+Define the Audience: Who
+2 months ago

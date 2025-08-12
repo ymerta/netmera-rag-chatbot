@@ -1,0 +1,459 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/changelog
+Platforms
+iOS
+New iOS (Swift)
+Changelog
+4.9.0
+August 4, 2025
+Features
+Push Notification Category Management
+Added
+getUserCategoryPreferenceList
+to retrieve the list of push categories configured for the user.
+Added
+setUserCategoryPreference(categoryId: Int32, categoryEnabled: Bool, completion: (Error?) -> Void)
+to enable or disable specific push categories per user.
+See
+Manage Push Notification Categories
+for further information.
+Autotracking: Collect Action Item Values
+Introduced a new app config parameter
+(Collect Values) to enhance tracked paths.
+When
+Collect Values
+accessibilityLabel
+Identifier
+) to the action path, enabling precise tracking for dynamic UI elements like table views or menus.
+When
+Collect Values
+is disabled, only the index is tracked to maintain user privacy.
+To enable this setting:
+Panel > Settings > Screen Tracking > Action > Toggle "Collect Values" ON > Click Publish
+Visit
+User Guide
+for detailed instructions.
+⭐ Improvements
+Support test device email invitations for
+SceneDelegate
+-based apps.
+Improved notification permission handling on background launches.
+Made
+BaseEvent
+class initializer internal to prevent unintended instantiation.
+Bug Fixes
+Prevented sending
+null
+values for
+msisdn
+and
+email
+if not explicitly set during
+identify
+update
+operations.
+Fixed crash caused when
+UITextField
+UITextView
+instances set themselves as their own delegate.
+4.8.3
+July 31, 2025
+Bug Fixes
+Remote notification registration failure in v4.8.1 has been fixed in v4.8.3.
+Fixed a crash that occurred when the Geofence module was not included in the project.
+4.8.2
+July 29, 2025
+Bug Fixes
+Resolved an issue causing a
+crash during auto-tracking gestures
+4.7.0
+July 17, 2025
+Features
+Custom Button Text for Transactional Notifications
+You can now
+override button texts
+defined in your
+Button Sets
+for transactional notifications. With this update,
+buttonNames
+can be sent dynamically via the API, allowing you to personalize button texts per notification.
+Service Extension Required
+For this feature to work on iOS devices, Service Extension Integration must be completed.
+Sample API Requests
+createNotificationDefinition Request
+curl --location --request POST 'https://restapi.netmera.com/rest/3.0/createNotificationDefinition' \
+--header 'X-netmera-api-key: your-rest-api-key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"title": "Important Survey",
+"message": "We would like to get a feedback",
+"inbox": false,
+"platforms": [
+"ANDROID"
+"click": {
+"deeplink": "https://www.netmera.com"
+"buttonSet": {
+"id": 1,
+"buttonNames": {
+"button1": "15 GB-10 USD",
+"button2": "15 GB-15 USD"
+"15 GB-10 USD": "https://www.google.com",
+"15 GB-15 USD": "https://www.youtube.com"
+sendNotification Request
+curl --location --request POST 'https://restapi.netmera.com/rest/3.0/sendNotification' \
+--header 'X-netmera-api-key: your-rest-api-key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"target": {
+"extId": ["exid", "exid22"]
+"message": {
+"buttonSet": {
+"id": 1,
+"buttonNames": {
+"button1": "15 GB-10 USD",
+"button2": "15 GB-15 USD"
+"15 GB-10 USD": "https://www.google.com",
+"15 GB-15 USD": "https://www.youtube.com"
+4.6.0
+July 3, 2025
+⭐ Improvements
+Geofence Improvements
+Geofence functionality has been optimized to use the most recent location data, eliminate duplicate event triggers, and prevent event generation for non-Netmera-defined regions. Monitoring behavior and logging have been enhanced for greater accuracy and reliability.
+New Methods
+Following methods are added managing user consent.
+setEmailPermission
+getEmailPermission
+setSmsPermission, getSmsPermission
+Swift Email & SMS Preferences
+4.5.0
+June 20, 2025
+Features
+Custom Push Icon
+You can now include custom push icons in your notifications, allowing for more flexible and branded message delivery across different use cases.
+Push Icon
+⭐ Improvements
+Update Profile
+The
+updateUser
+method has been
+deprecated
+. It is now replaced by two separate methods:
+updateUserProfile
+: Should be used for updating user
+profile attributes
+identifyUser
+: Should be used for setting or updating
+user identifiers
+such as
+userId
+email
+, or
+msisdn
+session
+and
+init
+requests are sent
+with a callback
+, improving reliability and traceability.
+4.4.0
+June 17, 2025
+New Methods
+getCurrentExternalId()
+This method allows you to retrieve the current user's
+externalId
+setDataTransferEnabled(true)
+setDataTransferEnabled(false)
+isDataTransferEnabled()
+When
+setDataTransferEnabled(false)
+is called, user update and event fire requests will not be sent.
+When
+setDataTransferEnabled(true)
+is called, user update and event fire requests will resume.
+isDataTransferEnabled()
+can be used to check whether data transfer is currently active:
+Returns
+true
+setDataTransferEnabled(true)
+was called.
+Returns
+false
+setDataTransferEnabled(false)
+was called.
+A new parameter has been added to the session initialization request:
+"an": false
+(anonymous)
+This parameter indicates whether the session was started anonymously.
+Default value:
+false
+When set to
+true
+user update
+and
+event fire
+requests are
+not
+processed.
+isNetmeraRemoteMessage(payload: [String: Any]) -> Bool
+This method is used to determine whether an incoming push notification was sent via Netmera or from another provider. It checks the presence of the
+"nm"
+tag in the push payload, which is a unique identifier used by Netmera.
+true
+: Indicates that the push notification was sent via Netmera.
+false
+: Indicates that the push notification was sent from a different source.
+This method is useful in applications that integrate with multiple push providers or require payload-based filtering to determine the correct handling logic based on the notification source.
+4.3.0
+May 31, 2025
+Features
+SSL Pinning Feature
+Added support for SSL Pinning allowing developers to enable SSL pinning when needed. This feature enhances the security of your application by ensuring trusted communication channels.
+SSL Pinning Documentation
+4.2.0
+May 20, 2025
+Features
+Live Activity Support Added
+Live Activity Documentation
+Bug Fixes
+Crash Fix for Banner/Widget Transitions
+Implemented a safety fix for a rare crash related to
+NSLayoutConstraint.isActive
+NSGenericException
+) observed during
+show
+dismiss
+transitions of banners or widgets.
+Inbox Badge Count Update Fix
+Fixed an issue where the badge count was not updated after reading inbox messages when Netmera manages badges was enabled under
+Settings > General > iOS Badge Management
+Geofence Event Dispatch Optimization
+Geofence events are now immediately sent to the backend as soon as they are triggered by the system
+4.1.0
+May 15, 2025
+Features
+Notification Permission Status Check
+The
+Netmera.checkNotificationPermission()
+method has been added to return the current system-level push notification permission status.
+This feature allows developers to programmatically determine the user’s push permission state and act accordingly.
+Possible return values:
+NOT_DETERMINED
+: The user has opened the app but has not yet made a decision regarding push notification permissions.
+GRANTED
+: The user has granted permission; the app is allowed to send push notifications.
+DENIED
+: The user has denied permission or notifications are disabled from system settings.
+4.0.25
+April 17, 2025
+Improvements
+Added the
+piid
+Bug Fixes
+Fixed a crash issue that occurred when users tapped on multiple push notifications in quick succession while the app was open.
+4.0.24
+April 10, 2025
+Features
+Email Preferences API Integration
+Email Subscription Preferences
+Netmera.setEmailSubscriptionAllowed(true)
+– Allows users to subscribe to email notifications.
+Netmera.setEmailSubscriptionAllowed(false)
+– Allows users to unsubscribe from email notifications.
+Netmera.isEmailSubscriptionAllowed()
+– Allows to check if the user has allowed email subscriptions.
+Push Click Action: Open Widget
+See in User Guide
+Added an
+Open Widget
+option to the Push Click Action section in campaign creation. This enables users to be directed to a relevant widget within the app directly from the push notification.
+Improvements
+Deep Link Management for Widget Button Actions
+Improved support for deep linking within widgets. Developers can now handle deep links more effectively when a
+deeplink
+is added as a click action in a widget. This enhancement ensures that deep links can be processed properly by the app.
+4.0.22
+April 2, 2025
+Improvements
+The header
+x-netmera-framework: swift
+has been added.
+4.0.21
+March 20, 2025
+Improvements
+Timezone ID Collection:
+tzid
+(timezone ID) in the
+ids
+block for all requests.
+New Event for Background Location Permission:
+Introduced the
+n:blp
+event, which is triggered when the user grants in-app location permission.
+Bug Fixes
+Track Action Fix:
+4.0.20
+January 30, 2025
+Features
+Autotracking
+mechanism, which automatically tracks user activities and simplifies page transition tracking and event data collection in mobile applications, has been improved.
+region
+information
+from device settings, allowing for more targeted engagement based on user regions.
+Region Information Use Cases
+Storing Region Information on First App Launch
+When the user opens the app for the first time, the device’s region information (
+rgn
+parameter) is sent to the Netmera backend. This information is added to the user profile and can be used for segmentation.
+Updating User's Region Information
+Example:
+If the device region is
+Region = "US"
+"rgn": "US"
+to the backend.
+Sending Region-Specific Push Notifications
+You can send push notifications targeted to users in specific regions.
+Examples:
+To users with
+"rgn": "TR"
+: "New campaign for our users in Turkey!"
+To users with
+"rgn": "FR"
+: "Special shipping offers for our customers in France!"
+Sending Emergency Alerts and Notifications by Region
+In case of emergencies (weather alerts, natural disasters, etc.), users in specific regions will receive alerts.
+Examples:
+To users with
+"rgn": "JP"
+: "Earthquake warning in Japan!"
+To users with
+"rgn": "US"
+Delays expected due to storm in the USA."
+Segmenting Users Based on Region
+Clients can create automatic segments based on users' region.
+Users with
+"rgn": "GB"
+will be included in the
+segment.
+Users with
+"rgn": "IN"
+will be included in the
+"India"
+segment.
+Displaying In-App Messages Based on Region
+When a user opens the app, they may receive an
+In-App message
+personalized for their region.
+Displaying Region-Specific Personalized Content
+Upon opening the app, users are shown content tailored to their current region.
+A user with
+"rgn": "JP"
+will see
+popular products in Japan
+A user with
+"rgn": "FR"
+will see recommendations for
+French restaurants and hotels
+Region-Specific Loyalty Programs or Reward Systems
+Different loyalty programs can be applied based on the user's region.
+Users with
+Users with
+"rgn": "IN"
+can receive: "Cashback offers available for users in India!"
+Displaying Payment Options Based on Region
+Users are presented with payment methods relevant to their region.
+Example: A popular local bank is offered to users in Turkey, while a different regional bank is suggested for users in Europe.
+4.0.19
+January 23, 2025
+Features
+The
+Instant Show
+4.0.18
+January 13, 2025
+Bug Fixes
+Fixed an issue where push notifications sent while the app was in the foreground did not appear in the notification center if not interacted with upon arrival. Notifications will now properly display in the notification center as expected.
+4.0.17
+December 30, 2024
+Improvements
+Updated
+kSecAttrAccessible
+kSecAttrAccessibleAfterFirstUnlock
+kSecAttrAccessibleAlways
+4.0.16
+December 12, 2024
+Bug Fixes
+Improved the network queue mechanism to ensure accurate and reliable processing of all requests.
+4.0.15
+December 2, 2024
+Bug Fixes
+Widgets exceeding their end time are now correctly excluded during automation deliveries.
+4.0.14
+November 28, 2024
+Improvements
+Test Device Added Success Alert:
+Added a success alert when a test device is added.
+Bug Fixes
+Deep Link Handling Crash Fixed:
+A crash that occurred when using schema-based deep links has been fixed. This issue, specifically affecting scheme-type deep links (e.g.,
+scheme://...
+), caused the application to crash before triggering
+AppDelegate
+methods. In the new version, necessary checks have been added, and the redirection flow has been improved.
+4.0.13
+November 13, 2024
+Improvements
+Media content included in push notifications with Inbox features is now accessible. Users can directly view media files (images, videos, etc.) embedded in notifications. Please see the sample code below.
+if let mediaURL = data?.push?.mediaAttachmentURL,
+let url = URL(string: mediaURL) {
+// Load image with url
+Ensured compatibility with Xcode 16 by updating the Swinject framework build process.
+Widget background updated from gray to a transparent background for enhanced visual appeal.
+Bug Fixes
+Resolved a crash issue that occurred when adding a test device via email.
+4.0.12
+November 8, 2024
+Bug Fixes
+Resolved an issue with widget button actions to ensure proper functionality.
+4.0.11
+September 26, 2024
+Bug Fixes
+Resolved an issue causing crashes related to silent push notifications.
+4.0.10
+September 18, 2024
+Features
+The
+Purchase Event
+can now be used as a base event, providing greater flexibility in event tracking and enabling more advanced analytics and marketing scenarios.
+4.0.8
+Sep 12, 2024
+Improvements
+Additional logs have been implemented to help address issues and improve troubleshooting. These logs provide better insights for identifying and resolving errors efficiently.
+4.0.7
+Sep 3, 2024
+Bug Fixes
+The
+did
+(device ID) value has been improved to maintain its consistency even after the app is uninstalled and reinstalled.
+4.0.6
+Aug 27, 2024
+Bug Fixes
+Resolved an issue that was causing a crash related to the widget.
+4.0.5
+Aug 1, 2024
+Features
+We have added support for
+SwiftUI
+4.0.4
+July 19, 2024
+Bug Fixes
+Fixed the error encountered in AppDelegate.
+4.0.2
+May 6, 2024
+Improvements
+Added dsym file for better debugging capabilities.
+Added '
+appV
+' and '
+buildV
+' to the header for improved version tracking and identification.
+SSL Pinning
+Former iOS (Objective-C)
+6 days ago

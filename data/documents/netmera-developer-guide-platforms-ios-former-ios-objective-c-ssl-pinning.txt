@@ -1,0 +1,121 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/ssl-pinning
+Platforms
+iOS
+Former iOS (Objective-C)
+SSL Pinning
+Warning
+If your app's target is 14, you must use the
+info.plist
+Configuration for SSL pinning.
+using a certificate file
+using Info.plist configuration
+. You must choose only one method; implementing both will cause issues. Below are the detailed steps for both integration options.
+Using a Certificate File (
+netmera.com.cer
+(Supports iOS 11 and above)
+Using
+Info.plist
+Configuration
+(Supports iOS 14 and above)
+Compatibility
+Method
+Supported iOS Versions
+Certificate File
+iOS 11 and above
+Info.plist
+Configuration
+iOS 14 and above
+Important Notes:
+Implement Only One Method
+: You can implement either the certificate file method or the Info.plist configuration method, not both.
+On-Premises Customers
+: If you're using an on-premises setup, ensure the certificate file is named
+netmera.com.cer
+and use your custom URL in the Info.plist configuration.
+Certificate Updates
+: If the certificate changes, update the
+netmera.com.cer
+file or regenerate the public key hash and update the Info.plist configuration.
+Integration Option 1: Using a Certificate File (iOS 11 and Above)
+This method is supported on
+iOS 11 and above
+Step 1: Add the Certificate to Your Project
+Download the
+netmera.com.cer
+certificate file.
+Add the certificate to your
+Xcode project
+Ensure the certificate is included in your app's target.
+Step 2: The Certificate File Name Must Be
+netmera.com.cer
+netmera.com.cer
+in your app's project bundle. Ensure the file name matches exactly.
+No Additional Configuration Needed
+Integration Option 2: Using Info.plist Configuration (iOS 14 and Above)
+This method is supported on
+iOS 14 and above
+Use the following
+OpenSSL
+command to generate the public key hash for the certificate:
+openssl s_client -showcerts -servername your-custom-url.com -connect your-custom-url.com:443 </dev/null 2>/dev/null | \
+openssl x509 -outform PEM | \
+openssl x509 -inform pem -noout -outform pem -pubkey | \
+openssl pkey -pubin -inform pem -outform der | \
+openssl dgst -sha256 -binary | openssl enc -base64
+Replace
+your-custom-url.com
+with your custom domain (for on-premises customers) or use
+sdkapi.netmera.com
+for the default Netmera service.
+Example output:
+Step 2: Add the Configuration to Info.plist
+Open your app’s Info.plist file.
+Add the following configuration to enable SSL pinning:
+Replace:
+your-custom-url.com
+with your custom domain (for on-premises customers).
+with the hash value generated in the previous step.
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<false/>
+<key>NSPinnedDomains</key>
+<dict>
+<key>your-custom-url.com</key>
+<dict>
+<key>NSIncludesSubdomains</key>
+<true/>
+<key>NSPinnedLeafIdentities</key>
+<array>
+<dict>
+</dict>
+</array>
+</dict>
+</dict>
+</dict>
+Step 3: Save and Build Your Project
+After adding the configuration, save the
+Info.plist
+file and rebuild your project.
+Important Notes
+Choose Only One Method:
+On-Premises Customers:
+The certificate file name must remain
+netmera.com.cer
+If you are using the
+Info.plist
+method, replace
+sdkapi.netmera.com
+with your custom URL.
+Certificate Updates:
+If the server certificate changes, update the
+netmera.com.cer
+file or regenerate the public key hash and update your
+Info.plist
+Testing:
+Test your SSL pinning implementation using tools like
+Proxyman
+to verify that requests fail if the certificate or key hash does not match.
+Advertising ID
+Changelog
+2 months ago

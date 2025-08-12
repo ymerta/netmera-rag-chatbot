@@ -1,0 +1,15 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Delegate Methods
+Push Payload Receivers
+Widget and In-App Messages
+Customizing In-App Messages
+Media Push
+Carousel, Slider and Thumbnail Push
+Custom Web View Presentation
+Push Icon
+Delegate Methods
+6 months ago

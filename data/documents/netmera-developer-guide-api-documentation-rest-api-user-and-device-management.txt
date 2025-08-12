@@ -1,0 +1,307 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/api-documentation/rest-api/user-and-device-management
+API Documentation
+REST API
+User & Device Management
+The Netmera API enables server-side management of users, devices, notifications, tags, categories, and profile attributes. You can register users, manage permissions, send notifications, retrieve user data, and manage opt-ins/opt-outs for email and SMS.
+General Limitations
+Maximum 1000 unique external IDs per request
+: If you need to send data for more than 1000 users, split the request into multiple batches to ensure performance and reliability.
+User Deletion
+Endpoint:
+POST /rest/3.0/deleteUsersPermanently
+Permanently deletes all user data from Netmera. This includes all associated devices, profile attributes, and event history.
+This operation is irreversible and requires prior activation through the Netmera panel.
+curl -X POST https:
+//restapi.netmera.com/rest/3.0/deleteUsersPermanently \
+"X-netmera-api-key: your_rest_api_key"
+"Content-Type: application/json"
+-d '{
+"extIds"
+// Required: Array of external user IDs to delete
+"externalid"
+Push Notification Permission Management
+Disable Push
+Endpoint:
+POST /rest/3.0/disablePush
+Use to opt-out all devices of a user or a single device from receiving push notifications.
+Opt-out by external user ID:
+curl -X POST https://restapi.netmera.com/rest/3.0/disablePush \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"extId": "id_in_my_system_1"  // Required: User ID to opt-out
+Opt-out by device token:
+curl -X POST https://restapi.netmera.com/rest/3.0/disablePush \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"deviceToken": "my_device_token"  // Required: Device token to opt-out
+Enable Push
+Endpoint:
+POST /rest/3.0/enablePush
+Use to opt-in all devices of a user or a specific device for push notifications.
+Opt-in by external user ID:
+curl -X POST https://restapi.netmera.com/rest/3.0/enablePush \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"extId": "id_in_my_system_1"  // Required: User ID to opt-in
+Opt-in by device token:
+curl -X POST https://restapi.netmera.com/rest/3.0/enablePush \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"deviceToken": "my_device_token"  // Required: Device token to opt-in
+Tag Management
+Add Tags to Users
+Endpoint:
+POST /rest/3.0/tagUsers
+Adds one or more tags to the specified users.
+curl -X POST https://restapi.netmera.com/rest/3.0/tagUsers \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"tag": "Sport",                // Required: Tag name
+"extIds": ["id1", "id2"]       // Required: Array of external user IDs
+Remove Tags from Users
+Endpoint:
+POST /rest/3.0/untagUsers
+Removes a tag from the specified users.
+curl -X POST https://restapi.netmera.com/rest/3.0/untagUsers \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"tag": "Sport",                // Required: Tag name to remove
+"extIds": ["id1", "id2"]       // Required: User IDs to remove tag from
+Category Preferences
+Endpoint:
+POST /rest/3.0/setCategoryPreferences
+Enables or disables category-specific opt-in preferences for a user.
+curl -X POST https://restapi.netmera.com/rest/3.0/setCategoryPreferences \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"extId": "id1",           // Required
+"category": "Shopping",   // Required
+"enable": true            // Required: true to opt-in, false to opt-out
+"extId": "id1",
+"category": "Promotion",
+"enable": false
+Profile Attribute Management
+Set Profile Attributes
+Endpoint:
+POST /rest/3.0/setProfileAttributes
+Sets or updates profile attributes for the given users.
+curl -X POST https://restapi.netmera.com/rest/3.0/setProfileAttributes \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"extId": "id1",             // Required
+"extId": "id2",
+"profile": {"name": "John"}
+Unset Profile Attributes
+Endpoint:
+POST /rest/3.0/unsetProfileAttributes
+Removes specified keys from the user's profile.
+curl -X POST https://restapi.netmera.com/rest/3.0/unsetProfileAttributes \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"extId": "id1",             // Required
+"profile": ["age"]          // Required: Array of attribute keys to remove
+"extId": "id2",
+"profile": ["age", "name"]
+Delete Profile Attributes from All Users
+Endpoint:
+POST /rest/3.0/deleteProfileAttributes
+Deletes specified profile keys from all users.
+curl -X POST https://restapi.netmera.com/rest/3.0/deleteProfileAttributes \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"profile": ["name", "age"]  // Required: List of attribute keys to delete for all users
+Get Profile Attributes
+Endpoint:
+GET /rest/3.0/getProfileAttributes
+Retrieves the current profile attributes of a user.
+curl -G https://restapi.netmera.com/rest/3.0/getProfileAttributes \
+-H "X-netmera-api-key: your_rest_api_key" \
+--data-urlencode 'extId=id1'  // Required: User ID to fetch attributes for
+Sample response
+"extId": "id1",
+"profile": {
+"name": "John",
+"surname": "Brown",
+"dateOfBirth": 624315600000,
+"email": "
+[email protected]
+"age": 34,
+"isSubscribed": true
+Push Values to Array Attributes
+Endpoint:
+POST /rest/3.0/pushProfileAttributes
+Appends values to array-type profile attributes.
+curl -X POST https://restapi.netmera.com/rest/3.0/pushProfileAttributes \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"extId": "id1",  // Required: External user ID
+"profile": {
+"lastVisitedCategories": ["shopping"]  // Required: Attribute must be an array
+Pull Attributes from Array Attributes
+Endpoint:
+POST /rest/3.0/pullProfileAttributes
+Removes values from array-type profile attributes.
+curl -X POST https://restapi.netmera.com/rest/3.0/pullProfileAttributes \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"extId": "id1",  // Required
+"profile": {
+"lastVisitedCategories": ["promotion"]  // Required: Must match array-type keys
+Delete Specific Profile Attributes from All Users
+Endpoint:
+POST /rest/3.0/deleteProfileAttributeValue
+Deletes a specific value from a profile attribute across all users.
+curl -X POST https://restapi.netmera.com/rest/3.0/deleteProfileAttributeValue \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"key": "lastVisitedProducts",  // Required: Attribute key
+"value": "shirt"              // Required: Value to remove globally
+Device Management
+Get Devices for a User
+Endpoint:
+GET /rest/3.0/getDevices
+Returns all devices associated with a user, optionally filtered by push permission.
+curl -G https://restapi.netmera.com/rest/3.0/getDevices \
+-H "X-netmera-api-key: your_rest_api_key" \
+--data-urlencode 'extId=id1'  // Required: User ID to fetch devices for
+--data-urlencode 'pushPermitted=true'  // Optional: true = only opt-in devices, false = all devices
+Sample response
+"extId": "id1",
+"devices": [
+"platform": "ANDROID",
+"token": "a1b2c3d4e5f6g7",
+"deviceModel": "Pixel 5",
+"pushPermitted": true
+Get All Device Tokens
+Endpoint:
+GET /rest/3.0/getDeviceTokens
+Fetches device tokens in a paginated format.
+curl -G https://restapi.netmera.com/rest/3.0/getDeviceTokens \
+-H "X-netmera-api-key: your_rest_api_key" \
+--data-urlencode 'max=10'     // Optional: Default is 10
+--data-urlencode 'offset=0'   // Optional: Default is 0
+Sample Response
+"nextPage": "https://restapi.netmera.com/rest/3.0/getDeviceTokens?offset=10&max=10",
+"total": 158329,
+"devices": [
+"platform": "ANDROID",
+"token": "abc123pushToken",
+"deviceModel": "Pixel 6",
+"pushPermitted": true
+Pagination
+To retrieve the next batch of device tokens, use the
+nextPage
+value directly:
+curl -G 'https://restapi.netmera.com/rest/3.0/getDeviceTokens?offset=10&max=10' \
+-H "X-netmera-api-key: your_rest_api_key"
+Segments
+Get Segments
+Endpoint:
+GET /rest/3.0/getSegments
+Lists all segments defined in the panel.
+curl -X GET https://restapi.netmera.com/rest/3.0/getSegments \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-H "X-netmera-os: IOS"  // Required: Platform header (IOS or ANDROID)
+Sample Response
+"list": [
+"id": 5883,
+"name": "segment",
+"userCount": 16572,
+"type": "PRODUCT_SEGMENT"
+Get Segment Users
+Endpoint:
+GET /rest/3.0/getSegmentUsers?id=
+Fetches users in the specified segment ID.
+curl -X GET 'https://restapi.netmera.com/rest/3.0/getSegmentUsers?id=SEGMENT_ID' \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-H "X-netmera-os: IOS"  // Required
+Sample Response
+"name": "brand",
+"list": [
+"externalId": "user_123",
+"msisdn": "905312345678",
+"email": "
+[email protected]
+Push Approval
+Endpoint:
+POST /rest/3.0/sendPushApproval
+Approves a previously created push message.
+curl -X POST https://restapi.netmera.com/rest/3.0/sendPushApproval \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '[
+"messageId": 0  // Required: ID of the message to approve
+Email Opt-In/Opt-Out
+Enable Email
+Endpoint:
+POST /rest/3.0/enableMail
+curl -X POST https://restapi.netmera.com/rest/3.0/enableMail \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"extIds": ["your_extId"]  // Required: List of external user IDs
+// "emailList": ["your-email"]  // Optional alternative to extIds
+Disable Email
+Endpoint:
+POST /rest/3.0/disableMail
+curl -X POST https://restapi.netmera.com/rest/3.0/disableMail \
+-H "X-netmera-api-key: your_rest_api_key" \
+-H "Content-Type: application/json" \
+-d '{
+"extIds": ["your_extId"]  // Required or use emailList
+// "emailList": ["your-email"]
+Update Email
+Endpoint:
+POST /rest/3.0/updateEmail
+curl -X POST https://restapi.netmera.com/rest/3.0/updateEmail \
+-H "X-netmera-api-key: your-api-key" \
+-H "Content-Type: application/json" \
+-d '{
+"extId": "your_extId",  // Required
+"email": "your_email"    // Required
+SMS Opt-In/Opt-Out
+Enable SMS
+Endpoint:
+POST /rest/3.0/enableSms
+curl -X POST https://restapi.netmera.com/rest/3.0/enableSms \
+-H "X-netmera-api-key: your-api-key" \
+-H "Content-Type: application/json" \
+-d '{
+"extIds": ["your-extId"]  // Required or use msisdnList
+// "msisdnList": ["your-msisdn"]
+Disable SMS
+Endpoint:
+POST /rest/3.0/disableSms
+curl -X POST https://restapi.netmera.com/rest/3.0/disableSms \
+-H "X-netmera-api-key: your-api-key" \
+-H "Content-Type: application/json" \
+-d '{
+"extIds": ["your-extId"]  // Required or use msisdnList
+// "msisdnList": ["your-msisdn"]
+Update MSISDN
+Endpoint:
+POST /rest/3.0/updateMsisdn
+curl -X POST https://restapi.netmera.com/rest/3.0/updateMsisdn \
+-H "X-netmera-api-key: your-api-key" \
+-H "Content-Type: application/json" \
+-d '{
+"extId": "your_extId",   // Required
+"msisdn": "your_msisdn"  // Required
+Events
+Inbox Feature
+5 days ago

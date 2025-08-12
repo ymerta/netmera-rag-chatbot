@@ -1,0 +1,237 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/user-and-attributes
+Platforms
+iOS
+Former iOS (Objective-C)
+User & Attributes
+Managing User Data
+The
+NetmeraUser
+class allows you to send structured information about your application's users to Netmera. The ideal time to update user attributes
+right after the user logs into your application.
+User ID Management
+For optimal performance and data integrity:
+Update user information at login
+: It’s crucial to update the user information as soon as the user logs in.
+Unique userId
+: Ensure that each user has a unique
+userId
+. Assigning the same
+userId
+to multiple users leads to data inconsistencies and is not recommended.
+Updating User Information
+After obtaining user information, set or update the user data by using the following example. You can update any attribute independent from the others.
+Swift
+Objective-C
+// Set user's properties
+let
+user
+NetmeraUser
+user.userId
+"johnny.appleseed"
+user.email
+[email protected]
+user.msisdn
+"00905XXXXXXXXX"
+user.name
+"Johnny"
+user.surname
+"Appleseed"
+user.language
+NSLocale.preferredLanguages
+var
+birthComponents
+DateComponents
+birthComponents.year
+1774
+birthComponents.month
+birthComponents.day
+let
+calendar
+Calendar
+identifier
+.gregorian
+user.dateOfBirth
+calendar.
+date
+from
+birthComponents
+user.gender
+NetmeraProfileAttributeGender.male
+user.maritalStatus
+NetmeraProfileAttributeMaritalStatus.married
+user.numberOfChildren
+user.country
+"United States"
+user.state
+"MA"
+user.city
+"Leominster"
+user.district
+"Leominster"
+user.occupation
+"Farmer"
+user.industry
+"Agriculture"
+user.favouriteTeam
+"FAVOURITE_TEAM"
+user.externalSegments
+"segment1"
+"segment2"
+// Send data to Netmera
+Netmera.
+update
+user
+// Set user's properties
+NetmeraUser *user = [[NetmeraUser alloc] init];
+user.userId = @"johnny.appleseed";
+user.email = @"
+[email protected]
+user.MSISDN = @"00905XXXXXXXXX";
+user.name = @"Johnny";
+user.surname = @"Appleseed";
+user.language = NSLocaleIdentifier;
+NSDateComponents *birthComponents = [[NSDateComponents alloc] init];
+birthComponents.year = 1774;
+birthComponents.month = 9;
+birthComponents.day = 26;
+NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+user.dateOfBirth = [calendar dateFromComponents:birthComponents];
+user.gender = NetmeraProfileAttributeGenderMale;
+user.maritalStatus = NetmeraProfileAttributeMaritalStatusMarried;
+user.numberOfChildren = 10;
+user.country = @"United States";
+user.state = @"MA";
+user.city = @"Leominster";
+user.district = @"Leominster";
+user.occupation = @"Farmer";
+user.industry = @"Agriculture";
+user.favouriteTeam = @"FAVOURITE_TEAM";
+user.externalSegments = @[@"segment1", @"segment2"];
+// Send data to Netmera
+[Netmera updateUser:user];
+Removing Attributes
+To remove a previously set attribute, assign
+[NSNull null]
+to the attribute in the user object.
+UserId cannot be removed:
+userId
+cannot be removed
+, even if set to
+null
+Swift
+Objective-C
+// This will remove previously set `email` value from Netmera
+let user = NetmeraUser()
+user.email = ""
+Netmera.update(user)
+// This will remove previously set `email` value from Netmera
+NetmeraUser *user = [[NetmeraUser alloc] init];
+user.email = [NSNull null];
+[Netmera updateUser:user];
+Creating Custom Profile Attributes
+Step 1: Navigate to the Developers section
+Custom profile attributes must be created and configured in the Netmera Panel before they can be used in the application.
+Go to
+Panel
+Developers > Profile Attributes > Create New Attribute.
+Step 2: Fill in Attribute Details
+Define the following information:
+Name
+: The unique identifier for the attribute.
+Label
+: A user-friendly name for the attribute.
+Description
+: A brief description of the attribute.
+Data Type
+: Choose the appropriate data type for the attribute.
+Is Array
+: Define whether the attribute can hold multiple values.
+Step 3: Save the Attribute
+After clicking
+Save
+, the custom attribute will be available for assignment to your users.
+Step 4: Generated Code for Custom Attributes
+Once the attribute is defined in the Netmera Panel, the generated code can be found at the bottom of the
+Profile Attribute
+page, under the
+Generate Code
+section. This code must be added to your Netmera Panel under
+Profile Attributes > User Class
+Private Information Considerations
+Under the
+law, the sharing of private user data is prohibited. To ensure compliance:
+Private Information Flag
+: When defining profile attributes or events, the
+Private Information
+Private Information
+flag during the
+Netmera.updateUser(user:)
+call. If the flag is set, the request will not be sent to the backend.
+fetchCoupon
+The
+fetchCoupon
+method in Netmera allows you to retrieve and display the coupons earned by users in your iOS application. You can use the
+NetmeraCouponFilter
+to define the filtering criteria, such as the page number and the maximum number of coupons to retrieve.
+Create a Filter: Use
+NetmeraCouponFilter
+to set the page number and the maximum number of coupons to retrieve.
+Call the
+fetchCoupon
+Method: Pass the filter to the
+fetchCoupon
+method to fetch the coupons.
+Handle the Result: Inside the closure, check if the coupons are fetched successfully. If so, assign them to the
+coupons
+property and reload the table view to display them.
+let filter = NetmeraCouponFilter()
+filter.page = Int32(pageSize)
+filter.max = Int32(max)
+Netmera.fetchCoupon(using: filter) { coupons, error in
+self.coupons = coupons ?? []
+self.tableView.reloadData()
+User Update Callback
+The
+User Update
+feature calls the
+update
+user
+object as a parameter to update the user data. The function uses a closure (callback) to handle the result of the update. Depending on the success or failure of the update, a corresponding block is triggered.
+Successful Update
+: If the update is successful, the success block is triggered, and "success" is printed to the console.
+Error in Update
+: If an error occurs during the update, the error block is triggered, and "error" is printed.
+Swift
+Objective-C
+Netmera.update(user) { success, error in
+if success {
+print("success")
+} else {
+print("error")
+[Netmera updateUser:user completion:^(BOOL isSuccess, NSError * _Nullable error) {
+if (isSuccess) {
+NSLog(@"Update user is success");
+} else {
+NSLog(@"%@", error);
+}];
+Email Subscription Preferences
+1. Check Email Subscription Status
+Use the following method to check if the user has allowed email subscriptions:
+Netmera.isAllowedEmailSubscription()
+Returns
+: A
+Boolean
+value (
+true
+if the user has allowed email subscriptions, otherwise
+false
+2. Update Email Subscription Preferences
+Set the user's preference for email subscriptions using one of the methods below:
+Allow Email Subscriptions
+Netmera.setAllowedEmailSubscription(true)
+Disallow Email Subscriptions
+Netmera.setAllowedEmailSubscription(false)
+These methods enable you to respect user preferences for email communications within your application.
+Geofence & Location
+Data Transfer
+4 months ago

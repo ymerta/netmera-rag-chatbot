@@ -12,4 +12,4 @@ Gain real-time visibility into how specific events unfold throughout the day. Mo
 Explore the Event Reports to unlock the power of data-driven decision-making. Whether you're monitoring real-time event trends or examining long-term behavior patterns, these reports equip you with the insights needed to optimize your platform or application for sustained success.
 Installs
 Daily Event Count
-11 months ago
+1 year ago

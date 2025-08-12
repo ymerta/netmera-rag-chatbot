@@ -1,0 +1,82 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/sdk-integration/custom-fcm-and-hms-implementations
+Platforms
+Android
+Custom FCM and HMS Implementations
+If your platform uses a
+custom
+FirebaseMessagingService
+HmsMessageService
+, you need to update your
+AndroidManifest.xml
+file to avoid service conflicts with Netmera.
+Step 1. Manifest Configuration
+For Custom
+FirebaseMessagingService
+If you are using your own
+FirebaseMessagingService
+class, make sure to add the following line to your
+AndroidManifest.xml
+to remove Netmera's default FCM service:
+service
+android
+name
+"com.netmera.nmfcm.NMFirebaseService"
+tools
+node
+"remove"
+For Custom
+HmsMessageService
+If you are using your own
+HmsMessageService
+class, include the following entry in your manifest to remove Netmera’s default HMS service:
+service
+android
+name
+"com.netmera.nmhms.NMHuaweiService"
+tools
+node
+"remove"
+Step 2. FCM and HMS Implementations
+For Custom
+FirebaseCloudMesssaging
+(FCM)
+// For FirebaseCloudMesssaging (FCM)
+override
+fun
+onMessageReceived
+(remoteMessage:
+RemoteMessage
+) {
+super
+onMessageReceived
+(remoteMessage)
+(Netmera.
+isNetmeraRemoteMessage
+(remoteMessage.
+data
+)) {
+Netmera.
+onNetmeraPushMessageReceived
+(remoteMessage)
+else
+// Handle other messages
+For Custom
+HmsMessageService
+(HMS):
+// For Custom HmsMessageService (HMS)
+override fun onMessageReceived(remoteMessage: RemoteMessage) {
+super.onMessageReceived(remoteMessage)
+if (Netmera.isNetmeraRemoteMessage(remoteMessage.dataOfMap)) {
+Netmera.onNetmeraPushMessageReceived(remoteMessage)
+} else {
+// Handle other messages
+Deprecated Methods before v4.0.12
+Starting from
+, the method:
+Netmera.isNetmeraRemoteMessage(remoteMessage)
+has been
+deprecated
+Please update your implementation as shown in title 2.
+Huawei Message Receipt
+Android Integration FAQs
+2 months ago

@@ -84,4 +84,4 @@ Send Your Message
 In essence, segments are the foundation of your ability to send the right message to the right audience. They help you make your communication more relevant, engaging, and effective. Whether it's re-engaging inactive users, targeting your most loyal customers, or personalizing content based on behavior, segments are the key to enhancing your omnichannel customer engagement efforts within Netmera.
 Rule Based Segments
 Connector Segments
-6 months ago
+7 months ago

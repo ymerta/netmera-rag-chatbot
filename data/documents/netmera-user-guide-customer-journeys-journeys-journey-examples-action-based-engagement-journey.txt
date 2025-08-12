@@ -201,5 +201,5 @@ Any path where
 there are no additional actions or steps to follow is considered an exit point.
 This helps ensure that the journey doesn’t continue indefinitely and provides a clear conclusion. You can analyze exit points to refine your strategy for improving engagement in future campaigns.
 Journey Examples
-About Customer Data
+Customer Journey How-To Videos
 7 months ago

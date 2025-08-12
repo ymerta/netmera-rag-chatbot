@@ -199,4 +199,4 @@ Can I create separate campaigns for each coupon code?
 Yes, depending on the nature of the coupon code, you have the flexibility to tailor your campaigns accordingly. You can opt to create separate campaigns for each unique code, allowing for targeted messaging and tracking of individual promotions. Alternatively, you may choose to consolidate multiple codes within a single campaign, ideal for events like spins or promotions with a unified theme. This approach streamlines campaign management and ensures a cohesive brand experience across channels.
 Customize Components
 Custom Button Deeplinks
-4 months ago
+5 months ago

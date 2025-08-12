@@ -1,0 +1,29 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/flutter/deep-linking
+Platforms
+Flutter
+Deep Linking
+Step 1: Android & iOS Deep Linking
+For comprehensive instructions and code samples, we recommend consulting the native side deep link documentation for both
+Android
+and
+iOS
+. This will give you a solid understanding of how to define and manage deep links in your mobile application. By referring to these resources, complete the deep link setup across both platforms.
+Step 2: Flutter Deep Linking
+Once deep links are configured on the native sides, it's time to integrate deep link handling in your
+Flutter
+app.
+Deep linking
+flutterdev
+Deeplinking in Flutter
+You can use one of the following packages for deep link management in Flutter:
+app_links
+go_router
+app_links | Flutter package
+Dart packages
+app_links
+go_router | Flutter Package
+Dart packages
+go_router
+Flutter iOS Media Push
+Custom Deep Links
+6 months ago

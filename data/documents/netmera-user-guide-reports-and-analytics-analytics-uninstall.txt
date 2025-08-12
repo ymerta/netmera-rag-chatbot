@@ -63,4 +63,4 @@ So, in the example "Retain:2 Churn:1," it suggests that during the specified tim
 In conclusion, the Uninstall page empowers you to delve deep into user uninstallation trends, identify potential areas of improvement, and take proactive steps to enhance user retention. It's a vital tool for app developers and marketers seeking to reduce churn.
 People Insight
 Opt Out
-4 months ago
+5 months ago

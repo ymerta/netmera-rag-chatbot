@@ -1,0 +1,93 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications/customizing-in-app-messages
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Customizing In-App Messages
+Step 1: Create the plist File
+Create a new
+plist
+file.
+Place it inside the
+Headers
+folder in the Netmera Framework.
+Step 2: Customize Appearance Settings
+Use the following keys to modify in-app message properties in the
+plist
+file:
+xml
+version
+"1.0"
+encoding
+"UTF-8"
+DOCTYPE
+plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+plist
+version
+"1.0"
+dict
+key
+>TextColor</
+key
+string
+>{hexcolor. For ex-> 16777215}</
+string
+key
+>TitleColor</
+key
+string
+>{hexcolor. For ex-> 16777215}</
+string
+key
+>BackgroundColor</
+key
+string
+>{hexcolor. For ex-> 16777215}</
+string
+key
+>CancelButtonBackgroundColor</
+key
+string
+>{hexcolor. For ex-> 16777215}</
+string
+key
+>TitleFont</
+key
+string
+>{font family name. ex -> ariel}</
+string
+key
+>TextFont</
+key
+string
+>{font family name. ex -> ariel}</
+string
+key
+>CancelButtonRadius</
+key
+string
+>{10 sd px}</
+string
+key
+>ShadowOpacity</
+key
+string
+>{0-1}</
+string
+key
+>BottomPaddingRatio</
+key
+string
+>{between 0.01 - 1}</
+string
+key
+>CancelButtonImage</
+key
+string
+>{imagename}</
+string
+dict
+plist
+Widget and In-App Messages
+Media Push
+6 months ago

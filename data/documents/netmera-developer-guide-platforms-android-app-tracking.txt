@@ -1,0 +1,31 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/app-tracking
+Platforms
+Android
+App Tracking
+Netmera’s App Tracking feature requires the
+permission for Android 11 (API level 30) and above. This permission is essential for tracking other installed apps on the device.
+Step 1: Declare the Permission in Your Manifest
+To enable App
+Tracking on Android devices, the
+permission must be included in the app’s manifest. This is a requirement of the Android operating system to allow applications to query information about other installed apps on the device
+Add the
+permission to your app’s manifest.
+This permission is required to allow the app to access information about other installed apps.
+Step 2: Justify the Permission for Google Play Submission
+When submitting your app to the
+Google Play Store
+, you must:
+Provide a clear justification for using the
+permission.
+Explain that the permission is required for analytics purposes (or other relevant functionality).
+Example Justification
+Step 3: Ensure Compliance with Google Play Policies
+Your justification must comply with
+Google Play policies
+and should align with your app’s actual use of the permission.
+Be honest about why the permission is needed—ensure your description matches the app’s functionality.
+For more information, refer to:
+Google Play Support documentation
+Advertising ID
+SSL Pinning
+6 months ago

@@ -1,0 +1,103 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/web/mobile-web-push-for-ios
+Platforms
+Web
+Mobile Web Push for iOS
+Web Push notifications are a powerful tool for engaging users and driving traffic to a website or platform. With the introduction of iOS and iPadOS 16.4+, marketers can now leverage web push notifications on these devices. This allows for a wider reach and enhanced user engagement through web apps added to a user's home screen.
+Before implementing Mobile Web Push for iOS, ensure that the
+is completed.
+Step 1: Web Application Manifest File
+To make your website installable with its own icon and full-screen immersive experience, you must include a
+Web Application Manifest
+file. This JSON file defines how the website appears when added to a user’s home screen.
+Requirements for
+manifest.json
+The file must be included in your project.
+The
+display
+property should be set to
+standalone
+In some projects,
+manifest.json
+is automatically generated; if not, it must be manually added.
+If a different value is set for
+display
+, update it to
+standalone
+Example
+manifest.json
+"short_name": "Netmera App",
+"name": "Create Netmera App Sample",
+"icons": [
+"src": "favicon.ico",
+"sizes": "64x64 32x32 24x24 16x16",
+"type": "image/x-icon"
+"src": "logo192.png",
+"type": "image/png",
+"sizes": "192x192"
+"src": "logo512.png",
+"type": "image/png",
+"sizes": "512x512"
+"start_url": ".",
+"display": "standalone",
+"theme_color": "#000000",
+"background_color": "#ffffff"
+Testing Configuration
+To test your website’s web push capabilities:
+Open your website in Safari on an iOS/iPadOS 16.4+ device.
+Click the
+Share
+button.
+Select
+Add to Home Screen
+Once added, open the app from the home screen to verify that the permission prompt is enabled.
+Step 2: Users Add Your Website to Their Home Screens
+For users to receive web push notifications, they must first add your website to their home screens.
+User Steps:
+Open the website on an iOS/iPadOS 16.4+ device.
+Click the
+Share
+button.
+Select
+Add to Home Screen
+Save the app on the device home screen.
+Open the app from the home screen.
+Subscribe to notifications via the
+Fancy Box
+The native permission prompt should appear when the subscribe button is clicked.
+Step 3: Granting Push Permission
+Once the website is added to the home screen:
+Users open the app from the home screen.
+The website triggers a
+Fancy Box
+requesting push notification permissions.
+Users must grant permission to receive web push notifications.
+Step 4: Sending a Web Push Notification for iOS
+Once users have granted push permissions, notifications can be sent using the
+Netmera Panel
+Steps to Send a Notification:
+Navigate to the
+Netmera Panel
+Select
+Create New Campaign > Web > Safari
+to configure and send notifications to iOS users.
+How to Segment Mobile Web Push Opt-in Users?
+You can target users who have opted in for
+Mobile Web Push
+on iOS by following these steps:
+Go to Targeting:
+Navigate to
+Targeting > People
+in your dashboard.
+Filter by Platform:
+Under
+Platform
+, select
+Safari
+Select Device Type:
+Choose
+Device Type > Mobile
+to filter mobile users.
+Target Users Found:
+Once the list is generated, save it as a segment to use in your future campaigns.
+Deep Linking
+5 months ago

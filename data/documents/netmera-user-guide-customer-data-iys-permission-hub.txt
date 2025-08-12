@@ -1,0 +1,33 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/iys-permission-hub
+Customer Data
+IYS Permission Hub
+One interface. Two powerful paths to IYS compliance.
+In Turkey, regulations require brands to manage user communication permissions through IYS. For many businesses, this creates a delicate balance between
+reducing
+legal
+risk
+and
+keeping
+operations
+efficient
+The IYS Permission Hub in Netmera solves this challenge by giving you complete control over how consent data flows. You decide whether permissions are managed primarily in IYS and reflected in Netmera, or managed in Netmera and sent to IYS, based on your processes, data sources, and compliance strategy.
+Two Modes. Built for Different Needs.
+IYS Sync Mode
+Netmera ensures every update is accurately reflected in both systems.
+Automatically retrieves the latest permission data from IYS into Netmera
+Sends updates from Netmera to IYS for existing users
+Maintains fully aligned records without any manual updates
+IYS Integrator Mode
+Netmera becomes the primary manager of your consent data and handles all updates to IYS.
+Instantly creates or updates IYS user records in real time
+Manages all omnichannel permissions through one centralized, consistent logic
+Processes bulk permission updates quickly, reducing errors and ensuring compliance at scale
+Built for Every Type of Brand
+Whether you are a fintech navigating strict SMS rules or a retailer optimizing customer opt-in flows, the IYS Permission Hub helps you keep user data compliant, synchronized, and ready for use across channels.
+📲 Omnichannel ready: Works with email, SMS, push notifications, and more
+🔁 Flexible: Switch between Sync and Integrator modes as your needs evolve
+🧠 Transparent: Apply permission data in segmentation, analytics, and automation
+With the IYS Permission Hub, your compliance strategy works hand in hand with your business goals. You stay in control of how consent is collected and managed, while Netmera ensures it remains accurate and up to date.
+Tagless Data Capture
+IYS Sync Mode
+33 minutes ago

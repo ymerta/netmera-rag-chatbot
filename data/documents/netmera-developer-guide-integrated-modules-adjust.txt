@@ -1,0 +1,75 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/adjust
+Integrated Modules
+Adjust
+Setting up Netmera in Adjust
+Netmera collaborates closely with Adjust as an analytics and module partner. This integration empowers Netmera to seamlessly receive attribution and in-app event data via automated callbacks.
+You my utilize our straightforward setup instructions to activate Adjust’s integration and commence sending callbacks to Netmera. Afterwards, leverage our advanced setup guidelines to tailor the information transmitted to Netmera.
+Installation Source Tracking Requirement
+To retrieve the installation source information for customers with Adjust integration, the
+ad_id
+Basic Setup
+To initiate Adjust’s integration with Netmera, adhere to the following steps:
+Locate your app and navigate to your app options caret (^).
+Choose
+Partner Setup > ADD PARTNERS.
+Click the add
+(+)
+icon adjacent to Netmera.
+Input your
+. Please see
+Enabling Data Sharing
+to see how to setup.
+Save your settings.
+Netmera will receive callbacks for the following activities:
+install
+Log in to the
+Netmera Panel
+Navigate to
+Developers
+in the left-hand menu.
+Click on
+API
+Select the
+(third tab) and copy.
+Enabling Data Sharing
+When setting up data sharing between Adjust and Netmera, the number of entry fields you’ll encounter may vary based on your app configuration in Adjust:
+Multiplatform Apps:
+You’ll see one entry field.
+Separate Android and iOS Apps:
+You’ll see two entry fields.
+To complete the setup, enter the same
+Web
+in each field, regardless of whether there is one or two.
+List of Parameters Forwarded to Netmera
+You may tailor the data transmitted to Netmera from Adjust by customizing your setup. Netmera necessitates Adjust to transmit the following parameters (data points) with your callbacks.
+Parameters
+Information
+{gps_adid}
+Google Play Store advertising ID
+{idfa}
+ID for advertisers (iOS only)
+{idfv}
+Uppercase iOS ID for vendors
+{activity_kind}
+Type of user activity
+{adgroup_name}
+Adgroup name, as taken from the tracker
+{campaign_name}
+Campaign name, as taken from the tracker
+{created_at}
+Activity timestamp
+{installed_at}
+Install (i.e., first app open) timestamp
+Accessing Data on Netmera Panel
+After this integration, you may see the transferred data in the following spaces on Netmera Panel:
+Targeting > People > Find Users > By Installation Source (explained in
+User Guide
+Messages > Campaigns  > Create New Campaign > Step 3: Who > By Installation Source
+(explained in
+User Guide
+Adjust Documentation
+For more information, please refer to the
+Adjust Documentation
+Optimove
+Mixpanel
+3 months ago

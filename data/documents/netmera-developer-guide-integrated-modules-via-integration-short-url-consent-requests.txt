@@ -1,0 +1,496 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/via-integration/short-url-consent-requests
+Integrated Modules
+VIA Integration
+Short URL Consent Requests
+For a full version, please see the board
+here
+Prepare the Short URL Consent Form
+Prepare a Short URL consent form using your IYS Panel. Once the form is ready, submit it to IYS for approval.
+Obtain IYS Approval
+After IYS approves the form, it will be available for use in API calls. The form ID provided by IYS will serve as the
+formId
+value in your requests.
+Send the Consent Form to the User
+Send the consent form link to your users via email or SMS. Use the API endpoint
+https://restapi.netmera.com/via/consent
+to share the link with your users.
+User Submits Their Consent
+When the user receives the link, they can open the form, select their SMS or email permissions, and submit their approval.
+Confirmation Information Sent to the User
+After the user submits their consent, they will receive a confirmation via email or SMS informing them of the permissions they selected and their submission status.
+Consent Data Saved in Netmera
+Netmera saves the user permissions in the Netmera Panel. This synchronization occurs every 10 minutes to ensure the latest user preferences are reflected.
+Consent Requests with Short URL
+Start Consent Process
+The
+consent
+method initiates the process of obtaining
+(Electronic Communication Permission) and/or
+(Personal Data Protection Law) consent. A short URL linking to a webpage where recipients can complete the approval process, along with an explanation text, is sent to the recipient. The method returns a
+requestId
+value as a response.
+Access Consent Form
+The recipient clicks on the short URL, which redirects them to a webpage where they can provide their
+and/or
+consent.
+Consent Given
+Once the recipient provides consent:
+is recorded on behalf of the brand(s).
+is recorded on behalf of the service provider.
+Netmera Consent Update
+After consent is received, recipient's
+(EMAIL/SMS notification preferences) is saved in the
+Netmera
+system in every 10 minutes.
+Below are the required parameters for requesting
+using short URL verification methods, either through SMS or email.
+Fields in the Request Body
+Field
+Type
+Description
+Required
+Notes
+consentTypes
+Array of Objects
+Details of the consent request.
+Yes
+Each object must include
+title
+types
+, and
+recipientType
+title
+String
+The type of consent being requested.
+Yes
+Example value:
+types
+Array of Strings
+Communication channels for which consent is being requested.
+Yes
+Possible values:
+["ARAMA"]
+["MESAJ"]
+["ARAMA", "MESAJ"]
+["MESAJ", "ARAMA"]
+["EPOSTA"]
+recipientType
+String
+Specifies the type of recipient.
+Yes
+Accepted values:
+"BİREYSEL"
+(Individual),
+"TACIR"
+(Trader).
+formId
+String
+The ID of the consent form to be delivered to the recipient.
+Yes
+Retrieve this ID from the
+IYS Web
+VIA Management interface.
+recipient
+String
+Contact information of the recipient. Either a phone number or email address.
+Yes
+Ensure proper format for phone numbers or email addresses.
+"+90536......."
+verificationType
+String
+Method of obtaining consent via VIA.
+Yes
+Possible values:
+SMS_SHORTURL
+(via SMS short link) or
+EPOSTA_SHORTURL
+(via email short link).
+referenceID
+String
+Identifies the users in Netmera system. This identifier is used to create or update user records for VIA.
+Yes
+Example value: "
+user1234"
+Notes:
+Replace
+your_rest_api_key
+with your actual REST API key.
+Ensure
+formId
+corresponds to a valid form ID from the
+IYS Web
+VIA Management portal.
+Modify
+recipient
+with the actual recipient’s
+email
+phone number
+based on your use case.
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": ["MESAJ", "EPOSTA"],
+"recipientType": "BİREYSEL"
+"formId": "12345abcde",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_SHORTURL",
+"referenceId": "user1234"
+Successful Response (HTTP 200)
+"requestId": "requestid"
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"consentTypes": [
+"types": ["EPOSTA"],
+"recipientType": "BIREYSEL"
+"formId": "your_formId",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_SHORTURL",
+"referenceId": "user1234"
+Successful Response (HTTP 200)
+"requestId": "requestid"
+Invalid SMS Short URL
+Case:
+An invalid combination where
+verificationType
+SMS_SHORTURL
+but the
+types
+field contains
+"EPOSTA"
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["EPOSTA", "SMS", "ARAMA"],
+"recipientType": "BIREYSEL"
+"formId": "your_formId",
+"recipient": "+9053........",
+"verificationType": "SMS_SHORTURL",
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"code": "H1085"
+Invalid Email Short URL
+Case:
+An invalid value for the
+verificationType
+field is provided. Instead of
+EPOSTA_SHORTURL
+is used.
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["EPOSTA"],
+"recipientType": "BIREYSEL"
+"formId": "your_formId",
+"recipient": "
+[email protected]
+"referenceId": "user1234"
+Error Response (HTTP 400)
+"message": "verificationType alanı için gereken değerler: [SMS_OTP, EPOSTA_OTP, SMS_SHORTURL, EPOSTA_SHORTURL, SMS_APPROVALURL, EPOSTA_APPROVALURL, SMS_CEVAP, SMS_RED, URL_RED] olmalıdır.",
+"code": "H1012",
+Below are the required parameters for requesting
+using short URL verification methods, either through SMS or email.
+Fields in the Request Body
+Field Name
+Type
+Required
+Description
+consentTypes
+Array of Objects
+Yes
+Contains details about the type of consent requested.
+title
+String
+Yes
+types
+Array of Strings
+Yes
+"AYDINLATMA_METNI"
+formId
+String
+Yes
+ID of the form sent to the recipient. The corresponding consent form will be sent to the recipient based on this ID. Obtainable via the
+İYS Web
+verificationType
+String
+Yes
+Method of obtaining consent via ViA. Use
+"SMS_SHORTURL"
+for SMS-based short link verification or
+"EPOSTA_SHORTURL"
+for email-based short link verification.
+recipient
+String
+Yes
+Contact information of the recipient. Either a
+phone number
+email address
+where the consent request will be sent.
+referenceID
+String
+Yes
+Identifies the users in Netmera system. This identifier is used to create or update user records for VIA.
+personData
+Object
+Yes (personal data)
+name
+String
+Yes (personal data)
+Recipient's full name.
+recipientIdNumber
+String
+Yes (personal data)
+Recipient's Turkish ID number.
+address
+String
+Yes (personal data)
+Recipient's address information.
+Additional Information
+Fields in
+personData
+(e.g.,
+name
+recipientIdNumber
+, and
+address
+) become
+mandatory
+The
+formId
+uniquely identifies the consent form and ensures it is correctly delivered to the recipient.
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["AYDINLATMA_METNI"],
+"personData": {
+"name": "username",
+"recipientIdNumber": "134........",
+"address": "null"
+"formId": "your_formId",
+"recipient": "+90536.......",
+"verificationType": "SMS_SHORTURL",
+"referenceId": "user1234"
+Successful Response (HTTP 200):
+"requestId": "requestid"
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"personData": {
+"name": "username",
+"recipientIdNumber": "134........",
+"address": "null"
+"formId": "your_formId",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_SHORTURL",
+"referenceId": "user1234"
+Successful Response (HTTP 200):
+"requestId": "requestid"
+In case of a failed request, the response will include the following fields:
+message
+(String):
+The error message that describes the issue with the request.
+code
+(String):
+The error code from the IYS system indicating the specific issue.
+value
+(String)
+This field may return the invalid value depending on the type of error, or it may be omitted
+): The invalid value that caused the error.
+Invalid SMS Short URL Request
+Case:
+verificationType
+is set to
+SMS_SHORTURL
+but the
+types
+array contains an
+EPOSTA
+value, which is incompatible with SMS verification.
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["EPOSTA"],
+"recipientType": "BIREYSEL"
+"formId": "your_formId",
+"recipient": "+9053........",
+"verificationType": "SMS_SHORTURL",
+"referenceId": "user1234"
+Sample Error Response (HTTP 400):
+"code": "H1085"
+Invalid Email Short URL Request
+Case:
+The
+recipientIdNumber
+field contains an incorrectly formatted identity number.
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"personData": {
+"name": "name",
+"recipientIdNumber": "A23493434",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_SHORTURL",
+"referenceId": "user1234"
+Error Response (HTTP Code: 400)
+"message": "Girdiğiniz TC kimlik numarası: '**' formata uygun değildir.",
+"code": "H1096"
+: The request must include the following fields:
+Verification Method (
+verificationType
+Recipient's Communication Address (
+recipient
+Communication Channel (
+types
+Recipient Type (
+recipientType
+Approval Type (
+title
+Form ID (
+formId
+) (The ID of the approval form to be sent to the recipient)
+: The request must include the following fields:
+Verification Method (
+verificationType
+Recipient's Communication Address (
+recipient
+Recipient's Full Name (
+name
+Recipient's National ID Number (
+recipientIdNumber
+Recipient's Address Information (
+address
+Approval Type (
+title
+Form ID (
+formId
+) (The ID of the approval form to be sent to the recipient)
+You may find the explanations of each field on
+Short URL Consent Requests
+and
+Short URL Consent Requests
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["MESAJ", "ARAMA"],
+"recipientType": "BIREYSEL"
+"types": [
+"AYDINLATMA_METNI"
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "+90536.......",
+"verificationType": "SMS_SHORTURL",
+"referenceId": "user1234"
+Success Response (HTTP 200)
+"requestId": "requestid"
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": [
+"EMAIL"
+"recipientType": "BIREYSEL"
+"types": [
+"AYDINLATMA_METNI"
+"personData": {
+"name": "name",
+"recipientIdNumber": "134........",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_SHORTURL",
+"referenceId": "user1234"
+Success Response (HTTP 200)
+"requestId": "requestid"
+In case of a failed request, the response will include the following fields:
+message
+(String):
+The error message that describes the issue with the request.
+code
+(String):
+The error code from the IYS system indicating the specific issue.
+value
+(String)
+This field may return the invalid value depending on the type of error, or it may be omitted
+): The invalid value that caused the error.
+Case:
+The
+recipient
+field is provided in an invalid format when
+verificationType
+SMS_SHORTURL
+curl --location 'hhttps://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["MESAJ"],
+"recipientType": "BIREYSEL"
+"types": ["AYDINLATMA_METNI"],
+"personData": {
+"name" : "name",
+"recipientIdNumber": "123...",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "SMS_SHORTURL",
+"referenceId": "user1234"
+Example Error Response (HTTP 400)
+"message": "Alıcı (recipient) için E164 uluslararası([+][country code][area code][local phone number]) formatına uygun bir telefon numarası girilmelidir. (örn. `+905992000000`)",
+"code": "H1026",
+"value": "
+[email protected]
+Case:
+The
+name
+field is not provided in the request.
+curl --location 'https://restapi.netmera.com/rest/via/consent' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"consentTypes": [
+"types": ["EPOSTA"],
+"recipientType": "BIREYSEL"
+"types": ["AYDINLATMA_METNI"],
+"personData": {
+"recipientIdNumber": "123....",
+"address": "address"
+"formId": "your_formid",
+"recipient": "
+[email protected]
+"verificationType": "EPOSTA_SHORTURL",
+"referenceId": "user1234"
+Example Error Response (HTTP 400)
+"message": "JSON verisinde eksik alanlar: name",
+"code": "H1090"
+VIA Integration
+OTP Consent Requests
+1 month ago

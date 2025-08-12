@@ -1,0 +1,107 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/push-notifications/media-push
+Platforms
+iOS
+Former iOS (Objective-C)
+Push Notifications
+Media Push
+Step 1: Create New Target
+Ensure you are using
+Xcode 8
+or a higher version.
+In Xcode, navigate to
+File > New > Target
+Select
+Notification Service Extension
+from the available options and create the new target.
+Switching Back to Debugging
+If you accidentally click on "Activate", you can return to debugging your app using Xcode, which is located next to the the play button.
+Step 2: Update Pod File
+Remove
+the Objective-C Bridging Header from your project.
+Add the following to your Podfile to link the
+Netmera.framework
+to the Notification Content Extension.
+Run
+pod update
+to install the dependency.
+target 'your_service_extension_target_name' do
+pod "Netmera/NotificationServiceExtension"
+end
+Warning:
+After adding the previous line to your Podfile,
+pod update
+is used.
+Step 3: Add Code to the Notification Service Extension Class
+Create a new class
+NotificationService
+that extends
+NetmeraNotificationServiceExtension
+Your
+NotificationService
+class should look like the following:
+Swift
+Objective-C
+class NotificationService : NetmeraNotificationServiceExtension {
+override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (_ contentToDeliver: UNNotificationContent) -> Void) {
+super.didReceive(request, withContentHandler: contentHandler)
+override func serviceExtensionTimeWillExpire() {
+super.serviceExtensionTimeWillExpire()
+#import <NetmeraNotificationServiceExtension/NetmeraNotificationServiceExtension.h>
+@interface NotificationService : NetmeraNotificationServiceExtension
+@end
+#import "NotificationService.h"
+@implementation NotificationService
+- (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent *contentToDeliver))contentHandler {
+[super didReceiveNotificationRequest:request withContentHandler:contentHandler];
+- (void)serviceExtensionTimeWillExpire {
+[super serviceExtensionTimeWillExpire];
+@end
+Step 4: Info.plist Configuration
+Click Info.plist under
+NotificationService Extension
+Add
+App Transport Security Settings
+Under App Transport Security Settings add Allow Arbitrary Loads and set it to
+YES.
+Allow Arbitrary Loads / Yes allows all HTTP loads:
+NSAllowsArbitraryLoads
+allows all HTTP loads. This value should be set to
+true
+only if an image URL in HTTP format is being used in push notifications. Otherwise, it is not necessary and might be set as FALSE.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+<key>NSExtension</key>
+<dict>
+<key>NSExtensionPointIdentifier</key>
+<string>com.apple.usernotifications.service</string>
+<key>NSExtensionPrincipalClass</key>
+<string>$(PRODUCT_MODULE_NAME).NotificationService</string>
+</dict>
+</dict>
+</plist>
+Troubleshooting
+Check Service Extension Target Settings
+Ensure the
+minimum deployment version
+of your service extension matches or is lower than the device’s iOS version.
+Xcode
+, go to
+Build Phases
+and expand
+Embed App Extensions
+. Ensure that
+unchecked
+for your main target.
+Select your main target.
+Go to "Build Phases."
+Expand "Embed App Extensions."
+Customizing In-App Messages
+Carousel, Slider and Thumbnail Push
+5 months ago

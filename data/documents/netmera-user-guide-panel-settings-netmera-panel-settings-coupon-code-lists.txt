@@ -121,4 +121,4 @@ Yes, you can easily edit existing coupon lists by clicking the "Edit" button in 
 Step 5
 . This allows you to update expiration dates and modify the code list as needed to accommodate changes in your campaigns.
 Business Units
-1 year ago
+7 days ago

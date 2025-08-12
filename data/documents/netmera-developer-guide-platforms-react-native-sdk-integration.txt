@@ -1,0 +1,347 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/sdk-integration
+Platforms
+React Native
+npm: react-native-netmera
+npm
+Step 1: Install React Native
+Install Netmera
+Yarn
+NPM
+yarn add react-native-netmera
+npm install --save react-native-netmera
+Link Netmera (for React Native versions < 0.60)
+Skip this step if you are using React Native version 0.60 or greater.
+react-native link react-native-netmera
+Step 2: Setup iOS
+1. Create an Apple Push Notification Certificate
+Log in to
+developer.apple.com
+with your Apple Developer account.
+Generate an Apple Push Notification Certificate for your app.
+Export the certificate using
+on your Mac.
+Upload the exported certificate to the Netmera panel by navigating to
+Developer > Push Backends > iOS
+in the left menu.
+Bundle IDs should match on your project, certificate and panel:
+Ensure that the certificate you upload to the panel matches the bundle ID of your project. Additionally, set your project's bundle ID in the panel to ensure consistency. The bundle ID of your
+project
+, the
+certificate
+, and the one specified in the
+panel
+must all align.
+Certificate types:
+For apps downloaded from the App Store or tested via TestFlight, the certificate type should be set to
+"prod"
+For apps built directly from Xcode, the certificate type must be set to
+"dev"
+If you have problems sending push notifications when you build from Xcode, verify the certificate type on the
+Developer > Push Backends > iOS
+page in Panel.
+Creating an APNS .p8 Certificate (Recommended)
+Creating an APNS .p12 Certificate
+Install Pods
+Navigate to the iOS folder in your terminal and run:
+$ pod install
+Initialize Netmera in
+AppDelegate
+For Swift Projects:
+Modify your
+AppDelegate.swift
+file.
+For Objective-C Projects:
+Modify your
+AppDelegate.m
+and
+AppDelegate.h
+files.
+Swift
+Objective-C
+Modify your
+AppDelegate.swift
+file:
+import RNNetmera
+import Netmera
+@main
+class AppDelegate: RCTAppDelegate, UNUserNotificationCenterDelegate, NetmeraPushDelegate {
+override func application(
+_ application: UIApplication,
+) -> Bool {
+if #available(iOS 10.0, *) {
+UNUserNotificationCenter.current().delegate = self
+// Enable logging (Optional: Set to false in production)
+RNNetmera.logging(true)
+RNNetmera.setPushDelegate(self)
+// Set App Group Name (Required for rich notifications)
+Netmera.setAppGroupName("<YOUR APP GROUP NAME>") // Replace with your App Group Name
+return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+@available(iOS 10.0, *)
+func userNotificationCenter(
+_ center: UNUserNotificationCenter,
+didReceive response: UNNotificationResponse,
+withCompletionHandler completionHandler: @escaping () -> Void
+) {
+let userInfo = response.notification.request.content.userInfo
+if response.actionIdentifier == UNNotificationDismissActionIdentifier {
+RNNetmeraRCTEventEmitter.onPushDismiss(["userInfo": userInfo])
+} else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+RNNetmeraRCTEventEmitter.onPushOpen(["userInfo": userInfo])
+completionHandler()
+@available(iOS 10.0, *)
+func userNotificationCenter(
+_ center: UNUserNotificationCenter,
+willPresent notification: UNNotification,
+withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+) {
+completionHandler([.alert])
+RNNetmeraRCTEventEmitter.onPushReceive(["userInfo": notification.request.content.userInfo])
+override func application(
+_ application: UIApplication,
+didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+) {
+RNNetmeraRCTEventEmitter.onPushRegister(["pushToken": deviceToken])
+To obtain your
+Go to the
+Netmera Panel
+Navigate to
+from this section.
+Use this key to replace the
+placeholder in the sample code.
+For projects using Objective-C, update both
+AppDelegate.h
+and
+AppDelegate.m
+as follows
+Modify
+AppDelegate.h
+#import <React/RCTBridgeDelegate.h>
+#import <Netmera/Netmera.h>
+#import <NetmeraCore/NetmeraPushObject.h>
+#import <UserNotifications/UserNotifications.h>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate, UNUserNotificationCenterDelegate, NetmeraPushDelegate>
+@property (nonatomic, strong) UIWindow *window;
+@end
+Modify
+AppDelegate.m
+#import "AppDelegate.h"
+#import <RNNetmera/RNNetmeraRCTEventEmitter.h>
+#import <RNNetmera/RNNetmeraUtils.h>
+#import <RNNetmera/RNNetmera.h>
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+[RNNetmera logging:YES]; // Enable Netmera logs
+[RNNetmera requestPushNotificationAuthorization];
+[RNNetmera setPushDelegate:self];
+[Netmera setAppGroupName:<YOUR APP GROUP NAME>]; // Set your app group name
+return YES;
+// Handle push clicks:
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+withCompletionHandler:(void (^)(void))completionHandler {
+if ([response.actionIdentifier isEqual:UNNotificationDismissActionIdentifier]) {
+[RNNetmeraRCTEventEmitter onPushDismiss:@{@"userInfo" : response.notification.request.content.userInfo}];
+} else if ([response.actionIdentifier isEqual:UNNotificationDefaultActionIdentifier]) {
+[RNNetmeraRCTEventEmitter onPushOpen:@{@"userInfo" : response.notification.request.content.userInfo}];
+completionHandler();
+// Handle push received in foreground:
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center
+willPresentNotification:(UNNotification *)notification
+withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+completionHandler(UNNotificationPresentationOptionAlert);
+[RNNetmeraRCTEventEmitter onPushReceive:@{@"userInfo" : notification.request.content.userInfo}];
+// Handle device token registration:
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+if (deviceToken) {
+[RNNetmeraRCTEventEmitter onPushRegister:@{@"pushToken" : deviceToken}];
+@end
+To obtain your
+Go to the
+Netmera Panel
+Navigate to
+from this section.
+Use this key to replace the
+placeholder in the sample code.
+React Native Push Handling
+When triggering
+[RNNetmeraRCTEventEmitter onPushReceive]
+AppDelegate
+, the corresponding method is called in React Native:
+export const onPushReceive = async (message) => {
+console.log("onPushReceive: ", message);
+3. iOS10 Media Push Configuration
+For versions
+3.14.4 and above
+, complete the steps found in
+Media Push
+Update your
+Podfile
+by adding the following lines
+outside of your target
+pod "Netmera", "X.X.X-WithoutDependency"
+pod "Netmera/NotificationServiceExtension", "X.X.X-WithoutDependency"
+pod "Netmera/NotificationContentExtension", "X.X.X-WithoutDependency"
+Replace
+X.X.X
+with the latest version from the
+page >
+Changelog
+Sample Project
+Netmera-React-Native-Typescript-Example/ios/Podfile at main · Netmera/Netmera-React-Native-Typescript-Example
+GitHub
+Step 3: Setup Android
+1. Netmera Android Onboarding
+In Netmera Panel
+Navigate to
+Developers
+Netmera Onboarding
+Select
+Android
+and click
+Start
+to proceed.
+2. Create a Firebase Configuration
+Netmera uses Firebase Cloud Messaging (FCM) for delivering push notifications.
+Go to the
+Firebase Developers Console
+and create a Firebase project.
+Generate a new
+(JSON file) for your project.
+4. Integrate and Initialize
+React Native
+Important Notes:
+Do not
+use the API key from a
+test
+panel
+in production.
+Each panel has a unique API key
+, and using the wrong one can result in data misdirection or errors.
+Go to the Netmera Panel.
+Maven repository
+. Add the following configurations to your
+build.gradle
+file. The
+AndroidManifest
+and other resource settings are automatically managed by the Android Gradle build tool.
+Gradle Configuration
+Project’s
+build.gradle
+File
+Add the following to your project-level
+build.gradle
+file:
+buildscript {
+repositories {
+google()
+jcenter()
+maven { url 'https://developer.huawei.com/repo/' }
+dependencies {
+classpath 'com.android.tools.build:gradle:X.X.X'
+classpath 'com.google.gms:google-services:X.X.X'
+classpath 'com.huawei.agconnect:agcp:X.X.X.X'
+allprojects {
+repositories {
+google()
+jcenter()
+maven { url 'https://maven.google.com' }
+maven { url 'https://developer.huawei.com/repo/' }
+maven { url "https://release.netmera.com/release/android" }
+App’s
+build.gradle
+File
+Add the required dependency and plugins to your app-level
+build.gradle
+file:
+dependencies {
+implementation 'androidx.core:core:1.X.X'
+At the top of your app’s
+build.gradle
+, include:
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect'
+Important Note for Obfuscation:
+If your code is obfuscated, there is no need to add any special rules for Netmera. Its functionality is unaffected by code obfuscation.
+In your app, locate or create a class that extends
+android.app.Application
+and implements
+com.facebook.react.ReactApplication
+If you don’t have a class that extends
+android.app.Application
+If you don’t have this class, create one.
+Then, add it to your
+AndroidManifest.xml
+file under the
+<application>
+tag using the
+android:name
+Inside this class, add the following code to the
+onCreate()
+method
+Java
+import com.netmera.reactnativesdk.RNNetmera;
+import com.netmera.reactnativesdk.RNNetmeraConfiguration;
+public class MainApplication extends Application implements ReactApplication {
+@Override
+public void onCreate() {
+...
+RNNetmeraConfiguration netmeraConfiguration = new RNNetmeraConfiguration.Builder()
+.firebaseSenderId(<YOUR GCM SENDER ID>)
+.huaweiSenderId(<YOUR HMS SENDER ID>)
+.logging(true) // Enables Netmera logs.
+.build(this);
+RNNetmera.initNetmera(netmeraConfiguration);
+import com.netmera.reactnativesdk.RNNetmera
+import com.netmera.reactnativesdk.RNNetmeraConfiguration
+class MainApplication : Application(), ReactApplication {
+override fun onCreate() {
+...
+val netmeraConfiguration = RNNetmeraConfiguration.Builder()
+.firebaseSenderId(<YOUR GCM SENDER ID>)
+.huaweiSenderId(<YOUR HMS SENDER ID>)
+.logging(true) // This enables Netmera logs.
+.build(this)
+RNNetmera.initNetmera(netmeraConfiguration)
+Step 4: Setup React Native
+Complete Push Callback Methods
+Implement the necessary push notification callback methods in your React Native project in the following page:
+Push Callbacks
+On iOS and Android 13+ devices, a runtime push notification permission request is
+required
+. You can use the following methods to check users' push notification status and request notification permission.
+Request Push Notification Authorization
+Netmera.requestPushNotificationAuthorization();
+Push Enable/Disable User Flow:
+Granting Permission:
+The user triggers
+requestPushNotificationAuthorization()
+, and if they grant permission, a push enable request is sent.
+Handling Denial:
+Denying Permission:
+If the user triggers
+requestPushNotificationAuthorization()
+and denies permission, a push disable request is sent.
+Reattempt After Denial:
+Check Notification Permission Status
+This method allows checking whether the necessary permissions for the application have been obtained.
+Netmera.checkNotificationPermission().then(status => {
+//NotificationPermissionStatus.NotDetermined
+//NotificationPermissionStatus.Blocked
+//NotificationPermissionStatus.Denied
+//NotificationPermissionStatus.Granted
+});
+Responses
+When this method is called, it would return one of the following responses:
+NOTDETERMINED
+The user has opened the app but hasn't made a decision about notification permissions yet.
+GRANTED
+The user has granted notification permission, and the app can send notifications.
+DENIED
+The user has denied permission or has blocked notifications through system settings.
+Standard Push Notifications
+Interactive Push Notifications
+Widgets
+Push Notifications with Deeplinks
+React Native
+Push Notifications
+2 months ago

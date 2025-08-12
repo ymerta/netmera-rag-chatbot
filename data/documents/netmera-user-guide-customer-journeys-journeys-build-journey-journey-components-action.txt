@@ -218,4 +218,4 @@ Action-based Entry Rules
 will automatically update in the message. Instead of a generic message like "Check out your cart," you can send "Check out the amazing deals on @{journey.BrandName} in your cart!" making the notification more relevant.
 Branch
 Launch
-9 months ago
+10 months ago

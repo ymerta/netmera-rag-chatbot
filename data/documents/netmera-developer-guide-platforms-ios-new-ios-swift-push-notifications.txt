@@ -1,0 +1,12 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/push-notifications
+Platforms
+iOS
+New iOS (Swift)
+Push Notifications
+Delegate Methods
+Widget and In-App Messages
+Media Push
+Carousel, Slider and Thumbnail Push
+Push Icon
+Delegate Methods
+1 year ago

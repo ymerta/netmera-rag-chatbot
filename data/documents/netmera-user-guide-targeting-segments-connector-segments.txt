@@ -22,4 +22,4 @@ Actions:
 Offers a set of actions that can be performed on the segment such as send message, message report and refresh.
 Create New Rule Based Segment
 Segment Details
-4 months ago
+5 months ago

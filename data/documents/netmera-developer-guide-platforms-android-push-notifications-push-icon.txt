@@ -1,0 +1,42 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/push-notifications/push-icon
+Platforms
+Android
+Push Notifications
+Push Icon
+Step 1: Create the Icon
+Design your icon according to the standards provided in
+this link
+Ensure the icon meets the required specifications for visibility and quality.
+Step 2: Upload the Icon
+Go to the
+Developer > App Info
+page in your app's settings.
+Enter the file name of the icon in the designated field.
+Add the icon file to your project.
+Step 3: Enable Custom Push Icon
+When setting up a push notification campaign, navigate to the
+"What"
+step.
+Turn on the
+"Custom Push Icon"
+option.
+Select the custom icon you uploaded from the
+Developer > App Info
+settings.
+If the Custom Push Icon option is turned off:
+If the
+"Custom Push Icon"
+option is turned off, the system will use the
+default notification icon
+for your push notifications.
+Using White or Shadow Icons
+A white or shadow icon is required when the default icon is not visible on certain Android devices or backgrounds.
+How to Implement:
+Design a white or shadow version of your icon.
+Upload this icon specifically for Android in the
+Developer > App Info
+settings.
+Ensure the icon is selected when sending push notifications to guarantee proper visibility.
+Custom Web View Presentation
+Deep Linking
+5 months ago

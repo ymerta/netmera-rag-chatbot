@@ -1,7 +1,7 @@
 [SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-journeys/journeys
 Customer Journeys
 Journeys
-Create Dynamic Experiences at Scale with Real-Time Insights and Cross-Channel Interactions
+Create Dynamic Experiences at Scale
 Scalable Reliability You Can Trust
 In a world where timely communication is crucial, you need a platform that can handle the pressure. Whether you’re sending to millions, our platform is built to maintain exceptional performance. Even during peak times, you can count on sub-second latency, ensuring your customers receive messages exactly when intended. From small campaigns to large-scale, high-volume communications, rest assured that your delivery is swift, reliable, and consistent—no matter the demand or the complexity of your engagement strategy.
 Multichannel Connections for Maximum Reach
@@ -15,4 +15,4 @@ Netmera Journeys
 , deliver a customized experience for your customers based on their needs and preferences. Share the right message at the right time with each customer to capture their attention. If you're ready, let's get started!
 Web Analytics
 Setup
-3 months ago
+7 days ago

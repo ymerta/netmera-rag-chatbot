@@ -1,0 +1,12 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift
+Platforms
+iOS
+New iOS (Swift)
+Launched in the past year
+Swift Package Manager (SPM)
+If you're still using the
+, please note that this documentation does not apply.
+We strongly
+recommend
+iOS
+5 months ago

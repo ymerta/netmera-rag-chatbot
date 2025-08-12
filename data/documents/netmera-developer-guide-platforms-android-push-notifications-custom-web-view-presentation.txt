@@ -1,0 +1,83 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/push-notifications/custom-web-view-presentation
+Platforms
+Android
+Push Notifications
+Custom Web View Presentation
+Step 1: Implement a Receiver Class
+Create a class that extends
+NetmeraWebContentBroadcastReceiver
+and override its
+onShow()
+and
+onClose()
+methods. These methods will handle the actions triggered when web content is shown or closed.
+public
+class
+SampleWebContentBroadcastReceiver
+extends
+NetmeraWebContentBroadcastReceiver
+Override
+public
+void
+onShow
+Context
+context
+Bundle
+bundle) {
+// Trigger your web view flow here
+Override
+public
+void
+onClose
+Context
+context
+Bundle
+bundle) {
+// Handle web view closure here
+Step 2: Add Receiver Class to
+AndroidManifest.xml
+In the
+AndroidManifest.xml
+file, register the receiver class and specify the actions
+com.netmera.web.content.SHOW
+and
+com.netmera.web.content.CLOSE
+application
+...
+receiver
+android
+name
+"com.sample.SampleWebContentBroadcastReceiver"
+android
+exported
+"false"
+intent-filter
+action
+android
+name
+"com.netmera.web.content.SHOW"
+action
+android
+name
+"com.netmera.web.content.CLOSE"
+intent-filter
+receiver
+application
+Step 3: Let Netmera Handle the Received Web Content
+Use
+Netmera.handleWebContent()
+to display the content in your custom WebView:
+// Pass your WebView as a parameter. The content will be shown in it.
+Netmera.handleWebContent(webView);
+If you want to listen for URL loading actions inside the WebView, use
+NetmeraWebViewCallback
+Netmera.handleWebContent(webView, new NetmeraWebViewCallback() {
+@Override
+public boolean shouldOverrideUrlLoading(WebView view, String url) {
+// Implement your logic here
+// Return true if you handle the URL yourself, otherwise return false
+return false;
+});
+Push Callbacks
+Push Icon
+6 months ago

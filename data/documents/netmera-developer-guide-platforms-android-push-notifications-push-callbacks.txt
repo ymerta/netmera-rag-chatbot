@@ -1,0 +1,245 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/push-notifications/push-callbacks
+Platforms
+Android
+Push Notifications
+Push Callbacks
+When initializing Netmera, you can register different types of callbacks:
+In-App Message Callbacks (
+.nmInAppMessageActionCallbacks()
+Push Action Callbacks (
+.nmPushActionCallbacks()
+Web Widget Callbacks (
+.nmWebWidgetCallbacks()
+During the initialization of Netmera, specify which callbacks your app should handle and include the callback lines during the initialization step (
+.nmInAppMessageActionCallbacks()
+.nmPushActionCallbacks()
+.nmWebWidgetCallbacks()
+override
+fun
+onCreate
+() {
+super
+onCreate
+val
+configBuilder
+NetmeraConfiguration.
+Builder
+firebaseSenderId
+(PropertiesUtil.gcmSenderId)
+huaweiSenderId
+(PropertiesUtil.hmsSenderId)
+// For Huawei services
+logging
+true
+// Enables Netmera logs in Logcat
+nmInAppMessageActionCallbacks
+NGInAppMessageActionCallbacks
+())
+// In-App Message Callback
+nmPushActionCallbacks
+NGPushActionCallbacks
+())
+// Push Action Callback
+nmWebWidgetCallbacks
+NGWebWidgetCallbacks
+())
+// Web Widget Callback
+Netmera.
+init
+(configBuilder.
+build
+this
+Step 2: Implement a Receiver Class
+Extend
+NetmeraPushBroadcastReceiver
+and override the necessary callback methods. Avoid using
+Toast
+messages in the production environment.
+In-App Action Calllback
+To trigger an in-app callback, select the
+banner
+style
+in the Netmera control panel.
+The
+pop-up
+style
+will not
+trigger the callback.
+Java
+inner class NGInAppMessageActionCallbacks : NMInAppMessageActionCallbacks {
+private val TAG = "sample"
+fun onInAppMessageShown(context: Context?, inAppMessage: NetmeraInAppMessage) {
+Toast.makeText(
+context,
+"onInAppMessageShown triggered :: " + inAppMessage.getId(),
+Toast.LENGTH_SHORT
+).show()
+Log.i(TAG, "onInAppMessageShown triggered :: " + inAppMessage.getId())
+fun onInAppMessageOpen(context: Context?, inAppMessage: NetmeraInAppMessage) {
+Toast.makeText(
+context,
+"onInAppMessageOpen triggered :: " + inAppMessage.getId(),
+Toast.LENGTH_SHORT
+).show()
+Log.i(TAG, "onInAppMessageOpen triggered :: " + inAppMessage.getId())
+fun onInAppMessageDismissed(context: Context?, inAppMessage: NetmeraInAppMessage) {
+Toast.makeText(
+context,
+"onInAppMessageDismissed triggered :: " + inAppMessage.getId(),
+Toast.LENGTH_SHORT
+).show()
+Log.i(TAG, "onInAppMessageDismissed triggered :: " + inAppMessage.getId())
+public class NGInAppMessageActionCallbacks implements NMInAppMessageActionCallbacks {
+private final String TAG = "sample";
+@Override
+public void onInAppMessageShown(Context context, NetmeraInAppMessage inAppMessage) {
+Toast.makeText(
+context,
+"onInAppMessageShown triggered :: " + inAppMessage.getId(),
+Toast.LENGTH_SHORT
+).show();
+Log.i(TAG, "onInAppMessageShown triggered :: " + inAppMessage.getId());
+@Override
+public void onInAppMessageOpen(Context context, NetmeraInAppMessage inAppMessage) {
+Toast.makeText(
+context,
+"onInAppMessageOpen triggered :: " + inAppMessage.getId(),
+Toast.LENGTH_SHORT
+).show();
+Log.i(TAG, "onInAppMessageOpen triggered :: " + inAppMessage.getId());
+@Override
+public void onInAppMessageDismissed(Context context, NetmeraInAppMessage inAppMessage) {
+Toast.makeText(
+context,
+"onInAppMessageDismissed triggered :: " + inAppMessage.getId(),
+Toast.LENGTH_SHORT
+).show();
+Log.i(TAG, "onInAppMessageDismissed triggered :: " + inAppMessage.getId());
+Push Action Calllback
+Java
+inner class NGPushActionCallbacks : NMPushActionCallbacks {
+fun onPushRegister(
+context: Context?,
+gcmSenderId: String?,
+pushToken: String?
+) {
+Log.v("sample", "onPushRegister")
+// Example: PushRegisterIdlingResource.registeredToPush();
+// Example: EventBus.getDefault().postSticky(GCMRegistrationEvent(pushToken));
+fun onPushReceive(
+context: Context?,
+bundle: Bundle?,
+netmeraPushObject: NetmeraPushObject?
+) {
+Log.v("sample", "onPushReceive")
+EventBus.getDefault().post(PushReceivedEvent(netmeraPushObject))
+fun onPushOpen(
+context: Context?,
+bundle: Bundle?,
+netmeraPushObject: NetmeraPushObject?
+) {
+Log.v("sample", "onPushOpen")
+fun onPushDismiss(
+context: Context?,
+bundle: Bundle?,
+netmeraPushObject: NetmeraPushObject?
+) {
+Log.v("sample", "onPushDismiss")
+fun onPushButtonClicked(
+context: Context?,
+bundle: Bundle?,
+netmeraPushObject: NetmeraPushObject?
+) {
+Log.v("sample", "onPushButtonClicked")
+fun onCarouselObjectSelected(
+context: Context?,
+bundle: Bundle?,
+netmeraPushObject: NetmeraPushObject?,
+selectedIndex: Int,
+netmeraCarouselObject: NetmeraCarouselObject?
+) {
+Log.v("sample", "onCarouselObjectSelected")
+public class NGPushActionCallbacks implements NMPushActionCallbacks {
+@Override
+public void onPushRegister(Context context, String gcmSenderId, String pushToken) {
+Log.v("sample", "onPushRegister");
+// Example: PushRegisterIdlingResource.registeredToPush();
+// Example: EventBus.getDefault().postSticky(new GCMRegistrationEvent(pushToken));
+@Override
+public void onPushReceive(
+Context context,
+Bundle bundle,
+NetmeraPushObject netmeraPushObject
+) {
+Log.v("sample", "onPushReceive");
+// Example: EventBus.getDefault().post(new PushReceivedEvent(netmeraPushObject));
+@Override
+public void onPushOpen(
+Context context,
+Bundle bundle,
+NetmeraPushObject netmeraPushObject
+) {
+Log.v("sample", "onPushOpen");
+@Override
+public void onPushDismiss(
+Context context,
+Bundle bundle,
+NetmeraPushObject netmeraPushObject
+) {
+Log.v("sample", "onPushDismiss");
+@Override
+public void onPushButtonClicked(
+Context context,
+Bundle bundle,
+NetmeraPushObject netmeraPushObject
+) {
+Log.v("sample", "onPushButtonClicked");
+public void onCarouselObjectSelected(
+Context context,
+Bundle bundle,
+NetmeraPushObject netmeraPushObject,
+int selectedIndex,
+NetmeraCarouselObject netmeraCarouselObject
+) {
+Log.v("sample", "onCarouselObjectSelected");
+Widget Callback Methods
+Implement the
+NMWebWidgetCallbacks
+interface and override the
+onDeeplinkTriggered()
+and
+onOpenUrlTriggered()
+methods.
+Netmera Panel Settings:
+Select "Widget" Style
+: Ensure the widget is set to "Widget" style in the Netmera panel to trigger the callback.
+Choosing "Manage App"
+: If the action should be handled within the app, select
+"Manage App"
+Manage App Chosen
+Java
+inner class NGWebWidgetCallbacks : NMWebWidgetCallbacks {
+override fun onDeeplinkTriggered(deeplink: String) {
+Log.i("NetmeraApp", "Deeplink was triggered and should be handled by app. :: $deeplink")
+override fun onOpenUrlTriggered(url: String) {
+Log.i("NetmeraApp", "OpenUrl was triggered and should be handled by app. :: $url")
+override fun onWebWidgetShown(url: String) {
+Log.i("NetmeraApp", "WebWidget shown :: $url")
+override fun onWebWidgetDismiss(url: String) {
+Log.i("NetmeraApp", "WebWidget dismiss :: $url")
+public class NGWebWidgetCallbacks implements NMWebWidgetCallbacks {
+@Override
+public void onDeeplinkTriggered(String deeplink) {
+Log.i("NetmeraApp", "Deeplink was triggered and should be handled by app. :: " + deeplink);
+@Override
+public void onOpenUrlTriggered(String url) {
+Log.i("NetmeraApp", "OpenUrl was triggered and should be handled by app. :: " + url);
+@Override
+public void onWebWidgetShown(String url) {
+Log.i("NetmeraApp", "WebWidget shown :: " + url);
+@Override
+public void onWebWidgetDismiss(String url) {
+Log.i("NetmeraApp", "WebWidget dismiss :: " + url);
+Widget and In-App Messages
+Custom Web View Presentation
+5 months ago

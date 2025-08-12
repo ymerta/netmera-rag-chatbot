@@ -1,0 +1,16 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android
+Platforms
+Android
+Push Notifications
+Deep Linking
+Sound & Vibration
+Push Inbox
+Events
+Geofence & Location
+User & Attributes
+Data Transfer
+Advertising ID
+App Tracking
+SSL Pinning
+Changelog
+Changelog

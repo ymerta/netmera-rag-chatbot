@@ -1,0 +1,8 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c
+Platforms
+iOS
+Former iOS (Objective-C)
+If you
+, use this documentation.
+Changelog
+5 months ago

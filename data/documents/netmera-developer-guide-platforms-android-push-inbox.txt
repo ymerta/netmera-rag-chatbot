@@ -1,0 +1,146 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/push-inbox
+Platforms
+Android
+Push Inbox
+Push Inbox Overview
+NetmeraInbox
+allows you to access and manage previously sent push notifications in an inbox-style interface. You cannot instantiate
+NetmeraInbox
+Filtering Notifications
+Create a
+NetmeraInboxFilter
+instance to specify which push notifications to fetch. You can filter by:
+Status
+: Read, Unread, or Deleted.
+Categories
+: Filter by specific categories.
+Expired Notifications
+: Include or exclude expired notifications.
+Page Size
+: Number of notifications to fetch per request.
+Here is a sample code to determine filtering options:
+NetmeraInboxFilter
+filter
+new
+NetmeraInboxFilter
+Builder
+pageSize
+// Default: Integer.MAX_VALUE
+status
+NetmeraPushObject
+STATUS_ALL
+// Default: NetmeraPushObject.STATUS_READ / NetmeraPushObject.STATUS_UNREAD
+categories
+Arrays
+asList
+"category_1"
+"category_2"
+// Default: null
+includeExpiredObjects
+true
+// Default: false
+//create filter object from builder
+build
+();
+Fetching the First Page
+Use
+Netmera.fetchInbox
+to retrieve notifications that match the filter:
+Netmera.fetchInbox(filter, new NetmeraInbox.NetmeraInboxFetchCallback() {
+@Override
+public void onFetchInbox(NetmeraInbox netmeraInbox, NetmeraError error) {
+if (error != null) {
+// handle error
+Toast.makeText(context, error.getMessage(), Toast.LENGTH_LONG).show();
+return;
+// Store returned inbox object for future operations
+mInbox = netmeraInbox; // Store inbox object for future use
+});
+If successful,
+onFetchInbox
+will return an
+inbox object
+containing push notifications. Otherwise, it will return an
+error object
+with failure details.
+Filter properties cannot be changed after fetching
+To apply new filters, create a new filter object and fetch again:
+// Create a new filter and fetch notifications again
+NetmeraInboxFilter newFilter = new NetmeraInboxFilter.Builder()
+.status(NetmeraPushObject.STATUS_UNREAD)
+.build();
+Netmera.fetchInbox(newFilter, callback);
+Once the first page is retrieved, use
+to get additional pages:
+@Override
+public void onFetchInbox(NetmeraInbox netmeraInbox, NetmeraError error) {
+// Handle response
+});
+Calling
+when no additional pages exist will trigger an error.
+Updating Push Notification Status
+Notifications can have three states:
+Unread
+Read
+Deleted
+Use
+updateStatus
+to change a notification's status asynchronously:
+List<NetmeraPushObject> objectsToDelete = inbox.pushObjects().subList(0, 5);
+inbox.updateStatus(objectsToDelete, NetmeraPushObject.STATUS_DELETED,
+new NetmeraInbox.NetmeraInboxStatusCallback() {
+@Override
+public void onSetStatusInbox(NetmeraError error) {
+if (error != null) {
+// Handle error
+});
+You can also update the status of
+all notifications
+without fetching them:
+public static void updateAll(@NetmeraPushObject.InboxStatus final int inboxStatus,
+final NetmeraInbox.NetmeraInboxStatusCallback callback)
+Counting Notifications by Status
+Retrieve the count of notifications by status:
+inbox.countForStatus(NetmeraPushObject.STATUS_DELETED); // Deleted
+inbox.countForStatus(NetmeraPushObject.STATUS_READ); // Read
+inbox.countForStatus(NetmeraPushObject.STATUS_UNREAD); // Unread
+Handling Push Objects
+You can use this method to programmatically trigger the action associated with a push message in the inbox.
+Netmera.handlePushObject(activity, pushObject);
+activity
+: The current
+Activity
+context.
+pushObject
+: The
+NetmeraPushObject
+instance representing the push message whose action you want to trigger.
+Message Categories
+You can create new message categories in
+Settings > Message Category
+in the panel.
+Retrieving User Category Preferences
+This method retrieves a list of category preferences, including the
+category ID
+name
+, and
+opt-in status
+Netmera.getUserCategoryPreferenceList(object : NMCategoryPreferenceFetchCallback {
+override fun onSuccess(categoryPreferenceList: MutableList<NMCategoryPreference>) {
+// handle category preference list
+override fun onFailure(error: String?) {
+// handle error
+Managing Category Preferences
+To manage category preferences and switch their status, use this method. Provide the category ID and set the
+categoryEnabled
+parameter to
+true
+false
+Netmera.setUserCategoryPreference(categoryId, isOptedIn, object : NMCategoryPreferenceSetCallback {
+override fun onSuccess() {
+// handle success
+override fun onFailure(error: String?) {
+// handle failure
+Sound & Vibration
+Events
+20 days ago

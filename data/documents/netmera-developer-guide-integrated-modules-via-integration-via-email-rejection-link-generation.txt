@@ -1,0 +1,97 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/via-integration/via-email-rejection-link-generation
+Integrated Modules
+VIA Integration
+VIA Email Rejection Link Generation
+This method allows service providers to generate unique rejection links for email addresses that are approved in the IYS (Electronic Commercial Message Management System). Service providers can include these links in their emails to offer recipients the option to opt out. A maximum of 100
+REJECT
+links can be created simultaneously for recipients whose permission status is
+APPROVED
+in IYS.
+mportant Notes:
+The request must include the recipient's email address (
+recipient
+) and recipient type (
+recipientType
+If the request is successful, the response will contain a generated rejection link (URL) along with the recipient's email address.
+Successful Rejection Process:
+If the recipient's (
+recipient
+) permission status is
+APPROVED
+, it is updated to
+REJECT
+upon execution.
+Note:
+The generated email links can be embedded within customer emails. Users can click on these links to opt out of receiving email notifications. Once a rejection is made, it is reflected in IYS. Netmera monitors and updates user permissions nightly based on IYS task results.
+Request Body Parameters
+curl --location 'https:
+//restapi.netmera.com/via/generate-reject-mail-link' \
+--header 'X-netmera-api-key: your_rest_apikey' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"recipients"
+"recipient"
+"String"
+// Email address to be unsubscribed [Required]
+"recipientType"
+"String"
+// Type of the email address. Accepted values: BIREYSEL (Individual) or TACIR (Corporate) [Required]
+Response Body (HTTP Code: 200)
+"url": "String", // Generated rejection link
+"recipient": "String", // Corresponding email address
+"code": "String", // Error code (if applicable) [Optional]
+"message": "String" // Error message (if applicable) [Optional]
+Error Responses
+HTTP Code: 400
+"errors": [
+"message": "String", // Description of the error
+"code": "String", // Error code
+"value": "String", // Incorrect value sent in the request
+"location": ["String"] // Fields in the request that contain errors
+HTTP Code: 500
+"message": "Error while parsing the data."
+Example Successful Request
+curl --location 'https://restapi.netmera.com/via/generate-reject-mail-link' \
+--header 'X-netmera-api-key: your_rest_apikey' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"recipients": [
+"recipient": "
+[email protected]
+"recipientType": "BIREYSEL"
+"recipient": "
+[email protected]
+"recipientType": "BIREYSEL"
+Example Successful Response (HTTP Code: 200)
+"url": "generated_rejection_link",
+"recipient": "
+[email protected]
+"recipient": "
+[email protected]
+"code": "H568",
+"message": "Sadece ONAY durumunda olan izinler için link üretilmelidir."
+Example Failed Request
+Case:
+An invalid
+recipientType
+value is sent.
+curl --location 'https://restapi.netmera.com/via/generate-reject-mail-link' \
+--header 'X-netmera-api-key: your_rest_apikey' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"recipients": [
+"recipient": "
+[email protected]
+"recipientType": "test"
+"recipient": "
+[email protected]
+"recipientType": "BIREYSEL"
+Example Error Response (HTTP Code: 400)
+"errors": [
+"message": "Alıcı tipi (recipientType) için uygun değerler: BIREYSEL, TACIR",
+"code": "H116",
+"value": "test",
+"location": [
+"recipientType"
+OTP Confirmation Completion
+6 months ago

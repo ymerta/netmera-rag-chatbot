@@ -1,0 +1,29 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/new-ios-swift/push-notifications/delegate-methods
+Platforms
+iOS
+New iOS (Swift)
+Push Notifications
+Delegate Methods
+Default Handling of Remote Notifications
+Netmera automatically handles all
+UIApplicationDelegate
+methods related to remote notifications. You don’t need to implement these methods in your
+App Delegate
+unless your app has special use cases that require custom logic.
+Custom Implementation (If Needed)
+If your app needs custom handling for remote notification delegate methods, you can implement them in your
+UIApplicationDelegate
+. You can then add your specific logic inside those methods. For more details on the delegate methods related to push notifications, check the:
+UI Application Delegate Protocol Reference
+Accessing Notification Data
+To retrieve the remote notification payload, use the
+[Netmera recentPushObject]
+Netmera.recentPushObject()
+method. This method returns a
+NetmeraPushObject
+instance, which contains the notification data. You can call this method within your
+UIApplicationDelegate
+methods to access the data of the received notification.
+Push Notifications
+Widget and In-App Messages
+6 months ago

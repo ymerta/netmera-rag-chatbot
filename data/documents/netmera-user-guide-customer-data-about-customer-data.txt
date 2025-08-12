@@ -1,50 +1,44 @@
 [SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/about-customer-data
 Customer Data
 About Customer Data
-Unlocking Insights for Omnichannel Success
-Profile Attributes and Events: Complementary and Crucial
-In the realm of customer data management and analysis, two fundamental elements, "
-Profile Attributes
-" and "
-Events
-," work in harmony, each playing a crucial and complementary role. They are both important components for understanding customer behavior and tailoring engagement strategies effectively. In this page we're going to explain how these two components work and their crucial importance on your customer targeting and analysis.
+The Data Foundation of Smarter Engagement
+Netmera is built to help you engage users in the most personal, timely, and effective ways. At the center of that promise lies
 Customer Data
+— a powerful module that enables you to capture, unify, and act on the information that defines your users.
+This is more than just user storage. Customer Data acts as a
+strategic data layer
+that connects identity, behavior, and consent — empowering every campaign, journey, and automation you run inside Netmera.
 Profile Attributes
-Profile Attributes are
-static
-pieces of information associated with individual customer profiles.
-They represent essential
-characteristics
-or details about customers that typically remain constant, such as names, email addresses, demographics, purchase history, and preferences.
-These attributes serve as the foundational
-building blocks
-for understanding who your customers are.
-Profile Attributes are vital for
-segmentation
-and
-personalization
-, allowing businesses to categorize customers based on shared characteristics and create tailored marketing efforts.
+Profile Attributes are structured fields that describe each user. You can store anything from basic contact info to custom traits like membership level, favorite category, or device type.
+Create custom attributes tailored to your business
+Use in segmentation, personalization, and journey triggers
+Device Metadata
 Events
-Events, on the other hand, capture
-dynamic
-and time-sensitive interactions or actions performed by customers in real-time.
-These interactions can encompass a wide range of
-activities
-, including website visits, app usage, product views, clicks on marketing emails, or purchases.
-Events provide insights into
-how customers
-engage
-with your brand and products.
-They are instrumental in tracking
-customer journeys
-and enable businesses to trigger
-automated
-responses or personalized messages based on specific actions, enhancing the customer experience.
-In essence, Profile Attributes and Events are two sides of the same coin, each offering unique insights into different aspects of customer behavior. While Profile Attributes provide a static view of who your customers are, Events deliver a dynamic snapshot of how they interact with your brand.
-To create a holistic understanding of your customer base and drive effective engagement, it's essential to leverage both Profile Attributes and Events in tandem. Together, they form a comprehensive toolkit that empowers businesses to build stronger customer relationships and deliver tailored experiences that meet individual needs and preferences.
-So, let's start with how to make use of these two crucial components of your campaigns:
+Understand what your users do in real time.
+Events capture user actions like button clicks, logins, purchases, or onboarding steps. These signals are essential for powering behavioral targeting and automation logic across Netmera.
+Built-in and custom event tracking
+Parameter support for richer data
+Visualize user actions in Event Insight
+Tagless Data Capture
+Collect more, configure less.
+Not every product team has time for manual tagging. Tagless Data Capture lets you gather behavioral data from your website or app automatically, helping you get started faster and track more with less code.
+IYS Permission Hub
+In markets like Turkey, permission data is not optional — it’s regulated. Netmera’s IYS Permission Hub ensures your user profiles stay compliant with Ileti Yönetim Sistemi (IYS) requirements, with two flexible operational modes:
+IYS Baseline Sync
+mirrors IYS permission data into Netmera
+IYS Authority Mode
+lets Netmera manage and push consents directly to IYS
+This ensures that your outreach remains legal, ethical, and audit-ready: no extra effort required.
+Why Customer Data Powers the Whole Platform
+Customer Data isn’t a silo, it’s a shared source of truth for your entire engagement strategy.
+Every attribute, event, and permission feeds directly into Netmera’s:
+Campaign targeting
+Audience segmentation
+Journey triggers
+Personalization logic
+Message eligibility filters
+and advanced analytics
+By treating data as the starting point for engagement, not just a reporting layer. Netmera helps you create more relevant, effective, and responsible user experiences.
+Customer Journey How-To Videos
 Profile Attributes
-Events
-Action-Based Engagement Journey
-Profile Attributes
-1 year ago
+7 days ago

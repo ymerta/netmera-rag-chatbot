@@ -55,4 +55,4 @@ Click "Find" to generate the report.
 By following these steps, you can efficiently utilize event attributes to gain deeper insights into user interactions on your platform.
 Event Reports
 Hourly Usage
-11 months ago
+1 year ago

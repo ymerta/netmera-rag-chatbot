@@ -17,29 +17,50 @@ Output:
 import requests
 from bs4 import BeautifulSoup
 import os
+import time 
 
 BASE_URL = "https://user.netmera.com"
 START_PAGE = f"{BASE_URL}/netmera-user-guide/"
-SAVE_FOLDER = "data/documents"
+SAVE_FOLDER = "data/dev"
 
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
-def get_all_sidebar_links():
-    """
-    Parses the Netmera User Guide sidebar and returns all internal documentation URLs.
+GUIDES = [
+    {
+        "name": "user-guide",
+        "start_page": f"{BASE_URL}/netmera-user-guide/",
+        "path_prefix": "/netmera-user-guide",
+        "file_prefix": "netmera-user-guide-",
+    },
+    {
+        "name": "developer-guide",
+        "start_page": f"{BASE_URL}/netmera-developer-guide/",
+        "path_prefix": "/netmera-developer-guide",
+        "file_prefix": "netmera-developer-guide-",
+    },
+]
 
-    Returns:
-        List[str]: A sorted list of full URLs to documentation pages.
+# İsteklerde 403 riskini azaltmak için basit bir User-Agent
+DEFAULT_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Documentation Scraper; +https://user.netmera.com)"
+}
+
+
+def get_all_sidebar_links(start_page: str, path_prefix: str) -> list[str]:
     """
-    response = requests.get(START_PAGE)
-    soup = BeautifulSoup(response.text, "html.parser")
+    Verilen başlangıç sayfasındaki <aside> içinde, belirtilen path_prefix ile
+    başlayan tüm dahili linkleri listeler.
+    """
+    resp = requests.get(start_page, headers=DEFAULT_HEADERS, timeout=20)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
 
     links = set()
-    for a in soup.select("aside a[href]"):  
-        href = a["href"]
-        if href.startswith("/netmera-user-guide") and "http" not in href:
-            full_url = f"{BASE_URL}{href}"
-            links.add(full_url)
+    for a in soup.select("aside a[href]"):
+        href = a["href"].strip()
+        # Sadece aynı site içindeki ilgili rehber yollarını al
+        if href.startswith(path_prefix) and "http" not in href:
+            links.add(f"{BASE_URL}{href}")
 
     return sorted(links)
 
@@ -60,7 +81,7 @@ def get_main_content(html):
     return soup.get_text(separator="\n").strip()
 
 REMOVE_PHRASES = [
-    "Netmera User Guide", "Ctrl", "K", "Netmera Docs", "More", "⚡",
+    "Netmera User Guide","Netmera Developer Guide", "Ctrl", "K", "Netmera Docs", "More", "⚡",
     "Was this helpful?", "Copy", "Previous", "Next", "Last updated",
     "On this page"
 ]
@@ -90,35 +111,58 @@ def clean_text(text):
 
     return "\n".join(cleaned)
 
-def url_to_filename(url: str) -> str:
+def url_to_filename(url: str, file_prefix: str) -> str:
     """
-    Converts a documentation URL to a filesystem-safe filename.
-
-    Args:
-        url (str): Full Netmera URL starting with BASE_URL.
-
-    Returns:
-        str: Filename string prefixed with 'netmera-user-guide-' and using '-' as separators.
+    URL'yi dosya adına çevirir ve ilgili rehbere göre prefix ekler.
     """
-    path = url.replace(BASE_URL + "/netmera-user-guide/", "")
-    return "netmera-user-guide-" + path.replace("/", "-") + ".txt"
+    # netmera-*-guide/ sonrası path'i çıkar
+    # Ör: https://user.netmera.com/netmera-developer-guide/sdk/ios
+    # -> "sdk/ios"  -> "netmera-developer-guide-sdk-ios.txt"
+    if "/netmera-user-guide/" in url:
+        path = url.split("/netmera-user-guide/", 1)[1]
+    elif "/netmera-developer-guide/" in url:
+        path = url.split("/netmera-developer-guide/", 1)[1]
+    else:
+        # Beklenmeyen durum için son segmentleri kullan
+        path = url.replace(BASE_URL, "").strip("/")
 
+    safe = path.replace("/", "-").strip("-")
+    return f"{file_prefix}{safe}.txt"
 
-all_links = get_all_sidebar_links()
-print(f"✅ {len(all_links)} belge bulundu. İndiriliyor...")
+def fetch(url: str) -> str:
+    """
+    Basit fetch + küçük bekleme (rate-limit'e saygı).
+    """
+    r = requests.get(url, headers=DEFAULT_HEADERS, timeout=30)
+    r.raise_for_status()
+    time.sleep(0.3)  # nazikçe
+    return r.text
 
-for url in all_links:
-    try:
-        r = requests.get(url)
-        r.raise_for_status()
-        raw_text = get_main_content(r.text)
-        cleaned_text = clean_text(raw_text)
-        filename = url_to_filename(url)
+def scrape_and_save():
+    total_pages = 0
+    for guide in GUIDES:
+        print(f"\n📚 {guide['name']} taranıyor: {guide['start_page']}")
+        links = get_all_sidebar_links(guide["start_page"], guide["path_prefix"])
+        print(f"✅ {len(links)} sayfa bulundu. İndiriliyor...")
 
-        with open(os.path.join(SAVE_FOLDER, filename), "w", encoding="utf-8") as f:
-            f.write(f"[SOURCE_URL]: {url}\n")
-            f.write(cleaned_text)
+        for url in links:
+            try:
+                html = fetch(url)
+                raw_text = get_main_content(html)
+                cleaned_text = clean_text(raw_text)
+                filename = url_to_filename(url, guide["file_prefix"])
+                out_path = os.path.join(SAVE_FOLDER, filename)
 
-        print(f"Kaydedildi: {filename}")
-    except Exception as e:
-        print(f"Hata ({url}): {e}")
+                with open(out_path, "w", encoding="utf-8") as f:
+                    f.write(f"[SOURCE_URL]: {url}\n")
+                    f.write(cleaned_text)
+
+                total_pages += 1
+                print(f"Kaydedildi: {filename}")
+            except Exception as e:
+                print(f"Hata ({url}): {e}")
+
+    print(f"\n🏁 Bitti. Toplam {total_pages} sayfa kaydedildi.")
+
+if __name__ == "__main__":
+    scrape_and_save()

@@ -1,0 +1,68 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/ios/former-ios-objective-c/geofence-and-location
+Platforms
+iOS
+Former iOS (Objective-C)
+Geofence & Location
+Checking and Requesting Location Permission
+Users may select
+"Only Once"
+"While Using the App"
+, or
+"Always"
+when prompted for location permission. However, they can later change this permission via system settings.
+To ensure
+accurate
+location tracking, always check the
+current
+system-level location permission before accessing any location-based features. If the required permission is missing or no longer valid, re-trigger the location permission request using Netmera.
+What to do:
+Check the current location permission status.
+If the permission is
+missing or limited
+Request location permission again via Netmera.
+Always ensure the necessary permission is granted before initializing any location-based operations.
+Step 1: Enable Location History
+To use location-based targeting, enable
+Location History
+in the Netmera web panel:
+Developers > App Info > App Config > Location History Enabled
+Step 2: Configure Location Permissions
+Add the necessary authorization keys to your
+Info.plist
+file:
+For Geofence Messaging (iOS 10 and earlier)
+Set
+NSLocationAlwaysUsageDescription
+with a description explaining why the app uses region monitoring.
+For Geofence Messaging (iOS 11 and later)
+Set
+NSLocationAlwaysAndWhenInUseUsageDescription
+with a description explaining why the app uses region monitoring.
+For Occasional Location Updates
+Set
+NSLocationWhenInUseUsageDescription
+with a description.
+This sends the most recent location once per session.
+Step 3: Request Location Authorization
+Calling these methods immediately prompts the
+location permission dialog
+. Make sure to inform users beforehand about how your application will use their location.
+Swift
+Objective-C
+// Request location authorization
+Netmera.requestLocationAuthorization()
+// Request location authorization
+[Netmera requestLocationAuthorization];
+Step 4: Configure Geofence Region Limits
+To set the maximum number of active geofence regions, use:
+Swift
+Objective-C
+Netmera.setNetmeraMaxActiveRegions(20) // Default is 20
+[Netmera setNetmeraMaxActiveRegions:20]; // Default is 20
+If the value is set
+greater than 20
+less than 0
+, it will be automatically reset to
+Events
+User & Attributes
+8 days ago

@@ -1,0 +1,228 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/via-integration
+Integrated Modules
+VIA Integration
+VIA is a communication management system designed for SMS and email permission management. It allows users to configure and oversee these services by integrating Netmera's platform with external messaging APIs. For more details about VIA, visit their website
+here
+VIA Integration on Netmera
+VIA Services Netmera Panel Configuration
+Navigate to
+Netmera Panel > Connectors > Installed > IYS
+Set the correct IYS configuration:
+Fill in the
+Brand
+and
+IYS Codes
+fields with the values obtained from IYS.
+Enable the VIA feature by selecting the
+Via Enabled
+checkbox.
+Connectors
+Incorrect Configuration:
+If the configuration is incorrect or the checkbox is not enabled, REST service responses will return with the following errors:
+Error Code: 400 - Bad Request
+SMS & Email Permission Management with VIA Integration
+You can obtain user consent or decline for SMS and email preferences in two ways when using VIA integration:
+1. Consent Management via Short URL
+Use the form created in the IYS panel to send a short URL to users, allowing them to manage their SMS or email preferences.
+2. Consent Management via One-Time Password (OTP)
+Use the form created in the IYS panel to send an OTP to users, enabling them to confirm their SMS or email preferences.
+IYS Form Creation
+Create Separate Forms
+While you can obtain SMS and email permissions simultaneously through the same OTP or short URL, forms for
+Short URL
+and
+OTP Consent
+must be created independently. A single combined form that includes both Short URL and OTP is
+not permitted
+Use the IYS Panel for Form Generation
+Forms must be generated directly through the
+IYS panel
+. Netmera does not support form creation, as this process is exclusively managed by IYS.
+Short URL Consent Flow
+For a full version, please see the board
+here
+Prepare the Short URL Consent Form
+Prepare a Short URL consent form using your IYS Panel. Once the form is ready, submit it to IYS for approval.
+Obtain IYS Approval
+After IYS approves the form, it will be available for use in API calls. The form ID provided by IYS will serve as the
+formId
+value in your requests.
+Send the Consent Form to the User
+Send the consent form link to your users via email or SMS. Use the API endpoint
+https://restapi.netmera.com/via/consent
+to share the link with your users.
+User Submits Their Consent
+When the user receives the link, they can open the form, select their SMS or email permissions, and submit their approval.
+Confirmation Information Sent to the User
+After the user submits their consent, they will receive a confirmation via email or SMS informing them of the permissions they selected and their submission status.
+Consent Data Saved in Netmera
+Netmera saves the user permissions in the Netmera Panel. This synchronization occurs every 10 minutes to ensure the latest user preferences are reflected.
+OTP Consent Flow
+For a full version, please see the board
+here
+Prepare the OTP Consent Form
+Create an OTP consent form using your IYS Panel. Once the form is ready, submit it to IYS for approval.
+Obtain IYS Approval
+After IYS approves the form, it will be ready for use in API calls. The form ID provided by IYS will serve as the
+formId
+value in your requests.
+Send the Consent Form to the User
+Send an email or SMS to the user containing the OTP code. Use the API endpoint
+https://restapi.netmera.com/via/consent
+to share the code with the user.
+User Submits Their Consent
+The user enters the OTP code they received. Use the API endpoint
+https://restapi.netmera.com/via/confirm
+to submit the OTP.
+Confirmation Information Sent to the User
+The user will receive a confirmation via email or SMS, detailing the permissions they selected and the status of their submission.
+Consent Data Saved in Netmera
+Netmera automatically saves the user’s permissions in the Netmera Panel. Synchronization occurs every 10 minutes to ensure the latest user preferences are reflected.
+VIA Consent API Parameters
+Request Body Field Parameters
+Field
+Required
+Description
+title
+Yes
+types
+Yes
+Specifies the communication channels from which consent will be requested:
+"ARAMA"
+"MESAJ"
+["ARAMA", "MESAJ"]
+["MESAJ", "ARAMA"]
+"EPOSTA"
+"AYDINLATMA_METNI"
+recipientType
+Yes
+Specifies the type of user from whom consent is being obtained:
+BİREYSEL
+TACIR
+formId
+Yes
+The ID of the consent form to be sent to the recipient, it must obtained from the VIA Management interface.
+recipient
+Yes
+The recipient’s phone number (must be with format: +90...) or email address where the consent request is sent.
+verificationType
+Yes
+Specifies the method for obtaining consent and it could be set as:
+"SMS_OTP"
+"EPOSTA_OTP"
+"EPOSTA_SHORTURL"
+"SMS_SHORTURL"
+"EPOSTA_APPROVALURL"
+referenceID
+Yes
+This identifier is used to create or update user records in the Netmera system.
+name
+Recipient’s first and last name.
+recipientIdNumber
+address
+Recipient's address details.
+personData
+Object containing the recipient’s
+name
+and
+recipientIdNumber
+Response Body Fields
+HTTP Code
+Field
+Description
+200
+requestId
+Used to query the status of the request or confirm the OTP scenario.
+400
+message
+Error message detailing the issue.
+code
+Error code returned by the IYS system.
+value
+The problematic value, depending on the error type.
+500
+message
+Error while parsing the data.
+User Update or Create with ReferenceID
+The
+ReferenceID
+is a
+mandatory
+field
+provided you, used to uniquely identify and differentiate users within the system. It plays a crucial role in user creation and ensures proper user management within the platform.
+If the Reference ID is not provided:
+If the
+ReferenceID
+is not provided in a request, the system will return a
+400 Bad Request
+with the message:
+“ReferenceID is empty”
+"message": "referenceId is empty",
+"status": 400
+User Lookup with Email
+The system first attempts to locate a user using only the
+email address
+(without the
+ReferenceID
+). This helps to identify previously existing users within the Netmera platform.
+If the user is found, their
+consent status
+updated
+based on the information in the response (e.g., “Onay verildi” or “Onay verilmedi” indicating consent granted or not).
+User Lookup with MSISDN
+If the user is not found using the email, the system then attempts to locate the user using their
+MSISDN
+(mobile number).
+If no user is found by MSISDN, the system will resort to searching by
+ReferenceID
+ReferenceID Handling
+If the
+ReferenceID
+is found, it indicates that the user has already been created, likely through the
+Via channel
+(e.g., as an email user). The system will then update the user’s
+MSISDN
+and
+consent status
+accordingly.
+When a User Does Not Exist with
+ReferenceID
+If no user is found for the given
+ReferenceID
+, the system will create a new user using the identifier provided with permission (either
+email
+MSISDN
+If only
+email
+is provided, the system will create a user with an email and set MSISDN as
+false
+If only
+MSISDN
+is provided, the system will create a user with an MSISDN and set email as
+false
+If both are provided, the system will create a user
+with both identifiers.
+The system will then store  the
+ReferenceID
+as a
+profile attribute
+User Creation Flow: Possible Scenarios and Outcomes
+1. Email User Creation
+If the user has never been an email user in Netmera and grants email permission, a new email user is created.
+2. MSISDN User Creation
+If the user has never been an MSISDN user in Netmera and grants MSISDN permission, a new MSISDN user is created.
+3. New Email User Creation When Only MSISDN Permission is Granted
+If the user was previously an email user in Netmera but only grants MSISDN permission, a new email user is created. (Since there is no reference ID to determine which user corresponds to which, scenario 6 applies if email permission is granted later.)
+4. New Email User Creation When Only Email Permission is Granted
+If the user was previously an MSISDN user in Netmera but only grants email permission, a new email user is created. (Since there is no reference ID to determine which user corresponds to which, scenario 6 applies if MSISDN permission is granted later.)
+5. Single User Creation for Both Email and MSISDN Permissions
+If the user has never been an email or MSISDN user in Netmera and grants both email and MSISDN permissions, a single user is created to store both permissions.
+6. Merging Users When Email Exists and MSISDN is Newly Granted
+If the user was previously an email user but not an MSISDN user, and both email and MSISDN permissions are granted (with the MSISDN request arriving first), the user is merged into a single entity. (There is no duplication of the existing email user.)
+7. Updating Permissions for Existing Email Users
+If the user was previously an email user and only grants email permission, the existing user’s permissions are updated instead of creating a new user.
+8. Updating Permissions for Existing MSISDN Users
+If the user was previously an MSISDN user and only grants MSISDN permission, the existing user’s permissions are updated instead of creating a new user.
+IYS Integration
+Short URL Consent Requests
+6 months ago

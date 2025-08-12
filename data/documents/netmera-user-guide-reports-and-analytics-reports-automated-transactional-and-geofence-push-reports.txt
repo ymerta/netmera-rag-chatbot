@@ -105,4 +105,4 @@ Whether it's automated messages triggered by user actions, transactional message
 This data empowers us to make informed decisions, optimize messaging strategies, and ultimately enhance our communication with our audience. With these reports, we're equipped to drive meaningful engagement, achieve our campaign goals, and deliver exceptional user experiences.
 SMS Reports
 Total Users
-7 months ago
+8 months ago

@@ -1,0 +1,50 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/mixpanel
+Integrated Modules
+Mixpanel
+Mixpanel is a powerful analytics platform that allows you to track user interactions and behaviors in your application. Integrating Mixpanel with Netmera enables you to combine user data from Mixpanel with Netmera's omnichannel customer engagement features, such as push notifications and user targeting.
+Prerequisites
+Before proceeding with the integration, make sure you have the following:
+Access to your Mixpanel account with admin privileges.
+Access to your Netmera account.
+A project set up in both Mixpanel and Netmera.
+Setting Up Mixpanel in Netmera
+Go to
+Mixpanel's website
+and log in using your credentials.
+Once logged in, navigate to your project in Mixpanel. Note down the
+Username, Password
+and
+Project ID
+from the Mixpanel console. These will be used later for integration with Netmera.
+Go to the Netmera Panel and log in to your account.
+In the Netmera dashboard, navigate to
+Connectors
+Available
+Mixpanel
+within Analytic Platforms.
+Find the
+Mixpanel
+integration option and click on "
+Install
+" it to initiate the integration process.
+Complete the necessary information on
+Connector Config
+page and finalize by clicking
+Install
+Connector Config Page
+Enter Mixpanel Credentials:
+Provide your Mixpanel
+username
+and
+password
+and
+Project ID
+Configure Sync Frequency:
+Choose the frequency at which you want Netmera to sync data with Mixpanel. This determines how often user data is updated in Netmera based on changes in Mixpanel.
+Define Profile Attribute:
+The "Profile Attribute with Mixpanel Distinct ID defined in Netmera" refers to a specific attribute within your Netmera account that corresponds to the Mixpanel Distinct ID. This Profile Attribute serves as a bridge between Mixpanel and Netmera, ensuring that user data remains consistent and synchronized across both platforms.
+Retrieve Push Tokens:
+Obtain the Android Push Token and iOS Push Token from your Netmera account. These tokens will be used when sending push notifications to Android and iOS devices, respectively.
+Adjust
+IYS Integration
+1 year ago

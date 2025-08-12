@@ -1,0 +1,55 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/optimove
+Integrated Modules
+Optimove
+Optimove Integration
+To install Optimove, follow these steps:
+Locate Optimove on the Connectors page and click the install button.
+Enter the baseUrl as "
+https://api5.optimove.net/
+Fill in the user and password fields. (Note: Please ensure you have the most up-to-date username and password information. Contact Optimove's product owner for the updated details.)
+Click the install button
+Optimove Parameters (optional)
+You can personalize messages using parameters from Optimove.
+Optimove Param: Profile attributes defined in Optimove.
+Netmera Pretty Name: Netmera equivalent of profile attribute in Optimove.
+Optimove Channels (optional)
+You can find the required information in this link: "
+https://docs.optimove.com/api-channelid-values/
+". Fill in the relevant details and click the install button.
+Push Event Notification
+Whenever you want to send a push notification, notify us by firing an event through Optimove's REST API using the following example command.
+curl
+location
+request
+POST
+'https://restapi.netmera.com/rest/optimove/event/your-app-key'
+"X-netmera-api-key: your_rest_api_key"
+"Content-Type: application/json"
+data
+raw
+"eventTypeId":13,
+"timeStamp":"2022-09-19 05:04:54",
+"campaignId":your_campaign_id,
+"channelId":channel_id ‘459 or 481’
+Make sure to replace the placeholders (your-app-key, your_rest_api_key, your_campaign_id, channel_id) with the actual values relevant to your setup.
+Event Type ID and Descriptions
+11: Triggered when a single target notification send event is generated from Optimove.
+13: Triggered when a bulk notification send event is generated from Optimove.
+4: Triggered when a campaign is cancelled on the Optimove side.
+User Matching Between Optimove and Netmera
+To synchronize users between Optimove and Netmera:
+Provide Optimove with the
+Client_ID
+key.
+Set the corresponding IDs as external IDs within Netmera.
+For any inquiries, Optimove may seek your confirmation. Ensure to approve these requests promptly.
+For additional details, refer to the
+Optimove API Usage Guide
+Configure Transactional Push Notification
+Navigate to
+Messages
+Transactional
+Select the Optimove channel in the "What" step.
+Changelog
+Adjust
+5 months ago

@@ -386,4 +386,4 @@ Supports up to 4 buttons.
 iOS also has support for a subtitle. Note that unlike Android, iOS currently has no support for web push.
 App Dashboard
 Troubleshooting and Support
-12 months ago
+1 year ago

@@ -1,0 +1,29 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/android/data-transfer
+Platforms
+Android
+Data Transfer
+Start Data Transfer
+The
+startDataTransfer()
+method restarts previously stopped requests. It is used when you're ready to resume data transfer after pausing.
+Java
+Netmera.
+startDataTransfer
+Netmera
+startDataTransfer
+();
+Stop Data Transfer
+The
+stopDataTransfer()
+method pauses all data requests. It is useful if you need to halt transfers temporarily due to issues like network disruptions. Use
+startDataTransfer()
+to resume.
+Java
+Netmera.
+stopDataTransfer
+Netmera
+stopDataTransfer
+();
+User & Attributes
+Advertising ID
+6 months ago

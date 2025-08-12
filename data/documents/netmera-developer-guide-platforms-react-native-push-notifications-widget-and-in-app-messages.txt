@@ -1,0 +1,59 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/push-notifications/widget-and-in-app-messages
+Platforms
+React Native
+Push Notifications
+Widget and In-App Messages
+Pop-up and In-App Message Presentation Behavior
+All push notifications in Netmera work automatically—no additional coding is required. However, you can
+customize
+pop-up presentations and
+listen to push callbacks
+By default, when a popup notification or in-app message is received:
+If the app is in the
+foreground
+immediately
+If the app is in the
+background
+when the app returns to the foreground.
+Receiving Popups and In-App Messages in the Background
+To receive popups or in-app messages when the application is in the background, you need to enable
+Remote Notifications
+under
+Background Modes
+Capabilities
+Pop-up Presentation Logic
+Enable / Disable Immediate Presentations
+To prevent immediate pop-up presentation (e.g., during video playback, gaming, or checkout), use:
+Disable Pop-Up
+// Call this method to temporarily disable the immediate presentation of popups.
+Netmera.disablePopupPresentation();
+Enable Pop-Up
+// Call this method to re-enable the immediate presentation of popups.
+Netmera.enablePopupPresentation();
+Widget URL Callbacks Integration for iOS in React Native
+This is
+applicable
+only to
+iOS for React Native
+integration. To handle widget URL callbacks in React Native for iOS, follow these steps:
+Step 1: Modify the AppDelegate.m file
+Add the following code between
+@implementation AppDelegate
+and
+@end
+// Required code to handle widget URLs in React Native
+- (BOOL)shouldHandleOpenURL:(NSURL *)url forPushObject:(NetmeraPushObject *)object {
+return NO;
+- (void)handleOpenURL:(NSURL *)url forPushObject:(NetmeraPushObject *)object {
+[RNNetmeraRCTEventEmitter handleOpenURL:url forPushObject:object];
+Step 2: Use
+onWidgetUrlTriggered
+in React Native
+In your React Native code, implement the following to handle the widget URL callback:
+Netmera.onWidgetUrlTriggered(url => {
+console.log('Netmera triggered widget URL: ', url);
+});
+This will enable widget URL callback functionality in your iOS React Native app.
+Push Notifications
+Push Callbacks
+5 months ago

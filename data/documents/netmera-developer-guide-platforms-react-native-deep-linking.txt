@@ -1,0 +1,44 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/react-native/deep-linking
+Platforms
+React Native
+Deep Linking
+To integrate deep link functionality into your React Native application, follow these steps:
+Step 1: Consult Documentation
+For detailed instructions and code samples, refer to the relevant documentation and complete deep link integration for
+iOS
+and
+Android
+Step 2: Processing Deep Links While the App is Running
+Use the
+Linking module
+from React Native to handle deep links when the app is running. Refer to the
+React Native Linking Documentation
+for more details on implementation.
+Use
+Netmera.getInitialURL()
+to catch deep links when the app is killed or in the background. Add this to your
+App.tsx
+file:
+useEffect
+(()
+Netmera
+.getInitialURL
+.then
+(url
+(url) {
+Toast
+.show
+type
+'success'
+text1
+`Initial URL:
+url
+});
+});
+[]);
+Additional Resources
+For additional information, refer to the
+Netmera React Native Sample Repository
+Push Callbacks
+Custom Deep Links
+6 months ago

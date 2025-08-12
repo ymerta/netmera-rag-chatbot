@@ -1,0 +1,104 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/device-metadata
+Customer Data
+Device Metadata
+Device metadata plays a foundational role in how Netmera enables data-driven customer engagement. This information allows businesses to:
+Deliver relevant content:
+By understanding the user's device, operating system, and location, you can adjust your messaging strategy to match the technical context of the recipient.
+Improve segmentation accuracy:
+System-level data supports the creation of dynamic audiences based on attributes like OS version, app version, device region, or language.
+Enhance analytical depth:
+These fields help enrich dashboards and reporting by enabling breakdowns by platform, version, manufacturer, and more.
+Support targeted debugging:
+Understanding which environments are affected during technical issues (e.g., crashes on specific devices or OS versions) speeds up resolution time.
+Collected Fields
+Field
+Description
+appV
+Application version (e.g.,
+4.3.3.0
+mdl
+Device model code (e.g.,
+T782H
+lang
+System language setting (
+tr_TR
+en_US
+, etc.)
+mnf
+Device manufacturer (
+TCL
+Apple
+Samsung
+, etc.)
+Operator code (MCC + MNC as integer, e.g.,
+28502
+= Operator TR)
+Note:
+Deprecated in iOS 15.4+
+oper
+Mobile operator name (e.g.,
+Operator TR
+Note:
+Deprecated in iOS 15.4+
+osV
+Operating system version (e.g., Android
+, iOS
+16.5
+psV
+(Android only)
+Google Play Services version
+rgn
+Region/country code (
+, etc.)
+tzid
+Time zone identifier (e.g.,
+Europe/Istanbul
+About
+(operator code) and
+oper
+(operator name) Parameters
+iOS
+: These fields are collected
+only on iOS versions 13 through 15.3
+. As of iOS 15.4, Apple has deprecated access to this data due to privacy policy updates.
+Android
+: These fields are still supported and continue to be collected.
+Common Use Cases
+Device metadata contributes to several critical use cases across marketing, analytics, and development teams:
+1. Version-Based Targeting
+Use
+App Version
+and
+Operating System Version
+to:
+Identify users on outdated versions and prompt them to upgrade.
+Run A/B tests for new features based on OS or app version compatibility.
+2. Region and Language-Specific Campaigns
+Use
+Region Code
+and
+Device Language
+to:
+Automatically localize message content according to the user’s language settings.
+Filter or exclude users in unsupported countries or regions.
+3. Telecom-Specific Analysis (Android Only)
+Use
+Operator Code
+and
+Operator Name
+to:
+Analyze user distribution by mobile carrier.
+Correlate user engagement or churn with specific telecom providers.
+Note:
+These two fields are only available on Android and iOS versions 13 through 15.3. They are deprecated on iOS 15.4 and later due to Apple’s privacy restrictions.
+4. Device-Specific Performance Analysis
+Use
+Device Model
+and
+Device Manufacturer
+to:
+Detect patterns in performance issues or crashes linked to specific devices.
+Adapt in-app experiences or campaign content based on device capabilities (e.g., optimize for low-end vs. high-end devices).
+Custom Profile Attributes
+Events
+7 days ago

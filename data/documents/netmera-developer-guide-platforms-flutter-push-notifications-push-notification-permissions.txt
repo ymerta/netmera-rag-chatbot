@@ -1,0 +1,47 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/platforms/flutter/push-notifications/push-notification-permissions
+Platforms
+Flutter
+Push Notifications
+Push Notification Permissions
+In Android 13 (API 33) and higher,
+runtime notification permissions
+are required for push notifications. If you don't request notification permission at runtime, you can use the
+requestPushNotificationAuthorization()
+method from
+Netmera
+to request permission from the user.
+Important Notes:
+Target API 33 or above
+: Make sure your Android project is targeting
+API 33
+or above, as runtime permissions are required starting from Android 13.
+User Consent
+: Always inform users why you are requesting permission to send notifications, and provide them with the option to grant or deny the permission.
+Permission Flow
+: You can handle different behaviors based on whether the user has granted or denied the permission.
+Step 1: Requesting Notification Permission
+To request notification permission, call the
+requestPushNotificationAuthorization()
+method. Ensure that your project targets
+API 33
+or higher before using this method. Here’s how you can request notification permissions:
+// Request push notification permission
+Netmera
+requestPushNotificationAuthorization
+();
+Step 2: Checking Notification Permission Status
+If you need to check whether the user has granted or denied notification permissions, you can use the
+areNotificationsEnabled()
+method. This returns a
+boolean
+indicating whether notifications are enabled.
+Netmera
+areNotificationsEnabled
+().
+then
+((enabled) {
+// Use the enabled status of permission as boolean
+});
+Push Notifications
+Widget and In-App Messages
+6 months ago

@@ -1,0 +1,204 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-developer-guide/integrated-modules/via-integration/otp-consent-requests/otp-confirmation-completion
+Integrated Modules
+VIA Integration
+OTP Consent Requests
+OTP Confirmation Completion
+The VIA Form Confirmation Completion API is used to finalize the confirmation process initiated by the
+Consent Initiation
+consent
+) method. This API allows the recipient to submit the verification code received via SMS or email. If the submitted code is valid, the confirmation is recorded.
+mportant Notes:
+Validity Period:
+The verification code (
+otpCode
+) for
+SMS_OTP
+and
+EPOSTA_OTP
+is valid for
+3 minutes
+. If the code is not submitted within this timeframe, the request will be considered invalid.
+Retry Limit:
+A maximum of
+3 attempts
+can be made within the
+3-minute window
+for a given
+requestId
+. Even if the 4th attempt contains a valid code, the confirmation will not be recorded.
+Confirmation Body Parameters
+Parameter
+Type
+Required
+Description
+consentTypes
+Array of objects
+Yes
+An array containing consent type(s) and their corresponding OTP code(s).
+title
+String
+Yes
+The type of consent being obtained. Valid values:
+otpCode
+String
+Yes
+The one-time password (OTP) code sent to the recipient via SMS or email.
+requestId
+String
+Yes
+The unique identifier (
+requestId
+) returned by the
+consent
+API during the initiation phase.
+verificationType
+String
+Yes
+The method used for verification. Valid values:
+SMS_OTP
+(OTP via SMS) or
+EPOSTA_OTP
+(OTP via email).
+Response Fields
+Success Response (HTTP Code: 200)
+The response will include the following fields upon successful completion:
+"message"
+"transactionId"
+"The transaction ID for the VIA operation."
+"creationDate"
+"The date and time when the confirmation was created."
+"type"
+"The type of form used for confirmation."
+"brandCode"
+"The unique İYS number assigned to the service provider's brand."
+"code"
+"Indicates whether the operation was successful."
+Error Response (HTTP Code: 400)
+The response will include the following fields in case of an error:
+"message": "The error message describing the issue.",
+"code": "The error code corresponding to the issue in the İYS system.",
+"value": "The value that caused the error (if applicable)."
+Server Error Response (HTTP Code: 500)
+The response will include the following field in case of a server error:
+"message": "Error while parsing the data."
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "your_requestid",
+"verificationType": "SMS_OTP",
+"consentTypes": [
+"otpCode": "123000"
+Successful Response (HTTP Code: 200)
+"message": [
+"transactionId": "your_transactionid",
+"creationDate": "2024-07-09 15:54:51",
+"type": "MESAJ",
+"brandCode": "100000"
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "your_requestid",
+"verificationType": "EPOSTA_OTP",
+"consentTypes": [
+"otpCode": "123000"
+Successful Response (HTTP Code: 200)
+"message": [
+"transactionId": "your_transactionid",
+"creationDate": "2024-07-09 15:54:51",
+"type": "EPOSTA",
+"brandCode": "100000"
+Case:
+An unexpected value is sent to the
+verificationType
+field.
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "your_requestid",
+"verificationType": "SMS",
+"consentTypes": [
+"otpCode": "123000"
+Example Failed Response (HTTP Code: 400)
+"message": "verificationType alanı için gereken değerler: [SMS_OTP, EPOSTA_OTP, SMS_SHORTURL, EPOSTA_SHORTURL, SMS_APPROVALURL, EPOSTA_APPROVALURL, SMS_CEVAP, SMS_RED, URL_RED] olmalıdır.].",
+"code": "H1012",
+"value": "SMS"
+Case:
+An incorrect request ID is entered in the
+requestId
+field.
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "15036799-....",
+"verificationType": "EPOSTA_OTP",
+"consentTypes": [
+"otpCode": "960715"
+Example Failed Response (HTTP Code: 400)
+"message": "Doğrulama tipi (verificationType), işlem başlatma isteğinde belirtilenle uyuşmamaktadır.",
+"code": "H1064",
+"value": "a7146bdf-...."
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "your_requestid",
+"verificationType": "SMS_OTP",
+"consentTypes": [
+"otpCode": "123000"
+Example Successful Response (HTTP Code: 200)
+"message": [
+"transactionId": "your_transactionid",
+"creationDate": "2024-07-09 15:54:51",
+"type": "MESAJ",
+"brandCode": "100000"
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "your_requestid",
+"verificationType": "EPOSTA_OTP",
+"consentTypes": [
+"otpCode": "123000"
+Example Successful Response (HTTP Code: 200)
+"message": [
+"transactionId": "your_transactionid",
+"creationDate": "2024-07-09 15:54:51",
+"type": "MESAJ",
+"brandCode": "100000"
+Invalid Requests
+Case:
+The
+requestId
+value is not included in the request.
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"verificationType": "SMS_OTP",
+"consentTypes": [
+"otpCode": "123000"
+Example Failed Response (HTTP Code: 400)
+"message": "requestId alanı boş veya null olmamalıdır.",
+"code": "H1057"
+Case:
+The
+title
+field is not included in the request.
+curl --location 'https://restapi.netmera.com/via/confirm' \
+--header 'X-netmera-api-key: your_rest_api_key' \
+--header 'Content-Type: application/json' \
+--data '{
+"requestId": "your_requestid",
+"verificationType": "EPOSTA_OTP",
+"consentTypes": [
+"otpCode": "123000"
+Example Failed Response (HTTP Code: 400)
+"code": "H1013",
+"value": "[null]"
+OTP Consent Requests
+VIA Email Rejection Link Generation
+6 months ago

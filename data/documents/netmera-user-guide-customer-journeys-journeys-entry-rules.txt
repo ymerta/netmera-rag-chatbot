@@ -207,4 +207,4 @@ You can define a specific time frame after which the entry cap resets. For examp
 . Once the period resets, they can re-enter according to the same rules.
 Setup
 Audience
-9 months ago
+10 months ago

@@ -1,5 +1,5 @@
 [SOURCE_URL]: https://user.netmera.com/netmera-user-guide/whats-new
-What's New?
+What's New
 A Place Where You Track the Newest Updates on Netmera
 Welcome to the hub for tracking the latest updates on Netmera! This page is your go-to destination for staying informed about the newest features, enhancements, and developments within our platform. We're dedicated to keeping you informed with all the exciting changes that can help you maximize your experience with Netmera.
 June, 2025
@@ -198,4 +198,4 @@ Spin to Win - Design Enhancements
 We've fine-tuned your Spin to Win experience with a host of exciting update. We've conducted a preliminary review of the current Spin to Win integration and, based on the findings, we've crafted design improvements with your needs in mind. Here's what's in store for you. You may also visit the relevant page
 Spin to Win
 Beginner's Guide to Netmera
-8 days ago
+20 days ago

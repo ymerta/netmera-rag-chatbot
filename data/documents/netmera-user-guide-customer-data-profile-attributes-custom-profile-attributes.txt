@@ -1,0 +1,94 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/profile-attributes/custom-profile-attributes
+Customer Data
+Profile Attributes
+Custom Profile Attributes
+Custom Profile Attributes allow you to capture and store specific types of customer information that are not covered by standard fields, such as product preferences, behavioral scores, or other domain-specific data points.
+Profile Attributes Dashboard
+The Profile Attributes dashboard is where you manage and review your user data structure. It organizes attributes into two main types:
+Standard Attributes
+These are predefined by Netmera and include essential fields such as:
+email
+msisdn
+device identifiers
+Standard attributes ensure consistency and interoperability across the platform.
+Custom Attributes
+You can define attributes tailored to your business, such as:
+Lifetime Value
+Lead Source
+Subscription Type
+Custom attributes help you personalize your engagement strategies, enhance segmentation, and improve analytics.
+Standard Attributes
+Reading the Attribute Table
+Each attribute listed in the dashboard includes detailed metadata:
+Field
+Description
+Code
+A unique key used in API calls and developer integrations.
+Attribute
+The display name shown in the panel (e.g., “City”, “Gender”).
+Description
+A short explanation of the attribute’s purpose.
+Is Personal Info
+Indicates whether the attribute contains personal or sensitive data.
+Calculate Analytics
+Specifies if the attribute contributes to analytics and reports.
+Unit
+Denotes the measurement unit, if applicable (e.g., TL, %, cm).
+Calculated
+Shows whether the value is dynamically computed based on other data.
+Step 1: Access Create Attribute Section Fill in Attribute Details
+Creating a custom profile attribute involves defining its key properties and determining how it will be used within your app or campaigns. To create a new custom profile attribute,
+Navigate to:
+Developers > Profile Attributes > Create Attribute
+Fill in attribute details:
+Field
+Description
+Profile Attribute Name
+A unique identifier used in your application code (e.g.,
+communicationPreference
+Label
+A user-friendly label that appears in the control panel and reports.
+Order
+Determines the display order in the attribute list.
+Description
+A brief summary of what the attribute tracks.
+Data Type
+Select the type of data to be stored:
+String
+Number
+Date
+, etc.
+Is Array
+Enable this option if the attribute should store multiple values.
+Is Private Info
+Enable this if the attribute contains sensitive information to ensure privacy compliance.
+Example:
+Suppose you are creating a custom profile attribute for tracking the customer's preferred communication channel. Here's an example:
+Name
+communicationPreference
+Label
+Communication Preference
+Order
+(for placement within your list of profile attributes)
+Description
+Records the customer's preferred communication channel, such as email, SMS, or app notifications.
+Data Type
+String
+(to capture a single preferred communication channel)
+In this scenario, the custom profile attribute "communicationPreference" captures the customer's choice of communication channel for receiving notifications or updates.
+Step 2: Save and Generate Code
+Once your attribute is configured, click
+Save
+. This action will:
+Save the custom attribute to your data model.
+Automatically generate the corresponding code snippet under the
+User Class
+section.
+Developer Integration
+Developers can use this generated code to integrate the new attribute into your mobile or web application.
+For implementation instructions
+, visit:
+Developer Guide
+Profile Attributes
+Device Metadata
+1 hour ago

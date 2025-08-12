@@ -1,0 +1,363 @@
+[SOURCE_URL]: https://user.netmera.com/netmera-user-guide/customer-data/iys-permission-hub/iys-integrator-mode
+Customer Data
+IYS Permission Hub
+IYS Integrator Mode
+The
+IYS Integrator Mode
+enables businesses to treat Netmera as the master system of record for user communication consents. It allows Netmera to create, update, and sync user permission data with Turkey’s official İleti Yönetim Sistemi (İYS), given that mutual authorization is granted through the IYS portal.
+This module is particularly useful when customer consent is collected through Netmera-managed channels such as websites, apps, or call centers. With this setup, Netmera not only manages consent data internally but also pushes it to IYS, enabling centralized and compliant communication control.
+Two Modes of IYS Integration
+Mode
+Description
+IYS Sync Mode
+IYS is the master source and Netmera regularly imports consent data
+Netmera can
+read
+and
+update
+existing user records in IYS but cannot create new users.
+IYS Integrator Mode
+Netmera manages permissions and updates IYS directly
+Netmera can
+create
+your brand entry under a user’s IYS profile and
+push
+consent
+records
+directly to IYS.
+💡 Before using the
+IYS Integrator Mode
+, your organization must grant
+Integrator Permission
+to Netmera from the IYS portal and activate the checkbox in the IYS Connector settings within the platform.
+Getting Started
+Step 1: Grant Integrator Permission
+You must authorize Netmera as your IYS Integrator in the IYS portal. This allows Netmera to:
+Create users in IYS
+Update their permission statuses
+Sync user records using Netmera as the source
+Make sure the setting
+Mutabakat Yönetimi
+is enabled in your IYS Panel. Without this setting, Netmera cannot  create, update, or sync user permission data in IYS.
+Step 2: Enable the
+IYS Integrator Mode
+In Netmera Panel:
+Go to
+Settings > Connectors > IYS
+Check the box:
+IYS Integrator (Netmera will create and manage users)
+Save your changes
+Step 3: Contact Upload with IYS Integration
+You can upload user data via CSV or TXT files under
+Targeting > Contact Upload
+. When you upload a file containing any of the following identifiers, Netmera will create or update the user profile accordingly:
+email
+phonenumber
+external_id
+Netmera uses this identifier to decide whether to create a new user or update an existing one.
+Uploaded files are considered the source —
+the latest upload overrides existing data.
+The uploaded files
+must include
+IYS-specific fields for every user:
+IYSSource
+IYSConsentDate
+, and
+IYSStatus
+Field Matching
+During upload, you'll be prompted to match columns in your file to profile attributes in Netmera. If column headers match existing attributes (e.g.,
+email
+external_id
+phonenumber
+), they’ll be auto-detected.
+Required Columns in IYS Integrator Mode
+IYSource
+: The consent collection channel. Must be one of the following values:
+IYSStatus
+: Consent status must be either
+ONAY
+(approved) or
+RET
+(rejected).
+IYSConsentDate
+: Consent timestamp in the format
+dd.mm.yy hh:mm:ss
+email / phonenumber
+: You must upload at least one (email or phone number). You may upload both, provided the consent status (
+ONAY
+RET
+) is the same for both channels.
+Optional Columns
+External ID
+: An external ID for the user. If not provided, users will be matched by their email or phone number.
+In IYS Sync status, if any required IYS fields are missing, the upload is blocked. If fields are partially filled or contain errors, affected users are created as
+optout
+Country code is mandatory
+in phone number values (e.g., +905XXXXXXXXX)
+If email and phone number have different consent statuses, do not upload in the same file.
+Adding Profile Attributes
+After defining the required identifiers (
+email
+phonenumber
+, or
+external_id
+) and IYS-specific fields (
+IYSSource
+IYSStatus
+IYSConsentDate
+), you may include additional
+profile attributes
+as extra columns in your upload file.
+Before uploading the file, all profile attributes you intend to use must be
+pre-configured
+in the Netmera Panel under
+Developers > Profile Attributes
+. If they are not pre-configured, you will receive an error notification in the
+result screen
+indicating which columns were unmatched or ignored.
+Status Selection
+During upload, select one of the following statuses:
+Subscribed / Unsubscribed
+If this status is selected:
+IYS fields are
+optional
+Use when uploading users with fixed consent values (all optin or all optout)
+Note:
+Users created in this flow
+won’t be created in IYS.
+IYS Syncronize
+Enables consent synchronization between Netmera and IYS. File must include IYS fields.
+You must
+choose
+this option to sync your data to IYS through your uploaded file.
+Step 4: Matching Contact Information
+After uploading your contact file, you’ll be taken to the Profile Attributes screen. This step ensures that the columns in your file are accurately mapped to Netmera’s profile attributes.
+In this screen:
+System-required fields like
+IYSSource
+IYSStatus
+, and
+IYSConsentDate
+will be automatically matched if named correctly.
+Additional fields such as
+surname
+, or
+address
+will also be listed as profile attributes.
+A total count of columns to be imported is shown at the bottom.
+What to Do If Any Field Appears Red
+If any field appears in
+red
+, it means the column header does not match any pre-configured profile attribute in Netmera.
+To resolve this, click the ✏️
+Edit
+icon and select the appropriate profile attribute from the dropdown.
+Once all mappings are correct, click
+Save
+to proceed.
+If any custom attribute in your file has not been pre-configured in Netmera’s panel (
+Developers > Profile Attributes
+), it must be created
+before
+uploading. Otherwise, it will not be imported, and you will receive an error prompt during the upload summary.
+Once you upload your files to Netmera, processing times depend on the IYS systems:
+New users
+: If the user is being created for the first time, the process is typically completed within
+30 minutes
+Existing users
+: If you are updating an existing contact, it may take
+2–3 hours
+to complete.
+Case Scenarios
+Case 1: Same Email/SMS Permissions
+Upload includes both
+email
+and
+phonenumber
+columns with identical IYS values. Consent status is applied uniformly.
+Both email and SMS have identical consent values.
+Status
+applies
+both
+channels
+If email and phone number (SMS) have different consent statuses, do not upload in the same file.
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+[email protected]
++905377778888
+HS_WEB
+ONAY
+01.08.25 14:23:45
+[email protected]
++905377778887
+HS_MOBIL
+RET
+28.07.25 09:15:10
+178B
+Case1_Same_Email_SMS.csv
+Case 2: Email-Only Upload
+File contains email as identifier and complete IYS fields.
+SMS permission defaults to optout if not provided.
+Recommended if you’re only collecting email permissions.
+Only email is
+provided
+. SMS defaults to
+opt-out
+if the information did not exist before.
+email
+IYSSource
+IYSStatus
+IYSConsentDate
+[email protected]
+HS_WEB
+ONAY
+05.08.25 11:05:30
+[email protected]
+HS_EPOSTA
+RET
+30.07.25 16:45:12
+139B
+Case2_Email_Only.csv
+Case 2.1: Email and SMS Exists Under Same User
+Only email permission is updated. Existing phone number data remains unchanged unless explicitly updated in the file.
+Only email permission is
+updated
+; SMS remains
+unchanged
+unless specified in file.
+email
+IYSSource
+IYSStatus
+IYSConsentDate
+[email protected]
+HS_WEB
+ONAY
+08.08.25 13:10:22
+89B
+Case2_1_Email_Exists_SMS_Exists.csv
+Case 3: SMS-Only Upload
+Upload where
+phonenumber
+is the first column and includes IYS fields.
+Country code is mandatory
+in phone number values (e.g., +905XXXXXXXXX)
+SMS with country code; no email provided. Email defaults to
+opt-out
+if not existed before, if existed before, it remains
+unchanged
+unless specified in file.
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
++905377778888
+ONAY
+07.08.25 10:25:00
++905399998877
+HS_MOBIL
+RET
+02.08.25 19:15:40
+146B
+Case3_SMS_Only.csv
+Case 4: Uploading with External ID
+Upload uses
+external_id
+as key and includes
+email
+phonenumber
+, and IYS fields.
+Uses
+external_id
+as the primary match key.
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+extId
+[email protected]
++905366667788
+HS_WEB
+ONAY
+03.08.25 09:00:00
+2001
+[email protected]
++905377778899
+HS_MOBIL
+RET
+04.08.25 17:35:55
+2002
+194B
+Case4_External_ID.csv
+Case 5: Uploading with Profile Attributes
+Any profile attribute that is pre-defined in the Netmera panel can be added to the file alongside contact and IYS consent fields.
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+extId
+name
+city
+[email protected]
++905366667710
+HS_WEB
+ONAY
+03.08.25 09:00:00
+2001
+Emir
+İstanbul
+[email protected]
++905377778811
+HS_MOBIL
+RET
+04.08.25 17:35:55
+2002
+Aslı
+Case5_Profile_Attributes.csv
+— This file includes only contact details and IYS consent fields along with profile attributes.
+217B
+Case5_Profile_Attributes.csv
+Case5_External_ID_and_Profile_Attributes.csv
+— This file includes the
+extId
+column to explicitly match or create users based on external IDs.
+233B
+Case5_External_ID_and_Profile_Attributes.csv
+Case 6: Invalid Format
+If any IYS fields are missing or incorrectly formatted:
+Netmera creates the user as
+optout
+Consent status is updated later if matched with existing IYS records
+Missing or incorrectly formatted IYS fields → User created as opt-out initially. (Mobile and Onaylandı entries are incorrect in the following table.)
+email
+phoneNumber
+IYSSource
+IYSStatus
+IYSConsentDate
+exId
+[email protected]
++905344445566
+Mobile
+ONAY
+07.08.25 17:35:55
+1008
+[email protected]
++905355556677
+HS_WEB
+ONAYLANDI
+12.10.25 14:00:00
+1009
+Best Practices
+Use consistent and accurate formatting for date fields and phone number (SMS).
+If uploading mixed-consent users,
+split them into separate files
+When using the
+IYS Integrator Mode
+, ensure your integration permission with IYS is active and that required fields are present.
+IYS Sync Mode
+About Targeting
+29 minutes ago
